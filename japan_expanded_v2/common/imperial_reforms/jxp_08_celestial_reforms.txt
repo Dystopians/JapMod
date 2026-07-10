@@ -5,6 +5,7 @@ jxp_hakko_ichiu_reform = {
 	}
 	trigger = {
 		has_dlc = "Mandate of Heaven"
+		jxp_is_japanese_polity_trigger = yes
 		is_emperor_of_china = yes
 		custom_trigger_tooltip = {
 			tooltip = jxp_hakko_ichiu_unlock_requirement_tt

@@ -52,7 +52,7 @@ jxp_japan_state_missions = {
 		required_missions = { jxp_mission_road_to_kyoto jxp_mission_kyoto_and_edo }
 		trigger = {
 			mission_completed = jxp_mission_kyoto_and_edo
-			num_of_cities = 25
+			jxp_has_unite_the_isles_scope_trigger = yes
 			owns = 1020
 			owns = 1028
 		}
@@ -122,7 +122,7 @@ jxp_japan_state_missions = {
 		position = 7
 		required_missions = { jxp_mission_modern_state }
 		trigger = {
-			num_of_cities = 25
+			jxp_has_inherited_realm_order_trigger = yes
 			owns = 1020
 		}
 		effect = {
@@ -268,7 +268,7 @@ jxp_japan_state_missions = {
 			mission_completed = jxp_mission_route_laws_of_the_new_realm
 			mission_completed = jxp_mission_route_archipelago_circuit
 			mission_completed = jxp_mission_route_post_station_ledger
-			num_of_cities = 30
+			jxp_has_renewed_japan_integration_trigger = yes
 			NOT = { num_of_rebel_controlled_provinces = 1 }
 		}
 		effect = {
@@ -485,7 +485,7 @@ jxp_japan_court_missions = {
 			mission_completed = jxp_mission_route_rice_and_silver
 			mission_completed = jxp_mission_route_guard_the_sea_lanes
 			adm_tech = 10
-			num_of_cities = 30
+			jxp_has_post_station_office_network_trigger = yes
 		}
 		effect = {
 			change_government_reform_progress = 50
@@ -544,7 +544,7 @@ jxp_japan_court_missions = {
 						has_country_modifier = jxp_35_legacy_frontier_barrier_law
 						has_country_modifier = jxp_35_legacy_frontier_market_charter
 					}
-					num_of_cities = 25
+					jxp_has_frontier_local_office_network_trigger = yes
 				}
 				AND = {
 					OR = {
@@ -1289,7 +1289,7 @@ jxp_japan_confucian_imperial_missions = {
 			mission_completed = jxp_mission_settle_the_realm
 			mission_completed = jxp_mission_yamato_restoration
 			owns = 1021
-			num_of_cities = 25
+			jxp_has_osaka_rice_ledger_network_trigger = yes
 		}
 		effect = {
 			country_event = { id = jxp_mission_expansion.20 }
@@ -1303,7 +1303,7 @@ jxp_japan_confucian_imperial_missions = {
 		required_missions = { jxp_mission_osaka_rice_ledger }
 		trigger = {
 			mission_completed = jxp_mission_ritual_state
-			num_of_cities = 30
+			jxp_has_castle_town_market_network_trigger = yes
 			adm_tech = 10
 		}
 		effect = {

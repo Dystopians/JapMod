@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-command entrypoint for the Japan Expanded 0.25.0 validation suite."""
+"""One-command entrypoint for the Japan Expanded 0.26.0 validation suite."""
 
 from __future__ import annotations
 
@@ -24,6 +24,7 @@ from jxp_validation.core import (
 )
 from jxp_validation.effective_topology import check_effective_topology
 from jxp_validation.ideas import check_route_ideas
+from jxp_validation.map_scale import check_map_scale_progression
 from jxp_validation.mission_refresh import check_mission_refresh
 from jxp_validation.missions import check_missions
 from jxp_validation.reforms import check_reforms
@@ -61,6 +62,7 @@ def run_checks(
         check_missions(context),
         check_mission_refresh(context),
         check_route_ideas(context, game_root),
+        check_map_scale_progression(context),
         check_reforms(context),
         check_confucian_bridge(context),
         check_release_compatibility(context),

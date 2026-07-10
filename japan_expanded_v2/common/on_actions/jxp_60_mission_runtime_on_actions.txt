@@ -4,6 +4,7 @@ on_startup = {
 	events = {
 		jxp_migration_v023.7
 		jxp_migration_v025.1
+		jxp_celestial_compat.1
 		jxp_mission_refresh.2
 	}
 }
@@ -21,5 +22,6 @@ on_government_change = {
 	if = {
 		limit = { jxp_is_japanese_polity_trigger = yes }
 		jxp_refresh_route_missions_effect = yes
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
 	}
 }

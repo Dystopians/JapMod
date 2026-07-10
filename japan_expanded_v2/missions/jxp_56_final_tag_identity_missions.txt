@@ -80,7 +80,7 @@ jxp_cjp_syncretic_missions = {
 				has_institution = printing_press
 				adm_tech = 12
 			}
-			num_of_cities = 25
+			jxp_has_kami_classics_network_trigger = yes
 		}
 		effect = {
 			add_adm_power = 50
@@ -171,7 +171,7 @@ jxp_ejp_restoration_state_missions = {
 		position = 6
 		required_missions = { jxp_mission_ejp_rank_the_provinces }
 		trigger = {
-			num_of_cities = 30
+			jxp_has_kokushi_circuit_coverage_trigger = yes
 			stability = 1
 			legitimacy = 70
 		}
@@ -292,7 +292,7 @@ jxp_ejp_court_rite_missions = {
 		position = 9
 		required_missions = { jxp_mission_ejp_court_rank_rolls }
 		trigger = {
-			num_of_cities = 30
+			jxp_has_shrine_envoy_network_trigger = yes
 			religious_unity = 0.9
 			jxp_imperial_sanction_at_least_50 = yes
 		}

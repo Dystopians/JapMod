@@ -17,7 +17,7 @@ from .clausewitz import (
 )
 
 
-TARGET_VERSION = "0.25.0"
+TARGET_VERSION = "0.26.0"
 SCRIPT_DIRECTORIES = ("common", "decisions", "events", "history", "missions")
 
 

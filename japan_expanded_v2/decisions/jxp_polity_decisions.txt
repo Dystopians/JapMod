@@ -451,7 +451,7 @@ country_decisions = {
 				AND = {
 					owns = 1020
 					owns = 1028
-					num_of_cities = 25
+					jxp_can_settle_preunification_realm_trigger = yes
 				}
 			}
 		}

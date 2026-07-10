@@ -11,14 +11,17 @@ country_event = {
 		has_dlc = "Mandate of Heaven"
 		jxp_is_japanese_polity_trigger = yes
 		is_emperor_of_china = yes
-		mission_completed = jxp_mission_eastasia_claim_mandate
-		NOT = { has_country_flag = jxp_unlocked_hakko_ichiu_reform }
+		OR = {
+			mission_completed = jxp_mission_eastasia_claim_mandate
+			has_country_flag = jxp_unlocked_hakko_ichiu_reform
+		}
+		NOT = { has_country_flag = jxp_hakko_visibility_reconciled_v0260 }
 	}
 
 	mean_time_to_happen = { days = 1 }
 
 	immediate = {
-		set_country_flag = jxp_unlocked_hakko_ichiu_reform
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
 	}
 
 	option = { name = "OK" }

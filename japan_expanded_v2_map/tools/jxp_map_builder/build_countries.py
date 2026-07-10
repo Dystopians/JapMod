@@ -19,6 +19,16 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 MOD_ROOT = SCRIPT_DIR.parents[1]
 HISTORY_PLAN_PATH = SCRIPT_DIR / "history_plan.json"
 LOCALISATION_PLAN_PATH = SCRIPT_DIR / "localisation_plan.json"
+NATIONAL_IDEA_COUNT = 7
+MAP_NATIONAL_IDEAS = (
+    ("jxp_map_castle_network", "fort_defense = 0.15"),
+    ("jxp_map_land_survey", "global_tax_modifier = 0.10"),
+    ("jxp_map_kokujin_compacts", "infantry_power = 0.10"),
+    ("jxp_map_market_towns", "development_cost = -0.10"),
+    ("jxp_map_coastal_routes", "trade_efficiency = 0.10"),
+    ("jxp_map_house_codes", "legitimacy = 1"),
+    ("jxp_map_provincial_identity", "core_creation = -0.10"),
+)
 
 
 def parse_args():
@@ -237,7 +247,16 @@ capital = {country['capital']}
 
 
 def ideas_file(tags: list[str]) -> str:
+    idea_keys = [key for key, _ in MAP_NATIONAL_IDEAS]
+    if len(idea_keys) != NATIONAL_IDEA_COUNT or len(set(idea_keys)) != NATIONAL_IDEA_COUNT:
+        raise RuntimeError(
+            "Companion national idea generator must define exactly "
+            f"{NATIONAL_IDEA_COUNT} unique ideas"
+        )
     tag_lines = "\n".join(f"\t\t\ttag = {tag}" for tag in tags)
+    idea_lines = "\n".join(
+        f"\t{key} = {{ {modifier} }}" for key, modifier in MAP_NATIONAL_IDEAS
+    )
     return f'''jxp_map_new_daimyo_ideas = {{
 \tstart = {{
 \t\tland_morale = 0.05
@@ -253,13 +272,7 @@ def ideas_file(tags: list[str]) -> str:
 \t}}
 \tfree = yes
 
-\tjxp_map_castle_network = {{ fort_defense = 0.15 }}
-\tjxp_map_land_survey = {{ global_tax_modifier = 0.10 }}
-\tjxp_map_kokujin_compacts = {{ infantry_power = 0.10 }}
-\tjxp_map_market_towns = {{ development_cost = -0.10 }}
-\tjxp_map_coastal_routes = {{ trade_efficiency = 0.10 }}
-\tjxp_map_house_codes = {{ legitimacy = 1 }}
-\tjxp_map_provincial_identity = {{ core_creation = -0.10 }}
+{idea_lines}
 }}
 '''
 
@@ -282,11 +295,7 @@ def write_localisation(countries: list[dict], loc_plan: dict):
         f' jxp_map_new_daimyo_ideas_start:0 "{ideas["start"]}"',
         f' jxp_map_new_daimyo_ideas_bonus:0 "{ideas["bonus"]}"',
     ])
-    for key in (
-        "jxp_map_castle_network", "jxp_map_land_survey", "jxp_map_kokujin_compacts",
-        "jxp_map_market_towns", "jxp_map_coastal_routes", "jxp_map_house_codes",
-        "jxp_map_provincial_identity",
-    ):
+    for key, _ in MAP_NATIONAL_IDEAS:
         lines.append(f' {key}:0 "{ideas[key]}"')
         lines.append(f' {key}_desc:0 "{ideas[key + "_desc"]}"')
     (source_dir / "jxp_map_l_english_utf8_source.yml").write_text("\n".join(lines) + "\n", encoding="utf-8-sig", newline="\n")

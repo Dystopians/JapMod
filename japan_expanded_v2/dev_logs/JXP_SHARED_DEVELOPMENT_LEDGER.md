@@ -20,16 +20,16 @@
 
 - Ledger schema: `1`
 - Last updated: `2026-07-10`
-- Main Mod version: `0.25.0`
+- Main Mod version: `0.26.0`
 - Companion Map version: `0.1.1-alpha`
 - Pinned game: `EU4 v1.37.5.0 Inca (491d)`
 - Supported version: `1.37.*`
 - Runtime acceptance: `PENDING_USER_APPROVAL`
-- Main static gate: `12/12 checks; 40/40 unit tests`
+- Main static gate: `13/13 checks; 67/67 unit tests`
 - Combined static gate: `0 errors; 0 warnings`
 - Main missions: `272 mission IDs; 40 custom series; 188 effective profiles`
 - Combined missions: `287 mission IDs; 45 series; 120 companion tag/DLC profiles`
-- Combined content inventory: `466 events; 215 decisions; 231 scripted callables; 832 modifiers`
+- Combined content inventory: `466 events; 215 decisions; 252 scripted callables; 832 modifiers`
 - Companion geography: `88/88 japan_region provinces; 137382 selectable days; 273 owner intervals; 56 subject intervals`
 - Localisation: `0 missing combined mission localisation keys`
 
@@ -133,7 +133,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | JXP-001 | P0 | OPEN | UNCLAIMED | Runtime | 主 Mod + 地图 Mod 新战役冷启动验收 | 用户明确许可；1444 冷启动、一天后任务/改革、fresh error.log 均通过 |
 | JXP-002 | P0 | OPEN | UNCLAIMED | Migration | 旧存档依次验收十种统一状态的任务、理念、改革迁移 | 保存/重载后 flags、已完成任务与五列树稳定，fresh error.log 无 JXP 错误 |
-| JXP-003 | P0 | OPEN | UNCLAIMED | Balance/Compatibility | 逐项重构 19 个 `num_of_cities = 25/30` 地图尺度敏感门槛 | 每项记录历史意图，改为统一度、战略省份、area、发展或合理城市数；联合门禁 0 warning |
+| JXP-003 | P0 | DONE | CODEX_ROOT | Balance/Compatibility | 逐项重构 19 个 `num_of_cities = 25/30` 地图尺度敏感门槛 | 每项记录历史意图，改为统一度、战略省份、area、发展或合理城市数；联合门禁 0 warning |
 | JXP-004 | P0 | OPEN | UNCLAIMED | CJP/Religion | 运行时证明 CJP 单次融合神道、改革中心传播和神道事件桥 | 不重复 harmonize；Ise 等保护地不转；Nanban/urbanization/Neo-Confucian bridge 可触发 |
 | JXP-005 | P1 | OPEN | UNCLAIMED | UI | 对大名五家系、十种统一状态与地图任务做视觉布局/政府 UI 验收 | 无断线、空洞、重叠、通用树、缺失 icon 或错误 tier；截图留档 |
 | JXP-006 | P1 | OPEN | UNCLAIMED | Route parity | 审计九条路线的任务、事件、决议、改革、调试入口深度 | 生成可比较覆盖报告并补齐明显短板，互斥 gate 无矛盾 |
@@ -150,15 +150,15 @@
 | JXP-017 | P0 | OPEN | UNCLAIMED | Map runtime | 验收 88 省地图渲染、港口、海峡、标签、书签与日期滑块 | 用户许可后按 map implementation report 清单完整执行并归档截图/log |
 | JXP-018 | P1 | OPEN | UNCLAIMED | Toyotomi/History | 建立独立丰臣家身份，修复秀吉掌权后仍沿用织田家的历史与玩法链 | 专属 tag、旗帜、名称、理念及任务身份完整；秀吉路线在正确节点转为丰臣，任务、理念、政府、属国和旧存档迁移不丢失；伴随地图可选日期保持一致 |
 | JXP-019 | P1 | OPEN | UNCLAIMED | Daimyo ideas/missions | 建立全部日本大名的理念与任务覆盖矩阵，按历史影响力分层扩展；织田家加入“天下布武”专属主线 | 主/地图全部可选大名均有非通用理念与身份任务；历史重要大名拥有更深且较强的专属分支；联合 profile 无 generic fallback、冲突或断链，并有强度分层审计 |
-| JXP-020 | P0 | OPEN | UNCLAIMED | Ideas/UI | 给国家理念结构增加硬性上限，修复理念超限造成的 UI 重叠 | 所有可激活理念组均符合 `start + 7 ideas + bonus` 标准结构；生成器与 validator 对超限 hard fail；获准运行时截图确认无重叠或越界 |
+| JXP-020 | P0 | IN_PROGRESS | CODEX_ROOT | Ideas/UI | 给国家理念结构增加硬性上限，修复理念超限造成的 UI 重叠 | 所有可激活理念组均符合 `start + 7 ideas + bonus` 标准结构；生成器与 validator 对超限 hard fail；获准运行时截图确认无重叠或越界 |
 | JXP-021 | P1 | OPEN | UNCLAIMED | Localisation/Names | 将 Mod 中尚未汉化的日本大名领袖姓名统一汉化为中文 | 审计 country history、scripted monarch/heir/consort、将领/提督与姓名池；零遗留应汉化的罗马字日本人名，且 source/active 本地化管线通过 |
 | JXP-022 | P1 | OPEN | UNCLAIMED | Final tags | 为每个日本终局 tag/统一状态增加专属权力结构政治改革并扩写任务树 | 十种统一状态各有语义匹配且互斥可见的权力结构改革、独特任务签名与足够深度；动态刷新和旧存档迁移闭合，无串线、通用树或错误 tier |
-| JXP-023 | P0 | OPEN | UNCLAIMED | Mandate/Bugfix | 修复已满足解锁条件后“八纮一宇”天朝改革仍不显示的 bug | 有天命 DLC 时仅合格的日本天子在正确 UI 看见并可选改革；无提前/外国误显，government mechanics 刷新及旧存档迁移闭合；无 DLC fallback、获准运行时截图与 fresh error.log 共同作为 `JXP-010` 证据 |
+| JXP-023 | P0 | IN_PROGRESS | CODEX_ROOT | Mandate/Bugfix | 修复已满足解锁条件后“八纮一宇”天朝改革仍不显示的 bug | 有天命 DLC 时仅合格的日本天子在正确 UI 看见并可选改革；无提前/外国误显，government mechanics 刷新及旧存档迁移闭合；无 DLC fallback、获准运行时截图与 fresh error.log 共同作为 `JXP-010` 证据 |
 
 ## Known Risks
 
-1. **没有当前版本运行时证明。** 0.25.0 + 0.1.1-alpha 只有完整静态证明；不得把早期版本冷启动或用户“目前正常”的反馈自动外推到当前所有 profile。
-2. **19 个城市数门槛会受 48→88 省扩张影响。** 合法但可能过早完成，见 `JXP-003`。
+1. **没有当前版本运行时证明。** 0.26.0 + 0.1.1-alpha 只有完整静态证明；不得把早期版本冷启动或用户“目前正常”的反馈自动外推到当前所有 profile。
+2. **其余固定城市数条件仍需节奏审计。** `JXP-003` 已将 19 个 25/30 门槛全部语义化；较低的固定门槛（如 20）由 `JXP-006` 按路线节奏继续判定。
 3. **CJP 是高风险桥接区。** harmonization、改革中心、神道事件/incident 继承涉及引擎行为，静态检查只能证明结构。
 4. **旧存档序列化 mission series。** 即使 `potential` 已禁用，旧 key 也可能残留；不得删除 tombstone 或省略迁移。
 5. **动态 UI 刷新。** “获得新任务”必须 immediate swap + next-day reconcile + fingerprint repair；新增路线不得直接散写 swap。
@@ -240,6 +240,23 @@ $repo = '<repo>'
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
 
+### 2026-07-10 - RELEASE-026 - Static P0 hardening (`0.26.0`)
+
+- Status: `STATIC_PASS; PENDING_RUNTIME`。
+- Scope: 完成 `JXP-003` 的 19 个地图尺度语义门槛；完成 `JXP-020` 的 45 组理念静态结构合同；补齐 `JXP-023` 的解锁、改革候选缓存刷新、旧档迁移和无 DLC fallback。
+- Evidence: 主门禁 `13/13`、Clausewitz `180/180`、单元测试 `67/67`；地图联合门禁全部 `0 errors / 0 warnings`；`19/19` 调用点与 `20/20` 固定语义合同、`44/44 + 1/1` 理念组闭合。
+- Runtime: `PENDING_USER_APPROVAL`；未启动 EU4 或启动器；理念 UI 与八纮一宇天朝 UI/fresh log 仍需运行时验收。
+- TODO: `JXP-003` 改为 `DONE`；`JXP-020` / `JXP-023` 保持 `IN_PROGRESS / CODEX_ROOT`；`JXP-016` 继续由 `PROJECT` 维护。
+- Evidence report: `jxp_phase_report_0_26_0_static_p0_hardening.md`。
+
+### 2026-07-10 - P0-STATIC-START - Static P0 remediation (`no version bump`)
+
+- Status: `STARTED; STATIC_BASELINE_PASS`。
+- Scope: `CODEX_ROOT` 领取 `JXP-003` / `JXP-020` / `JXP-023`；分别重构 19 个地图尺度敏感门槛、强制国家理念 `start + 7 ideas + bonus` 结构，以及闭合“八纮一宇”改革的可见性、迁移与 DLC fallback。
+- Evidence: 改动前主门禁 `12/12`、单元测试 `40/40`；工作分支 `codex/complete-todo-backlog`，基线工作树干净。
+- Runtime: `PENDING_USER_APPROVAL`；本切片不启动 EU4 或启动器。
+- TODO: `JXP-003` / `JXP-020` / `JXP-023` 进入 `IN_PROGRESS`；`JXP-016` 继续由 `PROJECT` 维护。
+
 ### 2026-07-10 - REPO-001 - GitHub source import and agent handoff (`no version bump`)
 
 - Status: `STATIC_PASS; PENDING_RUNTIME`。
@@ -294,7 +311,7 @@ $repo = '<repo>'
 ### Earlier milestones - RELEASE-004-021 (`0.4.1` to `0.21.2`)
 
 - 核心时代属性、路线/宗教分支、大名与家系风味、任务、理念、低频事件、评定、路线/创立家政府改革、枢密院、高官与 UI guardrails 逐步完成。
-- 这些报告保留历史价值，但任何与当前 0.25.0 架构冲突的实现描述均由后续报告和本总账 supersede。
+- 这些报告保留历史价值，但任何与当前 0.26.0 架构冲突的实现描述均由后续报告和本总账 supersede。
 - Evidence: Historical Report Index 中 0.4.1-0.21.2 全部阶段报告。
 
 ## Historical Report Index
@@ -373,6 +390,7 @@ $repo = '<repo>'
 - `jxp_phase_report_0_24_1_runtime_state_hotfix.md` - 0.24.1 理念与任务运行态修复。
 - `jxp_phase_report_0_24_2_mission_runtime_and_spacing_hotfix.md` - 0.24.2 任务刷新与间距修复。
 - `jxp_phase_report_0_25_0_final_tag_missions_and_reforms.md` - 0.25.0 终局任务身份与改革可见性。
+- `jxp_phase_report_0_26_0_static_p0_hardening.md` - 0.26.0 地图尺度、理念 UI 与八纮一宇静态收口。
 
 ### Companion Map Reports
 

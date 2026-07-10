@@ -151,7 +151,7 @@ class SharedLedgerTests(unittest.TestCase):
     def test_shared_ledger_rejects_unindexed_report(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = self._copy_coordination_surface(Path(directory))
-            self._write_descriptors(root, "0.25.0")
+            self._write_descriptors(root, "0.26.0")
             map_root = root.parent / "japan_expanded_v2_map"
             (map_root / "dev_logs" / "unindexed_report.md").write_text(
                 "# New report\n", encoding="utf-8"

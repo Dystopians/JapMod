@@ -56,7 +56,7 @@ jxp_japan_uncommitted_council_missions = {
 			mission_completed = jxp_mission_iwami_silver
 			mission_completed = jxp_mission_ise_pilgrim_roads
 			mission_completed = jxp_mission_unite_the_isles
-			num_of_cities = 25
+			jxp_can_summon_realm_council_trigger = yes
 			stability = 1
 		}
 		effect = {
@@ -74,7 +74,7 @@ jxp_japan_uncommitted_council_missions = {
 		required_missions = { jxp_mission_uncommitted_summon_realm_council }
 		trigger = {
 			mission_completed = jxp_mission_settle_the_realm
-			num_of_cities = 30
+			jxp_has_domain_memorial_network_trigger = yes
 			legitimacy = 70
 		}
 		effect = {
@@ -142,7 +142,7 @@ jxp_japan_uncommitted_horizon_missions = {
 			OR = {
 				owns_or_non_sovereign_subject_of = 4651
 				owns_or_non_sovereign_subject_of = 4193
-				num_of_cities = 25
+				jxp_has_border_port_coverage_trigger = yes
 			}
 		}
 		effect = {
@@ -486,7 +486,7 @@ jxp_ikko_common_economy_missions = {
 		trigger = {
 			mission_completed = jxp_mission_pure_land_covenant
 			mission_completed = jxp_mission_commonwealth_covenant
-			num_of_cities = 30
+			jxp_has_ikko_fellowship_integration_trigger = yes
 			stability = 2
 		}
 		effect = {

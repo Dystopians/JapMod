@@ -82,7 +82,7 @@ jxp_ikko_route_missions = {
 		trigger = {
 			mission_completed = jxp_mission_monto_muskets
 			tag = IJP
-			num_of_cities = 25
+			jxp_has_ikko_commonwealth_order_trigger = yes
 			stability = 1
 		}
 		effect = {

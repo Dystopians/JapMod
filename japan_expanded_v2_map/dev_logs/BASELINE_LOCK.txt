@@ -3,7 +3,7 @@ JXP 88-PROVINCE MAP BASELINE LOCK
 
 Game: Europa Universalis IV 1.37.5.0 Inca (491d)
 Main mod generation baseline: Japan Expanded V2 / 日轮诸道 0.23.2
-Latest validated main mod: Japan Expanded V2 / 日轮诸道 0.25.0 (2026-07-10)
+Latest validated main mod: Japan Expanded V2 / 日轮诸道 0.26.0 (2026-07-10)
 Companion map version: 0.1.1-alpha
 Vanilla highest province ID: 4941
 Allocated IDs: 4942-4981

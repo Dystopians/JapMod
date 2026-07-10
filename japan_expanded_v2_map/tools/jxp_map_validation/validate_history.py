@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import importlib.util
 import json
@@ -19,6 +20,8 @@ from PIL import Image
 SCRIPT_DIR = Path(__file__).resolve().parent
 MOD_ROOT = SCRIPT_DIR.parents[1]
 BUILDER_DIR = MOD_ROOT / "tools" / "jxp_map_builder"
+IDEA_OBJECT_METADATA = {"start", "bonus", "trigger", "ai_will_do"}
+IDEA_SCALAR_METADATA = {"free", "category", "important"}
 
 
 class Report:
@@ -381,29 +384,224 @@ def brace_balance(path: Path, report: Report):
         report.error(f"{path} has unbalanced braces/quotes: depth={depth}, in_quote={in_quote}")
 
 
-def validate_ideas(tags: set[str], report: Report):
-    path = MOD_ROOT / "common" / "ideas" / "jxp_map_new_daimyo_ideas.txt"
-    text = path.read_text(encoding="cp1252")
-    for tag in tags:
-        if not re.search(rf"\btag\s*=\s*{tag}\b", text):
-            report.error(f"Shared daimyo ideas do not cover {tag}")
-    match = re.search(r"jxp_map_new_daimyo_ideas\s*=\s*\{", text)
-    if not match:
-        report.error("Missing jxp_map_new_daimyo_ideas")
+def load_main_clausewitz_parser(main_mod: Path, report: Report):
+    """Load the main mod's duplicate-preserving parser without importing its package."""
+
+    parser_path = main_mod / "tools" / "jxp_validation" / "clausewitz.py"
+    if not parser_path.is_file():
+        report.error(f"Main-mod Clausewitz parser is missing: {parser_path}")
+        return None
+
+    module_name = f"_jxp_main_clausewitz_{abs(hash(parser_path.resolve()))}"
+    existing = sys.modules.get(module_name)
+    if existing is not None:
+        return existing
+    spec = importlib.util.spec_from_file_location(module_name, parser_path)
+    if spec is None or spec.loader is None:
+        report.error(f"Could not load main-mod Clausewitz parser: {parser_path}")
+        return None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception as exc:  # pragma: no cover - defensive error reporting
+        sys.modules.pop(module_name, None)
+        report.error(f"Could not execute main-mod Clausewitz parser {parser_path}: {exc}")
+        return None
+    return module
+
+
+def read_main_national_idea_count(main_mod: Path, report: Report) -> int | None:
+    """Read the authoritative idea-slot count from the main validation contract."""
+
+    contract_path = main_mod / "tools" / "jxp_validation" / "ideas.py"
+    if not contract_path.is_file():
+        report.error(f"Main-mod national idea contract is missing: {contract_path}")
+        return None
+    try:
+        tree = ast.parse(
+            contract_path.read_text(encoding="utf-8"),
+            filename=str(contract_path),
+        )
+    except (OSError, SyntaxError, UnicodeError) as exc:
+        report.error(f"Could not parse main-mod national idea contract {contract_path}: {exc}")
+        return None
+
+    values = []
+    for node in tree.body:
+        value_node = None
+        if isinstance(node, ast.Assign) and any(
+            isinstance(target, ast.Name) and target.id == "NATIONAL_IDEA_COUNT"
+            for target in node.targets
+        ):
+            value_node = node.value
+        elif (
+            isinstance(node, ast.AnnAssign)
+            and isinstance(node.target, ast.Name)
+            and node.target.id == "NATIONAL_IDEA_COUNT"
+        ):
+            value_node = node.value
+        if value_node is not None:
+            try:
+                values.append(ast.literal_eval(value_node))
+            except (ValueError, TypeError):
+                values.append(None)
+
+    if len(values) != 1 or type(values[0]) is not int:
+        report.error(
+            "Main-mod national idea contract must define exactly one integer "
+            f"NATIONAL_IDEA_COUNT; found {values}"
+        )
+        return None
+    if values[0] != 7:
+        report.error(
+            "Main-mod NATIONAL_IDEA_COUNT contract drifted from the EU4 UI limit: "
+            f"expected 7, found {values[0]}"
+        )
+        return None
+    return values[0]
+
+
+def parsed_trigger_tags(trigger, parser) -> list[str]:
+    """Return tags only when the activation trigger is exactly one direct OR."""
+
+    selectors = [
+        entry.value
+        for entry in trigger.entries
+        if entry.key == "OR"
+        and entry.operator == "="
+        and isinstance(entry.value, parser.Object)
+    ]
+    if len(trigger.entries) != 1 or len(selectors) != 1:
+        return []
+    tag_container = selectors[0]
+    if any(
+        entry.key != "tag"
+        or entry.operator != "="
+        or not isinstance(entry.value, parser.Scalar)
+        for entry in tag_container.entries
+    ):
+        return []
+    return [
+        entry.value.text
+        for entry in tag_container.entries
+        if entry.key == "tag"
+        and entry.operator == "="
+        and isinstance(entry.value, parser.Scalar)
+    ]
+
+
+def validate_ideas(
+    tags: set[str],
+    report: Report,
+    main_mod: Path,
+    map_mod: Path = MOD_ROOT,
+):
+    path = map_mod / "common" / "ideas" / "jxp_map_new_daimyo_ideas.txt"
+    if not path.is_file():
+        report.error("Missing jxp_map_new_daimyo_ideas.txt")
         return
-    depth = 0
+    expected_idea_count = read_main_national_idea_count(main_mod, report)
+    parser = load_main_clausewitz_parser(main_mod, report)
+    if parser is None:
+        return
+    try:
+        document = parser.parse_file(path)
+    except Exception as exc:
+        report.error(f"Could not parse companion national ideas {path}: {exc}")
+        return
+
+    expected_root = []
+    for entry in document.root.entries:
+        if (
+            entry.key == "jxp_map_new_daimyo_ideas"
+            and entry.operator == "="
+            and isinstance(entry.value, parser.Object)
+        ):
+            expected_root.append(entry)
+        else:
+            label = entry.key if entry.key is not None else "<bare value>"
+            report.error(
+                f"ideas.top_level_member [{path.name}:{entry.line}]: "
+                f"unexpected root member {label!r}"
+            )
+    if len(expected_root) != 1:
+        report.error(
+            "Companion ideas must define exactly one jxp_map_new_daimyo_ideas object"
+        )
+        return
+
+    body = expected_root[0].value
+    for required in ("start", "bonus", "trigger"):
+        matches = [entry for entry in body.entries if entry.key == required]
+        if len(matches) != 1 or not isinstance(matches[0].value, parser.Object):
+            report.error(
+                f"Companion ideas require exactly one top-level {required} object; "
+                f"found {len(matches)}"
+            )
+    free_members = [entry for entry in body.entries if entry.key == "free"]
+    if (
+        len(free_members) != 1
+        or free_members[0].operator != "="
+        or not isinstance(free_members[0].value, parser.Scalar)
+        or free_members[0].value.text != "yes"
+    ):
+        report.error(
+            "Companion ideas require exactly one top-level free = yes; "
+            f"found {len(free_members)}"
+        )
+
+    trigger_members = [entry for entry in body.entries if entry.key == "trigger"]
+    if len(trigger_members) == 1 and isinstance(trigger_members[0].value, parser.Object):
+        trigger = trigger_members[0].value
+        parsed_tags = parsed_trigger_tags(trigger, parser)
+        if not parsed_tags:
+            report.error(
+                "Companion idea trigger must contain exactly one direct OR whose "
+                "only members are tag assignments"
+            )
+        actual_tag_counts = Counter(parsed_tags)
+        expected_tag_counts = Counter(tags)
+        if actual_tag_counts != expected_tag_counts:
+            report.error(
+                "Shared daimyo idea trigger coverage differs from the country plan: "
+                f"expected {dict(sorted(expected_tag_counts.items()))}, "
+                f"found {dict(sorted(actual_tag_counts.items()))}"
+            )
+
     idea_keys = []
-    for line in text[match.end():].splitlines():
-        stripped = re.sub(r"#.*", "", line).strip()
-        if depth == 0:
-            key_match = re.match(r"([a-z0-9_]+)\s*=\s*\{", stripped)
-            if key_match and key_match.group(1) not in {"start", "bonus", "trigger"}:
-                idea_keys.append(key_match.group(1))
-        depth += stripped.count("{") - stripped.count("}")
-        if depth < 0:
-            break
-    if len(idea_keys) != 7:
-        report.error(f"Shared daimyo idea group has {len(idea_keys)} ideas, expected 7: {idea_keys}")
+    metadata = IDEA_OBJECT_METADATA | IDEA_SCALAR_METADATA
+    for entry in body.entries:
+        key = entry.key
+        if key in metadata:
+            expected_type = parser.Object if key in IDEA_OBJECT_METADATA else parser.Scalar
+            if entry.operator != "=" or not isinstance(entry.value, expected_type):
+                expected_kind = "object" if key in IDEA_OBJECT_METADATA else "scalar"
+                report.error(
+                    f"ideas.member_type [{path.name}:{entry.line}]: "
+                    f"{key} must be {expected_kind}"
+                )
+            continue
+        if key is None or entry.operator != "=" or not isinstance(entry.value, parser.Object):
+            report.error(
+                f"ideas.unexpected_member [{path.name}:{entry.line}]: "
+                f"unexpected group member {key!r}"
+            )
+            continue
+        idea_keys.append(key)
+
+    if expected_idea_count is not None and len(idea_keys) != expected_idea_count:
+        report.error(
+            f"Shared daimyo idea group has {len(idea_keys)} ideas, expected exactly "
+            f"{expected_idea_count}: {idea_keys}"
+        )
+    if len(set(idea_keys)) != len(idea_keys):
+        report.error(f"Shared daimyo idea group repeats idea keys: {idea_keys}")
+    if expected_idea_count is not None:
+        report.note(
+            "Companion national idea contract: 1 group requires exact "
+            f"start + {expected_idea_count} ideas + bonus structure"
+        )
 
 
 def validate_localisation(plan, history_plan, report):
@@ -549,7 +747,7 @@ def main():
         if len(re.findall(pattern, diplomacy, flags=re.S)) != 1:
             report.error(f"Diplomacy interval is missing/duplicated: {overlord}->{subject} {start}..{end}")
 
-    validate_ideas(new_tags, report)
+    validate_ideas(new_tags, report, args.main_mod.resolve())
     validate_localisation(plan, history_plan, report)
     for directory in (MOD_ROOT / "history", MOD_ROOT / "common"):
         for path in directory.rglob("*.txt"):

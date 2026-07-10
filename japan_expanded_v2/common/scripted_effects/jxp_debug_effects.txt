@@ -189,6 +189,7 @@ jxp_debug_clear_event_state_effect = {
 		clr_country_flag = jxp_mandate_claim_unified_celestial
 		clr_country_flag = jxp_mandate_claim_fallback
 		clr_country_flag = jxp_unlocked_hakko_ichiu_reform
+		clr_country_flag = jxp_hakko_visibility_reconciled_v0260
 		clr_country_flag = jxp_manchu_korean_route_seen
 		clr_country_flag = jxp_eastasia_tribute_registry_seen
 		clr_country_flag = jxp_tsushima_channel_office_done

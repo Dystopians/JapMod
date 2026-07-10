@@ -1,0 +1,230 @@
+# JXP-003: semantic replacements for province-count gates that changed meaning
+# when Japan expanded from 48 to 88 provinces. Keep these conditions tied to
+# historical control, state capacity, or an explicit institution network.
+
+jxp_has_main_island_strategic_control_trigger = {
+	total_development = 250
+	owns_or_non_sovereign_subject_of = 4182 # Hizen / western gateway
+	owns_or_non_sovereign_subject_of = 4193 # Oshima / northern gateway
+	shikoku_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# Old gate: jxp_mission_unite_the_isles used the legacy 25-city threshold.
+# Intent: a state with both capitals must also span Kyushu, Shikoku, and the north.
+jxp_has_unite_the_isles_scope_trigger = {
+	jxp_has_main_island_strategic_control_trigger = yes
+}
+
+# Old gate: jxp_mission_route_inherited_realm used the legacy 25-city threshold.
+# Intent: the founding settlement becomes legitimate through order and capacity.
+jxp_has_inherited_realm_order_trigger = {
+	jxp_tenka_order_at_least_75 = yes
+	total_development = 250
+	owns_or_non_sovereign_subject_of = 1028 # Musashi
+}
+
+# Old gate: jxp_mission_route_renewed_japan used the legacy 30-city threshold.
+# Intent: this capstone represents an integrated archipelago, including subjects.
+jxp_has_renewed_japan_integration_trigger = {
+	jxp_tenka_order_at_least_75 = yes
+	japan_region = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# Old gate: jxp_mission_route_post_station_ledger used the legacy 30-city threshold.
+# Intent: edicts travel through a realm-wide network of accountable local offices.
+jxp_has_post_station_office_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 8
+		region = japan_region
+		OR = {
+			has_building = courthouse
+			has_building = town_hall
+		}
+	}
+}
+
+# Old gate: the frontier branch of jxp_mission_house_law_local_offices used
+# the legacy 25-city threshold. Intent: frontier house law must reach actual local offices.
+jxp_has_frontier_local_office_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 4
+		region = japan_region
+		OR = {
+			has_building = courthouse
+			has_building = town_hall
+		}
+	}
+}
+
+# Old gate: jxp_mission_osaka_rice_ledger used the legacy 25-city threshold.
+# Intent: Osaka's ledger must connect a concrete production-accounting network.
+jxp_has_osaka_rice_ledger_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = japan_region
+		OR = {
+			has_building = workshop
+			has_building = counting_house
+		}
+	}
+}
+
+# Old gate: jxp_mission_castle_town_markets used the legacy 30-city threshold.
+# Intent: prosperity is demonstrated by an explicit national market network.
+jxp_has_castle_town_market_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 8
+		region = japan_region
+		OR = {
+			has_building = marketplace
+			has_building = trade_depot
+			has_building = stock_exchange
+		}
+	}
+}
+
+# Old gate: non-JAP access to jxp_decision_settle_the_realm used
+# the legacy 25-city threshold. Intent: route selection needs a cross-island state,
+# not a percentage that changes with map granularity.
+jxp_can_settle_preunification_realm_trigger = {
+	jxp_has_main_island_strategic_control_trigger = yes
+}
+
+# Old gate: jxp_mission_cjp_kami_classics used the legacy 25-city threshold.
+# Intent: compiling the classics requires the court, Ise, and a shrine network.
+jxp_has_kami_classics_network_trigger = {
+	owns_or_non_sovereign_subject_of = 1020 # Kyoto
+	owns_or_non_sovereign_subject_of = 4359 # Ise
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = japan_region
+		OR = {
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+}
+
+# Old gate: jxp_mission_ejp_kokushi_circuit used the legacy 30-city threshold.
+# Intent: inspectors reach the western, eastern, northern, court, shrine, and Shikoku circuits.
+jxp_has_kokushi_circuit_coverage_trigger = {
+	owns_or_non_sovereign_subject_of = 1020 # Kyoto
+	owns_or_non_sovereign_subject_of = 1028 # Musashi
+	owns_or_non_sovereign_subject_of = 4182 # Hizen
+	owns_or_non_sovereign_subject_of = 4193 # Oshima
+	owns_or_non_sovereign_subject_of = 4359 # Ise
+	shikoku_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+
+# Old gate: jxp_mission_ejp_shrine_envoys used the legacy 30-city threshold.
+# Intent: court envoys require the two ritual anchors and a functioning shrine web.
+jxp_has_shrine_envoy_network_trigger = {
+	owns_or_non_sovereign_subject_of = 1020 # Kyoto
+	owns_or_non_sovereign_subject_of = 4359 # Ise
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = japan_region
+		OR = {
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+}
+
+# Old gate: jxp_mission_uncommitted_summon_realm_council used
+# the legacy 25-city threshold. Intent: a realm council needs civil and court order.
+jxp_can_summon_realm_council_trigger = {
+	jxp_tenka_order_at_least_50 = yes
+	jxp_imperial_sanction_at_least_30 = yes
+}
+
+# Old gate: jxp_mission_uncommitted_hear_domain_memorials used
+# the legacy 30-city threshold. Intent: memorials need accountable offices across the realm.
+jxp_has_domain_memorial_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = japan_region
+		OR = {
+			has_building = courthouse
+			has_building = town_hall
+		}
+	}
+}
+
+# Old fallback: jxp_mission_uncommitted_register_border_ports accepted
+# the legacy 25-city threshold. Intent: the registry must reach an actual border gate.
+jxp_has_border_port_coverage_trigger = {
+	OR = {
+		owns_or_non_sovereign_subject_of = 1015 # Okinawa
+		owns_or_non_sovereign_subject_of = 4182 # Hizen
+		owns_or_non_sovereign_subject_of = 4193 # Oshima
+		owns_or_non_sovereign_subject_of = 4651 # Tsushima
+	}
+}
+
+# Old gate: jxp_mission_ikko_realm_of_fellowship used the legacy 30-city threshold.
+# Intent: the fellowship capstone rests on order and religious cohesion.
+jxp_has_ikko_fellowship_integration_trigger = {
+	jxp_tenka_order_at_least_75 = yes
+	religious_unity = 0.9
+}
+
+# Old gate: jxp_mission_kami_castle_towns used the legacy 30-city threshold.
+# Intent: shrine and market institutions coexist in several castle towns.
+jxp_has_shrine_castle_town_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 5
+		region = japan_region
+		OR = {
+			has_building = temple
+			has_building = cathedral
+		}
+		OR = {
+			has_building = marketplace
+			has_building = trade_depot
+			has_building = stock_exchange
+		}
+	}
+}
+
+# Old gate: jxp_mission_ritual_census used the legacy 30-city threshold.
+# Intent: the census is proved by a fixed network of census-capable offices.
+jxp_has_ritual_census_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 8
+		region = japan_region
+		OR = {
+			has_building = courthouse
+			has_building = town_hall
+		}
+	}
+}
+
+# Old gate: jxp_mission_halal_granary_law used the legacy 25-city threshold.
+# Intent: the law operates through a concrete production and storage network.
+jxp_has_halal_granary_network_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = japan_region
+		OR = {
+			has_building = workshop
+			has_building = counting_house
+		}
+	}
+}
+
+# Old gate: jxp_mission_break_warrior_country used the legacy 25-city threshold.
+# Intent: an Ikko commonwealth is established by public order, not raw map cells.
+jxp_has_ikko_commonwealth_order_trigger = {
+	jxp_tenka_order_at_least_50 = yes
+	religious_unity = 0.8
+}
