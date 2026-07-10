@@ -1,0 +1,363 @@
+namespace = jxp_sakoku
+namespace = jxp_rangaku
+namespace = jxp_confucian
+
+country_event = {
+	id = jxp_sakoku.1
+	title = "jxp_sakoku.1.t"
+	desc = "jxp_sakoku.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_sakoku_edicts_seen }
+		jxp_is_japanese_polity_trigger = yes
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_sakoku.1.a"
+		set_country_flag = jxp_sakoku_edicts_seen
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_sakoku.1.b"
+		set_country_flag = jxp_sakoku_edicts_seen
+		add_country_modifier = {
+			name = jxp_dejima_window
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_rangaku.1
+	title = "jxp_rangaku.1.t"
+	desc = "jxp_rangaku.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_open_trade
+			has_country_modifier = jxp_reviewed_translations
+			has_country_modifier = jxp_dejima_window
+			has_country_modifier = jxp_translation_house
+		}
+		NOT = { has_country_flag = jxp_rangaku_bureau_seen }
+		jxp_oceanic_opening_at_least_20 = yes
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	option = {
+		name = "jxp_rangaku.1.a"
+		set_country_flag = jxp_rangaku_bureau_seen
+		add_country_modifier = {
+			name = jxp_rangaku_bureau
+			duration = 7300
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_base_tax = 1
+				add_province_modifier = {
+					name = jxp_translation_port_quarter
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_confucian.1
+	title = "jxp_confucian.1.t"
+	desc = "jxp_confucian.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		NOT = { has_country_flag = jxp_confucian_academy_seen }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_confucian.1.a"
+		set_country_flag = jxp_confucian_academy_seen
+		add_country_modifier = {
+			name = jxp_confucian_academies
+			duration = 7300
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian.2
+	title = "jxp_confucian.2.t"
+	desc = "jxp_confucian.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_confucian_route_country_trigger = yes
+		NOT = { has_country_flag = jxp_confucian_native_centers_v1 }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "jxp_confucian.2.a"
+		set_country_flag = jxp_confucian_centers_established
+		jxp_confucian_sync_shinto_effect = yes
+		add_harmony = 5
+		jxp_spawn_confucian_reform_centers_effect = yes
+		hidden_effect = {
+			set_country_flag = jxp_confucian_conversion_active
+			country_event = { id = jxp_confucian.3 days = 365 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_confucian.3
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				jxp_confucian_route_country_trigger = yes
+				NOT = { has_country_flag = jxp_confucian_native_centers_v1 }
+			}
+			jxp_spawn_confucian_reform_centers_effect = yes
+		}
+		if = {
+			limit = {
+				any_province = {
+					region = japan_region
+					religion = shinto
+					NOT = { province_id = 4359 }
+				}
+			}
+			country_event = { id = jxp_confucian.3 days = 365 }
+		}
+		else = {
+			clr_country_flag = jxp_confucian_conversion_active
+			set_country_flag = jxp_confucian_order_complete
+			if = {
+				limit = { NOT = { has_country_flag = jxp_confucian_completion_rewarded } }
+				country_event = { id = jxp_confucian.4 days = 30 }
+			}
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_confucian.4
+	title = "jxp_confucian.4.t"
+	desc = "jxp_confucian.4.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_confucian_route_country_trigger = yes
+		has_country_flag = jxp_confucian_order_complete
+		NOT = { has_country_flag = jxp_confucian_completion_rewarded }
+		NOT = {
+			any_province = {
+				region = japan_region
+				religion = shinto
+				NOT = { province_id = 4359 }
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_confucian.4.a"
+		set_country_flag = jxp_confucian_completion_rewarded
+		add_harmony = 5
+		add_prestige = 10
+		jxp_confucian_protect_ise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian.5
+	title = "jxp_confucian.5.t"
+	desc = "jxp_confucian.5.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		religion = confucianism
+		has_country_flag = jxp_confucian_shinto_syncretism
+		NOT = { has_country_flag = jxp_songming_kami_rites_seen }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_confucian.5.a"
+		set_country_flag = jxp_songming_kami_rites_seen
+		add_country_modifier = {
+			name = jxp_songming_kami_rites
+			duration = 7300
+		}
+		add_harmony = 5
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian.5.b"
+		set_country_flag = jxp_songming_kami_rites_seen
+		add_country_modifier = {
+			name = jxp_songming_academy_bureaucracy
+			duration = 7300
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian.6
+	title = "jxp_confucian.6.t"
+	desc = "jxp_confucian.6.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		religion = confucianism
+		has_institution = global_trade
+		num_of_cities = 2
+		NOT = { has_country_flag = jxp_confucian_urbanization_seen }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_confucian.6.a"
+		set_country_flag = jxp_confucian_urbanization_seen
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		add_country_modifier = {
+			name = jxp_confucian_ordered_cities
+			duration = 7300
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian.6.b"
+		set_country_flag = jxp_confucian_urbanization_seen
+		add_mercantilism = 1
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian.7
+	title = "jxp_confucian.7.t"
+	desc = "jxp_confucian.7.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		religion = confucianism
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		num_of_ports = 1
+		NOT = { has_country_flag = jxp_confucian_nanban_seen }
+		OR = {
+			has_global_flag = japan_has_encountered_the_west
+			jxp_oceanic_opening_at_least_35 = yes
+			any_known_country = {
+				religion_group = christian
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_confucian.7.a"
+		set_country_flag = jxp_confucian_nanban_seen
+		set_country_flag = jxp_kirishitan_contact
+		add_country_modifier = {
+			name = jxp_confucian_controlled_nanban
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian.7.b"
+		set_country_flag = jxp_confucian_nanban_seen
+		add_prestige = 5
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian.8
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_confucian_route_country_trigger = yes
+		has_country_flag = jxp_confucian_native_centers_v1
+		NOT = { has_country_flag = jxp_confucian_conversion_active }
+		NOT = { has_country_flag = jxp_confucian_order_complete }
+		any_province = {
+			region = japan_region
+			religion = shinto
+			NOT = { province_id = 4359 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {
+		set_country_flag = jxp_confucian_conversion_active
+		country_event = { id = jxp_confucian.3 days = 30 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}

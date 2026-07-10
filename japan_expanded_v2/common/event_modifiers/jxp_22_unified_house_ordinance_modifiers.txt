@@ -1,0 +1,29 @@
+jxp_22_warrior_house_codes = {
+	land_morale = 0.03
+	global_manpower_modifier = 0.05
+	army_tradition_decay = -0.005
+}
+
+jxp_22_court_office_order = {
+	diplomatic_reputation = 1
+	stability_cost_modifier = -0.05
+	prestige_decay = -0.005
+}
+
+jxp_22_maritime_house_routes = {
+	global_trade_power = 0.08
+	global_ship_trade_power = 0.10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_22_frontier_house_wards = {
+	defensiveness = 0.10
+	manpower_recovery_speed = 0.05
+	global_regiment_cost = -0.05
+}
+
+jxp_22_temple_market_law = {
+	production_efficiency = 0.05
+	global_unrest = -1
+	advisor_cost = -0.05
+}

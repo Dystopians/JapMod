@@ -1,0 +1,60 @@
+graphical_culture = asiangfx
+
+color = { 20 125 92 }
+revolutionary_colors = { 4 24 18 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	trade_ideas
+	maritime_ideas
+	diplomatic_ideas
+	quality_ideas
+	religious_ideas
+	expansion_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Yusuf #0" = 10
+	"Harun #0" = 10
+	"Musa #0" = 10
+	"Ibrahim #0" = 10
+	"Umar #0" = 10
+	"Hidayat #0" = 10
+	"Suleiman #0" = 10
+	"Nobutada #0" = 8
+	"Tadayoshi #0" = 8
+}
+
+leader_names = {
+	Sakai Nagasaki Hirado Matsuura Shimazu Otomo Arima Yusuf Musa Ibrahim Hidayat
+}
+
+ship_names = {
+	Sakai Nagasaki Malacca Aceh Pattani Hajj Johor Brunei Dejima Red-Seal Kurofune
+}
+
+army_names = {
+	"Kaikyo Host" "$PROVINCE$ Port Guard" "$PROVINCE$ Sultanate Tai"
+}
+
+fleet_names = {
+	"Kaikyo Fleet" "$PROVINCE$ Hajj Squadron" "$PROVINCE$ Malay Sendan"
+}

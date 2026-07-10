@@ -1,0 +1,2 @@
+# Preserve existing EU4 encodings, BOMs, and byte-locked compatibility files.
+* -text

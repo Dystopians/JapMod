@@ -1,0 +1,7 @@
+﻿jxp_ikko_route_missions = {
+	slot = 3
+	generic = no
+	ai = no
+	potential_on_load = { always = no }
+	potential = { always = no }
+}

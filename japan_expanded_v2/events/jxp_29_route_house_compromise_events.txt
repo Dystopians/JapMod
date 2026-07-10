@@ -1,0 +1,258 @@
+namespace = jxp_route_house_compromise
+
+country_event = {
+	id = jxp_route_house_compromise.1
+	title = "jxp_route_house_compromise.1.t"
+	desc = "jxp_route_house_compromise.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.1.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_sakoku_house_compromise_seen
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_sakoku_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.1.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_sakoku_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.2
+	title = "jxp_route_house_compromise.2.t"
+	desc = "jxp_route_house_compromise.2.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.2.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_open_house_compromise_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_open_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.2.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_open_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.3
+	title = "jxp_route_house_compromise.3.t"
+	desc = "jxp_route_house_compromise.3.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_kirishitan
+			tag = KJP
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.3.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_kirishitan_house_compromise_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_kirishitan_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.3.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_kirishitan_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.4
+	title = "jxp_route_house_compromise.4.t"
+	desc = "jxp_route_house_compromise.4.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.4.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_confucian_house_compromise_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_29_confucian_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.4.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_confucian_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.5
+	title = "jxp_route_house_compromise.5.t"
+	desc = "jxp_route_house_compromise.5.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.5.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_imperial_house_compromise_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_29_imperial_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.5.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_imperial_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.6
+	title = "jxp_route_house_compromise.6.t"
+	desc = "jxp_route_house_compromise.6.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_reformed
+			tag = RFJ
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.6.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_reformed_house_compromise_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_reformed_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.6.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_reformed_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.7
+	title = "jxp_route_house_compromise.7.t"
+	desc = "jxp_route_house_compromise.7.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_kaikyo
+			tag = SJP
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.7.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_kaikyo_house_compromise_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_kaikyo_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.7.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_kaikyo_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.8
+	title = "jxp_route_house_compromise.8.t"
+	desc = "jxp_route_house_compromise.8.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_ikko
+			tag = IJP
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.8.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_ikko_house_compromise_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_29_ikko_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.8.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_ikko_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_route_house_compromise.9
+	title = "jxp_route_house_compromise.9.t"
+	desc = "jxp_route_house_compromise.9.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_path_wokou
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+	}
+	option = {
+		name = "jxp_route_house_compromise.9.a"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_wokou_house_compromise_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_29_wokou_house_ordinance duration = 5475 }
+	}
+	option = {
+		name = "jxp_route_house_compromise.9.b"
+		set_country_flag = jxp_29_route_house_compromise_taken
+		set_country_flag = jxp_29_wokou_house_compromise_seen
+		jxp_apply_founder_house_compromise_effect = yes
+	}
+}

@@ -1,0 +1,25 @@
+# Run old-save migration and fingerprint repair before the player first opens
+# the mission panel after loading a campaign.
+on_startup = {
+	events = {
+		jxp_migration_v023.7
+		jxp_migration_v025.1
+		jxp_mission_refresh.2
+	}
+}
+
+# External conversions and government changes can alter mission potentials
+# without passing through a JXP route effect.
+on_religion_change = {
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+on_government_change = {
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_refresh_route_missions_effect = yes
+	}
+}

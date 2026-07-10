@@ -1,0 +1,131 @@
+jxp_has_companion_map_warrior_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_rkk
+		has_country_flag = jxp_map_origin_ank
+		has_country_flag = jxp_map_origin_mog
+		has_country_flag = jxp_map_origin_asn
+		has_country_flag = jxp_map_origin_osk
+		has_country_flag = jxp_map_origin_sma
+		has_country_flag = jxp_map_origin_mkm
+		has_country_flag = jxp_map_origin_stm
+		has_country_flag = jxp_map_origin_sto
+	}
+}
+
+jxp_has_companion_map_court_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_kyo
+		has_country_flag = jxp_map_origin_wkt
+		has_country_flag = jxp_map_origin_nht
+		has_country_flag = jxp_map_origin_azi
+		has_country_flag = jxp_map_origin_myo
+	}
+}
+
+jxp_has_companion_map_maritime_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_hnm
+		has_country_flag = jxp_map_origin_ari
+		has_country_flag = jxp_map_origin_mtu
+		has_country_flag = jxp_map_origin_rzj
+		has_country_flag = jxp_map_origin_mts
+		has_country_flag = jxp_map_origin_krd
+		has_country_flag = jxp_map_origin_nbs
+	}
+}
+
+jxp_has_companion_map_frontier_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_dho
+		has_country_flag = jxp_map_origin_kmp
+		has_country_flag = jxp_map_origin_sgr
+		has_country_flag = jxp_map_origin_tgr
+	}
+}
+
+jxp_has_companion_map_temple_market_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_tgs
+		has_country_flag = jxp_map_origin_hng
+		has_country_flag = jxp_map_origin_ukt
+		has_country_flag = jxp_map_origin_hcs
+		has_country_flag = jxp_map_origin_ymc
+	}
+}
+
+jxp_has_companion_map_origin_trigger = {
+	OR = {
+		jxp_has_companion_map_warrior_origin_trigger = yes
+		jxp_has_companion_map_court_origin_trigger = yes
+		jxp_has_companion_map_maritime_origin_trigger = yes
+		jxp_has_companion_map_frontier_origin_trigger = yes
+		jxp_has_companion_map_temple_market_origin_trigger = yes
+	}
+}
+
+jxp_has_warrior_house_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_oda
+		has_country_flag = jxp_origin_tkg
+		has_country_flag = jxp_origin_tkd
+		has_country_flag = jxp_origin_ues
+		has_country_flag = jxp_origin_hjo
+		has_country_flag = jxp_origin_csk
+		has_country_flag = jxp_origin_stk
+		has_country_flag = jxp_origin_cba
+		jxp_has_companion_map_warrior_origin_trigger = yes
+	}
+}
+
+jxp_has_court_house_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_ask
+		has_country_flag = jxp_origin_hsk
+		has_country_flag = jxp_origin_htk
+		has_country_flag = jxp_origin_sba
+		has_country_flag = jxp_origin_ymn
+		has_country_flag = jxp_origin_ktb
+		has_country_flag = jxp_origin_tti
+		has_country_flag = jxp_origin_akm
+		jxp_has_companion_map_court_origin_trigger = yes
+	}
+}
+
+jxp_has_maritime_house_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_mri
+		has_country_flag = jxp_origin_smz
+		has_country_flag = jxp_origin_otm
+		has_country_flag = jxp_origin_ouc
+		has_country_flag = jxp_origin_soo
+		has_country_flag = jxp_origin_shn
+		has_country_flag = jxp_origin_isk
+		has_country_flag = jxp_origin_kno
+		jxp_has_companion_map_maritime_origin_trigger = yes
+	}
+}
+
+jxp_has_frontier_house_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_dte
+		has_country_flag = jxp_origin_rfr
+		has_country_flag = jxp_origin_akt
+		has_country_flag = jxp_origin_utn
+		has_country_flag = jxp_origin_ogs
+		has_country_flag = jxp_origin_ito
+		jxp_has_companion_map_frontier_origin_trigger = yes
+	}
+}
+
+jxp_has_temple_market_house_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_img
+		has_country_flag = jxp_origin_ama
+		has_country_flag = jxp_origin_asa
+		has_country_flag = jxp_origin_ike
+		has_country_flag = jxp_origin_mae
+		has_country_flag = jxp_origin_kkc
+		has_country_flag = jxp_origin_tki
+		jxp_has_companion_map_temple_market_origin_trigger = yes
+	}
+}

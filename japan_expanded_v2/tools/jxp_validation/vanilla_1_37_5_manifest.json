@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "eu4_raw_version": "v1.37.5.0",
+  "eu4_display_version": "EU4 v1.37.5.0 Inca (491d)",
+  "files": [
+    {
+      "path": "missions/Japanese_Missions.txt",
+      "sha256": "67b3f0abb6276fb11f2688c2f7269eb9086e0afd7a2d778e6bc4bf856c028fd5",
+      "purpose": "legacy daimyo, independent daimyo, shogunate, and non-Domination JAP missions"
+    },
+    {
+      "path": "missions/DOM_Japanese_Missions.txt",
+      "sha256": "55917ac903b47ba943ed8e0256bdd19af7bec65443e2f72a633e3d4cded98525",
+      "purpose": "Domination JAP foundation, branch, and Emperor of China missions"
+    }
+  ],
+  "generic_files": [
+    {
+      "path": "missions/00_Generic_missions.txt",
+      "sha256": "550119394756c142eca5b83a527820cdff878a87968a29f2e5de38cd06e9dd3d",
+      "purpose": "generic military, diplomatic, and administrative fallback slots"
+    },
+    {
+      "path": "missions/01_Generic_European_Missions.txt",
+      "sha256": "71f32cabf7713d5f27223c95c185c7ca0961cd02544e3408d4836ec4dd7ba184",
+      "purpose": "European slot-five fallback exclusion for Asian Japanese profiles"
+    },
+    {
+      "path": "missions/Asian_Missions.txt",
+      "sha256": "d8a2d8f46f7bd0d7f01d13b5e8f66ea8e30325d7eadaad94f58518516d4b228e",
+      "purpose": "Asian trade fallback in slot five"
+    }
+  ]
+}

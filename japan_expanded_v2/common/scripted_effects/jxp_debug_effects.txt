@@ -1,0 +1,1279 @@
+jxp_debug_prepare_polity_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_country_flag = jxp_polity_initialized } }
+			jxp_init_polity_values_effect = yes
+		}
+		jxp_ensure_polity_mechanic_effect = yes
+	}
+}
+
+jxp_debug_grant_resources_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		add_adm_power = 999
+		add_dip_power = 999
+		add_mil_power = 999
+		add_treasury = 1000
+		add_prestige = 25
+		add_legitimacy = 25
+		add_stability = 1
+	}
+}
+
+jxp_debug_unify_japan_effect = {
+	custom_tooltip = jxp_debug_unify_japan_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		every_province = {
+			limit = {
+				region = japan_region
+				is_empty = no
+			}
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		set_country_flag = jxp_daimyo_ready_for_unification
+		set_country_flag = jxp_debug_japan_unified
+		add_prestige = 25
+		jxp_add_tenka_order_10_effect = yes
+		jxp_add_imperial_sanction_10_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_debug_clear_route_state_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_clear_all_route_flags_effect = yes
+		remove_country_modifier = jxp_route_sakoku
+		remove_country_modifier = jxp_route_open_trade
+		remove_country_modifier = jxp_route_kirishitan
+		remove_country_modifier = jxp_route_confucian
+		remove_country_modifier = jxp_route_imperial
+		remove_country_modifier = jxp_route_reformed
+		remove_country_modifier = jxp_route_kaikyo
+		remove_country_modifier = jxp_route_ikko
+		remove_country_modifier = jxp_route_wokou
+	}
+}
+
+jxp_debug_clear_cooldowns_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		remove_country_modifier = jxp_land_survey_momentum
+		remove_country_modifier = jxp_sword_hunt_order
+		remove_country_modifier = jxp_relaxed_domains
+		remove_country_modifier = jxp_restored_imperial_palace
+		remove_country_modifier = jxp_imperial_edict
+		remove_country_modifier = jxp_kobu_gattai_rite
+		remove_country_modifier = jxp_foreign_factory
+		remove_country_modifier = jxp_expelled_padres
+		remove_country_modifier = jxp_dejima_window
+		remove_country_modifier = jxp_reviewed_translations
+		remove_country_modifier = jxp_confucian_incident_review_recent
+		jxp_cancel_all_investments_effect = yes
+	}
+}
+
+jxp_debug_clear_event_state_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		clr_country_flag = jxp_sengoku_shadow_kyoto_seen
+		clr_country_flag = jxp_sengoku_kokujin_seen
+		clr_country_flag = jxp_sengoku_kyoto_invitation_seen
+		clr_country_flag = jxp_sengoku_honnoji_seen
+		clr_country_flag = jxp_tanegashima_seen
+		clr_country_flag = jxp_namban_ship_seen
+		clr_country_flag = jxp_sakai_petition_seen
+		clr_country_flag = jxp_rangaku_books_seen
+		clr_country_flag = jxp_rangaku_bureau_seen
+		clr_country_flag = jxp_kirishitan_contact
+		clr_country_flag = jxp_missionary_arrival_seen
+		clr_country_flag = jxp_baptized_daimyo_seen
+		clr_country_flag = jxp_hidden_christians_seen
+		clr_country_flag = jxp_shimabara_resolved
+		clr_country_flag = jxp_kirishitan_centers_established
+		clr_country_flag = jxp_kirishitan_conversion_active
+		clr_country_flag = jxp_nagasaki_bishopric_seen
+		clr_country_flag = jxp_roman_kyoto_embassy_seen
+		clr_country_flag = jxp_kirishitan_oceanic_orders_seen
+		clr_country_flag = jxp_reformed_contact
+		clr_country_flag = jxp_reformed_scriptures_done
+		clr_country_flag = jxp_reformed_covenant_done
+		clr_country_flag = jxp_reformed_consistory_done
+		clr_country_flag = jxp_reformed_centers_established
+		clr_country_flag = jxp_reformed_conversion_active
+		clr_country_flag = jxp_reformed_elder_ports_seen
+		clr_country_flag = jxp_reformed_gunnery_bureau_seen
+		clr_country_flag = jxp_kaikyo_contact
+		clr_country_flag = jxp_halal_port_law_done
+		clr_country_flag = jxp_hajj_fleet_done
+		clr_country_flag = jxp_kaikyo_qadi_done
+		clr_country_flag = jxp_kaikyo_centers_established
+		clr_country_flag = jxp_kaikyo_conversion_active
+		clr_country_flag = jxp_kaikyo_south_sea_compact_seen
+		clr_country_flag = jxp_kaikyo_sea_law_seen
+		clr_country_flag = jxp_ikko_contact
+		clr_country_flag = jxp_ikko_terauchi_seen
+		clr_country_flag = jxp_ikko_terauchi_decision_done
+		clr_country_flag = jxp_ikko_monto_militia_seen
+		clr_country_flag = jxp_ikko_ishiyama_seen
+		clr_country_flag = jxp_ikko_kinri_seen
+		clr_country_flag = jxp_ikko_rising_resolved
+		clr_country_flag = jxp_ikko_commonwealth_seen
+		clr_country_flag = jxp_ikko_covenant_seen
+		clr_country_flag = jxp_wokou_contact
+		clr_country_flag = jxp_wokou_brokers_funded
+		clr_country_flag = jxp_wokou_letters_seen
+		clr_country_flag = jxp_tsushima_brokers_seen
+		clr_country_flag = jxp_setouchi_pilots_seen
+		clr_country_flag = jxp_ryukyu_gate_seen
+		clr_country_flag = jxp_ming_sea_smugglers_seen
+		clr_country_flag = jxp_wokou_admiralty_seen
+		clr_country_flag = jxp_eastern_sea_lords_seen
+		clr_country_flag = jxp_balance_tenka_high_cooldown
+		clr_country_flag = jxp_balance_tenka_low_cooldown
+		clr_country_flag = jxp_balance_sanction_high_cooldown
+		clr_country_flag = jxp_balance_sanction_low_cooldown
+		clr_country_flag = jxp_balance_oceanic_high_cooldown
+		clr_country_flag = jxp_balance_oceanic_low_cooldown
+		clr_country_flag = jxp_confucian_academy_seen
+		clr_country_flag = jxp_confucian_centers_established
+		clr_country_flag = jxp_confucian_native_centers_v1
+		clr_country_flag = jxp_confucian_conversion_active
+		clr_country_flag = jxp_confucian_shinto_syncretism
+		clr_country_flag = jxp_confucian_shinto_synthesis_granted
+		clr_country_flag = jxp_confucian_shinto_sync_recent
+		clr_country_flag = jxp_confucian_bridge_neo_started
+		clr_country_flag = jxp_confucian_bridge_neo_done
+		clr_country_flag = jxp_confucian_bridge_urban_started
+		clr_country_flag = jxp_confucian_bridge_urban_done
+		clr_country_flag = jxp_confucian_bridge_nanban_started
+		clr_country_flag = jxp_confucian_bridge_nanban_done
+		clr_country_flag = jxp_confucian_bridge_firearms_started
+		clr_country_flag = jxp_confucian_bridge_firearms_done
+		clr_country_flag = jxp_confucian_bridge_christian_started
+		clr_country_flag = jxp_confucian_bridge_christian_done
+		clr_country_flag = jxp_confucian_bridge_authority_started
+		clr_country_flag = jxp_confucian_bridge_authority_done
+		clr_country_flag = jxp_confucian_bridge_ikko_started
+		clr_country_flag = jxp_confucian_bridge_ikko_done
+		clr_country_flag = jxp_confucian_bridge_wokou_started
+		clr_country_flag = jxp_confucian_bridge_wokou_done
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		clr_country_flag = jxp_confucian_bridge_incident_state_v0231
+		clr_country_flag = jxp_confucian_order_complete
+		clr_country_flag = jxp_confucian_completion_rewarded
+		clr_country_flag = jxp_confucian_isolationism_imported
+		clr_country_flag = jxp_reform_tier_migration_v022
+		clr_country_flag = jxp_mission_refresh_pending
+		clr_country_flag = jxp_mission_topology_migration_v023
+		clr_country_flag = jxp_mission_renderer_migration_v0231
+		clr_country_flag = jxp_mission_renderer_migration_v0233
+		clr_country_flag = jxp_mission_expansion_migration_v024
+		clr_country_flag = jxp_final_tag_tree_migration_v0250
+		clr_country_flag = jxp_runtime_state_repair_v0241
+		clr_country_flag = jxp_route_ideas_synced_v0241
+		clr_country_flag = jxp_reform_visibility_migration_v0232
+		clr_country_flag = jxp_founder_reform_assigned_v0232
+		clr_country_flag = jxp_founder_reform_unlocked_v0234
+		clr_country_flag = jxp_founder_reform_reclassified_v0234
+		clr_country_flag = jxp_songming_kami_rites_seen
+		clr_country_flag = jxp_confucian_urbanization_seen
+		clr_country_flag = jxp_confucian_nanban_seen
+		clr_country_flag = jxp_korean_embassy_seen
+		clr_country_flag = jxp_mandate_question_seen
+		clr_country_flag = jxp_mandate_claimed
+		clr_country_flag = jxp_mandate_broken
+		clr_country_flag = jxp_mandate_claim_unified_celestial
+		clr_country_flag = jxp_mandate_claim_fallback
+		clr_country_flag = jxp_unlocked_hakko_ichiu_reform
+		clr_country_flag = jxp_manchu_korean_route_seen
+		clr_country_flag = jxp_eastasia_tribute_registry_seen
+		clr_country_flag = jxp_tsushima_channel_office_done
+		clr_country_flag = jxp_ryukyu_tribute_port_done
+		clr_country_flag = jxp_china_coast_entrepots_done
+		clr_country_flag = jxp_east_asian_rite_sphere_done
+		clr_country_flag = jxp_pacific_charter_seen
+		clr_country_flag = jxp_pacific_charter_enacted
+		clr_country_flag = jxp_manila_nagasaki_route_seen
+		clr_country_flag = jxp_alaska_survey_seen
+		clr_country_flag = jxp_california_anchorages_seen
+		clr_country_flag = jxp_pacific_admiralty_done
+		clr_country_flag = jxp_north_pacific_charts_done
+		clr_country_flag = jxp_pacific_silver_flow_done
+		clr_country_flag = jxp_new_world_japan_towns_done
+		clr_country_flag = jxp_oceanic_sun_state
+		clr_country_flag = jxp_origin_oda
+		clr_country_flag = jxp_origin_tkg
+		clr_country_flag = jxp_origin_tkd
+		clr_country_flag = jxp_origin_ues
+		clr_country_flag = jxp_origin_hjo
+		clr_country_flag = jxp_origin_mri
+		clr_country_flag = jxp_origin_smz
+		clr_country_flag = jxp_origin_otm
+		clr_country_flag = jxp_origin_dte
+		clr_country_flag = jxp_origin_ask
+		clr_country_flag = jxp_origin_csk
+		clr_country_flag = jxp_origin_ouc
+		clr_country_flag = jxp_origin_img
+		clr_country_flag = jxp_origin_soo
+		clr_country_flag = jxp_origin_ama
+		clr_country_flag = jxp_origin_asa
+		clr_country_flag = jxp_origin_hsk
+		clr_country_flag = jxp_origin_htk
+		clr_country_flag = jxp_origin_ike
+		clr_country_flag = jxp_origin_mae
+		clr_country_flag = jxp_origin_sba
+		clr_country_flag = jxp_origin_ymn
+		clr_country_flag = jxp_origin_rfr
+		clr_country_flag = jxp_origin_ktb
+		clr_country_flag = jxp_origin_akm
+		clr_country_flag = jxp_origin_akt
+		clr_country_flag = jxp_origin_cba
+		clr_country_flag = jxp_origin_isk
+		clr_country_flag = jxp_origin_ito
+		clr_country_flag = jxp_origin_kkc
+		clr_country_flag = jxp_origin_kno
+		clr_country_flag = jxp_origin_ogs
+		clr_country_flag = jxp_origin_shn
+		clr_country_flag = jxp_origin_stk
+		clr_country_flag = jxp_origin_tki
+		clr_country_flag = jxp_origin_utn
+		clr_country_flag = jxp_origin_tti
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+		clr_country_flag = jxp_daimyo_legacy_granted
+		clr_country_flag = jxp_daimyo_legacy_oda_seen
+		clr_country_flag = jxp_daimyo_legacy_tkg_seen
+		clr_country_flag = jxp_daimyo_legacy_tkd_seen
+		clr_country_flag = jxp_daimyo_legacy_ues_seen
+		clr_country_flag = jxp_daimyo_legacy_hjo_seen
+		clr_country_flag = jxp_daimyo_legacy_mri_seen
+		clr_country_flag = jxp_daimyo_legacy_smz_seen
+		clr_country_flag = jxp_daimyo_legacy_otm_seen
+		clr_country_flag = jxp_daimyo_legacy_dte_seen
+		clr_country_flag = jxp_daimyo_legacy_ask_seen
+		clr_country_flag = jxp_daimyo_legacy_csk_seen
+		clr_country_flag = jxp_daimyo_legacy_ouc_seen
+		clr_country_flag = jxp_daimyo_legacy_img_seen
+		clr_country_flag = jxp_daimyo_legacy_soo_seen
+		clr_country_flag = jxp_daimyo_legacy_sanin_seen
+		clr_country_flag = jxp_daimyo_legacy_kyoto_seen
+		clr_country_flag = jxp_daimyo_legacy_kanto_seen
+		clr_country_flag = jxp_daimyo_legacy_western_sea_seen
+		clr_country_flag = jxp_daimyo_legacy_northern_seen
+		clr_country_flag = jxp_daimyo_legacy_service_seen
+		clr_country_flag = jxp_minor_daimyo_kinai_houses_seen
+		clr_country_flag = jxp_minor_daimyo_western_sea_seen
+		clr_country_flag = jxp_minor_daimyo_eastern_kokujin_seen
+		clr_country_flag = jxp_minor_daimyo_northern_roads_seen
+		clr_country_flag = jxp_minor_daimyo_crossroads_seen
+		clr_country_flag = jxp_minor_daimyo_kyushu_houses_seen
+		clr_country_flag = jxp_minor_daimyo_hokuriku_seen
+		clr_country_flag = jxp_17_sanin_kokujin_league_taken
+		clr_country_flag = jxp_17_kanrei_compact_taken
+		clr_country_flag = jxp_17_kyushu_shrine_registers_taken
+		clr_country_flag = jxp_17_shinano_pass_wardens_taken
+		clr_country_flag = jxp_17_kanto_shrine_network_taken
+		clr_country_flag = jxp_17_mino_tango_workshops_taken
+		clr_country_flag = jxp_17_ise_yamato_petition_taken
+		clr_country_flag = jxp_17_northern_trade_posts_taken
+		clr_country_flag = jxp_17_harima_castle_roads_taken
+		clr_country_flag = jxp_17_southern_sea_envoys_taken
+		clr_country_flag = jxp_17_hitachi_samurai_muster_taken
+		clr_country_flag = jxp_17_storehouse_ledgers_taken
+		clr_country_flag = jxp_major_daimyo_oda_seen
+		clr_country_flag = jxp_major_daimyo_tkg_seen
+		clr_country_flag = jxp_major_daimyo_tkd_seen
+		clr_country_flag = jxp_major_daimyo_ues_seen
+		clr_country_flag = jxp_major_daimyo_hjo_seen
+		clr_country_flag = jxp_major_daimyo_mri_seen
+		clr_country_flag = jxp_major_daimyo_smz_seen
+		clr_country_flag = jxp_major_daimyo_otm_seen
+		clr_country_flag = jxp_major_daimyo_dte_seen
+		clr_country_flag = jxp_major_daimyo_ask_seen
+		clr_country_flag = jxp_major_daimyo_csk_seen
+		clr_country_flag = jxp_major_daimyo_ouc_seen
+		clr_country_flag = jxp_major_daimyo_img_seen
+		clr_country_flag = jxp_major_daimyo_soo_seen
+		clr_country_flag = jxp_15_oda_tenka_fubu_edicts_taken
+		clr_country_flag = jxp_15_tkg_mikawa_fudai_registers_taken
+		clr_country_flag = jxp_15_tkd_koshu_hatagashira_taken
+		clr_country_flag = jxp_15_ues_kanto_kanrei_petition_taken
+		clr_country_flag = jxp_15_hjo_odawara_sogamae_taken
+		clr_country_flag = jxp_15_mri_setouchi_suigun_taken
+		clr_country_flag = jxp_15_smz_satsuma_gunnery_taken
+		clr_country_flag = jxp_15_otm_funai_foreign_quarter_taken
+		clr_country_flag = jxp_15_dte_oshu_kibamusha_taken
+		clr_country_flag = jxp_15_ask_reform_hokoshu_taken
+		clr_country_flag = jxp_15_csk_tosa_ichiryo_gusoku_taken
+		clr_country_flag = jxp_15_ouc_yamaguchi_kanhe_trade_taken
+		clr_country_flag = jxp_15_img_tokaido_lawbooks_taken
+		clr_country_flag = jxp_15_soo_tsushima_brokers_taken
+		clr_country_flag = jxp_43_preunification_memory_integrated
+		clr_country_flag = jxp_43_selected_oda_tenka_fubu
+		clr_country_flag = jxp_43_selected_tkg_fudai_registers
+		clr_country_flag = jxp_43_selected_tkd_hatagashira
+		clr_country_flag = jxp_43_selected_ues_kanrei_petition
+		clr_country_flag = jxp_43_selected_hjo_sogamae
+		clr_country_flag = jxp_43_selected_mri_suigun
+		clr_country_flag = jxp_43_selected_smz_gunnery
+		clr_country_flag = jxp_43_selected_otm_foreign_quarter
+		clr_country_flag = jxp_43_selected_dte_kibamusha
+		clr_country_flag = jxp_43_selected_ask_hokoshu
+		clr_country_flag = jxp_43_selected_csk_ichiryo_gusoku
+		clr_country_flag = jxp_43_selected_ouc_kanhe_trade
+		clr_country_flag = jxp_43_selected_img_lawbooks
+		clr_country_flag = jxp_43_selected_soo_brokers
+		clr_country_flag = jxp_43_selected_asa_ichijodani_council
+		clr_country_flag = jxp_43_selected_ama_gassan_toda
+		clr_country_flag = jxp_43_selected_hsk_sakai_council
+		clr_country_flag = jxp_43_selected_ktb_ise_petition
+		clr_country_flag = jxp_43_selected_akt_ezochi_brokers
+		clr_country_flag = jxp_43_selected_rfr_mutsu_gates
+		clr_country_flag = jxp_43_selected_htk_wakae_oaths
+		clr_country_flag = jxp_43_selected_ike_himeji_accounts
+		clr_country_flag = jxp_43_selected_mae_kanazawa_patronage
+		clr_country_flag = jxp_43_selected_sba_buei_restoration
+		clr_country_flag = jxp_43_selected_ymn_sixth_share
+		clr_country_flag = jxp_43_selected_akm_banshu_castles
+		clr_country_flag = jxp_43_selected_kkc_aso_rites
+		clr_country_flag = jxp_43_selected_stk_kashima_muster
+		clr_country_flag = jxp_43_selected_tki_mino_riverworks
+		clr_country_flag = jxp_43_selected_utn_nikko_barrier
+		clr_country_flag = jxp_43_selected_shn_dazaifu_brokers
+		clr_country_flag = jxp_43_selected_ogs_suwa_horse
+		clr_country_flag = jxp_43_selected_cba_katori_muster
+		clr_country_flag = jxp_43_selected_isk_tango_ports
+		clr_country_flag = jxp_43_selected_ito_hyuga_forts
+		clr_country_flag = jxp_43_selected_kno_inland_pilots
+		clr_country_flag = jxp_43_selected_tti_yamato_temple
+		clr_country_flag = jxp_19_asa_ichijodani_council_taken
+		clr_country_flag = jxp_19_htk_wakae_retainer_oaths_taken
+		clr_country_flag = jxp_19_ike_himeji_accounts_taken
+		clr_country_flag = jxp_19_mae_kanazawa_patronage_taken
+		clr_country_flag = jxp_19_sba_buei_restoration_taken
+		clr_country_flag = jxp_19_ymn_sixth_share_registers_taken
+		clr_country_flag = jxp_19_akm_banshu_castle_chain_taken
+		clr_country_flag = jxp_19_kkc_aso_fire_rites_taken
+		clr_country_flag = jxp_19_stk_kashima_muster_taken
+		clr_country_flag = jxp_19_tki_mino_river_works_taken
+		clr_country_flag = jxp_19_utn_nikko_barrier_guard_taken
+		clr_country_flag = jxp_19_asa_valley_letters_seen
+		clr_country_flag = jxp_19_htk_two_houses_seen
+		clr_country_flag = jxp_19_ike_white_castle_seen
+		clr_country_flag = jxp_19_mae_gold_and_tea_seen
+		clr_country_flag = jxp_19_sba_buei_name_seen
+		clr_country_flag = jxp_19_ymn_sixth_share_seen
+		clr_country_flag = jxp_19_akm_castle_roads_seen
+		clr_country_flag = jxp_19_kkc_aso_fire_seen
+		clr_country_flag = jxp_19_stk_kashima_oaths_seen
+		clr_country_flag = jxp_19_tki_river_accounts_seen
+		clr_country_flag = jxp_19_utn_nikko_letters_seen
+		clr_country_flag = jxp_19_house_legacy_dispatching
+		clr_country_flag = jxp_19_house_legacy_granted
+		clr_country_flag = jxp_20_ama_gassan_toda_registers_taken
+		clr_country_flag = jxp_20_hsk_sakai_kanrei_council_taken
+		clr_country_flag = jxp_20_shn_dazaifu_brokers_taken
+		clr_country_flag = jxp_20_ogs_suwa_horse_masters_taken
+		clr_country_flag = jxp_20_ktb_ise_court_petition_taken
+		clr_country_flag = jxp_20_akt_ezochi_trade_brokers_taken
+		clr_country_flag = jxp_20_cba_katori_muster_taken
+		clr_country_flag = jxp_20_isk_tango_port_wardens_taken
+		clr_country_flag = jxp_20_ito_hyuga_fort_network_taken
+		clr_country_flag = jxp_20_kno_inland_sea_pilots_taken
+		clr_country_flag = jxp_20_tti_yamato_temple_compact_taken
+		clr_country_flag = jxp_20_rfr_mutsu_nine_gates_taken
+		clr_country_flag = jxp_20_ama_moon_mountain_seen
+		clr_country_flag = jxp_20_hsk_sakai_council_seen
+		clr_country_flag = jxp_20_shn_dazaifu_brokers_seen
+		clr_country_flag = jxp_20_ogs_suwa_horse_seen
+		clr_country_flag = jxp_20_ktb_ise_petition_seen
+		clr_country_flag = jxp_20_akt_ezochi_brokers_seen
+		clr_country_flag = jxp_20_cba_katori_oaths_seen
+		clr_country_flag = jxp_20_isk_tango_port_seen
+		clr_country_flag = jxp_20_ito_hyuga_forts_seen
+		clr_country_flag = jxp_20_kno_inland_sea_seen
+		clr_country_flag = jxp_20_tti_yamato_temples_seen
+		clr_country_flag = jxp_20_rfr_nine_gates_seen
+		clr_country_flag = jxp_20_minor_house_legacy_dispatching
+		clr_country_flag = jxp_20_minor_house_legacy_granted
+		clr_country_flag = jxp_22_house_ordinance_taken
+		clr_country_flag = jxp_22_warrior_house_law_taken
+		clr_country_flag = jxp_22_court_office_order_taken
+		clr_country_flag = jxp_22_maritime_routes_taken
+		clr_country_flag = jxp_22_frontier_wards_taken
+		clr_country_flag = jxp_22_temple_market_law_taken
+		clr_country_flag = jxp_23_warrior_muster_review_seen
+		clr_country_flag = jxp_23_court_rank_review_seen
+		clr_country_flag = jxp_23_maritime_registers_seen
+		clr_country_flag = jxp_23_frontier_wardens_seen
+		clr_country_flag = jxp_23_temple_market_review_seen
+		clr_country_flag = jxp_25_warrior_agenda_seen
+		clr_country_flag = jxp_25_court_agenda_seen
+		clr_country_flag = jxp_25_maritime_agenda_seen
+		clr_country_flag = jxp_25_frontier_agenda_seen
+		clr_country_flag = jxp_25_temple_market_agenda_seen
+		clr_country_flag = jxp_34_house_diet_convened
+		clr_country_flag = jxp_34_selected_warrior_muster_law
+		clr_country_flag = jxp_34_selected_warrior_captain_privileges
+		clr_country_flag = jxp_34_selected_court_rank_law
+		clr_country_flag = jxp_34_selected_court_domain_law
+		clr_country_flag = jxp_34_selected_maritime_port_law
+		clr_country_flag = jxp_34_selected_maritime_admiral_rolls
+		clr_country_flag = jxp_34_selected_frontier_barrier_law
+		clr_country_flag = jxp_34_selected_frontier_market_charter
+		clr_country_flag = jxp_34_selected_temple_privilege_law
+		clr_country_flag = jxp_34_selected_temple_accounting_law
+		clr_country_flag = jxp_35_house_diet_law_integrated
+		clr_country_flag = jxp_26_founder_legacy_council_taken
+		clr_country_flag = jxp_26_oda_legacy_council_seen
+		clr_country_flag = jxp_26_tkg_legacy_council_seen
+		clr_country_flag = jxp_26_tkd_legacy_council_seen
+		clr_country_flag = jxp_26_ues_legacy_council_seen
+		clr_country_flag = jxp_26_hjo_legacy_council_seen
+		clr_country_flag = jxp_26_mri_legacy_council_seen
+		clr_country_flag = jxp_26_smz_legacy_council_seen
+		clr_country_flag = jxp_26_otm_legacy_council_seen
+		clr_country_flag = jxp_26_dte_legacy_council_seen
+		clr_country_flag = jxp_26_ask_legacy_council_seen
+		clr_country_flag = jxp_26_csk_legacy_council_seen
+		clr_country_flag = jxp_26_ouc_legacy_council_seen
+		clr_country_flag = jxp_26_img_legacy_council_seen
+		clr_country_flag = jxp_26_soo_legacy_council_seen
+		clr_country_flag = jxp_26_ama_legacy_council_seen
+		clr_country_flag = jxp_26_asa_legacy_council_seen
+		clr_country_flag = jxp_26_hsk_legacy_council_seen
+		clr_country_flag = jxp_26_htk_legacy_council_seen
+		clr_country_flag = jxp_26_ike_legacy_council_seen
+		clr_country_flag = jxp_26_mae_legacy_council_seen
+		clr_country_flag = jxp_26_sba_legacy_council_seen
+		clr_country_flag = jxp_26_ymn_legacy_council_seen
+		clr_country_flag = jxp_26_rfr_legacy_council_seen
+		clr_country_flag = jxp_26_ktb_legacy_council_seen
+		clr_country_flag = jxp_26_akm_legacy_council_seen
+		clr_country_flag = jxp_26_akt_legacy_council_seen
+		clr_country_flag = jxp_26_cba_legacy_council_seen
+		clr_country_flag = jxp_26_isk_legacy_council_seen
+		clr_country_flag = jxp_26_ito_legacy_council_seen
+		clr_country_flag = jxp_26_kkc_legacy_council_seen
+		clr_country_flag = jxp_26_kno_legacy_council_seen
+		clr_country_flag = jxp_26_ogs_legacy_council_seen
+		clr_country_flag = jxp_26_shn_legacy_council_seen
+		clr_country_flag = jxp_26_stk_legacy_council_seen
+		clr_country_flag = jxp_26_tki_legacy_council_seen
+		clr_country_flag = jxp_26_utn_legacy_council_seen
+		clr_country_flag = jxp_26_tti_legacy_council_seen
+	}
+	jxp_remove_confucian_native_centers_effect = yes
+	4359 = {
+		remove_province_modifier = jxp_ise_jingu_protected
+		if = {
+			limit = { has_province_flag = jxp_ise_jingu_zeal_by_jxp }
+			remove_province_modifier = religious_zeal_at_conv
+			clr_province_flag = jxp_ise_jingu_zeal_by_jxp
+		}
+	}
+	jxp_clear_founder_house_reforms_effect = yes
+	jxp_clear_route_house_compromise_effect = yes
+	jxp_clear_route_house_resonance_effect = yes
+	jxp_clear_specific_route_house_combo_effect = yes
+	jxp_clear_founder_reform_pulse_effect = yes
+	jxp_clear_major_founder_house_policy_effect = yes
+	jxp_clear_founder_idea_legacy_effect = yes
+	remove_country_modifier = jxp_sengoku_negotiations
+	remove_country_modifier = jxp_tanegashima_foundries
+	remove_country_modifier = jxp_namban_trade
+	remove_country_modifier = jxp_kirishitan_networks
+	remove_country_modifier = jxp_kirishitan_state_church
+	remove_country_modifier = jxp_nagasaki_bishopric
+	remove_country_modifier = jxp_kirishitan_roman_embassy
+	remove_country_modifier = jxp_kirishitan_oceanic_orders
+	remove_country_modifier = jxp_confucian_academies
+	remove_country_modifier = jxp_confucian_shinto_synthesis
+	remove_country_modifier = jxp_songming_kami_rites
+	remove_country_modifier = jxp_songming_academy_bureaucracy
+	remove_country_modifier = jxp_confucian_ordered_cities
+	remove_country_modifier = jxp_confucian_controlled_nanban
+	remove_country_modifier = jxp_confucian_bridge_shrine_registers
+	remove_country_modifier = jxp_confucian_bridge_city_registers
+	remove_country_modifier = jxp_confucian_bridge_nanban_edicts
+	remove_country_modifier = jxp_confucian_bridge_restricted_ports
+	remove_country_modifier = jxp_confucian_firearms_registry
+	remove_country_modifier = jxp_confucian_standard_calibers
+	remove_country_modifier = jxp_confucian_guarded_arsenals
+	remove_country_modifier = jxp_confucian_rites_supervision
+	remove_country_modifier = jxp_confucian_registered_churches
+	remove_country_modifier = jxp_confucian_proscribed_missions
+	remove_country_modifier = jxp_confucian_domain_memorials
+	remove_country_modifier = jxp_confucian_court_domain_compact
+	remove_country_modifier = jxp_confucian_royal_rescripts
+	remove_country_modifier = jxp_confucian_temple_land_register
+	remove_country_modifier = jxp_confucian_registered_congregations
+	remove_country_modifier = jxp_confucian_suppressed_leagues
+	remove_country_modifier = jxp_confucian_licensed_sea_guard
+	remove_country_modifier = jxp_confucian_coastal_patrols
+	remove_country_modifier = jxp_confucian_closed_coast_edict
+	remove_country_modifier = jxp_rangaku_bureau
+	remove_country_modifier = jxp_hirado_synod
+	remove_country_modifier = jxp_oranda_scriptures
+	remove_country_modifier = jxp_reformed_court_covenant
+	remove_country_modifier = jxp_reformed_consistory
+	remove_country_modifier = jxp_reformed_oranda_schools
+	remove_country_modifier = jxp_reformed_elder_ports
+	remove_country_modifier = jxp_reformed_gunnery_bureau
+	remove_country_modifier = jxp_malay_factory
+	remove_country_modifier = jxp_halal_port_law
+	remove_country_modifier = jxp_hajj_fleet
+	remove_country_modifier = jxp_kaikyo_qadi_courts
+	remove_country_modifier = jxp_sakai_malay_brokers
+	remove_country_modifier = jxp_kaikyo_hajj_registry
+	remove_country_modifier = jxp_kaikyo_south_sea_compact
+	remove_country_modifier = jxp_kaikyo_sea_law
+	remove_country_modifier = jxp_route_ikko
+	remove_country_modifier = jxp_ikko_monto_militia
+	remove_country_modifier = jxp_kinri_protected_by_monto
+	remove_country_modifier = jxp_peasant_commonwealth
+	remove_country_modifier = jxp_pure_land_covenant
+	remove_country_modifier = jxp_ikko_reconciled
+	remove_country_modifier = jxp_ikko_suppressed
+	remove_country_modifier = jxp_route_wokou
+	remove_country_modifier = jxp_wokou_letters_of_mark
+	remove_country_modifier = jxp_setouchi_pilot_leagues
+	remove_country_modifier = jxp_tsushima_brokers
+	remove_country_modifier = jxp_ryukyu_sea_gate
+	remove_country_modifier = jxp_ming_sea_smugglers
+	remove_country_modifier = jxp_wokou_admiralty
+	remove_country_modifier = jxp_black_tide_vanguard
+	remove_country_modifier = jxp_eastern_sea_lords
+	remove_country_modifier = jxp_shimabara_mediation
+	remove_country_modifier = jxp_shimabara_suppressed
+	remove_country_modifier = jxp_shimabara_disaster_modifier
+	remove_country_modifier = jxp_oceanic_sun_state
+	remove_country_modifier = jxp_pacific_charter
+	remove_country_modifier = jxp_mandate_fallback_hegemony
+	remove_country_modifier = jxp_solar_court_recognition
+	remove_country_modifier = jxp_manchu_korean_route
+	remove_country_modifier = jxp_tsushima_channel_office
+	remove_country_modifier = jxp_ryukyu_tribute_port
+	remove_country_modifier = jxp_taiwan_sea_lanes
+	remove_country_modifier = jxp_china_coast_entrepots
+	remove_country_modifier = jxp_eastasia_tribute_registry
+	remove_country_modifier = jxp_celestial_diplomacy
+	remove_country_modifier = jxp_east_asian_rite_sphere
+	remove_country_modifier = jxp_manila_nagasaki_route
+	remove_country_modifier = jxp_alaska_california_route
+	remove_country_modifier = jxp_pacific_waystations
+	remove_country_modifier = jxp_colonial_sun_banner
+	remove_country_modifier = jxp_oceanic_admiralty
+	remove_country_modifier = jxp_north_pacific_charts
+	remove_country_modifier = jxp_pacific_silver_flow
+	remove_country_modifier = jxp_new_world_japan_towns
+	remove_country_modifier = jxp_shrine_land_registers
+	remove_country_modifier = jxp_kami_castle_towns
+	remove_country_modifier = jxp_incident_order
+	remove_country_modifier = jxp_sacred_isles_settlement
+	remove_country_modifier = jxp_port_congregation_registers
+	remove_country_modifier = jxp_translated_doctrine
+	remove_country_modifier = jxp_church_court_compact
+	remove_country_modifier = jxp_martyrs_and_merchants
+	remove_country_modifier = jxp_cross_sun_commonwealth
+	remove_country_modifier = jxp_confucian_exam_system
+	remove_country_modifier = jxp_ritual_census_state
+	remove_country_modifier = jxp_kami_harmony_register
+	remove_country_modifier = jxp_embassies_of_rite
+	remove_country_modifier = jxp_ordered_rite_state
+	remove_country_modifier = jxp_harbor_mosque_registers
+	remove_country_modifier = jxp_qadi_port_courts_expanded
+	remove_country_modifier = jxp_south_sea_brokers
+	remove_country_modifier = jxp_halal_granary_law
+	remove_country_modifier = jxp_sultanate_sea_law
+	remove_country_modifier = jxp_monto_rolls
+	remove_country_modifier = jxp_terauchi_market_charters
+	remove_country_modifier = jxp_monto_militia_oaths
+	remove_country_modifier = jxp_kinri_monto_compact
+	remove_country_modifier = jxp_commonwealth_covenant
+	remove_country_modifier = jxp_osaka_rice_ledger
+	remove_country_modifier = jxp_castle_town_markets
+	remove_country_modifier = jxp_domain_school_network
+	remove_country_modifier = jxp_translation_house
+	remove_country_modifier = jxp_silver_silk_routing
+	remove_country_modifier = jxp_three_capitals_ledgers
+	remove_country_modifier = jxp_northern_sea_office
+	remove_country_modifier = jxp_matsumae_treaties
+	remove_country_modifier = jxp_coastal_beacon_chain
+	remove_country_modifier = jxp_tsushima_interpreters
+	remove_country_modifier = jxp_ryukyu_embassy_records
+	remove_country_modifier = jxp_east_sea_protocol
+	remove_country_modifier = jxp_daimyo_domain_accounts
+	remove_country_modifier = jxp_daimyo_castle_town
+	remove_country_modifier = jxp_daimyo_courtly_petition
+	remove_country_modifier = jxp_daimyo_namban_letters
+	remove_country_modifier = jxp_daimyo_league_of_kin
+	remove_country_modifier = jxp_daimyo_gun_foundries
+	remove_country_modifier = jxp_daimyo_legacy_oda
+	remove_country_modifier = jxp_daimyo_legacy_tkg
+	remove_country_modifier = jxp_daimyo_legacy_tkd
+	remove_country_modifier = jxp_daimyo_legacy_ues
+	remove_country_modifier = jxp_daimyo_legacy_hjo
+	remove_country_modifier = jxp_daimyo_legacy_mri
+	remove_country_modifier = jxp_daimyo_legacy_smz
+	remove_country_modifier = jxp_daimyo_legacy_otm
+	remove_country_modifier = jxp_daimyo_legacy_dte
+	remove_country_modifier = jxp_daimyo_legacy_ask
+	remove_country_modifier = jxp_daimyo_legacy_csk
+	remove_country_modifier = jxp_daimyo_legacy_ouc
+	remove_country_modifier = jxp_daimyo_legacy_img
+	remove_country_modifier = jxp_daimyo_legacy_soo
+	remove_country_modifier = jxp_daimyo_legacy_sanin_houses
+	remove_country_modifier = jxp_daimyo_legacy_kyoto_office_houses
+	remove_country_modifier = jxp_daimyo_legacy_kanto_cadet_houses
+	remove_country_modifier = jxp_daimyo_legacy_western_sea_houses
+	remove_country_modifier = jxp_daimyo_legacy_northern_frontier_houses
+	remove_country_modifier = jxp_daimyo_legacy_service_houses
+	remove_country_modifier = jxp_17_sanin_kokujin_league
+	remove_country_modifier = jxp_17_kanrei_compact
+	remove_country_modifier = jxp_17_kyushu_shrine_registers
+	remove_country_modifier = jxp_17_shinano_pass_wardens
+	remove_country_modifier = jxp_17_kanto_shrine_network
+	remove_country_modifier = jxp_17_mino_tango_workshops
+	remove_country_modifier = jxp_17_ise_yamato_petition
+	remove_country_modifier = jxp_17_northern_trade_posts
+	remove_country_modifier = jxp_17_harima_castle_roads
+	remove_country_modifier = jxp_17_southern_sea_envoys
+	remove_country_modifier = jxp_17_hitachi_samurai_muster
+	remove_country_modifier = jxp_17_storehouse_ledgers
+	remove_country_modifier = jxp_15_oda_tenka_fubu_edicts
+	remove_country_modifier = jxp_15_tkg_mikawa_fudai_registers
+	remove_country_modifier = jxp_15_tkd_koshu_hatagashira
+	remove_country_modifier = jxp_15_ues_kanto_kanrei_petition
+	remove_country_modifier = jxp_15_hjo_odawara_sogamae
+	remove_country_modifier = jxp_15_mri_setouchi_suigun
+	remove_country_modifier = jxp_15_smz_satsuma_gunnery
+	remove_country_modifier = jxp_15_otm_funai_foreign_quarter
+	remove_country_modifier = jxp_15_dte_oshu_kibamusha
+	remove_country_modifier = jxp_15_ask_reform_hokoshu
+	remove_country_modifier = jxp_15_csk_tosa_ichiryo_gusoku
+	remove_country_modifier = jxp_15_ouc_yamaguchi_kanhe_trade
+	remove_country_modifier = jxp_15_img_tokaido_lawbooks
+	remove_country_modifier = jxp_15_soo_tsushima_brokers
+	remove_country_modifier = jxp_19_asa_ichijodani_council
+	remove_country_modifier = jxp_19_htk_wakae_retainer_oaths
+	remove_country_modifier = jxp_19_ike_himeji_accounts
+	remove_country_modifier = jxp_19_mae_kanazawa_patronage
+	remove_country_modifier = jxp_19_sba_buei_restoration
+	remove_country_modifier = jxp_19_ymn_sixth_share_registers
+	remove_country_modifier = jxp_19_akm_banshu_castle_chain
+	remove_country_modifier = jxp_19_kkc_aso_fire_rites
+	remove_country_modifier = jxp_19_stk_kashima_muster
+	remove_country_modifier = jxp_19_tki_mino_river_works
+	remove_country_modifier = jxp_19_utn_nikko_barrier_guard
+	remove_country_modifier = jxp_19_legacy_asa
+	remove_country_modifier = jxp_19_legacy_htk
+	remove_country_modifier = jxp_19_legacy_ike
+	remove_country_modifier = jxp_19_legacy_mae
+	remove_country_modifier = jxp_19_legacy_sba
+	remove_country_modifier = jxp_19_legacy_ymn
+	remove_country_modifier = jxp_19_legacy_akm
+	remove_country_modifier = jxp_19_legacy_kkc
+	remove_country_modifier = jxp_19_legacy_stk
+	remove_country_modifier = jxp_19_legacy_tki
+	remove_country_modifier = jxp_19_legacy_utn
+	remove_country_modifier = jxp_20_ama_gassan_toda_registers
+	remove_country_modifier = jxp_20_hsk_sakai_kanrei_council
+	remove_country_modifier = jxp_20_shn_dazaifu_brokers
+	remove_country_modifier = jxp_20_ogs_suwa_horse_masters
+	remove_country_modifier = jxp_20_ktb_ise_court_petition
+	remove_country_modifier = jxp_20_akt_ezochi_trade_brokers
+	remove_country_modifier = jxp_20_cba_katori_muster
+	remove_country_modifier = jxp_20_isk_tango_port_wardens
+	remove_country_modifier = jxp_20_ito_hyuga_fort_network
+	remove_country_modifier = jxp_20_kno_inland_sea_pilots
+	remove_country_modifier = jxp_20_tti_yamato_temple_compact
+	remove_country_modifier = jxp_20_rfr_mutsu_nine_gates
+	remove_country_modifier = jxp_20_legacy_ama
+	remove_country_modifier = jxp_20_legacy_hsk
+	remove_country_modifier = jxp_20_legacy_shn
+	remove_country_modifier = jxp_20_legacy_ogs
+	remove_country_modifier = jxp_20_legacy_ktb
+	remove_country_modifier = jxp_20_legacy_akt
+	remove_country_modifier = jxp_20_legacy_cba
+	remove_country_modifier = jxp_20_legacy_isk
+	remove_country_modifier = jxp_20_legacy_ito
+	remove_country_modifier = jxp_20_legacy_kno
+	remove_country_modifier = jxp_20_legacy_tti
+	remove_country_modifier = jxp_20_legacy_rfr
+	remove_country_modifier = jxp_21_warrior_muster_rolls
+	remove_country_modifier = jxp_21_warrior_castle_roads
+	remove_country_modifier = jxp_21_warrior_banner_legacy
+	remove_country_modifier = jxp_21_court_genealogies
+	remove_country_modifier = jxp_21_court_petitions
+	remove_country_modifier = jxp_21_court_kanrei_memory
+	remove_country_modifier = jxp_21_sea_port_registers
+	remove_country_modifier = jxp_21_sea_shipwrights
+	remove_country_modifier = jxp_21_sea_strait_laws
+	remove_country_modifier = jxp_21_frontier_passes
+	remove_country_modifier = jxp_21_frontier_markets
+	remove_country_modifier = jxp_21_frontier_border_oaths
+	remove_country_modifier = jxp_21_temple_ledgers
+	remove_country_modifier = jxp_21_temple_market_towns
+	remove_country_modifier = jxp_21_temple_public_law
+	remove_country_modifier = jxp_22_warrior_house_codes
+	remove_country_modifier = jxp_22_court_office_order
+	remove_country_modifier = jxp_22_maritime_house_routes
+	remove_country_modifier = jxp_22_frontier_house_wards
+	remove_country_modifier = jxp_22_temple_market_law
+	remove_country_modifier = jxp_23_warrior_reviewed_musters
+	remove_country_modifier = jxp_23_warrior_local_oaths
+	remove_country_modifier = jxp_23_court_rank_table
+	remove_country_modifier = jxp_23_court_service_offices
+	remove_country_modifier = jxp_23_maritime_open_registers
+	remove_country_modifier = jxp_23_maritime_tightened_ports
+	remove_country_modifier = jxp_23_frontier_warden_oaths
+	remove_country_modifier = jxp_23_frontier_market_pacts
+	remove_country_modifier = jxp_23_temple_privilege_compact
+	remove_country_modifier = jxp_23_temple_public_registries
+	remove_country_modifier = jxp_25_warrior_muster_rolls
+	remove_country_modifier = jxp_25_warrior_captain_oaths
+	remove_country_modifier = jxp_25_court_rank_petitions
+	remove_country_modifier = jxp_25_court_local_stewards
+	remove_country_modifier = jxp_25_maritime_port_registers
+	remove_country_modifier = jxp_25_maritime_ship_rolls
+	remove_country_modifier = jxp_25_frontier_pass_wardens
+	remove_country_modifier = jxp_25_frontier_market_brokers
+	remove_country_modifier = jxp_25_temple_market_privileges
+	remove_country_modifier = jxp_25_temple_market_account_books
+	remove_country_modifier = jxp_42_oda_teppo_muster
+	remove_country_modifier = jxp_42_oda_court_notice
+	remove_country_modifier = jxp_42_tkg_fudai_oaths
+	remove_country_modifier = jxp_42_tkg_prudent_petitions
+	remove_country_modifier = jxp_42_tkd_cavalry_registers
+	remove_country_modifier = jxp_42_tkd_mountain_accounts
+	remove_country_modifier = jxp_42_ues_echigo_muster
+	remove_country_modifier = jxp_42_ues_justice_petition
+	remove_country_modifier = jxp_42_hjo_castle_net
+	remove_country_modifier = jxp_42_hjo_cadastral_review
+	remove_country_modifier = jxp_42_mri_setouchi_tides
+	remove_country_modifier = jxp_42_mri_kokujin_oaths
+	remove_country_modifier = jxp_42_smz_tanegashima_trials
+	remove_country_modifier = jxp_42_smz_ichimon_fire
+	remove_country_modifier = jxp_42_otm_funai_quarter
+	remove_country_modifier = jxp_42_otm_ritual_boundary
+	remove_country_modifier = jxp_42_dte_oshu_warband
+	remove_country_modifier = jxp_42_dte_distant_letters
+	remove_country_modifier = jxp_42_ask_kuban_restoration
+	remove_country_modifier = jxp_42_ask_bakufu_ledgers
+	remove_country_modifier = jxp_42_csk_ichiryo_muster
+	remove_country_modifier = jxp_42_csk_urado_sails
+	remove_country_modifier = jxp_42_ouc_yamaguchi_rites
+	remove_country_modifier = jxp_42_ouc_tang_goods
+	remove_country_modifier = jxp_42_img_kana_code
+	remove_country_modifier = jxp_42_img_tokaido_prestige
+	remove_country_modifier = jxp_42_soo_wakan_books
+	remove_country_modifier = jxp_42_soo_channel_protocols
+	remove_country_modifier = jxp_42_kinai_old_letters
+	remove_country_modifier = jxp_42_kinai_domain_ledgers
+	remove_country_modifier = jxp_42_western_sea_writs
+	remove_country_modifier = jxp_42_western_kin_compact
+	remove_country_modifier = jxp_42_eastern_kokujin_muster
+	remove_country_modifier = jxp_42_eastern_ritual_pacification
+	remove_country_modifier = jxp_42_northern_horse_roads
+	remove_country_modifier = jxp_42_northern_sea_posts
+	remove_country_modifier = jxp_42_crossroads_petitions
+	remove_country_modifier = jxp_42_crossroads_castle_roads
+	remove_country_modifier = jxp_42_kyushu_mountain_oaths
+	remove_country_modifier = jxp_42_kyushu_sea_books
+	remove_country_modifier = jxp_42_hokuriku_court_seats
+	remove_country_modifier = jxp_42_hokuriku_storehouse_books
+	remove_country_modifier = jxp_19_asa_valley_statutes
+	remove_country_modifier = jxp_19_htk_kanrei_petitions
+	remove_country_modifier = jxp_19_ike_white_wall_prestige
+	remove_country_modifier = jxp_19_mae_kaga_storehouse_books
+	remove_country_modifier = jxp_19_sba_house_compacts
+	remove_country_modifier = jxp_19_ymn_western_army_oaths
+	remove_country_modifier = jxp_19_akm_court_rehabilitation
+	remove_country_modifier = jxp_19_kkc_kikuchi_muster
+	remove_country_modifier = jxp_19_stk_kanto_petitions
+	remove_country_modifier = jxp_19_tki_workshop_routes
+	remove_country_modifier = jxp_19_utn_shimotsuke_guard
+	remove_country_modifier = jxp_20_ama_sanin_sea_ledgers
+	remove_country_modifier = jxp_20_hsk_kanrei_petitions
+	remove_country_modifier = jxp_20_shn_hakata_wind_books
+	remove_country_modifier = jxp_20_ogs_suwa_rites
+	remove_country_modifier = jxp_20_ktb_jingu_domain_accounts
+	remove_country_modifier = jxp_20_akt_northern_kin_guard
+	remove_country_modifier = jxp_20_cba_kanto_letters
+	remove_country_modifier = jxp_20_isk_tango_road_accounts
+	remove_country_modifier = jxp_20_ito_mountain_rite_compacts
+	remove_country_modifier = jxp_20_kno_island_oaths
+	remove_country_modifier = jxp_20_tti_temple_ledgers
+	remove_country_modifier = jxp_20_rfr_northern_sea_posts
+	remove_country_modifier = jxp_43_oda_azuchi_edicts_memory
+	remove_country_modifier = jxp_43_oda_market_law_memory
+	remove_country_modifier = jxp_43_tkg_fudai_cadasters_memory
+	remove_country_modifier = jxp_43_tkg_road_oaths_memory
+	remove_country_modifier = jxp_43_tkd_koshu_muster_memory
+	remove_country_modifier = jxp_43_tkd_mountain_supply_memory
+	remove_country_modifier = jxp_43_ues_righteous_petitions_memory
+	remove_country_modifier = jxp_43_ues_kanrei_arbiter_memory
+	remove_country_modifier = jxp_43_hjo_odawara_cadasters_memory
+	remove_country_modifier = jxp_43_hjo_sogamae_barriers_memory
+	remove_country_modifier = jxp_43_mri_suigun_admiralty_memory
+	remove_country_modifier = jxp_43_mri_setouchi_toll_memory
+	remove_country_modifier = jxp_43_smz_satsuma_foundries_memory
+	remove_country_modifier = jxp_43_smz_ichimon_fire_memory
+	remove_country_modifier = jxp_43_otm_funai_quarter_memory
+	remove_country_modifier = jxp_43_otm_foreign_gunwrights_memory
+	remove_country_modifier = jxp_43_dte_oshu_cavalry_memory
+	remove_country_modifier = jxp_43_dte_distant_letters_memory
+	remove_country_modifier = jxp_43_ask_hokoshu_order_memory
+	remove_country_modifier = jxp_43_ask_kuban_arbitration_memory
+	remove_country_modifier = jxp_43_csk_ichiryo_rolls_memory
+	remove_country_modifier = jxp_43_csk_urado_supply_memory
+	remove_country_modifier = jxp_43_ouc_kanhe_bureau_memory
+	remove_country_modifier = jxp_43_ouc_yamaguchi_court_memory
+	remove_country_modifier = jxp_43_img_kana_code_memory
+	remove_country_modifier = jxp_43_img_tokaido_arbitration_memory
+	remove_country_modifier = jxp_43_soo_wakan_office_memory
+	remove_country_modifier = jxp_43_soo_channel_protocols_memory
+	remove_country_modifier = jxp_43_asa_ichijodani_council_memory
+	remove_country_modifier = jxp_43_asa_echizen_paper_office_memory
+	remove_country_modifier = jxp_43_ama_mountain_castle_memory
+	remove_country_modifier = jxp_43_ama_izumo_mine_registers_memory
+	remove_country_modifier = jxp_43_hsk_sakai_council_memory
+	remove_country_modifier = jxp_43_hsk_merchant_arbitration_memory
+	remove_country_modifier = jxp_43_ktb_ise_shrine_court_memory
+	remove_country_modifier = jxp_43_ktb_kuki_pilots_memory
+	remove_country_modifier = jxp_43_akt_ezochi_trade_memory
+	remove_country_modifier = jxp_43_akt_northern_wardens_memory
+	remove_country_modifier = jxp_43_rfr_mutsu_gate_wardens_memory
+	remove_country_modifier = jxp_43_rfr_morioka_granary_memory
+	remove_country_modifier = jxp_43_htk_wakae_retainer_oaths_memory
+	remove_country_modifier = jxp_43_htk_saika_teppo_contracts_memory
+	remove_country_modifier = jxp_43_ike_himeji_accounts_memory
+	remove_country_modifier = jxp_43_ike_setouchi_ledgers_memory
+	remove_country_modifier = jxp_43_mae_kanazawa_storehouses_memory
+	remove_country_modifier = jxp_43_mae_tea_noh_patronage_memory
+	remove_country_modifier = jxp_43_sba_buei_military_office_memory
+	remove_country_modifier = jxp_43_sba_hokuriku_roads_memory
+	remove_country_modifier = jxp_43_ymn_sixth_share_registers_memory
+	remove_country_modifier = jxp_43_ymn_western_army_compacts_memory
+	remove_country_modifier = jxp_43_akm_banshu_castle_roads_memory
+	remove_country_modifier = jxp_43_akm_red_pine_oaths_memory
+	remove_country_modifier = jxp_43_kkc_aso_fire_rites_memory
+	remove_country_modifier = jxp_43_kkc_kikuchi_scrolls_memory
+	remove_country_modifier = jxp_43_stk_kashima_muster_memory
+	remove_country_modifier = jxp_43_stk_hitachi_oaths_memory
+	remove_country_modifier = jxp_43_tki_mino_riverworks_memory
+	remove_country_modifier = jxp_43_tki_toki_paper_memory
+	remove_country_modifier = jxp_43_utn_nikko_barrier_memory
+	remove_country_modifier = jxp_43_utn_shimotsuke_muster_memory
+	remove_country_modifier = jxp_43_shn_dazaifu_brokers_memory
+	remove_country_modifier = jxp_43_shn_kyushu_tribute_memory
+	remove_country_modifier = jxp_43_ogs_suwa_horse_memory
+	remove_country_modifier = jxp_43_ogs_pass_wardens_memory
+	remove_country_modifier = jxp_43_cba_katori_muster_memory
+	remove_country_modifier = jxp_43_cba_shimosa_court_routes_memory
+	remove_country_modifier = jxp_43_isk_tango_port_wardens_memory
+	remove_country_modifier = jxp_43_isk_shugo_house_law_memory
+	remove_country_modifier = jxp_43_ito_hyuga_fort_network_memory
+	remove_country_modifier = jxp_43_ito_shrine_temple_compacts_memory
+	remove_country_modifier = jxp_43_kno_setouchi_pilots_memory
+	remove_country_modifier = jxp_43_kno_iyo_port_law_memory
+	remove_country_modifier = jxp_43_tti_yamato_temple_compact_memory
+	remove_country_modifier = jxp_43_tti_kofukuji_castle_towns_memory
+	remove_country_modifier = jxp_34_warrior_muster_law
+	remove_country_modifier = jxp_34_warrior_captain_privileges
+	remove_country_modifier = jxp_34_court_rank_law
+	remove_country_modifier = jxp_34_court_domain_law
+	remove_country_modifier = jxp_34_maritime_port_law
+	remove_country_modifier = jxp_34_maritime_admiral_rolls
+	remove_country_modifier = jxp_34_frontier_barrier_law
+	remove_country_modifier = jxp_34_frontier_market_charter
+	remove_country_modifier = jxp_34_temple_privilege_law
+	remove_country_modifier = jxp_34_temple_accounting_law
+	remove_country_modifier = jxp_35_legacy_warrior_muster_law
+	remove_country_modifier = jxp_35_legacy_warrior_captain_privileges
+	remove_country_modifier = jxp_35_legacy_court_rank_law
+	remove_country_modifier = jxp_35_legacy_court_domain_law
+	remove_country_modifier = jxp_35_legacy_maritime_port_law
+	remove_country_modifier = jxp_35_legacy_maritime_admiral_rolls
+	remove_country_modifier = jxp_35_legacy_frontier_barrier_law
+	remove_country_modifier = jxp_35_legacy_frontier_market_charter
+	remove_country_modifier = jxp_35_legacy_temple_privilege_law
+	remove_country_modifier = jxp_35_legacy_temple_accounting_law
+	remove_country_modifier = jxp_36_integrated_house_diet_records
+	remove_country_modifier = jxp_36_house_law_local_offices
+	remove_country_modifier = jxp_36_house_law_state_doctrine
+	remove_country_modifier = jxp_26_oda_azuchi_edicts
+	remove_country_modifier = jxp_26_oda_market_law
+	remove_country_modifier = jxp_26_tkg_fudai_council
+	remove_country_modifier = jxp_26_tkg_road_barriers
+	remove_country_modifier = jxp_26_tkd_koshu_muster
+	remove_country_modifier = jxp_26_tkd_mountain_law
+	remove_country_modifier = jxp_26_ues_kantou_justice
+	remove_country_modifier = jxp_26_ues_echigo_muster
+	remove_country_modifier = jxp_26_hjo_odawara_cadasters
+	remove_country_modifier = jxp_26_hjo_sogamae_network
+	remove_country_modifier = jxp_26_mri_setouchi_admiralty
+	remove_country_modifier = jxp_26_mri_kokujin_compacts
+	remove_country_modifier = jxp_26_smz_teppo_foundries
+	remove_country_modifier = jxp_26_smz_satsunan_learning
+	remove_country_modifier = jxp_26_otm_funai_quarter
+	remove_country_modifier = jxp_26_otm_kunikuzushi_bureau
+	remove_country_modifier = jxp_26_dte_oshu_cavalry
+	remove_country_modifier = jxp_26_dte_keicho_envoys
+	remove_country_modifier = jxp_26_ask_hokoshu_order
+	remove_country_modifier = jxp_26_ask_higashiyama_culture
+	remove_country_modifier = jxp_26_csk_ichiryo_gusoku_rolls
+	remove_country_modifier = jxp_26_csk_tosa_sea_law
+	remove_country_modifier = jxp_26_ouc_yamaguchi_mercantile_court
+	remove_country_modifier = jxp_26_ouc_korean_envoys
+	remove_country_modifier = jxp_26_img_tokaido_lawbooks
+	remove_country_modifier = jxp_26_img_triple_alliance_model
+	remove_country_modifier = jxp_26_soo_wakan_office
+	remove_country_modifier = jxp_26_soo_tsushima_sea_wardens
+	remove_country_modifier = jxp_26_ama_gassan_toda_castle
+	remove_country_modifier = jxp_26_ama_kizuki_shrine_registers
+	remove_country_modifier = jxp_26_asa_ichijodani_council
+	remove_country_modifier = jxp_26_asa_echizen_paper_office
+	remove_country_modifier = jxp_26_hsk_kanrei_table
+	remove_country_modifier = jxp_26_hsk_sakai_merchant_council
+	remove_country_modifier = jxp_26_htk_two_house_oaths
+	remove_country_modifier = jxp_26_htk_saika_teppo_contracts
+	remove_country_modifier = jxp_26_ike_himeji_stewards
+	remove_country_modifier = jxp_26_ike_setouchi_ledgers
+	remove_country_modifier = jxp_26_mae_million_koku_storehouses
+	remove_country_modifier = jxp_26_mae_tea_noh_patronage
+	remove_country_modifier = jxp_26_sba_buei_military_office
+	remove_country_modifier = jxp_26_sba_hokuriku_roads
+	remove_country_modifier = jxp_26_ymn_sixth_share_registers
+	remove_country_modifier = jxp_26_ymn_western_army_compacts
+	remove_country_modifier = jxp_26_rfr_nine_gates_cavalry
+	remove_country_modifier = jxp_26_rfr_morioka_granaries
+	remove_country_modifier = jxp_26_ktb_ise_shrine_law
+	remove_country_modifier = jxp_26_ktb_kuki_suigun_rolls
+	remove_country_modifier = jxp_26_akm_harima_castle_roads
+	remove_country_modifier = jxp_26_akm_red_pine_retainer_oaths
+	remove_country_modifier = jxp_26_akt_ezochi_trade_posts
+	remove_country_modifier = jxp_26_akt_northern_wardens
+	remove_country_modifier = jxp_26_cba_katori_muster_rolls
+	remove_country_modifier = jxp_26_cba_shimosa_court_routes
+	remove_country_modifier = jxp_26_isk_tango_port_wardens
+	remove_country_modifier = jxp_26_isk_shugo_house_law
+	remove_country_modifier = jxp_26_ito_hyuga_castle_network
+	remove_country_modifier = jxp_26_ito_shrine_temple_compacts
+	remove_country_modifier = jxp_26_kkc_kikuchi_loyalist_scrolls
+	remove_country_modifier = jxp_26_kkc_aso_fire_rites
+	remove_country_modifier = jxp_26_kno_setouchi_pilots
+	remove_country_modifier = jxp_26_kno_iyo_port_law
+	remove_country_modifier = jxp_26_ogs_kyuba_rites
+	remove_country_modifier = jxp_26_ogs_suwa_pass_wardens
+	remove_country_modifier = jxp_26_shn_dazaifu_brokers
+	remove_country_modifier = jxp_26_shn_kyushu_tribute_office
+	remove_country_modifier = jxp_26_stk_hitachi_muster
+	remove_country_modifier = jxp_26_stk_kashima_oaths
+	remove_country_modifier = jxp_26_tki_mino_river_works
+	remove_country_modifier = jxp_26_tki_toki_courtly_paper
+	remove_country_modifier = jxp_26_utn_nikko_barrier_guard
+	remove_country_modifier = jxp_26_utn_shimotsuke_muster
+	remove_country_modifier = jxp_26_tti_yamato_temple_compact
+	remove_country_modifier = jxp_26_tti_kofukuji_castle_towns
+	every_owned_province = {
+		remove_province_modifier = jxp_ikko_terauchi_town
+		remove_province_modifier = jxp_ishiyama_fortress
+		remove_province_modifier = jxp_ise_pilgrim_roads
+		remove_province_modifier = jxp_confucian_reform_center
+		remove_province_modifier = jxp_confucian_newly_ordered
+		remove_province_modifier = jxp_ise_jingu_protected
+		clr_province_flag = jxp_confucian_native_center
+	}
+}
+
+jxp_debug_set_polity_low_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		set_variable = { which = jxp_tenka_order value = 10 }
+		set_variable = { which = jxp_imperial_sanction value = 10 }
+		set_variable = { which = jxp_oceanic_opening value = 5 }
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_debug_set_polity_balanced_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		set_variable = { which = jxp_tenka_order value = 50 }
+		set_variable = { which = jxp_imperial_sanction value = 60 }
+		set_variable = { which = jxp_oceanic_opening value = 35 }
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_debug_set_polity_closed_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		set_variable = { which = jxp_tenka_order value = 80 }
+		set_variable = { which = jxp_imperial_sanction value = 70 }
+		set_variable = { which = jxp_oceanic_opening value = 10 }
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_debug_set_polity_open_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		set_variable = { which = jxp_tenka_order value = 70 }
+		set_variable = { which = jxp_imperial_sanction value = 55 }
+		set_variable = { which = jxp_oceanic_opening value = 80 }
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_debug_set_route_ready_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		set_variable = { which = jxp_tenka_order value = 75 }
+		set_variable = { which = jxp_imperial_sanction value = 80 }
+		set_variable = { which = jxp_oceanic_opening value = 70 }
+		set_country_flag = jxp_kirishitan_contact
+		set_country_flag = jxp_reformed_contact
+		set_country_flag = jxp_kaikyo_contact
+		set_country_flag = jxp_ikko_contact
+		set_country_flag = jxp_wokou_contact
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_debug_return_jap_baseline_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		jxp_debug_clear_event_state_effect = yes
+		if = {
+			limit = {
+				NOT = { tag = JAP }
+				OR = {
+					tag = KJP
+					tag = CJP
+					tag = EJP
+					tag = RFJ
+					tag = SJP
+					tag = IJP
+					tag = WAK
+				}
+			}
+			change_tag = JAP
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+		}
+		change_religion = shinto
+		set_ruler_religion = shinto
+		if = {
+			limit = { has_heir = yes }
+			set_heir_religion = shinto
+		}
+		jxp_debug_set_polity_balanced_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_debug_force_sakoku_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_sakoku
+		add_country_modifier = { name = jxp_route_sakoku duration = -1 }
+		jxp_debug_set_polity_closed_effect = yes
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_debug_force_open_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_open_trade
+		add_country_modifier = { name = jxp_route_open_trade duration = -1 }
+		jxp_debug_set_polity_open_effect = yes
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_debug_force_kirishitan_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_kirishitan
+		set_country_flag = jxp_kirishitan_contact
+		change_religion = catholic
+		add_country_modifier = { name = jxp_route_kirishitan duration = -1 }
+		jxp_debug_set_polity_open_effect = yes
+		jxp_change_to_kjp_effect = yes
+	}
+}
+
+jxp_debug_force_confucian_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_confucian
+		add_country_modifier = { name = jxp_route_confucian duration = -1 }
+		jxp_debug_set_polity_balanced_effect = yes
+		jxp_change_to_cjp_effect = yes
+	}
+}
+
+jxp_debug_force_imperial_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_imperial
+		add_country_modifier = { name = jxp_route_imperial duration = -1 }
+		jxp_debug_set_polity_balanced_effect = yes
+		jxp_change_to_ejp_effect = yes
+	}
+}
+
+jxp_debug_force_reformed_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_reformed
+		set_country_flag = jxp_reformed_contact
+		change_religion = reformed
+		add_country_modifier = { name = jxp_route_reformed duration = -1 }
+		jxp_debug_set_polity_open_effect = yes
+		jxp_change_to_rfj_effect = yes
+	}
+}
+
+jxp_debug_force_kaikyo_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_kaikyo
+		set_country_flag = jxp_kaikyo_contact
+		change_religion = sunni
+		add_country_modifier = { name = jxp_route_kaikyo duration = -1 }
+		jxp_debug_set_polity_open_effect = yes
+		jxp_change_to_sjp_effect = yes
+	}
+}
+
+jxp_debug_force_ikko_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_ikko
+		set_country_flag = jxp_ikko_contact
+		add_country_modifier = { name = jxp_route_ikko duration = -1 }
+		jxp_debug_set_polity_balanced_effect = yes
+		jxp_change_to_ijp_effect = yes
+	}
+}
+
+jxp_debug_force_wokou_route_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		set_country_flag = jxp_path_wokou
+		set_country_flag = jxp_wokou_contact
+		add_country_modifier = { name = jxp_route_wokou duration = -1 }
+		jxp_debug_set_polity_open_effect = yes
+		jxp_change_to_wak_effect = yes
+	}
+}
+
+jxp_debug_seed_christian_contact_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		set_country_flag = jxp_kirishitan_contact
+		jxp_debug_set_polity_open_effect = yes
+		if = {
+			limit = { owns = 4182 }
+			4182 = { change_religion = catholic }
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			change_religion = catholic
+		}
+	}
+}
+
+jxp_debug_seed_reformed_contact_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		set_country_flag = jxp_reformed_contact
+		jxp_debug_set_polity_open_effect = yes
+		if = {
+			limit = { owns = 4182 }
+			4182 = { change_religion = reformed }
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			change_religion = reformed
+		}
+	}
+}
+
+jxp_debug_seed_kaikyo_contact_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		set_country_flag = jxp_kaikyo_contact
+		jxp_debug_set_polity_open_effect = yes
+		if = {
+			limit = { owns = 4182 }
+			4182 = { change_religion = sunni }
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			change_religion = sunni
+		}
+	}
+}
+
+jxp_debug_seed_shimabara_pressure_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		set_country_flag = jxp_hidden_christians_seen
+		jxp_debug_set_polity_closed_effect = yes
+		add_country_modifier = { name = jxp_expelled_padres duration = 3650 }
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = northern_kyushu
+					area = kyushu_area
+					has_province_flag = jxp_map_compat_shimabara_belt
+				}
+			}
+			change_religion = catholic
+		}
+	}
+}

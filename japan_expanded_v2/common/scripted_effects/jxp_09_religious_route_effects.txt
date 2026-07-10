@@ -1,0 +1,228 @@
+jxp_add_kirishitan_reform_center_here_effect = {
+	change_religion = catholic
+	add_province_modifier = {
+		name = jxp_kirishitan_reform_center
+		duration = -1
+	}
+}
+
+jxp_spawn_kirishitan_reform_centers_effect = {
+	capital_scope = {
+		if = {
+			limit = {
+				region = japan_region
+				NOT = { has_province_modifier = jxp_kirishitan_reform_center }
+			}
+			jxp_add_kirishitan_reform_center_here_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			owns = 4182
+			4182 = {
+				NOT = { is_capital = yes }
+				NOT = { has_province_modifier = jxp_kirishitan_reform_center }
+			}
+		}
+		4182 = { jxp_add_kirishitan_reform_center_here_effect = yes }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_kirishitan_reform_center }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_kirishitan_reform_center }
+			}
+			jxp_add_kirishitan_reform_center_here_effect = yes
+		}
+	}
+}
+
+jxp_kirishitan_convert_one_japan_province_effect = {
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = catholic }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				NOT = { religion = catholic }
+			}
+			change_religion = catholic
+			add_province_modifier = {
+				name = jxp_kirishitan_newly_baptized
+				duration = 3650
+			}
+		}
+	}
+}
+
+jxp_add_reformed_reform_center_here_effect = {
+	change_religion = reformed
+	add_province_modifier = {
+		name = jxp_reformed_reform_center
+		duration = -1
+	}
+}
+
+jxp_spawn_reformed_reform_centers_effect = {
+	capital_scope = {
+		if = {
+			limit = {
+				region = japan_region
+				NOT = { has_province_modifier = jxp_reformed_reform_center }
+			}
+			jxp_add_reformed_reform_center_here_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			owns = 4182
+			4182 = {
+				NOT = { is_capital = yes }
+				NOT = { has_province_modifier = jxp_reformed_reform_center }
+			}
+		}
+		4182 = { jxp_add_reformed_reform_center_here_effect = yes }
+	}
+	if = {
+		limit = {
+			owns = 1020
+			1020 = {
+				NOT = { is_capital = yes }
+				NOT = { has_province_modifier = jxp_reformed_reform_center }
+			}
+		}
+		1020 = { jxp_add_reformed_reform_center_here_effect = yes }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_reformed_reform_center }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_reformed_reform_center }
+			}
+			jxp_add_reformed_reform_center_here_effect = yes
+		}
+	}
+}
+
+jxp_reformed_convert_one_japan_province_effect = {
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = reformed }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				NOT = { religion = reformed }
+			}
+			change_religion = reformed
+			add_province_modifier = {
+				name = jxp_reformed_newly_ordered
+				duration = 3650
+			}
+		}
+	}
+}
+
+jxp_add_kaikyo_reform_center_here_effect = {
+	change_religion = sunni
+	add_province_modifier = {
+		name = jxp_kaikyo_reform_center
+		duration = -1
+	}
+}
+
+jxp_spawn_kaikyo_reform_centers_effect = {
+	capital_scope = {
+		if = {
+			limit = {
+				region = japan_region
+				NOT = { has_province_modifier = jxp_kaikyo_reform_center }
+			}
+			jxp_add_kaikyo_reform_center_here_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			owns = 4182
+			4182 = {
+				NOT = { is_capital = yes }
+				NOT = { has_province_modifier = jxp_kaikyo_reform_center }
+			}
+		}
+		4182 = { jxp_add_kaikyo_reform_center_here_effect = yes }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_kaikyo_reform_center }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+				NOT = { is_capital = yes }
+				NOT = { province_id = 4182 }
+				NOT = { has_province_modifier = jxp_kaikyo_reform_center }
+			}
+			jxp_add_kaikyo_reform_center_here_effect = yes
+		}
+	}
+}
+
+jxp_kaikyo_convert_one_japan_province_effect = {
+	if = {
+		limit = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = sunni }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				NOT = { religion = sunni }
+			}
+			change_religion = sunni
+			add_province_modifier = {
+				name = jxp_kaikyo_newly_ordered
+				duration = 3650
+			}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+jxp_map_initialize_geography_contract_effect = {
+	if = {
+		limit = { NOT = { has_global_flag = jxp_map_geography_contract_v011 } }
+		set_global_flag = jxp_map_geography_contract_v011
+		every_province = {
+			limit = { area = jxp_western_kyushu_area }
+			set_province_flag = jxp_map_compat_shimabara_belt
+			set_province_flag = jxp_map_compat_wokou_waters
+		}
+		every_province = {
+			limit = { area = jxp_western_saigoku_area }
+			set_province_flag = jxp_map_compat_ikko_heartland
+			set_province_flag = jxp_map_compat_setouchi
+			set_province_flag = jxp_map_compat_wokou_waters
+		}
+		every_province = {
+			limit = { area = jxp_ise_kii_area }
+			set_province_flag = jxp_map_compat_ikko_heartland
+		}
+		every_province = {
+			limit = { area = jxp_ryukyu_area }
+			set_province_flag = jxp_map_compat_wokou_waters
+		}
+	}
+}
+
+jxp_map_record_origin_effect = {
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = RKK } set_country_flag = jxp_map_origin_rkk }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = KYO } set_country_flag = jxp_map_origin_kyo }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = WKT } set_country_flag = jxp_map_origin_wkt }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = TGS } set_country_flag = jxp_map_origin_tgs }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = NHT } set_country_flag = jxp_map_origin_nht }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = ANK } set_country_flag = jxp_map_origin_ank }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = HNM } set_country_flag = jxp_map_origin_hnm }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = MOG } set_country_flag = jxp_map_origin_mog }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = ASN } set_country_flag = jxp_map_origin_asn }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = OSK } set_country_flag = jxp_map_origin_osk }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = SMA } set_country_flag = jxp_map_origin_sma }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = DHO } set_country_flag = jxp_map_origin_dho }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = MKM } set_country_flag = jxp_map_origin_mkm }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = SGR } set_country_flag = jxp_map_origin_sgr }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = KMP } set_country_flag = jxp_map_origin_kmp }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = ARI } set_country_flag = jxp_map_origin_ari }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = MTU } set_country_flag = jxp_map_origin_mtu }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = STM } set_country_flag = jxp_map_origin_stm }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = HNG } set_country_flag = jxp_map_origin_hng }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = AZI } set_country_flag = jxp_map_origin_azi }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = MYO } set_country_flag = jxp_map_origin_myo }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = STO } set_country_flag = jxp_map_origin_sto }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = RZJ } set_country_flag = jxp_map_origin_rzj }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = UKT } set_country_flag = jxp_map_origin_ukt }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = TGR } set_country_flag = jxp_map_origin_tgr }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = HCS } set_country_flag = jxp_map_origin_hcs }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = MTS } set_country_flag = jxp_map_origin_mts }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = KRD } set_country_flag = jxp_map_origin_krd }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = YMC } set_country_flag = jxp_map_origin_ymc }
+	if = { limit = { NOT = { jxp_map_has_any_origin_trigger = yes } tag = NBS } set_country_flag = jxp_map_origin_nbs }
+}
+
+jxp_map_initialize_effect = {
+	if = {
+		limit = {
+			jxp_map_is_new_daimyo_tag_trigger = yes
+			NOT = { has_country_flag = jxp_map_initialized }
+		}
+		set_country_flag = jxp_map_initialized
+		jxp_map_record_origin_effect = yes
+		jxp_ensure_daimyo_polity_effect = yes
+	}
+	jxp_map_migrate_runtime_v011_effect = yes
+}
+
+jxp_map_migrate_runtime_v011_effect = {
+	if = {
+		limit = {
+			jxp_is_daimyo_stage_trigger = yes
+			jxp_map_has_any_origin_trigger = yes
+			NOT = { has_country_flag = jxp_map_runtime_migration_v011 }
+		}
+		set_country_flag = jxp_map_runtime_migration_v011
+		jxp_refresh_route_missions_effect = yes
+	}
+	else = { jxp_map_reconcile_daimyo_missions_effect = yes }
+}
+
+jxp_map_reconcile_daimyo_missions_effect = {
+	if = {
+		limit = { jxp_map_daimyo_mission_tree_needs_reconcile_trigger = yes }
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_map_clear_content_state_effect = {
+	clr_country_flag = jxp_map_policy_warrior_taken
+	clr_country_flag = jxp_map_policy_court_taken
+	clr_country_flag = jxp_map_policy_sea_taken
+	clr_country_flag = jxp_map_policy_frontier_taken
+	clr_country_flag = jxp_map_policy_temple_taken
+	clr_country_flag = jxp_map_rkk_seen
+	clr_country_flag = jxp_map_hng_seen
+	clr_country_flag = jxp_map_mog_seen
+	clr_country_flag = jxp_map_tgr_seen
+	clr_country_flag = jxp_map_mtu_seen
+	clr_country_flag = jxp_map_ari_seen
+	clr_country_flag = jxp_map_sgr_seen
+	clr_country_flag = jxp_map_kmp_seen
+	clr_country_flag = jxp_map_stm_seen
+	clr_country_flag = jxp_map_azi_seen
+	clr_country_flag = jxp_map_legacy_granted
+	remove_country_modifier = jxp_map_warrior_legacy
+	remove_country_modifier = jxp_map_court_legacy
+	remove_country_modifier = jxp_map_sea_legacy
+	remove_country_modifier = jxp_map_frontier_legacy
+	remove_country_modifier = jxp_map_temple_legacy
+	every_owned_province = {
+		remove_province_modifier = jxp_map_local_development_drive
+		remove_province_modifier = jxp_map_port_registers
+	}
+}
+
+jxp_map_clear_origin_effect = {
+	clr_country_flag = jxp_map_origin_rkk clr_country_flag = jxp_map_origin_kyo
+	clr_country_flag = jxp_map_origin_wkt clr_country_flag = jxp_map_origin_tgs
+	clr_country_flag = jxp_map_origin_nht clr_country_flag = jxp_map_origin_ank
+	clr_country_flag = jxp_map_origin_hnm clr_country_flag = jxp_map_origin_mog
+	clr_country_flag = jxp_map_origin_asn clr_country_flag = jxp_map_origin_osk
+	clr_country_flag = jxp_map_origin_sma clr_country_flag = jxp_map_origin_dho
+	clr_country_flag = jxp_map_origin_mkm clr_country_flag = jxp_map_origin_sgr
+	clr_country_flag = jxp_map_origin_kmp clr_country_flag = jxp_map_origin_ari
+	clr_country_flag = jxp_map_origin_mtu clr_country_flag = jxp_map_origin_stm
+	clr_country_flag = jxp_map_origin_hng clr_country_flag = jxp_map_origin_azi
+	clr_country_flag = jxp_map_origin_myo clr_country_flag = jxp_map_origin_sto
+	clr_country_flag = jxp_map_origin_rzj clr_country_flag = jxp_map_origin_ukt
+	clr_country_flag = jxp_map_origin_tgr clr_country_flag = jxp_map_origin_hcs
+	clr_country_flag = jxp_map_origin_mts clr_country_flag = jxp_map_origin_krd
+	clr_country_flag = jxp_map_origin_ymc clr_country_flag = jxp_map_origin_nbs
+}
+
+jxp_map_debug_full_reset_effect = {
+	jxp_map_clear_content_state_effect = yes
+	jxp_map_clear_origin_effect = yes
+	clr_country_flag = jxp_map_initialized
+	jxp_map_initialize_effect = yes
+}

@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 36 105 165 }
+revolutionary_colors = { 8 8 8 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	trade_ideas
+	innovativeness_ideas
+	quality_ideas
+	religious_ideas
+	maritime_ideas
+	diplomatic_ideas
+	economic_ideas
+	expansion_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Tsunenaga #0" = 15
+	"Motohiro #0" = 10
+	"Muneharu #0" = 10
+	"Sumitada #0" = 10
+	"Harunobu #0" = 10
+	"Joosten #0" = 5
+	"Nobunaga #0" = 10
+	"Ieyasu #0" = 10
+}
+
+leader_names = {
+	Date Hasekura Hirado Matsuura Omura Arima Ito Tokugawa Oda Kuroda Hosokawa
+}
+
+ship_names = {
+	Hirado Dejima Nagasaki Oranda Batavia Delft Leiden Erasmus Kurofune Red-Seal
+}
+
+army_names = {
+	"Synod Host" "$PROVINCE$ Covenant Army" "$PROVINCE$ Oranda Tai"
+}
+
+fleet_names = {
+	"Reformed Fleet" "$PROVINCE$ Dejima Squadron" "$PROVINCE$ Oranda Sendan"
+}

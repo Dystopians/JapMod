@@ -1,0 +1,199 @@
+jxp_grant_korea_claims_effect = {
+	korea_region = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_grant_china_littoral_claims_effect = {
+	north_china_region = {
+		limit = {
+			has_port = yes
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	south_china_region = {
+		limit = {
+			has_port = yes
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_grant_taiwan_philippines_claims_effect = {
+	taiwan_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	luzon_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	southern_luzon_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_establish_oceanic_sun_state_effect = {
+	set_country_flag = jxp_oceanic_sun_state
+	jxp_ensure_polity_mechanic_effect = yes
+	if = {
+		limit = { NOT = { has_reform = jxp_oceanic_sun_reform } }
+		add_government_reform = jxp_oceanic_sun_reform
+	}
+	regenerate_government_mechanics = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_oceanic_sun_state } }
+		add_country_modifier = {
+			name = jxp_oceanic_sun_state
+			duration = -1
+		}
+	}
+}
+
+jxp_apply_mandate_claim_reward_effect = {
+	set_country_flag = jxp_mandate_claimed
+	clr_country_flag = jxp_mandate_broken
+	jxp_add_imperial_sanction_10_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+	jxp_grant_korea_claims_effect = yes
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+			is_emperor_of_china = yes
+		}
+		set_country_flag = jxp_mandate_claim_unified_celestial
+		add_mandate = 10
+	}
+	else = {
+		set_country_flag = jxp_mandate_claim_fallback
+		if = {
+			limit = { NOT = { has_country_modifier = jxp_celestial_diplomacy } }
+			add_country_modifier = {
+				name = jxp_celestial_diplomacy
+				duration = 7300
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = jxp_solar_court_recognition } }
+			add_country_modifier = {
+				name = jxp_solar_court_recognition
+				duration = 7300
+			}
+		}
+	}
+}
+
+jxp_apply_mandate_break_reward_effect = {
+	set_country_flag = jxp_mandate_broken
+	clr_country_flag = jxp_mandate_claimed
+	jxp_add_tenka_order_10_effect = yes
+	jxp_subtract_imperial_sanction_5_effect = yes
+	jxp_grant_korea_claims_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_mandate_fallback_hegemony } }
+		add_country_modifier = {
+			name = jxp_mandate_fallback_hegemony
+			duration = 7300
+		}
+	}
+}
+
+jxp_enact_pacific_charter_effect = {
+	set_country_flag = jxp_pacific_charter_enacted
+	jxp_add_oceanic_opening_10_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_pacific_charter } }
+		add_country_modifier = {
+			name = jxp_pacific_charter
+			duration = 7300
+		}
+	}
+}
+
+jxp_establish_east_asian_rite_sphere_effect = {
+	set_country_flag = jxp_east_asian_rite_sphere_done
+	jxp_add_imperial_sanction_5_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_east_asian_rite_sphere } }
+		add_country_modifier = {
+			name = jxp_east_asian_rite_sphere
+			duration = -1
+		}
+	}
+}
+
+jxp_establish_pacific_admiralty_effect = {
+	set_country_flag = jxp_pacific_admiralty_done
+	jxp_add_oceanic_opening_5_effect = yes
+	add_navy_tradition = 5
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_oceanic_admiralty } }
+		add_country_modifier = {
+			name = jxp_oceanic_admiralty
+			duration = 7300
+		}
+	}
+}
+
+jxp_chart_north_pacific_effect = {
+	set_country_flag = jxp_north_pacific_charts_done
+	jxp_add_oceanic_opening_5_effect = yes
+	add_dip_power = 50
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_north_pacific_charts } }
+		add_country_modifier = {
+			name = jxp_north_pacific_charts
+			duration = 7300
+		}
+	}
+}
+
+jxp_apply_pacific_silver_flow_effect = {
+	set_country_flag = jxp_pacific_silver_flow_done
+	jxp_add_oceanic_opening_5_effect = yes
+	add_mercantilism = 1
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_pacific_silver_flow } }
+		add_country_modifier = {
+			name = jxp_pacific_silver_flow
+			duration = 7300
+		}
+	}
+}
+
+jxp_establish_new_world_japan_towns_effect = {
+	set_country_flag = jxp_new_world_japan_towns_done
+	jxp_add_tenka_order_5_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_new_world_japan_towns } }
+		add_country_modifier = {
+			name = jxp_new_world_japan_towns
+			duration = -1
+		}
+	}
+}

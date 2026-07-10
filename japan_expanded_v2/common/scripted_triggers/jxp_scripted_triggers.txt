@@ -1,0 +1,230 @@
+jxp_is_japanese_polity_trigger = {
+	OR = {
+		culture_group = japanese_g
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		capital_scope = { region = japan_region }
+	}
+}
+
+jxp_use_custom_missions_trigger = {
+	OR = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		jxp_has_any_route_trigger = yes
+	}
+}
+
+jxp_has_any_route_trigger = {
+	OR = {
+		has_country_flag = jxp_path_sakoku
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_confucian
+		has_country_flag = jxp_path_imperial
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_kaikyo
+		has_country_flag = jxp_path_ikko
+		has_country_flag = jxp_path_wokou
+	}
+}
+
+jxp_tenka_order_at_least_25 = {
+	check_variable = { which = jxp_tenka_order value = 25 }
+}
+
+jxp_tenka_order_at_least_35 = {
+	check_variable = { which = jxp_tenka_order value = 35 }
+}
+
+jxp_tenka_order_at_least_50 = {
+	check_variable = { which = jxp_tenka_order value = 50 }
+}
+
+jxp_tenka_order_at_least_75 = {
+	check_variable = { which = jxp_tenka_order value = 75 }
+}
+
+jxp_imperial_sanction_at_least_30 = {
+	check_variable = { which = jxp_imperial_sanction value = 30 }
+}
+
+jxp_imperial_sanction_at_least_50 = {
+	check_variable = { which = jxp_imperial_sanction value = 50 }
+}
+
+jxp_imperial_sanction_at_least_70 = {
+	check_variable = { which = jxp_imperial_sanction value = 70 }
+}
+
+jxp_oceanic_opening_at_least_20 = {
+	check_variable = { which = jxp_oceanic_opening value = 20 }
+}
+
+jxp_oceanic_opening_at_least_35 = {
+	check_variable = { which = jxp_oceanic_opening value = 35 }
+}
+
+jxp_oceanic_opening_at_least_50 = {
+	check_variable = { which = jxp_oceanic_opening value = 50 }
+}
+
+jxp_oceanic_opening_at_least_60 = {
+	check_variable = { which = jxp_oceanic_opening value = 60 }
+}
+
+jxp_oceanic_opening_at_least_75 = {
+	check_variable = { which = jxp_oceanic_opening value = 75 }
+}
+
+jxp_controls_japan_heartland_trigger = {
+	owns_core_province = 1020
+	owns_core_province = 1028
+	is_at_war = no
+}
+
+jxp_has_christian_opening_trigger = {
+	OR = {
+		religion = catholic
+		religion = protestant
+		religion = reformed
+		any_owned_province = {
+			region = japan_region
+			OR = {
+				religion = catholic
+				religion = protestant
+				religion = reformed
+			}
+		}
+		has_country_flag = jxp_kirishitan_contact
+		jxp_oceanic_opening_at_least_50 = yes
+	}
+}
+
+jxp_has_reformed_opening_trigger = {
+	OR = {
+		religion = protestant
+		religion = reformed
+		any_owned_province = {
+			region = japan_region
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+		has_country_flag = jxp_reformed_contact
+		AND = {
+			jxp_oceanic_opening_at_least_50 = yes
+			dip_tech = 10
+			any_known_country = {
+				OR = {
+					religion = protestant
+					religion = reformed
+				}
+			}
+		}
+		tag = RFJ
+	}
+}
+
+jxp_has_kaikyo_opening_trigger = {
+	OR = {
+		tag = SJP
+		religion_group = muslim
+		any_owned_province = {
+			region = japan_region
+			religion_group = muslim
+		}
+		has_country_flag = jxp_kaikyo_contact
+		AND = {
+			jxp_oceanic_opening_at_least_50 = yes
+			num_of_ports = 5
+			any_known_country = {
+				religion_group = muslim
+			}
+		}
+		any_owned_province = {
+			OR = {
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+	}
+}
+
+jxp_has_ikko_opening_trigger = {
+	OR = {
+		tag = IJP
+		has_country_flag = jxp_ikko_contact
+		has_country_modifier = jxp_route_ikko
+		owns = 1021
+		owns = 1020
+		any_owned_province = {
+			region = japan_region
+			has_province_modifier = jxp_ikko_terauchi_town
+		}
+		AND = {
+			num_of_cities = 8
+			NOT = { jxp_tenka_order_at_least_50 = yes }
+		}
+	}
+}
+
+jxp_has_wokou_opening_trigger = {
+	OR = {
+		tag = WAK
+		has_country_flag = jxp_wokou_contact
+		has_country_modifier = jxp_route_wokou
+		owns = 4651
+		owns = 1015
+		AND = {
+			num_of_ports = 5
+			jxp_oceanic_opening_at_least_35 = yes
+		}
+		any_owned_province = {
+			OR = {
+				area = northern_kyushu
+				area = kyushu_area
+				area = saigoku_area
+				has_province_flag = jxp_map_compat_wokou_waters
+			}
+		}
+	}
+}
+
+jxp_has_confucian_contact_trigger = {
+	OR = {
+		religion = confucianism
+		any_owned_province = {
+			OR = {
+				religion = confucianism
+				region = korea_region
+				region = north_china_region
+				region = south_china_region
+			}
+		}
+		any_known_country = {
+			OR = {
+				religion = confucianism
+				capital_scope = { region = korea_region }
+				capital_scope = { region = north_china_region }
+				capital_scope = { region = south_china_region }
+			}
+		}
+		adm_tech = 10
+	}
+}

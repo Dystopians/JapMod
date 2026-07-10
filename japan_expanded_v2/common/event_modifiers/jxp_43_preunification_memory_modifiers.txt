@@ -1,0 +1,369 @@
+jxp_43_oda_azuchi_edicts_memory = {
+	core_creation = -0.02
+	global_trade_goods_size_modifier = 0.02
+}
+
+jxp_43_oda_market_law_memory = {
+	trade_efficiency = 0.03
+	development_cost = -0.02
+}
+
+jxp_43_tkg_fudai_cadasters_memory = {
+	governing_capacity_modifier = 0.03
+	global_unrest = -0.75
+}
+
+jxp_43_tkg_road_oaths_memory = {
+	improve_relation_modifier = 0.03
+	stability_cost_modifier = -0.03
+}
+
+jxp_43_tkd_koshu_muster_memory = {
+	cavalry_power = 0.04
+	land_maintenance_modifier = -0.02
+}
+
+jxp_43_tkd_mountain_supply_memory = {
+	manpower_recovery_speed = 0.03
+	defensiveness = 0.03
+}
+
+jxp_43_ues_righteous_petitions_memory = {
+	prestige = 0.5
+	army_tradition_decay = -0.003
+}
+
+jxp_43_ues_kanrei_arbiter_memory = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.03
+}
+
+jxp_43_hjo_odawara_cadasters_memory = {
+	development_cost = -0.02
+	global_tax_modifier = 0.03
+}
+
+jxp_43_hjo_sogamae_barriers_memory = {
+	defensiveness = 0.05
+	hostile_attrition = 0.5
+}
+
+jxp_43_mri_suigun_admiralty_memory = {
+	galley_power = 0.04
+	naval_morale = 0.03
+}
+
+jxp_43_mri_setouchi_toll_memory = {
+	global_ship_trade_power = 0.04
+	trade_efficiency = 0.03
+}
+
+jxp_43_smz_satsuma_foundries_memory = {
+	fire_damage = 0.02
+	artillery_power = 0.03
+}
+
+jxp_43_smz_ichimon_fire_memory = {
+	land_morale = 0.02
+	infantry_power = 0.02
+}
+
+jxp_43_otm_funai_quarter_memory = {
+	global_institution_spread = 0.04
+	trade_efficiency = 0.03
+}
+
+jxp_43_otm_foreign_gunwrights_memory = {
+	siege_ability = 0.03
+	artillery_power = 0.02
+}
+
+jxp_43_dte_oshu_cavalry_memory = {
+	cavalry_power = 0.03
+	movement_speed = 0.03
+}
+
+jxp_43_dte_distant_letters_memory = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.03
+}
+
+jxp_43_ask_hokoshu_order_memory = {
+	legitimacy = 0.5
+	vassal_forcelimit_bonus = 0.15
+}
+
+jxp_43_ask_kuban_arbitration_memory = {
+	diplomatic_reputation = 1
+	prestige = 0.5
+}
+
+jxp_43_csk_ichiryo_rolls_memory = {
+	global_manpower_modifier = 0.04
+	land_maintenance_modifier = -0.02
+}
+
+jxp_43_csk_urado_supply_memory = {
+	naval_forcelimit_modifier = 0.04
+	movement_speed = 0.03
+}
+
+jxp_43_ouc_kanhe_bureau_memory = {
+	trade_efficiency = 0.04
+	improve_relation_modifier = 0.03
+}
+
+jxp_43_ouc_yamaguchi_court_memory = {
+	advisor_cost = -0.03
+	global_institution_spread = 0.03
+}
+
+jxp_43_img_kana_code_memory = {
+	stability_cost_modifier = -0.03
+	global_unrest = -0.5
+}
+
+jxp_43_img_tokaido_arbitration_memory = {
+	ae_impact = -0.02
+	improve_relation_modifier = 0.04
+}
+
+jxp_43_soo_wakan_office_memory = {
+	trade_steering = 0.04
+	global_foreign_trade_power = 0.04
+}
+
+jxp_43_soo_channel_protocols_memory = {
+	diplomatic_upkeep = 1
+	naval_forcelimit_modifier = 0.03
+}
+
+jxp_43_asa_ichijodani_council_memory = {
+	advisor_cost = -0.03
+	prestige_decay = -0.003
+}
+
+jxp_43_asa_echizen_paper_office_memory = {
+	global_institution_spread = 0.03
+	stability_cost_modifier = -0.02
+}
+
+jxp_43_ama_mountain_castle_memory = {
+	defensiveness = 0.04
+	production_efficiency = 0.03
+}
+
+jxp_43_ama_izumo_mine_registers_memory = {
+	inflation_reduction = 0.03
+	global_trade_goods_size_modifier = 0.02
+}
+
+jxp_43_hsk_sakai_council_memory = {
+	trade_efficiency = 0.04
+	diplomatic_reputation = 1
+}
+
+jxp_43_hsk_merchant_arbitration_memory = {
+	global_foreign_trade_power = 0.03
+	improve_relation_modifier = 0.03
+}
+
+jxp_43_ktb_ise_shrine_court_memory = {
+	tolerance_own = 1
+	prestige = 0.5
+}
+
+jxp_43_ktb_kuki_pilots_memory = {
+	galley_power = 0.04
+	naval_forcelimit_modifier = 0.04
+}
+
+jxp_43_akt_ezochi_trade_memory = {
+	global_trade_power = 0.04
+	global_sailors_modifier = 0.08
+}
+
+jxp_43_akt_northern_wardens_memory = {
+	global_colonial_growth = 5
+	defensiveness = 0.03
+}
+
+jxp_43_rfr_mutsu_gate_wardens_memory = {
+	hostile_attrition = 0.5
+	manpower_recovery_speed = 0.03
+}
+
+jxp_43_rfr_morioka_granary_memory = {
+	global_manpower_modifier = 0.03
+	land_maintenance_modifier = -0.02
+}
+
+jxp_43_htk_wakae_retainer_oaths_memory = {
+	mercenary_cost = -0.04
+	land_morale = 0.015
+}
+
+jxp_43_htk_saika_teppo_contracts_memory = {
+	fire_damage = 0.015
+	infantry_power = 0.02
+}
+
+jxp_43_ike_himeji_accounts_memory = {
+	build_cost = -0.02
+	global_tax_modifier = 0.03
+}
+
+jxp_43_ike_setouchi_ledgers_memory = {
+	trade_efficiency = 0.03
+	naval_forcelimit_modifier = 0.03
+}
+
+jxp_43_mae_kanazawa_storehouses_memory = {
+	production_efficiency = 0.03
+	prestige_decay = -0.003
+}
+
+jxp_43_mae_tea_noh_patronage_memory = {
+	advisor_cost = -0.03
+	legitimacy = 0.5
+}
+
+jxp_43_sba_buei_military_office_memory = {
+	land_forcelimit_modifier = 0.04
+	army_tradition = 0.2
+}
+
+jxp_43_sba_hokuriku_roads_memory = {
+	movement_speed = 0.03
+	trade_efficiency = 0.02
+}
+
+jxp_43_ymn_sixth_share_registers_memory = {
+	diplomatic_upkeep = 1
+	global_unrest = -0.5
+}
+
+jxp_43_ymn_western_army_compacts_memory = {
+	improve_relation_modifier = 0.03
+	land_morale = 0.015
+}
+
+jxp_43_akm_banshu_castle_roads_memory = {
+	defensiveness = 0.03
+	movement_speed = 0.03
+}
+
+jxp_43_akm_red_pine_oaths_memory = {
+	land_forcelimit_modifier = 0.03
+	manpower_recovery_speed = 0.03
+}
+
+jxp_43_kkc_aso_fire_rites_memory = {
+	tolerance_own = 1
+	prestige = 0.5
+}
+
+jxp_43_kkc_kikuchi_scrolls_memory = {
+	global_missionary_strength = 0.003
+	stability_cost_modifier = -0.02
+}
+
+jxp_43_stk_kashima_muster_memory = {
+	artillery_power = 0.03
+	army_tradition_decay = -0.003
+}
+
+jxp_43_stk_hitachi_oaths_memory = {
+	infantry_power = 0.02
+	land_forcelimit_modifier = 0.03
+}
+
+jxp_43_tki_mino_riverworks_memory = {
+	development_cost = -0.02
+	production_efficiency = 0.02
+}
+
+jxp_43_tki_toki_paper_memory = {
+	build_cost = -0.02
+	global_tax_modifier = 0.02
+}
+
+jxp_43_utn_nikko_barrier_memory = {
+	global_unrest = -0.5
+	prestige = 0.25
+}
+
+jxp_43_utn_shimotsuke_muster_memory = {
+	army_tradition_decay = -0.003
+	manpower_recovery_speed = 0.03
+}
+
+jxp_43_shn_dazaifu_brokers_memory = {
+	global_foreign_trade_power = 0.04
+	diplomatic_upkeep = 1
+}
+
+jxp_43_shn_kyushu_tribute_memory = {
+	trade_efficiency = 0.03
+	improve_relation_modifier = 0.03
+}
+
+jxp_43_ogs_suwa_horse_memory = {
+	cavalry_power = 0.03
+	cavalry_cost = -0.03
+}
+
+jxp_43_ogs_pass_wardens_memory = {
+	movement_speed = 0.03
+	hostile_attrition = 0.5
+}
+
+jxp_43_cba_katori_muster_memory = {
+	improve_relation_modifier = 0.04
+	army_tradition_decay = -0.003
+}
+
+jxp_43_cba_shimosa_court_routes_memory = {
+	land_morale = 0.015
+	infantry_power = 0.02
+}
+
+jxp_43_isk_tango_port_wardens_memory = {
+	naval_forcelimit_modifier = 0.04
+	global_own_trade_power = 0.03
+}
+
+jxp_43_isk_shugo_house_law_memory = {
+	movement_speed = 0.03
+	trade_steering = 0.03
+}
+
+jxp_43_ito_hyuga_fort_network_memory = {
+	defensiveness = 0.04
+	global_manpower_modifier = 0.03
+}
+
+jxp_43_ito_shrine_temple_compacts_memory = {
+	core_creation = -0.02
+	tolerance_own = 0.5
+}
+
+jxp_43_kno_setouchi_pilots_memory = {
+	galley_power = 0.04
+	capture_ship_chance = 0.03
+}
+
+jxp_43_kno_iyo_port_law_memory = {
+	trade_steering = 0.04
+	naval_morale = 0.02
+}
+
+jxp_43_tti_yamato_temple_compact_memory = {
+	stability_cost_modifier = -0.03
+	advisor_cost = -0.02
+}
+
+jxp_43_tti_kofukuji_castle_towns_memory = {
+	tolerance_own = 1
+	global_missionary_strength = 0.003
+}

@@ -1,0 +1,46 @@
+#4967 - Buzen
+
+owner = OUC
+controller = OUC
+culture = kyushuan
+religion = shinto
+capital = "Kokura"
+trade_goods = iron
+hre = no
+base_tax = 2
+base_manpower = 1
+base_production = 2
+is_city = yes
+add_core = OUC
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1542.1.1 = { discovered_by = POR }
+
+1557.4.3 = {
+	owner = OTM
+	controller = OTM
+	add_core = OTM
+	remove_core = OUC
+}
+1584.3.1 = {
+	owner = SMZ
+	controller = SMZ
+	add_core = SMZ
+	remove_core = OTM
+}
+1587.5.15 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = SMZ
+}
+1600.10.21 = {
+	owner = KRD
+	controller = KRD
+	add_core = KRD
+	remove_core = ODA
+}

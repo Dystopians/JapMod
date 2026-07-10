@@ -1,0 +1,107 @@
+country_decisions = {
+	jxp_decision_recall_preunification_edicts = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_50_show_legacy_detail_decisions
+			jxp_is_unified_japan_state_trigger = yes
+			NOT = { has_country_flag = jxp_43_preunification_memory_integrated }
+			OR = {
+				has_country_flag = jxp_43_selected_oda_tenka_fubu
+				has_country_flag = jxp_43_selected_tkg_fudai_registers
+				has_country_flag = jxp_43_selected_tkd_hatagashira
+				has_country_flag = jxp_43_selected_ues_kanrei_petition
+				has_country_flag = jxp_43_selected_hjo_sogamae
+				has_country_flag = jxp_43_selected_mri_suigun
+				has_country_flag = jxp_43_selected_smz_gunnery
+				has_country_flag = jxp_43_selected_otm_foreign_quarter
+				has_country_flag = jxp_43_selected_dte_kibamusha
+				has_country_flag = jxp_43_selected_ask_hokoshu
+				has_country_flag = jxp_43_selected_csk_ichiryo_gusoku
+				has_country_flag = jxp_43_selected_ouc_kanhe_trade
+				has_country_flag = jxp_43_selected_img_lawbooks
+				has_country_flag = jxp_43_selected_soo_brokers
+				has_country_flag = jxp_43_selected_asa_ichijodani_council
+				has_country_flag = jxp_43_selected_ama_gassan_toda
+				has_country_flag = jxp_43_selected_hsk_sakai_council
+				has_country_flag = jxp_43_selected_ktb_ise_petition
+				has_country_flag = jxp_43_selected_akt_ezochi_brokers
+				has_country_flag = jxp_43_selected_rfr_mutsu_gates
+				has_country_flag = jxp_43_selected_htk_wakae_oaths
+				has_country_flag = jxp_43_selected_ike_himeji_accounts
+				has_country_flag = jxp_43_selected_mae_kanazawa_patronage
+				has_country_flag = jxp_43_selected_sba_buei_restoration
+				has_country_flag = jxp_43_selected_ymn_sixth_share
+				has_country_flag = jxp_43_selected_akm_banshu_castles
+				has_country_flag = jxp_43_selected_kkc_aso_rites
+				has_country_flag = jxp_43_selected_stk_kashima_muster
+				has_country_flag = jxp_43_selected_tki_mino_riverworks
+				has_country_flag = jxp_43_selected_utn_nikko_barrier
+				has_country_flag = jxp_43_selected_shn_dazaifu_brokers
+				has_country_flag = jxp_43_selected_ogs_suwa_horse
+				has_country_flag = jxp_43_selected_cba_katori_muster
+				has_country_flag = jxp_43_selected_isk_tango_ports
+				has_country_flag = jxp_43_selected_ito_hyuga_forts
+				has_country_flag = jxp_43_selected_kno_inland_pilots
+				has_country_flag = jxp_43_selected_tti_yamato_temple
+			}
+		}
+		allow = {
+			stability = 1
+			adm_power = 50
+			dip_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			jxp_ensure_polity_mechanic_effect = yes
+			if = { limit = { has_country_flag = jxp_43_selected_oda_tenka_fubu } country_event = { id = jxp_preunification_memory.1 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_tkg_fudai_registers } country_event = { id = jxp_preunification_memory.2 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_tkd_hatagashira } country_event = { id = jxp_preunification_memory.3 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ues_kanrei_petition } country_event = { id = jxp_preunification_memory.4 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_hjo_sogamae } country_event = { id = jxp_preunification_memory.5 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_mri_suigun } country_event = { id = jxp_preunification_memory.6 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_smz_gunnery } country_event = { id = jxp_preunification_memory.7 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_otm_foreign_quarter } country_event = { id = jxp_preunification_memory.8 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_dte_kibamusha } country_event = { id = jxp_preunification_memory.9 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ask_hokoshu } country_event = { id = jxp_preunification_memory.10 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_csk_ichiryo_gusoku } country_event = { id = jxp_preunification_memory.11 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ouc_kanhe_trade } country_event = { id = jxp_preunification_memory.12 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_img_lawbooks } country_event = { id = jxp_preunification_memory.13 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_soo_brokers } country_event = { id = jxp_preunification_memory.14 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_asa_ichijodani_council } country_event = { id = jxp_preunification_memory.15 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ama_gassan_toda } country_event = { id = jxp_preunification_memory.16 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_hsk_sakai_council } country_event = { id = jxp_preunification_memory.17 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ktb_ise_petition } country_event = { id = jxp_preunification_memory.18 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_akt_ezochi_brokers } country_event = { id = jxp_preunification_memory.19 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_rfr_mutsu_gates } country_event = { id = jxp_preunification_memory.20 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_htk_wakae_oaths } country_event = { id = jxp_preunification_memory.21 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ike_himeji_accounts } country_event = { id = jxp_preunification_memory.22 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_mae_kanazawa_patronage } country_event = { id = jxp_preunification_memory.23 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_sba_buei_restoration } country_event = { id = jxp_preunification_memory.24 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ymn_sixth_share } country_event = { id = jxp_preunification_memory.25 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_akm_banshu_castles } country_event = { id = jxp_preunification_memory.26 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_kkc_aso_rites } country_event = { id = jxp_preunification_memory.27 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_stk_kashima_muster } country_event = { id = jxp_preunification_memory.28 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_tki_mino_riverworks } country_event = { id = jxp_preunification_memory.29 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_utn_nikko_barrier } country_event = { id = jxp_preunification_memory.30 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_shn_dazaifu_brokers } country_event = { id = jxp_preunification_memory.31 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ogs_suwa_horse } country_event = { id = jxp_preunification_memory.32 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_cba_katori_muster } country_event = { id = jxp_preunification_memory.33 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_isk_tango_ports } country_event = { id = jxp_preunification_memory.34 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_ito_hyuga_forts } country_event = { id = jxp_preunification_memory.35 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_kno_inland_pilots } country_event = { id = jxp_preunification_memory.36 } }
+			else_if = { limit = { has_country_flag = jxp_43_selected_tti_yamato_temple } country_event = { id = jxp_preunification_memory.37 } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 100 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 100 }
+			}
+		}
+	}
+}

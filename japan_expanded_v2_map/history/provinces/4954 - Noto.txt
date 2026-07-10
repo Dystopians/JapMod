@@ -1,0 +1,41 @@
+#4954 - Noto
+
+owner = NHT
+controller = NHT
+culture = togoku
+religion = shinto
+capital = "Nanao"
+trade_goods = fish
+hre = no
+base_tax = 2
+base_manpower = 1
+base_production = 2
+is_city = yes
+add_core = NHT
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1 = { discovered_by = POR }
+
+1577.9.15 = {
+	owner = UES
+	controller = UES
+	add_core = UES
+	remove_core = NHT
+}
+1581.1.1 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = UES
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = ODA
+}

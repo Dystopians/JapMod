@@ -1,0 +1,87 @@
+jxp_add_founder_idea_legacy_modifier_effect = {
+	if = { limit = { has_country_flag = jxp_origin_oda } add_country_modifier = { name = jxp_39_oda_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_tkg } add_country_modifier = { name = jxp_39_tkg_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_tkd } add_country_modifier = { name = jxp_39_tkd_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ues } add_country_modifier = { name = jxp_39_ues_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_hjo } add_country_modifier = { name = jxp_39_hjo_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_mri } add_country_modifier = { name = jxp_39_mri_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_smz } add_country_modifier = { name = jxp_39_smz_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_otm } add_country_modifier = { name = jxp_39_otm_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_dte } add_country_modifier = { name = jxp_39_dte_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ask } add_country_modifier = { name = jxp_39_ask_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_csk } add_country_modifier = { name = jxp_39_csk_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ouc } add_country_modifier = { name = jxp_39_ouc_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_img } add_country_modifier = { name = jxp_39_img_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_soo } add_country_modifier = { name = jxp_39_soo_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ama } add_country_modifier = { name = jxp_39_ama_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_asa } add_country_modifier = { name = jxp_39_asa_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_hsk } add_country_modifier = { name = jxp_39_hsk_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_htk } add_country_modifier = { name = jxp_39_htk_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ike } add_country_modifier = { name = jxp_39_ike_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_mae } add_country_modifier = { name = jxp_39_mae_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_sba } add_country_modifier = { name = jxp_39_sba_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ymn } add_country_modifier = { name = jxp_39_ymn_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_rfr } add_country_modifier = { name = jxp_39_rfr_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ktb } add_country_modifier = { name = jxp_39_ktb_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_akm } add_country_modifier = { name = jxp_39_akm_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_akt } add_country_modifier = { name = jxp_39_akt_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_cba } add_country_modifier = { name = jxp_39_cba_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_isk } add_country_modifier = { name = jxp_39_isk_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ito } add_country_modifier = { name = jxp_39_ito_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_kkc } add_country_modifier = { name = jxp_39_kkc_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_kno } add_country_modifier = { name = jxp_39_kno_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_ogs } add_country_modifier = { name = jxp_39_ogs_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_shn } add_country_modifier = { name = jxp_39_shn_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_stk } add_country_modifier = { name = jxp_39_stk_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_tki } add_country_modifier = { name = jxp_39_tki_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_utn } add_country_modifier = { name = jxp_39_utn_idea_legacy duration = -1 } }
+	else_if = { limit = { has_country_flag = jxp_origin_tti } add_country_modifier = { name = jxp_39_tti_idea_legacy duration = -1 } }
+}
+
+jxp_clear_founder_idea_legacy_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_39_founder_idea_legacy_compiled
+	}
+	remove_country_modifier = jxp_39_oda_idea_legacy
+	remove_country_modifier = jxp_39_tkg_idea_legacy
+	remove_country_modifier = jxp_39_tkd_idea_legacy
+	remove_country_modifier = jxp_39_ues_idea_legacy
+	remove_country_modifier = jxp_39_hjo_idea_legacy
+	remove_country_modifier = jxp_39_mri_idea_legacy
+	remove_country_modifier = jxp_39_smz_idea_legacy
+	remove_country_modifier = jxp_39_otm_idea_legacy
+	remove_country_modifier = jxp_39_dte_idea_legacy
+	remove_country_modifier = jxp_39_ask_idea_legacy
+	remove_country_modifier = jxp_39_csk_idea_legacy
+	remove_country_modifier = jxp_39_ouc_idea_legacy
+	remove_country_modifier = jxp_39_img_idea_legacy
+	remove_country_modifier = jxp_39_soo_idea_legacy
+	remove_country_modifier = jxp_39_ama_idea_legacy
+	remove_country_modifier = jxp_39_asa_idea_legacy
+	remove_country_modifier = jxp_39_hsk_idea_legacy
+	remove_country_modifier = jxp_39_htk_idea_legacy
+	remove_country_modifier = jxp_39_ike_idea_legacy
+	remove_country_modifier = jxp_39_mae_idea_legacy
+	remove_country_modifier = jxp_39_sba_idea_legacy
+	remove_country_modifier = jxp_39_ymn_idea_legacy
+	remove_country_modifier = jxp_39_rfr_idea_legacy
+	remove_country_modifier = jxp_39_ktb_idea_legacy
+	remove_country_modifier = jxp_39_akm_idea_legacy
+	remove_country_modifier = jxp_39_akt_idea_legacy
+	remove_country_modifier = jxp_39_cba_idea_legacy
+	remove_country_modifier = jxp_39_isk_idea_legacy
+	remove_country_modifier = jxp_39_ito_idea_legacy
+	remove_country_modifier = jxp_39_kkc_idea_legacy
+	remove_country_modifier = jxp_39_kno_idea_legacy
+	remove_country_modifier = jxp_39_ogs_idea_legacy
+	remove_country_modifier = jxp_39_shn_idea_legacy
+	remove_country_modifier = jxp_39_stk_idea_legacy
+	remove_country_modifier = jxp_39_tki_idea_legacy
+	remove_country_modifier = jxp_39_utn_idea_legacy
+	remove_country_modifier = jxp_39_tti_idea_legacy
+	remove_country_modifier = jxp_39_warrior_idea_house_school
+	remove_country_modifier = jxp_39_court_idea_house_school
+	remove_country_modifier = jxp_39_maritime_idea_house_school
+	remove_country_modifier = jxp_39_frontier_idea_house_school
+	remove_country_modifier = jxp_39_temple_market_idea_house_school
+}

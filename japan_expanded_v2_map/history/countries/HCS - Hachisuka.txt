@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+capital = 1820
+
+1585.8.23 = {
+	monarch = {
+		name = "Iemasa"
+		dynasty = "Hachisuka"
+		birth_date = 1555.1.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+}

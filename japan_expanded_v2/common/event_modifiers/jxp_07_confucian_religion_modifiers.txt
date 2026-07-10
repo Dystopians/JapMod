@@ -1,0 +1,68 @@
+jxp_confucian_reform_center = {
+	local_missionary_strength = 0.03
+	local_development_cost = -0.05
+	local_tax_modifier = 0.10
+}
+
+jxp_confucian_newly_ordered = {
+	local_unrest = -1
+	local_tax_modifier = 0.10
+}
+
+jxp_ise_jingu_protected = {
+	local_missionary_strength = -0.10
+	local_unrest = -1
+	local_tax_modifier = 0.15
+}
+
+jxp_confucian_shinto_synthesis = {
+	tolerance_own = 1
+	tolerance_heretic = 1
+	yearly_harmony = 0.25
+}
+
+jxp_songming_kami_rites = {
+	legitimacy = 0.5
+	prestige = 0.5
+	yearly_harmony = 0.25
+}
+
+jxp_songming_academy_bureaucracy = {
+	advisor_cost = -0.05
+	governing_capacity_modifier = 0.05
+}
+
+jxp_confucian_ordered_cities = {
+	development_cost = -0.05
+	global_institution_spread = 0.10
+}
+
+jxp_confucian_controlled_nanban = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.05
+	yearly_harmony = 0.10
+}
+
+jxp_confucian_bridge_shrine_registers = {
+	tolerance_own = 1
+	yearly_harmony = 0.20
+	prestige = 0.25
+}
+
+jxp_confucian_bridge_city_registers = {
+	development_cost = -0.05
+	production_efficiency = 0.05
+	global_institution_spread = 0.10
+}
+
+jxp_confucian_bridge_nanban_edicts = {
+	trade_efficiency = 0.05
+	technology_cost = -0.02
+	yearly_harmony = 0.15
+}
+
+jxp_confucian_bridge_restricted_ports = {
+	global_trade_power = 0.05
+	spy_offence = 0.05
+	yearly_harmony = 0.10
+}

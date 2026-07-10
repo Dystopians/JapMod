@@ -1,0 +1,24 @@
+country_decisions = {
+	jxp_decision_convene_legacy_cabinet = {
+		major = yes
+		potential = {
+			jxp_50_any_legacy_cabinet_available_trigger = yes
+		}
+		allow = {
+			jxp_50_any_legacy_cabinet_allowed_trigger = yes
+		}
+		effect = {
+			country_event = { id = jxp_legacy_cabinet.1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { adm_power = 125 }
+					NOT = { dip_power = 125 }
+				}
+			}
+		}
+	}
+}

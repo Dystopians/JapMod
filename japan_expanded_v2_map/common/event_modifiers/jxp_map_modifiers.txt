@@ -1,0 +1,35 @@
+jxp_map_warrior_legacy = {
+	land_morale = 0.05
+	manpower_recovery_speed = 0.10
+}
+
+jxp_map_court_legacy = {
+	advisor_cost = -0.10
+	legitimacy = 1
+}
+
+jxp_map_sea_legacy = {
+	ship_cost = -0.10
+	trade_efficiency = 0.10
+}
+
+jxp_map_frontier_legacy = {
+	fort_defense = 0.15
+	land_attrition = -0.10
+}
+
+jxp_map_temple_legacy = {
+	development_cost = -0.05
+	global_tax_modifier = 0.10
+}
+
+jxp_map_local_development_drive = {
+	local_development_cost = -0.15
+	local_tax_modifier = 0.10
+}
+
+jxp_map_port_registers = {
+	local_trade_power = 0.25
+	local_ship_cost = -0.10
+}
+

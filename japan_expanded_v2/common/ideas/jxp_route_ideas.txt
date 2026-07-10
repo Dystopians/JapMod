@@ -1,0 +1,316 @@
+KJP_ideas = {
+	start = {
+		global_trade_power = 0.15
+		tolerance_own = 2
+	}
+
+	bonus = {
+		infantry_power = 0.15
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = KJP
+	}
+	free = yes
+
+	kjp_nagasaki_crossroads = {
+		trade_efficiency = 0.15
+		global_prov_trade_power_modifier = 0.10
+	}
+	kjp_baptized_daimyo = {
+		legitimacy = 1
+		global_missionary_strength = 0.02
+	}
+	kjp_tensho_embassy = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.15
+	}
+	kjp_seminary_networks = {
+		advisor_cost = -0.10
+		global_institution_spread = 0.15
+	}
+	kjp_kirishitan_artillery = {
+		artillery_power = 0.10
+		fire_damage = 0.05
+	}
+	kjp_church_ports = {
+		naval_forcelimit_modifier = 0.20
+		ship_durability = 0.05
+	}
+	kjp_hidden_faiths_reconciled = {
+		global_unrest = -2
+		religious_unity = 0.25
+	}
+}
+
+CJP_ideas = {
+	start = {
+		stability_cost_modifier = -0.15
+		advisor_cost = -0.10
+	}
+
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+
+	trigger = {
+		tag = CJP
+	}
+	free = yes
+
+	cjp_zhu_xi_lectures = {
+		technology_cost = -0.05
+		global_institution_spread = 0.15
+	}
+	cjp_hayashi_academy = {
+		idea_cost = -0.10
+	}
+	cjp_domain_schools = {
+		global_institution_spread = 0.20
+		development_cost = -0.05
+	}
+	cjp_ritual_bureaucracy = {
+		governing_capacity_modifier = 0.15
+		core_creation = -0.10
+	}
+	cjp_merit_registers = {
+		global_tax_modifier = 0.15
+		advisor_pool = 1
+	}
+	cjp_ordered_status = {
+		global_unrest = -2
+		stability_cost_modifier = -0.10
+	}
+	cjp_korean_embassies = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.15
+	}
+}
+
+EJP_ideas = {
+	start = {
+		legitimacy = 1.5
+		prestige = 1.5
+	}
+
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+
+	trigger = {
+		tag = EJP
+	}
+	free = yes
+
+	ejp_restored_court = {
+		stability_cost_modifier = -0.15
+		all_power_cost = -0.025
+	}
+	ejp_kinri_guard = {
+		land_morale = 0.15
+		discipline = 0.05
+	}
+	ejp_court_provinces = {
+		global_tax_modifier = 0.15
+		production_efficiency = 0.10
+	}
+	ejp_yamato_liturgy = {
+		tolerance_own = 2
+		global_missionary_strength = 0.01
+	}
+	ejp_imperial_rescripts = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.15
+	}
+	ejp_central_registers = {
+		core_creation = -0.15
+		governing_capacity_modifier = 0.10
+	}
+	ejp_sun_banner_army = {
+		infantry_power = 0.15
+		global_manpower_modifier = 0.15
+	}
+}
+
+RFJ_ideas = {
+	start = {
+		global_trade_power = 0.15
+		tolerance_heretic = 2
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = RFJ
+	}
+	free = yes
+
+	rfj_hirado_synod = {
+		monthly_fervor_increase = 0.50
+		religious_unity = 0.15
+	}
+	rfj_oranda_trade = {
+		trade_efficiency = 0.15
+		global_prov_trade_power_modifier = 0.10
+	}
+	rfj_kana_scriptures = {
+		idea_cost = -0.10
+		technology_cost = -0.05
+	}
+	rfj_batavia_compacts = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.15
+	}
+	rfj_port_congregations = {
+		naval_forcelimit_modifier = 0.20
+		ship_durability = 0.05
+	}
+	rfj_reformed_gunnery = {
+		artillery_power = 0.10
+		fire_damage = 0.05
+	}
+	rfj_court_covenant = {
+		stability_cost_modifier = -0.15
+		global_unrest = -1
+	}
+}
+
+SJP_ideas = {
+	start = {
+		global_trade_power = 0.15
+		tolerance_heathen = 2
+	}
+
+	bonus = {
+		naval_morale = 0.15
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	trigger = {
+		tag = SJP
+	}
+	free = yes
+
+	sjp_malay_factory = {
+		trade_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.10
+	}
+	sjp_halal_port_law = {
+		religious_unity = 0.25
+		global_unrest = -1
+	}
+	sjp_hajj_fleet = {
+		naval_forcelimit_modifier = 0.25
+		ship_durability = 0.05
+	}
+	sjp_melaka_interpreters = {
+		diplomatic_reputation = 2
+		global_sailors_modifier = 0.20
+	}
+	sjp_sakai_brokers = {
+		global_trade_power = 0.10
+		merchants = 1
+	}
+	sjp_port_jurisprudence = {
+		tolerance_heathen = 2
+		stability_cost_modifier = -0.10
+	}
+	sjp_oceanic_jihad = {
+		ship_power_propagation = 0.20
+		galley_power = 0.15
+	}
+}
+
+IJP_ideas = {
+	start = {
+		global_manpower_modifier = 0.20
+		stability_cost_modifier = -0.15
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = IJP
+	}
+	free = yes
+
+	ijp_terauchi_towns = {
+		production_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.10
+	}
+	ijp_monto_oaths = {
+		global_manpower_modifier = 0.20
+		manpower_recovery_speed = 0.10
+	}
+	ijp_saika_gunners = {
+		infantry_power = 0.15
+		fire_damage = 0.05
+	}
+	ijp_ishiyama_ramparts = {
+		defensiveness = 0.25
+		fort_maintenance_modifier = -0.15
+	}
+	ijp_peasant_leagues = {
+		global_tax_modifier = 0.15
+		development_cost = -0.10
+	}
+	ijp_kinri_protectors = {
+		legitimacy = 1
+		global_unrest = -1
+	}
+	ijp_pure_land_covenant = {
+		religious_unity = 0.25
+		tolerance_own = 2
+	}
+}
+
+WAK_ideas = {
+	start = {
+		privateer_efficiency = 0.25
+		naval_forcelimit_modifier = 0.20
+	}
+
+	bonus = {
+		naval_morale = 0.15
+		ship_durability = 0.05
+	}
+
+	trigger = {
+		tag = WAK
+	}
+	free = yes
+
+	wak_tsushima_brokers = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.15
+	}
+	wak_setouchi_pilots = {
+		galley_power = 0.20
+		navy_tradition = 1
+	}
+	wak_ryukyu_sea_road = {
+		global_ship_trade_power = 0.20
+		trade_steering = 0.10
+	}
+	wak_ming_sea_smugglers = {
+		trade_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.05
+	}
+	wak_black_tide_code = {
+		privateer_efficiency = 0.25
+		embargo_efficiency = 0.20
+	}
+	wak_red_seal_corsairs = {
+		spy_offence = 0.20
+		leader_naval_manuever = 1
+	}
+	wak_eastern_sea_confederates = {
+		capture_ship_chance = 0.20
+		global_sailors_modifier = 0.25
+	}
+}

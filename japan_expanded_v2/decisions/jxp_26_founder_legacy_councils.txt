@@ -1,0 +1,64 @@
+country_decisions = {
+	jxp_decision_convene_founder_legacy_council = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_50_show_legacy_detail_decisions
+			jxp_is_unified_japan_state_trigger = yes
+			jxp_has_founder_legacy_council_origin_trigger = yes
+			NOT = { has_country_flag = jxp_26_founder_legacy_council_taken }
+		}
+		allow = {
+			is_at_war = no
+			stability = 0
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			jxp_ensure_polity_mechanic_effect = yes
+			if = { limit = { has_country_flag = jxp_origin_oda } country_event = { id = jxp_founder_legacy.1 } }
+			else_if = { limit = { has_country_flag = jxp_origin_tkg } country_event = { id = jxp_founder_legacy.2 } }
+			else_if = { limit = { has_country_flag = jxp_origin_tkd } country_event = { id = jxp_founder_legacy.3 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ues } country_event = { id = jxp_founder_legacy.4 } }
+			else_if = { limit = { has_country_flag = jxp_origin_hjo } country_event = { id = jxp_founder_legacy.5 } }
+			else_if = { limit = { has_country_flag = jxp_origin_mri } country_event = { id = jxp_founder_legacy.6 } }
+			else_if = { limit = { has_country_flag = jxp_origin_smz } country_event = { id = jxp_founder_legacy.7 } }
+			else_if = { limit = { has_country_flag = jxp_origin_otm } country_event = { id = jxp_founder_legacy.8 } }
+			else_if = { limit = { has_country_flag = jxp_origin_dte } country_event = { id = jxp_founder_legacy.9 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ask } country_event = { id = jxp_founder_legacy.10 } }
+			else_if = { limit = { has_country_flag = jxp_origin_csk } country_event = { id = jxp_founder_legacy.11 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ouc } country_event = { id = jxp_founder_legacy.12 } }
+			else_if = { limit = { has_country_flag = jxp_origin_img } country_event = { id = jxp_founder_legacy.13 } }
+			else_if = { limit = { has_country_flag = jxp_origin_soo } country_event = { id = jxp_founder_legacy.14 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ama } country_event = { id = jxp_founder_legacy.15 } }
+			else_if = { limit = { has_country_flag = jxp_origin_asa } country_event = { id = jxp_founder_legacy.16 } }
+			else_if = { limit = { has_country_flag = jxp_origin_hsk } country_event = { id = jxp_founder_legacy.17 } }
+			else_if = { limit = { has_country_flag = jxp_origin_htk } country_event = { id = jxp_founder_legacy.18 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ike } country_event = { id = jxp_founder_legacy.19 } }
+			else_if = { limit = { has_country_flag = jxp_origin_mae } country_event = { id = jxp_founder_legacy.20 } }
+			else_if = { limit = { has_country_flag = jxp_origin_sba } country_event = { id = jxp_founder_legacy.21 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ymn } country_event = { id = jxp_founder_legacy.22 } }
+			else_if = { limit = { has_country_flag = jxp_origin_rfr } country_event = { id = jxp_founder_legacy.23 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ktb } country_event = { id = jxp_founder_legacy.24 } }
+			else_if = { limit = { has_country_flag = jxp_origin_akm } country_event = { id = jxp_founder_legacy.25 } }
+			else_if = { limit = { has_country_flag = jxp_origin_akt } country_event = { id = jxp_founder_legacy.26 } }
+			else_if = { limit = { has_country_flag = jxp_origin_cba } country_event = { id = jxp_founder_legacy.27 } }
+			else_if = { limit = { has_country_flag = jxp_origin_isk } country_event = { id = jxp_founder_legacy.28 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ito } country_event = { id = jxp_founder_legacy.29 } }
+			else_if = { limit = { has_country_flag = jxp_origin_kkc } country_event = { id = jxp_founder_legacy.30 } }
+			else_if = { limit = { has_country_flag = jxp_origin_kno } country_event = { id = jxp_founder_legacy.31 } }
+			else_if = { limit = { has_country_flag = jxp_origin_ogs } country_event = { id = jxp_founder_legacy.32 } }
+			else_if = { limit = { has_country_flag = jxp_origin_shn } country_event = { id = jxp_founder_legacy.33 } }
+			else_if = { limit = { has_country_flag = jxp_origin_stk } country_event = { id = jxp_founder_legacy.34 } }
+			else_if = { limit = { has_country_flag = jxp_origin_tki } country_event = { id = jxp_founder_legacy.35 } }
+			else_if = { limit = { has_country_flag = jxp_origin_utn } country_event = { id = jxp_founder_legacy.36 } }
+			else_if = { limit = { has_country_flag = jxp_origin_tti } country_event = { id = jxp_founder_legacy.37 } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 125 }
+			}
+		}
+	}
+}

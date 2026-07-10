@@ -1,0 +1,49 @@
+jxp_38_warrior_founder_military_codes = {
+	army_tradition_decay = -0.005
+	land_morale = 0.03
+}
+
+jxp_38_warrior_founder_retainer_privileges = {
+	global_manpower_modifier = 0.08
+	global_unrest = -1
+}
+
+jxp_38_court_founder_office_precedents = {
+	diplomatic_reputation = 1
+	advisor_cost = -0.05
+}
+
+jxp_38_court_founder_domain_petitions = {
+	state_maintenance_modifier = -0.05
+	reform_progress_growth = 0.05
+}
+
+jxp_38_maritime_founder_port_compacts = {
+	trade_efficiency = 0.06
+	global_ship_trade_power = 0.10
+}
+
+jxp_38_maritime_founder_admiralty_rolls = {
+	naval_morale = 0.05
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_38_frontier_founder_barrier_offices = {
+	defensiveness = 0.10
+	fort_maintenance_modifier = -0.05
+}
+
+jxp_38_frontier_founder_open_passes = {
+	trade_range_modifier = 0.10
+	global_colonial_growth = 5
+}
+
+jxp_38_temple_founder_shrine_compact = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.04
+}
+
+jxp_38_temple_founder_market_accounting = {
+	production_efficiency = 0.05
+	global_tax_modifier = 0.04
+}

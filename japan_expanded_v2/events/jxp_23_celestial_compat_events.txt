@@ -1,0 +1,25 @@
+namespace = jxp_celestial_compat
+
+country_event = {
+	id = jxp_celestial_compat.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		jxp_is_japanese_polity_trigger = yes
+		is_emperor_of_china = yes
+		mission_completed = jxp_mission_eastasia_claim_mandate
+		NOT = { has_country_flag = jxp_unlocked_hakko_ichiu_reform }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_unlocked_hakko_ichiu_reform
+	}
+
+	option = { name = "OK" }
+}

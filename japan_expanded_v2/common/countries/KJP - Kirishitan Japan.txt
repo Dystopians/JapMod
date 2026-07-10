@@ -1,0 +1,61 @@
+graphical_culture = asiangfx
+
+color = { 120 38 170 }
+revolutionary_colors = { 8 8 8 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	religious_ideas
+	trade_ideas
+	quality_ideas
+	expansion_ideas
+	diplomatic_ideas
+	maritime_ideas
+	offensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Nobunaga #0" = 20
+	"Dom Justo #0" = 10
+	"Harunobu #0" = 10
+	"Sumitada #0" = 10
+	"Yukihiro #0" = 10
+	"Takayama #0" = 10
+	"Maria #0" = -10
+	"Gracia #0" = -10
+	"Hideyoshi #0" = 10
+	"Ieyasu #0" = 10
+}
+
+leader_names = {
+	Oda Otomo Omura Arima Konishi Takayama Kuroda Hosokawa Hasekura Ito Shimazu
+}
+
+ship_names = {
+	Nagasaki Hirado Bungo Tensho Macao Manila Dejima Santa-Maria San-Felipe Kurofune
+}
+
+army_names = {
+	"Christian Host" "$PROVINCE$ Gun" "$PROVINCE$ Kirishitan Tai"
+}
+
+fleet_names = {
+	"Kirishitan Navy" "$PROVINCE$ Sendan" "$PROVINCE$ Nanban Fleet"
+}

@@ -1,0 +1,121 @@
+jxp_kirishitan_reform_center = {
+	local_missionary_strength = 0.03
+	province_trade_power_modifier = 0.10
+	local_unrest = -1
+}
+
+jxp_kirishitan_newly_baptized = {
+	local_unrest = -1
+	local_tax_modifier = 0.05
+}
+
+jxp_kirishitan_state_church = {
+	global_missionary_strength = 0.01
+	tolerance_own = 1
+	legitimacy = 0.5
+}
+
+jxp_nagasaki_bishopric = {
+	missionary_maintenance_cost = -0.10
+	global_trade_power = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_kirishitan_roman_embassy = {
+	diplomatic_reputation = 1
+	prestige = 0.5
+	global_trade_power = 0.05
+}
+
+jxp_kirishitan_oceanic_orders = {
+	land_morale = 0.05
+	naval_morale = 0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_kirishitan_shimabara_compact = {
+	global_unrest = -1
+	tolerance_own = 1
+	tolerance_heretic = 1
+}
+
+jxp_reformed_reform_center = {
+	local_missionary_strength = 0.03
+	local_development_cost = -0.05
+	province_trade_power_modifier = 0.10
+}
+
+jxp_reformed_newly_ordered = {
+	local_unrest = -1
+	local_production_efficiency = 0.05
+}
+
+jxp_reformed_consistory = {
+	church_power_modifier = 0.10
+	global_unrest = -1
+	missionary_maintenance_cost = -0.05
+}
+
+jxp_reformed_oranda_schools = {
+	technology_cost = -0.04
+	idea_cost = -0.03
+	global_institution_spread = 0.10
+}
+
+jxp_reformed_elder_ports = {
+	global_trade_power = 0.05
+	trade_efficiency = 0.05
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_reformed_gunnery_bureau = {
+	infantry_power = 0.05
+	artillery_power = 0.05
+}
+
+jxp_reformed_commonwealth = {
+	governing_capacity_modifier = 0.05
+	stability_cost_modifier = -0.05
+	legitimacy = 0.5
+}
+
+jxp_kaikyo_reform_center = {
+	local_missionary_strength = 0.03
+	province_trade_power_modifier = 0.10
+	local_sailors_modifier = 0.10
+}
+
+jxp_kaikyo_newly_ordered = {
+	local_unrest = -1
+	local_sailors_modifier = 0.10
+}
+
+jxp_kaikyo_qadi_courts = {
+	tolerance_own = 1
+	tolerance_heathen = 1
+	global_unrest = -1
+}
+
+jxp_sakai_malay_brokers = {
+	global_trade_power = 0.05
+	trade_efficiency = 0.05
+	naval_forcelimit_modifier = 0.05
+}
+
+jxp_kaikyo_hajj_registry = {
+	prestige = 0.5
+	missionary_maintenance_cost = -0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_kaikyo_south_sea_compact = {
+	trade_efficiency = 0.08
+	naval_forcelimit_modifier = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_kaikyo_sea_law = {
+	global_trade_power = 0.10
+	naval_morale = 0.05
+	tolerance_heathen = 1
+}

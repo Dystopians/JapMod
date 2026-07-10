@@ -1,0 +1,18 @@
+on_startup = {
+	jxp_map_initialize_geography_contract_effect = yes
+	if = {
+		limit = { jxp_map_is_new_daimyo_tag_trigger = yes }
+		jxp_map_initialize_effect = yes
+	}
+}
+
+on_country_released = {
+	if = {
+		limit = { jxp_map_is_new_daimyo_tag_trigger = yes }
+		jxp_map_initialize_effect = yes
+	}
+}
+
+on_yearly_pulse_5 = {
+	events = { jxp_map.100 }
+}

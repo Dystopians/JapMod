@@ -1,0 +1,123 @@
+jxp_is_daimyo_stage_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		has_reform = daimyo
+		has_reform = indep_daimyo
+		has_reform = shogunate
+	}
+	NOT = { tag = JAP }
+	NOT = { tag = KJP }
+	NOT = { tag = CJP }
+	NOT = { tag = EJP }
+	NOT = { tag = RFJ }
+	NOT = { tag = SJP }
+	NOT = { tag = IJP }
+	NOT = { tag = WAK }
+	NOT = { jxp_has_any_route_trigger = yes }
+}
+
+jxp_daimyo_has_working_port_trigger = {
+	jxp_is_daimyo_stage_trigger = yes
+	num_of_ports = 1
+}
+
+jxp_is_major_daimyo_tag_trigger = {
+	OR = {
+		tag = ODA
+		tag = TKG
+		tag = TKD
+		tag = UES
+		tag = HJO
+		tag = MRI
+		tag = SMZ
+		tag = OTM
+		tag = DTE
+		tag = ASK
+		tag = CSK
+		tag = OUC
+		tag = IMG
+		tag = SOO
+		tag = AMA
+		tag = ASA
+		tag = HSK
+		tag = HTK
+		tag = IKE
+		tag = MAE
+		tag = SBA
+		tag = YMN
+		tag = RFR
+		tag = KTB
+		tag = AKM
+		tag = AKT
+		tag = CBA
+		tag = ISK
+		tag = ITO
+		tag = KKC
+		tag = KNO
+		tag = OGS
+		tag = SHN
+		tag = STK
+		tag = TKI
+		tag = UTN
+		tag = TTI
+	}
+}
+
+jxp_has_major_daimyo_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_oda
+		has_country_flag = jxp_origin_tkg
+		has_country_flag = jxp_origin_tkd
+		has_country_flag = jxp_origin_ues
+		has_country_flag = jxp_origin_hjo
+		has_country_flag = jxp_origin_mri
+		has_country_flag = jxp_origin_smz
+		has_country_flag = jxp_origin_otm
+		has_country_flag = jxp_origin_dte
+		has_country_flag = jxp_origin_ask
+		has_country_flag = jxp_origin_csk
+		has_country_flag = jxp_origin_ouc
+		has_country_flag = jxp_origin_img
+		has_country_flag = jxp_origin_soo
+		has_country_flag = jxp_origin_ama
+		has_country_flag = jxp_origin_asa
+		has_country_flag = jxp_origin_hsk
+		has_country_flag = jxp_origin_htk
+		has_country_flag = jxp_origin_ike
+		has_country_flag = jxp_origin_mae
+		has_country_flag = jxp_origin_sba
+		has_country_flag = jxp_origin_ymn
+		has_country_flag = jxp_origin_rfr
+		has_country_flag = jxp_origin_ktb
+		has_country_flag = jxp_origin_akm
+		has_country_flag = jxp_origin_akt
+		has_country_flag = jxp_origin_cba
+		has_country_flag = jxp_origin_isk
+		has_country_flag = jxp_origin_ito
+		has_country_flag = jxp_origin_kkc
+		has_country_flag = jxp_origin_kno
+		has_country_flag = jxp_origin_ogs
+		has_country_flag = jxp_origin_shn
+		has_country_flag = jxp_origin_stk
+		has_country_flag = jxp_origin_tki
+		has_country_flag = jxp_origin_utn
+		has_country_flag = jxp_origin_tti
+	}
+}
+
+jxp_is_unified_japan_state_trigger = {
+	OR = {
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+	}
+}
+
+jxp_oceanic_opening_at_least_25 = {
+	check_variable = { which = jxp_oceanic_opening value = 25 }
+}

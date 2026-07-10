@@ -1,0 +1,72 @@
+jxp_has_warrior_founder_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_founder_oda_azuchi_statutes
+		has_reform = jxp_reform_founder_tkg_mikawa_fudai_code
+		has_reform = jxp_reform_founder_tkd_koshu_military_law
+		has_reform = jxp_reform_founder_ues_kanto_justice
+		has_reform = jxp_reform_founder_hjo_odawara_cadasters
+		has_reform = jxp_reform_founder_csk_tosa_ichiryo_gusoku
+		has_reform = jxp_reform_founder_stk_hitachi_warrior_rolls
+		has_reform = jxp_reform_founder_cba_katori_muster
+	}
+}
+
+jxp_has_court_founder_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_founder_ask_muromachi_office
+		has_reform = jxp_reform_founder_hsk_sakai_kanrei_compact
+		has_reform = jxp_reform_founder_htk_wakae_retainer_law
+		has_reform = jxp_reform_founder_sba_buei_offices
+		has_reform = jxp_reform_founder_ymn_roku_bun_ichi_domain
+		has_reform = jxp_reform_founder_ktb_ise_court_law
+		has_reform = jxp_reform_founder_tti_yamato_temple_compact
+		has_reform = jxp_reform_founder_akm_harima_castle_roads
+	}
+}
+
+jxp_has_maritime_founder_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_founder_mri_setouchi_admiralty
+		has_reform = jxp_reform_founder_smz_satsuma_gunnery
+		has_reform = jxp_reform_founder_otm_funai_arsenal
+		has_reform = jxp_reform_founder_ouc_yamaguchi_court
+		has_reform = jxp_reform_founder_soo_tsushima_wakan
+		has_reform = jxp_reform_founder_shn_dazaifu_brokerage
+		has_reform = jxp_reform_founder_isk_tango_port_wardens
+		has_reform = jxp_reform_founder_kno_setouchi_pilot_law
+	}
+}
+
+jxp_has_frontier_founder_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_founder_dte_oshu_cavalry_envoys
+		has_reform = jxp_reform_founder_rfr_mutsu_nine_gates
+		has_reform = jxp_reform_founder_akt_ezochi_brokers
+		has_reform = jxp_reform_founder_utn_nikko_barrier_guard
+		has_reform = jxp_reform_founder_ogs_suwa_horse_archery
+		has_reform = jxp_reform_founder_ito_hyuga_fort_network
+	}
+}
+
+jxp_has_temple_market_founder_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_founder_img_tokaido_lawbooks
+		has_reform = jxp_reform_founder_ama_gassan_toda_law
+		has_reform = jxp_reform_founder_asa_ichijodani_council
+		has_reform = jxp_reform_founder_ike_himeji_stewards
+		has_reform = jxp_reform_founder_mae_kaga_million_koku
+		has_reform = jxp_reform_founder_kkc_aso_rite_council
+		has_reform = jxp_reform_founder_tki_mino_river_offices
+	}
+}
+
+jxp_has_any_founder_house_reform_trigger = {
+	OR = {
+		jxp_has_warrior_founder_reform_trigger = yes
+		jxp_has_court_founder_reform_trigger = yes
+		jxp_has_maritime_founder_reform_trigger = yes
+		jxp_has_frontier_founder_reform_trigger = yes
+		jxp_has_temple_market_founder_reform_trigger = yes
+		has_reform = jxp_reform_founder_generic_renovated_japan
+	}
+}

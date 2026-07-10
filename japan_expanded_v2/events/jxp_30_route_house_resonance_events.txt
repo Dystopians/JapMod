@@ -1,0 +1,239 @@
+namespace = jxp_route_house_resonance
+
+country_event = {
+	id = jxp_route_house_resonance.1
+	title = "jxp_route_house_resonance.1.t"
+	desc = "jxp_route_house_resonance.1.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_warrior_house_origin_trigger = yes
+		OR = {
+			jxp_has_any_route_trigger = yes
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_30_warrior_route_resonance_seen }
+	}
+	mean_time_to_happen = {
+		months = 260
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_country_flag = jxp_path_sakoku
+				has_country_flag = jxp_path_ikko
+				tag = IJP
+			}
+		}
+	}
+	option = {
+		name = "jxp_route_house_resonance.1.a"
+		set_country_flag = jxp_30_warrior_route_resonance_seen
+		jxp_add_current_route_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_route_over_warrior_houses duration = 3650 }
+	}
+	option = {
+		name = "jxp_route_house_resonance.1.b"
+		set_country_flag = jxp_30_warrior_route_resonance_seen
+		jxp_add_current_house_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_warrior_houses_temper_route duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_route_house_resonance.2
+	title = "jxp_route_house_resonance.2.t"
+	desc = "jxp_route_house_resonance.2.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_court_house_origin_trigger = yes
+		OR = {
+			jxp_has_any_route_trigger = yes
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_30_court_route_resonance_seen }
+	}
+	mean_time_to_happen = {
+		months = 260
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				tag = CJP
+				tag = EJP
+			}
+		}
+	}
+	option = {
+		name = "jxp_route_house_resonance.2.a"
+		set_country_flag = jxp_30_court_route_resonance_seen
+		jxp_add_current_route_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_route_over_court_houses duration = 3650 }
+	}
+	option = {
+		name = "jxp_route_house_resonance.2.b"
+		set_country_flag = jxp_30_court_route_resonance_seen
+		jxp_add_current_house_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_court_houses_temper_route duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_route_house_resonance.3
+	title = "jxp_route_house_resonance.3.t"
+	desc = "jxp_route_house_resonance.3.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_maritime_house_origin_trigger = yes
+		OR = {
+			jxp_has_any_route_trigger = yes
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_30_maritime_route_resonance_seen }
+	}
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_wokou
+				tag = KJP
+				tag = RFJ
+				tag = SJP
+				tag = WAK
+			}
+		}
+	}
+	option = {
+		name = "jxp_route_house_resonance.3.a"
+		set_country_flag = jxp_30_maritime_route_resonance_seen
+		jxp_add_current_route_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_route_over_maritime_houses duration = 3650 }
+	}
+	option = {
+		name = "jxp_route_house_resonance.3.b"
+		set_country_flag = jxp_30_maritime_route_resonance_seen
+		jxp_add_current_house_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_maritime_houses_temper_route duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_route_house_resonance.4
+	title = "jxp_route_house_resonance.4.t"
+	desc = "jxp_route_house_resonance.4.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_frontier_house_origin_trigger = yes
+		OR = {
+			jxp_has_any_route_trigger = yes
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_30_frontier_route_resonance_seen }
+	}
+	mean_time_to_happen = {
+		months = 270
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_country_flag = jxp_path_wokou
+				has_country_flag = jxp_path_kaikyo
+				tag = WAK
+				tag = SJP
+			}
+		}
+	}
+	option = {
+		name = "jxp_route_house_resonance.4.a"
+		set_country_flag = jxp_30_frontier_route_resonance_seen
+		jxp_add_current_route_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_route_over_frontier_houses duration = 3650 }
+	}
+	option = {
+		name = "jxp_route_house_resonance.4.b"
+		set_country_flag = jxp_30_frontier_route_resonance_seen
+		jxp_add_current_house_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_frontier_houses_temper_route duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_route_house_resonance.5
+	title = "jxp_route_house_resonance.5.t"
+	desc = "jxp_route_house_resonance.5.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_temple_market_house_origin_trigger = yes
+		OR = {
+			jxp_has_any_route_trigger = yes
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_30_temple_market_route_resonance_seen }
+	}
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_ikko
+				tag = KJP
+				tag = RFJ
+				tag = CJP
+				tag = IJP
+			}
+		}
+	}
+	option = {
+		name = "jxp_route_house_resonance.5.a"
+		set_country_flag = jxp_30_temple_market_route_resonance_seen
+		jxp_add_current_route_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_route_over_temple_market_houses duration = 3650 }
+	}
+	option = {
+		name = "jxp_route_house_resonance.5.b"
+		set_country_flag = jxp_30_temple_market_route_resonance_seen
+		jxp_add_current_house_resonance_effect = yes
+		add_country_modifier = { name = jxp_30_temple_market_houses_temper_route duration = 3650 }
+	}
+}

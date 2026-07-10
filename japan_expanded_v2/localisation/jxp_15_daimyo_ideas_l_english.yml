@@ -1,0 +1,252 @@
+﻿l_english:
+ ODA_ideas:0 "Çu0utõV"
+ ODA_ideas_start:0 "Çu0u.Oßu"
+ ODA_ideas_bonus:0 "Çu0uÎ‘ÃV"
+ jxp_oda_rakuichi_rakuza:0 "PN^PNµ^"
+ jxp_oda_rakuichi_rakuza_desc:0 "²d»Sµ^FUçeCgÿäNHuºNN'irAmTÎWN0^ðXŠÛvÿ,g¶RuQ®|N0(u¿OŠEQžR0"
+ jxp_oda_tenka_fubu:0 ")YN^fk"
+ jxp_oda_tenka_fubu_desc:0 ")YNNQêS=f¬Nýçeí‹ÿw=fïSåN1u›Q×e0pS2RN°eÕlÍ‘°e™Qb„véy^0"
+ jxp_oda_kurohoro_generals:0 "ÑžÍkcˆO"
+ jxp_oda_kurohoro_generals_desc:0 "¾|	Ñ`N–INTzeQb5–ÿ.OäN0²bkSN³Q­e†v(WlšMRŒRb0"
+ jxp_oda_azuchi_court:0 "‰RW¡V¿k"
+ jxp_oda_azuchi_court_desc:0 "VnTuØšÎWåNÑ‘µxNów±W>fHy°eCgZÿObýVø‹¯ON—VNðNÆ‰Çu0uKNMe0"
+ jxp_oda_sandansei_fire:0 "	NµkûQ"
+ jxp_oda_sandansei_fire_desc:0 "Á”®pNQ=fGYirÿw=f«ˆeQ³‰–R„v÷–ðX0njuÅˆkXÿnjuSûQÿLe5–àVKNß‘u0"
+ jxp_oda_namban_patrons:0 "WSî†‡^²b"
+ jxp_oda_namban_patrons_desc:0 ".OYeëX0FUºNŒTÁ”®p.S«ˆ‰Rn(WïS(uKNY0YegKN=gå‚ýwg¡RýV(uÿ¿ONÅV«ˆÒbŽNè•Y0"
+ jxp_oda_kenchi_registers:0 "*Y–Àh0WKNHQ"
+ jxp_oda_kenchi_registers_desc:0 "0u`u0ówØšN›QyV«ˆÍ‘°e¡‹eQ&ŒQ0)YN„vHS¦^ÿHQÎNNQgNHu„v¨X¿uVËY0"
+
+ TKG_ideas:0 "·VÝTtõV"
+ TKG_ideas_start:0 "·VÝT.Oßu"
+ TKG_ideas_bonus:0 "·VÝTÎ‘ÃV"
+ jxp_tkg_mikawa_bushi:0 "	N³lfkëX"
+ jxp_tkg_mikawa_bushi_desc:0 "	N³l¶RãåNáRŠNZWÍVû•T0%5–KNTÍNýwte–ÿðV„SKN-NÍNåwNbÎN0"
+ jxp_tkg_sekisho_network:0 "sQNb3wîv"
+ jxp_tkg_sekisho_network_desc:0 "Sï0!nãSNsQNb†v	g°‹UV0egŽVø‹ºNYuNÓYTÿˆmo`¿O–‡efNÛeQÎW-N0"
+ jxp_tkg_hatamoto_banners:0 "×e,gju–"
+ jxp_tkg_hatamoto_banners_desc:0 "ôv^S×e,g«ˆHNïSPÍ‘„v8^Yfk›Rÿâe²bkSINTÿmNôuc¶R-N›Qªu0"
+ jxp_tkg_metsuke_records:0 "îvØN&M|"
+ jxp_tkg_metsuke_records_desc:0 "îvØNáTßRø‹yVÿ&M|8hùRÓNê^N›QyV0¶RÕlŠnÿ·u‰NŠ¾–Ï…«Ž0"
+ jxp_tkg_matsudaira_branches:0 "Œgs^Nè•"
+ jxp_tkg_matsudaira_branches_desc:0 "Nè•Rgâe=fOSœ–ÿmN=f¦umg0²NÏe«ˆ‰RnŽN‰0WÿO,g¶RKNTö^eQø‹á0"
+ jxp_tkg_toshogu_cult:0 "Ngq«RTle"
+ jxp_tkg_toshogu_cult_desc:0 "Vyup«ˆIYHNˆR²b¶RýV„vIQ‰0fk¶RàVÚ‹N>y¿k<yÕl1udkTHNNSO0"
+ jxp_tkg_famine_granaries:0 "e™‘™HÓN"
+ jxp_tkg_famine_granaries_desc:0 "ÓNê^	ccR8hwÿRƒt^VÓNHÙu0ýw©‹ŒvÓYImÇ¬Qåe„vMeäNÿÔk›QäNôfýw‰RšRNýV0"
+
+ TKD_ideas:0 "fk0utõV"
+ TKD_ideas_start:0 "fk0u.Oßu"
+ TKD_ideas_bonus:0 "fk0uÎ‘ÃV"
+ jxp_tkd_kai_genji:0 "2uenl"
+ jxp_tkd_kai_genji_desc:0 "nlTè•NqSýVfkZøv’N=e‘d0×e^USVöeÿ2uefkëXåwSfêñTHNUOwb0"
+ jxp_tkd_shingen_dams:0 "áO„s2X"
+ jxp_tkd_shingen_dams_desc:0 "»l4lN=f‡eTS‹N0ošg³lÝTÿ¿O=fŠbRƒt^0*m4lN0uzNv^³ueQ¶RÕl0"
+ jxp_tkd_nokizaru_network:0 "iMsKNQ"
+ jxp_tkd_nokizaru_network_desc:0 "qSï0¿RHWNLeÎWKNô•ý	gàeT<w¿u0›Q®‹KNMRÿÅ`¥bòTHQLˆµb¾0"
+ jxp_tkd_kurokawa_gold:0 "ÑžÝTÑ‘qS"
+ jxp_tkd_kurokawa_gold_desc:0 "qSyKNÑ‘›O‰Q‘šuQ0QrÎWNY²Nˆ™`02ue„v+.vàVÿw	w	g•’‚0"
+ jxp_tkd_koshu_hatto:0 "2uÞTÕl¦^"
+ jxp_tkd_koshu_hatto_desc:0 "ýVÕlS›QyV0É‹¼‹N¶RãIN¡R™QbïSªVKN‹OÿOHVuQ	g†NT7hHVlx„véy^0"
+ jxp_tkd_twentyfour_generals:0 "ŒNASÛVS"
+ jxp_tkd_twentyfour_generals_desc:0 "Í‘ãTŒcN¹eÿTRHN›Q0TSKNTNêSHN.Oô‹ÿmNHN›Q6RNbO0"
+ jxp_tkd_koyo_gunkan:0 "2u3–›Qt’"
+ jxp_tkd_koyo_gunkan_desc:0 "b5–ÏuŒš«ˆtetHNïS.Oˆc„v›QfR0%NÜwýYu(WfN-Nÿ›OTºNÍSY!hû‹0"
+
+ UES_ideas:0 "NIgtõV"
+ UES_ideas_start:0 "NIg.Oßu"
+ UES_ideas_bonus:0 "NIgÎ‘ÃV"
+ jxp_ues_kanto_kanrei:0 "sQN¡r†˜"
+ jxp_ues_kanto_kanrei_desc:0 "çeLwTÍN	g÷SìSKN›R0åNNIgKNTÛeQsQNÿø‹¶R¿ON—VNÞV”^vQ<yÕl0"
+ jxp_ues_yamanouchi_branches:0 "qS…QNGb7Œ"
+ jxp_ues_yamanouchi_branches_desc:0 "R=e‹†8^øv‰NÿtSmNÝOYu†N¶RT„vYOZ0‰Ngb«ˆŒeQ›Q5–ÿ¿OýwbHNÏuŒš0"
+ jxp_ues_kamakura_office:0 "p•ÓNlQ¹eçe†™"
+ jxp_ues_kamakura_office_desc:0 "p•ÓN„vçeMeNbÍNïSîOY0›QyVŒTeˆÙu¿lçeåeSïÍ‘RVéy^0"
+ jxp_ues_dragon_of_echigo:0 "ŠTKN™Ÿ"
+ jxp_ues_dragon_of_echigo_desc:0 "INT²N4NbHWÿ›Q¿R‚Yê–­STYAm0vQZT³åN©‹Le›Q(W²N•MR¿OòT¨RGd0"
+ jxp_ues_nokizaru:0 "iMsO"
+ jxp_ues_nokizaru_desc:0 "‰wc¥ePzLˆqS„Vÿ.OÞVLe%„kpIQN®|S»ST0"
+ jxp_ues_agakita_shu:0 "lbSO"
+ jxp_ues_agakita_shu_desc:0 "SŠjŒÏe«ˆ³ueQ›QyVÿNhœšKNlÏu“Š¦uNi`OSHN5–-NZW•0"
+ jxp_ues_denkoku_no_ji:0 ".OýVKNž"
+ jxp_ues_denkoku_no_ji_desc:0 "¶R­‹N‡efNOçubNêSíQNˆ	ÿmNíQïS«ˆø‹ãb²‹„vTR0"
+
+ HJO_ideas:0 "SagtõV"
+ HJO_ideas_start:0 "Sag.Oßu"
+ HJO_ideas_bonus:0 "SagÎ‘ÃV"
+ jxp_hjo_kamakura_legacy:0 "p•ÓNçeZ"
+ jxp_hjo_kamakura_legacy_desc:0 "sQN°‹—Vp•ÓN„vT÷S0SagPvQYOIQÿO°etQKN¶R«bNäSwCgZ0"
+ jxp_hjo_night_combat:0 "Y­ˆKNÕl"
+ jxp_hjo_night_combat_desc:0 "S0uŸSfkëX„U(uYr‚0qS„VNnoðX0Le›Q*gÊSteRÿRIQòTeQ%„h0"
+ jxp_hjo_odawara_administration:0 "S0uŸSÕNn"
+ jxp_hjo_odawara_administration_desc:0 "É‹¼‹0t^!N›QyV1uÎW-NÄ‹šROÆu¡R0sQN^WàV‡efNw«ˆÞ0"
+ jxp_hjo_tokusei:0 "·VMeŒjP"
+ jxp_hjo_tokusei_desc:0 "HP¡RNçe(`å‚NŒjPÿ¿OO(WbTÍ‘°eÃqw0ËRMQ	g¦^ÿ¹eýwO°e†˜RVÃV0"
+ jxp_hjo_castle_ring:0 "Sag=eÎWQ"
+ jxp_hjo_castle_ring_desc:0 ",gÎW0=eÎWNqSÎW|Vdkgq”^0LeºNsSOHYNNè•ÿmNÍN‰b—ùRNNSów±W0"
+ jxp_hjo_kanto_unification:0 "sQNNW"
+ jxp_hjo_kanto_unification_desc:0 "BWNø‹á«ˆN³ueQ¶R-N0Sï0ÎW&xNºN(OsQNÎN0WþVØSHNïS»lKN0W0"
+ jxp_hjo_odawara_council:0 "S0uŸSÄ‹šR"
+ jxp_hjo_odawara_council_desc:0 "¿RwNIYLˆqQ®‹ýVMeÿ0W¹eçe‹OmN«ˆ&^eQÎW-NÁˆ³Q0"
+
+ MRI_ideas:0 "Ûk)RtõV"
+ MRI_ideas_start:0 "Ûk)R.Oßu"
+ MRI_ideas_bonus:0 "Ûk)RÎ‘ÃV"
+ jxp_mri_oe_lineage:0 "'YmlKNÔˆ"
+ jxp_mri_oe_lineage_desc:0 "‡efkKNT†vïSý¯nçe¶R0Ûk)RåN1Œû|Á‹fêñTNêS=fqS-NjŒÏe0"
+ jxp_mri_kokujin_ikki:0 "ýVºNNÆcKN•"
+ jxp_mri_kokujin_ikki_desc:0 "‰Rz‚ýVºN`Nï`ßv¦uNT®‹0SvQmgHNNSOÿ¿OýwÎNS†˜-NZwúQ'Y›Q0"
+ jxp_mri_diplomatic_web:0 "ŒeuY²N"
+ jxp_mri_diplomatic_web_desc:0 "ßvfN0ZZûY0»yô•NÆR¦uý=fbýVuQhV0Ûk)RKNR8^(WfNáOKNTúQ˜—0"
+ jxp_mri_three_arrows:0 "	NâwKN­‹"
+ jxp_mri_three_arrows_desc:0 "Nâwf˜bÿ	Nâw¾–gd0¶R-Nø‹gàVqQT­‹ë‹wåwâVÓuKNÍ‘0"
+ jxp_mri_hiroshima_castle:0 "^›SQrÎW"
+ jxp_mri_hiroshima_castle_desc:0 "ÎWNHuN³l=nv^wÿOqS4–qS3–„v›QMe0(u	g†N°e„v¢gËu0"
+ jxp_mri_itsukushima_fleet:0 "%N›S4l›Q"
+ jxp_mri_itsukushima_fleet_desc:0 "Ño7b…QnoAmN›SqV†vHNËS›Q0Ûk)R4l›Qýw(Wírwm-NŠbLe9‚<eQ‰k0W0"
+ jxp_mri_hagi_ware:0 ")„çpN6ƒdl"
+ jxp_mri_hagi_ware_desc:0 "v–W06ƒhVN<yÕl©‹fk¶RZêNNêS>fŽN2uÄwÿmN>fŽN¢Rµ^KNô•0"
+
+ SMZ_ideas:0 "›S%mtõV"
+ SMZ_ideas_start:0 "›S%m.Oßu"
+ SMZ_ideas_bonus:0 "›S%mÎ‘ÃV"
+ jxp_smz_satsuma_hayato:0 "(„id¼–ºN"
+ jxp_smz_satsuma_hayato_desc:0 "WSkNÞTfkëXåNRÈpû•T05–MRNðXPTŠUÿ8^ÔkŸðXôfýw¬P¨R›QÃV0"
+ jxp_smz_satsunan_school:0 "(„WSfRßu"
+ jxp_smz_satsunan_school_desc:0 "¶R-NYe²w|QÍ‘fkz‚NÏufRÿO0W¹ejŒÏe(W%NÛ‚›Qªu-NŒb0RqQTí‹Š0"
+ jxp_smz_three_provinces:0 "	NÞTQT"
+ jxp_smz_three_provinces_desc:0 "(„id0'Y…–0åeT«ˆÍ‘°emgeQNè•0qSÝT‹†i–ÿMeäNtSïS1u,gÎW.O¾0"
+ jxp_smz_tsurinobuse:0 "“”Î‘O"
+ jxp_smz_tsurinobuse_desc:0 "oOVLeÿOuQTôV0›S%mKN5–NBlðX¿Rim'YÿêSBlNûQ˜b•0"
+ jxp_smz_tanegashima_foundries:0 "ÍyPR›SI•¶Q"
+ jxp_smz_tanegashima_foundries_desc:0 "WSwm.Oeg„vÁ”®p(WkNÞT‰pkp-N«ˆÆbã‰0ÿN6Rv^9eo‚0"
+ jxp_smz_ryukyu_trade:0 "	tt*‚ï"
+ jxp_smz_ryukyu_trade_desc:0 "	ttNWS›S*‚¿uŠb(„idTôfÜwmßWøvÞ0Î˜^&^ÞV'irÿmN&^ÞVˆmo`0"
+ jxp_smz_early_westernization:0 "éegYfR"
+ jxp_smz_early_westernization_desc:0 "WSî†9‚0Á”®p=gNVýVfNwSHQókNÞT0„UfRwýw(W)YNØSNSMRHQû•noðX0"
+
+ OTM_ideas:0 "'YËStõV"
+ OTM_ideas_start:0 "'YËS.Oßu"
+ OTM_ideas_bonus:0 "'YËSÎ‘ÃV"
+ jxp_otm_northern_kyushu:0 "SkNÞT8—Cg"
+ jxp_otm_northern_kyushu_desc:0 "QrMR00NMRN0NTø‹ïøvÞÿuQ®|ŒT›Q¿R†vïSTkNÞTy0W¨cÛ0"
+ jxp_otm_bungo_ports:0 "0NT=n^"
+ jxp_otm_bungo_ports_desc:0 "=nãS0ö”'NYegFU9‚HN'YËS&^egÜ…qSÎW„v0n0"
+ jxp_otm_brave_retainers:0 "ÇRÈp¶Rã"
+ jxp_otm_brave_retainers_desc:0 "'YËS¶Rã(WkNÞTb5–-NÍSYèxHxÿ%NSKN-NÍNýwˆROO,g5–0"
+ jxp_otm_nanban_trade:0 "WSî†8f"
+ jxp_otm_nanban_trade_desc:0 "Ñž9‚eQ=nÿN0Å”0j•NÁ”®p†veQ&ŒQ00NTàVdkýwNÜwmøvŒ0"
+ jxp_otm_christian_lords:0 "	T)R=e9Nø‹¯O"
+ jxp_otm_christian_lords_desc:0 "m<yONèRfkëX·ƒ—V°e„v“ŠŠí‹ŠÿmN©‹0NTbHN.OYeëX<w-N„vè•7b0"
+ jxp_otm_tensho_embassy:0 ")Yckc'k"
+ jxp_otm_tensho_embassy_desc:0 "St^O‚‚Üt‰wmKNYÿSåe,gø‹¯O„vT÷S&^eQL–u«R÷^0"
+ jxp_otm_kunikuzushi:0 "ýV)T"
+ jxp_otm_kunikuzushi_desc:0 "‰lÍ‘'Y®p«ˆÖbTÎWNÿów±WN(gh(W÷–1ž-N>fúQÂˆ0"
+
+ DTE_ideas:0 "O¾tõV"
+ DTE_ideas_start:0 "O¾.Oßu"
+ DTE_ideas_bonus:0 "O¾Î‘ÃV"
+ jxp_dte_oshu_shugo:0 "eYÞTˆR²b"
+ jxp_dte_oshu_shugo_desc:0 "NS^W—‰HVTNHVuQ0O¾åNˆR²bKNTŠbqS³lÍ‘°e³ueQ¶R-N0"
+ jxp_dte_marriage_expansion:0 "ZZûYib.V"
+ jxp_dte_marriage_expansion_desc:0 "ûY²NïSVÎWè•ÿmNïSbkr^b0O¾„vib.V8^HQ1uZZfNÕ‹¢c¹Lu0"
+ jxp_dte_renga_circle:0 "ÞLkOµ^"
+ jxp_dte_renga_circle_desc:0 "LkON‡e‹NO¹0Wfk¶RN1YÎ˜Å–ÿmNÙuø‹jŒÏeÐc›OT-^øvŒ„vHgO0"
+ jxp_dte_dragon_corps:0 "ìr<w™ŸKN›Q"
+ jxp_dte_dragon_corps_desc:0 "INT„vZTŸ¨R•uQTMR0kphVNzûQT(uÿäNeYÞT›Q¿RðX¿R˜ØS0"
+ jxp_dte_red_seal_ships:0 "1gpS9‚"
+ jxp_dte_red_seal_ships_desc:0 "Üm¸‹ïS©‹O¾Nbkb—TF–eYqS³lÿmNŠbîvIQ•bT*Ys^m|V¸S0"
+ jxp_dte_keicho_embassy:0 "†^•cO"
+ jxp_dte_keicho_embassy_desc:0 "O‚‚ŠwmwLˆÿ&^NwNS'YT„vfNáOÛeQeÜ‹s­^0"
+ jxp_dte_domain_development:0 "ÙNðSVœ^"
+ jxp_dte_domain_development_desc:0 "°eÎW0°e0uN³l=nNv^tQQrÿOeYÞTÄ–ÃV	g†NïSïyÄ„„v9húW0"
+
+ ASK_ideas:0 "³)RtõV"
+ ASK_ideas_start:0 "³)R.Oßu"
+ ASK_ideas_bonus:0 "³)RÎ‘ÃV"
+ jxp_ask_genji_headship:0 "nlßhh"
+ jxp_ask_genji_headship_desc:0 "³)RKNTb¥cnlYOêu0sSOU^œ^pˆ®Vÿçeåe1Œû|ÍNýwìSegleOu0"
+ jxp_ask_court_defenders:0 "yÌ‘ˆR²b"
+ jxp_ask_court_defenders_desc:0 "S›Q¶RåN²bcgêNêûN0¬Ný„v<yÕl‹†1VÿtSÍNýwˆcˆNuQZåNTR0"
+ jxp_ask_higashiyama_culture:0 "NqS‡eS"
+ jxp_ask_higashiyama_culture_desc:0 "6ƒ0ýw0­^íVNfNb–(WqNN-Nö^íuÎ˜Å–ÿOfk¶RZêN>fŽNÆu‚‚0"
+ jxp_ask_tosen_bugyo:0 "U9‚IYLˆ"
+ jxp_ask_tosen_bugyo_desc:0 "Yeg9‚6‚N=nHu8f1uIYLˆ¡Rtÿg!0FU)RNÄ‰¦uàVdkNô÷mqN0"
+ jxp_ask_bugyoshu_hokushu:0 "IYlQONIYLˆO"
+ jxp_ask_bugyoshu_hokushu_desc:0 "U^œ^çeTÍNÂa‡efN0É‹¼‹N<yÕl0„U(uvQMbÿ¿OýwOçe6R¦^Q¦^Ðl0"
+ jxp_ask_bakufu_domains:0 "U^œ^ôv–0W"
+ jxp_ask_bakufu_domains_desc:0 "ôv–0W›O‰Q¬NýMe¡RÿmNÐc’‘ø‹¯OS›Q¶RÍN	gêñT„vW0WNÓNê^0"
+ jxp_ask_shugo_system:0 "Í‘teˆR²b6R"
+ jxp_ask_shugo_system_desc:0 "ˆR²bN”^êSåbuQêÍ‘0å‚ýwÍ‘¢‹yV1ÿø‹ýVKN›RïSQ!kGleQU^œ^TN0"
+
+ CSK_ideas:0 "•—RbètõV"
+ CSK_ideas_start:0 "•—Rbè.Oßu"
+ CSK_ideas_bonus:0 "•—RbèÎ‘ÃV"
+ jxp_csk_ichiryo_gusoku:0 "N†˜wQ³"
+ jxp_csk_ichiryo_gusoku_desc:0 "œQuQêY2uwQÿs^öewjOÿböe”^ìS0WPO+.vÿtSýw1udkZwuQ0"
+ jxp_csk_tosa_seven_clans:0 "WPONÄ–"
+ jxp_csk_tosa_seven_clans_desc:0 "çejŒÏebLebËSÿgÈuý‰«ˆ³ueQWPO„v°eéy^0"
+ jxp_csk_shikoku_unification:0 "ÛVýVNßu"
+ jxp_csk_shikoku_unification_desc:0 "qSwm”–V„vø‹ýV«ˆ›QSN“Š¦uÞw0ÛVýVNQêS=f›SNø‹Le0"
+ jxp_csk_hundred_article_code:0 "Œv‡rag"
+ jxp_csk_hundred_article_code_desc:0 "Õl‹VS›QyV00u0WŒT¶R-NTR™QbagîvÿO°etQKNýV	gàzïSªV0"
+ jxp_csk_ura_do_navy:0 "fm7b4l›Q"
+ jxp_csk_ura_do_navy_desc:0 "fm7bŒn…Q„v9‚KbŸqåwnoAmN›SqVÿ³åN²buQ®|v^ZÁwwmáS0"
+ jxp_csk_god_of_arts:0 "z‚ýwKN^y"
+ jxp_csk_god_of_arts_desc:0 "fk¶Rå‚ýw²bc‡ez‚ÿ¿Oýw©‹Vg>f—VNêS=fR•KN‹N0"
+ jxp_csk_temple_patronage:0 "úR>yvbc"
+ jxp_csk_temple_patronage_desc:0 "úR>y«ˆ‰RnŽNýVÕlKN…Qÿmy<yŒT‡efNqQT3zšRaNQgºNÃV0"
+
+ OUC_ideas:0 "'Y…QtõV"
+ OUC_ideas_start:0 "'Y…Q.Oßu"
+ OUC_ideas_bonus:0 "'Y…QÎ‘ÃV"
+ jxp_ouc_baekje_lineage:0 "ŒvNmTÔˆ"
+ jxp_ouc_baekje_lineage_desc:0 "!neg.Oô‹O'Y…QTgœœJS›S„v<yÕlN8føvÞÿbHNY²N-^N„vŒD0"
+ jxp_ouc_korea_trade:0 "gœœ8f"
+ jxp_ouc_korea_trade_desc:0 "ùRlš0ZSYNgœœ*‚ïS'irŒTO‚‚&^eQqSãS0"
+ jxp_ouc_anti_wokou_fleet:0 "¨‹-P4l›Q"
+ jxp_ouc_anti_wokou_fleet_desc:0 "wm×vå‚N×S¦umgÿ8f¿OO­eÝu0'Y…Q4l›QåNéy^KNTáTLˆwmN0"
+ jxp_ouc_hakata_city:0 "ZSYHu"
+ jxp_ouc_hakata_city_desc:0 "ZSYFUºNÂa—Vwmï0ö”÷NNVýVÄ‰éw0ŒcácdkÎWÿ¿OŒcáckNÞTSè•0"
+ jxp_ouc_mercantile_diplomacy:0 "FU8Y²N"
+ jxp_ouc_mercantile_diplomacy_desc:0 "ˆ™`0¸‹ïSÁ‹NFU¦uýwµb¾RuQ¾–¾KNY0'Y…QY²N8^–'9‚TLˆ0"
+ jxp_ouc_missionary_harbors:0 "Î³u.OYeëX"
+ jxp_ouc_missionary_harbors_desc:0 "VýVçP±O«ˆAQ¸‹(W=nHujPYu0°eáOðN*gÅVeQÃVÿtSýw&^egÜ¹eˆmo`0"
+ jxp_ouc_retainer_factions:0 "¶R-N>m–"
+ jxp_ouc_retainer_factions_desc:0 ">m–å‚«ˆ„U Rs^aˆÿ¿Oýw’Nøvur6RÿOCg›RNóK„eQNè•ÁyKb0"
+
+ IMG_ideas:0 "ÊNÝTtõV"
+ IMG_ideas_start:0 "ÊNÝT.Oßu"
+ IMG_ideas_bonus:0 "ÊNÝTÎ‘ÃV"
+ jxp_img_claim_to_shogunate:0 "î•ŸS›Q¶R"
+ jxp_img_claim_to_shogunate_desc:0 "ÊNÝTêÆ‰³åNeQIN¬Ný0ŽVS›QKNMO„vSïÿHQ1uTRŒT±Rðyú”b0"
+ jxp_img_tokaido_mastery:0 "NwmSKNIN"
+ jxp_img_tokaido_mastery_desc:0 "NwmSÞsQNNu…QÿFUÅe0OwŒT›Q¿R†vïS(WÊNÝTsQgqNŽVeg0"
+ jxp_img_imagawa_house_law:0 "ÊNÝTGPTîvUV"
+ jxp_img_imagawa_house_law_desc:0 "¶RÕlåN×O‡eWR˜Hyø‹ãÿOýVºNŒTŒvÓYýýwåwS¹LuNb(W0"
+ jxp_img_revised_clan_code:0 "ý RÕl¦^"
+ jxp_img_revised_clan_code_desc:0 "çeÕlÏubýVqNNSÍ‘°ežXeˆÿ¶R-N u·uàVb‹OwS†NRuQ0"
+ jxp_img_triple_alliance:0 "	NýVTßv"
+ jxp_img_triple_alliance_desc:0 "š³l02ueNøv!j„vßv¦uN¦^©‹NýV‰RšRÿmN©‹ÊNÝT—VåN‰g¬Ný0"
+ jxp_img_mount_fuji:0 "ÌRëXKNg"
+ jxp_img_mount_fuji_desc:0 "ÌRëXqS.fgqÊNÝT»lN„vš³l0ê6qKNZNfk¶RTg(Wdkøv’N R•Q0"
+ jxp_img_march_to_kyoto:0 "Nm›Q"
+ jxp_img_march_to_kyoto_desc:0 "å‚‰b1S)YNKN×Vÿ1SÅV‰˜ŠbNwmSø‹›Q&^T¬Ný0"
+
+ SOO_ideas:0 "—RltõV"
+ SOO_ideas_start:0 "—Rl.Oßu"
+ SOO_ideas_bonus:0 "—RlÎ‘ÃV"
+ jxp_soo_wakan_trade:0 "-P†™8f"
+ jxp_soo_wakan_trade_desc:0 "Ü‘qS-P†™OùRlšbHNåe,gNgœœKNô•„v„zè•0è•‹†„zÿ)RtS•Am0"
+ jxp_soo_wakou_tradition:0 "-PÇRçe`N"
+ jxp_soo_wakou_tradition_desc:0 "wmNjŒHVâeïSHN×vÿmNïSHNuQ0—RlÂa—VŠbjmno-N„vºNKb³ueQ×e^0"
+ jxp_soo_tsushima_waters:0 "ùRlšwmáS"
+ jxp_soo_tsushima_waters_desc:0 "noPl0—fyNwmþ–†v(W,g0W9‚KbÃV-N0Yeg0‚–¾–åN(WdkÎN¹RR5–0"
+ jxp_soo_bahan_ships:0 "âlJS9‚"
+ jxp_soo_bahan_ships_desc:0 "‰ëV9‚êSŽNáT*‚0Áy cN.Oˆmo`0wmáSMe»lÎNeg»yNV¦^0"
+ jxp_soo_tough_negotiators:0 "HVlx²N"
+ jxp_soo_tough_negotiators_desc:0 "—Rl(WU^œ^0gœœNwmFUKNô•hTËeÿŠžÅV‰˜Ôgoÿ•^¿utSNýw‰ûy0"
+ jxp_soo_port_improvements:0 "=n%mîOQr"
+ jxp_soo_port_improvements_desc:0 "Êl0W0ÓN“^N9‚^W«ˆekteîOÿOírSùRlš³åN=e‘dôf'Y„vwmNŽVeg0"
+ jxp_soo_elementary_school:0 "aN!h=T™„"
+ jxp_soo_elementary_school_desc:0 "û‹™QN—r=gO²N‡efNNQêSOVSpeÑ‹w0wmNKNýVmN—‰¸ur0"

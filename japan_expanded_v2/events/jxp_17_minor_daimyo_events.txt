@@ -1,0 +1,297 @@
+namespace = jxp_minor_daimyo
+
+country_event = {
+	id = jxp_minor_daimyo.1
+	title = "jxp_minor_daimyo.1.t"
+	desc = "jxp_minor_daimyo.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = HSK
+			tag = YMN
+			tag = AKM
+			tag = SBA
+			tag = HTK
+			tag = IKE
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_kinai_houses_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_daimyo.1.a"
+		set_country_flag = jxp_minor_daimyo_kinai_houses_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_kinai_old_letters
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_minor_daimyo.1.b"
+		set_country_flag = jxp_minor_daimyo_kinai_houses_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_kinai_domain_ledgers
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.2
+	title = "jxp_minor_daimyo.2.t"
+	desc = "jxp_minor_daimyo.2.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = AMA
+			tag = SHN
+			tag = ISK
+			tag = KNO
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_western_sea_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_daimyo.2.a"
+		set_country_flag = jxp_minor_daimyo_western_sea_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_western_sea_writs
+			duration = 3650
+		}
+		add_navy_tradition = 5
+	}
+	option = {
+		name = "jxp_minor_daimyo.2.b"
+		set_country_flag = jxp_minor_daimyo_western_sea_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_western_kin_compact
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.3
+	title = "jxp_minor_daimyo.3.t"
+	desc = "jxp_minor_daimyo.3.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = OGS
+			tag = UTN
+			tag = CBA
+			tag = STK
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_eastern_kokujin_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_daimyo.3.a"
+		set_country_flag = jxp_minor_daimyo_eastern_kokujin_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_eastern_kokujin_muster
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_minor_daimyo.3.b"
+		set_country_flag = jxp_minor_daimyo_eastern_kokujin_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_eastern_ritual_pacification
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.4
+	title = "jxp_minor_daimyo.4.t"
+	desc = "jxp_minor_daimyo.4.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = AKT
+			tag = RFR
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_northern_roads_seen }
+	}
+
+	mean_time_to_happen = { months = 260 }
+
+	option = {
+		name = "jxp_minor_daimyo.4.a"
+		set_country_flag = jxp_minor_daimyo_northern_roads_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_northern_horse_roads
+			duration = 3650
+		}
+		add_army_tradition = 5
+	}
+	option = {
+		name = "jxp_minor_daimyo.4.b"
+		set_country_flag = jxp_minor_daimyo_northern_roads_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_northern_sea_posts
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.5
+	title = "jxp_minor_daimyo.5.t"
+	desc = "jxp_minor_daimyo.5.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = TKI
+			tag = KTB
+			tag = TTI
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_crossroads_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_daimyo.5.a"
+		set_country_flag = jxp_minor_daimyo_crossroads_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_crossroads_petitions
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_minor_daimyo.5.b"
+		set_country_flag = jxp_minor_daimyo_crossroads_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_crossroads_castle_roads
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.6
+	title = "jxp_minor_daimyo.6.t"
+	desc = "jxp_minor_daimyo.6.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = ITO
+			tag = KKC
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_kyushu_houses_seen }
+	}
+
+	mean_time_to_happen = { months = 260 }
+
+	option = {
+		name = "jxp_minor_daimyo.6.a"
+		set_country_flag = jxp_minor_daimyo_kyushu_houses_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_kyushu_mountain_oaths
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_minor_daimyo.6.b"
+		set_country_flag = jxp_minor_daimyo_kyushu_houses_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_kyushu_sea_books
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_minor_daimyo.7
+	title = "jxp_minor_daimyo.7.t"
+	desc = "jxp_minor_daimyo.7.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = ASA
+			tag = MAE
+		}
+		NOT = { has_country_flag = jxp_minor_daimyo_hokuriku_seen }
+	}
+
+	mean_time_to_happen = { months = 260 }
+
+	option = {
+		name = "jxp_minor_daimyo.7.a"
+		set_country_flag = jxp_minor_daimyo_hokuriku_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_hokuriku_court_seats
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+	option = {
+		name = "jxp_minor_daimyo.7.b"
+		set_country_flag = jxp_minor_daimyo_hokuriku_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_hokuriku_storehouse_books
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+}

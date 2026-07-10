@@ -1,0 +1,234 @@
+namespace = jxp_sengoku
+
+country_event = {
+	id = jxp_sengoku.1
+	title = "jxp_sengoku.1.t"
+	desc = "jxp_sengoku.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_sengoku_shadow_kyoto_seen }
+		NOT = { is_year = 1500 }
+		OR = {
+			has_reform = daimyo
+			has_reform = shogunate
+			culture_group = japanese_g
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_sengoku.1.a"
+		set_country_flag = jxp_sengoku_shadow_kyoto_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_sengoku.1.b"
+		set_country_flag = jxp_sengoku_shadow_kyoto_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.2
+	title = "jxp_sengoku.2.t"
+	desc = "jxp_sengoku.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		NOT = { has_country_flag = jxp_sengoku_kokujin_seen }
+		num_of_cities = 8
+		NOT = { check_variable = { which = jxp_tenka_order value = 50 } }
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	option = {
+		name = "jxp_sengoku.2.a"
+		set_country_flag = jxp_sengoku_kokujin_seen
+		add_mil_power = 50
+		add_country_modifier = {
+			name = jxp_sengoku_negotiations
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jxp_sengoku.2.b"
+		set_country_flag = jxp_sengoku_kokujin_seen
+		jxp_add_tenka_order_10_effect = yes
+		add_legitimacy = -5
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.3
+	title = "jxp_sengoku.3.t"
+	desc = "jxp_sengoku.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_sengoku_kyoto_invitation_seen }
+		OR = {
+			owns = 1020
+			1020 = { is_neighbor_of = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_sengoku.3.a"
+		set_country_flag = jxp_sengoku_kyoto_invitation_seen
+		jxp_add_imperial_sanction_10_effect = yes
+		add_prestige = 10
+	}
+	option = {
+		name = "jxp_sengoku.3.b"
+		set_country_flag = jxp_sengoku_kyoto_invitation_seen
+		jxp_grant_japan_region_claims_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.4
+	title = "jxp_sengoku.4.t"
+	desc = "jxp_sengoku.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_year = 1560
+		NOT = { is_year = 1600 }
+		NOT = { has_country_flag = jxp_sengoku_honnoji_seen }
+		OR = {
+			MIL = 5
+			army_tradition = 40
+		}
+		OR = {
+			NOT = { stability = 1 }
+			war_exhaustion = 3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = "jxp_sengoku.4.a"
+		set_country_flag = jxp_sengoku_honnoji_seen
+		jxp_subtract_tenka_order_10_effect = yes
+		add_stability = -1
+		add_prestige = -10
+	}
+	option = {
+		name = "jxp_sengoku.4.b"
+		set_country_flag = jxp_sengoku_honnoji_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = -50
+	}
+}
+
+# Debug wrappers deliberately bypass natural MTTH triggers while preserving the
+# visible text and effects of the corresponding Sengoku flavor events.
+country_event = {
+	id = jxp_sengoku.9001
+	title = "jxp_sengoku.1.t"
+	desc = "jxp_sengoku.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_sengoku.1.a"
+		set_country_flag = jxp_sengoku_shadow_kyoto_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_sengoku.1.b"
+		set_country_flag = jxp_sengoku_shadow_kyoto_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.9002
+	title = "jxp_sengoku.2.t"
+	desc = "jxp_sengoku.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_sengoku.2.a"
+		set_country_flag = jxp_sengoku_kokujin_seen
+		add_mil_power = 50
+		add_country_modifier = {
+			name = jxp_sengoku_negotiations
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jxp_sengoku.2.b"
+		set_country_flag = jxp_sengoku_kokujin_seen
+		jxp_add_tenka_order_10_effect = yes
+		add_legitimacy = -5
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.9003
+	title = "jxp_sengoku.3.t"
+	desc = "jxp_sengoku.3.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_sengoku.3.a"
+		set_country_flag = jxp_sengoku_kyoto_invitation_seen
+		jxp_add_imperial_sanction_10_effect = yes
+		add_prestige = 10
+	}
+	option = {
+		name = "jxp_sengoku.3.b"
+		set_country_flag = jxp_sengoku_kyoto_invitation_seen
+		jxp_grant_japan_region_claims_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_sengoku.9004
+	title = "jxp_sengoku.4.t"
+	desc = "jxp_sengoku.4.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_sengoku.4.a"
+		set_country_flag = jxp_sengoku_honnoji_seen
+		jxp_subtract_tenka_order_10_effect = yes
+		add_stability = -1
+		add_prestige = -10
+	}
+	option = {
+		name = "jxp_sengoku.4.b"
+		set_country_flag = jxp_sengoku_honnoji_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = -50
+	}
+}

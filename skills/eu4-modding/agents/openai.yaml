@@ -1,0 +1,4 @@
+interface:
+  display_name: "EU4 Modding"
+  short_description: "Develop and validate Europa Universalis IV mods."
+  default_prompt: "Use $eu4-modding to create, extend, debug, or validate an Europa Universalis IV mod."

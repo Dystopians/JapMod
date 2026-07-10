@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+primary_culture = togoku
+religion = confucianism
+technology_group = chinese
+capital = 1028
+
+1444.11.11 = {
+	monarch = {
+		name = "Ieyasu"
+		dynasty = "Tokugawa"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}

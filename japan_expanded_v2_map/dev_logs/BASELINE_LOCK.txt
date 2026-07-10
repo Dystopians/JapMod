@@ -1,0 +1,37 @@
+JXP 88-PROVINCE MAP BASELINE LOCK
+================================
+
+Game: Europa Universalis IV 1.37.5.0 Inca (491d)
+Main mod generation baseline: Japan Expanded V2 / 日轮诸道 0.23.2
+Latest validated main mod: Japan Expanded V2 / 日轮诸道 0.25.0 (2026-07-10)
+Companion map version: 0.1.1-alpha
+Vanilla highest province ID: 4941
+Allocated IDs: 4942-4981
+Required max_provinces: 4982
+Target japan_region province count: 88
+Vanilla 1444 development baseline: tax 142, production 125, manpower 105 (total 372)
+Companion 1444 development target: tax 190, production 168, manpower 142 (total 500)
+Minimum province polygon: 22 pixels (the pinned vanilla global land-province floor)
+Cartographic island exaggeration: Iki, Oki, Awaji, and Sakishima only
+
+Compatibility contract:
+- Requires a new campaign.
+- Enable together with the main Japan Expanded V2 mod.
+- Every subsequent main-mod gameplay change must pass this companion's full
+  tools/validate_all.ps1 gate with main validation enabled.
+- The executable cross-mod contract is stored in
+  tools/jxp_map_validation/main_compatibility_contract.json and enforced by
+  validate_main_compatibility.py across 30 tags x 4 DLC states.
+- Incompatible with any other mod overriding provinces.bmp, heightmap.bmp,
+  terrain.bmp, rivers.bmp, world_normal.bmp, Japanese areas, Nippon
+  trade-node membership, or the same Japanese province histories.
+- The EU4 install directory is an input only and is never modified.
+- Full vanilla map overrides are hash-pinned in generated_manifest.json.
+- Runtime testing is intentionally deferred until the user explicitly approves
+  launching EU4.
+
+Baseline semantics:
+- The generation baseline records the main-mod state used while the companion
+  layout and integration contract were first frozen. It is not a version pin.
+- The latest validated version records the newest main-mod release that passed
+  its full release gate together with this companion's static validation.

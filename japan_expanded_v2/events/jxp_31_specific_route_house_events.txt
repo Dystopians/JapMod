@@ -1,0 +1,1158 @@
+namespace = jxp_specific_route_house
+
+country_event = {
+	id = jxp_specific_route_house.1
+	title = "jxp_specific_route_house.1.t"
+	desc = "jxp_specific_route_house.1.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_otm
+		OR = {
+			has_country_flag = jxp_path_kirishitan
+			tag = KJP
+		}
+		NOT = { has_country_flag = jxp_31_otm_kirishitan_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_kirishitan
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.1.a"
+		set_country_flag = jxp_31_otm_kirishitan_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_prestige = 5
+		add_country_modifier = { name = jxp_31_otm_funai_bishopric_court duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.1.b"
+		set_country_flag = jxp_31_otm_kirishitan_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_otm_bungo_retainer_compromise duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.2
+	title = "jxp_specific_route_house.2.t"
+	desc = "jxp_specific_route_house.2.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_mri
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_mri_open_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_open_trade
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.2.a"
+		set_country_flag = jxp_31_mri_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_31_mri_setouchi_red_seals duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.2.b"
+		set_country_flag = jxp_31_mri_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_mri_kokujin_sea_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.3
+	title = "jxp_specific_route_house.3.t"
+	desc = "jxp_specific_route_house.3.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ask
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_ask_imperial_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_imperial
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.3.a"
+		set_country_flag = jxp_31_ask_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_ask_imperial_restoration_letters duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.3.b"
+		set_country_flag = jxp_31_ask_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ask_hokoshu_court_guard duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.4
+	title = "jxp_specific_route_house.4.t"
+	desc = "jxp_specific_route_house.4.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_asa
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_asa_confucian_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_confucian
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.4.a"
+		set_country_flag = jxp_31_asa_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_asa_ichijodani_academies duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.4.b"
+		set_country_flag = jxp_31_asa_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_asa_echizen_house_rites duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.5
+	title = "jxp_specific_route_house.5.t"
+	desc = "jxp_specific_route_house.5.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_dte
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_dte_open_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 320
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_open_trade
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.5.a"
+		set_country_flag = jxp_31_dte_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_dte_keicho_embassy_routes duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.5.b"
+		set_country_flag = jxp_31_dte_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_dte_oshu_envoy_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.6
+	title = "jxp_specific_route_house.6.t"
+	desc = "jxp_specific_route_house.6.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_soo
+		OR = {
+			has_country_flag = jxp_path_wokou
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_31_soo_wokou_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_wokou
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.6.a"
+		set_country_flag = jxp_31_soo_wokou_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_31_soo_tsushima_channel_writs duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.6.b"
+		set_country_flag = jxp_31_soo_wokou_combo_seen
+		jxp_subtract_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_soo_wakan_sea_wardens duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.7
+	title = "jxp_specific_route_house.7.t"
+	desc = "jxp_specific_route_house.7.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_oda
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_oda_open_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_open_trade
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.7.a"
+		set_country_flag = jxp_31_oda_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_oda_azuchi_red_seal_markets duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.7.b"
+		set_country_flag = jxp_31_oda_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_oda_tenka_market_officers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.8
+	title = "jxp_specific_route_house.8.t"
+	desc = "jxp_specific_route_house.8.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tkg
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_tkg_sakoku_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_sakoku
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.8.a"
+		set_country_flag = jxp_31_tkg_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_tkg_fudai_closed_country duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.8.b"
+		set_country_flag = jxp_31_tkg_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_tkg_mikawa_hostage_order duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.9
+	title = "jxp_specific_route_house.9.t"
+	desc = "jxp_specific_route_house.9.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tkd
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_tkd_confucian_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_confucian
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.9.a"
+		set_country_flag = jxp_31_tkd_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_31_tkd_koshu_confucian_law duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.9.b"
+		set_country_flag = jxp_31_tkd_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_tkd_mountain_house_codes duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.10
+	title = "jxp_specific_route_house.10.t"
+	desc = "jxp_specific_route_house.10.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ues
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_ues_imperial_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_imperial
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.10.a"
+		set_country_flag = jxp_31_ues_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_ues_imperial_kanrei_letters duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.10.b"
+		set_country_flag = jxp_31_ues_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ues_echigo_justice_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.11
+	title = "jxp_specific_route_house.11.t"
+	desc = "jxp_specific_route_house.11.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_hjo
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_hjo_sakoku_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_sakoku
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.11.a"
+		set_country_flag = jxp_31_hjo_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_hjo_odawara_closed_cadasters duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.11.b"
+		set_country_flag = jxp_31_hjo_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_hjo_sogamae_domain_watch duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.12
+	title = "jxp_specific_route_house.12.t"
+	desc = "jxp_specific_route_house.12.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_smz
+		OR = {
+			has_country_flag = jxp_path_kaikyo
+			tag = SJP
+		}
+		NOT = { has_country_flag = jxp_31_smz_kaikyo_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_kaikyo
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.12.a"
+		set_country_flag = jxp_31_smz_kaikyo_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_31_smz_satsunan_halal_ports duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.12.b"
+		set_country_flag = jxp_31_smz_kaikyo_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_smz_satsuma_gunfounder_compact duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.13
+	title = "jxp_specific_route_house.13.t"
+	desc = "jxp_specific_route_house.13.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_csk
+		OR = {
+			has_country_flag = jxp_path_ikko
+			tag = IJP
+		}
+		NOT = { has_country_flag = jxp_31_csk_ikko_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_ikko
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.13.a"
+		set_country_flag = jxp_31_csk_ikko_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_31_csk_ichiryo_monto_muster duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.13.b"
+		set_country_flag = jxp_31_csk_ikko_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_csk_tosa_peasant_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.14
+	title = "jxp_specific_route_house.14.t"
+	desc = "jxp_specific_route_house.14.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ouc
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_ouc_open_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_open_trade
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.14.a"
+		set_country_flag = jxp_31_ouc_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_ouc_yamaguchi_sea_tribute duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.14.b"
+		set_country_flag = jxp_31_ouc_open_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_ouc_suofu_merchant_council duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.15
+	title = "jxp_specific_route_house.15.t"
+	desc = "jxp_specific_route_house.15.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_img
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_img_confucian_combo_seen }
+	}
+	mean_time_to_happen = {
+		months = 310
+		modifier = {
+			factor = 0.75
+			has_country_modifier = jxp_route_confucian
+		}
+	}
+	option = {
+		name = "jxp_specific_route_house.15.a"
+		set_country_flag = jxp_31_img_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_img_tokaido_confucian_codes duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.15.b"
+		set_country_flag = jxp_31_img_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_img_suruga_house_law duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.16
+	title = "jxp_specific_route_house.16.t"
+	desc = "jxp_specific_route_house.16.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ama
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_ama_sakoku_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.16.a"
+		set_country_flag = jxp_31_ama_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_ama_gassan_closed_mines duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.16.b"
+		set_country_flag = jxp_31_ama_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_ama_shingu_retainer_rolls duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.17
+	title = "jxp_specific_route_house.17.t"
+	desc = "jxp_specific_route_house.17.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_hsk
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_hsk_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.17.a"
+		set_country_flag = jxp_31_hsk_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_hsk_kanrei_restoration_cabinet duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.17.b"
+		set_country_flag = jxp_31_hsk_imperial_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_31_hsk_sakai_court_brokers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.18
+	title = "jxp_specific_route_house.18.t"
+	desc = "jxp_specific_route_house.18.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_htk
+		OR = {
+			has_country_flag = jxp_path_reformed
+			tag = RFJ
+		}
+		NOT = { has_country_flag = jxp_31_htk_reformed_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.18.a"
+		set_country_flag = jxp_31_htk_reformed_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_htk_wakae_synodic_oaths duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.18.b"
+		set_country_flag = jxp_31_htk_reformed_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_htk_kawachi_retainer_compact duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.19
+	title = "jxp_specific_route_house.19.t"
+	desc = "jxp_specific_route_house.19.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ike
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_ike_open_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.19.a"
+		set_country_flag = jxp_31_ike_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_ike_himeji_oceanic_stewards duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.19.b"
+		set_country_flag = jxp_31_ike_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ike_harima_castle_accounts duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.20
+	title = "jxp_specific_route_house.20.t"
+	desc = "jxp_specific_route_house.20.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_mae
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_mae_confucian_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.20.a"
+		set_country_flag = jxp_31_mae_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_mae_kaga_confucian_academies duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.20.b"
+		set_country_flag = jxp_31_mae_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_mae_million_koku_granaries duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.21
+	title = "jxp_specific_route_house.21.t"
+	desc = "jxp_specific_route_house.21.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_sba
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_sba_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.21.a"
+		set_country_flag = jxp_31_sba_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_sba_buei_imperial_offices duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.21.b"
+		set_country_flag = jxp_31_sba_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_sba_owari_house_guards duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.22
+	title = "jxp_specific_route_house.22.t"
+	desc = "jxp_specific_route_house.22.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ymn
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_ymn_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.22.a"
+		set_country_flag = jxp_31_ymn_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_ymn_roku_bun_ichi_rankings duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.22.b"
+		set_country_flag = jxp_31_ymn_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ymn_sanin_guard_houses duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.23
+	title = "jxp_specific_route_house.23.t"
+	desc = "jxp_specific_route_house.23.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_rfr
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_rfr_sakoku_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.23.a"
+		set_country_flag = jxp_31_rfr_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_rfr_mutsu_border_cordon duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.23.b"
+		set_country_flag = jxp_31_rfr_sakoku_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_31_rfr_nine_gates_horse_rolls duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.24
+	title = "jxp_specific_route_house.24.t"
+	desc = "jxp_specific_route_house.24.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ktb
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_ktb_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 300 }
+	option = {
+		name = "jxp_specific_route_house.24.a"
+		set_country_flag = jxp_31_ktb_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_ktb_ise_imperial_rites duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.24.b"
+		set_country_flag = jxp_31_ktb_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ktb_kitabatake_court_law duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.25
+	title = "jxp_specific_route_house.25.t"
+	desc = "jxp_specific_route_house.25.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_akm
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_akm_sakoku_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.25.a"
+		set_country_flag = jxp_31_akm_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_31_akm_harima_closed_roads duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.25.b"
+		set_country_flag = jxp_31_akm_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_akm_akasaka_retainer_codes duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.26
+	title = "jxp_specific_route_house.26.t"
+	desc = "jxp_specific_route_house.26.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_akt
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_akt_open_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.26.a"
+		set_country_flag = jxp_31_akt_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_akt_ezochi_trade_brokers duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.26.b"
+		set_country_flag = jxp_31_akt_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_akt_northern_watch_posts duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.27
+	title = "jxp_specific_route_house.27.t"
+	desc = "jxp_specific_route_house.27.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_cba
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_cba_sakoku_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.27.a"
+		set_country_flag = jxp_31_cba_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_31_cba_katori_closed_musters duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.27.b"
+		set_country_flag = jxp_31_cba_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_cba_shimosa_barrier_law duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.28
+	title = "jxp_specific_route_house.28.t"
+	desc = "jxp_specific_route_house.28.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_isk
+		has_country_flag = jxp_path_open_trade
+		NOT = { has_country_flag = jxp_31_isk_open_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.28.a"
+		set_country_flag = jxp_31_isk_open_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_31_isk_tango_open_wardens duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.28.b"
+		set_country_flag = jxp_31_isk_open_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_isk_amanohashidate_pilots duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.29
+	title = "jxp_specific_route_house.29.t"
+	desc = "jxp_specific_route_house.29.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ito
+		OR = {
+			has_country_flag = jxp_path_kirishitan
+			tag = KJP
+		}
+		NOT = { has_country_flag = jxp_31_ito_kirishitan_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.29.a"
+		set_country_flag = jxp_31_ito_kirishitan_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_31_ito_hyuga_seminary_castles duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.29.b"
+		set_country_flag = jxp_31_ito_kirishitan_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ito_hyuga_clan_chapels duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.30
+	title = "jxp_specific_route_house.30.t"
+	desc = "jxp_specific_route_house.30.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_kkc
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_kkc_confucian_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.30.a"
+		set_country_flag = jxp_31_kkc_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_kkc_aso_rite_schools duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.30.b"
+		set_country_flag = jxp_31_kkc_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_kkc_kikuchi_hill_codes duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.31
+	title = "jxp_specific_route_house.31.t"
+	desc = "jxp_specific_route_house.31.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_kno
+		OR = {
+			has_country_flag = jxp_path_wokou
+			tag = WAK
+		}
+		NOT = { has_country_flag = jxp_31_kno_wokou_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.31.a"
+		set_country_flag = jxp_31_kno_wokou_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_31_kno_setouchi_corsair_pilots duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.31.b"
+		set_country_flag = jxp_31_kno_wokou_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_kno_iyo_sea_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.32
+	title = "jxp_specific_route_house.32.t"
+	desc = "jxp_specific_route_house.32.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ogs
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_ogs_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.32.a"
+		set_country_flag = jxp_31_ogs_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_army_tradition = 5
+		add_country_modifier = { name = jxp_31_ogs_suwa_imperial_archers duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.32.b"
+		set_country_flag = jxp_31_ogs_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_ogs_shinano_horse_law duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.33
+	title = "jxp_specific_route_house.33.t"
+	desc = "jxp_specific_route_house.33.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_shn
+		OR = {
+			has_country_flag = jxp_path_kaikyo
+			tag = SJP
+		}
+		NOT = { has_country_flag = jxp_31_shn_kaikyo_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.33.a"
+		set_country_flag = jxp_31_shn_kaikyo_combo_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_dip_power = 25
+		add_country_modifier = { name = jxp_31_shn_dazaifu_maritime_brokers duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.33.b"
+		set_country_flag = jxp_31_shn_kaikyo_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_shn_kyushu_gateway_guards duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.34
+	title = "jxp_specific_route_house.34.t"
+	desc = "jxp_specific_route_house.34.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_stk
+		OR = {
+			has_country_flag = jxp_path_imperial
+			tag = EJP
+		}
+		NOT = { has_country_flag = jxp_31_stk_imperial_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.34.a"
+		set_country_flag = jxp_31_stk_imperial_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_31_stk_hitachi_imperial_musters duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.34.b"
+		set_country_flag = jxp_31_stk_imperial_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_stk_eastern_warrior_rolls duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.35
+	title = "jxp_specific_route_house.35.t"
+	desc = "jxp_specific_route_house.35.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tki
+		OR = {
+			has_country_flag = jxp_path_confucian
+			tag = CJP
+		}
+		NOT = { has_country_flag = jxp_31_tki_confucian_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.35.a"
+		set_country_flag = jxp_31_tki_confucian_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_tki_mino_confucian_river_offices duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.35.b"
+		set_country_flag = jxp_31_tki_confucian_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_31_tki_toki_house_lawbooks duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.36
+	title = "jxp_specific_route_house.36.t"
+	desc = "jxp_specific_route_house.36.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_utn
+		has_country_flag = jxp_path_sakoku
+		NOT = { has_country_flag = jxp_31_utn_sakoku_combo_seen }
+	}
+	mean_time_to_happen = { months = 320 }
+	option = {
+		name = "jxp_specific_route_house.36.a"
+		set_country_flag = jxp_31_utn_sakoku_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_utn_nikko_closed_barriers duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.36.b"
+		set_country_flag = jxp_31_utn_sakoku_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_utn_shimotsuke_shrine_guard duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_specific_route_house.37
+	title = "jxp_specific_route_house.37.t"
+	desc = "jxp_specific_route_house.37.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tti
+		OR = {
+			has_country_flag = jxp_path_ikko
+			tag = IJP
+		}
+		NOT = { has_country_flag = jxp_31_tti_ikko_combo_seen }
+	}
+	mean_time_to_happen = { months = 310 }
+	option = {
+		name = "jxp_specific_route_house.37.a"
+		set_country_flag = jxp_31_tti_ikko_combo_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_adm_power = 25
+		add_country_modifier = { name = jxp_31_tti_yamato_monto_compact duration = 3650 }
+	}
+	option = {
+		name = "jxp_specific_route_house.37.b"
+		set_country_flag = jxp_31_tti_ikko_combo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_31_tti_nara_temple_mediation duration = 3650 }
+	}
+}

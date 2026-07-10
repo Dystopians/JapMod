@@ -1,0 +1,6 @@
+jxp_unlock_hakko_ichiu_reform_effect = {
+	custom_tooltip = jxp_hakko_ichiu_reform_unlocked_tt
+	hidden_effect = {
+		set_country_flag = jxp_unlocked_hakko_ichiu_reform
+	}
+}

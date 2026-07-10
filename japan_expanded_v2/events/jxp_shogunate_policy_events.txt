@@ -1,0 +1,247 @@
+namespace = jxp_shogunate_policy
+
+country_event = {
+	id = jxp_shogunate_policy.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_reform = shogunate
+		has_country_modifier = overlord_expel_ronin
+		NOT = { has_country_flag = jxp_synced_shogunate_expel_ronin }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_shogunate_expel_ronin
+		jxp_apply_shogunate_expel_ronin_effect = yes
+		country_event = { id = jxp_shogunate_policy.101 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.2
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_reform = shogunate
+		has_country_modifier = overlord_sankin_kotai
+		NOT = { has_country_flag = jxp_synced_shogunate_sankin_kotai }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_shogunate_sankin_kotai
+		jxp_apply_shogunate_sankin_kotai_effect = yes
+		country_event = { id = jxp_shogunate_policy.102 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.3
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_reform = shogunate
+		has_country_modifier = overlord_sword_hunt
+		NOT = { has_country_flag = jxp_synced_shogunate_sword_hunt }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_shogunate_sword_hunt
+		jxp_apply_shogunate_sword_hunt_effect = yes
+		country_event = { id = jxp_shogunate_policy.103 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.11
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_subject_of_type = daimyo_vassal
+		has_country_modifier = subject_expel_ronin
+		NOT = { has_country_flag = jxp_synced_subject_expel_ronin }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_subject_expel_ronin
+		jxp_apply_daimyo_expel_ronin_effect = yes
+		country_event = { id = jxp_shogunate_policy.111 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.12
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_subject_of_type = daimyo_vassal
+		has_country_modifier = subject_sankin_kotai
+		NOT = { has_country_flag = jxp_synced_subject_sankin_kotai }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_subject_sankin_kotai
+		jxp_apply_daimyo_sankin_kotai_effect = yes
+		country_event = { id = jxp_shogunate_policy.112 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.13
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_subject_of_type = daimyo_vassal
+		has_country_modifier = subject_sword_hunt
+		NOT = { has_country_flag = jxp_synced_subject_sword_hunt }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_synced_subject_sword_hunt
+		jxp_apply_daimyo_sword_hunt_effect = yes
+		country_event = { id = jxp_shogunate_policy.113 days = 3650 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.101
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_shogunate_expel_ronin }
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.102
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_shogunate_sankin_kotai }
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.103
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_shogunate_sword_hunt }
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.111
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_subject_expel_ronin }
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.112
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_subject_sankin_kotai }
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_shogunate_policy.113
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { clr_country_flag = jxp_synced_subject_sword_hunt }
+
+	option = {
+		name = "OK"
+	}
+}

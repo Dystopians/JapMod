@@ -1,0 +1,7 @@
+KJP = "countries/KJP - Kirishitan Japan.txt"
+CJP = "countries/CJP - Confucian Wa.txt"
+EJP = "countries/EJP - Yamato Court.txt"
+RFJ = "countries/RFJ - Reformed Japan.txt"
+SJP = "countries/SJP - Sultanate of Wa.txt"
+IJP = "countries/IJP - Ikko Commonwealth.txt"
+WAK = "countries/WAK - Wokou Confederacy.txt"

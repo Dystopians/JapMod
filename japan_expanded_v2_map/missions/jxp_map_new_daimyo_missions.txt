@@ -1,0 +1,266 @@
+jxp_map_warrior_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = { tag = RKK tag = ANK tag = MOG tag = ASN tag = OSK tag = SMA tag = MKM tag = STM tag = STO }
+	}
+	has_country_shield = yes
+
+	jxp_map_mission_warrior_muster = {
+		icon = jxp_map_mission_warrior_muster
+		position = 1
+		required_missions = { }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			army_size_percentage = 0.75
+			mil_power = 50
+		}
+		effect = {
+			jxp_map_initialize_effect = yes
+			add_mil_power = 25
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = { name = jxp_map_warrior_legacy duration = 3650 }
+		}
+	}
+
+	jxp_map_mission_warrior_castle_roads = {
+		icon = jxp_map_mission_warrior_castle_roads
+		position = 3
+		required_missions = { jxp_map_mission_warrior_muster }
+		trigger = { num_of_cities = 3 stability = 0 }
+		effect = {
+			capital_scope = {
+				add_base_manpower = 1
+				add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 }
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_warrior_provincial_banner = {
+		icon = jxp_map_mission_warrior_provincial_banner
+		position = 5
+		required_missions = { jxp_map_mission_warrior_castle_roads }
+		trigger = { num_of_cities = 6 prestige = 15 army_tradition = 15 }
+		effect = {
+			add_army_tradition = 5
+			add_prestige = 10
+			add_country_modifier = { name = jxp_map_warrior_legacy duration = 7300 }
+		}
+	}
+}
+
+jxp_map_court_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = { tag = KYO tag = WKT tag = NHT tag = AZI tag = MYO }
+	}
+	has_country_shield = yes
+
+	jxp_map_mission_court_genealogies = {
+		icon = jxp_map_mission_court_genealogies
+		position = 1
+		required_missions = { }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			OR = { legitimacy = 60 prestige = 10 }
+		}
+		effect = {
+			jxp_map_initialize_effect = yes
+			add_prestige = 5
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = { name = jxp_map_court_legacy duration = 3650 }
+		}
+	}
+
+	jxp_map_mission_court_capital_petitions = {
+		icon = jxp_map_mission_court_capital_petitions
+		position = 3
+		required_missions = { jxp_map_mission_court_genealogies }
+		trigger = { capital_scope = { development = 7 } dip_power = 50 is_at_war = no }
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 }
+			}
+			add_dip_power = 25
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_court_old_province_claim = {
+		icon = jxp_map_mission_court_old_province_claim
+		position = 5
+		required_missions = { jxp_map_mission_court_capital_petitions }
+		trigger = { num_of_cities = 5 stability = 1 prestige = 20 }
+		effect = {
+			add_legitimacy = 10
+			add_prestige = 10
+			add_country_modifier = { name = jxp_map_court_legacy duration = 7300 }
+		}
+	}
+}
+
+jxp_map_sea_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = { tag = HNM tag = ARI tag = MTU tag = RZJ tag = MTS tag = KRD tag = NBS }
+	}
+	has_country_shield = yes
+
+	jxp_map_mission_sea_port_registers = {
+		icon = jxp_map_mission_sea_port_registers
+		position = 1
+		required_missions = { }
+		trigger = { mission_completed = jxp_mission_daimyo_domain_accounts num_of_ports = 1 dip_power = 50 }
+		effect = {
+			jxp_map_initialize_effect = yes
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_province_modifier = { name = jxp_map_port_registers duration = 3650 }
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			add_country_modifier = { name = jxp_map_sea_legacy duration = 3650 }
+		}
+	}
+
+	jxp_map_mission_sea_shipwright_leagues = {
+		icon = jxp_map_mission_sea_shipwright_leagues
+		position = 3
+		required_missions = { jxp_map_mission_sea_port_registers }
+		trigger = { num_of_ports = 2 navy_size_percentage = 0.60 dip_tech = 4 }
+		effect = {
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_base_production = 1
+				add_province_modifier = { name = jxp_map_port_registers duration = 3650 }
+			}
+			add_navy_tradition = 5
+		}
+	}
+
+	jxp_map_mission_sea_inner_routes = {
+		icon = jxp_map_mission_sea_inner_routes
+		position = 5
+		required_missions = { jxp_map_mission_sea_shipwright_leagues }
+		trigger = { num_of_ports = 3 trade_efficiency = 0.10 navy_tradition = 15 }
+		effect = {
+			jxp_add_oceanic_opening_5_effect = yes
+			add_mercantilism = 2
+			add_country_modifier = { name = jxp_map_sea_legacy duration = 7300 }
+		}
+	}
+}
+
+jxp_map_frontier_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = { tag = DHO tag = KMP tag = SGR tag = TGR }
+	}
+	has_country_shield = yes
+
+	jxp_map_mission_frontier_passes = {
+		icon = jxp_map_mission_frontier_passes
+		position = 1
+		required_missions = { }
+		trigger = { mission_completed = jxp_mission_daimyo_domain_accounts num_of_cities = 2 mil_power = 50 }
+		effect = {
+			jxp_map_initialize_effect = yes
+			capital_scope = { add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = { name = jxp_map_frontier_legacy duration = 3650 }
+		}
+	}
+
+	jxp_map_mission_frontier_new_fields = {
+		icon = jxp_map_mission_frontier_new_fields
+		position = 3
+		required_missions = { jxp_map_mission_frontier_passes }
+		trigger = { capital_scope = { development = 6 } stability = 0 adm_power = 50 }
+		effect = {
+			capital_scope = {
+				add_base_manpower = 1
+				add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 }
+			}
+			add_adm_power = 25
+		}
+	}
+
+	jxp_map_mission_frontier_border_oaths = {
+		icon = jxp_map_mission_frontier_border_oaths
+		position = 5
+		required_missions = { jxp_map_mission_frontier_new_fields }
+		trigger = { num_of_cities = 5 army_size_percentage = 0.80 stability = 1 }
+		effect = {
+			jxp_add_tenka_order_5_effect = yes
+			add_mil_power = 50
+			add_country_modifier = { name = jxp_map_frontier_legacy duration = 7300 }
+		}
+	}
+}
+
+jxp_map_temple_market_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = { tag = TGS tag = HNG tag = UKT tag = HCS tag = YMC }
+	}
+	has_country_shield = yes
+
+	jxp_map_mission_temple_ledgers = {
+		icon = jxp_map_mission_temple_ledgers
+		position = 1
+		required_missions = { }
+		trigger = { mission_completed = jxp_mission_daimyo_domain_accounts stability = 0 adm_power = 50 }
+		effect = {
+			jxp_map_initialize_effect = yes
+			add_adm_power = 25
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = { name = jxp_map_temple_legacy duration = 3650 }
+		}
+	}
+
+	jxp_map_mission_temple_market_towns = {
+		icon = jxp_map_mission_temple_market_towns
+		position = 3
+		required_missions = { jxp_map_mission_temple_ledgers }
+		trigger = { capital_scope = { development = 7 } treasury = 50 }
+		effect = {
+			capital_scope = {
+				add_base_production = 1
+				add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 }
+			}
+			add_treasury = 25
+		}
+	}
+
+	jxp_map_mission_temple_public_law = {
+		icon = jxp_map_mission_temple_public_law
+		position = 5
+		required_missions = { jxp_map_mission_temple_market_towns }
+		trigger = { num_of_cities = 5 prestige = 15 stability = 1 }
+		effect = {
+			jxp_add_imperial_sanction_5_effect = yes
+			add_prestige = 10
+			add_country_modifier = { name = jxp_map_temple_legacy duration = 7300 }
+		}
+	}
+}

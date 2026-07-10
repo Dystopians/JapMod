@@ -1,0 +1,815 @@
+namespace = jxp_preunification_memory
+
+country_event = {
+	id = jxp_preunification_memory.1
+	title = "jxp_preunification_memory.1.t"
+	desc = "jxp_preunification_memory.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_oda_tenka_fubu NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_oda_tenka_fubu_edicts }
+	option = {
+		name = "jxp_preunification_memory.1.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_oda_azuchi_edicts_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.1.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_oda_market_law_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.2
+	title = "jxp_preunification_memory.2.t"
+	desc = "jxp_preunification_memory.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_tkg_fudai_registers NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_tkg_mikawa_fudai_registers }
+	option = {
+		name = "jxp_preunification_memory.2.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_tkg_fudai_cadasters_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.2.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_tkg_road_oaths_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.3
+	title = "jxp_preunification_memory.3.t"
+	desc = "jxp_preunification_memory.3.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_tkd_hatagashira NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_tkd_koshu_hatagashira }
+	option = {
+		name = "jxp_preunification_memory.3.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_tkd_koshu_muster_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.3.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_tkd_mountain_supply_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.4
+	title = "jxp_preunification_memory.4.t"
+	desc = "jxp_preunification_memory.4.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ues_kanrei_petition NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_ues_kanto_kanrei_petition }
+	option = {
+		name = "jxp_preunification_memory.4.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ues_righteous_petitions_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.4.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ues_kanrei_arbiter_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.5
+	title = "jxp_preunification_memory.5.t"
+	desc = "jxp_preunification_memory.5.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_hjo_sogamae NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_hjo_odawara_sogamae }
+	option = {
+		name = "jxp_preunification_memory.5.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_hjo_odawara_cadasters_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.5.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_hjo_sogamae_barriers_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.6
+	title = "jxp_preunification_memory.6.t"
+	desc = "jxp_preunification_memory.6.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_mri_suigun NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_mri_setouchi_suigun }
+	option = {
+		name = "jxp_preunification_memory.6.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_mri_suigun_admiralty_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.6.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_mri_setouchi_toll_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.7
+	title = "jxp_preunification_memory.7.t"
+	desc = "jxp_preunification_memory.7.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_smz_gunnery NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_smz_satsuma_gunnery }
+	option = {
+		name = "jxp_preunification_memory.7.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_smz_satsuma_foundries_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.7.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_smz_ichimon_fire_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.8
+	title = "jxp_preunification_memory.8.t"
+	desc = "jxp_preunification_memory.8.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_otm_foreign_quarter NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_otm_funai_foreign_quarter }
+	option = {
+		name = "jxp_preunification_memory.8.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_otm_funai_quarter_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.8.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_otm_foreign_gunwrights_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.9
+	title = "jxp_preunification_memory.9.t"
+	desc = "jxp_preunification_memory.9.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_dte_kibamusha NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_dte_oshu_kibamusha }
+	option = {
+		name = "jxp_preunification_memory.9.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_dte_oshu_cavalry_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.9.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_dte_distant_letters_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.10
+	title = "jxp_preunification_memory.10.t"
+	desc = "jxp_preunification_memory.10.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ask_hokoshu NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_ask_reform_hokoshu }
+	option = {
+		name = "jxp_preunification_memory.10.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ask_hokoshu_order_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.10.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ask_kuban_arbitration_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.11
+	title = "jxp_preunification_memory.11.t"
+	desc = "jxp_preunification_memory.11.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_csk_ichiryo_gusoku NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_csk_tosa_ichiryo_gusoku }
+	option = {
+		name = "jxp_preunification_memory.11.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_csk_ichiryo_rolls_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.11.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_csk_urado_supply_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.12
+	title = "jxp_preunification_memory.12.t"
+	desc = "jxp_preunification_memory.12.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ouc_kanhe_trade NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_ouc_yamaguchi_kanhe_trade }
+	option = {
+		name = "jxp_preunification_memory.12.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_ouc_kanhe_bureau_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.12.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ouc_yamaguchi_court_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.13
+	title = "jxp_preunification_memory.13.t"
+	desc = "jxp_preunification_memory.13.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_img_lawbooks NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_img_tokaido_lawbooks }
+	option = {
+		name = "jxp_preunification_memory.13.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_img_kana_code_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.13.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_img_tokaido_arbitration_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.14
+	title = "jxp_preunification_memory.14.t"
+	desc = "jxp_preunification_memory.14.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_soo_brokers NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_15_soo_tsushima_brokers }
+	option = {
+		name = "jxp_preunification_memory.14.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_soo_wakan_office_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.14.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_soo_channel_protocols_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.15
+	title = "jxp_preunification_memory.15.t"
+	desc = "jxp_preunification_memory.15.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_asa_ichijodani_council NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_asa_ichijodani_council }
+	option = {
+		name = "jxp_preunification_memory.15.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_asa_ichijodani_council_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.15.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_asa_echizen_paper_office_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.16
+	title = "jxp_preunification_memory.16.t"
+	desc = "jxp_preunification_memory.16.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ama_gassan_toda NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_ama_gassan_toda_registers }
+	option = {
+		name = "jxp_preunification_memory.16.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ama_mountain_castle_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.16.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ama_izumo_mine_registers_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.17
+	title = "jxp_preunification_memory.17.t"
+	desc = "jxp_preunification_memory.17.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_hsk_sakai_council NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_hsk_sakai_kanrei_council }
+	option = {
+		name = "jxp_preunification_memory.17.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_hsk_sakai_council_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.17.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_hsk_merchant_arbitration_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.18
+	title = "jxp_preunification_memory.18.t"
+	desc = "jxp_preunification_memory.18.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ktb_ise_petition NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_ktb_ise_court_petition }
+	option = {
+		name = "jxp_preunification_memory.18.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ktb_ise_shrine_court_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.18.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_ktb_kuki_pilots_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.19
+	title = "jxp_preunification_memory.19.t"
+	desc = "jxp_preunification_memory.19.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_akt_ezochi_brokers NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_akt_ezochi_trade_brokers }
+	option = {
+		name = "jxp_preunification_memory.19.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_akt_ezochi_trade_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.19.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_akt_northern_wardens_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.20
+	title = "jxp_preunification_memory.20.t"
+	desc = "jxp_preunification_memory.20.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_rfr_mutsu_gates NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_rfr_mutsu_nine_gates }
+	option = {
+		name = "jxp_preunification_memory.20.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_rfr_mutsu_gate_wardens_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.20.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_rfr_morioka_granary_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.21
+	title = "jxp_preunification_memory.21.t"
+	desc = "jxp_preunification_memory.21.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_htk_wakae_oaths NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_htk_wakae_retainer_oaths }
+	option = {
+		name = "jxp_preunification_memory.21.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_htk_wakae_retainer_oaths_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.21.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_htk_saika_teppo_contracts_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.22
+	title = "jxp_preunification_memory.22.t"
+	desc = "jxp_preunification_memory.22.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ike_himeji_accounts NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_ike_himeji_accounts }
+	option = {
+		name = "jxp_preunification_memory.22.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ike_himeji_accounts_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.22.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_ike_setouchi_ledgers_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.23
+	title = "jxp_preunification_memory.23.t"
+	desc = "jxp_preunification_memory.23.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_mae_kanazawa_patronage NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_mae_kanazawa_patronage }
+	option = {
+		name = "jxp_preunification_memory.23.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_mae_kanazawa_storehouses_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.23.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_mae_tea_noh_patronage_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.24
+	title = "jxp_preunification_memory.24.t"
+	desc = "jxp_preunification_memory.24.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_sba_buei_restoration NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_sba_buei_restoration }
+	option = {
+		name = "jxp_preunification_memory.24.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_sba_buei_military_office_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.24.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_sba_hokuriku_roads_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.25
+	title = "jxp_preunification_memory.25.t"
+	desc = "jxp_preunification_memory.25.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ymn_sixth_share NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_ymn_sixth_share_registers }
+	option = {
+		name = "jxp_preunification_memory.25.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ymn_sixth_share_registers_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.25.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ymn_western_army_compacts_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.26
+	title = "jxp_preunification_memory.26.t"
+	desc = "jxp_preunification_memory.26.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_akm_banshu_castles NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_akm_banshu_castle_chain }
+	option = {
+		name = "jxp_preunification_memory.26.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_akm_banshu_castle_roads_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.26.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_akm_red_pine_oaths_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.27
+	title = "jxp_preunification_memory.27.t"
+	desc = "jxp_preunification_memory.27.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_kkc_aso_rites NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_kkc_aso_fire_rites }
+	option = {
+		name = "jxp_preunification_memory.27.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_kkc_aso_fire_rites_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.27.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_kkc_kikuchi_scrolls_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.28
+	title = "jxp_preunification_memory.28.t"
+	desc = "jxp_preunification_memory.28.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_stk_kashima_muster NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_stk_kashima_muster }
+	option = {
+		name = "jxp_preunification_memory.28.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_stk_kashima_muster_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.28.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_stk_hitachi_oaths_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.29
+	title = "jxp_preunification_memory.29.t"
+	desc = "jxp_preunification_memory.29.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_tki_mino_riverworks NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_tki_mino_river_works }
+	option = {
+		name = "jxp_preunification_memory.29.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_tki_mino_riverworks_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.29.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_tki_toki_paper_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.30
+	title = "jxp_preunification_memory.30.t"
+	desc = "jxp_preunification_memory.30.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_utn_nikko_barrier NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_19_utn_nikko_barrier_guard }
+	option = {
+		name = "jxp_preunification_memory.30.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_utn_nikko_barrier_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.30.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_utn_shimotsuke_muster_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.31
+	title = "jxp_preunification_memory.31.t"
+	desc = "jxp_preunification_memory.31.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_shn_dazaifu_brokers NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_shn_dazaifu_brokers }
+	option = {
+		name = "jxp_preunification_memory.31.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_shn_dazaifu_brokers_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.31.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_shn_kyushu_tribute_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.32
+	title = "jxp_preunification_memory.32.t"
+	desc = "jxp_preunification_memory.32.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ogs_suwa_horse NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_ogs_suwa_horse_masters }
+	option = {
+		name = "jxp_preunification_memory.32.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ogs_suwa_horse_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.32.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ogs_pass_wardens_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.33
+	title = "jxp_preunification_memory.33.t"
+	desc = "jxp_preunification_memory.33.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_cba_katori_muster NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_cba_katori_muster }
+	option = {
+		name = "jxp_preunification_memory.33.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_cba_katori_muster_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.33.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_cba_shimosa_court_routes_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.34
+	title = "jxp_preunification_memory.34.t"
+	desc = "jxp_preunification_memory.34.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_isk_tango_ports NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_isk_tango_port_wardens }
+	option = {
+		name = "jxp_preunification_memory.34.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_isk_tango_port_wardens_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.34.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_isk_shugo_house_law_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.35
+	title = "jxp_preunification_memory.35.t"
+	desc = "jxp_preunification_memory.35.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_ito_hyuga_forts NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_ito_hyuga_fort_network }
+	option = {
+		name = "jxp_preunification_memory.35.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_ito_hyuga_fort_network_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.35.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_ito_shrine_temple_compacts_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.36
+	title = "jxp_preunification_memory.36.t"
+	desc = "jxp_preunification_memory.36.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_kno_inland_pilots NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_kno_inland_sea_pilots }
+	option = {
+		name = "jxp_preunification_memory.36.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_kno_setouchi_pilots_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.36.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_43_kno_iyo_port_law_memory duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_preunification_memory.37
+	title = "jxp_preunification_memory.37.t"
+	desc = "jxp_preunification_memory.37.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_43_selected_tti_yamato_temple NOT = { has_country_flag = jxp_43_preunification_memory_integrated } }
+	immediate = { remove_country_modifier = jxp_20_tti_yamato_temple_compact }
+	option = {
+		name = "jxp_preunification_memory.37.a"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_43_tti_yamato_temple_compact_memory duration = -1 }
+	}
+	option = {
+		name = "jxp_preunification_memory.37.b"
+		set_country_flag = jxp_43_preunification_memory_integrated
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_43_tti_kofukuji_castle_towns_memory duration = -1 }
+	}
+}

@@ -1,0 +1,69 @@
+jxp_daimyo_legacy_oda = {
+	infantry_power = 0.05
+	idea_cost = -0.03
+}
+
+jxp_daimyo_legacy_tkg = {
+	global_unrest = -1
+	legitimacy = 0.5
+}
+
+jxp_daimyo_legacy_tkd = {
+	cavalry_power = 0.10
+	land_morale = 0.03
+}
+
+jxp_daimyo_legacy_ues = {
+	land_morale = 0.05
+	prestige = 0.5
+}
+
+jxp_daimyo_legacy_hjo = {
+	defensiveness = 0.10
+	fort_maintenance_modifier = -0.05
+}
+
+jxp_daimyo_legacy_mri = {
+	naval_morale = 0.05
+	global_ship_trade_power = 0.10
+}
+
+jxp_daimyo_legacy_smz = {
+	infantry_power = 0.05
+	fire_damage = 0.03
+}
+
+jxp_daimyo_legacy_otm = {
+	global_trade_power = 0.05
+	technology_cost = -0.03
+}
+
+jxp_daimyo_legacy_dte = {
+	cavalry_power = 0.05
+	global_manpower_modifier = 0.10
+}
+
+jxp_daimyo_legacy_ask = {
+	diplomatic_reputation = 1
+	legitimacy = 0.5
+}
+
+jxp_daimyo_legacy_csk = {
+	manpower_recovery_speed = 0.10
+	land_attrition = -0.10
+}
+
+jxp_daimyo_legacy_ouc = {
+	trade_efficiency = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_daimyo_legacy_img = {
+	global_tax_modifier = 0.08
+	production_efficiency = 0.05
+}
+
+jxp_daimyo_legacy_soo = {
+	global_ship_trade_power = 0.10
+	diplomatic_reputation = 1
+}

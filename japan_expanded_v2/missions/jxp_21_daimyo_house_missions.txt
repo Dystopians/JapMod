@@ -1,0 +1,782 @@
+jxp_daimyo_warrior_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = ODA
+			tag = TKG
+			tag = TKD
+			tag = UES
+			tag = HJO
+			tag = CSK
+			tag = STK
+			tag = CBA
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_house_warrior_muster = {
+		icon = mission_assemble_an_army
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			army_size_percentage = 0.75
+			mil_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_mil_power = 35
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_warrior_muster_rolls
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { has_country_flag = jxp_25_warrior_agenda_seen } }
+				country_event = { id = jxp_daimyo_agenda.1 }
+			}
+		}
+	}
+
+	jxp_mission_house_warrior_war_council = {
+		icon = mission_japanese_samurai
+		position = 3
+		required_missions = { jxp_mission_house_warrior_muster jxp_mission_daimyo_market_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_shrine_village_compact
+			has_country_flag = jxp_25_warrior_agenda_seen
+			prestige = 10
+			legitimacy = 60
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_army_tradition = 5
+			if = {
+				limit = { has_country_flag = jxp_24_warrior_agenda_rolls }
+				jxp_add_tenka_order_5_effect = yes
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_warrior_agenda_captains }
+				add_mil_power = 40
+			}
+			add_country_modifier = {
+				name = jxp_24_warrior_war_council
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_house_warrior_castle_roads = {
+		icon = mission_japanese_fort
+		position = 5
+		required_missions = { jxp_mission_house_warrior_war_council }
+		trigger = {
+			mission_completed = jxp_mission_house_warrior_muster
+			mission_completed = jxp_mission_daimyo_castle_town
+			num_of_cities = 4
+			stability = 0
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_country_modifier = {
+				name = jxp_21_warrior_castle_roads
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_warrior_firearm_drill = {
+		icon = mission_cannons_firing
+		position = 7
+		required_missions = { jxp_mission_house_warrior_castle_roads jxp_mission_daimyo_artisan_guilds }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			mil_tech = 7
+			army_tradition = 15
+			army_size_percentage = 0.8
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_mil_power = 50
+			add_country_modifier = {
+				name = jxp_24_warrior_firearm_drill
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_warrior_commanders_oath = {
+		icon = mission_chinese_general_riding
+		position = 9
+		required_missions = { jxp_mission_house_warrior_firearm_drill }
+		trigger = {
+			num_of_cities = 7
+			army_size_percentage = 0.9
+			legitimacy = 70
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = jxp_24_warrior_commanders_oath
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_warrior_banner_legacy = {
+		icon = mission_japanese_samurai
+		position = 11
+		required_missions = { jxp_mission_house_warrior_commanders_oath jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			mission_completed = jxp_mission_house_warrior_castle_roads
+			num_of_cities = 9
+			army_tradition = 30
+			prestige = 20
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = jxp_21_warrior_banner_legacy
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+	}
+}
+
+jxp_daimyo_court_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = ASK
+			tag = HSK
+			tag = HTK
+			tag = SBA
+			tag = YMN
+			tag = KTB
+			tag = TTI
+			tag = AKM
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_house_court_genealogies = {
+		icon = mission_monarch_in_throne_room
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			OR = {
+				prestige = 5
+				legitimacy = 60
+			}
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_court_genealogies
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { has_country_flag = jxp_25_court_agenda_seen } }
+				country_event = { id = jxp_daimyo_agenda.2 }
+			}
+		}
+	}
+
+	jxp_mission_house_court_rank_and_office = {
+		icon = mission_diplomatic_relation
+		position = 3
+		required_missions = { jxp_mission_house_court_genealogies jxp_mission_daimyo_market_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_shrine_village_compact
+			has_country_flag = jxp_25_court_agenda_seen
+			prestige = 15
+			dip_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_dip_power = 35
+			if = {
+				limit = { has_country_flag = jxp_24_court_agenda_ranks }
+				jxp_add_imperial_sanction_5_effect = yes
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_court_agenda_stewards }
+				jxp_add_tenka_order_5_effect = yes
+			}
+			add_country_modifier = {
+				name = jxp_24_court_rank_and_office
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_house_court_petitions = {
+		icon = mission_to_japan
+		position = 5
+		required_missions = { jxp_mission_house_court_rank_and_office }
+		trigger = {
+			mission_completed = jxp_mission_house_court_genealogies
+			mission_completed = jxp_mission_daimyo_castle_town
+			is_at_war = no
+			dip_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_dip_power = 35
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_court_petitions
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_court_mediator_network = {
+		icon = mission_diplomatic_relation
+		position = 7
+		required_missions = { jxp_mission_house_court_petitions jxp_mission_daimyo_artisan_guilds }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_allies = 2
+			prestige = 20
+			is_at_war = no
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_prestige = 10
+			add_country_modifier = {
+				name = jxp_24_court_mediator_network
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_court_kinri_escort = {
+		icon = mission_to_japan
+		position = 9
+		required_missions = { jxp_mission_house_court_mediator_network }
+		trigger = {
+			num_of_cities = 7
+			legitimacy = 75
+			OR = {
+				owns = 1020
+				jxp_imperial_sanction_at_least_30 = yes
+			}
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = jxp_24_court_kinri_escort
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_court_kanrei_memory = {
+		icon = mission_monarch_in_throne_room
+		position = 11
+		required_missions = { jxp_mission_house_court_kinri_escort jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			mission_completed = jxp_mission_house_court_petitions
+			num_of_cities = 9
+			stability = 1
+			jxp_imperial_sanction_at_least_30 = yes
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = jxp_21_court_kanrei_memory
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+	}
+}
+
+jxp_daimyo_sea_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = MRI
+			tag = SMZ
+			tag = OTM
+			tag = OUC
+			tag = SOO
+			tag = SHN
+			tag = ISK
+			tag = KNO
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_house_sea_port_registers = {
+		icon = mission_trade_with_japan
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_sakai_hakata_merchants
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			num_of_ports = 1
+			dip_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_sea_port_registers
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { has_country_flag = jxp_25_maritime_agenda_seen } }
+				country_event = { id = jxp_daimyo_agenda.3 }
+			}
+		}
+	}
+
+	jxp_mission_house_sea_harbor_council = {
+		icon = mission_asian_trader
+		position = 3
+		required_missions = { jxp_mission_house_sea_port_registers jxp_mission_daimyo_market_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_shrine_village_compact
+			has_country_flag = jxp_25_maritime_agenda_seen
+			num_of_ports = 1
+			treasury = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_dip_power = 35
+			if = {
+				limit = { has_country_flag = jxp_24_maritime_agenda_merchants }
+				jxp_add_oceanic_opening_5_effect = yes
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_maritime_agenda_ship_rolls }
+				jxp_add_tenka_order_5_effect = yes
+			}
+			add_country_modifier = {
+				name = jxp_24_sea_harbor_council
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_house_sea_shipwrights = {
+		icon = mission_galleys_in_port
+		position = 5
+		required_missions = { jxp_mission_house_sea_harbor_council }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_tanegashima_rumors
+			mission_completed = jxp_mission_house_sea_port_registers
+			mission_completed = jxp_mission_daimyo_castle_town
+			num_of_ports = 2
+			dip_tech = 4
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_navy_tradition = 5
+			add_country_modifier = {
+				name = jxp_21_sea_shipwrights
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_sea_atakebune = {
+		icon = jap_deploy_atakebune
+		position = 7
+		required_missions = { jxp_mission_house_sea_shipwrights jxp_mission_daimyo_artisan_guilds }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_ports = 3
+			navy_size_percentage = 0.8
+			dip_tech = 7
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_24_sea_atakebune
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_sea_tide_brokers = {
+		icon = mission_market_place_with_asian_traders
+		position = 9
+		required_missions = { jxp_mission_house_sea_atakebune }
+		trigger = {
+			num_of_ports = 4
+			monthly_income = 8
+			jxp_oceanic_opening_at_least_25 = yes
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_treasury = 75
+			add_country_modifier = {
+				name = jxp_24_sea_tide_brokers
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_sea_strait_laws = {
+		icon = mission_establish_high_seas_navy
+		position = 11
+		required_missions = { jxp_mission_house_sea_tide_brokers jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			mission_completed = jxp_mission_house_sea_shipwrights
+			num_of_ports = 5
+			navy_size_percentage = 0.9
+			jxp_oceanic_opening_at_least_25 = yes
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_sea_strait_laws
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+	}
+}
+
+jxp_daimyo_frontier_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = DTE
+			tag = RFR
+			tag = AKT
+			tag = UTN
+			tag = OGS
+			tag = ITO
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_house_frontier_passes = {
+		icon = mission_japanese_fort
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			num_of_cities = 2
+			mil_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_frontier_passes
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { has_country_flag = jxp_25_frontier_agenda_seen } }
+				country_event = { id = jxp_daimyo_agenda.4 }
+			}
+		}
+	}
+
+	jxp_mission_house_frontier_border_council = {
+		icon = mission_steppe_warriors
+		position = 3
+		required_missions = { jxp_mission_house_frontier_passes jxp_mission_daimyo_market_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_shrine_village_compact
+			has_country_flag = jxp_25_frontier_agenda_seen
+			num_of_cities = 3
+			prestige = 10
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_mil_power = 35
+			if = {
+				limit = { has_country_flag = jxp_24_frontier_agenda_wardens }
+				jxp_add_tenka_order_5_effect = yes
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_frontier_agenda_brokers }
+				jxp_add_oceanic_opening_5_effect = yes
+			}
+			add_country_modifier = {
+				name = jxp_24_frontier_border_council
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_house_frontier_markets = {
+		icon = mission_high_income
+		position = 5
+		required_missions = { jxp_mission_house_frontier_border_council }
+		trigger = {
+			mission_completed = jxp_mission_house_frontier_passes
+			mission_completed = jxp_mission_daimyo_castle_town
+			treasury = 50
+			OR = {
+				num_of_ports = 1
+				num_of_cities = 4
+			}
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_treasury = 50
+			add_country_modifier = {
+				name = jxp_21_frontier_markets
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_frontier_guides = {
+		icon = mission_steppe_warriors
+		position = 7
+		required_missions = { jxp_mission_house_frontier_markets jxp_mission_daimyo_artisan_guilds }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_cities = 5
+			army_size_percentage = 0.8
+			mil_tech = 6
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_army_tradition = 5
+			add_country_modifier = {
+				name = jxp_24_frontier_guides
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_frontier_hostage_oaths = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { jxp_mission_house_frontier_guides }
+		trigger = {
+			num_of_cities = 7
+			legitimacy = 70
+			stability = 1
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = jxp_24_frontier_hostage_oaths
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_frontier_border_oaths = {
+		icon = mission_assemble_an_army
+		position = 11
+		required_missions = { jxp_mission_house_frontier_hostage_oaths jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			mission_completed = jxp_mission_house_frontier_markets
+			num_of_cities = 9
+			army_size_percentage = 0.9
+			stability = 1
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_frontier_border_oaths
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+	}
+}
+
+jxp_daimyo_temple_market_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = IMG
+			tag = AMA
+			tag = ASA
+			tag = IKE
+			tag = MAE
+			tag = KKC
+			tag = TKI
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_house_temple_ledgers = {
+		icon = mission_rice_field
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			stability = 0
+			adm_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_temple_ledgers
+				duration = 5475
+			}
+			if = {
+				limit = { NOT = { has_country_flag = jxp_25_temple_market_agenda_seen } }
+				country_event = { id = jxp_daimyo_agenda.5 }
+			}
+		}
+	}
+
+	jxp_mission_house_temple_market_council = {
+		icon = mission_religious
+		position = 3
+		required_missions = { jxp_mission_house_temple_ledgers jxp_mission_daimyo_market_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_shrine_village_compact
+			has_country_flag = jxp_25_temple_market_agenda_seen
+			stability = 1
+			treasury = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_adm_power = 35
+			if = {
+				limit = { has_country_flag = jxp_24_temple_agenda_privileges }
+				jxp_add_imperial_sanction_5_effect = yes
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_temple_agenda_ledgers }
+				jxp_add_tenka_order_5_effect = yes
+			}
+			add_country_modifier = {
+				name = jxp_24_temple_market_council
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_house_temple_market_towns = {
+		icon = mission_high_income
+		position = 5
+		required_missions = { jxp_mission_house_temple_market_council }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_tanegashima_rumors
+			mission_completed = jxp_mission_house_temple_ledgers
+			mission_completed = jxp_mission_daimyo_castle_town
+			capital_scope = { development = 10 }
+			treasury = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			capital_scope = { add_base_production = 1 }
+			add_country_modifier = {
+				name = jxp_21_temple_market_towns
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_temple_free_markets = {
+		icon = mission_market_place_with_asian_traders
+		position = 7
+		required_missions = { jxp_mission_house_temple_market_towns jxp_mission_daimyo_artisan_guilds }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_cities = 5
+			monthly_income = 6
+			stability = 1
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_treasury = 50
+			add_country_modifier = {
+				name = jxp_24_temple_free_markets
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_temple_debt_relief = {
+		icon = mission_rice_field
+		position = 9
+		required_missions = { jxp_mission_house_temple_free_markets }
+		trigger = {
+			num_of_cities = 7
+			treasury = 100
+			religious_unity = 0.9
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_stability = 1
+			add_country_modifier = {
+				name = jxp_24_temple_debt_relief
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_temple_public_law = {
+		icon = mission_monarch_in_throne_room
+		position = 11
+		required_missions = { jxp_mission_house_temple_debt_relief jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			mission_completed = jxp_mission_house_temple_market_towns
+			num_of_cities = 9
+			prestige = 20
+			stability = 1
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_21_temple_public_law
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+	}
+}

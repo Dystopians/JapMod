@@ -1,0 +1,104 @@
+jxp_japanese_polity_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		jxp_is_japanese_polity_trigger = yes
+	}
+	government_abilities = {
+		jxp_japanese_polity_mechanic
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}
+
+jxp_reformed_japan_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		tolerance_heretic = 1
+		church_power_modifier = 0.10
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}
+
+jxp_kaikyo_japan_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		tolerance_heathen = 1
+		global_sailors_modifier = 0.10
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}
+
+jxp_ikko_commonwealth_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		production_efficiency = 0.05
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}
+
+jxp_wokou_admiralty_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		privateer_efficiency = 0.20
+		naval_forcelimit_modifier = 0.15
+		trade_efficiency = 0.05
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}

@@ -1,0 +1,845 @@
+namespace = jxp_daimyo_legacy
+
+country_event = {
+	id = jxp_daimyo_legacy.0
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_major_daimyo_tag_trigger = yes
+		NOT = { jxp_has_major_daimyo_origin_trigger = yes }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_record_daimyo_origin_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_has_major_daimyo_origin_trigger = yes
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+		OR = {
+			AND = { has_country_flag = jxp_origin_oda NOT = { has_country_flag = jxp_daimyo_legacy_oda_seen } }
+			AND = { has_country_flag = jxp_origin_tkg NOT = { has_country_flag = jxp_daimyo_legacy_tkg_seen } }
+			AND = { has_country_flag = jxp_origin_tkd NOT = { has_country_flag = jxp_daimyo_legacy_tkd_seen } }
+			AND = { has_country_flag = jxp_origin_ues NOT = { has_country_flag = jxp_daimyo_legacy_ues_seen } }
+			AND = { has_country_flag = jxp_origin_hjo NOT = { has_country_flag = jxp_daimyo_legacy_hjo_seen } }
+			AND = { has_country_flag = jxp_origin_mri NOT = { has_country_flag = jxp_daimyo_legacy_mri_seen } }
+			AND = { has_country_flag = jxp_origin_smz NOT = { has_country_flag = jxp_daimyo_legacy_smz_seen } }
+			AND = { has_country_flag = jxp_origin_otm NOT = { has_country_flag = jxp_daimyo_legacy_otm_seen } }
+			AND = { has_country_flag = jxp_origin_dte NOT = { has_country_flag = jxp_daimyo_legacy_dte_seen } }
+			AND = { has_country_flag = jxp_origin_ask NOT = { has_country_flag = jxp_daimyo_legacy_ask_seen } }
+			AND = { has_country_flag = jxp_origin_csk NOT = { has_country_flag = jxp_daimyo_legacy_csk_seen } }
+			AND = { has_country_flag = jxp_origin_ouc NOT = { has_country_flag = jxp_daimyo_legacy_ouc_seen } }
+			AND = { has_country_flag = jxp_origin_img NOT = { has_country_flag = jxp_daimyo_legacy_img_seen } }
+			AND = { has_country_flag = jxp_origin_soo NOT = { has_country_flag = jxp_daimyo_legacy_soo_seen } }
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_ama
+					has_country_flag = jxp_origin_ymn
+					has_country_flag = jxp_origin_akm
+					has_country_flag = jxp_origin_isk
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_sanin_seen }
+			}
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_hsk
+					has_country_flag = jxp_origin_htk
+					has_country_flag = jxp_origin_sba
+					has_country_flag = jxp_origin_ktb
+					has_country_flag = jxp_origin_tki
+					has_country_flag = jxp_origin_tti
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_kyoto_seen }
+			}
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_cba
+					has_country_flag = jxp_origin_stk
+					has_country_flag = jxp_origin_utn
+					has_country_flag = jxp_origin_ogs
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_kanto_seen }
+			}
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_ito
+					has_country_flag = jxp_origin_kkc
+					has_country_flag = jxp_origin_kno
+					has_country_flag = jxp_origin_shn
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_western_sea_seen }
+			}
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_akt
+					has_country_flag = jxp_origin_rfr
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_northern_seen }
+			}
+			AND = {
+				OR = {
+					has_country_flag = jxp_origin_asa
+					has_country_flag = jxp_origin_ike
+					has_country_flag = jxp_origin_mae
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_service_seen }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_oda
+				NOT = { has_country_flag = jxp_daimyo_legacy_oda_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.10 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_tkg
+				NOT = { has_country_flag = jxp_daimyo_legacy_tkg_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.11 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_tkd
+				NOT = { has_country_flag = jxp_daimyo_legacy_tkd_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.12 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_ues
+				NOT = { has_country_flag = jxp_daimyo_legacy_ues_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.13 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_hjo
+				NOT = { has_country_flag = jxp_daimyo_legacy_hjo_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.14 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_mri
+				NOT = { has_country_flag = jxp_daimyo_legacy_mri_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.15 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_smz
+				NOT = { has_country_flag = jxp_daimyo_legacy_smz_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.16 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_otm
+				NOT = { has_country_flag = jxp_daimyo_legacy_otm_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.17 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_dte
+				NOT = { has_country_flag = jxp_daimyo_legacy_dte_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.18 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_ask
+				NOT = { has_country_flag = jxp_daimyo_legacy_ask_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.19 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_csk
+				NOT = { has_country_flag = jxp_daimyo_legacy_csk_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.20 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_ouc
+				NOT = { has_country_flag = jxp_daimyo_legacy_ouc_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.21 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_img
+				NOT = { has_country_flag = jxp_daimyo_legacy_img_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.22 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				has_country_flag = jxp_origin_soo
+				NOT = { has_country_flag = jxp_daimyo_legacy_soo_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.23 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_ama
+					has_country_flag = jxp_origin_ymn
+					has_country_flag = jxp_origin_akm
+					has_country_flag = jxp_origin_isk
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_sanin_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.30 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_hsk
+					has_country_flag = jxp_origin_htk
+					has_country_flag = jxp_origin_sba
+					has_country_flag = jxp_origin_ktb
+					has_country_flag = jxp_origin_tki
+					has_country_flag = jxp_origin_tti
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_kyoto_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.31 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_cba
+					has_country_flag = jxp_origin_stk
+					has_country_flag = jxp_origin_utn
+					has_country_flag = jxp_origin_ogs
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_kanto_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.32 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_ito
+					has_country_flag = jxp_origin_kkc
+					has_country_flag = jxp_origin_kno
+					has_country_flag = jxp_origin_shn
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_western_sea_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.33 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_akt
+					has_country_flag = jxp_origin_rfr
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_northern_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.34 days = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_daimyo_legacy_dispatching }
+				OR = {
+					has_country_flag = jxp_origin_asa
+					has_country_flag = jxp_origin_ike
+					has_country_flag = jxp_origin_mae
+				}
+				NOT = { has_country_flag = jxp_daimyo_legacy_service_seen }
+			}
+			set_country_flag = jxp_daimyo_legacy_dispatching
+			country_event = { id = jxp_daimyo_legacy.35 days = 1 }
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.23
+	title = "jxp_daimyo_legacy.23.t"
+	desc = "jxp_daimyo_legacy.23.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_soo
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_soo_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_soo duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_soo_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.30
+	title = "jxp_daimyo_legacy.30.t"
+	desc = "jxp_daimyo_legacy.30.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_ama
+			has_country_flag = jxp_origin_ymn
+			has_country_flag = jxp_origin_akm
+			has_country_flag = jxp_origin_isk
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_sanin_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_sanin_houses duration = -1 }
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_sanin_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.31
+	title = "jxp_daimyo_legacy.31.t"
+	desc = "jxp_daimyo_legacy.31.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_hsk
+			has_country_flag = jxp_origin_htk
+			has_country_flag = jxp_origin_sba
+			has_country_flag = jxp_origin_ktb
+			has_country_flag = jxp_origin_tki
+			has_country_flag = jxp_origin_tti
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_kyoto_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_kyoto_office_houses duration = -1 }
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_kyoto_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.32
+	title = "jxp_daimyo_legacy.32.t"
+	desc = "jxp_daimyo_legacy.32.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_cba
+			has_country_flag = jxp_origin_stk
+			has_country_flag = jxp_origin_utn
+			has_country_flag = jxp_origin_ogs
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_kanto_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_kanto_cadet_houses duration = -1 }
+		jxp_add_tenka_order_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_kanto_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.33
+	title = "jxp_daimyo_legacy.33.t"
+	desc = "jxp_daimyo_legacy.33.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_ito
+			has_country_flag = jxp_origin_kkc
+			has_country_flag = jxp_origin_kno
+			has_country_flag = jxp_origin_shn
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_western_sea_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_western_sea_houses duration = -1 }
+		jxp_add_oceanic_opening_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_western_sea_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.34
+	title = "jxp_daimyo_legacy.34.t"
+	desc = "jxp_daimyo_legacy.34.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_akt
+			has_country_flag = jxp_origin_rfr
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_northern_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_northern_frontier_houses duration = -1 }
+		jxp_add_tenka_order_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_northern_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.35
+	title = "jxp_daimyo_legacy.35.t"
+	desc = "jxp_daimyo_legacy.35.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		OR = {
+			has_country_flag = jxp_origin_asa
+			has_country_flag = jxp_origin_ike
+			has_country_flag = jxp_origin_mae
+		}
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_service_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_service_houses duration = -1 }
+		jxp_add_tenka_order_5_effect = yes
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_service_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.10
+	title = "jxp_daimyo_legacy.10.t"
+	desc = "jxp_daimyo_legacy.10.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_oda
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_oda_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_oda duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_oda_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.11
+	title = "jxp_daimyo_legacy.11.t"
+	desc = "jxp_daimyo_legacy.11.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tkg
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_tkg_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_tkg duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_tkg_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.12
+	title = "jxp_daimyo_legacy.12.t"
+	desc = "jxp_daimyo_legacy.12.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_tkd
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_tkd_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_tkd duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_tkd_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.13
+	title = "jxp_daimyo_legacy.13.t"
+	desc = "jxp_daimyo_legacy.13.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ues
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_ues_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_ues duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_ues_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.14
+	title = "jxp_daimyo_legacy.14.t"
+	desc = "jxp_daimyo_legacy.14.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_hjo
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_hjo_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_hjo duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_hjo_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.15
+	title = "jxp_daimyo_legacy.15.t"
+	desc = "jxp_daimyo_legacy.15.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_mri
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_mri_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_mri duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_mri_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.16
+	title = "jxp_daimyo_legacy.16.t"
+	desc = "jxp_daimyo_legacy.16.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_smz
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_smz_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_smz duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_smz_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.17
+	title = "jxp_daimyo_legacy.17.t"
+	desc = "jxp_daimyo_legacy.17.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_otm
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_otm_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_otm duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_otm_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.18
+	title = "jxp_daimyo_legacy.18.t"
+	desc = "jxp_daimyo_legacy.18.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_dte
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_dte_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_dte duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_dte_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.19
+	title = "jxp_daimyo_legacy.19.t"
+	desc = "jxp_daimyo_legacy.19.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ask
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_ask_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_ask duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_ask_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.20
+	title = "jxp_daimyo_legacy.20.t"
+	desc = "jxp_daimyo_legacy.20.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_csk
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_csk_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_csk duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_csk_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.21
+	title = "jxp_daimyo_legacy.21.t"
+	desc = "jxp_daimyo_legacy.21.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_ouc
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_ouc_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_ouc duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_ouc_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_legacy.22
+	title = "jxp_daimyo_legacy.22.t"
+	desc = "jxp_daimyo_legacy.22.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_origin_img
+		NOT = { has_country_flag = jxp_daimyo_legacy_granted }
+		NOT = { has_country_flag = jxp_daimyo_legacy_img_seen }
+	}
+
+	option = {
+		name = "jxp_daimyo_legacy.a"
+		add_country_modifier = { name = jxp_daimyo_legacy_img duration = -1 }
+		add_prestige = 10
+		set_country_flag = jxp_daimyo_legacy_granted
+		set_country_flag = jxp_daimyo_legacy_img_seen
+		clr_country_flag = jxp_daimyo_legacy_dispatching
+	}
+}

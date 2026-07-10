@@ -1,0 +1,84 @@
+jxp_add_current_route_resonance_effect = {
+	jxp_ensure_polity_mechanic_effect = yes
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = jxp_path_sakoku
+				has_country_flag = jxp_path_ikko
+				tag = IJP
+			}
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_wokou
+				tag = KJP
+				tag = RFJ
+				tag = SJP
+				tag = WAK
+			}
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				tag = CJP
+				tag = EJP
+			}
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+jxp_add_current_house_resonance_effect = {
+	jxp_ensure_polity_mechanic_effect = yes
+	if = {
+		limit = { jxp_has_warrior_house_origin_trigger = yes }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	else_if = {
+		limit = { jxp_has_court_house_origin_trigger = yes }
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	else_if = {
+		limit = { jxp_has_maritime_house_origin_trigger = yes }
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	else_if = {
+		limit = { jxp_has_frontier_house_origin_trigger = yes }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	else_if = {
+		limit = { jxp_has_temple_market_house_origin_trigger = yes }
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+jxp_clear_route_house_resonance_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_30_warrior_route_resonance_seen
+		clr_country_flag = jxp_30_court_route_resonance_seen
+		clr_country_flag = jxp_30_maritime_route_resonance_seen
+		clr_country_flag = jxp_30_frontier_route_resonance_seen
+		clr_country_flag = jxp_30_temple_market_route_resonance_seen
+	}
+	remove_country_modifier = jxp_30_route_over_warrior_houses
+	remove_country_modifier = jxp_30_warrior_houses_temper_route
+	remove_country_modifier = jxp_30_route_over_court_houses
+	remove_country_modifier = jxp_30_court_houses_temper_route
+	remove_country_modifier = jxp_30_route_over_maritime_houses
+	remove_country_modifier = jxp_30_maritime_houses_temper_route
+	remove_country_modifier = jxp_30_route_over_frontier_houses
+	remove_country_modifier = jxp_30_frontier_houses_temper_route
+	remove_country_modifier = jxp_30_route_over_temple_market_houses
+	remove_country_modifier = jxp_30_temple_market_houses_temper_route
+}

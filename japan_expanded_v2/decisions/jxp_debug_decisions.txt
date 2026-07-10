@@ -1,0 +1,796 @@
+country_decisions = {
+	jxp_debug_enable_menu = {
+		major = no
+		potential = {
+			ai = no
+			NOT = { has_country_flag = jxp_debug_enabled }
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_debug_enabled
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_disable_menu = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				clr_country_flag = jxp_debug_enabled
+				clr_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+				clr_country_flag = jxp_debug_panel_cleanup
+				clr_country_flag = jxp_debug_panel_values
+				clr_country_flag = jxp_debug_panel_routes
+				clr_country_flag = jxp_debug_panel_seeds
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_initialize_polity = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_unify_japan = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_unify_japan_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_grant_resources = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_grant_resources_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_show_cleanup_panel = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			NOT = { has_country_flag = jxp_debug_panel_cleanup }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				set_country_flag = jxp_debug_panel_cleanup
+				clr_country_flag = jxp_debug_panel_values
+				clr_country_flag = jxp_debug_panel_routes
+				clr_country_flag = jxp_debug_panel_seeds
+				clr_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_show_values_panel = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { has_country_flag = jxp_debug_panel_values }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				clr_country_flag = jxp_debug_panel_cleanup
+				set_country_flag = jxp_debug_panel_values
+				clr_country_flag = jxp_debug_panel_routes
+				clr_country_flag = jxp_debug_panel_seeds
+				clr_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_show_routes_panel = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { has_country_flag = jxp_debug_panel_routes }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				clr_country_flag = jxp_debug_panel_cleanup
+				clr_country_flag = jxp_debug_panel_values
+				set_country_flag = jxp_debug_panel_routes
+				clr_country_flag = jxp_debug_panel_seeds
+				clr_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_show_seeds_panel = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { has_country_flag = jxp_debug_panel_seeds }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				clr_country_flag = jxp_debug_panel_cleanup
+				clr_country_flag = jxp_debug_panel_values
+				clr_country_flag = jxp_debug_panel_routes
+				set_country_flag = jxp_debug_panel_seeds
+				clr_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_hide_core_panels = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			OR = {
+				has_country_flag = jxp_debug_panel_cleanup
+				has_country_flag = jxp_debug_panel_values
+				has_country_flag = jxp_debug_panel_routes
+				has_country_flag = jxp_debug_panel_seeds
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_panel_cleanup
+			clr_country_flag = jxp_debug_panel_values
+			clr_country_flag = jxp_debug_panel_routes
+			clr_country_flag = jxp_debug_panel_seeds
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_clear_cooldowns = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_cleanup
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_clear_cooldowns_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_clear_event_state = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_cleanup
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_clear_event_state_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_return_jap_baseline = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_cleanup
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_return_jap_baseline_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_values_low = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_values
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_polity_low_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_values_balanced = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_values
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_polity_balanced_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_values_closed = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_values
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_polity_closed_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_values_open = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_values
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_polity_open_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_values_route_ready = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_values
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_route_ready_effect = yes
+			country_event = { id = jxp_realm.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_open_route_chooser = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_polity_effect = yes
+			jxp_debug_set_route_ready_effect = yes
+			jxp_debug_clear_route_state_effect = yes
+			country_event = { id = jxp_realm.1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_sakoku_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_sakoku_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_open_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_open_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_kirishitan_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_kirishitan_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_confucian_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_confucian_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_imperial_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_imperial_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_unlock_hakko_ichiu_reform = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_unlock_hakko_ichiu_reform_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_reformed_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_reformed_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_kaikyo_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_kaikyo_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_ikko_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_ikko_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_force_wokou_route = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_seeds
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_force_wokou_route_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_christian_contact = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_seeds
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_seed_christian_contact_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_reformed_contact = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_seeds
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_seed_reformed_contact_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_kaikyo_contact = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_seeds
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_seed_kaikyo_contact_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_shimabara_pressure = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_seed_shimabara_pressure_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_open = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { has_country_flag = jxp_debug_events_enabled }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				set_country_flag = jxp_debug_events_enabled
+				clr_country_flag = jxp_debug_event_category_early
+				clr_country_flag = jxp_debug_event_category_kirishitan
+				clr_country_flag = jxp_debug_event_category_confucian
+				clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+				clr_country_flag = jxp_debug_event_category_popular_maritime
+				clr_country_flag = jxp_debug_panel_cleanup
+				clr_country_flag = jxp_debug_panel_values
+				clr_country_flag = jxp_debug_panel_routes
+				clr_country_flag = jxp_debug_panel_seeds
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_close = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_events_enabled
+			clr_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_hide_categories = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			OR = {
+				has_country_flag = jxp_debug_event_category_early
+				has_country_flag = jxp_debug_event_category_kirishitan
+				has_country_flag = jxp_debug_event_category_confucian
+				has_country_flag = jxp_debug_event_category_reformed_kaikyo
+				has_country_flag = jxp_debug_event_category_popular_maritime
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_show_early = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			NOT = { has_country_flag = jxp_debug_event_category_early }
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_show_kirishitan = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			NOT = { has_country_flag = jxp_debug_event_category_kirishitan }
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_event_category_early
+			set_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_show_confucian = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			NOT = { has_country_flag = jxp_debug_event_category_confucian }
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			set_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_show_reformed_kaikyo = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			NOT = { has_country_flag = jxp_debug_event_category_reformed_kaikyo }
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			set_country_flag = jxp_debug_event_category_reformed_kaikyo
+			clr_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_events_show_popular_maritime = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			NOT = { has_country_flag = jxp_debug_event_category_popular_maritime }
+		}
+		allow = { always = yes }
+		effect = {
+			clr_country_flag = jxp_debug_event_category_early
+			clr_country_flag = jxp_debug_event_category_kirishitan
+			clr_country_flag = jxp_debug_event_category_confucian
+			clr_country_flag = jxp_debug_event_category_reformed_kaikyo
+			set_country_flag = jxp_debug_event_category_popular_maritime
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_sengoku_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_sengoku.9001 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_sengoku_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_sengoku.9002 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_sengoku_3 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_sengoku.9003 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_sengoku_4 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_sengoku.9004 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_namban_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_namban.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_namban_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_namban.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_namban_3 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_namban.3 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_namban_4 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_namban.4 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_sakoku_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_sakoku_route_effect = yes country_event = { id = jxp_sakoku.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_rangaku_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_early jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_open_route_effect = yes country_event = { id = jxp_rangaku.1 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_kirishitan_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_kirishitan.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_kirishitan.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_3 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_kirishitan.3 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_shimabara = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_kirishitan.4 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_5 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kirishitan_route_effect = yes country_event = { id = jxp_kirishitan.5 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_7 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kirishitan_route_effect = yes country_event = { id = jxp_kirishitan.7 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_8 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kirishitan_route_effect = yes country_event = { id = jxp_kirishitan.8 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_9 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kirishitan_route_effect = yes country_event = { id = jxp_kirishitan.9 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kirishitan_10 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_kirishitan jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kirishitan_route_effect = yes country_event = { id = jxp_kirishitan.10 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_confucian_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_4 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.4 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_5 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.5 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_6 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.6 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_7 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes country_event = { id = jxp_confucian.7 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_shinto_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_neo_started clr_country_flag = jxp_confucian_bridge_neo_done clr_country_flag = end_of_neo_confucianism_chain set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_shinto.1 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_shinto_10 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_urban_started clr_country_flag = jxp_confucian_bridge_urban_done clr_country_flag = end_of_urbanisation_chain set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_shinto.10 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_shinto_20 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_nanban_started clr_country_flag = jxp_confucian_bridge_nanban_done clr_country_flag = end_of_nanban_chain clr_country_flag = jap_chose_kaikoku_flag clr_country_flag = jap_chose_trade_with_west_flag clr_country_flag = jap_chose_sakoku_flag set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_shinto.20 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_incident_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_firearms_started clr_country_flag = jxp_confucian_bridge_firearms_done clr_country_flag = end_of_incident_firearms_chain clr_country_flag = perfecting_the_musket_flag clr_country_flag = proliferation_firearms_flag clr_country_flag = example_of_bushido_flag set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_incident.1 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_incident_10 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_christian_started clr_country_flag = jxp_confucian_bridge_christian_done clr_country_flag = end_of_incident_spread_of_christianity_chain clr_country_flag = significant_christian_presence_flag clr_country_flag = christianity_defeated_flag set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_incident.10 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_incident_20 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_authority_started clr_country_flag = jxp_confucian_bridge_authority_done clr_country_flag = end_of_incident_shogunate_authority_chain set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_incident.20 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_incident_30 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_ikko_started clr_country_flag = jxp_confucian_bridge_ikko_done clr_country_flag = end_of_ikko_chain set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_incident.30 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_confucian_incident_40 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_confucian jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_confucian_route_effect = yes remove_country_modifier = jxp_confucian_incident_review_recent clr_country_flag = jxp_confucian_bridge_wokou_started clr_country_flag = jxp_confucian_bridge_wokou_done clr_country_flag = end_of_wokou_chain set_country_flag = jxp_confucian_bridge_forced_dispatch country_event = { id = jxp_confucian_incident.40 } country_event = { id = jxp_confucian_incident.99 days = 1 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_reformed_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_reformed.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_3 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.3 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_4 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.4 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_6 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.6 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_7 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.7 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_reformed_8 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_reformed_route_effect = yes country_event = { id = jxp_reformed.8 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_kaikyo_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_kaikyo.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_3 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.3 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_4 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.4 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_6 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.6 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_7 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.7 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_kaikyo_8 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_reformed_kaikyo jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_kaikyo_route_effect = yes country_event = { id = jxp_kaikyo.8 } } ai_will_do = { factor = 0 } }
+
+	jxp_debug_fire_ikko_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_ikko_route_effect = yes country_event = { id = jxp_ikko.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_ikko_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_ikko_route_effect = yes country_event = { id = jxp_ikko.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_ikko_6 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_prepare_polity_effect = yes country_event = { id = jxp_ikko.6 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_wokou_1 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_wokou_route_effect = yes country_event = { id = jxp_wokou.1 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_wokou_2 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_wokou_route_effect = yes country_event = { id = jxp_wokou.2 } } ai_will_do = { factor = 0 } }
+	jxp_debug_fire_wokou_7 = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_debug_events_enabled has_country_flag = jxp_debug_event_category_popular_maritime jxp_is_japanese_polity_trigger = yes } allow = { always = yes } effect = { jxp_debug_force_wokou_route_effect = yes country_event = { id = jxp_wokou.7 } } ai_will_do = { factor = 0 } }
+}

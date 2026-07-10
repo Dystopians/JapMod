@@ -1,0 +1,29 @@
+jxp_daimyo_legacy_sanin_houses = {
+	global_spy_defence = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_daimyo_legacy_kyoto_office_houses = {
+	advisor_cost = -0.05
+	legitimacy = 0.5
+}
+
+jxp_daimyo_legacy_kanto_cadet_houses = {
+	defensiveness = 0.10
+	global_manpower_modifier = 0.08
+}
+
+jxp_daimyo_legacy_western_sea_houses = {
+	global_ship_trade_power = 0.10
+	trade_efficiency = 0.05
+}
+
+jxp_daimyo_legacy_northern_frontier_houses = {
+	land_attrition = -0.10
+	land_forcelimit_modifier = 0.08
+}
+
+jxp_daimyo_legacy_service_houses = {
+	state_maintenance_modifier = -0.08
+	prestige = 0.5
+}

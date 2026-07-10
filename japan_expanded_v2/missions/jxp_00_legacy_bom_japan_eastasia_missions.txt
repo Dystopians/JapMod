@@ -1,0 +1,7 @@
+﻿jxp_japan_eastasia_missions = {
+	slot = 4
+	generic = no
+	ai = no
+	potential_on_load = { always = no }
+	potential = { always = no }
+}

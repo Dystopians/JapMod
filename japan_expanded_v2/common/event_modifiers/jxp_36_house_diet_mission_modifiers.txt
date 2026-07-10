@@ -1,0 +1,14 @@
+jxp_36_integrated_house_diet_records = {
+	advisor_cost = -0.05
+	global_tax_modifier = 0.03
+}
+
+jxp_36_house_law_local_offices = {
+	state_maintenance_modifier = -0.05
+	governing_capacity_modifier = 0.05
+}
+
+jxp_36_house_law_state_doctrine = {
+	reform_progress_growth = 0.10
+	stability_cost_modifier = -0.05
+}

@@ -1,0 +1,369 @@
+jxp_26_oda_azuchi_edicts = {
+	core_creation = -0.05
+	province_warscore_cost = -0.05
+}
+
+jxp_26_oda_market_law = {
+	global_trade_goods_size_modifier = 0.05
+	trade_efficiency = 0.05
+}
+
+jxp_26_tkg_fudai_council = {
+	global_unrest = -1
+	governing_capacity_modifier = 0.05
+}
+
+jxp_26_tkg_road_barriers = {
+	state_maintenance_modifier = -0.05
+	global_spy_defence = 0.10
+}
+
+jxp_26_tkd_koshu_muster = {
+	cavalry_power = 0.10
+	movement_speed = 0.05
+}
+
+jxp_26_tkd_mountain_law = {
+	defensiveness = 0.10
+	land_attrition = -0.05
+}
+
+jxp_26_ues_kantou_justice = {
+	diplomatic_reputation = 1
+	prestige_decay = -0.005
+}
+
+jxp_26_ues_echigo_muster = {
+	army_tradition = 0.5
+	land_morale = 0.03
+}
+
+jxp_26_hjo_odawara_cadasters = {
+	development_cost = -0.05
+	governing_capacity_modifier = 0.05
+}
+
+jxp_26_hjo_sogamae_network = {
+	defensiveness = 0.15
+	garrison_size = 0.10
+}
+
+jxp_26_mri_setouchi_admiralty = {
+	galley_power = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_26_mri_kokujin_compacts = {
+	diplomatic_upkeep = 1
+	spy_offence = 0.10
+}
+
+jxp_26_smz_teppo_foundries = {
+	fire_damage = 0.05
+	infantry_power = 0.05
+}
+
+jxp_26_smz_satsunan_learning = {
+	technology_cost = -0.03
+	global_institution_spread = 0.10
+}
+
+jxp_26_otm_funai_quarter = {
+	global_institution_spread = 0.10
+	trade_efficiency = 0.05
+}
+
+jxp_26_otm_kunikuzushi_bureau = {
+	artillery_power = 0.05
+	siege_ability = 0.05
+}
+
+jxp_26_dte_oshu_cavalry = {
+	cavalry_power = 0.10
+	leader_land_shock = 1
+}
+
+jxp_26_dte_keicho_envoys = {
+	diplomatic_reputation = 1
+	global_ship_trade_power = 0.10
+}
+
+jxp_26_ask_hokoshu_order = {
+	vassal_forcelimit_bonus = 0.50
+	vassal_income = 0.10
+}
+
+jxp_26_ask_higashiyama_culture = {
+	advisor_cost = -0.05
+	prestige_decay = -0.005
+}
+
+jxp_26_csk_ichiryo_gusoku_rolls = {
+	land_maintenance_modifier = -0.05
+	global_manpower_modifier = 0.05
+}
+
+jxp_26_csk_tosa_sea_law = {
+	galley_power = 0.10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_26_ouc_yamaguchi_mercantile_court = {
+	trade_efficiency = 0.05
+	global_own_trade_power = 0.10
+}
+
+jxp_26_ouc_korean_envoys = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_26_img_tokaido_lawbooks = {
+	stability_cost_modifier = -0.05
+	global_unrest = -1
+}
+
+jxp_26_img_triple_alliance_model = {
+	ae_impact = -0.05
+	diplomatic_upkeep = 1
+}
+
+jxp_26_soo_wakan_office = {
+	trade_steering = 0.15
+	global_foreign_trade_power = 0.05
+}
+
+jxp_26_soo_tsushima_sea_wardens = {
+	naval_morale = 0.10
+	privateer_efficiency = 0.15
+}
+
+jxp_26_ama_gassan_toda_castle = {
+	defensiveness = 0.10
+	land_maintenance_modifier = -0.05
+}
+
+jxp_26_ama_kizuki_shrine_registers = {
+	tolerance_own = 1
+	prestige_decay = -0.005
+}
+
+jxp_26_asa_ichijodani_council = {
+	advisor_cost = -0.05
+	global_unrest = -1
+}
+
+jxp_26_asa_echizen_paper_office = {
+	technology_cost = -0.03
+	production_efficiency = 0.05
+}
+
+jxp_26_hsk_kanrei_table = {
+	diplomatic_reputation = 1
+	prestige_decay = -0.005
+}
+
+jxp_26_hsk_sakai_merchant_council = {
+	trade_efficiency = 0.05
+	global_foreign_trade_power = 0.05
+}
+
+jxp_26_htk_two_house_oaths = {
+	global_unrest = -1
+	merc_maintenance_modifier = -0.10
+}
+
+jxp_26_htk_saika_teppo_contracts = {
+	fire_damage = 0.05
+	mercenary_cost = -0.05
+}
+
+jxp_26_ike_himeji_stewards = {
+	state_maintenance_modifier = -0.05
+	global_tax_modifier = 0.05
+}
+
+jxp_26_ike_setouchi_ledgers = {
+	global_own_trade_power = 0.10
+	production_efficiency = 0.05
+}
+
+jxp_26_mae_million_koku_storehouses = {
+	global_trade_goods_size_modifier = 0.05
+	global_manpower_modifier = 0.05
+}
+
+jxp_26_mae_tea_noh_patronage = {
+	prestige_decay = -0.005
+	same_culture_advisor_cost = -0.10
+}
+
+jxp_26_sba_buei_military_office = {
+	army_tradition = 0.5
+	land_forcelimit_modifier = 0.10
+}
+
+jxp_26_sba_hokuriku_roads = {
+	trade_steering = 0.10
+	movement_speed = 0.05
+}
+
+jxp_26_ymn_sixth_share_registers = {
+	governing_capacity_modifier = 0.05
+	diplomatic_upkeep = 1
+}
+
+jxp_26_ymn_western_army_compacts = {
+	land_morale = 0.03
+	improve_relation_modifier = 0.10
+}
+
+jxp_26_rfr_nine_gates_cavalry = {
+	cavalry_power = 0.05
+	cavalry_cost = -0.10
+}
+
+jxp_26_rfr_morioka_granaries = {
+	state_maintenance_modifier = -0.05
+	development_cost = -0.05
+}
+
+jxp_26_ktb_ise_shrine_law = {
+	tolerance_own = 1
+	legitimacy = 0.5
+}
+
+jxp_26_ktb_kuki_suigun_rolls = {
+	galley_power = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_26_akm_harima_castle_roads = {
+	defensiveness = 0.10
+	movement_speed = 0.05
+}
+
+jxp_26_akm_red_pine_retainer_oaths = {
+	global_regiment_cost = -0.05
+	infantry_power = 0.05
+}
+
+jxp_26_akt_ezochi_trade_posts = {
+	global_own_trade_power = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_26_akt_northern_wardens = {
+	hostile_attrition = 1
+	shock_damage_received = -0.05
+}
+
+jxp_26_cba_katori_muster_rolls = {
+	army_tradition_decay = -0.005
+	infantry_power = 0.05
+}
+
+jxp_26_cba_shimosa_court_routes = {
+	improve_relation_modifier = 0.10
+	diplomatic_upkeep = 1
+}
+
+jxp_26_isk_tango_port_wardens = {
+	naval_forcelimit_modifier = 0.10
+	global_own_trade_power = 0.05
+}
+
+jxp_26_isk_shugo_house_law = {
+	legitimacy = 0.5
+	global_unrest = -1
+}
+
+jxp_26_ito_hyuga_castle_network = {
+	defensiveness = 0.10
+	global_manpower_modifier = 0.05
+}
+
+jxp_26_ito_shrine_temple_compacts = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.05
+}
+
+jxp_26_kkc_kikuchi_loyalist_scrolls = {
+	army_tradition = 0.5
+	legitimacy = 0.5
+}
+
+jxp_26_kkc_aso_fire_rites = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+jxp_26_kno_setouchi_pilots = {
+	galley_power = 0.10
+	naval_morale = 0.05
+}
+
+jxp_26_kno_iyo_port_law = {
+	global_ship_trade_power = 0.10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_26_ogs_kyuba_rites = {
+	cavalry_cost = -0.05
+	movement_speed = 0.05
+}
+
+jxp_26_ogs_suwa_pass_wardens = {
+	land_attrition = -0.05
+	defensiveness = 0.10
+}
+
+jxp_26_shn_dazaifu_brokers = {
+	diplomatic_upkeep = 1
+	global_foreign_trade_power = 0.05
+}
+
+jxp_26_shn_kyushu_tribute_office = {
+	improve_relation_modifier = 0.10
+	trade_steering = 0.10
+}
+
+jxp_26_stk_hitachi_muster = {
+	land_forcelimit_modifier = 0.10
+	war_exhaustion = -0.01
+}
+
+jxp_26_stk_kashima_oaths = {
+	army_tradition_decay = -0.005
+	tolerance_own = 1
+}
+
+jxp_26_tki_mino_river_works = {
+	development_cost = -0.05
+	production_efficiency = 0.05
+}
+
+jxp_26_tki_toki_courtly_paper = {
+	advisor_cost = -0.05
+	global_institution_spread = 0.05
+}
+
+jxp_26_utn_nikko_barrier_guard = {
+	fort_maintenance_modifier = -0.05
+	tolerance_own = 1
+}
+
+jxp_26_utn_shimotsuke_muster = {
+	army_tradition_decay = -0.005
+	global_manpower_modifier = 0.05
+}
+
+jxp_26_tti_yamato_temple_compact = {
+	advisor_cost = -0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_26_tti_kofukuji_castle_towns = {
+	global_tax_modifier = 0.05
+	global_unrest = -1
+}

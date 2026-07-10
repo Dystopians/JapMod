@@ -1,0 +1,68 @@
+jxp_is_japan_expanded_core_tag_trigger = {
+	OR = {
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+	}
+}
+
+jxp_not_sakoku_locked_trigger = {
+	NOT = { has_country_flag = jxp_path_sakoku }
+	NOT = { has_country_modifier = jxp_route_sakoku }
+}
+
+jxp_allows_private_overseas_trade_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	jxp_not_sakoku_locked_trigger = yes
+	OR = {
+		NOT = { jxp_has_any_route_trigger = yes }
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_kaikyo
+		has_country_flag = jxp_path_wokou
+		AND = {
+			OR = {
+				tag = CJP
+				has_country_flag = jxp_path_confucian
+			}
+			jxp_oceanic_opening_at_least_50 = yes
+		}
+		tag = KJP
+		tag = RFJ
+		tag = SJP
+		tag = WAK
+		num_of_colonists = 1
+	}
+}
+
+jxp_allows_controlled_foreign_channel_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		jxp_allows_private_overseas_trade_trigger = yes
+		has_country_modifier = jxp_dejima_window
+		has_country_modifier = jxp_reviewed_translations
+		has_country_modifier = jxp_translation_house
+		AND = {
+			jxp_not_sakoku_locked_trigger = yes
+			OR = {
+				tag = CJP
+				has_country_flag = jxp_path_confucian
+			}
+		}
+	}
+}
+
+jxp_can_use_overseas_expansion_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	jxp_not_sakoku_locked_trigger = yes
+	OR = {
+		jxp_is_japan_expanded_core_tag_trigger = yes
+		jxp_has_any_route_trigger = yes
+	}
+}

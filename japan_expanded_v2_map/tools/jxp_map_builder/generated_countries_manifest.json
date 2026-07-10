@@ -1,0 +1,253 @@
+{
+  "colors": {
+    "ANK": [
+      144,
+      112,
+      31
+    ],
+    "ARI": [
+      78,
+      164,
+      57
+    ],
+    "ASN": [
+      125,
+      27,
+      42
+    ],
+    "AZI": [
+      127,
+      48,
+      173
+    ],
+    "DHO": [
+      177,
+      39,
+      181
+    ],
+    "HCS": [
+      38,
+      137,
+      125
+    ],
+    "HNG": [
+      147,
+      140,
+      51
+    ],
+    "HNM": [
+      92,
+      51,
+      147
+    ],
+    "KMP": [
+      47,
+      35,
+      163
+    ],
+    "KRD": [
+      89,
+      57,
+      164
+    ],
+    "KYO": [
+      38,
+      49,
+      137
+    ],
+    "MKM": [
+      39,
+      113,
+      89
+    ],
+    "MOG": [
+      48,
+      173,
+      65
+    ],
+    "MTS": [
+      163,
+      111,
+      35
+    ],
+    "MTU": [
+      119,
+      33,
+      75
+    ],
+    "MYO": [
+      27,
+      125,
+      61
+    ],
+    "NBS": [
+      144,
+      31,
+      63
+    ],
+    "NHT": [
+      33,
+      118,
+      119
+    ],
+    "OSK": [
+      45,
+      83,
+      130
+    ],
+    "RKK": [
+      113,
+      52,
+      39
+    ],
+    "RZJ": [
+      43,
+      70,
+      155
+    ],
+    "SGR": [
+      137,
+      76,
+      38
+    ],
+    "SMA": [
+      125,
+      155,
+      43
+    ],
+    "STM": [
+      31,
+      119,
+      144
+    ],
+    "STO": [
+      130,
+      50,
+      45
+    ],
+    "TGR": [
+      113,
+      39,
+      100
+    ],
+    "TGS": [
+      164,
+      57,
+      131
+    ],
+    "UKT": [
+      115,
+      181,
+      39
+    ],
+    "WKT": [
+      87,
+      163,
+      35
+    ],
+    "YMC": [
+      33,
+      119,
+      34
+    ]
+  },
+  "country_count": 30,
+  "flag_files": {
+    "ANK": "gfx/flags/ANK.tga",
+    "ARI": "gfx/flags/ARI.tga",
+    "ASN": "gfx/flags/ASN.tga",
+    "AZI": "gfx/flags/AZI.tga",
+    "DHO": "gfx/flags/DHO.tga",
+    "HCS": "gfx/flags/HCS.tga",
+    "HNG": "gfx/flags/HNG.tga",
+    "HNM": "gfx/flags/HNM.tga",
+    "KMP": "gfx/flags/KMP.tga",
+    "KRD": "gfx/flags/KRD.tga",
+    "KYO": "gfx/flags/KYO.tga",
+    "MKM": "gfx/flags/MKM.tga",
+    "MOG": "gfx/flags/MOG.tga",
+    "MTS": "gfx/flags/MTS.tga",
+    "MTU": "gfx/flags/MTU.tga",
+    "MYO": "gfx/flags/MYO.tga",
+    "NBS": "gfx/flags/NBS.tga",
+    "NHT": "gfx/flags/NHT.tga",
+    "OSK": "gfx/flags/OSK.tga",
+    "RKK": "gfx/flags/RKK.tga",
+    "RZJ": "gfx/flags/RZJ.tga",
+    "SGR": "gfx/flags/SGR.tga",
+    "SMA": "gfx/flags/SMA.tga",
+    "STM": "gfx/flags/STM.tga",
+    "STO": "gfx/flags/STO.tga",
+    "TGR": "gfx/flags/TGR.tga",
+    "TGS": "gfx/flags/TGS.tga",
+    "UKT": "gfx/flags/UKT.tga",
+    "WKT": "gfx/flags/WKT.tga",
+    "YMC": "gfx/flags/YMC.tga"
+  },
+  "flag_sources": {
+    "ANK": "gfx/flags/source/ANK_source.png",
+    "ARI": "gfx/flags/source/ARI_source.png",
+    "ASN": "gfx/flags/source/ASN_source.png",
+    "AZI": "gfx/flags/source/AZI_source.png",
+    "DHO": "gfx/flags/source/DHO_source.png",
+    "HCS": "gfx/flags/source/HCS_source.png",
+    "HNG": "gfx/flags/source/HNG_source.png",
+    "HNM": "gfx/flags/source/HNM_source.png",
+    "KMP": "gfx/flags/source/KMP_source.png",
+    "KRD": "gfx/flags/source/KRD_source.png",
+    "KYO": "gfx/flags/source/KYO_source.png",
+    "MKM": "gfx/flags/source/MKM_source.png",
+    "MOG": "gfx/flags/source/MOG_source.png",
+    "MTS": "gfx/flags/source/MTS_source.png",
+    "MTU": "gfx/flags/source/MTU_source.png",
+    "MYO": "gfx/flags/source/MYO_source.png",
+    "NBS": "gfx/flags/source/NBS_source.png",
+    "NHT": "gfx/flags/source/NHT_source.png",
+    "OSK": "gfx/flags/source/OSK_source.png",
+    "RKK": "gfx/flags/source/RKK_source.png",
+    "RZJ": "gfx/flags/source/RZJ_source.png",
+    "SGR": "gfx/flags/source/SGR_source.png",
+    "SMA": "gfx/flags/source/SMA_source.png",
+    "STM": "gfx/flags/source/STM_source.png",
+    "STO": "gfx/flags/source/STO_source.png",
+    "TGR": "gfx/flags/source/TGR_source.png",
+    "TGS": "gfx/flags/source/TGS_source.png",
+    "UKT": "gfx/flags/source/UKT_source.png",
+    "WKT": "gfx/flags/source/WKT_source.png",
+    "YMC": "gfx/flags/source/YMC_source.png"
+  },
+  "schema_version": 1,
+  "subject_interval_count": 56,
+  "tags": [
+    "ANK",
+    "ARI",
+    "ASN",
+    "AZI",
+    "DHO",
+    "HCS",
+    "HNG",
+    "HNM",
+    "KMP",
+    "KRD",
+    "KYO",
+    "MKM",
+    "MOG",
+    "MTS",
+    "MTU",
+    "MYO",
+    "NBS",
+    "NHT",
+    "OSK",
+    "RKK",
+    "RZJ",
+    "SGR",
+    "SMA",
+    "STM",
+    "STO",
+    "TGR",
+    "TGS",
+    "UKT",
+    "WKT",
+    "YMC"
+  ]
+}

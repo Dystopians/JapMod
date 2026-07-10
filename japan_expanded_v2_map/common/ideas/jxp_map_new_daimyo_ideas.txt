@@ -1,0 +1,52 @@
+jxp_map_new_daimyo_ideas = {
+	start = {
+		land_morale = 0.05
+		global_manpower_modifier = 0.10
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		OR = {
+			tag = ANK
+			tag = ARI
+			tag = ASN
+			tag = AZI
+			tag = DHO
+			tag = HCS
+			tag = HNG
+			tag = HNM
+			tag = KMP
+			tag = KRD
+			tag = KYO
+			tag = MKM
+			tag = MOG
+			tag = MTS
+			tag = MTU
+			tag = MYO
+			tag = NBS
+			tag = NHT
+			tag = OSK
+			tag = RKK
+			tag = RZJ
+			tag = SGR
+			tag = SMA
+			tag = STM
+			tag = STO
+			tag = TGR
+			tag = TGS
+			tag = UKT
+			tag = WKT
+			tag = YMC
+		}
+	}
+	free = yes
+
+	jxp_map_castle_network = { fort_defense = 0.15 }
+	jxp_map_land_survey = { global_tax_modifier = 0.10 }
+	jxp_map_kokujin_compacts = { infantry_power = 0.10 }
+	jxp_map_market_towns = { development_cost = -0.10 }
+	jxp_map_coastal_routes = { trade_efficiency = 0.10 }
+	jxp_map_house_codes = { legitimacy = 1 }
+	jxp_map_provincial_identity = { core_creation = -0.10 }
+}

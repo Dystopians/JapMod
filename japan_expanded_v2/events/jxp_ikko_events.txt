@@ -1,0 +1,276 @@
+namespace = jxp_ikko
+
+country_event = {
+	id = jxp_ikko.1
+	title = "jxp_ikko.1.t"
+	desc = "jxp_ikko.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_ikko.1.a"
+		set_country_flag = jxp_ikko_contact
+		set_country_flag = jxp_path_ikko
+		add_country_modifier = {
+			name = jxp_route_ikko
+			duration = -1
+		}
+		if = {
+			limit = { NOT = { has_reform = jxp_ikko_commonwealth_reform } }
+			add_government_reform = jxp_ikko_commonwealth_reform
+		}
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		jxp_ensure_polity_mechanic_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_ikko.2
+	title = "jxp_ikko.2.t"
+	desc = "jxp_ikko.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_path_ikko
+		NOT = { has_country_flag = jxp_ikko_terauchi_seen }
+	}
+
+	mean_time_to_happen = {
+		days = 1800
+	}
+
+	option = {
+		name = "jxp_ikko.2.a"
+		set_country_flag = jxp_ikko_terauchi_seen
+		set_country_flag = jxp_ikko_contact
+		if = {
+			limit = { owns = 1021 }
+			1021 = {
+				add_province_modifier = {
+					name = jxp_ikko_terauchi_town
+					duration = -1
+				}
+			}
+		}
+		else_if = {
+			limit = { owns = 1020 }
+			1020 = {
+				add_province_modifier = {
+					name = jxp_ikko_terauchi_town
+					duration = -1
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_province_modifier = {
+					name = jxp_ikko_terauchi_town
+					duration = -1
+				}
+			}
+		}
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_ikko.3
+	title = "jxp_ikko.3.t"
+	desc = "jxp_ikko.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_path_ikko
+		NOT = { has_country_flag = jxp_ikko_monto_militia_seen }
+		OR = {
+			is_at_war = yes
+			army_tradition = 20
+			mil_tech = 9
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2400
+	}
+
+	option = {
+		name = "jxp_ikko.3.a"
+		set_country_flag = jxp_ikko_monto_militia_seen
+		add_country_modifier = {
+			name = jxp_ikko_monto_militia
+			duration = 7300
+		}
+		jxp_subtract_tenka_order_5_effect = yes
+		add_mil_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_ikko.4
+	title = "jxp_ikko.4.t"
+	desc = "jxp_ikko.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_path_ikko
+		NOT = { has_country_flag = jxp_ikko_ishiyama_seen }
+		OR = {
+			owns = 1021
+			owns = 1020
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2400
+	}
+
+	option = {
+		name = "jxp_ikko.4.a"
+		set_country_flag = jxp_ikko_ishiyama_seen
+		if = {
+			limit = { owns = 1021 }
+			1021 = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = jxp_ishiyama_fortress
+					duration = -1
+				}
+			}
+		}
+		else = {
+			1020 = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = jxp_ishiyama_fortress
+					duration = -1
+				}
+			}
+		}
+		add_army_tradition = 5
+	}
+}
+
+country_event = {
+	id = jxp_ikko.5
+	title = "jxp_ikko.5.t"
+	desc = "jxp_ikko.5.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_path_ikko
+		NOT = { has_country_flag = jxp_ikko_kinri_seen }
+		owns = 1020
+		jxp_imperial_sanction_at_least_30 = yes
+	}
+
+	mean_time_to_happen = {
+		days = 2400
+	}
+
+	option = {
+		name = "jxp_ikko.5.a"
+		set_country_flag = jxp_ikko_kinri_seen
+		add_country_modifier = {
+			name = jxp_kinri_protected_by_monto
+			duration = 7300
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = jxp_ikko.6
+	title = "jxp_ikko.6.t"
+	desc = "jxp_ikko.6.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_ikko.6.a"
+		set_country_flag = jxp_ikko_rising_resolved
+		set_country_flag = jxp_ikko_contact
+		add_country_modifier = {
+			name = jxp_ikko_reconciled
+			duration = 7300
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_ikko.6.b"
+		set_country_flag = jxp_ikko_rising_resolved
+		add_country_modifier = {
+			name = jxp_ikko_suppressed
+			duration = 3650
+		}
+		jxp_add_tenka_order_10_effect = yes
+	}
+
+	option = {
+		name = "jxp_ikko.6.c"
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_ikko
+		set_country_flag = jxp_ikko_contact
+		set_country_flag = jxp_ikko_rising_resolved
+		jxp_subtract_tenka_order_10_effect = yes
+		jxp_change_to_ijp_effect = yes
+		jxp_grant_ikko_heartland_claims_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_ikko.7
+	title = "jxp_ikko.7.t"
+	desc = "jxp_ikko.7.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_path_ikko
+		NOT = { has_country_flag = jxp_ikko_commonwealth_seen }
+		stability = 1
+		num_of_cities = 20
+	}
+
+	mean_time_to_happen = {
+		days = 3000
+	}
+
+	option = {
+		name = "jxp_ikko.7.a"
+		set_country_flag = jxp_ikko_commonwealth_seen
+		add_country_modifier = {
+			name = jxp_peasant_commonwealth
+			duration = -1
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_ikko.8
+	title = "jxp_ikko.8.t"
+	desc = "jxp_ikko.8.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_ikko.8.a"
+		set_country_flag = jxp_ikko_covenant_seen
+		add_country_modifier = {
+			name = jxp_pure_land_covenant
+			duration = -1
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}

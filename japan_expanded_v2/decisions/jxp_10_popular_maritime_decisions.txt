@@ -1,0 +1,131 @@
+country_decisions = {
+	jxp_decision_sponsor_terauchi_towns = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				NOT = { jxp_has_any_route_trigger = yes }
+				has_country_flag = jxp_path_ikko
+			}
+			NOT = { has_country_flag = jxp_ikko_terauchi_decision_done }
+			NOT = { has_country_flag = jxp_path_wokou }
+			NOT = { tag = WAK }
+		}
+		allow = {
+			stability = 0
+			adm_power = 75
+			treasury = 100
+			OR = {
+				owns = 1021
+				owns = 1020
+				any_owned_province = { region = japan_region }
+			}
+		}
+		effect = {
+			add_adm_power = -75
+			add_treasury = -100
+			set_country_flag = jxp_ikko_terauchi_decision_done
+			set_country_flag = jxp_ikko_contact
+			if = {
+				limit = { NOT = { has_country_flag = jxp_ikko_terauchi_seen } }
+				country_event = { id = jxp_ikko.2 days = 1 }
+			}
+			jxp_subtract_tenka_order_5_effect = yes
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_decision_fund_wokou_brokers = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				NOT = { jxp_has_any_route_trigger = yes }
+				has_country_flag = jxp_path_wokou
+			}
+			NOT = { has_country_flag = jxp_wokou_brokers_funded }
+			NOT = { has_country_flag = jxp_path_ikko }
+			NOT = { tag = IJP }
+		}
+		allow = {
+			stability = 0
+			dip_power = 75
+			treasury = 100
+			num_of_ports = 3
+			jxp_oceanic_opening_at_least_20 = yes
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -100
+			set_country_flag = jxp_wokou_brokers_funded
+			set_country_flag = jxp_wokou_contact
+			if = {
+				limit = { NOT = { has_country_flag = jxp_wokou_letters_seen } }
+				country_event = { id = jxp_wokou.2 days = 1 }
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			jxp_subtract_imperial_sanction_5_effect = yes
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_decision_ikko_commonwealth = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { tag = IJP }
+		}
+		allow = {
+			stability = 0
+			adm_power = 100
+			jxp_has_ikko_opening_trigger = yes
+		}
+		effect = {
+			add_adm_power = -100
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_ikko
+			set_country_flag = jxp_ikko_contact
+			jxp_subtract_tenka_order_10_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			jxp_change_to_ijp_effect = yes
+			jxp_grant_ikko_heartland_claims_effect = yes
+			add_country_modifier = {
+				name = jxp_route_ikko
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_decision_form_wokou_confederacy = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { tag = WAK }
+		}
+		allow = {
+			stability = 0
+			dip_power = 100
+			num_of_ports = 5
+			jxp_has_wokou_opening_trigger = yes
+			jxp_oceanic_opening_at_least_35 = yes
+		}
+		effect = {
+			add_dip_power = -100
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_wokou
+			set_country_flag = jxp_wokou_contact
+			jxp_add_oceanic_opening_10_effect = yes
+			jxp_subtract_imperial_sanction_5_effect = yes
+			jxp_change_to_wak_effect = yes
+			jxp_grant_wokou_sea_claims_effect = yes
+			add_country_modifier = {
+				name = jxp_route_wokou
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

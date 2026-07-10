@@ -1,0 +1,41 @@
+#4979 - Zenkoji
+
+owner = MKM
+controller = MKM
+culture = togoku
+religion = shinto
+capital = "Katsurao"
+trade_goods = livestock
+hre = no
+base_tax = 1
+base_manpower = 2
+base_production = 2
+is_city = yes
+add_core = MKM
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1 = { discovered_by = POR }
+
+1553.1.1 = {
+	owner = TKD
+	controller = TKD
+	add_core = TKD
+	remove_core = MKM
+}
+1582.4.3 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = TKD
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = ODA
+}

@@ -1,0 +1,38 @@
+JXP government reform icon validation
+Generated: 2026-07-09 13:23:24 -07:00
+Expected icons: 35
+jxp_sakoku_hostage_roads.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=537272
+jxp_sakoku_coastal_watch.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=609740
+jxp_sakoku_hidden_books.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=341000
+jxp_open_silver_scales.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=653837
+jxp_open_artillery_contract.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=603050
+jxp_open_chartered_factory.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=596987
+jxp_kirishitan_seminary_book.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=372358
+jxp_kirishitan_hospital_bell.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=539991
+jxp_kirishitan_nagasaki_admiralty.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=433989
+jxp_confucian_exam_tablet.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=552750
+jxp_confucian_law_codex.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=451652
+jxp_confucian_three_teachings.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=567841
+jxp_imperial_kokugaku_scroll.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=621303
+jxp_imperial_governor_seal.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=527425
+jxp_imperial_guard_banner.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=474756
+jxp_reformed_printing_press.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=488635
+jxp_reformed_civic_oath.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=486741
+jxp_reformed_contract_ship.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=606881
+jxp_kaikyo_monsoon_diwan.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=428679
+jxp_kaikyo_waqf_granary.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=427100
+jxp_kaikyo_spice_guard.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=397318
+jxp_ikko_somon_bell.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=497883
+jxp_ikko_granary.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=577118
+jxp_ikko_ashigaru_oath.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=529631
+jxp_wokou_black_tide_law.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=435835
+jxp_wokou_freeport.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=594718
+jxp_wokou_boarding_hooks.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=528623
+jxp_founder_house_code.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=749655
+jxp_founder_martial_roll.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=614231
+jxp_founder_cadaster_office.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=255-255|nonzero=3249|partial=0|opaque=3249|color_energy=698102
+jxp_founder_admiralty.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=0-255|nonzero=3198|partial=166|opaque=3032|color_energy=506617
+jxp_founder_court_council.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=0-255|nonzero=3198|partial=166|opaque=3032|color_energy=461068
+jxp_founder_trade_brokerage.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=240-255|nonzero=3249|partial=84|opaque=3165|color_energy=430514
+jxp_founder_rite_compact.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=220-255|nonzero=3249|partial=110|opaque=3139|color_energy=500875
+jxp_founder_renovated_state.dds|57x57|RGBA32|masks=00FF0000/0000FF00/000000FF/FF000000|bytes=13124|alpha=220-255|nonzero=3249|partial=110|opaque=3139|color_energy=691461

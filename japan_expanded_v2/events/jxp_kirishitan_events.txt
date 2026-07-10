@@ -1,0 +1,355 @@
+namespace = jxp_kirishitan
+
+country_event = {
+	id = jxp_kirishitan.1
+	title = "jxp_kirishitan.1.t"
+	desc = "jxp_kirishitan.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_private_overseas_trade_trigger = yes
+		is_year = 1549
+		NOT = { has_country_flag = jxp_missionary_arrival_seen }
+		OR = {
+			has_country_flag = jxp_kirishitan_contact
+			jxp_oceanic_opening_at_least_35 = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_kirishitan.1.a"
+		set_country_flag = jxp_missionary_arrival_seen
+		set_country_flag = jxp_kirishitan_contact
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_kirishitan_networks
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jxp_kirishitan.1.b"
+		set_country_flag = jxp_missionary_arrival_seen
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.2
+	title = "jxp_kirishitan.2.t"
+	desc = "jxp_kirishitan.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_private_overseas_trade_trigger = yes
+		has_country_flag = jxp_kirishitan_contact
+		NOT = { has_country_flag = jxp_baptized_daimyo_seen }
+		any_owned_province = {
+			region = japan_region
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_kirishitan.2.a"
+		set_country_flag = jxp_baptized_daimyo_seen
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			change_religion = catholic
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_kirishitan.2.b"
+		set_country_flag = jxp_baptized_daimyo_seen
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.3
+	title = "jxp_kirishitan.3.t"
+	desc = "jxp_kirishitan.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_year = 1600
+		NOT = { has_country_flag = jxp_hidden_christians_seen }
+		any_owned_province = {
+			region = japan_region
+			religion = catholic
+		}
+		NOT = { has_country_flag = jxp_path_kirishitan }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_kirishitan.3.a"
+		set_country_flag = jxp_hidden_christians_seen
+		jxp_reduce_shimabara_pressure_effect = yes
+	}
+	option = {
+		name = "jxp_kirishitan.3.b"
+		set_country_flag = jxp_hidden_christians_seen
+		jxp_subtract_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_expelled_padres
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.4
+	title = "jxp_kirishitan.4.t"
+	desc = "jxp_kirishitan.4.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_kirishitan.4.a"
+		set_country_flag = jxp_shimabara_resolved
+		jxp_add_tenka_order_10_effect = yes
+		jxp_subtract_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_shimabara_suppressed
+			duration = 7300
+		}
+	}
+	option = {
+		name = "jxp_kirishitan.4.b"
+		set_country_flag = jxp_shimabara_resolved
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		jxp_reduce_shimabara_pressure_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.5
+	title = "jxp_kirishitan.5.t"
+	desc = "jxp_kirishitan.5.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		religion = catholic
+		NOT = { has_country_flag = jxp_kirishitan_centers_established }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "jxp_kirishitan.5.a"
+		set_country_flag = jxp_kirishitan_centers_established
+		set_country_flag = jxp_kirishitan_conversion_active
+		add_country_modifier = {
+			name = jxp_kirishitan_state_church
+			duration = 7300
+		}
+		jxp_spawn_kirishitan_reform_centers_effect = yes
+		hidden_effect = {
+			country_event = { id = jxp_kirishitan.6 days = 365 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.6
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_province = {
+					region = japan_region
+					NOT = { religion = catholic }
+				}
+			}
+			jxp_kirishitan_convert_one_japan_province_effect = yes
+			country_event = { id = jxp_kirishitan.6 days = 365 }
+		}
+		else = {
+			clr_country_flag = jxp_kirishitan_conversion_active
+			country_event = { id = jxp_kirishitan.7 days = 30 }
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.7
+	title = "jxp_kirishitan.7.t"
+	desc = "jxp_kirishitan.7.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		religion = catholic
+		NOT = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = catholic }
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_kirishitan.7.a"
+		add_prestige = 10
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.8
+	title = "jxp_kirishitan.8.t"
+	desc = "jxp_kirishitan.8.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		religion = catholic
+		owns = 4182
+		4182 = { religion = catholic }
+		NOT = { has_country_flag = jxp_nagasaki_bishopric_seen }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+
+	option = {
+		name = "jxp_kirishitan.8.a"
+		set_country_flag = jxp_nagasaki_bishopric_seen
+		add_country_modifier = {
+			name = jxp_nagasaki_bishopric
+			duration = 7300
+		}
+		4182 = {
+			add_province_modifier = {
+				name = jxp_kirishitan_reform_center
+				duration = -1
+			}
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.9
+	title = "jxp_kirishitan.9.t"
+	desc = "jxp_kirishitan.9.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		jxp_not_sakoku_locked_trigger = yes
+		religion = catholic
+		NOT = { has_country_flag = jxp_roman_kyoto_embassy_seen }
+		OR = {
+			jxp_oceanic_opening_at_least_60 = yes
+			any_known_country = { religion = catholic }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 96
+	}
+
+	option = {
+		name = "jxp_kirishitan.9.a"
+		set_country_flag = jxp_roman_kyoto_embassy_seen
+		add_country_modifier = {
+			name = jxp_kirishitan_roman_embassy
+			duration = 7300
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_kirishitan.9.b"
+		set_country_flag = jxp_roman_kyoto_embassy_seen
+		add_country_modifier = {
+			name = jxp_kirishitan_state_church
+			duration = 7300
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.10
+	title = "jxp_kirishitan.10.t"
+	desc = "jxp_kirishitan.10.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		jxp_not_sakoku_locked_trigger = yes
+		religion = catholic
+		jxp_oceanic_opening_at_least_60 = yes
+		mil_tech = 12
+		NOT = { has_country_flag = jxp_kirishitan_oceanic_orders_seen }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_kirishitan.10.a"
+		set_country_flag = jxp_kirishitan_oceanic_orders_seen
+		add_country_modifier = {
+			name = jxp_kirishitan_oceanic_orders
+			duration = 7300
+		}
+		add_army_tradition = 5
+		add_navy_tradition = 5
+	}
+}
