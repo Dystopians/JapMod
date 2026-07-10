@@ -65,6 +65,15 @@ country_event = {
 		}
 		jxp_add_oceanic_opening_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_wokou.2.b"
+		set_country_flag = jxp_wokou_letters_seen
+		add_treasury = -75
+		add_navy_tradition = 5
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
 }
 
 country_event = {
@@ -94,6 +103,14 @@ country_event = {
 		}
 		add_dip_power = 25
 	}
+
+	option = {
+		name = "jxp_wokou.3.b"
+		set_country_flag = jxp_tsushima_brokers_seen
+		add_dip_power = -25
+		add_treasury = 50
+		jxp_add_imperial_sanction_5_effect = yes
+	}
 }
 
 country_event = {
@@ -122,6 +139,14 @@ country_event = {
 			duration = 7300
 		}
 		add_navy_tradition = 5
+	}
+
+	option = {
+		name = "jxp_wokou.4.b"
+		set_country_flag = jxp_setouchi_pilots_seen
+		add_treasury = -50
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
 	}
 }
 
@@ -155,6 +180,14 @@ country_event = {
 		}
 		jxp_add_oceanic_opening_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_wokou.5.b"
+		set_country_flag = jxp_ryukyu_gate_seen
+		add_treasury = -75
+		add_prestige = 10
+		jxp_add_imperial_sanction_5_effect = yes
+	}
 }
 
 country_event = {
@@ -185,6 +218,14 @@ country_event = {
 		}
 		jxp_subtract_imperial_sanction_5_effect = yes
 		add_treasury = 50
+	}
+
+	option = {
+		name = "jxp_wokou.6.b"
+		set_country_flag = jxp_ming_sea_smugglers_seen
+		add_treasury = -50
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
 	}
 }
 

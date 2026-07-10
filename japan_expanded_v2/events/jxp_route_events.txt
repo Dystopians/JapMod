@@ -75,6 +75,17 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		name = "jxp_rangaku.1.b"
+		set_country_flag = jxp_rangaku_bureau_seen
+		add_country_modifier = {
+			name = jxp_reviewed_translations
+			duration = 3650
+		}
+		add_dip_power = -25
+		jxp_add_oceanic_opening_5_effect = yes
+	}
 }
 
 country_event = {
@@ -103,6 +114,18 @@ country_event = {
 			duration = 7300
 		}
 		jxp_add_imperial_sanction_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_confucian.1.b"
+		set_country_flag = jxp_confucian_academy_seen
+		add_country_modifier = {
+			name = jxp_confucian_academies
+			duration = 7300
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
 	}
 }
 

@@ -30,5 +30,27 @@
       "sha256": "d8a2d8f46f7bd0d7f01d13b5e8f66ea8e30325d7eadaad94f58518516d4b228e",
       "purpose": "Asian trade fallback in slot five"
     }
+  ],
+  "mandate_files": [
+    {
+      "path": "common/cb_types/00_cb_types.txt",
+      "sha256": "c9b76e64963a9b8e20eb9c4729d400ee13cd71f7818e80d247b134cc831033d9",
+      "purpose": "vanilla Take the Mandate CB and Emperor-of-China target contract"
+    },
+    {
+      "path": "common/wargoal_types/00_wargoal_types.txt",
+      "sha256": "ec45a5a221b762a326fab4f29099e39b6461665072d53fa398ac466f38617600",
+      "purpose": "vanilla po_take_mandate peace option and regional conquest wargoal grammar"
+    },
+    {
+      "path": "common/imperial_reforms/01_china.txt",
+      "sha256": "e7a3f1e8065b8d8e02c9dabea403525b994f9cfd844e5b14e05b57a24137759c",
+      "purpose": "vanilla celestial_empire imperial reform schema"
+    },
+    {
+      "path": "events/ChineseEmpire.txt",
+      "sha256": "7bb14aaa99b89fbca230272bc7d7c4ed1e7dbe1468b3d198a6bf25170de680a9",
+      "purpose": "vanilla non-Confucian and non-East-Asian Emperor pressure flags"
+    }
   ]
 }

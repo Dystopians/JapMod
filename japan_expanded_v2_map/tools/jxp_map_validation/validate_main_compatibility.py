@@ -713,6 +713,7 @@ def main() -> int:
         map_effect_text, "jxp_map_initialize_geography_contract_effect"
     )
     actual_geography: dict[str, set[str]] = defaultdict(set)
+    actual_province_geography: dict[str, set[int]] = defaultdict(set)
     if geography_block is None:
         report.error("Companion geography compatibility initializer is missing")
     else:
@@ -726,14 +727,19 @@ def main() -> int:
                 or not isinstance(every_province.value, Object)
             ):
                 continue
-            area = first_scalar(first_object(every_province.value, "limit"), "area")
-            if not area:
-                continue
+            limit = first_object(every_province.value, "limit")
+            area = first_scalar(limit, "area")
+            province_id = first_scalar(limit, "province_id")
             for _path, assignment in find_assignments(
                 every_province.value, "set_province_flag"
             ):
                 if isinstance(assignment.value, Scalar):
-                    actual_geography[assignment.value.text].add(area)
+                    if area:
+                        actual_geography[assignment.value.text].add(area)
+                    if province_id and province_id.isdigit():
+                        actual_province_geography[assignment.value.text].add(
+                            int(province_id)
+                        )
     expected_geography = {
         flag: set(areas) for flag, areas in contract["geography_flags"].items()
     }
@@ -742,7 +748,16 @@ def main() -> int:
             f"Companion geography flag mapping {dict(actual_geography)}, "
             f"expected {expected_geography}"
         )
-    for flag in expected_geography:
+    expected_province_geography = {
+        flag: {int(province) for province in provinces}
+        for flag, provinces in contract.get("geography_province_flags", {}).items()
+    }
+    if actual_province_geography != expected_province_geography:
+        report.error(
+            "Companion exact-province geography flag mapping "
+            f"{dict(actual_province_geography)}, expected {expected_province_geography}"
+        )
+    for flag in expected_geography.keys() | expected_province_geography.keys():
         if not re.search(rf"has_province_flag\s*=\s*{re.escape(flag)}\b", active_main_text):
             report.error(f"Main gameplay never consumes companion geography flag {flag}")
 
@@ -756,7 +771,8 @@ def main() -> int:
     report.note(
         f"Geography contract: {len(japan_provinces)} Japan provinces, "
         f"{len(japanese_hardcodes)} active hardcoded Japanese anchors, "
-        f"{len(expected_geography)} additive macro-scope flags"
+        f"{len(expected_geography)} additive macro-scope flags and "
+        f"{len(expected_province_geography)} exact-province flags"
     )
     report.note(
         f"Balance review inventory: {len(threshold_occurrences)} active num_of_cities 25/30 gates "

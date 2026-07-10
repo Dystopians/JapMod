@@ -1,7 +1,13 @@
 jxp_map_initialize_geography_contract_effect = {
 	if = {
-		limit = { NOT = { has_global_flag = jxp_map_geography_contract_v011 } }
+		limit = {
+			OR = {
+				NOT = { has_global_flag = jxp_map_geography_contract_v011 }
+				NOT = { has_global_flag = jxp_map_geography_contract_v012 }
+			}
+		}
 		set_global_flag = jxp_map_geography_contract_v011
+		set_global_flag = jxp_map_geography_contract_v012
 		every_province = {
 			limit = { area = jxp_western_kyushu_area }
 			set_province_flag = jxp_map_compat_shimabara_belt
@@ -20,6 +26,11 @@ jxp_map_initialize_geography_contract_effect = {
 		every_province = {
 			limit = { area = jxp_ryukyu_area }
 			set_province_flag = jxp_map_compat_wokou_waters
+			set_province_flag = jxp_map_compat_ryukyu_gateway
+		}
+		every_province = {
+			limit = { province_id = 4651 }
+			set_province_flag = jxp_map_compat_tsushima_channel
 		}
 	}
 }
@@ -67,7 +78,26 @@ jxp_map_initialize_effect = {
 		jxp_map_record_origin_effect = yes
 		jxp_ensure_daimyo_polity_effect = yes
 	}
+	jxp_map_migrate_regional_flavor_v013_effect = yes
 	jxp_map_migrate_identity_v012_effect = yes
+}
+
+# Existing v0.12 identity saves need one mission refresh to reveal the three
+# regional maritime continuations.  Fresh tags defer to the identity bridge,
+# avoiding a second refresh during initial setup.
+jxp_map_migrate_regional_flavor_v013_effect = {
+	if = {
+		limit = {
+			jxp_is_daimyo_stage_trigger = yes
+			jxp_map_is_new_daimyo_tag_trigger = yes
+			NOT = { has_country_flag = jxp_map_regional_flavor_migration_v013 }
+		}
+		set_country_flag = jxp_map_regional_flavor_migration_v013
+		if = {
+			limit = { has_country_flag = jxp_map_identity_migration_v012 }
+			jxp_refresh_route_missions_effect = yes
+		}
+	}
 }
 
 # One-time bridge from the shared pre-identity idea group to the exact-tag
@@ -161,6 +191,7 @@ jxp_map_debug_full_reset_effect = {
 	jxp_map_clear_origin_effect = yes
 	clr_country_flag = jxp_map_runtime_migration_v011
 	clr_country_flag = jxp_map_identity_migration_v012
+	clr_country_flag = jxp_map_regional_flavor_migration_v013
 	clr_country_flag = jxp_map_post_tag_idea_sync_v012
 	clr_country_flag = jxp_map_initialized
 	jxp_map_initialize_effect = yes

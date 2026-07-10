@@ -148,6 +148,26 @@ jxp_kirishitan_deep_missions = {
 			}
 		}
 	}
+
+	jxp_mission_kjp_estates_concordat = {
+		icon = mission_monarch_in_throne_room
+		position = 15
+		required_missions = { jxp_mission_oceanic_church_state }
+		trigger = {
+			has_reform = jxp_kirishitan_estates_general_reform
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_kirishitan_estates_concordat
+				duration = -1
+			}
+		}
+	}
 }
 
 jxp_reformed_deep_missions = {
@@ -473,6 +493,26 @@ jxp_kaikyo_deep_missions = {
 			}
 			add_country_modifier = {
 				name = jxp_route_kaikyo
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_sjp_diwan_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 15
+		required_missions = { jxp_mission_sultanate_sea_law }
+		trigger = {
+			has_reform = jxp_kaikyo_japan_reform
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_kaikyo_diwan_constitution
 				duration = -1
 			}
 		}

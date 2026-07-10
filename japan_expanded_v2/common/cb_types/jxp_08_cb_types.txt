@@ -3,6 +3,7 @@ cb_jxp_hakko_ichiu = {
 
 	prerequisites_self = {
 		has_dlc = "Mandate of Heaven"
+		jxp_is_japanese_polity_trigger = yes
 		is_emperor_of_china = yes
 		has_country_flag = jxp_hakko_ichiu_reform_passed
 	}

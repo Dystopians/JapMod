@@ -13,6 +13,7 @@ country_event = {
 
 	immediate = {
 		clr_country_flag = jxp_mission_refresh_pending
+		jxp_sync_final_state_power_structure_effect = yes
 		jxp_sync_route_national_ideas_effect = yes
 		swap_non_generic_missions = yes
 	}

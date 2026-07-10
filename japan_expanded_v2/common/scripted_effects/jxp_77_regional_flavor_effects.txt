@@ -1,0 +1,37 @@
+jxp_77_clear_regional_outcomes_effect = {
+	remove_country_modifier = jxp_77_tsushima_interpreter_office
+	remove_country_modifier = jxp_77_tsushima_coastal_watch
+	remove_country_modifier = jxp_77_setouchi_pilot_charters
+	remove_country_modifier = jxp_77_setouchi_toll_compromise
+	remove_country_modifier = jxp_77_ryukyu_tribute_bureau
+	remove_country_modifier = jxp_77_ryukyu_free_port
+}
+
+jxp_77_clear_regional_flavor_effect = {
+	remove_country_modifier = jxp_77_regional_council_recent
+	jxp_77_clear_regional_outcomes_effect = yes
+}
+
+jxp_77_schedule_tsushima_channel_council_effect = {
+	add_country_modifier = {
+		name = jxp_77_regional_council_recent
+		duration = 2
+	}
+	country_event = { id = jxp_77.1 days = 1 }
+}
+
+jxp_77_schedule_setouchi_pilot_circuit_effect = {
+	add_country_modifier = {
+		name = jxp_77_regional_council_recent
+		duration = 2
+	}
+	country_event = { id = jxp_77.2 days = 1 }
+}
+
+jxp_77_schedule_ryukyu_tribute_gateway_effect = {
+	add_country_modifier = {
+		name = jxp_77_regional_council_recent
+		duration = 2
+	}
+	country_event = { id = jxp_77.3 days = 1 }
+}

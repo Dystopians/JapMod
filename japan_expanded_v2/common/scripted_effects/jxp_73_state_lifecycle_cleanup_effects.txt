@@ -2,6 +2,7 @@ jxp_debug_clear_legacy_state_debt_effect = {
 	# One executable reset boundary for persistent legacy, mission, and migration state.
 	# This is intentionally called by the canonical event-state debug root.
 	hidden_effect = {
+		jxp_clear_final_state_capstone_modifiers_effect = yes
 		clr_country_flag = jxp_50_show_legacy_detail_decisions
 		clr_country_flag = jxp_24_court_agenda_ranks
 		clr_country_flag = jxp_24_court_agenda_stewards

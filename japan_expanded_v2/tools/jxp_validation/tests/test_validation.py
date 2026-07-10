@@ -128,10 +128,10 @@ class SharedLedgerTests(unittest.TestCase):
             f'version="{main_version}"\n', encoding="utf-8"
         )
         (map_root / "descriptor.mod").write_text(
-            'version="0.1.2-alpha"\n', encoding="utf-8"
+            'version="0.1.3-alpha"\n', encoding="utf-8"
         )
         (main_root.parent / "japan_expanded_v2_map.mod").write_text(
-            'version="0.1.2-alpha"\n', encoding="utf-8"
+            'version="0.1.3-alpha"\n', encoding="utf-8"
         )
 
     def test_live_shared_ledger_is_consistent(self) -> None:
@@ -151,7 +151,7 @@ class SharedLedgerTests(unittest.TestCase):
     def test_shared_ledger_rejects_unindexed_report(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = self._copy_coordination_surface(Path(directory))
-            self._write_descriptors(root, "0.27.0")
+            self._write_descriptors(root, "0.28.0")
             map_root = root.parent / "japan_expanded_v2_map"
             (map_root / "dev_logs" / "unindexed_report.md").write_text(
                 "# New report\n", encoding="utf-8"

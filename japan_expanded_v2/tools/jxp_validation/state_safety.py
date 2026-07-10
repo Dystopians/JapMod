@@ -80,9 +80,12 @@ MAP_DEBUG_ROOTS = ("jxp_map_debug_full_reset_effect",)
 # created JXP state must have an executable cleanup path.
 PERSISTENT_CLEANUP_EXEMPTIONS = {
     ("global_flag", "jxp_map_geography_contract_v011"),
+    ("global_flag", "jxp_map_geography_contract_v012"),
     ("province_flag", "jxp_map_compat_ikko_heartland"),
+    ("province_flag", "jxp_map_compat_ryukyu_gateway"),
     ("province_flag", "jxp_map_compat_setouchi"),
     ("province_flag", "jxp_map_compat_shimabara_belt"),
+    ("province_flag", "jxp_map_compat_tsushima_channel"),
     ("province_flag", "jxp_map_compat_wokou_waters"),
 }
 

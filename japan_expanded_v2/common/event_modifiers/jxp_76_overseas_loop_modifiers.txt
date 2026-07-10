@@ -1,0 +1,71 @@
+jxp_76_pacific_network_charter = {
+	global_trade_power = 0.05
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_76_manila_nagasaki_convoys = {
+	trade_efficiency = 0.08
+	global_ship_trade_power = 0.10
+}
+
+jxp_76_alaska_survey_stations = {
+	global_colonial_growth = 10
+	global_sailors_modifier = 0.10
+}
+
+jxp_76_california_settlement_compacts = {
+	global_colonial_growth = 10
+	production_efficiency = 0.05
+}
+
+jxp_76_pacific_court_council = {
+	diplomatic_reputation = 1
+	stability_cost_modifier = -0.05
+}
+
+jxp_76_brokerage_dividend = {
+	trade_efficiency = 0.10
+	global_trade_power = 0.05
+}
+
+jxp_76_mission_house_network = {
+	diplomatic_reputation = 1
+	global_sailors_modifier = 0.05
+}
+
+jxp_76_court_route_register = {
+	stability_cost_modifier = -0.05
+	global_trade_power = 0.05
+}
+
+jxp_76_public_network_hearing = {
+	diplomatic_reputation = 1
+	trade_efficiency = -0.03
+}
+
+jxp_76_speculative_overreach = {
+	global_unrest = 1
+	global_tax_modifier = -0.05
+}
+
+jxp_76_arbitration_recent = {
+	global_trade_power = -0.03
+	stability_cost_modifier = 0.05
+}
+
+jxp_76_crisis_recess = {
+	global_unrest = 1
+	trade_efficiency = -0.05
+}
+
+jxp_76_pacific_compact = {
+	global_trade_power = 0.10
+	diplomatic_reputation = 1
+	global_colonial_growth = 10
+}
+
+jxp_76_pacific_retrenchment = {
+	global_trade_power = -0.05
+	naval_forcelimit_modifier = -0.05
+	stability_cost_modifier = -0.05
+}

@@ -861,6 +861,26 @@ jxp_japan_open_missions = {
 			}
 		}
 	}
+
+	jxp_mission_open_maritime_cabinet = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_equal_treaties }
+		trigger = {
+			has_reform = jxp_open_maritime_cabinet_reform
+			adm_tech = 18
+			stability = 2
+			diplomatic_reputation = 2
+		}
+		effect = {
+			add_dip_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_open_maritime_cabinet
+				duration = -1
+			}
+		}
+	}
 }
 
 jxp_japan_kirishitan_missions = {

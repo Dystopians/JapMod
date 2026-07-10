@@ -312,6 +312,51 @@ jxp_map_sea_house_missions = {
 			jxp_add_oceanic_opening_5_effect = yes
 		}
 	}
+
+	jxp_77_mission_tsushima_channel_council = {
+		icon = jxp_map_mission_sea_inner_routes
+		position = 13
+		required_missions = { jxp_map_mission_sea_strait_command }
+		trigger = {
+			jxp_77_has_tsushima_channel_trigger = yes
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			num_of_ports = 6
+			navy_tradition = 25
+		}
+		effect = {
+			jxp_77_schedule_tsushima_channel_council_effect = yes
+		}
+	}
+
+	jxp_77_mission_setouchi_pilot_circuit = {
+		icon = jxp_map_mission_sea_port_registers
+		position = 15
+		required_missions = { jxp_77_mission_tsushima_channel_council }
+		trigger = {
+			jxp_77_has_setouchi_circuit_trigger = yes
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			trade_efficiency = 0.15
+			num_of_ports = 7
+		}
+		effect = {
+			jxp_77_schedule_setouchi_pilot_circuit_effect = yes
+		}
+	}
+
+	jxp_77_mission_ryukyu_tribute_gateway = {
+		icon = jxp_map_mission_sea_shipwright_leagues
+		position = 17
+		required_missions = { jxp_77_mission_setouchi_pilot_circuit }
+		trigger = {
+			jxp_77_has_ryukyu_gateway_trigger = yes
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			num_of_ports = 8
+			navy_size_percentage = 1.00
+		}
+		effect = {
+			jxp_77_schedule_ryukyu_tribute_gateway_effect = yes
+		}
+	}
 }
 
 jxp_map_frontier_house_missions = {

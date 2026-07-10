@@ -187,3 +187,10 @@ l_english:
  jxp_map_temple_legacy:0 "寺市法度遗产"
  jxp_map_local_development_drive:0 "领国开发奉行"
  jxp_map_port_registers:0 "浦津船籍名册"
+
+ jxp_77_mission_tsushima_channel_council_title:0 "议定对马海峡"
+ jxp_77_mission_tsushima_channel_council_desc:0 "掌握对马门户，并令通词、浦众和巡船共同接受一套跨海规则。"
+ jxp_77_mission_setouchi_pilot_circuit_title:0 "联结濑户内水先"
+ jxp_77_mission_setouchi_pilot_circuit_desc:0 "控制内海航路，把岛屿水先人、灯标和泊税关联结为稳定网络。"
+ jxp_77_mission_ryukyu_tribute_gateway_title:0 "经营琉球门户"
+ jxp_77_mission_ryukyu_tribute_gateway_desc:0 "把南岛贡使与转口商舶纳入可持续的门户制度，完成贯通日本诸海的航路。"

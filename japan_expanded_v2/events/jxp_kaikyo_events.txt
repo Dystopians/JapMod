@@ -116,6 +116,18 @@ country_event = {
 		}
 		jxp_add_tenka_order_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_kaikyo.2.b"
+		set_country_flag = jxp_halal_port_law_done
+		add_country_modifier = {
+			name = jxp_halal_port_law
+			duration = -1
+		}
+		add_treasury = -50
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+	}
 }
 
 country_event = {
@@ -150,6 +162,18 @@ country_event = {
 			name = jxp_hajj_fleet
 			duration = 7300
 		}
+	}
+
+	option = {
+		name = "jxp_kaikyo.3.b"
+		set_country_flag = jxp_hajj_fleet_done
+		add_treasury = -100
+		add_adm_power = 50
+		add_country_modifier = {
+			name = jxp_hajj_fleet
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
 	}
 }
 
@@ -275,6 +299,18 @@ country_event = {
 		}
 		jxp_add_tenka_order_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_kaikyo.7.b"
+		set_country_flag = jxp_kaikyo_qadi_courts_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_qadi_courts
+			duration = 3650
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_imperial_sanction_5_effect = yes
+	}
 }
 
 country_event = {
@@ -323,5 +359,17 @@ country_event = {
 			add_accepted_culture = malayan
 		}
 		jxp_add_oceanic_opening_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_kaikyo.8.b"
+		set_country_flag = jxp_kaikyo_south_sea_compact_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_south_sea_compact
+			duration = 3650
+		}
+		add_treasury = 100
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
 	}
 }

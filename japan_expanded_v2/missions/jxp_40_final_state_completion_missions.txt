@@ -98,6 +98,26 @@ jxp_japan_uncommitted_council_missions = {
 			change_government_reform_progress = 40
 		}
 	}
+
+	jxp_mission_uncommitted_codify_realm_council = {
+		icon = mission_monarch_in_throne_room
+		position = 12
+		required_missions = { jxp_mission_uncommitted_draft_realm_program }
+		trigger = {
+			has_reform = jxp_uncommitted_realm_council_reform
+			adm_tech = 12
+			stability = 2
+			legitimacy = 75
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_uncommitted_realm_program
+				duration = -1
+			}
+		}
+	}
 }
 
 jxp_japan_uncommitted_horizon_missions = {
@@ -349,6 +369,26 @@ jxp_japan_sakoku_horizon_missions = {
 			}
 		}
 	}
+
+	jxp_mission_sakoku_bakuhan_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_sakoku_four_seas_under_watch }
+		trigger = {
+			has_reform = jxp_sakoku_bakuhan_council_reform
+			adm_tech = 14
+			stability = 2
+			jxp_tenka_order_at_least_75 = yes
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_sakoku_bakuhan_constitution
+				duration = -1
+			}
+		}
+	}
 }
 
 jxp_ikko_common_economy_missions = {
@@ -493,6 +533,26 @@ jxp_ikko_common_economy_missions = {
 			}
 			jxp_add_tenka_order_5_effect = yes
 			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_ijp_somon_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_ikko_realm_of_fellowship }
+		trigger = {
+			has_reform = jxp_ikko_commonwealth_reform
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_ikko_somon_constitution
+				duration = -1
+			}
 		}
 	}
 }

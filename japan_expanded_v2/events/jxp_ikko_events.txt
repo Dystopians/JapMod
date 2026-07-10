@@ -73,6 +73,15 @@ country_event = {
 		}
 		add_adm_power = 25
 	}
+
+	option = {
+		name = "jxp_ikko.2.b"
+		set_country_flag = jxp_ikko_terauchi_seen
+		set_country_flag = jxp_ikko_contact
+		add_adm_power = -25
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
+	}
 }
 
 country_event = {
@@ -105,6 +114,14 @@ country_event = {
 		}
 		jxp_subtract_tenka_order_5_effect = yes
 		add_mil_power = 25
+	}
+
+	option = {
+		name = "jxp_ikko.3.b"
+		set_country_flag = jxp_ikko_monto_militia_seen
+		add_mil_power = -25
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
 	}
 }
 
@@ -152,6 +169,14 @@ country_event = {
 		}
 		add_army_tradition = 5
 	}
+
+	option = {
+		name = "jxp_ikko.4.b"
+		set_country_flag = jxp_ikko_ishiyama_seen
+		add_treasury = -75
+		add_stability = 1
+		jxp_add_imperial_sanction_5_effect = yes
+	}
 }
 
 country_event = {
@@ -181,6 +206,14 @@ country_event = {
 		}
 		jxp_add_imperial_sanction_5_effect = yes
 		add_prestige = 10
+	}
+
+	option = {
+		name = "jxp_ikko.5.b"
+		set_country_flag = jxp_ikko_kinri_seen
+		add_prestige = -5
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
 	}
 }
 
@@ -285,6 +318,18 @@ country_event = {
 			duration = -1
 		}
 		jxp_add_tenka_order_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_ikko.7.b"
+		set_country_flag = jxp_ikko_commonwealth_seen
+		add_country_modifier = {
+			name = jxp_peasant_commonwealth
+			duration = -1
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_imperial_sanction_5_effect = yes
 	}
 }
 

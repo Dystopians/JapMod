@@ -1,6 +1,6 @@
 name="日轮诸道：日本八十八国地图"
 supported_version="1.37.*"
-version="0.1.2-alpha"
+version="0.1.3-alpha"
 picture="thumbnail.png"
 dependencies={
 	"日轮诸道：日本扩展风味包"

@@ -58,6 +58,10 @@
     "jxp_map_compat_shimabara_belt": ["jxp_western_kyushu_area"],
     "jxp_map_compat_ikko_heartland": ["jxp_western_saigoku_area", "jxp_ise_kii_area"],
     "jxp_map_compat_setouchi": ["jxp_western_saigoku_area"],
-    "jxp_map_compat_wokou_waters": ["jxp_western_kyushu_area", "jxp_western_saigoku_area", "jxp_ryukyu_area"]
+    "jxp_map_compat_wokou_waters": ["jxp_western_kyushu_area", "jxp_western_saigoku_area", "jxp_ryukyu_area"],
+    "jxp_map_compat_ryukyu_gateway": ["jxp_ryukyu_area"]
+  },
+  "geography_province_flags": {
+    "jxp_map_compat_tsushima_channel": [4651]
   }
 }

@@ -306,6 +306,18 @@ country_event = {
 		}
 		jxp_add_oceanic_opening_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_kirishitan.8.b"
+		set_country_flag = jxp_nagasaki_bishopric_seen
+		add_country_modifier = {
+			name = jxp_nagasaki_bishopric
+			duration = 3650
+		}
+		add_treasury = -75
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
 }
 
 country_event = {
@@ -383,5 +395,17 @@ country_event = {
 		}
 		add_army_tradition = 5
 		add_navy_tradition = 5
+	}
+
+	option = {
+		name = "jxp_kirishitan.10.b"
+		set_country_flag = jxp_kirishitan_oceanic_orders_seen
+		add_country_modifier = {
+			name = jxp_kirishitan_oceanic_orders
+			duration = 3650
+		}
+		add_mil_power = -50
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
 	}
 }

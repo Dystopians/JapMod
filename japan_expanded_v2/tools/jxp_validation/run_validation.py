@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-command entrypoint for the Japan Expanded 0.27.0 validation suite."""
+"""One-command entrypoint for the Japan Expanded 0.28.0 validation suite."""
 
 from __future__ import annotations
 
@@ -24,13 +24,17 @@ from jxp_validation.core import (
 )
 from jxp_validation.daimyo_coverage import check_daimyo_coverage
 from jxp_validation.effective_topology import check_effective_topology
+from jxp_validation.final_states import check_final_states
 from jxp_validation.ideas import check_route_ideas
 from jxp_validation.ijp_loop import check_ijp_loop
 from jxp_validation.map_scale import check_map_scale_progression
+from jxp_validation.mandate import check_mandate_contract
 from jxp_validation.mission_refresh import check_mission_refresh
 from jxp_validation.missions import check_missions
 from jxp_validation.names import check_japanese_names
+from jxp_validation.overseas_loop import check_overseas_loop
 from jxp_validation.reforms import check_reforms
+from jxp_validation.regional_flavor import check_regional_flavor
 from jxp_validation.religion import check_confucian_bridge
 from jxp_validation.route_parity import check_route_parity_content
 from jxp_validation.route_parity_four import check_route_parity_four_content
@@ -38,6 +42,7 @@ from jxp_validation.shared_ledger import check_shared_development_ledger
 from jxp_validation.state_safety import check_state_safety
 from jxp_validation.toyotomi import check_toyotomi_history
 from jxp_validation.wak_loop import check_wak_loop
+from jxp_validation.writing_events import check_writing_events
 
 
 def default_mod_root() -> Path:
@@ -76,11 +81,16 @@ def run_checks(
         check_mission_refresh(context),
         check_route_ideas(context, game_root),
         check_map_scale_progression(context),
+        check_mandate_contract(context, game_root),
+        check_final_states(context),
         check_reforms(context),
         check_confucian_bridge(context),
         check_route_parity_content(context),
         check_route_parity_four_content(context),
         check_ijp_loop(context),
+        check_overseas_loop(context),
+        check_regional_flavor(context, companion_context),
+        check_writing_events(context),
         check_state_safety(context, companion_context),
         check_release_compatibility(context),
         check_localisation(context),

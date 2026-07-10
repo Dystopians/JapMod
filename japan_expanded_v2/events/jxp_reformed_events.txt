@@ -118,6 +118,18 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		name = "jxp_reformed.2.b"
+		set_country_flag = jxp_reformed_scriptures_done
+		add_country_modifier = {
+			name = jxp_oranda_scriptures
+			duration = 3650
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
+	}
 }
 
 country_event = {
@@ -150,6 +162,18 @@ country_event = {
 			name = jxp_reformed_court_covenant
 			duration = -1
 		}
+	}
+
+	option = {
+		name = "jxp_reformed.3.b"
+		set_country_flag = jxp_reformed_covenant_done
+		add_country_modifier = {
+			name = jxp_reformed_court_covenant
+			duration = -1
+		}
+		add_dip_power = -50
+		add_stability = 1
+		jxp_add_oceanic_opening_5_effect = yes
 	}
 }
 
@@ -279,6 +303,18 @@ country_event = {
 		}
 		jxp_add_oceanic_opening_5_effect = yes
 	}
+
+	option = {
+		name = "jxp_reformed.7.b"
+		set_country_flag = jxp_reformed_oranda_schools_seen
+		add_country_modifier = {
+			name = jxp_reformed_oranda_schools
+			duration = 3650
+		}
+		add_adm_power = -50
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
 }
 
 country_event = {
@@ -311,5 +347,17 @@ country_event = {
 			duration = 7300
 		}
 		add_navy_tradition = 5
+	}
+
+	option = {
+		name = "jxp_reformed.8.b"
+		set_country_flag = jxp_reformed_elder_ports_seen
+		add_country_modifier = {
+			name = jxp_reformed_elder_ports
+			duration = 3650
+		}
+		add_treasury = -75
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
 	}
 }

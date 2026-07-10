@@ -1,0 +1,133 @@
+jxp_76_pacific_network_eligible_trigger = {
+	has_country_flag = jxp_polity_initialized
+	jxp_allows_private_overseas_trade_trigger = yes
+	OR = {
+		has_country_flag = jxp_pacific_charter_enacted
+		has_country_modifier = jxp_pacific_charter
+		mission_completed = jxp_mission_pacific_charter
+	}
+}
+
+jxp_76_pacific_network_active_trigger = {
+	jxp_76_pacific_network_eligible_trigger = yes
+	has_country_flag = jxp_76_pacific_network_active
+	has_any_disaster = no
+}
+
+# Manila-Nagasaki is primarily a merchant, missionary, and maritime route.
+jxp_76_pacific_manila_profile_trigger = {
+	OR = {
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_kaikyo
+		has_country_flag = jxp_path_wokou
+		tag = KJP
+		tag = RFJ
+		tag = SJP
+		tag = WAK
+	}
+}
+
+# Northern soundings favour open, reformed, imperial, or explicitly colonial states.
+jxp_76_pacific_alaska_profile_trigger = {
+	OR = {
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_imperial
+		tag = RFJ
+		tag = EJP
+		num_of_colonists = 1
+	}
+}
+
+# California settlement remains strongest for open and Christian-facing routes.
+jxp_76_pacific_california_profile_trigger = {
+	OR = {
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_reformed
+		tag = KJP
+		tag = RFJ
+		num_of_colonists = 1
+	}
+}
+
+# Confucian and imperial states participate through registers and court oversight.
+jxp_76_pacific_court_profile_trigger = {
+	OR = {
+		has_country_flag = jxp_path_confucian
+		has_country_flag = jxp_path_imperial
+		tag = CJP
+		tag = EJP
+	}
+}
+
+jxp_76_pacific_manila_anchor_trigger = {
+	OR = {
+		has_country_flag = jxp_manila_nagasaki_route_seen
+		has_country_modifier = jxp_manila_nagasaki_route
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			OR = {
+				area = luzon_area
+				area = southern_luzon_area
+			}
+			is_city = yes
+		}
+	}
+}
+
+jxp_76_pacific_alaska_anchor_trigger = {
+	is_random_new_world = no
+	OR = {
+		has_country_flag = jxp_alaska_survey_seen
+		has_country_modifier = jxp_north_pacific_charts
+		colonial_alaska = { has_discovered = ROOT }
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			colonial_region = colonial_alaska
+			is_city = yes
+		}
+	}
+}
+
+jxp_76_pacific_california_anchor_trigger = {
+	is_random_new_world = no
+	OR = {
+		has_country_flag = jxp_california_anchorages_seen
+		has_country_modifier = jxp_alaska_california_route
+		colonial_california = { has_discovered = ROOT }
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			colonial_region = colonial_california
+			is_city = yes
+		}
+	}
+}
+
+jxp_76_pacific_any_anchor_trigger = {
+	OR = {
+		jxp_76_pacific_manila_anchor_trigger = yes
+		jxp_76_pacific_alaska_anchor_trigger = yes
+		jxp_76_pacific_california_anchor_trigger = yes
+		has_country_flag = jxp_pacific_admiralty_done
+		has_country_flag = jxp_oceanic_sun_state
+	}
+}
+
+jxp_76_pacific_pressure_at_least_10_trigger = {
+	check_variable = { which = jxp_76_pacific_pressure value = 10 }
+}
+
+jxp_76_pacific_pressure_at_least_50_trigger = {
+	check_variable = { which = jxp_76_pacific_pressure value = 50 }
+}
+
+jxp_76_pacific_pressure_at_least_70_trigger = {
+	check_variable = { which = jxp_76_pacific_pressure value = 70 }
+}
+
+jxp_76_pacific_pressure_at_least_85_trigger = {
+	check_variable = { which = jxp_76_pacific_pressure value = 85 }
+}

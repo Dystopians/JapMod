@@ -302,6 +302,8 @@ jxp_subtract_oceanic_opening_10_effect = {
 
 jxp_clear_route_reforms_effect = {
 	jxp_clear_route_high_office_reforms_effect = yes
+	jxp_clear_final_state_power_structures_effect = yes
+	jxp_clear_final_state_capstone_modifiers_effect = yes
 
 	if = { limit = { has_reform = jxp_reformed_japan_reform } remove_government_reform = jxp_reformed_japan_reform }
 	if = { limit = { has_reform = jxp_kaikyo_japan_reform } remove_government_reform = jxp_kaikyo_japan_reform }
@@ -630,6 +632,7 @@ jxp_grant_route_reforms_effect = {
 		}
 		jxp_unlock_founder_house_reform_effect = yes
 	}
+	jxp_sync_final_state_power_structure_effect = yes
 	# Route flags live in reform triggers. Rebuild the option list immediately
 	# after a final-tag change instead of waiting for the government window to
 	# refresh on its own.

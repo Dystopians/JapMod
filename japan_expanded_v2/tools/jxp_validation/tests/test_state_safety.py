@@ -137,9 +137,12 @@ class StateLifecycleTests(unittest.TestCase):
                 "jxp_map_debug_full_reset_effect = { }\n"
                 "jxp_map_initialize_geography_contract_effect = {\n"
                 " set_global_flag = jxp_map_geography_contract_v011\n"
+                " set_global_flag = jxp_map_geography_contract_v012\n"
                 " set_province_flag = jxp_map_compat_ikko_heartland\n"
+                " set_province_flag = jxp_map_compat_ryukyu_gateway\n"
                 " set_province_flag = jxp_map_compat_setouchi\n"
                 " set_province_flag = jxp_map_compat_shimabara_belt\n"
+                " set_province_flag = jxp_map_compat_tsushima_channel\n"
                 " set_province_flag = jxp_map_compat_wokou_waters\n"
                 "}\n",
             )
@@ -148,9 +151,12 @@ class StateLifecycleTests(unittest.TestCase):
                 "common/scripted_triggers/map.txt",
                 "jxp_map_contract_present_trigger = {\n"
                 " has_global_flag = jxp_map_geography_contract_v011\n"
+                " has_global_flag = jxp_map_geography_contract_v012\n"
                 " has_province_flag = jxp_map_compat_ikko_heartland\n"
+                " has_province_flag = jxp_map_compat_ryukyu_gateway\n"
                 " has_province_flag = jxp_map_compat_setouchi\n"
                 " has_province_flag = jxp_map_compat_shimabara_belt\n"
+                " has_province_flag = jxp_map_compat_tsushima_channel\n"
                 " has_province_flag = jxp_map_compat_wokou_waters\n"
                 "}\n",
             )

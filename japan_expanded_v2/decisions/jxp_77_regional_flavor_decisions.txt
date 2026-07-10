@@ -1,0 +1,121 @@
+country_decisions = {
+	jxp_77_commission_tsushima_channel_council = {
+		major = no
+		potential = {
+			normal_or_historical_nations = yes
+			jxp_is_japanese_polity_trigger = yes
+			jxp_77_has_tsushima_channel_trigger = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			dip_power = 50
+			treasury = 75
+			num_of_ports = 1
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			jxp_77_schedule_tsushima_channel_council_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 treasury = 300 }
+			modifier = { factor = 1.5 num_of_ports = 4 }
+		}
+	}
+
+	jxp_77_commission_setouchi_pilot_circuit = {
+		major = no
+		potential = {
+			normal_or_historical_nations = yes
+			jxp_is_japanese_polity_trigger = yes
+			jxp_77_has_setouchi_circuit_trigger = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			dip_power = 50
+			treasury = 75
+			num_of_ports = 2
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			jxp_77_schedule_setouchi_pilot_circuit_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 treasury = 300 }
+			modifier = { factor = 1.5 trade_efficiency = 0.10 }
+		}
+	}
+
+	jxp_77_commission_ryukyu_tribute_gateway = {
+		major = no
+		potential = {
+			normal_or_historical_nations = yes
+			jxp_is_japanese_polity_trigger = yes
+			jxp_77_has_ryukyu_gateway_trigger = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = jxp_77_regional_council_recent }
+			dip_power = 50
+			treasury = 75
+			num_of_ports = 2
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			jxp_77_schedule_ryukyu_tribute_gateway_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 treasury = 300 }
+			modifier = { factor = 1.5 diplomatic_reputation = 1 }
+		}
+	}
+
+	jxp_77_debug_tsushima_channel_council = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_77_clear_regional_flavor_effect = yes
+			country_event = { id = jxp_77.1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_77_debug_setouchi_pilot_circuit = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_77_clear_regional_flavor_effect = yes
+			country_event = { id = jxp_77.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_77_debug_ryukyu_tribute_gateway = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_77_clear_regional_flavor_effect = yes
+			country_event = { id = jxp_77.3 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
