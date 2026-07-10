@@ -32,18 +32,18 @@ historical_units = {
 }
 
 monarch_names = {
-	"Ieyasu #0" = 20
-	"Hidetada #0" = 20
-	"Iemitsu #0" = 20
-	"Yoshimune #0" = 20
-	"Razansai #0" = 10
-	"Seika #0" = 10
-	"Yamaga #0" = 10
-	"Tomoko #0" = -10
+	"家康 #0" = 20
+	"秀忠 #0" = 20
+	"家光 #0" = 20
+	"吉宗 #0" = 20
+	"罗山斋 #0" = 10
+	"惺窝 #0" = 10
+	"山鹿 #0" = 10
+	"智子 #0" = -10
 }
 
 leader_names = {
-	Tokugawa Hayashi Fujiwara Yamaga Arai Ogyu Matsudaira Ii Honda Sakakibara
+	德川 林 藤原 山鹿 新井 荻生 松平 井伊 本多 榊原
 }
 
 ship_names = {

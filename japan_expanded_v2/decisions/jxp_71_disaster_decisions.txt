@@ -1,0 +1,131 @@
+country_decisions = {
+	jxp_decision_settle_shimabara_fire = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			has_disaster = jxp_shimabara_fire
+			has_country_flag = jxp_shimabara_crisis_active
+		}
+		allow = {
+			had_country_flag = {
+				flag = jxp_shimabara_crisis_active
+				days = 365
+			}
+			OR = {
+				has_country_flag = jxp_shimabara_mitigated
+				AND = {
+					stability = 1
+					NOT = { num_of_rebel_armies = 1 }
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_kirishitan.11 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_country_flag = jxp_shimabara_mitigated
+			}
+		}
+	}
+
+	jxp_decision_settle_ikko_rising = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			has_disaster = jxp_ikko_rising
+			has_country_flag = jxp_ikko_rising_active
+		}
+		allow = {
+			had_country_flag = {
+				flag = jxp_ikko_rising_active
+				days = 365
+			}
+			OR = {
+				has_country_modifier = jxp_ikko_reconciled
+				AND = {
+					stability = 1
+					jxp_tenka_order_at_least_50 = yes
+					NOT = { num_of_rebel_armies = 1 }
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_ikko.9 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_country_modifier = jxp_ikko_reconciled
+			}
+		}
+	}
+
+	jxp_decision_resolve_keian_ronin_crisis = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			has_disaster = jxp_keian_ronin_crisis
+			has_country_flag = jxp_keian_ronin_crisis_active
+		}
+		allow = {
+			had_country_flag = {
+				flag = jxp_keian_ronin_crisis_active
+				days = 365
+			}
+			stability = 1
+			NOT = { num_of_rebel_armies = 1 }
+			OR = {
+				has_country_modifier = jxp_keian_ronin_reemployment
+				NOT = { num_of_loans = 1 }
+			}
+		}
+		effect = {
+			set_country_flag = jxp_keian_ronin_crisis_resolved
+			add_country_modifier = {
+				name = jxp_keian_civil_governance
+				duration = 3650
+			}
+			jxp_add_tenka_order_5_effect = yes
+			add_prestige = 10
+			end_disaster = jxp_keian_ronin_crisis
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_decision_resolve_tenmei_famine = {
+		major = yes
+		potential = {
+			jxp_is_japanese_polity_trigger = yes
+			has_disaster = jxp_tenmei_famine
+			has_country_flag = jxp_tenmei_famine_active
+		}
+		allow = {
+			had_country_flag = {
+				flag = jxp_tenmei_famine_active
+				days = 365
+			}
+			stability = 1
+			manpower_percentage = 0.50
+			NOT = { num_of_rebel_armies = 1 }
+			OR = {
+				has_country_modifier = jxp_tenmei_relief_granaries
+				NOT = { num_of_loans = 2 }
+			}
+		}
+		effect = {
+			set_country_flag = jxp_tenmei_famine_resolved
+			add_country_modifier = {
+				name = jxp_tenmei_recovery
+				duration = 3650
+			}
+			add_stability = 1
+			add_prestige = 10
+			end_disaster = jxp_tenmei_famine
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

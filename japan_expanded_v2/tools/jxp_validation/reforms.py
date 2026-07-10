@@ -14,7 +14,7 @@ from .missions import BASE_PROFILES, evaluate_potential
 VISIBLE_ROUTE_FILE = "jxp_18_route_reforms_extra.txt"
 FOUNDER_FILE = "jxp_28_founder_house_reforms.txt"
 EXPECTED_VISIBLE_ROUTE_COUNT = 27
-EXPECTED_FOUNDER_COUNT = 38
+EXPECTED_FOUNDER_COUNT = 39
 VANILLA_MONARCHY_FIRST_11_LEVELS = (
     "feudalism_vs_autocracy",
     "hereditary_vs_nobility",
@@ -102,6 +102,7 @@ EXPECTED_LEVEL_MEMBERS = {
     ),
     "growth_of_administration": frozenset(
         {
+            "jxp_reform_founder_toyotomi_five_regents",
             "jxp_reform_founder_hjo_odawara_cadasters",
             "jxp_reform_founder_ike_himeji_stewards",
             "jxp_reform_founder_ymn_roku_bun_ichi_domain",

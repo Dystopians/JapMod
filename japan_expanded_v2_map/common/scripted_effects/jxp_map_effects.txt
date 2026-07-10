@@ -67,7 +67,27 @@ jxp_map_initialize_effect = {
 		jxp_map_record_origin_effect = yes
 		jxp_ensure_daimyo_polity_effect = yes
 	}
-	jxp_map_migrate_runtime_v011_effect = yes
+	jxp_map_migrate_identity_v012_effect = yes
+}
+
+# One-time bridge from the shared pre-identity idea group to the exact-tag
+# groups and from the three-node house columns to their six-node continuations.
+jxp_map_migrate_identity_v012_effect = {
+	if = {
+		limit = {
+			jxp_is_daimyo_stage_trigger = yes
+			jxp_map_is_new_daimyo_tag_trigger = yes
+			NOT = { has_country_flag = jxp_map_identity_migration_v012 }
+		}
+		set_country_flag = jxp_map_identity_migration_v012
+		set_country_flag = jxp_map_runtime_migration_v011
+		if = {
+			limit = { has_custom_ideas = no }
+			swap_free_idea_group = yes
+		}
+		jxp_refresh_route_missions_effect = yes
+	}
+	else = { jxp_map_reconcile_daimyo_missions_effect = yes }
 }
 
 jxp_map_migrate_runtime_v011_effect = {
@@ -139,6 +159,9 @@ jxp_map_clear_origin_effect = {
 jxp_map_debug_full_reset_effect = {
 	jxp_map_clear_content_state_effect = yes
 	jxp_map_clear_origin_effect = yes
+	clr_country_flag = jxp_map_runtime_migration_v011
+	clr_country_flag = jxp_map_identity_migration_v012
+	clr_country_flag = jxp_map_post_tag_idea_sync_v012
 	clr_country_flag = jxp_map_initialized
 	jxp_map_initialize_effect = yes
 }

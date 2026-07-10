@@ -8,13 +8,38 @@ jxp_reform_founder_oda_azuchi_statutes = {
 			AND = {
 			jxp_is_unified_japan_state_trigger = yes
 			has_country_flag = jxp_origin_oda
-	
+			NOT = { has_country_flag = jxp_toyotomi_identity_established }
 			}
 		}
 	}
 	modifiers = {
 		core_creation = -0.05
 		global_trade_goods_size_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_toyotomi_five_regents = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_toyotomi_five_regents
+			AND = {
+				tag = TOY
+				has_country_flag = jxp_toyotomi_identity_established
+			}
+			AND = {
+				jxp_is_unified_japan_state_trigger = yes
+				has_country_flag = jxp_origin_oda
+				has_country_flag = jxp_toyotomi_identity_established
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.10
+		global_tax_modifier = 0.05
 	}
 	custom_attributes = { cannot_become_dictatorship = yes }
 }

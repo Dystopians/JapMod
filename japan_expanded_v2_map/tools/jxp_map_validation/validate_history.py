@@ -50,6 +50,16 @@ class Report:
         return 1 if self.errors else 0
 
 
+def read_gameplay_text(path: Path) -> str:
+    """Read generated UTF-8 gameplay text while retaining CP1252 baselines."""
+
+    data = path.read_bytes()
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return data.decode("cp1252")
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--game-root", type=Path, required=True)
@@ -128,6 +138,76 @@ def owner_at(parsed, when: date):
         if changed <= when:
             owner = new_owner
     return owner
+
+
+def core_tags_at(text: str, when: date) -> set[str]:
+    """Evaluate add_core/remove_core history through one selectable date."""
+
+    first_date = re.search(r"(?m)^\d+\.\d+\.\d+\s*=", text)
+    prefix = text[:first_date.start()] if first_date else text
+    cores: set[str] = set()
+
+    def apply(fragment: str):
+        for action, tag in re.findall(
+            r"\b(add_core|remove_core)\s*=\s*([A-Z0-9_]+)", fragment
+        ):
+            if action == "add_core":
+                cores.add(tag)
+            else:
+                cores.discard(tag)
+
+    apply(prefix)
+    blocks = [
+        (parse_date(date_value), index, body)
+        for index, (date_value, body) in enumerate(iter_dated_blocks(text))
+    ]
+    for changed, _, body in sorted(blocks):
+        if changed <= when:
+            apply(body)
+    return cores
+
+
+def validate_toyotomi_core_contract(history_texts, history_plan, report):
+    """Prove every planned TOY owner interval has an exclusive Toyotomi core."""
+
+    campaign_start = parse_date(history_plan["campaign_start"])
+    campaign_end = parse_date(history_plan["campaign_end_exclusive"])
+    checked = 0
+    for pid_text, timeline in history_plan["province_timelines"].items():
+        pid = int(pid_text)
+        if pid not in history_texts:
+            continue
+        segments = []
+        owner = timeline["root"]
+        cursor = campaign_start
+        for changed_text, new_owner in timeline.get("changes", []):
+            changed = parse_date(changed_text)
+            segments.append((cursor, changed, owner, new_owner))
+            cursor, owner = changed, new_owner
+        segments.append((cursor, campaign_end, owner, None))
+        for start, end, segment_owner, next_owner in segments:
+            if segment_owner != "TOY":
+                continue
+            checked += 1
+            for sample in {start, end - timedelta(days=1)}:
+                cores = core_tags_at(history_texts[pid], sample)
+                if "TOY" not in cores or "ODA" in cores:
+                    report.error(
+                        f"Province {pid} has invalid Toyotomi cores on "
+                        f"{date_text(sample)}: {sorted(cores)}"
+                    )
+            if end < campaign_end:
+                cores = core_tags_at(history_texts[pid], end)
+                if "TOY" in cores:
+                    report.error(
+                        f"Province {pid} retains TOY core after handoff on {date_text(end)}"
+                    )
+                if next_owner and next_owner not in cores:
+                    report.error(
+                        f"Province {pid} lacks {next_owner} core after handoff on "
+                        f"{date_text(end)}: {sorted(cores)}"
+                    )
+    report.note(f"Validated {checked} Toyotomi province/core intervals")
 
 
 def scan_tags(root: Path) -> set[str]:
@@ -511,96 +591,142 @@ def validate_ideas(
         report.error(f"Could not parse companion national ideas {path}: {exc}")
         return
 
-    expected_root = []
+    expected_groups = {f"{tag}_ideas": tag for tag in tags}
+    expected_names = set(expected_groups) | {"jxp_map_new_daimyo_ideas"}
+    groups = {}
     for entry in document.root.entries:
         if (
-            entry.key == "jxp_map_new_daimyo_ideas"
+            entry.key in expected_names
             and entry.operator == "="
             and isinstance(entry.value, parser.Object)
         ):
-            expected_root.append(entry)
+            if entry.key in groups:
+                report.error(f"Companion idea group {entry.key} is defined more than once")
+            groups[entry.key] = entry
         else:
             label = entry.key if entry.key is not None else "<bare value>"
             report.error(
                 f"ideas.top_level_member [{path.name}:{entry.line}]: "
                 f"unexpected root member {label!r}"
             )
-    if len(expected_root) != 1:
-        report.error(
-            "Companion ideas must define exactly one jxp_map_new_daimyo_ideas object"
-        )
-        return
+    missing_groups = sorted(expected_names - set(groups))
+    if missing_groups:
+        report.error(f"Companion identity idea groups are missing: {missing_groups}")
 
-    body = expected_root[0].value
-    for required in ("start", "bonus", "trigger"):
-        matches = [entry for entry in body.entries if entry.key == required]
-        if len(matches) != 1 or not isinstance(matches[0].value, parser.Object):
-            report.error(
-                f"Companion ideas require exactly one top-level {required} object; "
-                f"found {len(matches)}"
-            )
-    free_members = [entry for entry in body.entries if entry.key == "free"]
-    if (
-        len(free_members) != 1
-        or free_members[0].operator != "="
-        or not isinstance(free_members[0].value, parser.Scalar)
-        or free_members[0].value.text != "yes"
-    ):
-        report.error(
-            "Companion ideas require exactly one top-level free = yes; "
-            f"found {len(free_members)}"
-        )
-
-    trigger_members = [entry for entry in body.entries if entry.key == "trigger"]
-    if len(trigger_members) == 1 and isinstance(trigger_members[0].value, parser.Object):
-        trigger = trigger_members[0].value
-        parsed_tags = parsed_trigger_tags(trigger, parser)
-        if not parsed_tags:
-            report.error(
-                "Companion idea trigger must contain exactly one direct OR whose "
-                "only members are tag assignments"
-            )
-        actual_tag_counts = Counter(parsed_tags)
-        expected_tag_counts = Counter(tags)
-        if actual_tag_counts != expected_tag_counts:
-            report.error(
-                "Shared daimyo idea trigger coverage differs from the country plan: "
-                f"expected {dict(sorted(expected_tag_counts.items()))}, "
-                f"found {dict(sorted(actual_tag_counts.items()))}"
-            )
-
-    idea_keys = []
+    mechanical_signatures = {}
     metadata = IDEA_OBJECT_METADATA | IDEA_SCALAR_METADATA
-    for entry in body.entries:
-        key = entry.key
-        if key in metadata:
-            expected_type = parser.Object if key in IDEA_OBJECT_METADATA else parser.Scalar
-            if entry.operator != "=" or not isinstance(entry.value, expected_type):
-                expected_kind = "object" if key in IDEA_OBJECT_METADATA else "scalar"
+    identity_plan_path = (
+        map_mod / "tools" / "jxp_map_builder" / "daimyo_identity_plan.json"
+    )
+    identity_plan = json.loads(identity_plan_path.read_text(encoding="utf-8"))
+    strength_floors = {"A": (15, 4), "B": (13, 2), "C": (12, 1)}
+    for group_name, group_entry in groups.items():
+        body = group_entry.value
+        required_objects = {}
+        for required in ("start", "bonus", "trigger"):
+            matches = [entry for entry in body.entries if entry.key == required]
+            if len(matches) != 1 or not isinstance(matches[0].value, parser.Object):
                 report.error(
-                    f"ideas.member_type [{path.name}:{entry.line}]: "
-                    f"{key} must be {expected_kind}"
+                    f"{group_name} requires exactly one top-level {required} object; "
+                    f"found {len(matches)}"
+                )
+            else:
+                required_objects[required] = matches[0].value
+        free_members = [entry for entry in body.entries if entry.key == "free"]
+        if (
+            len(free_members) != 1
+            or free_members[0].operator != "="
+            or not isinstance(free_members[0].value, parser.Scalar)
+            or free_members[0].value.text != "yes"
+        ):
+            report.error(f"{group_name} requires exactly one top-level free = yes")
+
+        idea_entries = []
+        for entry in body.entries:
+            key = entry.key
+            if key in metadata:
+                expected_type = parser.Object if key in IDEA_OBJECT_METADATA else parser.Scalar
+                if entry.operator != "=" or not isinstance(entry.value, expected_type):
+                    expected_kind = "object" if key in IDEA_OBJECT_METADATA else "scalar"
+                    report.error(
+                        f"ideas.member_type [{path.name}:{entry.line}]: "
+                        f"{group_name}.{key} must be {expected_kind}"
+                    )
+                continue
+            if key is None or entry.operator != "=" or not isinstance(entry.value, parser.Object):
+                report.error(
+                    f"ideas.unexpected_member [{path.name}:{entry.line}]: "
+                    f"unexpected {group_name} member {key!r}"
+                )
+                continue
+            idea_entries.append(entry)
+        idea_keys = [entry.key for entry in idea_entries]
+        if expected_idea_count is not None and len(idea_keys) != expected_idea_count:
+            report.error(
+                f"{group_name} has {len(idea_keys)} ideas, expected exactly "
+                f"{expected_idea_count}: {idea_keys}"
+            )
+        if len(set(idea_keys)) != len(idea_keys):
+            report.error(f"{group_name} repeats idea keys: {idea_keys}")
+
+        trigger = required_objects.get("trigger")
+        direct_tags = [
+            entry.value.text
+            for entry in trigger.entries
+            if entry.key == "tag" and isinstance(entry.value, parser.Scalar)
+        ] if trigger is not None else []
+        if group_name == "jxp_map_new_daimyo_ideas":
+            always_values = [
+                entry.value.text
+                for entry in trigger.entries
+                if entry.key == "always" and isinstance(entry.value, parser.Scalar)
+            ] if trigger is not None else []
+            if direct_tags or always_values != ["no"] or (trigger is not None and len(trigger.entries) != 1):
+                report.error(
+                    "Legacy jxp_map_new_daimyo_ideas must be an exact always = no tombstone"
                 )
             continue
-        if key is None or entry.operator != "=" or not isinstance(entry.value, parser.Object):
-            report.error(
-                f"ideas.unexpected_member [{path.name}:{entry.line}]: "
-                f"unexpected group member {key!r}"
-            )
-            continue
-        idea_keys.append(key)
 
-    if expected_idea_count is not None and len(idea_keys) != expected_idea_count:
-        report.error(
-            f"Shared daimyo idea group has {len(idea_keys)} ideas, expected exactly "
-            f"{expected_idea_count}: {idea_keys}"
+        expected_tag = expected_groups[group_name]
+        if direct_tags != [expected_tag] or trigger is None or len(trigger.entries) != 1:
+            report.error(
+                f"{group_name} must use the exact trigger tag = {expected_tag}; found {direct_tags}"
+            )
+
+        mechanical_blocks = [required_objects.get("start")]
+        mechanical_blocks.extend(entry.value for entry in idea_entries)
+        mechanical_blocks.append(required_objects.get("bonus"))
+        signature = tuple(
+            tuple(
+                sorted(
+                    (member.key, member.value.text)
+                    for member in block.entries
+                    if member.key is not None and isinstance(member.value, parser.Scalar)
+                )
+            )
+            if block is not None else ()
+            for block in mechanical_blocks
         )
-    if len(set(idea_keys)) != len(idea_keys):
-        report.error(f"Shared daimyo idea group repeats idea keys: {idea_keys}")
+        if signature in mechanical_signatures:
+            report.error(
+                f"{group_name} mechanically clones {mechanical_signatures[signature]}"
+            )
+        mechanical_signatures[signature] = group_name
+        modifier_entries = sum(len(block) for block in signature)
+        dual_ideas = sum(len(block) >= 2 for block in signature[1:-1])
+        tier = identity_plan["tags"][expected_tag]["tier"]
+        min_entries, min_dual = strength_floors[tier]
+        if modifier_entries < min_entries or dual_ideas < min_dual:
+            report.error(
+                f"{group_name} tier {tier} has {modifier_entries} modifier entries / "
+                f"{dual_ideas} dual ideas; expected at least {min_entries} / {min_dual}"
+            )
+
     if expected_idea_count is not None:
         report.note(
-            "Companion national idea contract: 1 group requires exact "
-            f"start + {expected_idea_count} ideas + bonus structure"
+            f"Companion national idea contract: {len(tags)}/{len(tags)} exact-tag groups "
+            f"plus one inactive legacy tombstone; every active group uses start + "
+            f"{expected_idea_count} ideas + bonus"
         )
 
 
@@ -619,6 +745,12 @@ def validate_localisation(plan, history_plan, report):
         "jxp_map_market_towns", "jxp_map_coastal_routes", "jxp_map_house_codes", "jxp_map_provincial_identity",
     ):
         required.update({key, f"{key}_desc"})
+    for country in history_plan["countries"]:
+        tag = country["tag"]
+        required.update({f"{tag}_ideas", f"{tag}_ideas_start", f"{tag}_ideas_bonus"})
+        for index in range(1, 8):
+            key = f"jxp_map_{tag.lower()}_identity_{index}"
+            required.update({key, f"{key}_desc"})
     keys = set(re.findall(r"(?m)^\s*([^\s:#]+):\d+\s+", source))
     missing = required - keys
     if missing:
@@ -638,6 +770,7 @@ def main():
     history_plan = json.loads((BUILDER_DIR / "history_plan.json").read_text(encoding="utf-8"))
     expected_ids = sorted(set(plan["existing_japan_ids"]) | {item["id"] for item in plan["new_provinces"]})
     histories = {}
+    history_texts = {}
     dev_totals = Counter()
     province_development = {}
     history_dir = MOD_ROOT / "history" / "provinces"
@@ -647,6 +780,7 @@ def main():
             report.error(f"Province {pid} has {len(matches)} history files")
             continue
         text = matches[0].read_text(encoding="cp1252")
+        history_texts[pid] = text
         histories[pid] = parse_province_state(text, pid, report)
         province_development[pid] = {}
         for attribute in ("base_tax", "base_production", "base_manpower"):
@@ -659,6 +793,7 @@ def main():
     validate_timeline_contract(
         plan, history_plan, histories, args.game_root.resolve(), report
     )
+    validate_toyotomi_core_contract(history_texts, history_plan, report)
     expected_dev = Counter({key: int(value) for key, value in plan["target_development"].items()})
     vanilla_dev_total = 0
     for pid in plan["existing_japan_ids"]:
@@ -718,7 +853,7 @@ def main():
         if not path:
             report.error(f"Country {tag} does not have exactly one history file")
             continue
-        text = path.read_text(encoding="cp1252")
+        text = read_gameplay_text(path)
         capital = root_token(text, "capital")
         if capital is None or int(capital) != int(country["capital"]):
             report.error(f"Country {tag} capital is {capital}, expected {country['capital']}")

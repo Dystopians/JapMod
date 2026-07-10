@@ -1,0 +1,86 @@
+{
+  "diplomacy_override": "history/diplomacy/Japanese_alliances.txt",
+  "game_version": "1.37.5.0",
+  "oda_intervals_split": 23,
+  "osaka_fall": "1615.6.4",
+  "province_override_count": 18,
+  "province_overrides": [
+    {
+      "file": "1019 - Harima.txt",
+      "id": 1019
+    },
+    {
+      "file": "1020 - Yamashiro.txt",
+      "id": 1020
+    },
+    {
+      "file": "1021 - Settsu.txt",
+      "id": 1021
+    },
+    {
+      "file": "1023 - Echizen.txt",
+      "id": 1023
+    },
+    {
+      "file": "1024 - Echigo.txt",
+      "id": 1024
+    },
+    {
+      "file": "1029 - Kai.txt",
+      "id": 1029
+    },
+    {
+      "file": "1030 - Owari.txt",
+      "id": 1030
+    },
+    {
+      "file": "1820 - Awa.txt",
+      "id": 1820
+    },
+    {
+      "file": "1830 - Tajima.txt",
+      "id": 1830
+    },
+    {
+      "file": "1832 - Yamato.txt",
+      "id": 1832
+    },
+    {
+      "file": "1835 - Mino.txt",
+      "id": 1835
+    },
+    {
+      "file": "1839 - Suruga.txt",
+      "id": 1839
+    },
+    {
+      "file": "4181 - Higo.txt",
+      "id": 4181
+    },
+    {
+      "file": "4184 - Bizen.txt",
+      "id": 4184
+    },
+    {
+      "file": "4187 - Kii.txt",
+      "id": 4187
+    },
+    {
+      "file": "4188 - Shinano.txt",
+      "id": 4188
+    },
+    {
+      "file": "4193 - Oshima.txt",
+      "id": 4193
+    },
+    {
+      "file": "4359 - Ise.txt",
+      "id": 4359
+    }
+  ],
+  "schema_version": 1,
+  "sekigahara_handoff": "1600.10.21",
+  "settsu_province": 1021,
+  "toyotomi_start": "1586.1.1",
+  "toyotomi_subject_intervals": 24
+}

@@ -1206,6 +1206,8 @@ When doing national-idea identity passes for many daimyo, avoid replacing one ge
 
 For decloning passes, add at least one residual-signature check for the old template pattern, not only positive checks for new rows. Examples from `japan_expanded_v2`: reject the repeated five-stat legitimacy package `legitimacy/devotion/republican_tradition/meritocracy/horde_unity` in daimyo idea files, and reject one-line `defensiveness = 0.20` castle ideas after they have been split into castle-specific combinations. This catches unedited remnants that a row-based coverage table would never see.
 
+EU4 1.37.5 country and national-idea fort defense uses the modifier key `defensiveness`; the plausible key `fort_defense` is absent from the pinned game catalog. Because an ordinary Clausewitz parser accepts either spelling, keep a residual negative check for `fort_defense` in generated ideas, modifier definitions, and their source plans.
+
 In EU4 v1.37.5, `sailor_maintenance_modifer` is a vanilla-valid misspelling used by the game data. Do not correct it to `sailor_maintenance_modifier` unless a validator or vanilla data proves the engine added a new spelling in a later version. Treat this as a known-good EU4 typo when reviewing idea files and government reforms.
 
 In EU4 v1.37.5, the offensive spy network modifier is `spy_offence`; do not invent `global_spy_offence` by analogy with `global_spy_defence`. Check vanilla modifier names with `rg` before adding a new government reform or event modifier.

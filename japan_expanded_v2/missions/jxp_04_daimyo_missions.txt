@@ -509,7 +509,6 @@ jxp_daimyo_unification_missions = {
 		}
 		effect = {
 			jxp_ensure_daimyo_polity_effect = yes
-			set_country_flag = jxp_daimyo_ready_for_unification
 			country_event = { id = jxp_daimyo.5 }
 		}
 	}

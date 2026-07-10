@@ -1,7 +1,10 @@
 #4187 - Kii
-
 owner = HTK
 controller = HTK
+add_core = HTK
+
+
+
 culture = japanese
 religion = shinto
 capital = "Wakayama"
@@ -19,5 +22,25 @@ discovered_by = OIR
 discovered_by = QNG
 discovered_by = ANU
 
-1585.11.1 = { remove_core = HTK owner = ODA controller = ODA add_core = ODA }
-1600.10.21 = { owner = TKG controller = TKG add_core = TKG remove_core = ODA }
+1585.11.1 = { remove_core = HTK   add_core = ODA }
+1600.10.21 = {     }
+
+# JXP 88-province continuous ownership overlay
+1585.11.1 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = HTK
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

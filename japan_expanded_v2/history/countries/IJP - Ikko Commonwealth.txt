@@ -8,8 +8,8 @@ capital = 1021
 
 1444.11.11 = {
 	monarch = {
-		name = "Kennyo"
-		dynasty = "Honganji"
+		name = "显如"
+		dynasty = "本愿寺"
 		adm = 3
 		dip = 3
 		mil = 4

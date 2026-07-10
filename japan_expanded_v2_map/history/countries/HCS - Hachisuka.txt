@@ -8,8 +8,8 @@ capital = 1820
 
 1585.8.23 = {
 	monarch = {
-		name = "Iemasa"
-		dynasty = "Hachisuka"
+		name = "家政"
+		dynasty = "蜂须贺"
 		birth_date = 1555.1.1
 		adm = 3
 		dip = 4

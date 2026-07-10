@@ -1,0 +1,89 @@
+country_decisions = {
+	jxp_decision_convene_kirishitan_visitation = {
+		major = yes
+		potential = {
+			jxp_75_is_kirishitan_route_trigger = yes
+		}
+		allow = {
+			jxp_75_has_kirishitan_policy_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_75_route_policy_recent }
+			is_at_war = no
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			country_event = { id = jxp_route_parity_four.1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { dip_power = 75 } }
+		}
+	}
+
+	jxp_decision_convene_confucian_rite_code_council = {
+		major = yes
+		potential = {
+			jxp_75_is_confucian_route_trigger = yes
+		}
+		allow = {
+			jxp_75_has_confucian_policy_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_75_route_policy_recent }
+			is_at_war = no
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			country_event = { id = jxp_route_parity_four.2 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { adm_power = 75 } }
+		}
+	}
+
+	jxp_decision_convene_reformed_policy_consistory = {
+		major = yes
+		potential = {
+			jxp_75_is_reformed_route_trigger = yes
+		}
+		allow = {
+			jxp_75_has_reformed_policy_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_75_route_policy_recent }
+			is_at_war = no
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			country_event = { id = jxp_route_parity_four.3 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { adm_power = 75 } }
+		}
+	}
+
+	jxp_decision_review_kaikyo_monsoon_diwan = {
+		major = yes
+		potential = {
+			jxp_75_is_kaikyo_route_trigger = yes
+		}
+		allow = {
+			jxp_75_has_kaikyo_policy_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_75_route_policy_recent }
+			is_at_war = no
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			country_event = { id = jxp_route_parity_four.4 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { dip_power = 75 } }
+		}
+	}
+}

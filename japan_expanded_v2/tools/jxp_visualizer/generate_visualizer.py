@@ -2130,7 +2130,7 @@ def main() -> int:
     mod_root = args.mod_root.resolve()
     game_root = args.game_root.resolve() if args.game_root else None
     data = build_data(mod_root, game_root)
-    args.output.write_text(html_page(data), encoding="utf-8")
+    args.output.write_text(html_page(data), encoding="utf-8", newline="\r\n")
     print(f"Wrote {args.output}")
     print(
         "Counts: "

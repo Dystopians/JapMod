@@ -125,10 +125,14 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		set_country_flag = jxp_shimabara_crisis_active
+	}
+
 	option = {
 		name = "jxp_kirishitan.4.a"
-		set_country_flag = jxp_shimabara_resolved
-		jxp_add_tenka_order_10_effect = yes
+		add_mil_power = -50
+		jxp_add_tenka_order_5_effect = yes
 		jxp_subtract_oceanic_opening_10_effect = yes
 		add_country_modifier = {
 			name = jxp_shimabara_suppressed
@@ -137,10 +141,39 @@ country_event = {
 	}
 	option = {
 		name = "jxp_kirishitan.4.b"
-		set_country_flag = jxp_shimabara_resolved
+		add_adm_power = -50
 		jxp_add_oceanic_opening_5_effect = yes
 		jxp_subtract_imperial_sanction_5_effect = yes
 		jxp_reduce_shimabara_pressure_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kirishitan.11
+	title = "jxp_kirishitan.11.t"
+	desc = "jxp_kirishitan.11.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = jxp_shimabara_fire
+		has_country_flag = jxp_shimabara_crisis_active
+	}
+
+	option = {
+		name = "jxp_kirishitan.11.a"
+		set_country_flag = jxp_shimabara_resolved
+		jxp_add_tenka_order_5_effect = yes
+		add_prestige = 10
+		end_disaster = jxp_shimabara_fire
+	}
+	option = {
+		name = "jxp_kirishitan.11.b"
+		set_country_flag = jxp_shimabara_resolved
+		jxp_add_oceanic_opening_5_effect = yes
+		add_stability = 1
+		end_disaster = jxp_shimabara_fire
 	}
 }
 
@@ -166,7 +199,6 @@ country_event = {
 	option = {
 		name = "jxp_kirishitan.5.a"
 		set_country_flag = jxp_kirishitan_centers_established
-		set_country_flag = jxp_kirishitan_conversion_active
 		add_country_modifier = {
 			name = jxp_kirishitan_state_church
 			duration = 7300

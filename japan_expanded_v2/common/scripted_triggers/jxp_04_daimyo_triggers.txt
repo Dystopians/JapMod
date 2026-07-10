@@ -21,9 +21,10 @@ jxp_daimyo_has_working_port_trigger = {
 	num_of_ports = 1
 }
 
-jxp_is_major_daimyo_tag_trigger = {
+	jxp_is_major_daimyo_tag_trigger = {
 	OR = {
 		tag = ODA
+		tag = TOY
 		tag = TKG
 		tag = TKD
 		tag = UES

@@ -325,6 +325,34 @@ country_event = {
 	immediate = { jxp_refresh_route_missions_effect = yes }
 }
 
+# After a companion daimyo forms Japan or a route tag, retire its map-tag idea
+# identity through the main mod's one canonical free-idea synchronization path.
+country_event = {
+	id = jxp_map.102
+	hidden = yes
+	trigger = {
+		jxp_map_has_any_origin_trigger = yes
+		has_custom_ideas = no
+		NOT = { has_country_flag = jxp_map_post_tag_idea_sync_v012 }
+		OR = {
+			tag = JAP
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			tag = TOY
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		jxp_sync_route_national_ideas_effect = yes
+		set_country_flag = jxp_map_post_tag_idea_sync_v012
+	}
+}
+
 country_event = {
 	id = jxp_map.900
 	title = "jxp_map.900.t"

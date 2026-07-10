@@ -32,18 +32,18 @@ historical_units = {
 }
 
 monarch_names = {
-	"Kennyo #0" = 15
-	"Rennyo #0" = 15
-	"Junnyo #0" = 12
-	"Shonyo #0" = 12
-	"Kosa #0" = 10
-	"Kosa-no-Mikado #0" = 2
-	"Yorinaga #0" = 8
-	"Nagashige #0" = 8
+	"显如 #0" = 15
+	"莲如 #0" = 15
+	"准如 #0" = 12
+	"证如 #0" = 12
+	"光佐 #0" = 10
+	"光佐御门 #0" = 2
+	"赖长 #0" = 8
+	"长重 #0" = 8
 }
 
 leader_names = {
-	Kennyo Rennyo Shonyo Junnyo Saika Suzuki Shimozuma Shimotsuma Negoro Kosa Ishiyama Kaga
+	显如 莲如 证如 准如 杂贺 铃木 下间 下妻 根来 光佐 石山 加贺
 }
 
 ship_names = {

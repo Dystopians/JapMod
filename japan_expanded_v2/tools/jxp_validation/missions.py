@@ -49,7 +49,7 @@ DAIMYO_TAGS = (
     "HSK", "HTK", "IKE", "IMG", "ISK", "ITO", "KKC", "KNO", "KTB",
     "MAE", "MRI", "ODA", "OGS", "OTM", "OUC", "RFR", "SBA", "SHN",
     "SMZ", "SOO", "STK", "TKD", "TKG", "TKI", "TTI", "UES", "UTN",
-    "YMN",
+    "YMN", "TOY",
 )
 
 

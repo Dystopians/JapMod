@@ -1,0 +1,229 @@
+country_decisions = {
+	jxp_72_decision_convene_sea_league = {
+		major = yes
+		potential = {
+			jxp_72_wak_route_trigger = yes
+			NOT = { has_country_flag = jxp_72_wak_cycle_active }
+			NOT = { has_country_modifier = jxp_72_wak_chartered_maritime_state }
+			NOT = { has_country_modifier = jxp_72_wak_flotillas_disarmed }
+		}
+		allow = {
+			stability = 0
+			dip_power = 50
+			treasury = 75
+			num_of_ports = 5
+			jxp_oceanic_opening_at_least_35 = yes
+			jxp_not_sakoku_locked_trigger = yes
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			custom_tooltip = jxp_72_wak_pressure_starts_10_tt
+			hidden_effect = {
+				jxp_72_wak_start_cycle_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				tag = WAK
+			}
+			modifier = {
+				factor = 0.25
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 0
+				is_bankrupt = yes
+			}
+		}
+	}
+
+	jxp_72_decision_rotate_letters_of_mark = {
+		major = no
+		potential = {
+			jxp_72_wak_cycle_active_trigger = yes
+		}
+		allow = {
+			dip_power = 50
+			treasury = 75
+			NOT = { has_country_modifier = jxp_72_wak_rotating_letters }
+			NOT = { jxp_72_wak_pressure_at_least_85_trigger = yes }
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			add_country_modifier = {
+				name = jxp_72_wak_rotating_letters
+				duration = 1825
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			jxp_subtract_imperial_sanction_5_effect = yes
+			custom_tooltip = jxp_72_wak_pressure_rises_15_tt
+			hidden_effect = {
+				jxp_72_wak_add_pressure_15_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_72_wak_pressure_at_least_50_trigger = yes }
+			}
+			modifier = {
+				factor = 0.20
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_72_decision_endow_free_ports = {
+		major = no
+		potential = {
+			jxp_72_wak_cycle_active_trigger = yes
+		}
+		allow = {
+			adm_power = 50
+			treasury = 100
+			jxp_72_wak_harbor_network_trigger = yes
+			NOT = { has_country_modifier = jxp_72_wak_free_port_endowment }
+			NOT = { jxp_72_wak_pressure_at_least_85_trigger = yes }
+		}
+		effect = {
+			add_adm_power = -50
+			add_treasury = -100
+			add_country_modifier = {
+				name = jxp_72_wak_free_port_endowment
+				duration = 1825
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			custom_tooltip = jxp_72_wak_pressure_rises_5_tt
+			hidden_effect = {
+				jxp_72_wak_add_pressure_5_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				any_owned_province = {
+					has_province_flag = jxp_map_compat_wokou_waters
+				}
+			}
+			modifier = {
+				factor = 0.35
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_72_decision_fund_convoy_courts = {
+		major = no
+		potential = {
+			jxp_72_wak_cycle_active_trigger = yes
+		}
+		allow = {
+			adm_power = 50
+			dip_power = 50
+			treasury = 75
+			jxp_72_wak_pressure_at_least_10_trigger = yes
+			NOT = { has_country_modifier = jxp_72_wak_convoy_courts }
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_treasury = -75
+			add_country_modifier = {
+				name = jxp_72_wak_convoy_courts
+				duration = 1825
+			}
+			jxp_add_tenka_order_5_effect = yes
+			custom_tooltip = jxp_72_wak_pressure_falls_15_tt
+			hidden_effect = {
+				jxp_72_wak_subtract_pressure_15_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				factor = 3
+				jxp_72_wak_pressure_at_least_50_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_72_decision_charter_maritime_state = {
+		major = yes
+		potential = {
+			jxp_72_wak_cycle_active_trigger = yes
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_tech = 10
+			adm_power = 100
+			dip_power = 100
+			treasury = 200
+			jxp_72_wak_pressure_at_least_50_trigger = yes
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_treasury = -200
+			custom_tooltip = jxp_72_wak_transform_tt
+			hidden_effect = {
+				jxp_72_wak_transform_to_maritime_state_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				adm_tech = 12
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { treasury = 350 }
+			}
+		}
+	}
+
+	jxp_72_decision_stand_down_flotillas = {
+		major = yes
+		potential = {
+			jxp_72_wak_cycle_active_trigger = yes
+		}
+		allow = {
+			is_at_war = no
+			stability = 0
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			custom_tooltip = jxp_72_wak_stand_down_tt
+			hidden_effect = {
+				jxp_72_wak_stand_down_cycle_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.50
+			modifier = {
+				factor = 4
+				jxp_72_wak_pressure_at_least_85_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 8
+			}
+		}
+	}
+}

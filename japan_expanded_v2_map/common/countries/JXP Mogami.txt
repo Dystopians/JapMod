@@ -26,26 +26,26 @@ historical_units = {
 }
 
 monarch_names = {
-	"Yoshiharu #0" = 80
-	"Yoshihisa #0" = 40
-	"Harunobu #0" = 40
-	"Takamasa #0" = 40
-	"Masanobu #0" = 40
-	"Toku #0" = -5
-	"Aya #0" = -5
+	"义春 #0" = 80
+	"义久 #0" = 40
+	"晴信 #0" = 40
+	"隆正 #0" = 40
+	"正信 #0" = 40
+	"德 #0" = -5
+	"绫 #0" = -5
 }
 
-leader_names = { Mogami Saito Watanabe Mori Kondo Hattori Sakai Abe Ito Naito Okubo Honda Torii }
+leader_names = { 最上 斋藤 渡边 森 近藤 服部 酒井 阿部 伊藤 内藤 大久保 本多 鸟居 }
 ship_names = {
-	"Mogami Maru" "Nippon Maru" "$PROVINCE$ Maru" "Asahi Maru" "Akatsuki Maru"
+	"最上 Maru" "Nippon Maru" "$PROVINCE$ Maru" "Asahi Maru" "Akatsuki Maru"
 	"Hachiman Maru" "Sumiyoshi Maru" "Kasuga Maru" "Matsukaze Maru" "Wakaba Maru"
 	"Shiranui Maru" "Chihaya Maru"
 }
 army_names = {
-	"Mogami Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"最上 Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
 	"Ichi no Te" "Ni no Te" "San no Te" "Hata Bugyo Shu" "Kiba Shu" "Teppo Shu"
 }
 fleet_names = {
-	"Mogami Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
+	"最上 Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
 	"Ni no Fune" "San no Fune" "Ura Shu" "Oki Shu" "Hayafune Shu" "Sekibune Shu"
 }

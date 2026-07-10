@@ -1,0 +1,18 @@
+jxp_establish_toyotomi_identity_effect = {
+	custom_tooltip = jxp_establish_toyotomi_identity_tt
+	hidden_effect = {
+		jxp_record_daimyo_origin_effect = yes
+		set_country_flag = jxp_toyotomi_identity_established
+		if = {
+			limit = { tag = ODA }
+			change_tag = TOY
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+		}
+		clr_country_flag = jxp_route_ideas_synced_v0241
+		jxp_sync_route_national_ideas_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		regenerate_government_mechanics = yes
+		set_country_flag = jxp_toyotomi_identity_migrated_v0270
+	}
+}

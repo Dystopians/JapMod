@@ -175,7 +175,6 @@ country_event = {
 	option = {
 		name = "jxp_reformed.4.a"
 		set_country_flag = jxp_reformed_centers_established
-		set_country_flag = jxp_reformed_conversion_active
 		add_country_modifier = {
 			name = jxp_reformed_consistory
 			duration = 7300

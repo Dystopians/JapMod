@@ -1,5 +1,5 @@
 name="日轮诸道：日本八十八国地图"
-version="0.1.1-alpha"
+version="0.1.2-alpha"
 picture="thumbnail.png"
 dependencies={
 	"日轮诸道：日本扩展风味包"

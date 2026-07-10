@@ -5,10 +5,15 @@ import tempfile
 import unittest
 
 from jxp_validation.core import ValidationContext
-from jxp_validation.ideas import NATIONAL_IDEA_COUNT, check_national_idea_structure
+from jxp_validation.ideas import (
+    NATIONAL_IDEA_COUNT,
+    check_national_idea_modifiers,
+    check_national_idea_structure,
+)
 
 
 LIVE_MOD_ROOT = Path(__file__).resolve().parents[3]
+GAME_ROOT = Path(r"D:\Steam\steamapps\common\Europa Universalis IV")
 
 
 def render_group(
@@ -83,6 +88,30 @@ class NationalIdeaStructureTests(unittest.TestCase):
         self.assertIn(
             "ideas.top_level_member",
             {issue.code for issue in result.issues},
+        )
+
+    def test_rejects_nonexistent_vanilla_modifier_key(self) -> None:
+        if not (GAME_ROOT / "common" / "ideas").is_dir():
+            self.skipTest("pinned EU4 idea catalog is unavailable")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            ideas_root = root / "common" / "ideas"
+            ideas_root.mkdir(parents=True)
+            text = render_group().replace(
+                "global_tax_modifier = 0.01",
+                "fort_defense = 0.15",
+                1,
+            )
+            (ideas_root / "test.txt").write_text(text, encoding="utf-8")
+            result = check_national_idea_modifiers(
+                ValidationContext(root), GAME_ROOT
+            )
+        self.assertTrue(
+            any(
+                issue.code == "ideas.unknown_modifier"
+                and "fort_defense" in issue.message
+                for issue in result.issues
+            )
         )
 
 

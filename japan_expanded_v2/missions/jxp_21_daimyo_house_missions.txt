@@ -6,7 +6,6 @@ jxp_daimyo_warrior_house_missions = {
 		NOT = { map_setup = map_setup_random }
 		jxp_is_daimyo_stage_trigger = yes
 		OR = {
-			tag = ODA
 			tag = TKG
 			tag = TKD
 			tag = UES

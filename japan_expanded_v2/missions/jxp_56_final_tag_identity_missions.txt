@@ -110,7 +110,6 @@ jxp_cjp_syncretic_missions = {
 				name = jxp_confucian_shinto_synthesis
 				duration = -1
 			}
-			set_country_flag = jxp_cjp_rites_without_severance
 		}
 	}
 }
@@ -215,7 +214,6 @@ jxp_ejp_restoration_state_missions = {
 				name = jxp_route_imperial
 				duration = -1
 			}
-			set_country_flag = jxp_ejp_imperial_constitution
 		}
 	}
 }
@@ -317,7 +315,6 @@ jxp_ejp_court_rite_missions = {
 			add_prestige = 20
 			add_legitimacy = 10
 			change_government_reform_progress = 50
-			set_country_flag = jxp_ejp_rites_of_restoration
 		}
 	}
 }
@@ -427,7 +424,6 @@ jxp_ejp_imperial_seas_missions = {
 				name = jxp_route_imperial
 				duration = -1
 			}
-			set_country_flag = jxp_ejp_sun_over_eastern_seas
 		}
 	}
 }
@@ -537,7 +533,6 @@ jxp_rfj_covenant_horizon_missions = {
 				name = jxp_route_reformed
 				duration = -1
 			}
-			set_country_flag = jxp_rfj_free_seas_commonwealth
 		}
 	}
 }
@@ -646,7 +641,6 @@ jxp_wak_black_current_missions = {
 				name = jxp_route_wokou
 				duration = -1
 			}
-			set_country_flag = jxp_wak_black_tide_code
 		}
 	}
 }

@@ -28,14 +28,14 @@ discovered_by = ANU
 	remove_core = ASN
 }
 1590.8.9 = {
-	owner = ODA
-	controller = ODA
-	add_core = ODA
+	owner = TOY
+	controller = TOY
+	add_core = TOY
 	remove_core = DTE
 }
 1600.10.21 = {
 	owner = TKG
 	controller = TKG
 	add_core = TKG
-	remove_core = ODA
+	remove_core = TOY
 }

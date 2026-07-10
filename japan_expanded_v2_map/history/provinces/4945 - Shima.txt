@@ -27,9 +27,15 @@ discovered_by = ANU
 	add_core = ODA
 	remove_core = KTB
 }
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
 1600.10.21 = {
 	owner = TKG
 	controller = TKG
 	add_core = TKG
-	remove_core = ODA
+	remove_core = TOY
 }

@@ -1,0 +1,140 @@
+jxp_74_ijp_clamp_pressure_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { check_variable = { which = jxp_74_ijp_pressure value = 0 } }
+			}
+			set_variable = { which = jxp_74_ijp_pressure value = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { which = jxp_74_ijp_pressure value = 100 }
+			}
+			set_variable = { which = jxp_74_ijp_pressure value = 100 }
+		}
+	}
+}
+
+jxp_74_ijp_add_pressure_10_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = 10 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_add_pressure_15_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = 15 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_add_pressure_20_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = 20 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_subtract_pressure_10_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = -10 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_subtract_pressure_15_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = -15 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_subtract_pressure_20_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = -20 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_subtract_pressure_40_effect = {
+	change_variable = { which = jxp_74_ijp_pressure value = -40 }
+	jxp_74_ijp_clamp_pressure_effect = yes
+}
+
+jxp_74_ijp_cleanup_effect = {
+	clr_country_flag = jxp_74_ijp_cycle_active
+	set_variable = { which = jxp_74_ijp_pressure value = 0 }
+	remove_country_modifier = jxp_74_ijp_temple_market_charter
+	remove_country_modifier = jxp_74_ijp_machishu_investment
+	remove_country_modifier = jxp_74_ijp_somon_mediation
+	remove_country_modifier = jxp_74_ijp_war_bell_enforcement
+	remove_country_modifier = jxp_74_ijp_market_dividend
+	remove_country_modifier = jxp_74_ijp_assembly_hearing
+	remove_country_modifier = jxp_74_ijp_hardline_aftershock
+	remove_country_modifier = jxp_74_ijp_covenant_overreach
+	remove_country_modifier = jxp_74_ijp_crisis_recess
+	remove_country_modifier = jxp_74_ijp_chartered_commonwealth
+	remove_country_modifier = jxp_74_ijp_secular_settlement
+}
+
+jxp_74_ijp_route_exit_effect = {
+	jxp_74_ijp_cleanup_effect = yes
+	clr_country_flag = jxp_74_ijp_route_guard_pending
+}
+
+jxp_74_ijp_enforce_route_exclusivity_effect = {
+	jxp_clear_all_route_flags_effect = yes
+	set_country_flag = jxp_path_ikko
+	set_country_flag = jxp_ikko_contact
+	add_country_modifier = {
+		name = jxp_route_ikko
+		duration = -1
+	}
+	if = {
+		limit = { NOT = { has_reform = jxp_ikko_commonwealth_reform } }
+		add_government_reform = jxp_ikko_commonwealth_reform
+	}
+	jxp_grant_route_reforms_effect = yes
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+}
+
+jxp_74_ijp_route_entry_effect = {
+	if = {
+		limit = {
+			has_country_flag = jxp_74_ijp_cycle_active
+			NOT = { jxp_74_ijp_route_trigger = yes }
+		}
+		jxp_74_ijp_route_exit_effect = yes
+	}
+	jxp_74_ijp_enforce_route_exclusivity_effect = yes
+	if = {
+		limit = { NOT = { has_country_flag = jxp_74_ijp_route_guard_pending } }
+		set_country_flag = jxp_74_ijp_route_guard_pending
+		country_event = { id = jxp_ijp_loop.5 days = 1 }
+	}
+}
+
+jxp_74_ijp_start_cycle_effect = {
+	jxp_74_ijp_cleanup_effect = yes
+	set_country_flag = jxp_74_ijp_cycle_active
+	set_variable = { which = jxp_74_ijp_pressure value = 15 }
+	add_country_modifier = {
+		name = jxp_74_ijp_temple_market_charter
+		duration = 3650
+	}
+}
+
+jxp_74_ijp_transform_commonwealth_effect = {
+	jxp_74_ijp_cleanup_effect = yes
+	add_country_modifier = {
+		name = jxp_74_ijp_chartered_commonwealth
+		duration = 7300
+	}
+	jxp_add_tenka_order_5_effect = yes
+	jxp_add_imperial_sanction_5_effect = yes
+	add_prestige = 10
+}
+
+jxp_74_ijp_stand_down_leagues_effect = {
+	jxp_74_ijp_cleanup_effect = yes
+	add_country_modifier = {
+		name = jxp_74_ijp_secular_settlement
+		duration = 3650
+	}
+	jxp_add_imperial_sanction_5_effect = yes
+	jxp_subtract_tenka_order_5_effect = yes
+}
+
+jxp_74_ijp_debug_reset_effect = {
+	jxp_74_ijp_route_exit_effect = yes
+}

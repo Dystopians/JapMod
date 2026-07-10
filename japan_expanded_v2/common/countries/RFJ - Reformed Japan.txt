@@ -32,18 +32,18 @@ historical_units = {
 }
 
 monarch_names = {
-	"Tsunenaga #0" = 15
-	"Motohiro #0" = 10
-	"Muneharu #0" = 10
-	"Sumitada #0" = 10
-	"Harunobu #0" = 10
+	"常长 #0" = 15
+	"元宏 #0" = 10
+	"宗春 #0" = 10
+	"纯忠 #0" = 10
+	"晴信 #0" = 10
 	"Joosten #0" = 5
-	"Nobunaga #0" = 10
-	"Ieyasu #0" = 10
+	"信长 #0" = 10
+	"家康 #0" = 10
 }
 
 leader_names = {
-	Date Hasekura Hirado Matsuura Omura Arima Ito Tokugawa Oda Kuroda Hosokawa
+	伊达 支仓 平户 松浦 大村 有马 伊东 德川 织田 黑田 细川
 }
 
 ship_names = {

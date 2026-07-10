@@ -21,6 +21,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 MOD_ROOT = SCRIPT_DIR.parents[1]
 PLAN_PATH = SCRIPT_DIR / "province_plan.json"
 HISTORY_PLAN_PATH = SCRIPT_DIR / "history_plan.json"
+TOYOTOMI_START = (1586, 1, 1)
+TOYOTOMI_CORE_TAGS = ("ODA", "TOY", "TKG")
 
 
 def load_builder_module():
@@ -269,6 +271,56 @@ def scrub_ownership(text: str) -> str:
     return re.sub(r"\b(?:owner|controller)\s*=\s*[A-Z0-9_]+", "", text)
 
 
+def dated_block_ranges(text: str):
+    """Yield source ranges for top-level dated province-history blocks."""
+
+    for match in re.finditer(r"(?m)^(\d+\.\d+\.\d+)\s*=\s*\{", text):
+        cursor = match.end() - 1
+        depth = 0
+        in_quote = False
+        escaped = False
+        while cursor < len(text):
+            char = text[cursor]
+            if escaped:
+                escaped = False
+            elif char == "\\" and in_quote:
+                escaped = True
+            elif char == '"':
+                in_quote = not in_quote
+            elif not in_quote and char == "#":
+                newline = text.find("\n", cursor)
+                cursor = len(text) if newline < 0 else newline
+                continue
+            elif not in_quote and char == "{":
+                depth += 1
+            elif not in_quote and char == "}":
+                depth -= 1
+                if depth == 0:
+                    yield date_tuple(match.group(1)), match.start(), cursor + 1
+                    break
+            cursor += 1
+        else:
+            raise RuntimeError(f"Unclosed dated block {match.group(1)}")
+
+
+def scrub_toyotomi_transition_cores(text: str) -> str:
+    """Remove superseded ODA/TOY/TKG core effects from the rewritten era."""
+
+    tag_pattern = "|".join(re.escape(tag) for tag in TOYOTOMI_CORE_TAGS)
+    assignment = re.compile(
+        rf"\b(?:add_core|remove_core)\s*=\s*(?:{tag_pattern})\b"
+    )
+    replacements = []
+    for changed, start, end in dated_block_ranges(text):
+        if changed < TOYOTOMI_START:
+            continue
+        fragment = assignment.sub("", text[start:end])
+        replacements.append((start, end, fragment))
+    for start, end, fragment in reversed(replacements):
+        text = text[:start] + fragment + text[end:]
+    return text
+
+
 def generate_new_history(province: dict, timeline: dict, dev: dict, parent_text: str, history_plan: dict) -> str:
     pid = int(province["id"])
     culture = root_value(parent_text, "culture")
@@ -296,6 +348,10 @@ def generate_existing_history(source_text: str, pid: int, dev: dict, history_pla
         text = replace_root_int(text, attribute, value)
     timeline = history_plan["province_timelines"].get(str(pid))
     if timeline:
+        if timeline["root"] == "TOY" or any(
+            owner == "TOY" for _, owner in timeline.get("changes", [])
+        ):
+            text = scrub_toyotomi_transition_cores(text)
         text = scrub_ownership(text)
         owner_header = f"owner = {timeline['root']}\ncontroller = {timeline['root']}\nadd_core = {timeline['root']}\n"
         first_newline = text.find("\n")
@@ -411,7 +467,7 @@ def main() -> int:
     audit_dir = MOD_ROOT / "tools" / "jxp_map_validation" / "generated"
     audit_dir.mkdir(parents=True, exist_ok=True)
     with (audit_dir / "development_audit.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(["province_id", "base_tax", "base_production", "base_manpower", "total"])
         for pid in sorted(allocation):
             values = allocation[pid]
@@ -445,7 +501,7 @@ def main() -> int:
             ])
     interval_path = audit_dir / "ownership_intervals.csv"
     with interval_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow([
             "province_id",
             "timeline_source",
@@ -476,7 +532,11 @@ def main() -> int:
         "ownership_interval_file": str(interval_path.relative_to(MOD_ROOT)).replace("\\", "/"),
         "province_files": {str(pid): path.name for pid, path in sorted(output_files.items())},
     }
-    (audit_dir / "history_manifest.json").write_text(json.dumps(history_manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (audit_dir / "history_manifest.json").write_text(
+        json.dumps(history_manifest, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(f"Generated {len(output_files)} province histories")
     print(f"Development totals: {diagnostics['totals']} (total {sum(diagnostics['totals'].values())})")
     print(f"Ownership audit: {len(interval_rows)} continuous intervals across {len(snapshots)} bookmarks")

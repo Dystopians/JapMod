@@ -67,6 +67,13 @@ vassal = {
 	first = ODA
 	second = HNM
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = HNM
+	start_date = 1586.1.1
 	end_date = 1589.1.1
 }
 
@@ -81,6 +88,13 @@ vassal = {
 	first = ODA
 	second = MOG
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = MOG
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -102,6 +116,13 @@ vassal = {
 	first = ODA
 	second = ASN
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = ASN
+	start_date = 1586.1.1
 	end_date = 1589.6.5
 }
 
@@ -116,6 +137,13 @@ vassal = {
 	first = ODA
 	second = OSK
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = OSK
+	start_date = 1586.1.1
 	end_date = 1590.7.26
 }
 
@@ -130,6 +158,13 @@ vassal = {
 	first = ODA
 	second = SMA
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = SMA
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -151,6 +186,13 @@ vassal = {
 	first = ODA
 	second = DHO
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = DHO
+	start_date = 1586.1.1
 	end_date = 1588.1.1
 }
 
@@ -172,6 +214,13 @@ vassal = {
 	first = ODA
 	second = SGR
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = SGR
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -207,6 +256,13 @@ vassal = {
 	first = ODA
 	second = ARI
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = ARI
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -228,6 +284,13 @@ vassal = {
 	first = ODA
 	second = MTU
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = MTU
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -249,6 +312,13 @@ vassal = {
 	first = ODA
 	second = STM
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = STM
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -305,6 +375,13 @@ vassal = {
 	first = ODA
 	second = RZJ
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = RZJ
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -326,6 +403,13 @@ vassal = {
 	first = ODA
 	second = UKT
 	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = UKT
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -333,6 +417,13 @@ vassal = {
 	first = ODA
 	second = TGR
 	start_date = 1578.1.1
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = TGR
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -347,6 +438,13 @@ vassal = {
 	first = ODA
 	second = HCS
 	start_date = 1585.8.23
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = HCS
+	start_date = 1586.1.1
 	end_date = 1600.10.21
 }
 
@@ -358,7 +456,7 @@ vassal = {
 }
 
 vassal = {
-	first = ODA
+	first = TOY
 	second = MTS
 	start_date = 1590.8.10
 	end_date = 1600.10.21

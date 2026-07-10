@@ -5,6 +5,7 @@ jxp_record_daimyo_origin_effect = {
 			jxp_is_major_daimyo_tag_trigger = yes
 		}
 		if = { limit = { tag = ODA } set_country_flag = jxp_origin_oda }
+		if = { limit = { tag = TOY } set_country_flag = jxp_origin_oda }
 		if = { limit = { tag = TKG } set_country_flag = jxp_origin_tkg }
 		if = { limit = { tag = TKD } set_country_flag = jxp_origin_tkd }
 		if = { limit = { tag = UES } set_country_flag = jxp_origin_ues }

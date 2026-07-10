@@ -7,22 +7,21 @@ country_event = {
 	picture = COURT_eventPicture
 
 	is_triggered_only = yes
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+			AND = {
+				NOT = { jxp_has_any_route_trigger = yes }
+				jxp_has_ikko_opening_trigger = yes
+			}
+		}
+	}
 
 	option = {
 		name = "jxp_ikko.1.a"
-		set_country_flag = jxp_ikko_contact
-		set_country_flag = jxp_path_ikko
-		add_country_modifier = {
-			name = jxp_route_ikko
-			duration = -1
-		}
-		if = {
-			limit = { NOT = { has_reform = jxp_ikko_commonwealth_reform } }
-			add_government_reform = jxp_ikko_commonwealth_reform
-		}
-		jxp_grant_route_reforms_effect = yes
-		jxp_refresh_route_missions_effect = yes
-		jxp_ensure_polity_mechanic_effect = yes
+		jxp_74_ijp_route_entry_effect = yes
 	}
 }
 
@@ -193,9 +192,12 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		set_country_flag = jxp_ikko_rising_active
+	}
+
 	option = {
 		name = "jxp_ikko.6.a"
-		set_country_flag = jxp_ikko_rising_resolved
 		set_country_flag = jxp_ikko_contact
 		add_country_modifier = {
 			name = jxp_ikko_reconciled
@@ -206,20 +208,51 @@ country_event = {
 
 	option = {
 		name = "jxp_ikko.6.b"
-		set_country_flag = jxp_ikko_rising_resolved
 		add_country_modifier = {
 			name = jxp_ikko_suppressed
 			duration = 3650
 		}
-		jxp_add_tenka_order_10_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_ikko.9
+	title = "jxp_ikko.9.t"
+	desc = "jxp_ikko.9.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_disaster = jxp_ikko_rising
+		has_country_flag = jxp_ikko_rising_active
 	}
 
 	option = {
-		name = "jxp_ikko.6.c"
+		name = "jxp_ikko.9.a"
+		set_country_flag = jxp_ikko_rising_resolved
+		set_country_flag = jxp_ikko_contact
+		jxp_add_imperial_sanction_5_effect = yes
+		add_stability = 1
+		end_disaster = jxp_ikko_rising
+	}
+
+	option = {
+		name = "jxp_ikko.9.b"
+		set_country_flag = jxp_ikko_rising_resolved
+		jxp_add_tenka_order_10_effect = yes
+		add_army_tradition = 5
+		end_disaster = jxp_ikko_rising
+	}
+
+	option = {
+		name = "jxp_ikko.9.c"
+		set_country_flag = jxp_ikko_rising_resolved
+		end_disaster = jxp_ikko_rising
 		jxp_clear_all_route_flags_effect = yes
 		set_country_flag = jxp_path_ikko
 		set_country_flag = jxp_ikko_contact
-		set_country_flag = jxp_ikko_rising_resolved
 		jxp_subtract_tenka_order_10_effect = yes
 		jxp_change_to_ijp_effect = yes
 		jxp_grant_ikko_heartland_claims_effect = yes
@@ -265,7 +298,6 @@ country_event = {
 
 	option = {
 		name = "jxp_ikko.8.a"
-		set_country_flag = jxp_ikko_covenant_seen
 		add_country_modifier = {
 			name = jxp_pure_land_covenant
 			duration = -1

@@ -1,0 +1,26 @@
+country_decisions = {
+	jxp_decision_assume_toyotomi_name = {
+		major = yes
+		potential = {
+			tag = ODA
+			is_year = 1586
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_flag = jxp_toyotomi_identity_established }
+		}
+		allow = {
+			owns_or_non_sovereign_subject_of = 1020
+			owns_or_non_sovereign_subject_of = 1021
+			legitimacy = 70
+			stability = 1
+			OR = {
+				mission_completed = jxp_mission_oda_azuchi_statutes_mainline
+				has_country_flag = jxp_15_oda_tenka_fubu_edicts_taken
+			}
+		}
+		effect = {
+			jxp_establish_toyotomi_identity_effect = yes
+			add_prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -62,7 +62,6 @@ jxp_japan_uncommitted_council_missions = {
 		effect = {
 			add_prestige = 15
 			change_government_reform_progress = 30
-			set_country_flag = jxp_24_realm_council_convened
 			jxp_add_tenka_order_5_effect = yes
 			jxp_add_imperial_sanction_5_effect = yes
 		}
@@ -97,7 +96,6 @@ jxp_japan_uncommitted_council_missions = {
 		effect = {
 			add_prestige = 15
 			change_government_reform_progress = 40
-			set_country_flag = jxp_uncommitted_realm_program_drafted
 		}
 	}
 }
@@ -165,7 +163,6 @@ jxp_japan_uncommitted_horizon_missions = {
 		}
 		effect = {
 			add_dip_power = 50
-			set_country_flag = jxp_24_horizon_question_recorded
 			jxp_add_oceanic_opening_5_effect = yes
 		}
 	}
@@ -200,7 +197,6 @@ jxp_japan_uncommitted_horizon_missions = {
 		effect = {
 			add_dip_power = 50
 			add_navy_tradition = 5
-			set_country_flag = jxp_uncommitted_all_courses_open
 		}
 	}
 }

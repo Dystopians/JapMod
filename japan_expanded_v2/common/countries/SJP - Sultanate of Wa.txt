@@ -39,12 +39,12 @@ monarch_names = {
 	"Umar #0" = 10
 	"Hidayat #0" = 10
 	"Suleiman #0" = 10
-	"Nobutada #0" = 8
-	"Tadayoshi #0" = 8
+	"信忠 #0" = 8
+	"忠义 #0" = 8
 }
 
 leader_names = {
-	Sakai Nagasaki Hirado Matsuura Shimazu Otomo Arima Yusuf Musa Ibrahim Hidayat
+	酒井 长崎 平户 松浦 岛津 大友 有马 Yusuf Musa Ibrahim Hidayat
 }
 
 ship_names = {

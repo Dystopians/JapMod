@@ -333,7 +333,6 @@ jxp_japanese_polity_mechanic = {
 					name = jxp_reviewed_translations
 					duration = 3650
 				}
-				set_country_flag = jxp_reviewed_translations_flag
 			}
 			cooldown_years = 10
 			ai_chance = {

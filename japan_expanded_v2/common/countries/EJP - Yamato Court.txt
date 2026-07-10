@@ -32,18 +32,18 @@ historical_units = {
 }
 
 monarch_names = {
-	"Motohito #0" = 20
-	"Mihito #0" = 20
-	"Hikohito #0" = 20
-	"Kazuhito #0" = 20
-	"Tomohito #0" = 20
-	"Yasuhito #0" = 20
-	"Toshiko #0" = -10
-	"Okiko #0" = -10
+	"元仁 #0" = 20
+	"美仁 #0" = 20
+	"彦仁 #0" = 20
+	"和仁 #0" = 20
+	"友仁 #0" = 20
+	"康仁 #0" = 20
+	"俊子 #0" = -10
+	"兴子 #0" = -10
 }
 
 leader_names = {
-	Fujiwara Minamoto Taira Tachibana Kitabatake Sanjo Konoe Saionji Tokugawa Kujo
+	藤原 源 平 橘 北畠 三条 近卫 西园寺 德川 九条
 }
 
 ship_names = {

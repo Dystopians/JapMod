@@ -1,7 +1,10 @@
 #1830 - Tajima
-
 owner = YMN
 controller = YMN
+add_core = YMN
+
+
+
 culture = japanese
 religion = shinto
 capital = "Tottori"
@@ -24,6 +27,26 @@ discovered_by = QNG
 1542.1.1 = { discovered_by = POR }
 
 1569.1.1 = { add_core = ODA }
-1580.5.21 = { owner = ODA controller = ODA }
+1580.5.21 = {   }
 1580.7.2 = { remove_core = YMN }
-1600.10.21 = { owner = TKG controller = TKG add_core = TKG remove_core = ODA }
+1600.10.21 = {     }
+
+# JXP 88-province continuous ownership overlay
+1580.5.21 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = YMN
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

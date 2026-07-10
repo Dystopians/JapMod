@@ -657,6 +657,7 @@ jxp_sync_route_national_ideas_effect = {
 			limit = {
 				has_custom_ideas = no
 				OR = {
+					tag = JAP
 					tag = KJP
 					tag = CJP
 					tag = EJP
@@ -664,9 +665,11 @@ jxp_sync_route_national_ideas_effect = {
 					tag = SJP
 					tag = IJP
 					tag = WAK
+					tag = TOY
 				}
 				OR = {
 					NOT = { has_country_flag = jxp_route_ideas_synced_v0241 }
+					AND = { tag = JAP NOT = { has_idea_group = JAP_ideas } }
 					AND = { tag = KJP NOT = { has_idea_group = KJP_ideas } }
 					AND = { tag = CJP NOT = { has_idea_group = CJP_ideas } }
 					AND = { tag = EJP NOT = { has_idea_group = EJP_ideas } }
@@ -674,6 +677,7 @@ jxp_sync_route_national_ideas_effect = {
 					AND = { tag = SJP NOT = { has_idea_group = SJP_ideas } }
 					AND = { tag = IJP NOT = { has_idea_group = IJP_ideas } }
 					AND = { tag = WAK NOT = { has_idea_group = WAK_ideas } }
+					AND = { tag = TOY NOT = { has_idea_group = TOY_ideas } }
 				}
 			}
 			swap_free_idea_group = yes
@@ -683,6 +687,9 @@ jxp_sync_route_national_ideas_effect = {
 }
 
 jxp_clear_route_modifiers_effect = {
+	jxp_72_wak_cleanup_effect = yes
+	jxp_74_ijp_route_exit_effect = yes
+	jxp_75_reset_route_parity_four_effect = yes
 	remove_country_modifier = jxp_route_sakoku
 	remove_country_modifier = jxp_route_open_trade
 	remove_country_modifier = jxp_route_kirishitan
@@ -692,6 +699,16 @@ jxp_clear_route_modifiers_effect = {
 	remove_country_modifier = jxp_route_kaikyo
 	remove_country_modifier = jxp_route_ikko
 	remove_country_modifier = jxp_route_wokou
+	remove_country_modifier = jxp_71_route_council_recent
+	remove_country_modifier = jxp_71_sakoku_post_road_registers
+	remove_country_modifier = jxp_71_sakoku_coastal_musters
+	remove_country_modifier = jxp_71_sakoku_sealed_translation_room
+	remove_country_modifier = jxp_71_open_silver_assay_board
+	remove_country_modifier = jxp_71_open_artillery_inspectors
+	remove_country_modifier = jxp_71_open_charter_auditors
+	remove_country_modifier = jxp_71_imperial_rite_register
+	remove_country_modifier = jxp_71_imperial_kokushi_circuit
+	remove_country_modifier = jxp_71_imperial_guard_muster
 }
 
 jxp_force_monarchical_route_effect = {

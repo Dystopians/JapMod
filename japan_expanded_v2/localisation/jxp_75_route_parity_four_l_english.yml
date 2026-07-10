@@ -1,0 +1,71 @@
+﻿l_english:
+ jxp_decision_convene_kirishitan_visitation_title:0 "ìSÆ–WSî†úRb–áTßR"
+ jxp_decision_convene_kirishitan_visitation_desc:0 "^yfR!h0Ha²`ON•T4l^Têôuû|NwáOðNýV¦^„vNb—0ìSÆ–YeëX0HuyVNIYLˆÿågfvQàzz=f&TÍNNýVMeøvT0"
+ jxp_decision_convene_confucian_rite_code_council_title:0 "ìSV<yxQ‹VäN®‹"
+ jxp_decision_convene_confucian_rite_code_council_desc:0 "!b–TŒQ0‹VäNag‡eN	NYeêNèlòTÏuMLˆø‹ýVÿtSmN(W0W¹eã‰Ê‘-NuúQgkIN0ìSÆ–QãNø‹S˜RXTÿÍ‘šRËeLˆ!k^0"
+ jxp_decision_convene_reformed_policy_consistory_title:0 "ìSÆ–OXýVMeO®‹"
+ jxp_decision_convene_reformed_policy_consistory_desc:0 "pS7ROX0^lßv¦uNQY¦u0‚–ýåNb‡e“Š¦uHN9húW0T0WãNhˆ÷‹BlQ!k8h¢‹Ù›N“Š¦u‚YUO¦umgýV¶RNãl0"
+ jxp_decision_review_kaikyo_monsoon_diwan_title:0 "Í‘®‹cRÎ˜ø‹øS"
+ jxp_decision_review_kaikyo_monsoon_diwan_desc:0 "cRÎ˜*‚g0Ha„U0u&N™™™e²b*‚Šb²›SÞ¥c0RôfÜ„vwmßW0ìSÆ–=n¡R˜R0fRwNFUâVÿÁˆšRNNnýVMeÍ‘ÃV0"
+
+ jxp_75_has_kirishitan_policy_reform_trigger:0 "òTÇ‘(uóSNy˜	T)R=e9Nï¿u9ei—"
+ jxp_75_has_confucian_policy_reform_trigger:0 "òTÇ‘(uóSNy˜1gPR<y6Rï¿u9ei—"
+ jxp_75_has_reformed_policy_reform_trigger:0 "òTÇ‘(uóSNy˜9ei——Rï¿u9ei—"
+ jxp_75_has_kaikyo_policy_reform_trigger:0 "òTÇ‘(uóSNy˜wmYeï¿u9ei—"
+
+ jxp_route_parity_four.1.t:0 "WSî†úRb–t^¦^áTßR"
+ jxp_route_parity_four.1.d:0 "áTßRO&^ÞV^yfR!hþ‹M|0Ha²`OËeoƒŒQN•T4l^„v9‚XTTUV0	NWY6R¦^ýåNáOðNHNTÿtSŠbýVè•0g÷^N0W¹eéy^VTNT¹eT0"
+ jxp_route_parity_four.1.a:0 "ÆQ^yfR!h^Ñ‹ÏuINN‰fR"
+ jxp_route_parity_four.1.b:0 "äNHa²`ONtÅuJWNHNm"
+ jxp_route_parity_four.1.c:0 "YeËS‹NeQ•T4l^"
+ jxp_route_parity_four.2.t:0 "<yùfNø‹SÏuur"
+ jxp_route_parity_four.2.d:0 "!b–w˜R0‹VfRZSëXN	NYe®‹ÎTgbNwSbÄ‰0	gºNIN.VåNTRtePŸ)YNÿ	gºNRÐc’‘Ç¦^PŸNOI–­e°eåwN0W¹eŒŒT0"
+ jxp_route_parity_four.2.a:0 "ßuNø‹S!b–TŒQ"
+ jxp_route_parity_four.2.b:0 "!h¢‹NS6R‹VäNN0W¹eagîv"
+ jxp_route_parity_four.2.c:0 "äN	NYe®‹Î’NÊ‘ÏuxQ"
+ jxp_route_parity_four.3.t:0 "OXN^lßv¦uO®‹"
+ jxp_route_parity_four.3.d:0 "pS7R.SºNHdegT0W²‹àzÿHuOãNhˆH–RŒr¼bßv¦uÿ0‚–bSºNR‰Blnx²‹wmNàzz0b‡eáO¦uib'Y†N®‹º‹ÿmNN­eJR1Vçe	gCgZ0"
+ jxp_route_parity_four.3.a:0 "ÆQOXRLˆ!h¢‹²‹àz"
+ jxp_route_parity_four.3.b:0 "Í‘“ŠHuOlQ¦uv^lQV&îv"
+ jxp_route_parity_four.3.c:0 "åNb‡eag>kíu¢‹0‚–QY¦u"
+ jxp_route_parity_four.4.t:0 "cRÎ˜*‚gNHa„U0uO®‹"
+ jxp_route_parity_four.4.d:0 "=n¡R˜RUSVcRÎ˜hˆÿHa„U0u¡r‹NHTNÓNM|ÿ²b*‚S†˜RcT™™™e*‚¿u0Üwm0ÌR0…Q0W‰RšRNTINÁˆïSàeÕlTöeëkàeãN÷N0Wib.V0"
+ jxp_route_parity_four.4.a:0 "	ccRÎ˜Í‘’cø‹=nzg"
+ jxp_route_parity_four.4.b:0 "åN¡VMR‡efNnågHa„U0uÓN"
+ jxp_route_parity_four.4.c:0 "T™™™e²b*‚N4l^n<P"
+
+ jxp_75_route_policy_recent:0 "ï¿u®‹MeËeLˆ-N"
+ jxp_75_route_policy_recent_desc:0 ",gn®‹MeòT²NØNø‹øSËeLˆÿ‰˜…V0W¹eM|ŒQNO‚‚ÞV¥bPŸYTQLˆI`®‹0"
+ jxp_75_kirishitan_seminary_visitation:0 "^yfR!háTßRþ‹M|"
+ jxp_75_kirishitan_seminary_visitation_desc:0 "áTßRT„v^yfR!håNßuNþ‹M|YeˆcÏuIN0í‹ŠNVýVfRî•0"
+ jxp_75_kirishitan_mercy_accounts:0 "Ha²`OËeoƒ&"
+ jxp_75_kirishitan_mercy_accounts_desc:0 "ÅuJW0dRMQb–NHNmNbÇ‘(uqQT&ŒQÿ0W¹eQeNmNQhQ`—4NöeßRPc0"
+ jxp_75_kirishitan_harbor_chaplains:0 "•T4l^‹NâV"
+ jxp_75_kirishitan_harbor_chaplains_desc:0 "Ÿq‰`YeËS>y²NYí‹„v‹N–4l^úQ*‚ÿO0‚–ôf„UŽN¥cVÜ¹e9‚êS0"
+ jxp_75_confucian_examination_rosters:0 "ø‹S!b–I`UV"
+ jxp_75_confucian_examination_rosters_desc:0 "T0Wwu0w˜RNÖSëXhÆQGleQI`UVÿg÷^ôffÔkƒø‹SºNMb0"
+ jxp_75_confucian_code_commission:0 "NS6R‹VäN!h¢‹NS"
+ jxp_75_confucian_code_commission_desc:0 "‹VfR˜RŠbÏuxQTRN0W¹eçe‹Ov^R!h¢‹ÿÏQSMeäNµbŒr0"
+ jxp_75_confucian_three_teachings_concordance:0 "	NYeIN‹OO"
+ jxp_75_confucian_three_teachings_concordance_desc:0 "QÊ‘^y	N¹efRwbùRgqIN‹OÿONT.Oßuýw(WTN<y6RNøv’Nã‰Ê‘0"
+ jxp_75_reformed_printing_consistory:0 "OXpS7R¡R®‹b–"
+ jxp_75_reformed_printing_consistory_desc:0 "T0WOXqQT!h¢‹pS,gÿ°e„v²‹àzNfRô‹ôfëV.OeQÎWG•0"
+ jxp_75_reformed_civic_auditors:0 "^lßv¦uåg&âV"
+ jxp_75_reformed_civic_auditors_desc:0 "×SHuO¨c>N„våg&XTlQV8hùRKyVNlQµNÿb‡eßv¦uàVwôfïSáO0"
+ jxp_75_reformed_fleet_articles:0 "QY¦u0‚–b‡eàzz"
+ jxp_75_reformed_fleet_articles_desc:0 "9‚IN00‚•N4lKb„vIN¡R™QeQßuNàzzÿÜwm0‚–—VåN	c¦uŒ¦^0"
+ jxp_75_kaikyo_monsoon_accounts:0 "cRÎ˜ø‹=nO¡‹"
+ jxp_75_kaikyo_monsoon_accounts_desc:0 "ø‹=nO*‚gßuN3u¥b'USNz&ÿèwmFUïôffTˆ¥c0"
+ jxp_75_kaikyo_endowment_granaries:0 "Ha„U0uÓNI`M|"
+ jxp_75_kaikyo_endowment_granaries_desc:0 "Ha„U0uµNN0W¹e®|ÓN1u¡VMR‡efNnx²‹ÿHNmegnàVwôfHN3zúV0"
+ jxp_75_kaikyo_convoy_muster:0 "™™™e²b*‚n<P"
+ jxp_75_kaikyo_convoy_muster_desc:0 "FU9‚N4l^	ccRÎ˜Tn<PÿÜwm9‚–ôfýwµb¡Vz­ˆNÎ˜jm0"
+
+ jxp_debug_fire_route_parity_four_kirishitan_title:0 "ŒÕ‹ÿæ‰ÑS	T)R=e9N®‹Me"
+ jxp_debug_fire_route_parity_four_kirishitan_desc:0 "Ç,gRGr„vlQqQÍ‘n¥cãSnd–	gP–g¶r`ÿv^ôv¥cSbV	T)R=e9Nï¿u®‹Me0—HQYŽN¾|nxï¿uv^Ç‘(uùR”^9ei—0"
+ jxp_debug_fire_route_parity_four_confucian_title:0 "ŒÕ‹ÿæ‰ÑS1gPR<y6R®‹Me"
+ jxp_debug_fire_route_parity_four_confucian_desc:0 "Ç,gRGr„vlQqQÍ‘n¥cãSnd–	gP–g¶r`ÿv^ôv¥cSbV1gPR<y6Rï¿u®‹Me0—HQYŽN¾|nxï¿uv^Ç‘(uùR”^9ei—0"
+ jxp_debug_fire_route_parity_four_reformed_title:0 "ŒÕ‹ÿæ‰ÑS9ei——R®‹Me"
+ jxp_debug_fire_route_parity_four_reformed_desc:0 "Ç,gRGr„vlQqQÍ‘n¥cãSnd–	gP–g¶r`ÿv^ôv¥cSbV9ei——Rï¿u®‹Me0—HQYŽN¾|nxï¿uv^Ç‘(uùR”^9ei—0"
+ jxp_debug_fire_route_parity_four_kaikyo_title:0 "ŒÕ‹ÿæ‰ÑSwmYe®‹Me"
+ jxp_debug_fire_route_parity_four_kaikyo_desc:0 "Ç,gRGr„vlQqQÍ‘n¥cãSnd–	gP–g¶r`ÿv^ôv¥cSbVwmYeï¿u®‹Me0—HQYŽN¾|nxï¿uv^Ç‘(uùR”^9ei—0"

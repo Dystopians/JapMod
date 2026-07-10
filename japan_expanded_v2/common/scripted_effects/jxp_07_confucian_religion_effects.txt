@@ -56,7 +56,6 @@ jxp_confucian_sync_shinto_effect = {
 				duration = -1
 			}
 		}
-		set_country_flag = jxp_confucian_shinto_synthesis_granted
 	}
 	jxp_confucian_protect_ise_effect = yes
 }

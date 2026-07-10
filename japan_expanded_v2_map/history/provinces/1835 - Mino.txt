@@ -29,7 +29,7 @@ discovered_by = ANU
 1561.1.1 = { add_core = ODA }
 1567.10.1 = {   remove_core = TKI }
 1567.10.1 = { capital = "Gifu" } # Oda Nobunaga changed the name of city.
-1600.10.21 = {   add_core = TKG remove_core = ODA fort_15th = no } # Gifu Castle was taken down
+1600.10.21 = {     fort_15th = no } # Gifu Castle was taken down
 
 # JXP 88-province continuous ownership overlay
 1550.1.1 = {
@@ -44,9 +44,15 @@ discovered_by = ANU
 	add_core = ODA
 	remove_core = STO
 }
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
 1600.10.21 = {
 	owner = TKG
 	controller = TKG
 	add_core = TKG
-	remove_core = ODA
+	remove_core = TOY
 }

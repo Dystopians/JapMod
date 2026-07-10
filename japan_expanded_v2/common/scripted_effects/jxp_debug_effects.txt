@@ -33,8 +33,6 @@ jxp_debug_unify_japan_effect = {
 			add_core = ROOT
 			cede_province = ROOT
 		}
-		set_country_flag = jxp_daimyo_ready_for_unification
-		set_country_flag = jxp_debug_japan_unified
 		add_prestige = 25
 		jxp_add_tenka_order_10_effect = yes
 		jxp_add_imperial_sanction_10_effect = yes
@@ -72,6 +70,7 @@ jxp_debug_clear_cooldowns_effect = {
 		remove_country_modifier = jxp_dejima_window
 		remove_country_modifier = jxp_reviewed_translations
 		remove_country_modifier = jxp_confucian_incident_review_recent
+		remove_country_modifier = jxp_71_route_council_recent
 		jxp_cancel_all_investments_effect = yes
 	}
 }
@@ -79,6 +78,10 @@ jxp_debug_clear_cooldowns_effect = {
 jxp_debug_clear_event_state_effect = {
 	custom_tooltip = jxp_debug_internal_effect_tt
 	hidden_effect = {
+		jxp_debug_clear_disaster_state_effect = yes
+		jxp_debug_clear_legacy_state_debt_effect = yes
+		jxp_72_wak_debug_reset_effect = yes
+		jxp_74_ijp_debug_reset_effect = yes
 		clr_country_flag = jxp_sengoku_shadow_kyoto_seen
 		clr_country_flag = jxp_sengoku_kokujin_seen
 		clr_country_flag = jxp_sengoku_kyoto_invitation_seen
@@ -190,6 +193,9 @@ jxp_debug_clear_event_state_effect = {
 		clr_country_flag = jxp_mandate_claim_fallback
 		clr_country_flag = jxp_unlocked_hakko_ichiu_reform
 		clr_country_flag = jxp_hakko_visibility_reconciled_v0260
+		clr_country_flag = jxp_toyotomi_identity_established
+		clr_country_flag = jxp_toyotomi_identity_migrated_v0270
+		clr_country_flag = jxp_70_toyotomi_policy_seen
 		clr_country_flag = jxp_manchu_korean_route_seen
 		clr_country_flag = jxp_eastasia_tribute_registry_seen
 		clr_country_flag = jxp_tsushima_channel_office_done
@@ -546,11 +552,9 @@ jxp_debug_clear_event_state_effect = {
 	remove_country_modifier = jxp_ryukyu_sea_gate
 	remove_country_modifier = jxp_ming_sea_smugglers
 	remove_country_modifier = jxp_wokou_admiralty
-	remove_country_modifier = jxp_black_tide_vanguard
 	remove_country_modifier = jxp_eastern_sea_lords
 	remove_country_modifier = jxp_shimabara_mediation
 	remove_country_modifier = jxp_shimabara_suppressed
-	remove_country_modifier = jxp_shimabara_disaster_modifier
 	remove_country_modifier = jxp_oceanic_sun_state
 	remove_country_modifier = jxp_pacific_charter
 	remove_country_modifier = jxp_mandate_fallback_hegemony
@@ -708,6 +712,23 @@ jxp_debug_clear_event_state_effect = {
 	remove_country_modifier = jxp_21_warrior_muster_rolls
 	remove_country_modifier = jxp_21_warrior_castle_roads
 	remove_country_modifier = jxp_21_warrior_banner_legacy
+	remove_country_modifier = jxp_70_toyotomi_market_charters
+	remove_country_modifier = jxp_70_toyotomi_tenka_command
+	remove_country_modifier = jxp_70_toyotomi_azuchi_offices
+	remove_country_modifier = jxp_70_toyotomi_osaka_works
+	remove_country_modifier = jxp_70_toyotomi_cadaster_office
+	remove_country_modifier = jxp_70_toyotomi_realm_settlement
+	remove_country_modifier = jxp_70_toyotomi_five_regents_policy
+	remove_country_modifier = jxp_70_toyotomi_cadaster_policy
+	remove_country_modifier = jxp_71_sakoku_post_road_registers
+	remove_country_modifier = jxp_71_sakoku_coastal_musters
+	remove_country_modifier = jxp_71_sakoku_sealed_translation_room
+	remove_country_modifier = jxp_71_open_silver_assay_board
+	remove_country_modifier = jxp_71_open_artillery_inspectors
+	remove_country_modifier = jxp_71_open_charter_auditors
+	remove_country_modifier = jxp_71_imperial_rite_register
+	remove_country_modifier = jxp_71_imperial_kokushi_circuit
+	remove_country_modifier = jxp_71_imperial_guard_muster
 	remove_country_modifier = jxp_21_court_genealogies
 	remove_country_modifier = jxp_21_court_petitions
 	remove_country_modifier = jxp_21_court_kanrei_memory
@@ -986,7 +1007,6 @@ jxp_debug_clear_event_state_effect = {
 		remove_province_modifier = jxp_ishiyama_fortress
 		remove_province_modifier = jxp_ise_pilgrim_roads
 		remove_province_modifier = jxp_confucian_reform_center
-		remove_province_modifier = jxp_confucian_newly_ordered
 		remove_province_modifier = jxp_ise_jingu_protected
 		clr_province_flag = jxp_confucian_native_center
 	}
@@ -1263,8 +1283,11 @@ jxp_debug_seed_shimabara_pressure_effect = {
 	custom_tooltip = jxp_debug_internal_effect_tt
 	hidden_effect = {
 		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_cleanup_shimabara_effect = yes
 		set_country_flag = jxp_hidden_christians_seen
 		jxp_debug_set_polity_closed_effect = yes
+		add_stability = -3
+		add_war_exhaustion = 5
 		add_country_modifier = { name = jxp_expelled_padres duration = 3650 }
 		random_owned_province = {
 			limit = {
@@ -1276,5 +1299,109 @@ jxp_debug_seed_shimabara_pressure_effect = {
 			}
 			change_religion = catholic
 		}
+		add_disaster_progress = {
+			disaster = jxp_shimabara_fire
+			value = 100
+		}
 	}
+}
+
+jxp_debug_seed_ikko_pressure_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_cleanup_ikko_effect = yes
+		jxp_debug_clear_route_state_effect = yes
+		jxp_debug_set_polity_low_effect = yes
+		add_stability = -3
+		add_war_exhaustion = 5
+		add_disaster_progress = {
+			disaster = jxp_ikko_rising
+			value = 100
+		}
+	}
+}
+
+jxp_debug_seed_keian_pressure_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_cleanup_keian_effect = yes
+		add_stability = -3
+		add_war_exhaustion = 5
+		add_manpower = -999999
+		add_disaster_progress = {
+			disaster = jxp_keian_ronin_crisis
+			value = 100
+		}
+	}
+}
+
+jxp_debug_seed_tenmei_pressure_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		jxp_debug_cleanup_tenmei_effect = yes
+		add_stability = -3
+		add_war_exhaustion = 5
+		add_manpower = -999999
+		add_disaster_progress = {
+			disaster = jxp_tenmei_famine
+			value = 100
+		}
+	}
+}
+
+jxp_debug_cleanup_shimabara_effect = {
+	if = {
+		limit = { has_disaster = jxp_shimabara_fire }
+		end_disaster = jxp_shimabara_fire
+	}
+	clr_country_flag = jxp_shimabara_crisis_active
+	clr_country_flag = jxp_shimabara_resolved
+	clr_country_flag = jxp_shimabara_mitigated
+	remove_country_modifier = jxp_shimabara_mediation
+	remove_country_modifier = jxp_shimabara_suppressed
+}
+
+jxp_debug_cleanup_ikko_effect = {
+	if = {
+		limit = { has_disaster = jxp_ikko_rising }
+		end_disaster = jxp_ikko_rising
+	}
+	clr_country_flag = jxp_ikko_rising_active
+	clr_country_flag = jxp_ikko_rising_resolved
+	remove_country_modifier = jxp_ikko_reconciled
+	remove_country_modifier = jxp_ikko_suppressed
+}
+
+jxp_debug_cleanup_keian_effect = {
+	if = {
+		limit = { has_disaster = jxp_keian_ronin_crisis }
+		end_disaster = jxp_keian_ronin_crisis
+	}
+	clr_country_flag = jxp_keian_ronin_crisis_active
+	clr_country_flag = jxp_keian_ronin_crisis_resolved
+	remove_country_modifier = jxp_keian_ronin_reemployment
+	remove_country_modifier = jxp_keian_ronin_patrols
+	remove_country_modifier = jxp_keian_civil_governance
+}
+
+jxp_debug_cleanup_tenmei_effect = {
+	if = {
+		limit = { has_disaster = jxp_tenmei_famine }
+		end_disaster = jxp_tenmei_famine
+	}
+	clr_country_flag = jxp_tenmei_famine_active
+	clr_country_flag = jxp_tenmei_famine_resolved
+	remove_country_modifier = jxp_tenmei_relief_granaries
+	remove_country_modifier = jxp_tenmei_rationing
+	remove_country_modifier = jxp_tenmei_recovery
+}
+
+jxp_debug_clear_disaster_state_effect = {
+	jxp_debug_cleanup_shimabara_effect = yes
+	jxp_debug_cleanup_ikko_effect = yes
+	jxp_debug_cleanup_keian_effect = yes
+	jxp_debug_cleanup_tenmei_effect = yes
 }

@@ -1,5 +1,6 @@
 jxp_clear_founder_house_reforms_effect = {
 	if = { limit = { has_reform = jxp_reform_founder_oda_azuchi_statutes } remove_government_reform = jxp_reform_founder_oda_azuchi_statutes }
+	if = { limit = { has_reform = jxp_reform_founder_toyotomi_five_regents } remove_government_reform = jxp_reform_founder_toyotomi_five_regents }
 	if = { limit = { has_reform = jxp_reform_founder_tkg_mikawa_fudai_code } remove_government_reform = jxp_reform_founder_tkg_mikawa_fudai_code }
 	if = { limit = { has_reform = jxp_reform_founder_tkd_koshu_military_law } remove_government_reform = jxp_reform_founder_tkd_koshu_military_law }
 	if = { limit = { has_reform = jxp_reform_founder_ues_kanto_justice } remove_government_reform = jxp_reform_founder_ues_kanto_justice }

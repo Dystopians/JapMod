@@ -88,7 +88,6 @@ country_event = {
 
 	option = {
 		name = "jxp_colonial.6.b"
-		set_country_flag = jxp_north_pacific_charts_done
 		add_navy_tradition = 5
 		jxp_add_imperial_sanction_5_effect = yes
 	}

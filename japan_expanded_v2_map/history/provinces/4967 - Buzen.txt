@@ -33,14 +33,14 @@ discovered_by = QNG
 	remove_core = OTM
 }
 1587.5.15 = {
-	owner = ODA
-	controller = ODA
-	add_core = ODA
+	owner = TOY
+	controller = TOY
+	add_core = TOY
 	remove_core = SMZ
 }
 1600.10.21 = {
 	owner = KRD
 	controller = KRD
 	add_core = KRD
-	remove_core = ODA
+	remove_core = TOY
 }

@@ -59,7 +59,7 @@ def main():
         copy_overlay(companion, staging)
         data = generator.build_data(staging, game_root)
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(generator.html_page(data), encoding="utf-8")
+        args.output.write_text(generator.html_page(data), encoding="utf-8", newline="\r\n")
     print(f"Wrote {args.output}")
     print(
         f"Counts: {data['counts']['missionGroups']} mission groups, "

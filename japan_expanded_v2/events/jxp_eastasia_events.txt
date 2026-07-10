@@ -260,7 +260,6 @@ country_event = {
 
 	option = {
 		name = "jxp_eastasia.7.a"
-		set_country_flag = jxp_china_coast_entrepots_done
 		jxp_grant_china_littoral_claims_effect = yes
 		add_country_modifier = {
 			name = jxp_china_coast_entrepots
@@ -270,7 +269,6 @@ country_event = {
 
 	option = {
 		name = "jxp_eastasia.7.b"
-		set_country_flag = jxp_china_coast_entrepots_done
 		jxp_add_oceanic_opening_5_effect = yes
 		add_mercantilism = 1
 	}

@@ -292,12 +292,89 @@ def _vanilla_modifier_catalog(game_root: Path) -> set[str]:
     return catalog
 
 
+def check_national_idea_modifiers(
+    context: ValidationContext,
+    game_root: Path,
+) -> CheckResult:
+    """Reject modifier keys absent from the pinned vanilla idea vocabulary."""
+
+    result = CheckResult("National idea modifier vocabulary")
+    catalog = _vanilla_modifier_catalog(game_root)
+    checked_groups = 0
+    modifier_entries = 0
+    ideas_root = context.mod_root / "common" / "ideas"
+    for source in sorted(ideas_root.glob("*.txt")):
+        document = context.document(source)
+        if document is None:
+            continue
+        for entry in document.root.entries:
+            if (
+                entry.key is None
+                or not entry.key.endswith("_ideas")
+                or not isinstance(entry.value, Object)
+            ):
+                continue
+            checked_groups += 1
+            body = entry.value
+            blocks = [first_object(body, "start"), first_object(body, "bonus")]
+            blocks.extend(
+                child.value
+                for child in body.entries
+                if child.key not in GROUP_METADATA and isinstance(child.value, Object)
+            )
+            keys = [key for block in blocks for key in _modifier_keys(block)]
+            modifier_entries += len(keys)
+            for unknown in sorted(set(keys) - catalog):
+                result.add(
+                    "ideas.unknown_modifier",
+                    f"{entry.key} uses modifier {unknown}, absent from the pinned vanilla idea catalog",
+                    context.relative(source),
+                    entry.line,
+                )
+    result.metrics.update(
+        {
+            "groups": checked_groups,
+            "modifier_entries": modifier_entries,
+            "vanilla_catalog_entries": len(catalog),
+        }
+    )
+    result.summary = (
+        f"{checked_groups} groups / {modifier_entries} modifier entries checked "
+        f"against {len(catalog)} vanilla keys"
+    )
+    return result
+
+
 def check_route_ideas(context: ValidationContext, game_root: Path) -> CheckResult:
     structure = check_national_idea_structure(context)
+    vocabulary = check_national_idea_modifiers(context, game_root)
+    companion_root = context.mod_root.parent / "japan_expanded_v2_map"
+    companion_vocabulary = (
+        check_national_idea_modifiers(ValidationContext(companion_root), game_root)
+        if companion_root.is_dir()
+        else None
+    )
     result = CheckResult("National ideas and route identity")
     result.issues.extend(structure.issues)
+    result.issues.extend(vocabulary.issues)
+    if companion_vocabulary is not None:
+        for issue in companion_vocabulary.issues:
+            source = (
+                f"japan_expanded_v2_map/{issue.source}"
+                if issue.source is not None
+                else "japan_expanded_v2_map/common/ideas"
+            )
+            result.add(issue.code, issue.message, source, issue.line)
     result.notes.extend(structure.notes)
     result.metrics.update(structure.metrics)
+    result.metrics["all_group_modifier_entries"] = vocabulary.metrics.get(
+        "modifier_entries", 0
+    )
+    result.metrics["companion_group_modifier_entries"] = (
+        companion_vocabulary.metrics.get("modifier_entries", 0)
+        if companion_vocabulary is not None
+        else 0
+    )
     source = context.mod_root / "common" / "ideas" / "jxp_route_ideas.txt"
     document = context.document(source)
     if document is None:
@@ -310,7 +387,6 @@ def check_route_ideas(context: ValidationContext, game_root: Path) -> CheckResul
         for entry in document.root.entries
         if entry.key is not None and isinstance(entry.value, Object)
     }
-    catalog = _vanilla_modifier_catalog(game_root)
     checked = 0
     modifier_total = 0
 
@@ -364,14 +440,6 @@ def check_route_ideas(context: ValidationContext, game_root: Path) -> CheckResul
             result.add(
                 "ideas.route_signature",
                 f"{group_name} lacks route signatures: {', '.join(missing_signatures)}",
-                context.relative(source),
-                entry.line,
-            )
-
-        for unknown in sorted(set(keys) - catalog):
-            result.add(
-                "ideas.unknown_modifier",
-                f"{group_name} uses modifier {unknown}, absent from the vanilla idea catalog",
                 context.relative(source),
                 entry.line,
             )

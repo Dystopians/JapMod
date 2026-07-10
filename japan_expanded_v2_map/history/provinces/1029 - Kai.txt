@@ -1,7 +1,10 @@
 #1029 - Kai
-
 owner = TKD
 controller = TKD
+add_core = TKD
+
+
+
 culture = togoku
 religion = shinto
 capital = "Kofu"
@@ -21,5 +24,25 @@ discovered_by = ANU
 
 1498.1.1 = { trade_goods = gold } # Kurokawa gold mine discovered
 1542.1.1 = { discovered_by = POR }
-1582.4.3 = { add_core = ODA owner = ODA controller = ODA remove_core = TKD }
-1600.9.13 = { owner = TKG controller = TKG add_core = TKG remove_core = ODA }
+1582.4.3 = { add_core = ODA   remove_core = TKD }
+1600.9.13 = {     }
+
+# JXP 88-province continuous ownership overlay
+1582.4.3 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = TKD
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

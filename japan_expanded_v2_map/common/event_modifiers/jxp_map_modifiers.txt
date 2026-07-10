@@ -14,7 +14,7 @@ jxp_map_sea_legacy = {
 }
 
 jxp_map_frontier_legacy = {
-	fort_defense = 0.15
+	defensiveness = 0.15
 	land_attrition = -0.10
 }
 
@@ -32,4 +32,3 @@ jxp_map_port_registers = {
 	local_trade_power = 0.25
 	local_ship_cost = -0.10
 }
-

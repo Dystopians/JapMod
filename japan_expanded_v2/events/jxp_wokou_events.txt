@@ -7,9 +7,21 @@ country_event = {
 	picture = NAVAL_MILITARY_eventPicture
 
 	is_triggered_only = yes
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+			AND = {
+				NOT = { jxp_has_any_route_trigger = yes }
+				jxp_has_wokou_opening_trigger = yes
+			}
+		}
+	}
 
 	option = {
 		name = "jxp_wokou.1.a"
+		jxp_clear_all_route_flags_effect = yes
 		set_country_flag = jxp_wokou_contact
 		set_country_flag = jxp_path_wokou
 		add_country_modifier = {
@@ -186,7 +198,6 @@ country_event = {
 
 	option = {
 		name = "jxp_wokou.7.a"
-		set_country_flag = jxp_wokou_admiralty_seen
 		add_country_modifier = {
 			name = jxp_wokou_admiralty
 			duration = -1
@@ -210,7 +221,6 @@ country_event = {
 
 	option = {
 		name = "jxp_wokou.8.a"
-		set_country_flag = jxp_eastern_sea_lords_seen
 		add_country_modifier = {
 			name = jxp_eastern_sea_lords
 			duration = -1

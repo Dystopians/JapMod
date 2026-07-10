@@ -8,8 +8,8 @@ capital = 4976
 
 1440.11.11 = {
 	monarch = {
-		name = "Nagatsugu"
-		dynasty = "Sagara"
+		name = "长续"
+		dynasty = "相良"
 		birth_date = 1414.1.1
 		adm = 3
 		dip = 4

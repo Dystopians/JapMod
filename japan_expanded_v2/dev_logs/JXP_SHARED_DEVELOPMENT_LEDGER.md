@@ -20,17 +20,17 @@
 
 - Ledger schema: `1`
 - Last updated: `2026-07-10`
-- Main Mod version: `0.26.0`
-- Companion Map version: `0.1.1-alpha`
+- Main Mod version: `0.27.0`
+- Companion Map version: `0.1.2-alpha`
 - Pinned game: `EU4 v1.37.5.0 Inca (491d)`
 - Supported version: `1.37.*`
 - Runtime acceptance: `PENDING_USER_APPROVAL`
-- Main static gate: `13/13 checks; 67/67 unit tests`
+- Main static gate: `21/21 checks; 142/142 unit tests`
 - Combined static gate: `0 errors; 0 warnings`
-- Main missions: `272 mission IDs; 40 custom series; 188 effective profiles`
-- Combined missions: `287 mission IDs; 45 series; 120 companion tag/DLC profiles`
-- Combined content inventory: `466 events; 215 decisions; 252 scripted callables; 832 modifiers`
-- Companion geography: `88/88 japan_region provinces; 137382 selectable days; 273 owner intervals; 56 subject intervals`
+- Main missions: `278 mission IDs; 41 custom series; 192 effective profiles`
+- Combined missions: `308 mission IDs; 46 series; 120 companion tag/DLC profiles`
+- Combined content inventory: `490 events; 269 decisions; 323 scripted callables; 887 modifiers`
+- Companion geography: `88/88 japan_region provinces; 137382 selectable days; 299 owner intervals; 70 subject intervals`
 - Localisation: `0 missing combined mission localisation keys`
 
 ## Source Of Truth
@@ -72,7 +72,7 @@
 - 每个 mission 必须同时有 `<id>_title` 与 `<id>_desc`；裸 `<id>` 仅可作为旧内容兼容别名。
 - 动态路线只通过 canonical immediate + next-day two-phase refresh；旧存档 series key 必须保留同名 inactive tombstone，位置或所有权变化必须有一次性迁移。
 - 终局日本不得使用通用任务树；十种统一状态必须保有唯一五-series signature，且 final-tree density 门禁持续有效。
-- 任何新增或重排任务必须同时验证主 Mod 188 profiles 与地图 30 tags × 4 DLC states。
+- 任何新增或重排任务必须同时验证主 Mod 192 profiles 与地图 30 tags × 4 DLC states。
 
 ### Routes, Religion, Ideas And Reforms
 
@@ -100,10 +100,10 @@
 
 ### Mission And Government State
 
-- 主 Mod：40 个自定义 mission series、272 个 mission ID、188 个 effective profile。
-- 地图 Mod：5 个精确 slot-3 house series、15 个 mission、120 个 tag/DLC profile。
+- 主 Mod：41 个自定义 mission series、278 个 mission ID、192 个 effective profile。
+- 地图 Mod：5 个精确 slot-3 house series、30 个 mission、120 个 tag/DLC profile。
 - 终局任务：十种统一状态各有唯一五列签名，不得退回 vanilla generic 或 another-route columns。
-- 政府改革：27 个路线选择 + 38 个 founder 选择，全部语义注册在前 11 个原版 monarchy tiers；306 个旧定义保持 dormant，不得误重新暴露。
+- 政府改革：27 个路线选择 + 39 个 founder 选择，全部语义注册在前 11 个原版 monarchy tiers；306 个旧定义保持 dormant，不得误重新暴露。
 - 改革图标：35 个已验证 57×57 RGBA DDS sprite family。
 
 ### Companion Map State
@@ -119,11 +119,11 @@
 | Roadmap | Current state | Remaining distance |
 | --- | --- | --- |
 | 0.1 MVP | 结构和内容量已超过目标 | 当前版本仍需完整运行时验收 |
-| 0.2 宗教分支 | KJP/CJP/RFJ/SJP 等已成体系 | 事件、灾难、决议深度仍需路线对齐 |
+| 0.2 宗教分支 | KJP/CJP/RFJ/SJP 等已成体系，四路线改革互动已对齐 | 当前版本仍需运行时节奏与 UI 证明 |
 | 0.3 海外与东亚 | 任务与风味已有广泛骨架 | 天命、八纮一宇、DLC fallback 与太平洋循环需专项验收/扩展 |
-| 0.4 民众与海寇 | IJP/WAK 框架与终局任务已存在 | 一向宗灾难、倭寇经济/私掠循环和地域专属内容仍偏薄 |
-| 0.5 任务树扩展 | 287 个联合任务且拓扑门禁成熟 | 后续以节奏、历史目的与分支质量为主，不以堆数量为主 |
-| 1.0 | 内容量达到或超过原数值目标 | 运行时证明、灾难数量、路线等深度与发布整理尚未完成 |
+| 0.4 民众与海寇 | IJP/WAK 均有压力、投资、危机、退出与 AI 静态闭环 | 仍需 observer、存读档和运行时节奏证明 |
+| 0.5 任务树扩展 | 308 个联合任务且拓扑门禁成熟 | 后续以节奏、历史目的与分支质量为主，不以堆数量为主 |
+| 1.0 | 内容量、四灾难、九路线循环与大名身份覆盖已达到目标 | 运行时证明、海外/地域风味、终局政治扩展与发布整理尚未完成 |
 
 ## Active TODO
 
@@ -136,29 +136,29 @@
 | JXP-003 | P0 | DONE | CODEX_ROOT | Balance/Compatibility | 逐项重构 19 个 `num_of_cities = 25/30` 地图尺度敏感门槛 | 每项记录历史意图，改为统一度、战略省份、area、发展或合理城市数；联合门禁 0 warning |
 | JXP-004 | P0 | OPEN | UNCLAIMED | CJP/Religion | 运行时证明 CJP 单次融合神道、改革中心传播和神道事件桥 | 不重复 harmonize；Ise 等保护地不转；Nanban/urbanization/Neo-Confucian bridge 可触发 |
 | JXP-005 | P1 | OPEN | UNCLAIMED | UI | 对大名五家系、十种统一状态与地图任务做视觉布局/政府 UI 验收 | 无断线、空洞、重叠、通用树、缺失 icon 或错误 tier；截图留档 |
-| JXP-006 | P1 | OPEN | UNCLAIMED | Route parity | 审计九条路线的任务、事件、决议、改革、调试入口深度 | 生成可比较覆盖报告并补齐明显短板，互斥 gate 无矛盾 |
-| JXP-007 | P1 | OPEN | UNCLAIMED | Disasters | 将完整灾难系统扩展到原规划的 4-5 个 | 每个灾难窄触发、推进/结束/清理闭合，并有 debug 验收入口 |
-| JXP-008 | P1 | OPEN | UNCLAIMED | WAK | 完成倭寇联盟、私掠、港市与海上国家的长期循环 | 有进入、投资、压力、收益、退出与 AI 行为；地图语义范围兼容 |
-| JXP-009 | P1 | OPEN | UNCLAIMED | IJP | 完成一向宗压力/灾难及寺社町众国家循环 | 与岛原不误叠，宗教/阶层/地域 gate 合理，终局任务和事件互相支撑 |
+| JXP-006 | P1 | DONE | CODEX_ROOT | Route parity | 审计九条路线的任务、事件、决议、改革、调试入口深度 | 生成可比较覆盖报告并补齐明显短板，互斥 gate 无矛盾 |
+| JXP-007 | P1 | DONE | CODEX_ROOT | Disasters | 将完整灾难系统扩展到原规划的 4-5 个 | 每个灾难窄触发、推进/结束/清理闭合，并有 debug 验收入口 |
+| JXP-008 | P1 | IN_PROGRESS | CODEX_ROOT | WAK | 完成倭寇联盟、私掠、港市与海上国家的长期循环 | 有进入、投资、压力、收益、退出与 AI 行为；地图语义范围兼容 |
+| JXP-009 | P1 | IN_PROGRESS | CODEX_ROOT | IJP | 完成一向宗压力/灾难及寺社町众国家循环 | 与岛原不误叠，宗教/阶层/地域 gate 合理，终局任务和事件互相支撑 |
 | JXP-010 | P1 | OPEN | UNCLAIMED | Mandate | 审计日本取得天命、八纮一宇改革、CB/AE 与 DLC fallback | 仅任务解锁；无天命 DLC 有替代路径；脚本 effect/CB 经原版实证与运行时验证 |
 | JXP-011 | P2 | OPEN | UNCLAIMED | Overseas | 扩展阿拉斯加、加利福尼亚、马尼拉-长崎与太平洋日本循环 | 各路线有合理分歧，避免单纯永久 modifier 堆叠 |
 | JXP-012 | P2 | OPEN | UNCLAIMED | Regional flavor | 增补对马、濑户内、琉球及伴随地图地域专属任务/事件 | 使用语义地理接口，避免硬引用可选 area，且不重复奖励 1021/4943 |
 | JXP-013 | P2 | OPEN | UNCLAIMED | Writing/Events | 为可干预低频事件增加有意义选项并继续历史文案润色 | 选项有真实取舍；叙事不直述点数/修正；debug cleanup 覆盖新 flags/modifiers |
-| JXP-014 | P2 | OPEN | UNCLAIMED | Era attributes | 审计任务、事件、改革、幕府政策、投资对三项时代属性的非决议交互 | 每条路线有多种长期改变方式；刀狩令不与原版幕府行动重复 |
-| JXP-015 | P1 | OPEN | UNCLAIMED | Safety | 审计全部 event flags/modifiers 的 debug cleanup 与灾难误触发 | 自动覆盖报告无孤立状态；岛原及后续灾难无明显 false positive |
+| JXP-014 | P2 | DONE | CODEX_ROOT | Era attributes | 审计任务、事件、改革、幕府政策、投资对三项时代属性的非决议交互 | 每条路线有多种长期改变方式；刀狩令不与原版幕府行动重复 |
+| JXP-015 | P1 | DONE | CODEX_ROOT | Safety | 审计全部 event flags/modifiers 的 debug cleanup 与灾难误触发 | 自动覆盖报告无孤立状态；岛原及后续灾难无明显 false positive |
 | JXP-016 | P2 | IN_PROGRESS | PROJECT | Process | 持续维护本总账、历史索引与 skill 协议 | 每个开发切片同步更新版本、TODO、证据、风险和 Update Journal |
 | JXP-017 | P0 | OPEN | UNCLAIMED | Map runtime | 验收 88 省地图渲染、港口、海峡、标签、书签与日期滑块 | 用户许可后按 map implementation report 清单完整执行并归档截图/log |
-| JXP-018 | P1 | OPEN | UNCLAIMED | Toyotomi/History | 建立独立丰臣家身份，修复秀吉掌权后仍沿用织田家的历史与玩法链 | 专属 tag、旗帜、名称、理念及任务身份完整；秀吉路线在正确节点转为丰臣，任务、理念、政府、属国和旧存档迁移不丢失；伴随地图可选日期保持一致 |
-| JXP-019 | P1 | OPEN | UNCLAIMED | Daimyo ideas/missions | 建立全部日本大名的理念与任务覆盖矩阵，按历史影响力分层扩展；织田家加入“天下布武”专属主线 | 主/地图全部可选大名均有非通用理念与身份任务；历史重要大名拥有更深且较强的专属分支；联合 profile 无 generic fallback、冲突或断链，并有强度分层审计 |
+| JXP-018 | P1 | IN_PROGRESS | CODEX_ROOT | Toyotomi/History | 建立独立丰臣家身份，修复秀吉掌权后仍沿用织田家的历史与玩法链 | 专属 tag、旗帜、名称、理念及任务身份完整；秀吉路线在正确节点转为丰臣，任务、理念、政府、属国和旧存档迁移不丢失；伴随地图可选日期保持一致 |
+| JXP-019 | P1 | DONE | CODEX_ROOT | Daimyo ideas/missions | 建立全部日本大名的理念与任务覆盖矩阵，按历史影响力分层扩展；织田家加入“天下布武”专属主线 | 主/地图全部可选大名均有非通用理念与身份任务；历史重要大名拥有更深且较强的专属分支；联合 profile 无 generic fallback、冲突或断链，并有强度分层审计 |
 | JXP-020 | P0 | IN_PROGRESS | CODEX_ROOT | Ideas/UI | 给国家理念结构增加硬性上限，修复理念超限造成的 UI 重叠 | 所有可激活理念组均符合 `start + 7 ideas + bonus` 标准结构；生成器与 validator 对超限 hard fail；获准运行时截图确认无重叠或越界 |
-| JXP-021 | P1 | OPEN | UNCLAIMED | Localisation/Names | 将 Mod 中尚未汉化的日本大名领袖姓名统一汉化为中文 | 审计 country history、scripted monarch/heir/consort、将领/提督与姓名池；零遗留应汉化的罗马字日本人名，且 source/active 本地化管线通过 |
+| JXP-021 | P1 | DONE | CODEX_ROOT | Localisation/Names | 将 Mod 中尚未汉化的日本大名领袖姓名统一汉化为中文 | 审计 country history、scripted monarch/heir/consort、将领/提督与姓名池；零遗留应汉化的罗马字日本人名，且 source/active 本地化管线通过 |
 | JXP-022 | P1 | OPEN | UNCLAIMED | Final tags | 为每个日本终局 tag/统一状态增加专属权力结构政治改革并扩写任务树 | 十种统一状态各有语义匹配且互斥可见的权力结构改革、独特任务签名与足够深度；动态刷新和旧存档迁移闭合，无串线、通用树或错误 tier |
 | JXP-023 | P0 | IN_PROGRESS | CODEX_ROOT | Mandate/Bugfix | 修复已满足解锁条件后“八纮一宇”天朝改革仍不显示的 bug | 有天命 DLC 时仅合格的日本天子在正确 UI 看见并可选改革；无提前/外国误显，government mechanics 刷新及旧存档迁移闭合；无 DLC fallback、获准运行时截图与 fresh error.log 共同作为 `JXP-010` 证据 |
 
 ## Known Risks
 
-1. **没有当前版本运行时证明。** 0.26.0 + 0.1.1-alpha 只有完整静态证明；不得把早期版本冷启动或用户“目前正常”的反馈自动外推到当前所有 profile。
-2. **其余固定城市数条件仍需节奏审计。** `JXP-003` 已将 19 个 25/30 门槛全部语义化；较低的固定门槛（如 20）由 `JXP-006` 按路线节奏继续判定。
+1. **没有当前版本运行时证明。** 0.27.0 + 0.1.2-alpha 只有完整静态证明；不得把早期版本冷启动或用户“目前正常”的反馈自动外推到当前所有 profile。
+2. **固定城市数不得脱离语义容量。** 25/30 门槛已全部替换；保留的较低门槛必须同时有统一身份、关键省、发展、港口或其他历史容量条件。天明灾难的 `20` 城与 `250` 发展/江户锚点已由 mutation 固定。
 3. **CJP 是高风险桥接区。** harmonization、改革中心、神道事件/incident 继承涉及引擎行为，静态检查只能证明结构。
 4. **旧存档序列化 mission series。** 即使 `potential` 已禁用，旧 key 也可能残留；不得删除 tombstone 或省略迁移。
 5. **动态 UI 刷新。** “获得新任务”必须 immediate swap + next-day reconcile + fingerprint repair；新增路线不得直接散写 swap。
@@ -240,6 +240,39 @@ $repo = '<repo>'
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
 
+### 2026-07-10 - RELEASE-027 - Identity, loops, parity, and state safety (`0.27.0` + `0.1.2-alpha`)
+
+- Status: `STATIC_PASS; PENDING_RUNTIME`。
+- Scope: 新增丰臣独立身份与 1586–1615 主/地图历史链；完成 68 大名理念/身份任务矩阵与中文姓名；将灾难扩到 4 个；补齐九路线原生循环和时代属性互动；完成 WAK/IJP 压力循环；把联合 flag/modifier lifecycle 审计从 246 项失败降到 0；重建主、地图与联合静态可视化。
+- Evidence: 主门禁 `21/21`、Clausewitz `234/234`、单元测试 `142/142`；地图联合门禁全项 `0 errors / 0 warnings`；state safety `535 country flags / 6 province flags / 887 modifiers / 4 disasters / 0 failures`；68 tags / 272 profiles；137,382 天历史连续；skill validator 通过。
+- Runtime: `PENDING_USER_APPROVAL`；未启动 EU4、启动器或 observer；WAK/IJP 节奏、TOY 迁移、理念/政府 UI 与 fresh log 仍待运行时验收。
+- TODO: `JXP-006` / `JXP-007` / `JXP-014` / `JXP-015` / `JXP-019` / `JXP-021` 改为 `DONE`；`JXP-008` / `JXP-009` / `JXP-018` / `JXP-020` / `JXP-023` 保持 `IN_PROGRESS`；`JXP-016` 继续由 `PROJECT` 维护。
+- Evidence report: `jxp_phase_report_0_27_0_identity_loops_and_safety.md`。
+
+### 2026-07-10 - BACKLOG-BATCH-IJP - Ikko commonwealth loop (`no version bump`)
+
+- Status: `STARTED; STATIC_BASELINE_PASS`。
+- Scope: `CODEX_ROOT` 领取 `JXP-009`；在四灾难合同与全局状态安全门禁闭合后，补齐一向宗压力、寺社町众治理、共同体收益/代价和退出循环。
+- Evidence: 四灾难合同 `4/4`，state safety `0` hard failures，主门禁 `17/17`；未启动 EU4 或启动器。
+- Runtime: `PENDING_USER_APPROVAL`；本批次只做静态实现与联合验证。
+- TODO: `JXP-009` 进入 `IN_PROGRESS / CODEX_ROOT`；子 agent 不直接编辑本总账。
+
+### 2026-07-10 - BACKLOG-BATCH-EXPAND - WAK and all-daimyo coverage (`no version bump`)
+
+- Status: `STARTED; STATIC_BASELINE_PASS`。
+- Scope: `CODEX_ROOT` 领取 `JXP-008` 与 `JXP-019`；在丰臣、姓名、路线与灾难切片收拢期间，并行实现倭寇长期循环并建立主/地图全部可选大名的理念、身份任务与强度分层合同。
+- Evidence: 当前主门禁 `16/16`；丰臣定向测试 `4/4`、路线定向测试 `6/6`；未启动 EU4 或启动器。
+- Runtime: `PENDING_USER_APPROVAL`；本批次只做静态实现与联合验证。
+- TODO: `JXP-008` / `JXP-019` 进入 `IN_PROGRESS / CODEX_ROOT`；子 agent 不直接编辑本总账。
+
+### 2026-07-10 - BACKLOG-BATCH-START - Route, safety, names, and Toyotomi audit (`no version bump`)
+
+- Status: `STARTED; STATIC_BASELINE_PASS`。
+- Scope: `CODEX_ROOT` 领取 `JXP-006` / `JXP-007` / `JXP-014` / `JXP-015` / `JXP-018` / `JXP-021`；并行审计九路线与时代属性、灾难和状态清理、全日本姓名汉化，以及丰臣身份/历史迁移链。
+- Evidence: 前一静态切片提交 `3f38f37`；主门禁 `13/13`、Clausewitz `180/180`、单元测试 `67/67`；地图联合门禁全项 `0 errors / 0 warnings`，工作树在领取前干净。
+- Runtime: `PENDING_USER_APPROVAL`；审计与实现阶段不启动 EU4 或启动器。
+- TODO: 上述六项进入 `IN_PROGRESS / CODEX_ROOT`；子 agent 不直接编辑本总账。
+
 ### 2026-07-10 - RELEASE-026 - Static P0 hardening (`0.26.0`)
 
 - Status: `STATIC_PASS; PENDING_RUNTIME`。
@@ -311,7 +344,7 @@ $repo = '<repo>'
 ### Earlier milestones - RELEASE-004-021 (`0.4.1` to `0.21.2`)
 
 - 核心时代属性、路线/宗教分支、大名与家系风味、任务、理念、低频事件、评定、路线/创立家政府改革、枢密院、高官与 UI guardrails 逐步完成。
-- 这些报告保留历史价值，但任何与当前 0.26.0 架构冲突的实现描述均由后续报告和本总账 supersede。
+- 这些报告保留历史价值，但任何与当前 0.27.0 架构冲突的实现描述均由后续报告和本总账 supersede。
 - Evidence: Historical Report Index 中 0.4.1-0.21.2 全部阶段报告。
 
 ## Historical Report Index
@@ -321,6 +354,7 @@ $repo = '<repo>'
 ### Main Mod Reports
 
 - `jxp_0_22_0_working_plan.md` - 0.22.0 集成工作计划。
+- `jxp_0_26_0_route_attribute_parity_audit.md` - 0.26.0 九路线与时代属性深度审计。
 - `jxp_current_progress_against_original_plan_2026_07_09.md` - 原始规划对照快照；已由本总账接管当前状态。
 - `jxp_hotfix_debug_decision_ui_freeze.md` - 调试决议界面卡死热修复。
 - `jxp_japan_map_refinement_feasibility_plan_0_23_2.md` - 日本地图细化可行性与实施计划。
@@ -391,6 +425,8 @@ $repo = '<repo>'
 - `jxp_phase_report_0_24_2_mission_runtime_and_spacing_hotfix.md` - 0.24.2 任务刷新与间距修复。
 - `jxp_phase_report_0_25_0_final_tag_missions_and_reforms.md` - 0.25.0 终局任务身份与改革可见性。
 - `jxp_phase_report_0_26_0_static_p0_hardening.md` - 0.26.0 地图尺度、理念 UI 与八纮一宇静态收口。
+- `jxp_phase_report_0_27_0_identity_loops_and_safety.md` - 0.27.0 丰臣/大名身份、路线循环、灾难与状态安全收口。
+- `jxp_state_disaster_safety_audit_2026_07_10.md` - 运行时状态生命周期、灾难触发与调试清理静态审计。
 
 ### Companion Map Reports
 

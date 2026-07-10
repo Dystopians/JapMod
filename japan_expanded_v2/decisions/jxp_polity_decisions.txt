@@ -51,6 +51,9 @@ country_decisions = {
 			has_country_flag = jxp_polity_initialized
 			jxp_is_japanese_polity_trigger = yes
 			NOT = { has_reform = shogunate }
+			NOT = { is_subject_of_type = daimyo_vassal }
+			NOT = { has_country_modifier = subject_sword_hunt }
+			NOT = { has_country_modifier = overlord_sword_hunt }
 		}
 		allow = {
 			mil_power = 75
@@ -352,7 +355,6 @@ country_decisions = {
 				name = jxp_reviewed_translations
 				duration = 3650
 			}
-			set_country_flag = jxp_reviewed_translations_flag
 		}
 		ai_will_do = {
 			factor = 1

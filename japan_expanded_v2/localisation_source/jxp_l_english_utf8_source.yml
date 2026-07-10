@@ -176,9 +176,9 @@ l_english:
  jxp_kirishitan.3.a:0 "以调停避免仇恨。"
  jxp_kirishitan.3.b:0 "以禁令斩断根源。"
  jxp_kirishitan.4.t:0 "岛原之火"
- jxp_kirishitan.4.d:0 "赋役、饥荒、禁教与地方怨恨汇成烈焰。幕府必须决定，是以铁与血恢复秩序，还是承认地方伤口并寻求和解。"
- jxp_kirishitan.4.a:0 "镇压叛乱。"
- jxp_kirishitan.4.b:0 "以和解收束灾难。"
+ jxp_kirishitan.4.d:0 "赋役、饥荒、禁教与地方怨恨汇成烈焰。危机不会因一道命令消失；幕府必须先决定，是以军势封锁乱地，还是派出使者承认地方伤口。"
+ jxp_kirishitan.4.a:0 "调集军势，封锁乱地。"
+ jxp_kirishitan.4.b:0 "派遣使者，着手调停。"
 
  jxp_sakoku.1.t:0 "锁国令之后"
  jxp_sakoku.1.d:0 "闭关并不意味着完全断绝。真正的问题是，怎样让少数窗口服从整体秩序，又不让国家在静默中失去听觉。"

@@ -177,7 +177,7 @@ def main():
         report.error(f"Visualizer reports {data['counts']['missingLocalisation']} missing localisation keys")
     if data["warnings"]:
         report.error(f"Visualizer parse warnings: {data['warnings']}")
-    expected_counts = {"missionGroups": 5, "missions": 15, "decisions": 26, "events": 18}
+    expected_counts = {"missionGroups": 5, "missions": 30, "decisions": 26, "events": 19}
     for key, expected in expected_counts.items():
         if data["counts"][key] != expected:
             report.error(f"Visualizer count {key}={data['counts'][key]}, expected {expected}")

@@ -14,7 +14,6 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.1.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_sakoku_house_compromise_seen
 		jxp_add_tenka_order_5_effect = yes
 		jxp_subtract_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_29_sakoku_house_ordinance duration = 5475 }
@@ -22,7 +21,6 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.1.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_sakoku_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -41,14 +39,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.2.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_open_house_compromise_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_29_open_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.2.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_open_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -70,14 +66,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.3.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_kirishitan_house_compromise_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_29_kirishitan_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.3.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_kirishitan_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -99,14 +93,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.4.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_confucian_house_compromise_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_29_confucian_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.4.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_confucian_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -128,14 +120,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.5.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_imperial_house_compromise_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_29_imperial_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.5.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_imperial_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -157,14 +147,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.6.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_reformed_house_compromise_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_29_reformed_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.6.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_reformed_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -186,14 +174,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.7.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_kaikyo_house_compromise_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_29_kaikyo_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.7.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_kaikyo_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -215,14 +201,12 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.8.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_ikko_house_compromise_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_29_ikko_house_ordinance duration = 5475 }
 	}
 	option = {
 		name = "jxp_route_house_compromise.8.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_ikko_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }
@@ -244,7 +228,6 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.9.a"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_wokou_house_compromise_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		jxp_subtract_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_29_wokou_house_ordinance duration = 5475 }
@@ -252,7 +235,6 @@ country_event = {
 	option = {
 		name = "jxp_route_house_compromise.9.b"
 		set_country_flag = jxp_29_route_house_compromise_taken
-		set_country_flag = jxp_29_wokou_house_compromise_seen
 		jxp_apply_founder_house_compromise_effect = yes
 	}
 }

@@ -128,10 +128,10 @@ class SharedLedgerTests(unittest.TestCase):
             f'version="{main_version}"\n', encoding="utf-8"
         )
         (map_root / "descriptor.mod").write_text(
-            'version="0.1.1-alpha"\n', encoding="utf-8"
+            'version="0.1.2-alpha"\n', encoding="utf-8"
         )
         (main_root.parent / "japan_expanded_v2_map.mod").write_text(
-            'version="0.1.1-alpha"\n', encoding="utf-8"
+            'version="0.1.2-alpha"\n', encoding="utf-8"
         )
 
     def test_live_shared_ledger_is_consistent(self) -> None:
@@ -151,7 +151,7 @@ class SharedLedgerTests(unittest.TestCase):
     def test_shared_ledger_rejects_unindexed_report(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = self._copy_coordination_surface(Path(directory))
-            self._write_descriptors(root, "0.26.0")
+            self._write_descriptors(root, "0.27.0")
             map_root = root.parent / "japan_expanded_v2_map"
             (map_root / "dev_logs" / "unindexed_report.md").write_text(
                 "# New report\n", encoding="utf-8"
@@ -171,11 +171,15 @@ class GovernmentReformRewriteTests(unittest.TestCase):
             for reform_id in all_ids
             if reform_id.startswith("jxp_reform_founder_")
         }
-        self.assertEqual(len(founder_ids), 38)
+        self.assertEqual(len(founder_ids), 39)
         self.assertEqual(len(all_ids - founder_ids), 27)
         self.assertIn(
             "jxp_reform_founder_otm_funai_arsenal",
             EXPECTED_LEVEL_MEMBERS["military_doctrines"],
+        )
+        self.assertIn(
+            "jxp_reform_founder_toyotomi_five_regents",
+            EXPECTED_LEVEL_MEMBERS["growth_of_administration"],
         )
         self.assertIn(
             "jxp_reform_kirishitan_nagasaki_admiralty",

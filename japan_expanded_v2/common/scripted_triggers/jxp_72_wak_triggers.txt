@@ -1,0 +1,49 @@
+jxp_72_wak_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = WAK
+		has_country_flag = jxp_path_wokou
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+		}
+	}
+}
+
+jxp_72_wak_cycle_active_trigger = {
+	jxp_72_wak_route_trigger = yes
+	has_country_flag = jxp_72_wak_cycle_active
+}
+
+jxp_72_wak_harbor_network_trigger = {
+	OR = {
+		num_of_ports = 8
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_wokou_waters
+		}
+	}
+}
+
+jxp_72_wak_pressure_at_least_10_trigger = {
+	check_variable = { which = jxp_72_wak_pressure value = 10 }
+}
+
+jxp_72_wak_pressure_at_least_50_trigger = {
+	check_variable = { which = jxp_72_wak_pressure value = 50 }
+}
+
+jxp_72_wak_pressure_at_least_70_trigger = {
+	check_variable = { which = jxp_72_wak_pressure value = 70 }
+}
+
+jxp_72_wak_pressure_at_least_85_trigger = {
+	check_variable = { which = jxp_72_wak_pressure value = 85 }
+}

@@ -1,0 +1,17 @@
+# Public lifecycle interface for this slice.  Route-exit and canonical debug
+# roots can call this effect without knowing the individual outcome inventory.
+jxp_75_reset_route_parity_four_effect = {
+	remove_country_modifier = jxp_75_route_policy_recent
+	remove_country_modifier = jxp_75_kirishitan_seminary_visitation
+	remove_country_modifier = jxp_75_kirishitan_mercy_accounts
+	remove_country_modifier = jxp_75_kirishitan_harbor_chaplains
+	remove_country_modifier = jxp_75_confucian_examination_rosters
+	remove_country_modifier = jxp_75_confucian_code_commission
+	remove_country_modifier = jxp_75_confucian_three_teachings_concordance
+	remove_country_modifier = jxp_75_reformed_printing_consistory
+	remove_country_modifier = jxp_75_reformed_civic_auditors
+	remove_country_modifier = jxp_75_reformed_fleet_articles
+	remove_country_modifier = jxp_75_kaikyo_monsoon_accounts
+	remove_country_modifier = jxp_75_kaikyo_endowment_granaries
+	remove_country_modifier = jxp_75_kaikyo_convoy_muster
+}

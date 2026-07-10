@@ -75,7 +75,6 @@ country_event = {
 	option = {
 		name = "jxp_daimyo.4.a"
 		jxp_ensure_daimyo_polity_effect = yes
-		set_country_flag = jxp_daimyo_port_letters_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = {
 			name = jxp_daimyo_namban_letters
@@ -85,7 +84,6 @@ country_event = {
 	option = {
 		name = "jxp_daimyo.4.b"
 		jxp_ensure_daimyo_polity_effect = yes
-		set_country_flag = jxp_daimyo_port_letters_seen
 		jxp_subtract_oceanic_opening_5_effect = yes
 		add_prestige = 5
 	}

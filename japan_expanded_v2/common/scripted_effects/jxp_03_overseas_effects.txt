@@ -85,7 +85,6 @@ jxp_apply_mandate_claim_reward_effect = {
 			has_dlc = "Mandate of Heaven"
 			is_emperor_of_china = yes
 		}
-		set_country_flag = jxp_mandate_claim_unified_celestial
 		add_mandate = 10
 	}
 	else = {
@@ -161,7 +160,6 @@ jxp_establish_pacific_admiralty_effect = {
 }
 
 jxp_chart_north_pacific_effect = {
-	set_country_flag = jxp_north_pacific_charts_done
 	jxp_add_oceanic_opening_5_effect = yes
 	add_dip_power = 50
 	if = {

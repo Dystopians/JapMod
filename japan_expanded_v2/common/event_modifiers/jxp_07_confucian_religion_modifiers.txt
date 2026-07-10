@@ -4,11 +4,6 @@ jxp_confucian_reform_center = {
 	local_tax_modifier = 0.10
 }
 
-jxp_confucian_newly_ordered = {
-	local_unrest = -1
-	local_tax_modifier = 0.10
-}
-
 jxp_ise_jingu_protected = {
 	local_missionary_strength = -0.10
 	local_unrest = -1

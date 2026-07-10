@@ -37,11 +37,6 @@ jxp_pure_land_covenant = {
 	global_unrest = -1
 }
 
-jxp_ikko_disaster_modifier = {
-	global_unrest = 3
-	stability_cost_modifier = 0.10
-}
-
 jxp_ikko_reconciled = {
 	tolerance_own = 1
 	global_unrest = -1
@@ -87,11 +82,6 @@ jxp_wokou_admiralty = {
 	naval_forcelimit_modifier = 0.20
 	naval_morale = 0.10
 	global_sailors_modifier = 0.10
-}
-
-jxp_black_tide_vanguard = {
-	capture_ship_chance = 0.10
-	privateer_efficiency = 0.10
 }
 
 jxp_eastern_sea_lords = {

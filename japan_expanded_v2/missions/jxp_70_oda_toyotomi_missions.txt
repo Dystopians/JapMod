@@ -1,0 +1,139 @@
+jxp_oda_toyotomi_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		OR = {
+			tag = ODA
+			tag = TOY
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_oda_rakuichi_network = {
+		icon = mission_market_place_with_asian_traders
+		position = 1
+		required_missions = { }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			num_of_cities = 3
+			adm_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_adm_power = 35
+			add_country_modifier = {
+				name = jxp_70_toyotomi_market_charters
+				duration = 5475
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_oda_tenka_fubu_mainline = {
+		icon = mission_japanese_samurai
+		position = 3
+		required_missions = { jxp_mission_oda_rakuichi_network jxp_mission_daimyo_market_roads }
+		trigger = {
+			army_size_percentage = 0.75
+			army_tradition = 15
+			prestige = 10
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_mil_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_tenka_command
+				duration = 7300
+			}
+			set_country_flag = jxp_43_selected_oda_tenka_fubu
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_oda_azuchi_statutes_mainline = {
+		icon = mission_japanese_fort
+		position = 5
+		required_missions = { jxp_mission_oda_tenka_fubu_mainline }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1835
+			stability = 1
+			legitimacy = 60
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_azuchi_offices
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_name_and_osaka = {
+		icon = mission_monarch_in_throne_room
+		position = 7
+		required_missions = { jxp_mission_oda_azuchi_statutes_mainline }
+		trigger = {
+			is_year = 1586
+			owns_or_non_sovereign_subject_of = 1020
+			owns_or_non_sovereign_subject_of = 1021
+			legitimacy = 70
+		}
+		effect = {
+			jxp_establish_toyotomi_identity_effect = yes
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_70_toyotomi_osaka_works
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_taiko_cadaster = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { jxp_mission_toyotomi_name_and_osaka }
+		trigger = {
+			tag = TOY
+			total_development = 300
+			adm_tech = 8
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_cadaster_office
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_realm_settlement = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { jxp_mission_toyotomi_taiko_cadaster jxp_mission_daimyo_foreign_letters }
+		trigger = {
+			tag = TOY
+			jxp_tenka_order_at_least_50 = yes
+			total_development = 450
+			owns_or_non_sovereign_subject_of = 1020
+			owns_or_non_sovereign_subject_of = 1028
+		}
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_realm_settlement
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+}

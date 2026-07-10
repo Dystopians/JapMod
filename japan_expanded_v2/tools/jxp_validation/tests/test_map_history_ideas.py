@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -33,20 +34,37 @@ sys.modules[SPEC.name] = VALIDATOR
 SPEC.loader.exec_module(VALIDATOR)
 
 
-def render_group(*, idea_count: int = 7, commented_tag: str | None = None) -> str:
-    comment = f"\n\t\t\t# tag = {commented_tag} {{ ignored }}" if commented_tag else ""
+def render_group(
+    *,
+    idea_count: int = 7,
+    commented_tag: str | None = None,
+    extra_trigger: str = "",
+) -> str:
+    comment = (
+        f"\n\t\t# tag = {commented_tag} {{ ignored }}\n\t"
+        if commented_tag
+        else ""
+    )
     ideas = " ".join(
-        f'idea_{index} = {{ test_modifier = {index} note = "literal {{ # }}" }}'
+        f'idea_{index} = {{ global_tax_modifier = 0.0{index} prestige = 0.{index} note = "literal {{ # }}" }}'
         for index in range(idea_count)
+    )
+    legacy_ideas = " ".join(
+        f"legacy_{index} = {{ global_tax_modifier = 0.0{index} }}"
+        for index in range(7)
     )
     return f"""jxp_map_new_daimyo_ideas = {{
 \tstart = {{ land_morale = 0.05 }}
 \tbonus = {{ discipline = 0.05 }}
-\ttrigger = {{
-\t\tOR = {{
-\t\t\ttag = AAA{comment}
-\t\t}}
-\t}}
+\ttrigger = {{ always = no }}
+\tfree = yes
+\t{legacy_ideas}
+}}
+
+AAA_ideas = {{
+\tstart = {{ land_morale = 0.05 global_manpower_modifier = 0.10 }}
+\tbonus = {{ discipline = 0.05 }}
+\ttrigger = {{ tag = AAA{extra_trigger}{comment} }}
 \tfree = yes
 \t# These braces must not affect object depth: {{ }}
 \t{ideas}
@@ -59,6 +77,24 @@ def validate_text(text: str, tags: set[str]):
         map_root = Path(directory)
         ideas_root = map_root / "common" / "ideas"
         ideas_root.mkdir(parents=True)
+        builder_root = map_root / "tools" / "jxp_map_builder"
+        builder_root.mkdir(parents=True)
+        (builder_root / "daimyo_identity_plan.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "tags": {
+                        tag: {
+                            "tier": "C",
+                            "focus": ["global_tax_modifier", "0.10"],
+                            "historical_role": "test",
+                        }
+                        for tag in tags
+                    },
+                }
+            ),
+            encoding="utf-8",
+        )
         (ideas_root / "jxp_map_new_daimyo_ideas.txt").write_text(
             text,
             encoding="cp1252",
@@ -86,19 +122,15 @@ class CompanionIdeaValidationTests(unittest.TestCase):
             {"AAA", "BBB"},
         )
         self.assertTrue(
-            any("trigger coverage differs" in error for error in report.errors),
+            any("identity idea groups are missing" in error for error in report.errors),
             report.errors,
         )
 
     def test_rejects_extra_activation_condition_outside_tag_or(self) -> None:
-        source = render_group().replace(
-            "\ttrigger = {\n\t\tOR = {",
-            "\ttrigger = {\n\t\talways = no\n\t\tOR = {",
-            1,
-        )
+        source = render_group(extra_trigger=" always = no")
         report = validate_text(source, {"AAA"})
         self.assertTrue(
-            any("exactly one direct OR" in error for error in report.errors),
+            any("must use the exact trigger" in error for error in report.errors),
             report.errors,
         )
 

@@ -16,14 +16,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.1.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_oda_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_oda_azuchi_edicts duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.1.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_oda_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_oda_market_law duration = 7300 }
 	}
@@ -45,14 +43,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.2.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tkg_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_tkg_fudai_council duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.2.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tkg_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_tkg_road_barriers duration = 7300 }
 	}
@@ -74,14 +70,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.3.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tkd_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_tkd_koshu_muster duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.3.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tkd_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_tkd_mountain_law duration = 7300 }
 	}
@@ -103,14 +97,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.4.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ues_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ues_kantou_justice duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.4.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ues_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ues_echigo_muster duration = 7300 }
 	}
@@ -132,14 +124,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.5.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_hjo_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_hjo_odawara_cadasters duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.5.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_hjo_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_hjo_sogamae_network duration = 7300 }
 	}
@@ -161,14 +151,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.6.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_mri_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_mri_setouchi_admiralty duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.6.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_mri_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_mri_kokujin_compacts duration = 7300 }
 	}
@@ -190,14 +178,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.7.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_smz_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_smz_teppo_foundries duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.7.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_smz_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_smz_satsunan_learning duration = 7300 }
 	}
@@ -219,14 +205,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.8.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_otm_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_otm_funai_quarter duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.8.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_otm_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_otm_kunikuzushi_bureau duration = 7300 }
 	}
@@ -248,14 +232,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.9.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_dte_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_dte_oshu_cavalry duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.9.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_dte_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_dte_keicho_envoys duration = 7300 }
 	}
@@ -277,14 +259,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.10.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ask_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ask_hokoshu_order duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.10.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ask_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ask_higashiyama_culture duration = 7300 }
 	}
@@ -306,14 +286,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.11.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_csk_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_csk_ichiryo_gusoku_rolls duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.11.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_csk_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_csk_tosa_sea_law duration = 7300 }
 	}
@@ -335,14 +313,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.12.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ouc_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_ouc_yamaguchi_mercantile_court duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.12.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ouc_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ouc_korean_envoys duration = 7300 }
 	}
@@ -364,14 +340,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.13.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_img_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_img_tokaido_lawbooks duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.13.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_img_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_img_triple_alliance_model duration = 7300 }
 	}
@@ -393,14 +367,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.14.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_soo_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_soo_wakan_office duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.14.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_soo_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_soo_tsushima_sea_wardens duration = 7300 }
 	}
@@ -422,14 +394,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.15.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ama_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ama_gassan_toda_castle duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.15.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ama_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ama_kizuki_shrine_registers duration = 7300 }
 	}
@@ -451,14 +421,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.16.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_asa_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_asa_ichijodani_council duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.16.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_asa_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_asa_echizen_paper_office duration = 7300 }
 	}
@@ -480,14 +448,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.17.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_hsk_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_hsk_kanrei_table duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.17.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_hsk_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_hsk_sakai_merchant_council duration = 7300 }
 	}
@@ -509,14 +475,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.18.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_htk_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_htk_two_house_oaths duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.18.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_htk_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_htk_saika_teppo_contracts duration = 7300 }
 	}
@@ -538,14 +502,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.19.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ike_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ike_himeji_stewards duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.19.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ike_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_ike_setouchi_ledgers duration = 7300 }
 	}
@@ -567,14 +529,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.20.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_mae_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_mae_million_koku_storehouses duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.20.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_mae_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_mae_tea_noh_patronage duration = 7300 }
 	}
@@ -596,14 +556,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.21.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_sba_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_sba_buei_military_office duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.21.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_sba_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_sba_hokuriku_roads duration = 7300 }
 	}
@@ -625,14 +583,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.22.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ymn_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ymn_sixth_share_registers duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.22.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ymn_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ymn_western_army_compacts duration = 7300 }
 	}
@@ -654,14 +610,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.23.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_rfr_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_rfr_nine_gates_cavalry duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.23.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_rfr_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_rfr_morioka_granaries duration = 7300 }
 	}
@@ -683,14 +637,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.24.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ktb_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ktb_ise_shrine_law duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.24.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ktb_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_ktb_kuki_suigun_rolls duration = 7300 }
 	}
@@ -712,14 +664,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.25.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_akm_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_akm_harima_castle_roads duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.25.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_akm_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_akm_red_pine_retainer_oaths duration = 7300 }
 	}
@@ -741,14 +691,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.26.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_akt_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_akt_ezochi_trade_posts duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.26.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_akt_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_akt_northern_wardens duration = 7300 }
 	}
@@ -770,14 +718,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.27.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_cba_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_cba_katori_muster_rolls duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.27.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_cba_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_cba_shimosa_court_routes duration = 7300 }
 	}
@@ -799,14 +745,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.28.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_isk_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_isk_tango_port_wardens duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.28.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_isk_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_isk_shugo_house_law duration = 7300 }
 	}
@@ -828,14 +772,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.29.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ito_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ito_hyuga_castle_network duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.29.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ito_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ito_shrine_temple_compacts duration = 7300 }
 	}
@@ -857,14 +799,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.30.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_kkc_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_kkc_kikuchi_loyalist_scrolls duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.30.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_kkc_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_kkc_aso_fire_rites duration = 7300 }
 	}
@@ -886,14 +826,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.31.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_kno_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_kno_setouchi_pilots duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.31.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_kno_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_kno_iyo_port_law duration = 7300 }
 	}
@@ -915,14 +853,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.32.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ogs_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_ogs_kyuba_rites duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.32.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_ogs_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_ogs_suwa_pass_wardens duration = 7300 }
 	}
@@ -944,14 +880,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.33.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_shn_legacy_council_seen
 		jxp_add_oceanic_opening_5_effect = yes
 		add_country_modifier = { name = jxp_26_shn_dazaifu_brokers duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.33.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_shn_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_shn_kyushu_tribute_office duration = 7300 }
 	}
@@ -973,14 +907,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.34.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_stk_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_stk_hitachi_muster duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.34.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_stk_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_stk_kashima_oaths duration = 7300 }
 	}
@@ -1002,14 +934,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.35.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tki_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_tki_mino_river_works duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.35.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tki_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_tki_toki_courtly_paper duration = 7300 }
 	}
@@ -1031,14 +961,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.36.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_utn_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_utn_nikko_barrier_guard duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.36.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_utn_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_utn_shimotsuke_muster duration = 7300 }
 	}
@@ -1060,14 +988,12 @@ country_event = {
 	option = {
 		name = "jxp_founder_legacy.37.a"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tti_legacy_council_seen
 		jxp_add_imperial_sanction_5_effect = yes
 		add_country_modifier = { name = jxp_26_tti_yamato_temple_compact duration = 7300 }
 	}
 	option = {
 		name = "jxp_founder_legacy.37.b"
 		set_country_flag = jxp_26_founder_legacy_council_taken
-		set_country_flag = jxp_26_tti_legacy_council_seen
 		jxp_add_tenka_order_5_effect = yes
 		add_country_modifier = { name = jxp_26_tti_kofukuji_castle_towns duration = 7300 }
 	}

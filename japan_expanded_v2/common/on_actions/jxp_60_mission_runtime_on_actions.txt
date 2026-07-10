@@ -5,6 +5,7 @@ on_startup = {
 		jxp_migration_v023.7
 		jxp_migration_v025.1
 		jxp_celestial_compat.1
+		jxp_toyotomi.1
 		jxp_mission_refresh.2
 	}
 }

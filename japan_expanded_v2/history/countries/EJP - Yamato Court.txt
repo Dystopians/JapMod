@@ -8,8 +8,8 @@ capital = 1020
 
 1444.11.11 = {
 	monarch = {
-		name = "Motohito"
-		dynasty = "Yamato"
+		name = "元仁"
+		dynasty = "大和"
 		adm = 4
 		dip = 5
 		mil = 3

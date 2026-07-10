@@ -469,7 +469,7 @@
       "YMC": 1
     }
   },
-  "ownership_interval_count": 273,
+  "ownership_interval_count": 299,
   "ownership_interval_file": "tools/jxp_map_validation/generated/ownership_intervals.csv",
   "ownership_snapshots": {
     "1444.11.11": {

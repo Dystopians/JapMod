@@ -22,14 +22,14 @@ discovered_by = ANU
 1542.1.1 = { discovered_by = POR }
 
 1590.7.26 = {
-	owner = ODA
-	controller = ODA
-	add_core = ODA
+	owner = TOY
+	controller = TOY
+	add_core = TOY
 	remove_core = OSK
 }
 1600.10.21 = {
 	owner = TKG
 	controller = TKG
 	add_core = TKG
-	remove_core = ODA
+	remove_core = TOY
 }

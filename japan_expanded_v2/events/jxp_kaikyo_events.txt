@@ -175,7 +175,6 @@ country_event = {
 	option = {
 		name = "jxp_kaikyo.4.a"
 		set_country_flag = jxp_kaikyo_centers_established
-		set_country_flag = jxp_kaikyo_conversion_active
 		add_country_modifier = {
 			name = jxp_kaikyo_qadi_courts
 			duration = 7300

@@ -8,8 +8,8 @@ capital = 4182
 
 1444.11.11 = {
 	monarch = {
-		name = "Harunobu"
-		dynasty = "Arima"
+		name = "晴信"
+		dynasty = "有马"
 		adm = 3
 		dip = 4
 		mil = 3

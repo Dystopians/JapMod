@@ -3,6 +3,10 @@
  jxp_debug_enable_menu_desc:0 "V=TTO>fHyNybŒÕ‹³Q®‹ÿ(uŽNRËYSHg6R0Rbcï¿u0æ‰ÑS‹NöNŒTÀhågûN¡R¶r`0"
  jxp_debug_disable_menu_title:0 "ŒÕ‹ÿsQí•åenø‹SŒÕ‹ÜƒUS"
  jxp_debug_disable_menu_desc:0 "–Ï…Nb	gŒÕ‹³Q®‹0òT¾‹n„vï¿u0‹NöN×ehŒTîOckNOê¨RÞVÚn0"
+ jxp_debug_show_legacy_detail_decisions_title:0 "ŒÕ‹ÿ>fHyçe6RÆuîv³Q®‹"
+ jxp_debug_show_legacy_detail_decisions_desc:0 "ÅN(WŒÕ‹ÜƒUS-N>fHyRËY¶R®‹O0ï¿u¥YOS0¶R-NÄ‹šR0tõVWµNNßuNMR°‹ÆVIrçe6RÆuîv³Q®‹0"
+ jxp_debug_hide_legacy_detail_decisions_title:0 "ŒÕ‹ÿ–Ï…çe6RÆuîv³Q®‹"
+ jxp_debug_hide_legacy_detail_decisions_desc:0 "6ewçe6RÆuîv³Q®‹ÿN9eØSòTÏuŒRb„vçe6R…Q¹R0"
  jxp_debug_initialize_polity_title:0 "ŒÕ‹ÿRËYS/7R°eåenýVSO"
  jxp_debug_initialize_polity_desc:0 "RËYS	Ny˜ýVSOpe<Pÿûm RMeœ^Hg6R‹SOÿv^9VúQSVMRpe<PÀhåg‹NöN0"
  jxp_debug_unify_japan_title:0 "ŒÕ‹ÿN.•ßuNåe,gHSßW"
@@ -64,7 +68,29 @@
  jxp_debug_seed_kaikyo_contact_title:0 "ŒÕ‹ÿ­dÍyÿnw¥cæ‰"
  jxp_debug_seed_kaikyo_contact_desc:0 "¾‹nwmáSnw¥cæ‰×ehÿv^SÕ‹ŠbN*Nåe,g=nãS9eHN<S>m0"
  jxp_debug_seed_shimabara_pressure_title:0 "ŒÕ‹ÿ­dÍyÿ›SŸS‹S›R"
- jxp_debug_seed_shimabara_pressure_desc:0 "¾‹njoOúWcw’V×eh0í•sQpe<PŒTyYeîOckÿv^SÕ‹(WkNÞT6R.úWcwYewýN0"
+ jxp_debug_seed_shimabara_pressure_desc:0 "ntçe¶r`ÿ¾‹njoOúWcw’V0í•sQ0yYeNqSHg‹S›Rÿv^Šb›SŸSKNkpÛ¦^¨có4NLuÿ1620 t^TNåb	gøv”^kNÞTƒôVöeïSËzsSŒš6e0"
+ jxp_debug_resolve_shimabara_title:0 "ŒÕ‹ÿÓu—rÿ›SŸSKNkp"
+ jxp_debug_resolve_shimabara_desc:0 "Óumgck(WÛLˆb1uŒÕ‹‹NöN!jßb„v›SŸSqSHgÿv^ÝOYuòTã‰³Qh°‹0"
+ jxp_debug_cleanup_shimabara_title:0 "ŒÕ‹ÿntÿ›SŸSKNkp"
+ jxp_debug_cleanup_shimabara_desc:0 "Óumg›SŸSqSHgv^nd–vQ active0resolved0ŒjPNG•‹S¶r`ÿOvQïSÍ‘°eŒš6e0"
+ jxp_debug_seed_ikko_pressure_title:0 "ŒÕ‹ÿ­dÍyÿNTNÆc‹S›R"
+ jxp_debug_seed_ikko_pressure_desc:0 "nd–ï¿uNçe¶r`ÿM–NO)YNéy^v^ŠbNTNÆcÛ¦^¨có4NLuÿ1470 t^T0kQÎWNåb	gÑubí‹INÃV0W&^öeïSËzsSŒš6e0"
+ jxp_debug_resolve_ikko_title:0 "ŒÕ‹ÿÓu—rÿNTNÆc"
+ jxp_debug_resolve_ikko_desc:0 "Óumgck(WÛLˆb1uŒÕ‹‹NöN!jßb„vNTNÆcÿv^ÝOYuòTã‰³Qh°‹0"
+ jxp_debug_cleanup_ikko_title:0 "ŒÕ‹ÿntÿNTNÆc"
+ jxp_debug_cleanup_ikko_desc:0 "ÓumgNTNÆcv^nd–vQ active0resolved0ŒjPNG•‹S¶r`ÿOvQïSÍ‘°eŒš6e0"
+ jxp_debug_seed_keian_pressure_title:0 "ŒÕ‹ÿ­dÍyÿ†^‰RjmºN‹S›R"
+ jxp_debug_seed_keian_pressure_desc:0 "6R.NO3zšR0b‰N²u³RNNOºN›Rÿv^Šb†^‰RjmºNqSHg¨có4NLuÿ1651 t^TßuNåe,gTIN6R0ŒNASÎWNåb	gml7böeïSËzsSŒš6e0"
+ jxp_debug_resolve_keian_title:0 "ŒÕ‹ÿÓu—rÿ†^‰RjmºNqSHg"
+ jxp_debug_resolve_keian_desc:0 "Óumgck(WÛLˆb1uŒÕ‹‹NöN!jßb„v†^‰RjmºNqSHgÿv^ÝOYuòTã‰³Qh°‹0"
+ jxp_debug_cleanup_keian_title:0 "ŒÕ‹ÿntÿ†^‰RjmºNqSHg"
+ jxp_debug_cleanup_keian_desc:0 "Óumg†^‰RjmºNqSHgv^nd–vQ active0resolved N”^ùRîOckÿOvQïSÍ‘°eŒš6e0"
+ jxp_debug_seed_tenmei_pressure_title:0 "ŒÕ‹ÿ­dÍyÿ)Yfe™‘™‹S›R"
+ jxp_debug_seed_tenmei_pressure_desc:0 "6R.NO3zšR0b‰N²u³RNNOºN›Rÿv^Šb)Yfe™‘™¨có4NLuÿ1783 t^TßuNåe,g0ŒNAS”NÎWNåb	gml7böeïSËzsSŒš6e0"
+ jxp_debug_resolve_tenmei_title:0 "ŒÕ‹ÿÓu—rÿ)Yfe™‘™"
+ jxp_debug_resolve_tenmei_desc:0 "Óumgck(WÛLˆb1uŒÕ‹‹NöN!jßb„v)Yfe™‘™ÿv^ÝOYuòTã‰³Qh°‹0"
+ jxp_debug_cleanup_tenmei_title:0 "ŒÕ‹ÿntÿ)Yfe™‘™"
+ jxp_debug_cleanup_tenmei_desc:0 "Óumg)Yfe™‘™v^nd–vQ active0resolved0HNmNM‘Ùu¶r`ÿOvQïSÍ‘°eŒš6e0"
  jxp_debug_events_open_title:0 "ŒÕ‹ÿSbV‹NöNæ‰ÑSb—g"
  jxp_debug_events_open_desc:0 ">fHy‹NöNŒÕ‹R‰|	c®”0US*N‹NöNæ‰ÑS	c®”Øž²‹6ewÿåNMQ³Q®‹Lub—N!k R‹ÇYagîv0"
  jxp_debug_events_close_title:0 "ŒÕ‹ÿsQí•‹NöNæ‰ÑSb—g"

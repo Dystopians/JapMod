@@ -1,2 +1,6 @@
 # Preserve existing EU4 encodings, BOMs, and byte-locked compatibility files.
 * -text
+
+# Visualizer pages are deterministic CRLF artifacts; CR is not trailing whitespace.
+japan_expanded_v2/tools/jxp_visualizer/*.html -text whitespace=cr-at-eol
+japan_expanded_v2_map/tools/jxp_visualizer/*.html -text whitespace=cr-at-eol

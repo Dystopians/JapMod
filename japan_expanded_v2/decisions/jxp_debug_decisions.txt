@@ -21,8 +21,9 @@ country_decisions = {
 		allow = { always = yes }
 		effect = {
 			custom_tooltip = jxp_debug_internal_effect_tt
-			hidden_effect = {
-				clr_country_flag = jxp_debug_enabled
+				hidden_effect = {
+					clr_country_flag = jxp_debug_enabled
+					clr_country_flag = jxp_50_show_legacy_detail_decisions
 				clr_country_flag = jxp_debug_events_enabled
 				clr_country_flag = jxp_debug_event_category_early
 				clr_country_flag = jxp_debug_event_category_kirishitan
@@ -33,6 +34,40 @@ country_decisions = {
 				clr_country_flag = jxp_debug_panel_values
 				clr_country_flag = jxp_debug_panel_routes
 				clr_country_flag = jxp_debug_panel_seeds
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_show_legacy_detail_decisions = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			NOT = { has_country_flag = jxp_50_show_legacy_detail_decisions }
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				set_country_flag = jxp_50_show_legacy_detail_decisions
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_hide_legacy_detail_decisions = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_50_show_legacy_detail_decisions
+		}
+		allow = { always = yes }
+		effect = {
+			custom_tooltip = jxp_debug_internal_effect_tt
+			hidden_effect = {
+				clr_country_flag = jxp_50_show_legacy_detail_decisions
 			}
 		}
 		ai_will_do = { factor = 0 }
@@ -564,6 +599,190 @@ country_decisions = {
 		effect = {
 			jxp_debug_seed_shimabara_pressure_effect = yes
 		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_resolve_shimabara = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				has_disaster = jxp_shimabara_fire
+				has_country_flag = jxp_shimabara_crisis_active
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_shimabara_resolved
+			if = {
+				limit = { has_disaster = jxp_shimabara_fire }
+				end_disaster = jxp_shimabara_fire
+			}
+			clr_country_flag = jxp_shimabara_crisis_active
+			remove_country_modifier = jxp_shimabara_mediation
+			remove_country_modifier = jxp_shimabara_suppressed
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_cleanup_shimabara = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_cleanup_shimabara_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_ikko_pressure = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_seed_ikko_pressure_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_resolve_ikko = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				has_disaster = jxp_ikko_rising
+				has_country_flag = jxp_ikko_rising_active
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_ikko_rising_resolved
+			if = {
+				limit = { has_disaster = jxp_ikko_rising }
+				end_disaster = jxp_ikko_rising
+			}
+			clr_country_flag = jxp_ikko_rising_active
+			remove_country_modifier = jxp_ikko_reconciled
+			remove_country_modifier = jxp_ikko_suppressed
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_cleanup_ikko = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_cleanup_ikko_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_keian_pressure = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_seed_keian_pressure_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_resolve_keian = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				has_disaster = jxp_keian_ronin_crisis
+				has_country_flag = jxp_keian_ronin_crisis_active
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_keian_ronin_crisis_resolved
+			if = {
+				limit = { has_disaster = jxp_keian_ronin_crisis }
+				end_disaster = jxp_keian_ronin_crisis
+			}
+			clr_country_flag = jxp_keian_ronin_crisis_active
+			remove_country_modifier = jxp_keian_ronin_reemployment
+			remove_country_modifier = jxp_keian_ronin_patrols
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_cleanup_keian = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_cleanup_keian_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_seed_tenmei_pressure = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_seed_tenmei_pressure_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_resolve_tenmei = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+			OR = {
+				has_disaster = jxp_tenmei_famine
+				has_country_flag = jxp_tenmei_famine_active
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_country_flag = jxp_tenmei_famine_resolved
+			if = {
+				limit = { has_disaster = jxp_tenmei_famine }
+				end_disaster = jxp_tenmei_famine
+			}
+			clr_country_flag = jxp_tenmei_famine_active
+			remove_country_modifier = jxp_tenmei_relief_granaries
+			remove_country_modifier = jxp_tenmei_rationing
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_cleanup_tenmei = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_debug_cleanup_tenmei_effect = yes }
 		ai_will_do = { factor = 0 }
 	}
 

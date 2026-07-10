@@ -8,8 +8,8 @@ capital = 1835
 
 1550.1.1 = {
 	monarch = {
-		name = "Dosan"
-		dynasty = "Saito"
+		name = "道三"
+		dynasty = "斋藤"
 		birth_date = 1520.1.1
 		adm = 2
 		dip = 3

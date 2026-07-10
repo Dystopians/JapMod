@@ -51,6 +51,56 @@ jxp_map_warrior_house_missions = {
 			add_country_modifier = { name = jxp_map_warrior_legacy duration = 7300 }
 		}
 	}
+
+	jxp_map_mission_warrior_retainer_census = {
+		icon = jxp_map_mission_warrior_muster
+		position = 7
+		required_missions = { jxp_map_mission_warrior_provincial_banner }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_cities = 8
+			army_tradition = 20
+		}
+		effect = {
+			add_mil_power = 50
+			add_army_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_warrior_hostage_registers = {
+		icon = jxp_map_mission_warrior_castle_roads
+		position = 9
+		required_missions = { jxp_map_mission_warrior_retainer_census }
+		trigger = {
+			num_of_cities = 10
+			legitimacy = 70
+			stability = 1
+		}
+		effect = {
+			add_legitimacy = 10
+			add_adm_power = 50
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_warrior_hegemon_oath = {
+		icon = jxp_map_mission_warrior_provincial_banner
+		position = 11
+		required_missions = { jxp_map_mission_warrior_hostage_registers }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			num_of_cities = 12
+			prestige = 30
+			army_size_percentage = 0.90
+		}
+		effect = {
+			add_mil_power = 75
+			add_prestige = 10
+			add_army_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
 }
 
 jxp_map_court_house_missions = {
@@ -104,6 +154,57 @@ jxp_map_court_house_missions = {
 			add_legitimacy = 10
 			add_prestige = 10
 			add_country_modifier = { name = jxp_map_court_legacy duration = 7300 }
+		}
+	}
+
+	jxp_map_mission_court_shugo_archives = {
+		icon = jxp_map_mission_court_genealogies
+		position = 7
+		required_missions = { jxp_map_mission_court_old_province_claim }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_cities = 7
+			adm_power = 75
+		}
+		effect = {
+			add_adm_power = 50
+			add_legitimacy = 5
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_court_kinri_embassies = {
+		icon = jxp_map_mission_court_capital_petitions
+		position = 9
+		required_missions = { jxp_map_mission_court_shugo_archives }
+		trigger = {
+			num_of_cities = 9
+			num_of_allies = 2
+			prestige = 25
+			jxp_imperial_sanction_at_least_30 = yes
+		}
+		effect = {
+			add_dip_power = 60
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_court_realm_arbitration = {
+		icon = jxp_map_mission_court_old_province_claim
+		position = 11
+		required_missions = { jxp_map_mission_court_kinri_embassies }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			num_of_cities = 11
+			stability = 1
+			legitimacy = 75
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_legitimacy = 10
+			jxp_add_imperial_sanction_5_effect = yes
 		}
 	}
 }
@@ -161,6 +262,56 @@ jxp_map_sea_house_missions = {
 			add_country_modifier = { name = jxp_map_sea_legacy duration = 7300 }
 		}
 	}
+
+	jxp_map_mission_sea_harbor_magistrates = {
+		icon = jxp_map_mission_sea_port_registers
+		position = 7
+		required_missions = { jxp_map_mission_sea_inner_routes }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_ports = 4
+			monthly_income = 8
+		}
+		effect = {
+			add_dip_power = 50
+			add_mercantilism = 1
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_sea_red_seal_networks = {
+		icon = jxp_map_mission_sea_shipwright_leagues
+		position = 9
+		required_missions = { jxp_map_mission_sea_harbor_magistrates }
+		trigger = {
+			num_of_ports = 5
+			trade_efficiency = 0.15
+			jxp_oceanic_opening_at_least_25 = yes
+		}
+		effect = {
+			add_dip_power = 60
+			add_navy_tradition = 5
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_sea_strait_command = {
+		icon = jxp_map_mission_sea_inner_routes
+		position = 11
+		required_missions = { jxp_map_mission_sea_red_seal_networks }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			num_of_ports = 6
+			navy_tradition = 25
+			navy_size_percentage = 0.90
+		}
+		effect = {
+			add_dip_power = 75
+			add_navy_tradition = 10
+			add_mercantilism = 1
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
 }
 
 jxp_map_frontier_house_missions = {
@@ -212,6 +363,56 @@ jxp_map_frontier_house_missions = {
 			add_country_modifier = { name = jxp_map_frontier_legacy duration = 7300 }
 		}
 	}
+
+	jxp_map_mission_frontier_hostage_registers = {
+		icon = jxp_map_mission_frontier_passes
+		position = 7
+		required_missions = { jxp_map_mission_frontier_border_oaths }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			num_of_cities = 7
+			legitimacy = 65
+		}
+		effect = {
+			add_adm_power = 40
+			add_mil_power = 40
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_frontier_winter_roads = {
+		icon = jxp_map_mission_frontier_new_fields
+		position = 9
+		required_missions = { jxp_map_mission_frontier_hostage_registers }
+		trigger = {
+			num_of_cities = 9
+			army_size_percentage = 0.85
+			stability = 1
+		}
+		effect = {
+			add_mil_power = 60
+			add_army_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_frontier_march_law = {
+		icon = jxp_map_mission_frontier_border_oaths
+		position = 11
+		required_missions = { jxp_map_mission_frontier_winter_roads }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			num_of_cities = 11
+			army_tradition = 25
+			prestige = 25
+		}
+		effect = {
+			add_adm_power = 50
+			add_mil_power = 75
+			add_prestige = 10
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
 }
 
 jxp_map_temple_market_house_missions = {
@@ -261,6 +462,56 @@ jxp_map_temple_market_house_missions = {
 			jxp_add_imperial_sanction_5_effect = yes
 			add_prestige = 10
 			add_country_modifier = { name = jxp_map_temple_legacy duration = 7300 }
+		}
+	}
+
+	jxp_map_mission_temple_debt_arbitration = {
+		icon = jxp_map_mission_temple_ledgers
+		position = 7
+		required_missions = { jxp_map_mission_temple_public_law }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_town_magistrates
+			religious_unity = 0.90
+			treasury = 100
+		}
+		effect = {
+			add_adm_power = 50
+			add_stability_or_adm_power = yes
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_temple_common_granaries = {
+		icon = jxp_map_mission_temple_market_towns
+		position = 9
+		required_missions = { jxp_map_mission_temple_debt_arbitration }
+		trigger = {
+			num_of_cities = 8
+			monthly_income = 8
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 60
+			add_treasury = 75
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_map_mission_temple_realm_compact = {
+		icon = jxp_map_mission_temple_public_law
+		position = 11
+		required_missions = { jxp_map_mission_temple_common_granaries }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_clan_league
+			num_of_cities = 10
+			religious_unity = 1
+			prestige = 25
+		}
+		effect = {
+			add_adm_power = 75
+			add_prestige = 10
+			add_legitimacy = 5
+			jxp_add_imperial_sanction_5_effect = yes
 		}
 	}
 }

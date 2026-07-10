@@ -5,30 +5,60 @@
  jxp_map_mission_warrior_castle_roads_desc:0 "qSÎWå‚àeSïNuQ®|lÐ¿OêS=fdR’W0bìN”^Šb=eÎW0!nãSNšÙzÞbNSO0"
  jxp_map_mission_warrior_provincial_banner_title:0 "²cwNýVKN×e"
  jxp_map_mission_warrior_provincial_banner_desc:0 "çeýV„vfkëXNŒvÓY”^SV²‹—VTNb—×e^ÿv^¥c×STNWY›QäN0"
+ jxp_map_mission_warrior_retainer_census_title:0 "Í‘¶Rã›QM|"
+ jxp_map_mission_warrior_retainer_census_desc:0 "Šbôv^S×e,g0ýVºNON³‰yVÍ‘°e‰v°‹ÿMbýw©‹†˜ýV„v›QäNŠÇçe	g¶Rè•¹Lu0"
+ jxp_map_mission_warrior_hostage_registers_title:0 "te˜ºN(“ŠfN"
+ jxp_map_mission_warrior_hostage_registers_desc:0 "“ŠfN0ºN(Ni`OÅV‰˜1uTNIYLˆŒc¡rÿ¶Rã„vIN¡R¹eýwbHN3zšR6R¦^0"
+ jxp_map_mission_warrior_hegemon_oath_title:0 "OßvçeýVø‹S"
+ jxp_map_mission_warrior_hegemon_oath_desc:0 "SVø‹SMa(WTNb—×e^NËz“ŠÿbìN¿ONQêS=fOY0W¹e†˜INKNN0"
  jxp_map_mission_court_genealogies_title:0 "!h¢‹¶Rû|1ŒRr"
  jxp_map_mission_court_genealogies_desc:0 "åNúR>y‡efN0çe8RNlQ¶RÁ‹ŠÍ‘îO1ŒRrÿO†˜ýV=eM‘·ƒ—V³åNgO„vTR0"
  jxp_map_mission_court_capital_petitions_title:0 "Ïu%„¬NuOY÷‹"
  jxp_map_mission_court_capital_petitions_desc:0 "<yir0fN¶rNOwT7h=fuQhV0Ïu%„g÷^sQû|ýwŠb0W¹ežR›RlSHN)YNTg0"
  jxp_map_mission_court_old_province_claim_title:0 "çubçeýVTR"
  jxp_map_mission_court_old_province_claim_desc:0 "SVçeýV„v>yúR0„^íVNfk¶Rýb²‹bìN„vÁˆ­eÿTR¿ONQêS=f¸uN„vðy÷S0"
+ jxp_map_mission_court_shugo_archives_title:0 "GlˆR²b‡e“^"
+ jxp_map_mission_court_shugo_archives_desc:0 "SlQŒš0ÄRÛ¶rŒT†SãNÁˆ¸‹GleQ‡e“^ÿ©‹äSwTRýwYg¡RŽNSVN„v†˜ýV»lt0"
+ jxp_map_mission_court_kinri_embassies_title:0 "8^‰šyÌ‘O‚‚"
+ jxp_map_mission_court_kinri_embassies_desc:0 "8^‰š¬Ný„vO‚‚”^Ÿq‰`<yÕl0ˆ™`NŒjPÿO0W¹ežR›RlSHNg÷^²‹ïS0"
+ jxp_map_mission_court_realm_arbitration_title:0 "Áˆ­eø‹¶R‰Nïz"
+ jxp_map_mission_court_realm_arbitration_desc:0 "SV»ýVN¶RãýMaôcVbìN„vÁˆ­eÿ1ŒRrN„vTg¿OòTSHNwck„vMe»lCgZ0"
  jxp_map_mission_sea_port_registers_title:0 "6Rfm%mTŒQ"
  jxp_map_mission_sea_port_registers_desc:0 "N‰v°‹fm0%m09‚4YNî•8NÿwmN6eeQMbNOˆm1Y(W›SSNŒn³oKNô•0"
  jxp_map_mission_sea_shipwright_leagues_title:0 "TwT9‚.S4lIN"
  jxp_map_mission_sea_shipwright_leagues_desc:0 "ÝOœ–(g™e0Á”‰”N4lINyV„v›OÙuÿOT=nýwY	cßuNÄ‰<hú^.ŒTîOt9‚êS0"
  jxp_map_mission_sea_inner_routes_title:0 "Œcác…Qwm*‚ï"
  jxp_map_mission_sea_inner_routes_desc:0 "Ÿq‰`noPlNyów„v9‚–ÿýwYŠbRce›SSØSb=†˜ýV„vSï0"
+ jxp_map_mission_sea_harbor_magistrates_title:0 "¾‹n=n¡RIYLˆ"
+ jxp_map_mission_sea_harbor_magistrates_desc:0 "ßuN=n-g0ÓNKSNÊlz„vÁˆ­eÿO¿l¸S0ÌRýwY3zšR=e‘d†˜ýV0"
+ jxp_map_mission_sea_red_seal_networks_title:0 "Çu1gpS*‚Q"
+ jxp_map_mission_sea_red_seal_networks_desc:0 "åN×Sb²‹„v‡efNÝO²bFU6‚ÿv^©‹T=nOTNHS¦^bÅb²b*‚NzyV0"
+ jxp_map_mission_sea_strait_command_title:0 "÷SäNø‹wmáS"
+ jxp_map_mission_sea_strait_command_desc:0 "ýwYôu²b*‚ï0é`»l cHYv^ìSÆ–4l›Q„v¶Rè•ÿMbM‘INüR²›SKNô•„véy^0"
  jxp_map_mission_frontier_passes_title:0 "¾‹ˆRqSÝTsQ˜–"
  jxp_map_mission_frontier_passes_desc:0 "¹0W„vCg›R–™HQSO°sHNŒýwˆROOqSãS0³l7ŒN¬QcRÍNïSLˆ„vSï0"
  jxp_map_mission_frontier_new_fields_title:0 "V¦WÆv0W°e0u"
  jxp_map_mission_frontier_new_fields_desc:0 "îO0X0u.nv^‰RnAmlÿ©‹ír„zÆv0WmNýw›O‰QôfYÎWuQNZwK„0"
  jxp_map_mission_frontier_border_oaths_title:0 "Í‘šR¹ƒX“Š¦u"
  jxp_map_mission_frontier_border_oaths_desc:0 "åNLu‘x0ZZßvŒTºN(Í‘¢‹¹LuÿOýVºNOåwSböe”^TUOYÆ–Óu0"
+ jxp_map_mission_frontier_hostage_registers_title:0 "¢‹¹OºN(M|"
+ jxp_map_mission_frontier_hostage_registers_desc:0 "Šb¹ƒXýVºN„v“ŠfNNºN(ßuN‰v°‹ÿÏQSqSÝTI–”–&^eg„vÍSYÌwßv0"
+ jxp_map_mission_frontier_winter_roads_title:0 "=¬QcR›QS"
+ jxp_map_mission_frontier_winter_roads_desc:0 "îOteê–­S0!nãSNuQ®|¿RÿO›Q¿R(Wgv`±R„vcR‚‚ÍNýwµb¾¹ƒX0"
+ jxp_map_mission_frontier_march_law_title:0 "˜Lˆ¹ýV›QÕl"
+ jxp_map_mission_frontier_march_law_desc:0 "ˆRY0V¦WNýVºNIN¡RÅV‰˜™QeQqQTÕl¦^ÿ¹†uMbObHN3zšR†˜ýV0"
  jxp_map_mission_temple_ledgers_title:0 "n¹púR>yT0u"
  jxp_map_mission_temple_ledgers_desc:0 "úR>y0µ^Nè•MRHuŒcác„vW0WŒT&îvÿ=f†˜ýV…QNïSýVÆ‰„v0MeQÜu0"
  jxp_map_mission_temple_market_towns_title:0 "%„.úR…QHu^"
  jxp_map_mission_temple_market_towns_desc:0 "ÝO²bšRg^0ÓNKSNKbåTNwÿ©‹™™kp0®|ÐNFUzqQTËn‰QÎWN0"
  jxp_map_mission_temple_public_law_title:0 "˜Lˆ†˜ýVlQÕl"
  jxp_map_mission_temple_public_law_desc:0 "ŠbúR>yòNÁˆ0FUºNï`‹ONfk¶RÕl¦^tetHNïSlQVôcV„v†˜ýVÕl0"
+ jxp_map_mission_temple_debt_arbitration_title:0 "¾‹Ëz·VMeIYLˆ"
+ jxp_map_mission_temple_debt_arbitration_desc:0 "åNlQVHS¦^YtHP¡R0(0WNRƒt^ÏQMQÿMQ·VMe‰BloØSHNàe^²Qz0"
+ jxp_map_mission_temple_common_granaries_title:0 "TwÓuúRHuqQTÓN"
+ jxp_map_mission_temple_common_granaries_desc:0 "©‹úR>y0HuONQgK„qQTôuc®|ÓNÿ(WIk6eNböeˆROO†˜ýV9húW0"
+ jxp_map_mission_temple_realm_compact_title:0 "ÓuúR^ýV¦u"
+ jxp_map_mission_temple_realm_compact_desc:0 "SVfk¶R0úR>yNFUºNý¥c×STNlQÕlÿ†˜ýVéy^¿O·ƒ—V•EN=e‘d0"
 
  jxp_map_adopt_warrior_domain_code_title:0 "6RšRýVO›QyVäN"
  jxp_map_adopt_warrior_domain_code_desc:0 "(W×e,gNýVºNKNô•RšR›QyV0uQ®|ŒTˆRÎWIN¡R0"

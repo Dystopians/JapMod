@@ -1,0 +1,107 @@
+jxp_72_wak_clamp_pressure_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { check_variable = { which = jxp_72_wak_pressure value = 0 } }
+			}
+			set_variable = { which = jxp_72_wak_pressure value = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { which = jxp_72_wak_pressure value = 100 }
+			}
+			set_variable = { which = jxp_72_wak_pressure value = 100 }
+		}
+	}
+}
+
+jxp_72_wak_add_pressure_5_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = 5 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_add_pressure_10_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = 10 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_add_pressure_15_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = 15 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_add_pressure_20_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = 20 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_subtract_pressure_10_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = -10 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_subtract_pressure_15_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = -15 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_subtract_pressure_20_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = -20 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_subtract_pressure_40_effect = {
+	change_variable = { which = jxp_72_wak_pressure value = -40 }
+	jxp_72_wak_clamp_pressure_effect = yes
+}
+
+jxp_72_wak_start_cycle_effect = {
+	jxp_72_wak_cleanup_effect = yes
+	set_country_flag = jxp_72_wak_cycle_active
+	set_variable = { which = jxp_72_wak_pressure value = 10 }
+	add_country_modifier = {
+		name = jxp_72_wak_sea_league_charter
+		duration = 3650
+	}
+}
+
+jxp_72_wak_cleanup_effect = {
+	clr_country_flag = jxp_72_wak_cycle_active
+	set_variable = { which = jxp_72_wak_pressure value = 0 }
+	remove_country_modifier = jxp_72_wak_sea_league_charter
+	remove_country_modifier = jxp_72_wak_rotating_letters
+	remove_country_modifier = jxp_72_wak_free_port_endowment
+	remove_country_modifier = jxp_72_wak_convoy_courts
+	remove_country_modifier = jxp_72_wak_unlicensed_dividend
+	remove_country_modifier = jxp_72_wak_federation_hearing
+	remove_country_modifier = jxp_72_wak_repression_aftershock
+	remove_country_modifier = jxp_72_wak_black_current_overreach
+	remove_country_modifier = jxp_72_wak_crisis_recess
+	remove_country_modifier = jxp_72_wak_chartered_maritime_state
+	remove_country_modifier = jxp_72_wak_flotillas_disarmed
+}
+
+jxp_72_wak_transform_to_maritime_state_effect = {
+	jxp_72_wak_cleanup_effect = yes
+	add_country_modifier = {
+		name = jxp_72_wak_chartered_maritime_state
+		duration = 7300
+	}
+	jxp_add_tenka_order_5_effect = yes
+	jxp_add_imperial_sanction_5_effect = yes
+	add_prestige = 10
+}
+
+jxp_72_wak_stand_down_cycle_effect = {
+	jxp_72_wak_cleanup_effect = yes
+	add_country_modifier = {
+		name = jxp_72_wak_flotillas_disarmed
+		duration = 3650
+	}
+	jxp_add_imperial_sanction_5_effect = yes
+	jxp_subtract_oceanic_opening_5_effect = yes
+}
+
+jxp_72_wak_debug_reset_effect = {
+	jxp_72_wak_cleanup_effect = yes
+}

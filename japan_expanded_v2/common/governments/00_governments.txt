@@ -401,6 +401,7 @@ monarchy = {
 		}
 		growth_of_administration = {
 			reforms = {
+				jxp_reform_founder_toyotomi_five_regents
 				jxp_reform_founder_hjo_odawara_cadasters
 				jxp_reform_founder_ike_himeji_stewards
 				jxp_reform_founder_ymn_roku_bun_ichi_domain

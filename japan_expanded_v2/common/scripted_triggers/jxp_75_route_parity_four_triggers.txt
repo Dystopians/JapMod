@@ -1,0 +1,121 @@
+# Defensive gates for the Kirishitan, Confucian, Reformed, and Kaikyo
+# policy-council loops.  A stacked route state intentionally satisfies none
+# of these triggers until the canonical route sanitizer repairs it.
+jxp_75_is_kirishitan_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = KJP
+		has_country_flag = jxp_path_kirishitan
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_75_is_confucian_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = CJP
+		has_country_flag = jxp_path_confucian
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_75_is_reformed_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = RFJ
+		has_country_flag = jxp_path_reformed
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_75_is_kaikyo_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = SJP
+		has_country_flag = jxp_path_kaikyo
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+# These aggregate reform gates repeat their route guard deliberately.  This
+# keeps direct event/debug calls from treating a retained reform as current
+# route authority after a tag or route transition.
+jxp_75_has_kirishitan_policy_reform_trigger = {
+	jxp_75_is_kirishitan_route_trigger = yes
+	OR = {
+		has_reform = jxp_reform_kirishitan_seminaries
+		has_reform = jxp_reform_kirishitan_misericordia_hospitals
+		has_reform = jxp_reform_kirishitan_nagasaki_admiralty
+	}
+}
+
+jxp_75_has_confucian_policy_reform_trigger = {
+	jxp_75_is_confucian_route_trigger = yes
+	OR = {
+		has_reform = jxp_reform_confucian_examination_domains
+		has_reform = jxp_reform_confucian_sinicized_codes
+		has_reform = jxp_reform_confucian_three_teachings_board
+	}
+}
+
+jxp_75_has_reformed_policy_reform_trigger = {
+	jxp_75_is_reformed_route_trigger = yes
+	OR = {
+		has_reform = jxp_reform_reformed_printing_synods
+		has_reform = jxp_reform_reformed_civic_compacts
+		has_reform = jxp_reform_reformed_contract_fleet
+	}
+}
+
+jxp_75_has_kaikyo_policy_reform_trigger = {
+	jxp_75_is_kaikyo_route_trigger = yes
+	OR = {
+		has_reform = jxp_reform_kaikyo_monsoon_diwan
+		has_reform = jxp_reform_kaikyo_wakf_granaries
+		has_reform = jxp_reform_kaikyo_spice_guard
+	}
+}

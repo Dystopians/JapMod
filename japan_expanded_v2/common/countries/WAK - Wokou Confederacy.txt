@@ -32,18 +32,18 @@ historical_units = {
 }
 
 monarch_names = {
-	"Soya #0" = 12
-	"Matsuura #0" = 12
-	"Murakami #0" = 12
-	"So #0" = 10
-	"Takeyoshi #0" = 10
-	"Yoshishige #0" = 8
-	"Takamasa #0" = 8
-	"Ryu #0" = 6
+	"宗谷 #0" = 12
+	"松浦 #0" = 12
+	"村上 #0" = 12
+	"宗 #0" = 10
+	"武吉 #0" = 10
+	"义重 #0" = 8
+	"隆正 #0" = 8
+	"龙 #0" = 6
 }
 
 leader_names = {
-	Murakami Matsuura So Soya Takeyoshi Yoshishige Noshima Innoshima Kurushima Tsushima Hirado Ryukyu
+	村上 松浦 宗 宗谷 武吉 义重 能岛 因岛 来岛 对马 平户 琉球
 }
 
 ship_names = {
