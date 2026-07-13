@@ -127,12 +127,13 @@ REPEATABLE_DECISIONS = {
     ),
 }
 
-EXPECTED_EVENTS = tuple(f"jxp_ijp_loop.{number}" for number in range(1, 6))
+EXPECTED_EVENTS = tuple(f"jxp_ijp_loop.{number}" for number in range(1, 7))
 
 _EXPECTED_TRIGGER_DOCUMENT = parse_text(
     r"""
 jxp_74_ijp_route_trigger = {
     jxp_is_japanese_polity_trigger = yes
+    religion = shinto
     OR = { tag = IJP has_country_flag = jxp_path_ikko }
     NOT = { OR = {
         has_country_flag = jxp_path_sakoku
@@ -148,20 +149,17 @@ jxp_74_ijp_route_trigger = {
 jxp_74_ijp_cycle_active_trigger = {
     jxp_74_ijp_route_trigger = yes
     has_country_flag = jxp_74_ijp_cycle_active
+    has_country_modifier = jxp_74_ijp_temple_market_charter
     has_any_disaster = no
     NOT = { has_country_flag = jxp_ikko_rising_active }
     NOT = { has_country_flag = jxp_shimabara_crisis_active }
 }
 jxp_74_ijp_commons_ready_trigger = {
     religious_unity = 0.75
-    OR = {
-        NOT = { has_estate = estate_church }
-        estate_loyalty = { estate = estate_church loyalty = 40 }
-    }
-    OR = {
-        NOT = { has_estate = estate_burghers }
-        estate_loyalty = { estate = estate_burghers loyalty = 35 }
-    }
+    has_estate = estate_church
+    estate_loyalty = { estate = estate_church loyalty = 40 }
+    has_estate = estate_burghers
+    estate_loyalty = { estate = estate_burghers loyalty = 35 }
 }
 jxp_74_ijp_heartland_trigger = {
     OR = {
@@ -355,6 +353,19 @@ def _scheduled_event(obj: Object | None, event_id: str, days: str) -> bool:
     return False
 
 
+def _estate_loyalty(obj: Object | None, estate: str, loyalty: str) -> bool:
+    if obj is None:
+        return False
+    for path, entry in find_objects(obj, "estate_loyalty"):
+        if (
+            "NOT" not in path
+            and first_scalar(entry.value, "estate") == estate
+            and first_scalar(entry.value, "loyalty") == loyalty
+        ):
+            return True
+    return False
+
+
 def _check_trigger_contract(document: Document | None, result: CheckResult) -> int:
     actual = _top_objects(document)
     if set(actual) != set(EXPECTED_TRIGGER_BODIES):
@@ -382,6 +393,12 @@ def _check_trigger_contract(document: Document | None, result: CheckResult) -> i
             "IJP route trigger no longer excludes all eight foreign route flags",
             TRIGGER_FILE.as_posix(),
         )
+    if not _positive(route, "religion", "shinto"):
+        result.add(
+            "ijp_loop.religion_gate",
+            "IJP production route entry must require the Shinto religion used by IJP history and setup",
+            TRIGGER_FILE.as_posix(),
+        )
     active = actual.get("jxp_74_ijp_cycle_active_trigger")
     if not all(
         (
@@ -393,6 +410,28 @@ def _check_trigger_contract(document: Document | None, result: CheckResult) -> i
         result.add(
             "ijp_loop.disaster_isolation",
             "active IJP cycle no longer excludes all disasters, Ikko rising, and Shimabara",
+            TRIGGER_FILE.as_posix(),
+        )
+    if not _positive(
+        active, "has_country_modifier", "jxp_74_ijp_temple_market_charter"
+    ):
+        result.add(
+            "ijp_loop.charter_lifecycle",
+            "IJP active-cycle state must expire with its 3650-day temple-market charter",
+            TRIGGER_FILE.as_posix(),
+        )
+    commons = actual.get("jxp_74_ijp_commons_ready_trigger")
+    if not all(
+        (
+            _positive(commons, "has_estate", "estate_church"),
+            _estate_loyalty(commons, "estate_church", "40"),
+            _positive(commons, "has_estate", "estate_burghers"),
+            _estate_loyalty(commons, "estate_burghers", "35"),
+        )
+    ):
+        result.add(
+            "ijp_loop.estate_gate",
+            "IJP production entry must require both church and burgher estates at their loyalty floors",
             TRIGGER_FILE.as_posix(),
         )
     return matched
@@ -662,6 +701,30 @@ def _check_events(document: Document | None, result: CheckResult) -> tuple[int, 
             "next-day IJP route reconciliation is incomplete",
             EVENT_FILE.as_posix(),
         )
+
+    expiry = events.get("jxp_ijp_loop.6")
+    expiry_immediate = _named_object(expiry, "immediate")
+    expiry_if = _named_object(expiry_immediate, "if")
+    expiry_limit = _named_object(expiry_if, "limit")
+    if not all(
+        (
+            first_scalar(expiry, "hidden") == "yes" if expiry else False,
+            first_scalar(expiry, "is_triggered_only") == "yes" if expiry else False,
+            _positive(expiry_limit, "has_country_flag", ACTIVE_FLAG),
+            _negative(
+                expiry_limit,
+                "has_country_modifier",
+                "jxp_74_ijp_temple_market_charter",
+            ),
+            _positive(expiry_if, "jxp_74_ijp_route_exit_effect", "yes"),
+            len(_options(expiry)) == 1,
+        )
+    ):
+        result.add(
+            "ijp_loop.expiry_lifecycle",
+            "hidden IJP expiry must clean only an active cycle whose charter is absent",
+            EVENT_FILE.as_posix(),
+        )
     return visible_options, ai_options
 
 
@@ -765,11 +828,12 @@ def _check_effects(document: Document | None, result: CheckResult) -> int:
             _positive(start, "set_country_flag", ACTIVE_FLAG),
             _variable_operation(start, "set_variable", "15"),
             start_writes.get("jxp_74_ijp_temple_market_charter") == "3650",
+            _scheduled_event(start, "jxp_ijp_loop.6", "3651"),
         )
     ):
         result.add(
             "ijp_loop.start_state",
-            "cycle start must clean, activate, initialize pressure 15, and add a finite charter",
+            "cycle start must clean, activate, initialize pressure 15, add a finite charter, and schedule guarded expiry",
             EFFECT_FILE.as_posix(),
         )
 

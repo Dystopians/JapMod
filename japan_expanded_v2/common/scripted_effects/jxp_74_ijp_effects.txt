@@ -112,6 +112,7 @@ jxp_74_ijp_start_cycle_effect = {
 		name = jxp_74_ijp_temple_market_charter
 		duration = 3650
 	}
+	country_event = { id = jxp_ijp_loop.6 days = 3651 }
 }
 
 jxp_74_ijp_transform_commonwealth_effect = {

@@ -63,6 +63,7 @@ jxp_72_wak_start_cycle_effect = {
 		name = jxp_72_wak_sea_league_charter
 		duration = 3650
 	}
+	country_event = { id = jxp_wak_loop.5 days = 3651 }
 }
 
 jxp_72_wak_cleanup_effect = {

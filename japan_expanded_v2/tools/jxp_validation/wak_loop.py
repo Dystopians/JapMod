@@ -114,7 +114,7 @@ REPEATABLE_DECISIONS = {
     ),
 }
 
-EXPECTED_EVENTS = tuple(f"jxp_wak_loop.{number}" for number in range(1, 5))
+EXPECTED_EVENTS = tuple(f"jxp_wak_loop.{number}" for number in range(1, 6))
 
 
 _EXPECTED_TRIGGER_DOCUMENT = parse_text(
@@ -136,6 +136,7 @@ jxp_72_wak_route_trigger = {
 jxp_72_wak_cycle_active_trigger = {
 	jxp_72_wak_route_trigger = yes
 	has_country_flag = jxp_72_wak_cycle_active
+	has_country_modifier = jxp_72_wak_sea_league_charter
 }
 jxp_72_wak_harbor_network_trigger = {
 	OR = {
@@ -303,6 +304,18 @@ def _variable_operation(obj: Object | None, key: str, value: str) -> bool:
     return False
 
 
+def _scheduled_event(obj: Object | None, event_id: str, days: str) -> bool:
+    if obj is None:
+        return False
+    for _path, entry in find_objects(obj, "country_event"):
+        if (
+            first_scalar(entry.value, "id") == event_id
+            and first_scalar(entry.value, "days") == days
+        ):
+            return True
+    return False
+
+
 def _check_trigger_contract(
     document: Document | None, result: CheckResult
 ) -> int:
@@ -325,6 +338,15 @@ def _check_trigger_contract(
             )
         else:
             matched += 1
+    active = actual.get("jxp_72_wak_cycle_active_trigger")
+    if not _positive(
+        active, "has_country_modifier", "jxp_72_wak_sea_league_charter"
+    ):
+        result.add(
+            "wak_loop.charter_lifecycle",
+            "WAK active-cycle state must expire with its 3650-day sea-league charter",
+            TRIGGER_FILE.as_posix(),
+        )
     return matched
 
 
@@ -595,18 +617,47 @@ def _check_events(document: Document | None, result: CheckResult) -> tuple[int, 
 
     cleanup = events.get("jxp_wak_loop.4")
     cleanup_trigger = _named_object(cleanup, "trigger")
+    cleanup_mtth = _named_object(cleanup, "mean_time_to_happen")
     cleanup_immediate = _named_object(cleanup, "immediate")
     cleanup_options = entries_named(cleanup, "option") if cleanup is not None else ()
-    if (
-        first_scalar(cleanup, "hidden") != "yes" if cleanup is not None else True
-    ) or not _positive(cleanup_trigger, "has_country_flag", ACTIVE_FLAG) or not _negative(
-        cleanup_trigger, "jxp_72_wak_route_trigger", "yes"
-    ) or not _positive(cleanup_immediate, "jxp_72_wak_cleanup_effect", "yes") or len(
-        cleanup_options
-    ) != 1:
+    if not all(
+        (
+            first_scalar(cleanup, "hidden") == "yes" if cleanup else False,
+            _positive(cleanup_trigger, "has_country_flag", ACTIVE_FLAG),
+            _negative(cleanup_trigger, "jxp_72_wak_cycle_active_trigger", "yes"),
+            first_scalar(cleanup_mtth, "days") == "1" if cleanup_mtth else False,
+            _positive(cleanup_immediate, "jxp_72_wak_cleanup_effect", "yes"),
+            len(cleanup_options) == 1,
+        )
+    ):
         result.add(
             "wak_loop.route_loss_cleanup",
-            "hidden route-loss event must clean the cycle within one event and retain one OK option",
+            "hidden one-day event must clean route loss or charter expiry and retain one OK option",
+            EVENT_FILE.as_posix(),
+        )
+
+    expiry = events.get("jxp_wak_loop.5")
+    expiry_immediate = _named_object(expiry, "immediate")
+    expiry_if = _named_object(expiry_immediate, "if")
+    expiry_limit = _named_object(expiry_if, "limit")
+    expiry_options = entries_named(expiry, "option") if expiry is not None else ()
+    if not all(
+        (
+            first_scalar(expiry, "hidden") == "yes" if expiry else False,
+            first_scalar(expiry, "is_triggered_only") == "yes" if expiry else False,
+            _positive(expiry_limit, "has_country_flag", ACTIVE_FLAG),
+            _negative(
+                expiry_limit,
+                "has_country_modifier",
+                "jxp_72_wak_sea_league_charter",
+            ),
+            _positive(expiry_if, "jxp_72_wak_cleanup_effect", "yes"),
+            len(expiry_options) == 1,
+        )
+    ):
+        result.add(
+            "wak_loop.expiry_lifecycle",
+            "hidden WAK expiry must clean only an active cycle whose charter is absent",
             EVENT_FILE.as_posix(),
         )
     return visible_options, ai_options
@@ -643,12 +694,19 @@ def _check_effects(document: Document | None, result: CheckResult) -> int:
         )
 
     start = effects.get("jxp_72_wak_start_cycle_effect")
-    if not _positive(start, "jxp_72_wak_cleanup_effect", "yes") or not _positive(
-        start, "set_country_flag", ACTIVE_FLAG
-    ) or not _variable_operation(start, "set_variable", "10"):
+    start_writes = dict(_modifier_writes(start))
+    if not all(
+        (
+            _positive(start, "jxp_72_wak_cleanup_effect", "yes"),
+            _positive(start, "set_country_flag", ACTIVE_FLAG),
+            _variable_operation(start, "set_variable", "10"),
+            start_writes.get("jxp_72_wak_sea_league_charter") == "3650",
+            _scheduled_event(start, "jxp_wak_loop.5", "3651"),
+        )
+    ):
         result.add(
             "wak_loop.start_state",
-            "cycle start must clean old state, set the active flag, and initialize pressure to 10",
+            "cycle start must clean, activate, initialize pressure 10, add a finite charter, and schedule guarded expiry",
             EFFECT_FILE.as_posix(),
         )
 

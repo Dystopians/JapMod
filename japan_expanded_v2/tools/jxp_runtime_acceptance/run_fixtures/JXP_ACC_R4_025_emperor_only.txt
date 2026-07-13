@@ -1,0 +1,4 @@
+set_emperor_of_china = ROOT
+add_mandate = 100
+add_meritocracy = 100
+regenerate_government_mechanics = yes

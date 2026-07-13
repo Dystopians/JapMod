@@ -1,0 +1,20 @@
+4359 = {
+	change_religion = shinto
+}
+1021 = {
+	change_religion = shinto
+	add_province_modifier = {
+		name = religious_center
+		duration = -1
+	}
+}
+4183 = {
+	change_religion = shinto
+	add_permanent_province_modifier = {
+		name = religious_zeal_at_conv
+		duration = -1
+	}
+}
+1028 = {
+	change_religion = shinto
+}

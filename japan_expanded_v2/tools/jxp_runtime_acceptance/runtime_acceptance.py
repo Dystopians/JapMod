@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Prepare JXP runtime evidence without launching or configuring EU4.
+"""Prepare JXP runtime evidence without launching EU4.
 
-The CLI deliberately has no launch command and never writes launcher-v2.sqlite
-or dlc_load.json.  It installs content-addressed ordinary-directory snapshots,
-records a before-session baseline, and collects explicitly generated evidence.
+The CLI deliberately has no launch command and never writes launcher-v2.sqlite.
+It installs content-addressed ordinary-directory snapshots, configures only the
+isolated acceptance root's dlc_load.json, records a before-session baseline,
+and collects explicitly generated evidence.
 """
 
 from __future__ import annotations
@@ -29,19 +30,22 @@ import zipfile
 
 PINNED_LEGACY_REVISION = "8a5962628014e696bda764bcad10bfd3faee188e"
 PINNED_PRE_IDENTITY_REVISION = "6e461e2e47a839a77b2e376ce61ceb317d393320"
+PINNED_PROTOCOL_FILES = {
+    "eu4.exe": "9ad3efe1af169f40ee577f9dae5debbc87af6fb8b5450fb345ebf110dc4d771a",
+    "userdir.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+}
 DEFAULT_GAME_ROOT = Path(r"D:\Steam\steamapps\common\Europa Universalis IV")
 DEFAULT_USER_DATA = (
     Path.home() / "Documents" / "Paradox Interactive" / "Europa Universalis IV"
 )
-DEFAULT_ACCEPTANCE_USER_DATA = (
-    Path.home()
-    / "Documents"
-    / "Paradox Interactive"
-    / "Europa Universalis IV - JXP Acceptance"
-)
+DEFAULT_ACCEPTANCE_USER_DATA = Path.home() / "Documents" / "JXP_Acceptance"
+RUN_FIXTURE_ROOT = Path(__file__).with_name("run_fixtures")
 SNAPSHOT_MARKER_SCHEMA = 1
-SESSION_SCHEMA = 2
-COLLECTION_SCHEMA = 2
+SESSION_SCHEMA = 3
+COLLECTION_SCHEMA = 3
+DLC_CONFIG_PATHS = {
+    "Mandate of Heaven": "dlc/dlc066_mandate_of_heaven/dlc066.dlc",
+}
 PROCESS_NAMES = frozenset(
     {
         "eu4.exe",
@@ -194,6 +198,37 @@ def _require_isolated_user_data(path: Path) -> Path:
     if resolved == DEFAULT_USER_DATA.resolve():
         raise AcceptanceError(
             "runtime acceptance must not use the daily EU4 user-data root"
+        )
+    if not str(resolved).isascii() or re.search(r'[\s"]', str(resolved)):
+        raise AcceptanceError(
+            "EU4 acceptance user-data path must be ASCII and contain no whitespace "
+            "or quote; the pinned executable's option parser can truncate ambiguous "
+            "userdir values"
+        )
+    return resolved
+
+
+def _require_canonical_fixture_user_data(path: Path) -> Path:
+    """Restrict root-level console fixtures to the audited acceptance userdir."""
+    resolved = _require_isolated_user_data(path)
+    canonical = DEFAULT_ACCEPTANCE_USER_DATA.expanduser().resolve()
+    daily = DEFAULT_USER_DATA.expanduser().resolve()
+    if resolved != canonical:
+        raise AcceptanceError(
+            "run fixtures may be installed only in the canonical acceptance "
+            f"user-data root: {canonical}"
+        )
+    if _is_relative_to(resolved, daily) or _is_relative_to(daily, resolved):
+        raise AcceptanceError(
+            "run-fixture root must not contain or be contained by daily user data"
+        )
+    if (
+        resolved.name.lower().startswith("jxp-acceptance-")
+        or os.path.lexists(resolved / ".jxp_acceptance_snapshot.json")
+        or os.path.lexists(resolved / "descriptor.mod")
+    ):
+        raise AcceptanceError(
+            "run-fixture root resembles a mod payload rather than a user-data root"
         )
     return resolved
 
@@ -423,10 +458,13 @@ def _safe_extract_zip(archive: Path, destination: Path) -> None:
 
 
 def _revision_components(
-    repo: Path, revision: str, temporary_root: Path
+    repo: Path, revision: str, temporary_root: Path, main_only: bool
 ) -> tuple[tuple[Component, ...], str]:
     resolved = _git(repo, "rev-parse", "--verify", f"{revision}^{{commit}}")
     archive = temporary_root / "source.zip"
+    archive_paths = ["japan_expanded_v2", "japan_expanded_v2.mod"]
+    if not main_only:
+        archive_paths.extend(["japan_expanded_v2_map", "japan_expanded_v2_map.mod"])
     try:
         subprocess.run(
             [
@@ -437,8 +475,7 @@ def _revision_components(
                 "--format=zip",
                 f"--output={archive}",
                 resolved,
-                "japan_expanded_v2",
-                "japan_expanded_v2.mod",
+                *archive_paths,
             ],
             check=True,
             capture_output=True,
@@ -447,14 +484,23 @@ def _revision_components(
         raise AcceptanceError(f"git archive failed for {resolved}: {exc}") from exc
     _safe_extract_zip(archive, temporary_root / "checkout")
     checkout = temporary_root / "checkout"
-    return (
-        (
+    components = [
+        Component(
+            "main",
+            checkout / "japan_expanded_v2",
+            checkout / "japan_expanded_v2.mod",
+        )
+    ]
+    if not main_only:
+        components.append(
             Component(
-                "main",
-                checkout / "japan_expanded_v2",
-                checkout / "japan_expanded_v2.mod",
-            ),
-        ),
+                "map",
+                checkout / "japan_expanded_v2_map",
+                checkout / "japan_expanded_v2_map.mod",
+            )
+        )
+    return (
+        tuple(components),
         resolved,
     )
 
@@ -663,10 +709,8 @@ def deploy(
     safe_label = _sanitize_label(label)
     with tempfile.TemporaryDirectory(prefix="jxp-acceptance-archive-") as temporary:
         if revision:
-            if not main_only:
-                raise AcceptanceError("git revision deployment is main-only")
             components, source_revision = _revision_components(
-                repo, revision, Path(temporary)
+                repo, revision, Path(temporary), main_only
             )
         else:
             components = _current_components(repo, main_only)
@@ -695,9 +739,9 @@ def deploy(
         "launcher_configuration_modified": False,
         "game_started": False,
         "instruction": (
-            "Prepare only this dedicated user-data root's dlc_load.json. After "
-            "explicit startup permission, prove the pinned EU4 userdir protocol; "
-            "never fall back to the daily Launcher configuration."
+            "Run configure-playset for the intended scenario and these exact "
+            "descriptors. After explicit startup permission, prove the pinned "
+            "EU4 userdir protocol; never use the daily Launcher configuration."
         ),
     }
 
@@ -737,6 +781,14 @@ def _dlc_load(user_data: Path) -> dict[str, object]:
         raise AcceptanceError(f"cannot read dlc_load.json: {exc}") from exc
     if not isinstance(value, dict):
         raise AcceptanceError("dlc_load.json must contain an object")
+    for key in ("enabled_mods", "disabled_dlcs"):
+        items = value.get(key)
+        if (
+            not isinstance(items, list)
+            or not all(isinstance(item, str) and item for item in items)
+            or len(items) != len(set(items))
+        ):
+            raise AcceptanceError(f"dlc_load.json {key} must be a unique string list")
     return value
 
 
@@ -939,6 +991,114 @@ def _verify_session_snapshot_contract(
     return selected_phase
 
 
+def _required_disabled_dlcs(
+    scenario: dict[str, object], phase: str | None
+) -> tuple[str, ...]:
+    contract, _ = _scenario_session_contract(scenario, phase)
+    required = contract.get("required_runtime_dlc", {})
+    if not isinstance(required, dict):
+        raise AcceptanceError(f"invalid required_runtime_dlc contract: {scenario['id']}")
+    disabled: list[str] = []
+    for name, state in required.items():
+        path = DLC_CONFIG_PATHS.get(str(name))
+        if not path:
+            raise AcceptanceError(f"no pinned dlc_load path for required DLC: {name}")
+        normalized_state = str(state).casefold()
+        if normalized_state == "disabled":
+            disabled.append(path)
+        elif normalized_state != "enabled":
+            raise AcceptanceError(
+                f"invalid runtime DLC state for {name}: {state!r}"
+            )
+    return tuple(sorted(disabled))
+
+
+def _verified_session_snapshots(
+    user_data: Path, descriptors: Sequence[Path]
+) -> list[dict[str, object]]:
+    records = [
+        _installed_snapshot_record(raw.expanduser().resolve(), user_data)
+        for raw in descriptors
+    ]
+    if not records:
+        raise AcceptanceError("scenario configuration requires at least one descriptor")
+    return records
+
+
+def configure_playset(
+    user_data: Path,
+    scenario_id: str,
+    phase: str | None,
+    descriptors: Sequence[Path],
+    candidate_revision: str | None = None,
+) -> dict[str, object]:
+    """Atomically configure only an isolated acceptance root for one scenario."""
+    _assert_processes_stopped()
+    user_data = _require_isolated_user_data(user_data)
+    scenario = _scenario(scenario_id)
+    if scenario_id == "R13":
+        raise AcceptanceError("R13 is release closure and has no runtime playset")
+    candidate_revision = candidate_revision or _current_candidate_revision()
+    if not re.fullmatch(r"[0-9a-f]{40}", candidate_revision):
+        raise AcceptanceError(
+            f"invalid current candidate revision: {candidate_revision!r}"
+        )
+    snapshots = _verified_session_snapshots(user_data, descriptors)
+    selected_phase = _verify_session_snapshot_contract(
+        scenario, phase, snapshots, candidate_revision
+    )
+    ordered = sorted(
+        snapshots,
+        key=lambda item: ({"main": 0, "map": 1}.get(str(item["component"]), 99)),
+    )
+    config = {
+        "enabled_mods": [
+            f"mod/{Path(str(item['descriptor']['path'])).name}" for item in ordered
+        ],
+        "disabled_dlcs": list(_required_disabled_dlcs(scenario, selected_phase)),
+    }
+    target = user_data / "dlc_load.json"
+    previous = None
+    if target.exists():
+        if not target.is_file() or _is_link_or_junction(target):
+            raise AcceptanceError(f"refusing non-ordinary dlc_load target: {target}")
+        _dlc_load(user_data)
+        previous = _file_record(target)
+    temporary = user_data / f".dlc_load.{uuid.uuid4().hex}.tmp"
+    try:
+        temporary.write_text(_json_dump(config), encoding="utf-8")
+        if json.loads(temporary.read_text(encoding="utf-8")) != config:
+            raise AcceptanceError("isolated dlc_load write verification failed")
+        os.replace(temporary, target)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+    return {
+        "scenario": scenario_id,
+        "phase": selected_phase,
+        "user_data": str(user_data),
+        "candidate_revision": candidate_revision,
+        "configuration": config,
+        "previous_dlc_load": previous,
+        "dlc_load": _file_record(target),
+        "snapshots": [
+            {
+                key: item[key]
+                for key in (
+                    "component",
+                    "version",
+                    "source_revision",
+                    "fingerprint",
+                    "display_name",
+                )
+            }
+            for item in ordered
+        ],
+        "daily_launcher_configuration_modified": False,
+        "game_started": False,
+    }
+
+
 def preflight(repo: Path, game_root: Path, user_data: Path) -> dict[str, object]:
     repo = _require_ordinary_directory(repo, "repository")
     game_root = _require_ordinary_directory(game_root, "EU4 game root")
@@ -947,6 +1107,18 @@ def preflight(repo: Path, game_root: Path, user_data: Path) -> dict[str, object]
         raise AcceptanceError("repository must not live inside the EU4 installation")
     manifest = _load_pin_manifest(repo)
     pin_records: list[dict[str, object]] = []
+    for relative_value, expected in PINNED_PROTOCOL_FILES.items():
+        relative = Path(relative_value)
+        source = game_root / relative
+        actual = _sha256_file(source) if source.is_file() else None
+        pin_records.append(
+            {
+                "path": relative.as_posix(),
+                "expected": expected,
+                "actual": actual,
+                "matched": actual == expected,
+            }
+        )
     for group in ("files", "generic_files", "mandate_files"):
         for record in manifest.get(group, []):
             relative = Path(str(record["path"]))
@@ -1033,6 +1205,183 @@ def _file_record(path: Path) -> dict[str, object]:
     }
 
 
+def _required_configuration_records(root: Path) -> list[dict[str, object]]:
+    records = []
+    for relative in ("dlc_load.json", "launcher-v2.sqlite"):
+        path = root / relative
+        if not path.is_file() or _is_link_or_junction(path):
+            raise AcceptanceError(f"required ordinary configuration file is missing: {path}")
+        records.append(_file_record(path))
+    return records
+
+
+def _verified_run_fixture_records() -> list[dict[str, object]]:
+    manifest_path = RUN_FIXTURE_ROOT / "manifest.json"
+    if not manifest_path.is_file() or _is_link_or_junction(manifest_path):
+        raise AcceptanceError(f"run-fixture manifest is missing: {manifest_path}")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if (
+        not isinstance(manifest, dict)
+        or set(manifest) != {"schema", "claim_limit", "files"}
+        or manifest["schema"] != 1
+        or not isinstance(manifest["claim_limit"], str)
+        or not isinstance(manifest["files"], list)
+        or not manifest["files"]
+    ):
+        raise AcceptanceError("run-fixture manifest schema disagrees with this helper")
+    records: list[dict[str, object]] = []
+    names: set[str] = set()
+    for item in manifest["files"]:
+        if not isinstance(item, dict) or set(item) != {
+            "name",
+            "scenario",
+            "purpose",
+            "bytes",
+            "sha256",
+        }:
+            raise AcceptanceError("run-fixture manifest entry is malformed")
+        name = item["name"]
+        scenario = item["scenario"]
+        purpose = item["purpose"]
+        expected_bytes = item["bytes"]
+        expected_digest = item["sha256"]
+        if (
+            not isinstance(name, str)
+            or not re.fullmatch(r"JXP_ACC_R(?:4|6|8|10)_[A-Za-z0-9_]+\.txt", name)
+            or name in names
+            or not isinstance(scenario, str)
+            or scenario not in {"R4", "R6", "R8", "R10"}
+            or not isinstance(purpose, str)
+            or not purpose
+            or isinstance(expected_bytes, bool)
+            or not isinstance(expected_bytes, int)
+            or expected_bytes <= 0
+            or not isinstance(expected_digest, str)
+            or not re.fullmatch(r"[0-9a-f]{64}", expected_digest)
+        ):
+            raise AcceptanceError("run-fixture manifest entry has invalid fields")
+        source = (RUN_FIXTURE_ROOT / name).resolve()
+        if (
+            source.parent != RUN_FIXTURE_ROOT.resolve()
+            or not source.is_file()
+            or _is_link_or_junction(source)
+        ):
+            raise AcceptanceError(f"run fixture is missing or not ordinary: {source}")
+        payload = source.read_bytes()
+        try:
+            payload.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise AcceptanceError(f"run fixture is not UTF-8: {source}: {exc}") from exc
+        if payload.startswith(b"\xef\xbb\xbf"):
+            raise AcceptanceError(f"run fixture must not contain a UTF-8 BOM: {source}")
+        actual = _file_record(source)
+        if (
+            actual["bytes"] != expected_bytes
+            or actual["sha256"] != expected_digest
+        ):
+            raise AcceptanceError(f"run fixture disagrees with its manifest: {source}")
+        names.add(name)
+        records.append(
+            {
+                **item,
+                "source": str(source),
+                "claim_limit": manifest["claim_limit"],
+            }
+        )
+    return records
+
+
+def install_run_fixtures(user_data: Path) -> dict[str, object]:
+    """Install immutable non-release console setup effects into safe userdir."""
+    _assert_processes_stopped()
+    user_data = _require_canonical_fixture_user_data(user_data)
+    fixtures = _verified_run_fixture_records()
+    plan: list[tuple[dict[str, object], Path, bool]] = []
+    for fixture in fixtures:
+        source = Path(str(fixture["source"]))
+        destination = user_data / str(fixture["name"])
+        reused = False
+        if os.path.lexists(destination):
+            if not destination.is_file() or _is_link_or_junction(destination):
+                raise AcceptanceError(
+                    f"refusing non-ordinary run-fixture target: {destination}"
+                )
+            if (
+                destination.stat().st_size != fixture["bytes"]
+                or _sha256_file(destination) != fixture["sha256"]
+            ):
+                raise AcceptanceError(
+                    f"refusing to overwrite different run fixture: {destination}"
+                )
+            reused = True
+        plan.append((fixture, destination, reused))
+
+    staged: dict[Path, Path] = {}
+    committed: list[tuple[dict[str, object], Path]] = []
+    try:
+        for fixture, destination, reused in plan:
+            if reused:
+                continue
+            source = Path(str(fixture["source"]))
+            temporary = user_data / f".{destination.name}.{uuid.uuid4().hex}.tmp"
+            staged[destination] = temporary
+            shutil.copy2(source, temporary)
+            if (
+                temporary.stat().st_size != fixture["bytes"]
+                or _sha256_file(temporary) != fixture["sha256"]
+            ):
+                raise AcceptanceError(
+                    f"run-fixture copy verification failed: {destination}"
+                )
+
+        for fixture, destination, reused in plan:
+            if reused:
+                continue
+            temporary = staged[destination]
+            try:
+                os.link(temporary, destination)
+            except FileExistsError as exc:
+                raise AcceptanceError(
+                    f"run-fixture target appeared during commit: {destination}"
+                ) from exc
+            committed.append((fixture, destination))
+            temporary.unlink()
+
+        installed: list[dict[str, object]] = []
+        for fixture, destination, reused in plan:
+            installed.append(
+                {
+                    "name": fixture["name"],
+                    "scenario": fixture["scenario"],
+                    "purpose": fixture["purpose"],
+                    "claim_limit": fixture["claim_limit"],
+                    "reused": reused,
+                    **_file_record(destination),
+                }
+            )
+    except Exception:
+        for fixture, destination in reversed(committed):
+            if (
+                destination.is_file()
+                and not _is_link_or_junction(destination)
+                and destination.stat().st_size == fixture["bytes"]
+                and _sha256_file(destination) == fixture["sha256"]
+            ):
+                destination.unlink()
+        raise
+    finally:
+        for temporary in staged.values():
+            if os.path.lexists(temporary):
+                temporary.unlink()
+    return {
+        "status": "debug_fixture_setup_installed",
+        "user_data": str(user_data),
+        "installed": installed,
+        "daily_launcher_configuration_modified": False,
+        "game_started": False,
+    }
+
+
 def before_session(
     user_data: Path,
     scenario_id: str,
@@ -1040,9 +1389,15 @@ def before_session(
     evidence_root: Path | None,
     descriptors: Sequence[Path],
     candidate_revision: str | None = None,
+    daily_user_data: Path | None = None,
 ) -> dict[str, object]:
     _assert_processes_stopped()
     user_data = _require_isolated_user_data(user_data)
+    daily_user_data = _require_ordinary_directory(
+        daily_user_data or DEFAULT_USER_DATA, "daily EU4 user-data root"
+    )
+    if daily_user_data == user_data:
+        raise AcceptanceError("daily and acceptance user-data roots must be distinct")
     scenario = _scenario(scenario_id)
     if scenario_id == "R13":
         raise AcceptanceError("R13 is release closure and cannot create a game session")
@@ -1056,14 +1411,11 @@ def before_session(
         raise AcceptanceError("evidence root must remain inside EU4 user data")
     if root.exists() and _is_link_or_junction(root):
         raise AcceptanceError("evidence root must be an ordinary directory")
-    snapshot_records = []
-    expected_enabled: set[str] = set()
-    for raw in descriptors:
-        path = raw.expanduser().resolve()
-        snapshot_records.append(_installed_snapshot_record(path, user_data))
-        expected_enabled.add(f"mod/{path.name}")
-    if not snapshot_records:
-        raise AcceptanceError("before-session requires at least one installed descriptor")
+    snapshot_records = _verified_session_snapshots(user_data, descriptors)
+    expected_enabled = {
+        f"mod/{Path(str(item['descriptor']['path'])).name}"
+        for item in snapshot_records
+    }
     selected_phase = _verify_session_snapshot_contract(
         scenario, phase, snapshot_records, candidate_revision
     )
@@ -1073,6 +1425,13 @@ def before_session(
         raise AcceptanceError(
             "active playset is not isolated to the supplied descriptors; "
             f"expected {sorted(expected_enabled)}, found {sorted(actual_enabled)}"
+        )
+    expected_disabled = set(_required_disabled_dlcs(scenario, selected_phase))
+    actual_disabled = {str(item) for item in dlc_config["disabled_dlcs"]}
+    if actual_disabled != expected_disabled:
+        raise AcceptanceError(
+            "isolated DLC mask disagrees with the scenario contract; "
+            f"expected {sorted(expected_disabled)}, found {sorted(actual_disabled)}"
         )
     root.mkdir(parents=True, exist_ok=True)
     now = _utc_now()
@@ -1096,6 +1455,7 @@ def before_session(
         path = user_data / relative
         if path.is_file():
             watched.append(_file_record(path))
+    daily_watched = _required_configuration_records(daily_user_data)
     record = {
         "schema": SESSION_SCHEMA,
         "scenario": scenario,
@@ -1104,10 +1464,12 @@ def before_session(
         "started_at": now.isoformat(),
         "started_at_ns": int(now.timestamp() * 1_000_000_000),
         "user_data": str(user_data),
+        "daily_user_data": str(daily_user_data),
         "evidence_root": str(root),
         "snapshots": snapshot_records,
         "dlc_load": dlc_config,
         "configuration_baseline": watched,
+        "daily_configuration_baseline": daily_watched,
         "before_logs": copied_logs,
         "game_started_by_tool": False,
     }
@@ -1241,10 +1603,12 @@ def _validate_session_record(record: object) -> dict[str, object]:
         "started_at",
         "started_at_ns",
         "user_data",
+        "daily_user_data",
         "evidence_root",
         "snapshots",
         "dlc_load",
         "configuration_baseline",
+        "daily_configuration_baseline",
         "before_logs",
         "game_started_by_tool",
     }
@@ -1287,14 +1651,91 @@ def _validate_session_record(record: object) -> dict[str, object]:
         or isinstance(record["started_at_ns"], bool)
         or not isinstance(record["started_at_ns"], int)
         or not isinstance(record["user_data"], str)
+        or not isinstance(record["daily_user_data"], str)
         or not isinstance(record["evidence_root"], str)
         or not isinstance(record["dlc_load"], dict)
         or not isinstance(record["configuration_baseline"], list)
+        or not isinstance(record["daily_configuration_baseline"], list)
         or not isinstance(record["before_logs"], list)
         or record["game_started_by_tool"] is not False
     ):
         raise AcceptanceError("session.json contains invalid field types")
     return record
+
+
+def _daily_configuration_checks(
+    daily_user_data: Path, baseline: object
+) -> list[dict[str, object]]:
+    expected_paths = {
+        name: (daily_user_data / name).resolve()
+        for name in ("dlc_load.json", "launcher-v2.sqlite")
+    }
+    if not isinstance(baseline, list) or len(baseline) != len(expected_paths):
+        raise AcceptanceError(
+            "daily configuration baseline must contain exactly the two guarded files"
+        )
+    records: dict[str, dict[str, object]] = {}
+    for item in baseline:
+        if not isinstance(item, dict) or set(item) != {
+            "path",
+            "bytes",
+            "mtime_ns",
+            "sha256",
+        }:
+            raise AcceptanceError("daily configuration baseline record is malformed")
+        path_value = item["path"]
+        bytes_value = item["bytes"]
+        mtime_value = item["mtime_ns"]
+        digest_value = item["sha256"]
+        if (
+            not isinstance(path_value, str)
+            or isinstance(bytes_value, bool)
+            or not isinstance(bytes_value, int)
+            or bytes_value < 0
+            or isinstance(mtime_value, bool)
+            or not isinstance(mtime_value, int)
+            or not isinstance(digest_value, str)
+            or not re.fullmatch(r"[0-9a-f]{64}", digest_value)
+        ):
+            raise AcceptanceError("daily configuration baseline has invalid fields")
+        recorded_path = Path(path_value).expanduser().resolve()
+        name = recorded_path.name
+        if name not in expected_paths or recorded_path != expected_paths[name]:
+            raise AcceptanceError(
+                "daily configuration baseline points outside its recorded root"
+            )
+        if name in records:
+            raise AcceptanceError(
+                f"daily configuration baseline repeats guarded file: {name}"
+            )
+        records[name] = item
+    if set(records) != set(expected_paths):
+        raise AcceptanceError("daily configuration baseline is incomplete")
+
+    checks: list[dict[str, object]] = []
+    for name, path in expected_paths.items():
+        before = records[name]
+        if not path.is_file() or _is_link_or_junction(path):
+            after = None
+            matched = False
+            error = f"guarded daily configuration file is missing or not ordinary: {path}"
+        else:
+            after = _file_record(path)
+            matched = all(
+                after[key] == before[key] for key in ("bytes", "sha256")
+            )
+            error = None if matched else "size or SHA-256 changed during the session"
+        checks.append(
+            {
+                "name": name,
+                "path": str(path),
+                "before": before,
+                "after": after,
+                "matched": matched,
+                "error": error,
+            }
+        )
+    return checks
 
 
 def collect(
@@ -1309,6 +1750,11 @@ def collect(
         json.loads(session_file.read_text(encoding="utf-8"))
     )
     user_data = _require_isolated_user_data(Path(str(record["user_data"])))
+    daily_user_data = _require_ordinary_directory(
+        Path(str(record["daily_user_data"])), "daily EU4 user-data root"
+    )
+    if daily_user_data == user_data:
+        raise AcceptanceError("daily and acceptance user-data roots must be distinct")
     evidence_root = Path(record["evidence_root"]).resolve()
     if not _is_relative_to(evidence_root, user_data) or not _is_relative_to(
         session, evidence_root
@@ -1412,7 +1858,18 @@ def collect(
         for item in record["snapshots"]
     }
     actual_enabled = {str(item) for item in after_dlc.get("enabled_mods", ())}
-    playset_stable = actual_enabled == expected_enabled
+    expected_disabled = {
+        str(item) for item in record["dlc_load"].get("disabled_dlcs", ())
+    }
+    actual_disabled = {str(item) for item in after_dlc.get("disabled_dlcs", ())}
+    isolated_configuration_stable = after_dlc == record["dlc_load"]
+    playset_stable = isolated_configuration_stable
+    daily_configuration_checks = _daily_configuration_checks(
+        daily_user_data, record["daily_configuration_baseline"]
+    )
+    daily_configuration_stable = all(
+        item["matched"] for item in daily_configuration_checks
+    )
     dlc_checks = _runtime_dlc_checks(
         record["scenario"], record.get("phase"), fresh_log_paths
     )
@@ -1426,6 +1883,7 @@ def collect(
         passed_log_scan
         and all(item["matched"] for item in snapshot_checks)
         and playset_stable
+        and daily_configuration_stable
         and all(item["matched"] for item in dlc_checks)
         and all(item["matched"] for item in artifact_checks)
     )
@@ -1446,8 +1904,14 @@ def collect(
         "passed_log_scan": passed_log_scan,
         "snapshot_checks": snapshot_checks,
         "playset_stable": playset_stable,
+        "isolated_configuration_stable": isolated_configuration_stable,
         "expected_enabled_mods": sorted(expected_enabled),
         "actual_enabled_mods": sorted(actual_enabled),
+        "expected_disabled_dlcs": sorted(expected_disabled),
+        "actual_disabled_dlcs": sorted(actual_disabled),
+        "daily_user_data": str(daily_user_data),
+        "daily_configuration_checks": daily_configuration_checks,
+        "daily_configuration_stable": daily_configuration_stable,
         "runtime_dlc_checks": dlc_checks,
         "artifact_requirement_checks": artifact_checks,
         "configuration_after": configuration_after,
@@ -1484,11 +1948,29 @@ def _parser() -> argparse.ArgumentParser:
     deploy_parser.add_argument("--revision")
     deploy_parser.add_argument("--main-only", action="store_true")
 
+    configure_parser = subparsers.add_parser("configure-playset")
+    configure_parser.add_argument("scenario")
+    configure_parser.add_argument("--phase")
+    configure_parser.add_argument(
+        "--user-data", type=Path, default=DEFAULT_ACCEPTANCE_USER_DATA
+    )
+    configure_parser.add_argument(
+        "--descriptor", type=Path, action="append", default=[]
+    )
+
+    fixture_parser = subparsers.add_parser("install-fixtures")
+    fixture_parser.add_argument(
+        "--user-data", type=Path, default=DEFAULT_ACCEPTANCE_USER_DATA
+    )
+
     before_parser = subparsers.add_parser("before-session")
     before_parser.add_argument("scenario")
     before_parser.add_argument("--phase")
     before_parser.add_argument(
         "--user-data", type=Path, default=DEFAULT_ACCEPTANCE_USER_DATA
+    )
+    before_parser.add_argument(
+        "--daily-user-data", type=Path, default=DEFAULT_USER_DATA
     )
     before_parser.add_argument("--evidence-root", type=Path)
     before_parser.add_argument("--descriptor", type=Path, action="append", default=[])
@@ -1514,6 +1996,17 @@ def main(argv: Sequence[str] | None = None) -> int:
                 args.main_only,
             )
             success = True
+        elif args.command == "configure-playset":
+            result = configure_playset(
+                args.user_data,
+                args.scenario,
+                args.phase,
+                args.descriptor,
+            )
+            success = True
+        elif args.command == "install-fixtures":
+            result = install_run_fixtures(args.user_data)
+            success = True
         elif args.command == "before-session":
             result = before_session(
                 args.user_data,
@@ -1521,6 +2014,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 args.phase,
                 args.evidence_root,
                 args.descriptor,
+                daily_user_data=args.daily_user_data,
             )
             success = True
         else:

@@ -44,6 +44,12 @@ def _install_pair(root: Path) -> tuple[Path, Path, Path]:
     user_data = root / "user"
     mod_dir = user_data / "mod"
     mod_dir.mkdir(parents=True)
+    daily_user_data = root / "daily"
+    _write(
+        daily_user_data / "dlc_load.json",
+        json.dumps({"enabled_mods": [], "disabled_dlcs": []}),
+    )
+    (daily_user_data / "launcher-v2.sqlite").write_bytes(b"daily launcher fixture\n")
     main = _component(root, "main")
     candidate_revision = runtime._current_candidate_revision()
     main_record = runtime._deploy_component(
@@ -64,7 +70,98 @@ def _install_pair(root: Path) -> tuple[Path, Path, Path]:
     )
 
 
+def _before_session(
+    user_data: Path,
+    scenario_id: str,
+    phase: str | None,
+    evidence_root: Path | None,
+    descriptors: list[Path],
+    candidate_revision: str | None = None,
+) -> dict[str, object]:
+    return runtime.before_session(
+        user_data,
+        scenario_id,
+        phase,
+        evidence_root,
+        descriptors,
+        candidate_revision,
+        user_data.parent / "daily",
+    )
+
+
 class RuntimeAcceptanceTests(unittest.TestCase):
+    def test_acceptance_userdir_path_is_unambiguous(self) -> None:
+        self.assertTrue(str(runtime.DEFAULT_ACCEPTANCE_USER_DATA).isascii())
+        self.assertIsNone(
+            re.search(r'[\s"]', str(runtime.DEFAULT_ACCEPTANCE_USER_DATA))
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            unsafe = Path(temporary) / "unsafe - acceptance"
+            unsafe.mkdir()
+            with self.assertRaises(runtime.AcceptanceError):
+                runtime._require_isolated_user_data(unsafe)
+
+    def test_revision_components_can_pin_main_and_map(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            components, revision = runtime._revision_components(
+                LIVE_REPO,
+                runtime._current_candidate_revision(),
+                Path(temporary),
+                False,
+            )
+            self.assertEqual(runtime._current_candidate_revision(), revision)
+            self.assertEqual(["main", "map"], [item.key for item in components])
+            for component in components:
+                self.assertTrue(component.source.is_dir())
+                self.assertTrue(component.outer_descriptor.is_file())
+
+    def test_preflight_pins_executable_and_userdir_protocol_files(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            repo = root / "repo"
+            game = root / "game"
+            user_data = root / "daily"
+            game.mkdir()
+            user_data.mkdir()
+            _write(
+                repo / "japan_expanded_v2" / "descriptor.mod",
+                'version="0.28.0"\n',
+            )
+            _write(
+                repo / "japan_expanded_v2_map" / "descriptor.mod",
+                'version="0.1.3-alpha"\n',
+            )
+            (game / "eu4.exe").write_bytes(b"pinned executable fixture\n")
+            (game / "userdir.txt").write_bytes(b"")
+            _write(
+                user_data / "dlc_load.json",
+                json.dumps({"enabled_mods": [], "disabled_dlcs": []}),
+            )
+            protocol_pins = {
+                name: runtime._sha256_file(game / name)
+                for name in ("eu4.exe", "userdir.txt")
+            }
+            manifest = {
+                "eu4_display_version": "fixture",
+                "files": [],
+                "generic_files": [],
+                "mandate_files": [],
+            }
+            with (
+                patch.object(runtime, "PINNED_PROTOCOL_FILES", protocol_pins),
+                patch.object(runtime, "_load_pin_manifest", return_value=manifest),
+                patch.object(runtime, "_running_eu4_processes", return_value=()),
+            ):
+                result = runtime.preflight(repo, game, user_data)
+                self.assertTrue(result["ready_for_safe_deploy"])
+                self.assertEqual(
+                    {"eu4.exe", "userdir.txt"},
+                    {item["path"] for item in result["pinned_files"]},
+                )
+                (game / "userdir.txt").write_bytes(b"unexpected override\n")
+                result = runtime.preflight(repo, game, user_data)
+                self.assertFalse(result["ready_for_safe_deploy"])
+
     def test_matrix_covers_every_runtime_batch_and_open_todo(self) -> None:
         matrix = json.loads(
             (Path(runtime.__file__).with_name("runtime_scenarios.json")).read_text(
@@ -342,6 +439,145 @@ class RuntimeAcceptanceTests(unittest.TestCase):
         self.assertIn('"JXP Acceptance current main [456]"', text)
         self.assertIn('path="mod/jxp-map-123"', text)
 
+    def test_configure_playset_writes_only_isolated_exact_contract(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            user_data, main_descriptor, map_descriptor = _install_pair(Path(temporary))
+            with patch.object(runtime, "_assert_processes_stopped"):
+                configured = runtime.configure_playset(
+                    user_data,
+                    "R1",
+                    None,
+                    [map_descriptor, main_descriptor],
+                )
+            self.assertEqual(
+                {
+                    "enabled_mods": [
+                        f"mod/{main_descriptor.name}",
+                        f"mod/{map_descriptor.name}",
+                    ],
+                    "disabled_dlcs": [],
+                },
+                configured["configuration"],
+            )
+            self.assertFalse(configured["game_started"])
+            self.assertFalse(configured["daily_launcher_configuration_modified"])
+            self.assertFalse((user_data / "launcher-v2.sqlite").exists())
+            self.assertEqual(
+                configured["configuration"],
+                json.loads((user_data / "dlc_load.json").read_text(encoding="utf-8")),
+            )
+            self.assertEqual([], list(user_data.glob(".dlc_load.*.tmp")))
+
+            with patch.object(runtime, "_assert_processes_stopped"):
+                dlc_off = runtime.configure_playset(
+                    user_data, "R11", None, [main_descriptor]
+                )
+            self.assertEqual(
+                [runtime.DLC_CONFIG_PATHS["Mandate of Heaven"]],
+                dlc_off["configuration"]["disabled_dlcs"],
+            )
+            with patch.object(runtime, "_assert_processes_stopped"):
+                with self.assertRaises(runtime.AcceptanceError):
+                    _before_session(
+                        user_data,
+                        "R10",
+                        None,
+                        None,
+                        [main_descriptor],
+                    )
+
+    def test_install_run_fixtures_is_verified_idempotent_and_non_overwriting(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            user_data = Path(temporary) / "user"
+            user_data.mkdir()
+            other = Path(temporary) / "other"
+            other.mkdir()
+            fixtures = runtime._verified_run_fixture_records()
+            conflict = user_data / str(fixtures[-1]["name"])
+            _write(conflict, "different fixture\n")
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+            ):
+                with self.assertRaises(runtime.AcceptanceError):
+                    runtime.install_run_fixtures(other)
+                with self.assertRaises(runtime.AcceptanceError):
+                    runtime.install_run_fixtures(user_data)
+            self.assertTrue(conflict.is_file())
+            self.assertFalse(
+                any(
+                    (user_data / str(item["name"])).exists()
+                    for item in fixtures[:-1]
+                )
+            )
+            conflict.unlink()
+
+            def partial_copy(_source: Path, destination: Path) -> None:
+                destination.write_bytes(b"partial")
+                raise OSError("injected staging failure")
+
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+                patch.object(runtime.shutil, "copy2", side_effect=partial_copy),
+            ):
+                with self.assertRaises(OSError):
+                    runtime.install_run_fixtures(user_data)
+            self.assertFalse(any(user_data.glob("JXP_ACC_*.txt")))
+            self.assertFalse(any(user_data.glob(".*.tmp")))
+
+            real_link = os.link
+            link_calls = 0
+
+            def fail_second_link(source: Path, destination: Path) -> None:
+                nonlocal link_calls
+                link_calls += 1
+                if link_calls == 2:
+                    raise OSError("injected commit failure")
+                real_link(source, destination)
+
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+                patch.object(runtime.os, "link", side_effect=fail_second_link),
+            ):
+                with self.assertRaises(OSError):
+                    runtime.install_run_fixtures(user_data)
+            self.assertFalse(any(user_data.glob("JXP_ACC_*.txt")))
+            self.assertFalse(any(user_data.glob(".*.tmp")))
+
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+            ):
+                first = runtime.install_run_fixtures(user_data)
+            self.assertEqual("debug_fixture_setup_installed", first["status"])
+            self.assertEqual(5, len(first["installed"]))
+            self.assertEqual(
+                {"R4", "R6", "R8", "R10"},
+                {item["scenario"] for item in first["installed"]},
+            )
+            self.assertTrue(all(not item["reused"] for item in first["installed"]))
+            self.assertFalse((user_data / "dlc_load.json").exists())
+            self.assertFalse((user_data / "launcher-v2.sqlite").exists())
+            self.assertEqual([], list(user_data.glob(".*.tmp")))
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+            ):
+                second = runtime.install_run_fixtures(user_data)
+            self.assertTrue(all(item["reused"] for item in second["installed"]))
+            target = user_data / str(first["installed"][0]["name"])
+            _write(target, "different fixture\n")
+            with (
+                patch.object(runtime, "DEFAULT_ACCEPTANCE_USER_DATA", user_data),
+                patch.object(runtime, "_assert_processes_stopped"),
+            ):
+                with self.assertRaises(runtime.AcceptanceError):
+                    runtime.install_run_fixtures(user_data)
+
     def test_before_session_requires_exact_isolated_playset(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             user_data, main_descriptor, map_descriptor = _install_pair(Path(temporary))
@@ -359,13 +595,22 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             )
             _write(user_data / "logs" / "error.log", "old baseline\n")
             with patch.object(runtime, "_assert_processes_stopped"):
-                result = runtime.before_session(
+                result = _before_session(
                     user_data, "R1", None, None, [main_descriptor, map_descriptor]
                 )
             session = Path(result["session"])
             self.assertTrue((session / "session.json").is_file())
             record = json.loads((session / "session.json").read_text(encoding="utf-8"))
+            self.assertEqual(runtime.SESSION_SCHEMA, record["schema"])
             self.assertEqual("R1", record["scenario"]["id"])
+            self.assertEqual(str(user_data.parent / "daily"), record["daily_user_data"])
+            self.assertEqual(
+                {"dlc_load.json", "launcher-v2.sqlite"},
+                {
+                    Path(item["path"]).name
+                    for item in record["daily_configuration_baseline"]
+                },
+            )
             self.assertFalse(record["game_started_by_tool"])
 
             _write(
@@ -383,7 +628,7 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             )
             with patch.object(runtime, "_assert_processes_stopped"):
                 with self.assertRaises(runtime.AcceptanceError):
-                    runtime.before_session(
+                    _before_session(
                         user_data,
                         "R1",
                         None,
@@ -405,15 +650,15 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             )
             with patch.object(runtime, "_assert_processes_stopped"):
                 with self.assertRaises(runtime.AcceptanceError):
-                    runtime.before_session(
+                    _before_session(
                         user_data, "R1", None, None, [main_descriptor]
                     )
                 with self.assertRaises(runtime.AcceptanceError):
-                    runtime.before_session(
+                    _before_session(
                         user_data, "R4", None, None, [main_descriptor]
                     )
                 with self.assertRaises(runtime.AcceptanceError):
-                    runtime.before_session(
+                    _before_session(
                         user_data,
                         "R4",
                         "current-migrate",
@@ -422,10 +667,10 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                         "b" * 40,
                     )
                 with self.assertRaises(runtime.AcceptanceError):
-                    runtime.before_session(
+                    _before_session(
                         user_data, "R13", None, None, [main_descriptor]
                     )
-                result = runtime.before_session(
+                result = _before_session(
                     user_data,
                     "R4",
                     "current-migrate",
@@ -451,7 +696,7 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             )
             _write(user_data / "logs" / "error.log", "baseline\n")
             with patch.object(runtime, "_assert_processes_stopped"):
-                before = runtime.before_session(
+                before = _before_session(
                     user_data,
                     "R1",
                     None,
@@ -486,6 +731,59 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                 (Path(before["session"]) / "collection.json").is_file()
             )
 
+    def test_collect_rejects_daily_configuration_changes(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            user_data, main_descriptor, map_descriptor = _install_pair(Path(temporary))
+            _write(
+                user_data / "dlc_load.json",
+                json.dumps(
+                    {
+                        "enabled_mods": [
+                            f"mod/{main_descriptor.name}",
+                            f"mod/{map_descriptor.name}",
+                        ],
+                        "disabled_dlcs": [],
+                    }
+                ),
+            )
+            with patch.object(runtime, "_assert_processes_stopped"):
+                before = _before_session(
+                    user_data,
+                    "R1",
+                    None,
+                    None,
+                    [main_descriptor, map_descriptor],
+                )
+            _write(user_data / "logs" / "error.log", "clean\n")
+            _write(user_data / "logs" / "game.log", "runtime\n")
+            for number in range(3):
+                _write(
+                    user_data / "Screenshots" / f"JXP_ACC_R1_{number}.png",
+                    f"screenshot {number}\n",
+                )
+            _write(user_data / "save games" / "JXP_ACC_R1_BASELINE.eu4")
+            _write(
+                user_data.parent / "daily" / "dlc_load.json",
+                json.dumps(
+                    {
+                        "enabled_mods": ["mod/unexpected.mod"],
+                        "disabled_dlcs": [],
+                    }
+                ),
+            )
+            with patch.object(runtime, "_assert_processes_stopped"):
+                result, passed = runtime.collect(Path(before["session"]), [])
+            self.assertFalse(passed)
+            self.assertFalse(result["daily_configuration_stable"])
+            self.assertFalse(
+                next(
+                    item["matched"]
+                    for item in result["daily_configuration_checks"]
+                    if item["name"] == "dlc_load.json"
+                )
+            )
+            self.assertTrue(result["isolated_configuration_stable"])
+
     def test_collect_ignores_stale_aux_logs_and_requires_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             user_data, main_descriptor, map_descriptor = _install_pair(Path(temporary))
@@ -505,7 +803,7 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             old = (user_data / "logs" / "old_setup.log").stat().st_mtime - 60
             os.utime(user_data / "logs" / "old_setup.log", (old, old))
             with patch.object(runtime, "_assert_processes_stopped"):
-                before = runtime.before_session(
+                before = _before_session(
                     user_data,
                     "R1",
                     None,
@@ -529,7 +827,7 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             for artifact in (user_data / "Screenshots").glob("*.png"):
                 artifact.unlink()
             with patch.object(runtime, "_assert_processes_stopped"):
-                second = runtime.before_session(
+                second = _before_session(
                     user_data,
                     "R1",
                     None,
@@ -553,7 +851,15 @@ class RuntimeAcceptanceTests(unittest.TestCase):
         parser = runtime._parser()
         choices = parser._subparsers._group_actions[0].choices
         self.assertEqual(
-            {"preflight", "deploy", "before-session", "collect"}, set(choices)
+            {
+                "preflight",
+                "deploy",
+                "configure-playset",
+                "install-fixtures",
+                "before-session",
+                "collect",
+            },
+            set(choices),
         )
         self.assertEqual(
             runtime.DEFAULT_USER_DATA, parser.parse_args(["preflight"]).user_data
@@ -562,9 +868,16 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             runtime.DEFAULT_ACCEPTANCE_USER_DATA,
             parser.parse_args(["deploy"]).user_data,
         )
+        before_args = parser.parse_args(["before-session", "R1"])
+        self.assertEqual(runtime.DEFAULT_ACCEPTANCE_USER_DATA, before_args.user_data)
+        self.assertEqual(runtime.DEFAULT_USER_DATA, before_args.daily_user_data)
         self.assertEqual(
             runtime.DEFAULT_ACCEPTANCE_USER_DATA,
-            parser.parse_args(["before-session", "R1"]).user_data,
+            parser.parse_args(["configure-playset", "R1"]).user_data,
+        )
+        self.assertEqual(
+            runtime.DEFAULT_ACCEPTANCE_USER_DATA,
+            parser.parse_args(["install-fixtures"]).user_data,
         )
         with self.assertRaises(runtime.AcceptanceError):
             runtime._require_isolated_user_data(runtime.DEFAULT_USER_DATA)

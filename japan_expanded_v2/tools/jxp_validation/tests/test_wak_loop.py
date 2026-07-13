@@ -88,6 +88,18 @@ class WakLongLoopTests(unittest.TestCase):
         )
         self.assertIn("wak_loop.entry_gate", _codes(root))
 
+    def test_rejects_active_cycle_without_live_charter(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            TRIGGER_FILE,
+            "\thas_country_modifier = jxp_72_wak_sea_league_charter\n",
+            "",
+        )
+        codes = _codes(root)
+        self.assertIn("wak_loop.trigger_contract", codes)
+        self.assertIn("wak_loop.charter_lifecycle", codes)
+
     def test_rejects_permanent_repeatable_investment(self) -> None:
         _directory, root = self._temporary_contract()
         _mutate(
@@ -173,6 +185,36 @@ class WakLongLoopTests(unittest.TestCase):
         _directory, root = self._temporary_contract()
         _mutate(root, EVENT_FILE, "\n\toption = { name = \"OK\" }\n", "")
         self.assertIn("wak_loop.route_loss_cleanup", _codes(root))
+
+    def test_rejects_passive_cleanup_that_ignores_charter_expiry(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EVENT_FILE,
+            "\t\tNOT = { jxp_72_wak_cycle_active_trigger = yes }\n",
+            "\t\tNOT = { jxp_72_wak_route_trigger = yes }\n",
+        )
+        self.assertIn("wak_loop.route_loss_cleanup", _codes(root))
+
+    def test_rejects_cycle_start_without_fixed_expiry_schedule(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EFFECT_FILE,
+            "\tcountry_event = { id = jxp_wak_loop.5 days = 3651 }\n",
+            "\tcountry_event = { id = jxp_wak_loop.5 days = 3650 }\n",
+        )
+        self.assertIn("wak_loop.start_state", _codes(root))
+
+    def test_rejects_expiry_without_generation_safe_charter_guard(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EVENT_FILE,
+            "\t\t\t\tNOT = { has_country_modifier = jxp_72_wak_sea_league_charter }\n",
+            "",
+        )
+        self.assertIn("wak_loop.expiry_lifecycle", _codes(root))
 
     def test_rejects_debug_reset_not_reachable_from_canonical_root(self) -> None:
         _directory, root = self._temporary_contract()

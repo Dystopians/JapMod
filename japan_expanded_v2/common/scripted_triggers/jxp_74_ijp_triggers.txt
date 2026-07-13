@@ -1,5 +1,6 @@
 jxp_74_ijp_route_trigger = {
 	jxp_is_japanese_polity_trigger = yes
+	religion = shinto
 	OR = {
 		tag = IJP
 		has_country_flag = jxp_path_ikko
@@ -21,6 +22,7 @@ jxp_74_ijp_route_trigger = {
 jxp_74_ijp_cycle_active_trigger = {
 	jxp_74_ijp_route_trigger = yes
 	has_country_flag = jxp_74_ijp_cycle_active
+	has_country_modifier = jxp_74_ijp_temple_market_charter
 	has_any_disaster = no
 	NOT = { has_country_flag = jxp_ikko_rising_active }
 	NOT = { has_country_flag = jxp_shimabara_crisis_active }
@@ -28,19 +30,15 @@ jxp_74_ijp_cycle_active_trigger = {
 
 jxp_74_ijp_commons_ready_trigger = {
 	religious_unity = 0.75
-	OR = {
-		NOT = { has_estate = estate_church }
-		estate_loyalty = {
-			estate = estate_church
-			loyalty = 40
-		}
+	has_estate = estate_church
+	estate_loyalty = {
+		estate = estate_church
+		loyalty = 40
 	}
-	OR = {
-		NOT = { has_estate = estate_burghers }
-		estate_loyalty = {
-			estate = estate_burghers
-			loyalty = 35
-		}
+	has_estate = estate_burghers
+	estate_loyalty = {
+		estate = estate_burghers
+		loyalty = 35
 	}
 }
 

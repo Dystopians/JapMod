@@ -140,7 +140,7 @@
       "steps": [
         "Run before-session R4 --phase legacy-027-generate, create a stable uncommitted baseline, and branch it before any route forcing.",
         "Under 0.27 generate each of the ten states independently, advance two days, complete one shared and one route mission, save/reload, and save again.",
-        "Run before-session R4 --phase legacy-025-generate and create two genuine engine fixtures without serialization edits: an ODA/JAP pre-Toyotomi transition save and a Japanese emperor with the real Hakko mission unlock but without the 0.26 visibility-reconcile state.",
+        "Run before-session R4 --phase legacy-025-generate and create two genuine engine fixtures without serialization edits: an ODA/JAP pre-Toyotomi transition save and a Japanese emperor prepared with run JXP_ACC_R4_025_emperor_only.txt, then the real Hakko mission unlock, but without the 0.26 visibility-reconcile state. The run file may transfer the Mandate only and is DEBUG_FIXTURE_SETUP evidence.",
         "Switch to an exactly isolated current-main playset, run before-session R4 --phase current-migrate, and load all twelve inputs; advance two days, save/reload, and advance two more days.",
         "For the 0.25 ODA fixture execute the current production Toyotomi decision and verify TOY identity; for the 0.25 Hakko fixture verify the current migration regenerates celestial candidates without debug-granting the reform."
       ],
@@ -199,7 +199,7 @@
       "steps": [
         "Run the current-map-new phase, enter CJP, and allow the normal Confucian setup event to create native centers without directly placing centers or harmonization flags.",
         "Record harmony, setup flags, and native-center count before and after a second route reconcile; Shinto must harmonize once and no fourth center may appear.",
-        "Protect four separate Shinto targets before natural spread: Ise 4359, one religious_center province, one religious_zeal_at_conv province, and one existing reformation center; prove each remains ineligible.",
+        "After normal CJP setup creates its native centers, run JXP_ACC_R6_protected_targets.txt and protect four separate Shinto targets before natural spread: Ise 4359, one religious_center province, one religious_zeal_at_conv province, and one existing reformation center; prove each remains ineligible. If province 1028 loses its existing center when changed to Shinto, stop the branch rather than placing a replacement.",
         "Observe at least one natural engine conversion on an eligible province and exercise Neo-Confucian, urbanization, and Nanban bridge entries; record source-chain and bridge flags before/after to prove no duplicate scheduling.",
         "Run the current-main-old-save phase with the genuine 0.27 CJP save from R4, advance two days, and repeat the center-count, harmonization, protected-target, bridge, save/reload, and natural-conversion checks."
       ],
@@ -225,15 +225,15 @@
       },
       "steps": [
         "Exercise all three investments, 50 and 85 pressure thresholds, dividend and crisis events, and both exits.",
-        "Save/reload mid-cycle, leave the route and advance one day to verify cleanup, then return and naturally pass the 1825-day cooldown to prove a finite investment can be selected again without permanent stacking.",
-        "Run an AI observer sample for at least two complete 1825-day cycles without debug-forcing outcomes; record dates, AI country, each investment, 50/85 threshold, dividend, crisis, exit, and final flag/modifier counts."
+        "Save/reload mid-cycle, leave the route, record the first-day state, and continue until the one-day-MTTH hidden cleanup actually fires; record its date and fail the branch if it has not fired within 30 days. Then return and naturally pass the 1825-day cooldown to prove a finite investment can be selected again without permanent stacking.",
+        "After starting a cycle through the production decision, run an AI observer sample through at least one complete 3651-day charter generation without debug-forcing outcomes; record dates, AI country, every investment, threshold, dividend, crisis, exit, or legal restart that actually occurs, then record the final flag/variable/modifier counts and the start date of any live replacement charter. Random milestones are observations rather than fixed pass prerequisites."
       ],
       "evidence": ["pressure/tooltips/events screenshots", "mid-cycle and exit saves", "observer notes", "fresh log"],
       "acceptance": [
         "Finite modifiers do not stack permanently and both exits close the cycle.",
         "Route loss clears active state.",
         "Companion jxp_map_compat_wokou_waters scope behaves as intended.",
-        "The fixed observer window shows AI participation and ends with no orphaned cycle flag or modifier."
+        "At the original charter's fixed expiry, its generation leaves no orphaned cycle flag, pressure value, or cycle modifier. If AI has legally restarted, any surviving state must be paired with one live replacement charter whose recorded start date is later; the stale expiry must not clear that new generation. Random AI choices are not treated as guaranteed milestones."
       ]
     },
     {
@@ -251,17 +251,17 @@
       "steps": [
         "Exercise all three governance choices, 50 and 85 thresholds, petition and crisis events, and both exits.",
         "Save/reload mid-cycle, verify route-loss cleanup, return, and naturally pass the 1825-day cooldown to prove repeatability without permanent stacking.",
-        "Independently prove entry is unavailable for a wrong religion, missing required estate/community state, outside every vanilla/companion Ikko geography, during Shimabara, and during another active disaster; restore each prerequisite one at a time and prove availability returns only when all gates pass.",
+        "Independently prove entry is unavailable for a non-Shinto state religion, a missing church estate, a missing burgher estate, church or burgher loyalty below its stated gate, no qualifying Terauchi/community state, outside every vanilla/companion Ikko geography, during Shimabara, and during another active disaster; restore each prerequisite one at a time and prove availability returns only when all gates pass. Isolate geography on a disposable RKK-derived branch with run JXP_ACC_R8_no_heartland.txt followed by run JXP_ACC_R8_restore_heartland.txt; label both as DEBUG_FIXTURE_SETUP and do not treat them as natural Terauchi evidence.",
         "Complete jxp_mission_terauchi_league and jxp_mission_pure_land_covenant through their real mission buttons, verify jxp_ikko.2 and jxp_ikko.8 schedule exactly once, then complete jxp_mission_ikko_realm_of_fellowship and jxp_mission_ijp_somon_constitution and inspect their persistent state after reload.",
-        "Run an AI observer sample for at least two complete 1825-day cycles without debug-forcing outcomes; record dates, AI country, choices, thresholds, petitions, crises, exits, and final flag/modifier counts."
+        "After starting a cycle through the production decision, run an AI observer sample through at least one complete 3651-day charter generation without debug-forcing outcomes; record dates, AI country, every choice, threshold, petition, crisis, exit, or legal restart that actually occurs, then record the final flag/variable/modifier counts and the start date of any live replacement charter. Random milestones are observations rather than fixed pass prerequisites."
       ],
       "evidence": ["positive/negative UI screenshots", "mid-cycle and exit saves", "observer notes", "fresh log"],
       "acceptance": [
         "IJP does not overlap Shimabara or another active disaster.",
         "Finite modifiers and cycle flags close on either exit or route loss.",
-        "Religion, estate/community, geography, and disaster gates each reject an otherwise identical negative fixture.",
+        "The Shinto religion gate, both estate-presence gates, both estate-loyalty gates, Terauchi/community gate, geography gate, and disaster gates each reject an otherwise identical negative fixture.",
         "The two named route missions schedule jxp_ikko.2/.8 once, while the two named final missions and their persistent results survive reload.",
-        "Companion jxp_map_compat_ikko_heartland scope behaves as intended and the fixed observer window ends clean."
+        "Companion jxp_map_compat_ikko_heartland scope behaves as intended. At the original charter's fixed expiry, its generation leaves no orphaned cycle flag, pressure value, or cycle modifier; a legal restart may retain only a complete replacement generation paired with one live charter whose recorded start date is later, and stale expiry must not clear it."
       ]
     },
     {
@@ -305,7 +305,7 @@
         "Test emperor-first then normal mission unlock, and mission-first then emperor acquisition.",
         "The emperor debug scaffold may transfer the Mandate but must not unlock or pass Hakko; complete the real mission and click the real reform.",
         "Fork one baseline save with the same attacker, defender, target province, claim state, development, and modifiers; use normal conquest in one branch and cb_jxp_hakko_ichiu in the other, record the exact AE tooltip/coalition result, and execute both otherwise identical peaces.",
-        "Test mission-locked Japanese emperor, unlocked non-emperor, and foreign-emperor negatives before and after save/reload."
+        "Test mission-locked Japanese emperor, unlocked non-emperor, and foreign-emperor negatives before and after save/reload. Prepare the otherwise identical foreign emperor negative with run JXP_ACC_R10_foreign_emperor_same_unlock.txt and label it DEBUG_FIXTURE_SETUP; the file must not grant or pass the reform."
       ],
       "evidence": ["two ordering sequences", "reform/declaration/peace screenshots", "AE comparison", "before/after saves", "fresh logs"],
       "acceptance": [

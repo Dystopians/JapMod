@@ -267,13 +267,34 @@ country_event = {
 
 	trigger = {
 		has_country_flag = jxp_72_wak_cycle_active
-		NOT = { jxp_72_wak_route_trigger = yes }
+		NOT = { jxp_72_wak_cycle_active_trigger = yes }
 	}
 
 	mean_time_to_happen = { days = 1 }
 
 	immediate = {
 		jxp_72_wak_cleanup_effect = yes
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_wak_loop.5
+	title = none
+	desc = none
+	picture = NAVAL_MILITARY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = jxp_72_wak_cycle_active
+				NOT = { has_country_modifier = jxp_72_wak_sea_league_charter }
+			}
+			jxp_72_wak_cleanup_effect = yes
+		}
 	}
 
 	option = { name = "OK" }

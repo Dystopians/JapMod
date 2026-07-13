@@ -306,3 +306,24 @@ country_event = {
 
 	option = { name = "OK" }
 }
+
+country_event = {
+	id = jxp_ijp_loop.6
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = jxp_74_ijp_cycle_active
+				NOT = { has_country_modifier = jxp_74_ijp_temple_market_charter }
+			}
+			jxp_74_ijp_route_exit_effect = yes
+		}
+	}
+
+	option = { name = "OK" }
+}

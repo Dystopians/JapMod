@@ -21,6 +21,7 @@ jxp_72_wak_route_trigger = {
 jxp_72_wak_cycle_active_trigger = {
 	jxp_72_wak_route_trigger = yes
 	has_country_flag = jxp_72_wak_cycle_active
+	has_country_modifier = jxp_72_wak_sea_league_charter
 }
 
 jxp_72_wak_harbor_network_trigger = {

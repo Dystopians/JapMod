@@ -88,12 +88,40 @@ class IjpCommonwealthLoopTests(unittest.TestCase):
         self.assertIn("ijp_loop.trigger_contract", codes)
         self.assertIn("ijp_loop.route_exclusivity", codes)
 
+    def test_rejects_production_route_without_shinto_gate(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(root, TRIGGER_FILE, "\treligion = shinto\n", "")
+        codes = _codes(root)
+        self.assertIn("ijp_loop.trigger_contract", codes)
+        self.assertIn("ijp_loop.religion_gate", codes)
+
+    def test_rejects_commons_without_both_estates(self) -> None:
+        for estate in ("estate_church", "estate_burghers"):
+            with self.subTest(estate=estate):
+                _directory, root = self._temporary_contract()
+                _mutate(root, TRIGGER_FILE, f"\thas_estate = {estate}\n", "")
+                codes = _codes(root)
+                self.assertIn("ijp_loop.trigger_contract", codes)
+                self.assertIn("ijp_loop.estate_gate", codes)
+
     def test_rejects_active_cycle_without_disaster_isolation(self) -> None:
         _directory, root = self._temporary_contract()
         _mutate(root, TRIGGER_FILE, "\thas_any_disaster = no\n", "")
         codes = _codes(root)
         self.assertIn("ijp_loop.trigger_contract", codes)
         self.assertIn("ijp_loop.disaster_isolation", codes)
+
+    def test_rejects_active_cycle_without_live_charter(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            TRIGGER_FILE,
+            "\thas_country_modifier = jxp_74_ijp_temple_market_charter\n",
+            "",
+        )
+        codes = _codes(root)
+        self.assertIn("ijp_loop.trigger_contract", codes)
+        self.assertIn("ijp_loop.charter_lifecycle", codes)
 
     def test_rejects_entry_during_pending_route_reconcile(self) -> None:
         _directory, root = self._temporary_contract()
@@ -219,6 +247,36 @@ class IjpCommonwealthLoopTests(unittest.TestCase):
             "\t\tcountry_event = { id = jxp_ijp_loop.5 days = 2 }\n",
         )
         self.assertIn("ijp_loop.route_reconcile", _codes(root))
+
+    def test_rejects_cycle_start_without_fixed_expiry_schedule(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EFFECT_FILE,
+            "\tcountry_event = { id = jxp_ijp_loop.6 days = 3651 }\n",
+            "\tcountry_event = { id = jxp_ijp_loop.6 days = 3650 }\n",
+        )
+        self.assertIn("ijp_loop.start_state", _codes(root))
+
+    def test_rejects_expiry_without_generation_safe_charter_guard(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EVENT_FILE,
+            "\t\t\t\tNOT = { has_country_modifier = jxp_74_ijp_temple_market_charter }\n",
+            "",
+        )
+        self.assertIn("ijp_loop.expiry_lifecycle", _codes(root))
+
+    def test_rejects_passive_cleanup_that_ignores_charter_expiry(self) -> None:
+        _directory, root = self._temporary_contract()
+        _mutate(
+            root,
+            EVENT_FILE,
+            "\t\tNOT = { jxp_74_ijp_cycle_active_trigger = yes }\n",
+            "\t\tNOT = { jxp_74_ijp_route_trigger = yes }\n",
+        )
+        self.assertIn("ijp_loop.route_loss_cleanup", _codes(root))
 
     def test_rejects_hidden_route_cleanup_without_option(self) -> None:
         _directory, root = self._temporary_contract()
