@@ -1,0 +1,171 @@
+namespace = jxp_namban
+
+country_event = {
+	id = jxp_namban.1
+	title = "jxp_namban.1.t"
+	desc = "jxp_namban.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		is_year = 1543
+		NOT = { has_country_flag = jxp_tanegashima_seen }
+		any_owned_province = {
+			region = japan_region
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_namban.1.a"
+		set_country_flag = jxp_tanegashima_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_tanegashima_foundries
+			duration = 7300
+		}
+	}
+	option = {
+		name = "jxp_namban.1.b"
+		set_country_flag = jxp_tanegashima_seen
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_mil_power = 50
+	}
+}
+
+country_event = {
+	id = jxp_namban.2
+	title = "jxp_namban.2.t"
+	desc = "jxp_namban.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		is_year = 1550
+		NOT = { has_country_flag = jxp_namban_ship_seen }
+		jxp_oceanic_opening_at_least_20 = yes
+		any_owned_province = {
+			region = japan_region
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 140
+	}
+
+	option = {
+		name = "jxp_namban.2.a"
+		set_country_flag = jxp_namban_ship_seen
+		set_country_flag = jxp_kirishitan_contact
+		jxp_add_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_namban_trade
+			duration = 3650
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = "jxp_namban.2.b"
+		set_country_flag = jxp_namban_ship_seen
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_namban.3
+	title = "jxp_namban.3.t"
+	desc = "jxp_namban.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_allows_private_overseas_trade_trigger = yes
+		NOT = { has_country_flag = jxp_sakai_petition_seen }
+		jxp_oceanic_opening_at_least_35 = yes
+		num_of_ports = 3
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_namban.3.a"
+		set_country_flag = jxp_sakai_petition_seen
+		add_dip_power = -50
+		jxp_add_oceanic_opening_5_effect = yes
+		add_mercantilism = 1
+		if = {
+			limit = { owns = 1021 }
+			1021 = {
+				add_base_production = 1
+				add_province_modifier = {
+					name = jxp_sakai_merchant_quarter
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = "jxp_namban.3.b"
+		set_country_flag = jxp_sakai_petition_seen
+		add_adm_power = 25
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_namban.4
+	title = "jxp_namban.4.t"
+	desc = "jxp_namban.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		is_year = 1600
+		NOT = { has_country_flag = jxp_rangaku_books_seen }
+		jxp_oceanic_opening_at_least_20 = yes
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "jxp_namban.4.a"
+		set_country_flag = jxp_rangaku_books_seen
+		add_country_modifier = {
+			name = jxp_rangaku_bureau
+			duration = 7300
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_base_tax = 1
+				add_province_modifier = {
+					name = jxp_translation_port_quarter
+					duration = 7300
+				}
+			}
+		}
+	}
+	option = {
+		name = "jxp_namban.4.b"
+		set_country_flag = jxp_rangaku_books_seen
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_prestige = 5
+	}
+}

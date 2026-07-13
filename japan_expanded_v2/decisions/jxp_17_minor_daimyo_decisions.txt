@@ -1,0 +1,413 @@
+country_decisions = {
+	jxp_decision_ama_ymn_sanin_kokujin_league = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = AMA
+				tag = YMN
+			}
+			NOT = { has_country_flag = jxp_17_sanin_kokujin_league_taken }
+		}
+		allow = {
+			dip_power = 50
+			adm_power = 25
+			stability = 0
+		}
+		effect = {
+			add_dip_power = -50
+			add_adm_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			set_country_flag = jxp_17_sanin_kokujin_league_taken
+			add_country_modifier = {
+				name = jxp_17_sanin_kokujin_league
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_hsk_sba_htk_kanrei_compact = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = HSK
+				tag = SBA
+				tag = HTK
+			}
+			NOT = { has_country_flag = jxp_17_kanrei_compact_taken }
+		}
+		allow = {
+			dip_power = 75
+			is_at_war = no
+		}
+		effect = {
+			add_dip_power = -75
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_imperial_sanction_10_effect = yes
+			set_country_flag = jxp_17_kanrei_compact_taken
+			add_country_modifier = {
+				name = jxp_17_kanrei_compact
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_shn_kkc_kyushu_shrine_registers = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = SHN
+				tag = KKC
+			}
+			NOT = { has_country_flag = jxp_17_kyushu_shrine_registers_taken }
+		}
+		allow = {
+			adm_power = 50
+			mil_power = 25
+			stability = 0
+		}
+		effect = {
+			add_adm_power = -50
+			add_mil_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			set_country_flag = jxp_17_kyushu_shrine_registers_taken
+			add_country_modifier = {
+				name = jxp_17_kyushu_shrine_registers
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_ogs_shinano_pass_wardens = {
+		major = no
+		potential = {
+			tag = OGS
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_flag = jxp_17_shinano_pass_wardens_taken }
+		}
+		allow = {
+			mil_power = 50
+			adm_power = 25
+			num_of_cities = 2
+		}
+		effect = {
+			add_mil_power = -50
+			add_adm_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			set_country_flag = jxp_17_shinano_pass_wardens_taken
+			add_country_modifier = {
+				name = jxp_17_shinano_pass_wardens
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_utn_cba_kanto_shrine_network = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = UTN
+				tag = CBA
+			}
+			NOT = { has_country_flag = jxp_17_kanto_shrine_network_taken }
+		}
+		allow = {
+			dip_power = 50
+			adm_power = 25
+			is_at_war = no
+		}
+		effect = {
+			add_dip_power = -50
+			add_adm_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			set_country_flag = jxp_17_kanto_shrine_network_taken
+			add_country_modifier = {
+				name = jxp_17_kanto_shrine_network
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_tki_isk_mino_tango_workshops = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = TKI
+				tag = ISK
+			}
+			NOT = { has_country_flag = jxp_17_mino_tango_workshops_taken }
+		}
+		allow = {
+			adm_power = 50
+			dip_power = 25
+			stability = 0
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			set_country_flag = jxp_17_mino_tango_workshops_taken
+			add_country_modifier = {
+				name = jxp_17_mino_tango_workshops
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_ktb_tti_ise_yamato_petition = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = KTB
+				tag = TTI
+			}
+			NOT = { has_country_flag = jxp_17_ise_yamato_petition_taken }
+		}
+		allow = {
+			dip_power = 75
+			treasury = 25
+			is_at_war = no
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_imperial_sanction_10_effect = yes
+			set_country_flag = jxp_17_ise_yamato_petition_taken
+			add_country_modifier = {
+				name = jxp_17_ise_yamato_petition
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_akt_rfr_northern_trade_posts = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = AKT
+				tag = RFR
+			}
+			NOT = { has_country_flag = jxp_17_northern_trade_posts_taken }
+		}
+		allow = {
+			dip_power = 50
+			num_of_ports = 1
+		}
+		effect = {
+			add_dip_power = -50
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			set_country_flag = jxp_17_northern_trade_posts_taken
+			add_country_modifier = {
+				name = jxp_17_northern_trade_posts
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_akm_harima_castle_roads = {
+		major = no
+		potential = {
+			tag = AKM
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_flag = jxp_17_harima_castle_roads_taken }
+		}
+		allow = {
+			adm_power = 50
+			mil_power = 25
+			stability = 0
+		}
+		effect = {
+			add_adm_power = -50
+			add_mil_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_10_effect = yes
+			set_country_flag = jxp_17_harima_castle_roads_taken
+			add_country_modifier = {
+				name = jxp_17_harima_castle_roads
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 125 }
+			}
+		}
+	}
+
+	jxp_decision_ito_kno_southern_sea_envoys = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = ITO
+				tag = KNO
+			}
+			NOT = { has_country_flag = jxp_17_southern_sea_envoys_taken }
+		}
+		allow = {
+			dip_power = 75
+			num_of_ports = 1
+		}
+		effect = {
+			add_dip_power = -75
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_oceanic_opening_10_effect = yes
+			set_country_flag = jxp_17_southern_sea_envoys_taken
+			add_country_modifier = {
+				name = jxp_17_southern_sea_envoys
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_stk_hitachi_samurai_muster = {
+		major = no
+		potential = {
+			tag = STK
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_flag = jxp_17_hitachi_samurai_muster_taken }
+		}
+		allow = {
+			mil_power = 75
+			stability = 0
+		}
+		effect = {
+			add_mil_power = -75
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			add_army_tradition = 5
+			set_country_flag = jxp_17_hitachi_samurai_muster_taken
+			add_country_modifier = {
+				name = jxp_17_hitachi_samurai_muster
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_asa_ike_mae_storehouse_ledgers = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			OR = {
+				tag = ASA
+				tag = IKE
+				tag = MAE
+			}
+			NOT = { has_country_flag = jxp_17_storehouse_ledgers_taken }
+		}
+		allow = {
+			adm_power = 50
+			dip_power = 25
+			stability = 0
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			set_country_flag = jxp_17_storehouse_ledgers_taken
+			add_country_modifier = {
+				name = jxp_17_storehouse_ledgers
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 125 }
+			}
+		}
+	}
+}

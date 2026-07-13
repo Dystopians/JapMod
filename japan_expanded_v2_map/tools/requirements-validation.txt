@@ -1,0 +1,4 @@
+# Map, raster, and skill validation dependencies for validate_all.ps1/R13.
+numpy>=2,<3
+Pillow>=10,<13
+PyYAML>=6,<7

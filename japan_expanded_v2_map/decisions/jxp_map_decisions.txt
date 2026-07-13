@@ -1,0 +1,42 @@
+country_decisions = {
+	jxp_map_adopt_warrior_domain_code = {
+		major = no
+		potential = { jxp_is_daimyo_stage_trigger = yes jxp_map_is_warrior_house_trigger = yes NOT = { has_country_flag = jxp_map_policy_warrior_taken } }
+		allow = { mission_completed = jxp_map_mission_warrior_muster stability = 0 mil_power = 50 }
+		effect = { add_mil_power = -50 country_event = { id = jxp_map.20 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	jxp_map_compile_court_genealogies = {
+		major = no
+		potential = { jxp_is_daimyo_stage_trigger = yes jxp_map_is_court_house_trigger = yes NOT = { has_country_flag = jxp_map_policy_court_taken } }
+		allow = { mission_completed = jxp_map_mission_court_genealogies is_at_war = no dip_power = 50 }
+		effect = { add_dip_power = -50 country_event = { id = jxp_map.21 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	jxp_map_register_coastal_leagues = {
+		major = no
+		potential = { jxp_is_daimyo_stage_trigger = yes jxp_map_is_sea_house_trigger = yes NOT = { has_country_flag = jxp_map_policy_sea_taken } }
+		allow = { mission_completed = jxp_map_mission_sea_port_registers num_of_ports = 1 dip_power = 50 }
+		effect = { add_dip_power = -50 country_event = { id = jxp_map.22 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	jxp_map_mark_frontier_boundaries = {
+		major = no
+		potential = { jxp_is_daimyo_stage_trigger = yes jxp_map_is_frontier_house_trigger = yes NOT = { has_country_flag = jxp_map_policy_frontier_taken } }
+		allow = { mission_completed = jxp_map_mission_frontier_passes stability = 0 mil_power = 50 }
+		effect = { add_mil_power = -50 country_event = { id = jxp_map.23 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	jxp_map_publish_market_statutes = {
+		major = no
+		potential = { jxp_is_daimyo_stage_trigger = yes jxp_map_is_temple_market_house_trigger = yes NOT = { has_country_flag = jxp_map_policy_temple_taken } }
+		allow = { mission_completed = jxp_map_mission_temple_ledgers stability = 0 adm_power = 50 }
+		effect = { add_adm_power = -50 country_event = { id = jxp_map.24 } }
+		ai_will_do = { factor = 0.5 }
+	}
+}
+

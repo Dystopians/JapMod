@@ -1,0 +1,24 @@
+jxp_oceanic_sun_reform = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	basic_reform = yes
+	valid_for_nation_designer = no
+	potential = {
+		jxp_can_use_overseas_expansion_trigger = yes
+		OR = {
+			has_country_flag = jxp_pacific_charter_enacted
+			has_country_flag = jxp_oceanic_sun_state
+			has_country_modifier = jxp_pacific_charter
+			has_country_modifier = jxp_oceanic_sun_state
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		naval_forcelimit_modifier = 0.10
+		global_colonial_growth = 10
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+}

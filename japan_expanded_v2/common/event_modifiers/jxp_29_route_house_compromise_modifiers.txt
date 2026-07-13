@@ -1,0 +1,69 @@
+jxp_29_sakoku_house_ordinance = {
+	global_unrest = -1
+	stability_cost_modifier = -0.05
+}
+
+jxp_29_open_house_ordinance = {
+	trade_efficiency = 0.08
+	global_ship_trade_power = 0.10
+}
+
+jxp_29_kirishitan_house_ordinance = {
+	global_missionary_strength = 0.01
+	tolerance_own = 1
+}
+
+jxp_29_confucian_house_ordinance = {
+	idea_cost = -0.03
+	yearly_harmony = 0.25
+}
+
+jxp_29_imperial_house_ordinance = {
+	legitimacy = 1
+	prestige = 1
+}
+
+jxp_29_reformed_house_ordinance = {
+	church_power_modifier = 0.10
+	tolerance_heretic = 1
+}
+
+jxp_29_kaikyo_house_ordinance = {
+	trade_steering = 0.10
+	tolerance_heathen = 1
+}
+
+jxp_29_ikko_house_ordinance = {
+	global_manpower_modifier = 0.08
+	global_unrest = -1
+}
+
+jxp_29_wokou_house_ordinance = {
+	privateer_efficiency = 0.15
+	capture_ship_chance = 0.10
+}
+
+jxp_29_house_warrior_tempered_route = {
+	land_morale = 0.05
+	manpower_recovery_speed = 0.08
+}
+
+jxp_29_house_court_tempered_route = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_29_house_maritime_tempered_route = {
+	naval_morale = 0.06
+	global_ship_trade_power = 0.10
+}
+
+jxp_29_house_frontier_tempered_route = {
+	defensiveness = 0.10
+	hostile_attrition = 1
+}
+
+jxp_29_house_temple_market_tempered_route = {
+	religious_unity = 0.08
+	global_tax_modifier = 0.05
+}

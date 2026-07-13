@@ -1,0 +1,209 @@
+jxp_39_oda_idea_legacy = {
+	core_creation = -0.03
+	global_trade_goods_size_modifier = 0.03
+}
+
+jxp_39_tkg_idea_legacy = {
+	governing_capacity_modifier = 0.05
+	global_unrest = -1
+}
+
+jxp_39_tkd_idea_legacy = {
+	cavalry_power = 0.05
+	army_tradition = 0.25
+}
+
+jxp_39_ues_idea_legacy = {
+	army_tradition_decay = -0.005
+	prestige = 0.5
+}
+
+jxp_39_hjo_idea_legacy = {
+	development_cost = -0.03
+	defensiveness = 0.05
+}
+
+jxp_39_mri_idea_legacy = {
+	galley_power = 0.05
+	global_ship_trade_power = 0.05
+}
+
+jxp_39_smz_idea_legacy = {
+	fire_damage = 0.03
+	artillery_power = 0.03
+}
+
+jxp_39_otm_idea_legacy = {
+	global_institution_spread = 0.05
+	siege_ability = 0.03
+}
+
+jxp_39_dte_idea_legacy = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.05
+}
+
+jxp_39_ask_idea_legacy = {
+	vassal_forcelimit_bonus = 0.25
+	legitimacy = 0.5
+}
+
+jxp_39_csk_idea_legacy = {
+	global_manpower_modifier = 0.05
+	land_maintenance_modifier = -0.03
+}
+
+jxp_39_ouc_idea_legacy = {
+	trade_efficiency = 0.05
+	improve_relation_modifier = 0.05
+}
+
+jxp_39_img_idea_legacy = {
+	ae_impact = -0.03
+	stability_cost_modifier = -0.03
+}
+
+jxp_39_soo_idea_legacy = {
+	trade_steering = 0.05
+	naval_morale = 0.03
+}
+
+jxp_39_ama_idea_legacy = {
+	defensiveness = 0.05
+	inflation_reduction = 0.03
+}
+
+jxp_39_hsk_idea_legacy = {
+	global_foreign_trade_power = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_39_shn_idea_legacy = {
+	global_foreign_trade_power = 0.05
+	diplomatic_upkeep = 1
+}
+
+jxp_39_ogs_idea_legacy = {
+	cavalry_power = 0.05
+	hostile_attrition = 0.5
+}
+
+jxp_39_ktb_idea_legacy = {
+	tolerance_own = 1
+	galley_power = 0.05
+}
+
+jxp_39_akt_idea_legacy = {
+	global_colonial_growth = 5
+	trade_range_modifier = 0.05
+}
+
+jxp_39_cba_idea_legacy = {
+	improve_relation_modifier = 0.05
+	army_tradition_decay = -0.003
+}
+
+jxp_39_isk_idea_legacy = {
+	movement_speed = 0.05
+	naval_forcelimit_modifier = 0.05
+}
+
+jxp_39_ito_idea_legacy = {
+	defensiveness = 0.05
+	core_creation = -0.03
+}
+
+jxp_39_kno_idea_legacy = {
+	galley_power = 0.05
+	capture_ship_chance = 0.05
+}
+
+jxp_39_tti_idea_legacy = {
+	tolerance_own = 1
+	global_missionary_strength = 0.005
+}
+
+jxp_39_rfr_idea_legacy = {
+	cavalry_power = 0.03
+	development_cost = -0.03
+}
+
+jxp_39_asa_idea_legacy = {
+	advisor_cost = -0.03
+	global_institution_spread = 0.03
+}
+
+jxp_39_htk_idea_legacy = {
+	mercenary_cost = -0.05
+	fire_damage = 0.02
+}
+
+jxp_39_ike_idea_legacy = {
+	build_cost = -0.03
+	global_tax_modifier = 0.03
+}
+
+jxp_39_mae_idea_legacy = {
+	production_efficiency = 0.03
+	prestige_decay = -0.003
+}
+
+jxp_39_sba_idea_legacy = {
+	land_forcelimit_modifier = 0.05
+	army_tradition = 0.25
+}
+
+jxp_39_ymn_idea_legacy = {
+	diplomatic_upkeep = 1
+	global_unrest = -0.5
+}
+
+jxp_39_akm_idea_legacy = {
+	movement_speed = 0.05
+	infantry_power = 0.03
+}
+
+jxp_39_kkc_idea_legacy = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+jxp_39_stk_idea_legacy = {
+	artillery_power = 0.05
+	land_forcelimit_modifier = 0.05
+}
+
+jxp_39_tki_idea_legacy = {
+	global_tax_modifier = 0.03
+	development_cost = -0.03
+}
+
+jxp_39_utn_idea_legacy = {
+	build_cost = -0.03
+	army_tradition_decay = -0.003
+}
+
+jxp_39_warrior_idea_house_school = {
+	land_morale = 0.02
+	reform_progress_growth = 0.05
+}
+
+jxp_39_court_idea_house_school = {
+	diplomatic_reputation = 1
+	reform_progress_growth = 0.05
+}
+
+jxp_39_maritime_idea_house_school = {
+	trade_efficiency = 0.04
+	naval_forcelimit_modifier = 0.05
+}
+
+jxp_39_frontier_idea_house_school = {
+	defensiveness = 0.05
+	global_colonial_growth = 5
+}
+
+jxp_39_temple_market_idea_house_school = {
+	stability_cost_modifier = -0.04
+	production_efficiency = 0.03
+}

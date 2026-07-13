@@ -1,0 +1,73 @@
+namespace = jxp_investment
+
+country_event = {
+	id = jxp_investment.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = jxp_investment_active
+	}
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = jxp_invest_tenka_active }
+			jxp_progress_tenka_investment_effect = yes
+		}
+		if = {
+			limit = { has_country_flag = jxp_invest_court_active }
+			jxp_progress_court_investment_effect = yes
+		}
+		if = {
+			limit = { has_country_flag = jxp_invest_oceanic_active }
+			jxp_progress_oceanic_investment_effect = yes
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_investment.10
+	title = "jxp_investment.10.t"
+	desc = "jxp_investment.10.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_investment.10.a"
+	}
+}
+
+country_event = {
+	id = jxp_investment.11
+	title = "jxp_investment.11.t"
+	desc = "jxp_investment.11.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_investment.11.a"
+	}
+}
+
+country_event = {
+	id = jxp_investment.12
+	title = "jxp_investment.12.t"
+	desc = "jxp_investment.12.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_investment.12.a"
+	}
+}

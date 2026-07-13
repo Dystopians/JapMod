@@ -1,0 +1,1222 @@
+namespace = jxp_major_founder_house_policy
+
+country_event = {
+	id = jxp_major_founder_house_policy.1
+	title = "jxp_major_founder_house_policy.1.t"
+	desc = "jxp_major_founder_house_policy.1.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_oda_azuchi_statutes
+		NOT = { has_country_flag = jxp_52_oda_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.1.a"
+		hidden_effect = { set_country_flag = jxp_52_oda_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_oda_azuchi_bureau duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.1.b"
+		hidden_effect = { set_country_flag = jxp_52_oda_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_oda_rakuichi_markets duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.2
+	title = "jxp_major_founder_house_policy.2.t"
+	desc = "jxp_major_founder_house_policy.2.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_tkg_mikawa_fudai_code
+		NOT = { has_country_flag = jxp_52_tkg_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.2.a"
+		hidden_effect = { set_country_flag = jxp_52_tkg_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_tkg_fudai_roju duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.2.b"
+		hidden_effect = { set_country_flag = jxp_52_tkg_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_tkg_road_barriers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.3
+	title = "jxp_major_founder_house_policy.3.t"
+	desc = "jxp_major_founder_house_policy.3.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_tkd_koshu_military_law
+		NOT = { has_country_flag = jxp_52_tkd_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.3.a"
+		hidden_effect = { set_country_flag = jxp_52_tkd_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_tkd_koshu_banners duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.3.b"
+		hidden_effect = { set_country_flag = jxp_52_tkd_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_tkd_mountain_codes duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.4
+	title = "jxp_major_founder_house_policy.4.t"
+	desc = "jxp_major_founder_house_policy.4.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ues_kanto_justice
+		NOT = { has_country_flag = jxp_52_ues_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.4.a"
+		hidden_effect = { set_country_flag = jxp_52_ues_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ues_kanto_justice duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.4.b"
+		hidden_effect = { set_country_flag = jxp_52_ues_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ues_echigo_muster duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.5
+	title = "jxp_major_founder_house_policy.5.t"
+	desc = "jxp_major_founder_house_policy.5.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_hjo_odawara_cadasters
+		NOT = { has_country_flag = jxp_52_hjo_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.5.a"
+		hidden_effect = { set_country_flag = jxp_52_hjo_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_hjo_odawara_cadaster_review duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.5.b"
+		hidden_effect = { set_country_flag = jxp_52_hjo_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_hjo_sogamae_watch duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.6
+	title = "jxp_major_founder_house_policy.6.t"
+	desc = "jxp_major_founder_house_policy.6.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_mri_setouchi_admiralty
+		NOT = { has_country_flag = jxp_52_mri_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.6.a"
+		hidden_effect = { set_country_flag = jxp_52_mri_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_mri_setouchi_admiralty duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.6.b"
+		hidden_effect = { set_country_flag = jxp_52_mri_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_mri_kokujin_compacts duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.7
+	title = "jxp_major_founder_house_policy.7.t"
+	desc = "jxp_major_founder_house_policy.7.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_smz_satsuma_gunnery
+		NOT = { has_country_flag = jxp_52_smz_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.7.a"
+		hidden_effect = { set_country_flag = jxp_52_smz_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_smz_teppo_foundries duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.7.b"
+		hidden_effect = { set_country_flag = jxp_52_smz_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_smz_satsunan_learning duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.8
+	title = "jxp_major_founder_house_policy.8.t"
+	desc = "jxp_major_founder_house_policy.8.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_otm_funai_arsenal
+		NOT = { has_country_flag = jxp_52_otm_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.8.a"
+		hidden_effect = { set_country_flag = jxp_52_otm_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_otm_funai_foreign_quarter duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.8.b"
+		hidden_effect = { set_country_flag = jxp_52_otm_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_otm_kunikuzushi_bureau duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.9
+	title = "jxp_major_founder_house_policy.9.t"
+	desc = "jxp_major_founder_house_policy.9.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_dte_oshu_cavalry_envoys
+		NOT = { has_country_flag = jxp_52_dte_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.9.a"
+		hidden_effect = { set_country_flag = jxp_52_dte_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_dte_oshu_cavalry duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.9.b"
+		hidden_effect = { set_country_flag = jxp_52_dte_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_dte_keicho_embassy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.10
+	title = "jxp_major_founder_house_policy.10.t"
+	desc = "jxp_major_founder_house_policy.10.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ask_muromachi_office
+		NOT = { has_country_flag = jxp_52_ask_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.10.a"
+		hidden_effect = { set_country_flag = jxp_52_ask_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ask_hokoshu_order duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.10.b"
+		hidden_effect = { set_country_flag = jxp_52_ask_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ask_higashiyama_culture duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.11
+	title = "jxp_major_founder_house_policy.11.t"
+	desc = "jxp_major_founder_house_policy.11.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_csk_tosa_ichiryo_gusoku
+		NOT = { has_country_flag = jxp_52_csk_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.11.a"
+		hidden_effect = { set_country_flag = jxp_52_csk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_csk_ichiryo_gusoku_rolls duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.11.b"
+		hidden_effect = { set_country_flag = jxp_52_csk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_csk_tosa_sea_law duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.12
+	title = "jxp_major_founder_house_policy.12.t"
+	desc = "jxp_major_founder_house_policy.12.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ouc_yamaguchi_court
+		NOT = { has_country_flag = jxp_52_ouc_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.12.a"
+		hidden_effect = { set_country_flag = jxp_52_ouc_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_ouc_yamaguchi_mercantile_court duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.12.b"
+		hidden_effect = { set_country_flag = jxp_52_ouc_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ouc_korean_envoys duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.13
+	title = "jxp_major_founder_house_policy.13.t"
+	desc = "jxp_major_founder_house_policy.13.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_img_tokaido_lawbooks
+		NOT = { has_country_flag = jxp_52_img_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.13.a"
+		hidden_effect = { set_country_flag = jxp_52_img_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_img_tokaido_lawbooks duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.13.b"
+		hidden_effect = { set_country_flag = jxp_52_img_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_img_triple_alliance_model duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.14
+	title = "jxp_major_founder_house_policy.14.t"
+	desc = "jxp_major_founder_house_policy.14.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_soo_tsushima_wakan
+		NOT = { has_country_flag = jxp_52_soo_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.14.a"
+		hidden_effect = { set_country_flag = jxp_52_soo_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_soo_wakan_office duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.14.b"
+		hidden_effect = { set_country_flag = jxp_52_soo_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_soo_tsushima_sea_wardens duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.15
+	title = "jxp_major_founder_house_policy.15.t"
+	desc = "jxp_major_founder_house_policy.15.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ama_gassan_toda_law
+		NOT = { has_country_flag = jxp_52_ama_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.15.a"
+		hidden_effect = { set_country_flag = jxp_52_ama_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ama_gassan_mine_registers duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.15.b"
+		hidden_effect = { set_country_flag = jxp_52_ama_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_ama_sanin_sea_ledgers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.16
+	title = "jxp_major_founder_house_policy.16.t"
+	desc = "jxp_major_founder_house_policy.16.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_asa_ichijodani_council
+		NOT = { has_country_flag = jxp_52_asa_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.16.a"
+		hidden_effect = { set_country_flag = jxp_52_asa_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_asa_echizen_paper_edicts duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.16.b"
+		hidden_effect = { set_country_flag = jxp_52_asa_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_asa_hokuriku_storehouses duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.17
+	title = "jxp_major_founder_house_policy.17.t"
+	desc = "jxp_major_founder_house_policy.17.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_hsk_sakai_kanrei_compact
+		NOT = { has_country_flag = jxp_52_hsk_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.17.a"
+		hidden_effect = { set_country_flag = jxp_52_hsk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_hsk_kanrei_audience_office duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.17.b"
+		hidden_effect = { set_country_flag = jxp_52_hsk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_hsk_sakai_machishu_council duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.18
+	title = "jxp_major_founder_house_policy.18.t"
+	desc = "jxp_major_founder_house_policy.18.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_htk_wakae_retainer_law
+		NOT = { has_country_flag = jxp_52_htk_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.18.a"
+		hidden_effect = { set_country_flag = jxp_52_htk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_htk_kawachi_retainer_rolls duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.18.b"
+		hidden_effect = { set_country_flag = jxp_52_htk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_htk_kinai_lawbooks duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.19
+	title = "jxp_major_founder_house_policy.19.t"
+	desc = "jxp_major_founder_house_policy.19.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ike_himeji_stewards
+		NOT = { has_country_flag = jxp_52_ike_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.19.a"
+		hidden_effect = { set_country_flag = jxp_52_ike_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ike_harima_castle_accounts duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.19.b"
+		hidden_effect = { set_country_flag = jxp_52_ike_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_ike_himeji_port_granaries duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.20
+	title = "jxp_major_founder_house_policy.20.t"
+	desc = "jxp_major_founder_house_policy.20.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_mae_kaga_million_koku
+		NOT = { has_country_flag = jxp_52_mae_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.20.a"
+		hidden_effect = { set_country_flag = jxp_52_mae_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_mae_million_koku_granaries duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.20.b"
+		hidden_effect = { set_country_flag = jxp_52_mae_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_mae_kanazawa_civil_letters duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.21
+	title = "jxp_major_founder_house_policy.21.t"
+	desc = "jxp_major_founder_house_policy.21.d"
+	picture = COURT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_sba_buei_offices
+		NOT = { has_country_flag = jxp_52_sba_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.21.a"
+		hidden_effect = { set_country_flag = jxp_52_sba_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_sba_owari_buei_offices duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.21.b"
+		hidden_effect = { set_country_flag = jxp_52_sba_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_sba_warrior_muster_books duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.22
+	title = "jxp_major_founder_house_policy.22.t"
+	desc = "jxp_major_founder_house_policy.22.d"
+	picture = DIPLOMACY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ymn_roku_bun_ichi_domain
+		NOT = { has_country_flag = jxp_52_ymn_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.22.a"
+		hidden_effect = { set_country_flag = jxp_52_ymn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ymn_sanin_guardian_links duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.22.b"
+		hidden_effect = { set_country_flag = jxp_52_ymn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ymn_roku_bun_ichi_musters duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.23
+	title = "jxp_major_founder_house_policy.23.t"
+	desc = "jxp_major_founder_house_policy.23.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_rfr_mutsu_nine_gates
+		NOT = { has_country_flag = jxp_52_rfr_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.23.a"
+		hidden_effect = { set_country_flag = jxp_52_rfr_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_rfr_mutsu_barrier_gates duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.23.b"
+		hidden_effect = { set_country_flag = jxp_52_rfr_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_rfr_northern_horse_markets duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.24
+	title = "jxp_major_founder_house_policy.24.t"
+	desc = "jxp_major_founder_house_policy.24.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ktb_ise_court_law
+		NOT = { has_country_flag = jxp_52_ktb_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.24.a"
+		hidden_effect = { set_country_flag = jxp_52_ktb_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ktb_ise_jingu_petitions duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.24.b"
+		hidden_effect = { set_country_flag = jxp_52_ktb_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_ktb_south_ise_ports duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.25
+	title = "jxp_major_founder_house_policy.25.t"
+	desc = "jxp_major_founder_house_policy.25.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_akm_harima_castle_roads
+		NOT = { has_country_flag = jxp_52_akm_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.25.a"
+		hidden_effect = { set_country_flag = jxp_52_akm_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_akm_harima_road_wardens duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.25.b"
+		hidden_effect = { set_country_flag = jxp_52_akm_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_akm_silver_road_accounts duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.26
+	title = "jxp_major_founder_house_policy.26.t"
+	desc = "jxp_major_founder_house_policy.26.d"
+	picture = TRADEGOODS_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_akt_ezochi_brokers
+		NOT = { has_country_flag = jxp_52_akt_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.26.a"
+		hidden_effect = { set_country_flag = jxp_52_akt_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_akt_ezochi_trade_brokers duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.26.b"
+		hidden_effect = { set_country_flag = jxp_52_akt_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_akt_oshima_watch_posts duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.27
+	title = "jxp_major_founder_house_policy.27.t"
+	desc = "jxp_major_founder_house_policy.27.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_cba_katori_muster
+		NOT = { has_country_flag = jxp_52_cba_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.27.a"
+		hidden_effect = { set_country_flag = jxp_52_cba_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_cba_katori_warrior_rolls duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.27.b"
+		hidden_effect = { set_country_flag = jxp_52_cba_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_cba_shimosa_letters duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.28
+	title = "jxp_major_founder_house_policy.28.t"
+	desc = "jxp_major_founder_house_policy.28.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_isk_tango_port_wardens
+		NOT = { has_country_flag = jxp_52_isk_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.28.a"
+		hidden_effect = { set_country_flag = jxp_52_isk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_isk_tango_ship_checks duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.28.b"
+		hidden_effect = { set_country_flag = jxp_52_isk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_isk_amanohashidate_ledgers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.29
+	title = "jxp_major_founder_house_policy.29.t"
+	desc = "jxp_major_founder_house_policy.29.d"
+	picture = FORT_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ito_hyuga_fort_network
+		NOT = { has_country_flag = jxp_52_ito_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.29.a"
+		hidden_effect = { set_country_flag = jxp_52_ito_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ito_hyuga_mountain_castles duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.29.b"
+		hidden_effect = { set_country_flag = jxp_52_ito_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ito_southern_kyushu_rites duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.30
+	title = "jxp_major_founder_house_policy.30.t"
+	desc = "jxp_major_founder_house_policy.30.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_kkc_aso_rite_council
+		NOT = { has_country_flag = jxp_52_kkc_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.30.a"
+		hidden_effect = { set_country_flag = jxp_52_kkc_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_kkc_aso_rite_council duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.30.b"
+		hidden_effect = { set_country_flag = jxp_52_kkc_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_kkc_higo_kokujin_oaths duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.31
+	title = "jxp_major_founder_house_policy.31.t"
+	desc = "jxp_major_founder_house_policy.31.d"
+	picture = NAVAL_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_kno_setouchi_pilot_law
+		NOT = { has_country_flag = jxp_52_kno_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.31.a"
+		hidden_effect = { set_country_flag = jxp_52_kno_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_kno_iyo_pilot_guilds duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.31.b"
+		hidden_effect = { set_country_flag = jxp_52_kno_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_kno_island_oath_fleet duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.32
+	title = "jxp_major_founder_house_policy.32.t"
+	desc = "jxp_major_founder_house_policy.32.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_ogs_suwa_horse_archery
+		NOT = { has_country_flag = jxp_52_ogs_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.32.a"
+		hidden_effect = { set_country_flag = jxp_52_ogs_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_ogs_suwa_horse_fields duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.32.b"
+		hidden_effect = { set_country_flag = jxp_52_ogs_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_ogs_ritual_archery duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.33
+	title = "jxp_major_founder_house_policy.33.t"
+	desc = "jxp_major_founder_house_policy.33.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_shn_dazaifu_brokerage
+		NOT = { has_country_flag = jxp_52_shn_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.33.a"
+		hidden_effect = { set_country_flag = jxp_52_shn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_52_shn_hakata_wind_books duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.33.b"
+		hidden_effect = { set_country_flag = jxp_52_shn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_shn_dazaifu_envoy_seats duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.34
+	title = "jxp_major_founder_house_policy.34.t"
+	desc = "jxp_major_founder_house_policy.34.d"
+	picture = LAND_MILITARY_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_stk_hitachi_warrior_rolls
+		NOT = { has_country_flag = jxp_52_stk_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.34.a"
+		hidden_effect = { set_country_flag = jxp_52_stk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_stk_hitachi_warrior_rolls duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.34.b"
+		hidden_effect = { set_country_flag = jxp_52_stk_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_stk_eastern_arbiters duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.35
+	title = "jxp_major_founder_house_policy.35.t"
+	desc = "jxp_major_founder_house_policy.35.d"
+	picture = TRADEGOODS_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_tki_mino_river_offices
+		NOT = { has_country_flag = jxp_52_tki_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.35.a"
+		hidden_effect = { set_country_flag = jxp_52_tki_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_tki_mino_river_works duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.35.b"
+		hidden_effect = { set_country_flag = jxp_52_tki_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_tki_toki_paper_offices duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.36
+	title = "jxp_major_founder_house_policy.36.t"
+	desc = "jxp_major_founder_house_policy.36.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_utn_nikko_barrier_guard
+		NOT = { has_country_flag = jxp_52_utn_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.36.a"
+		hidden_effect = { set_country_flag = jxp_52_utn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_utn_nikko_gate_guard duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.36.b"
+		hidden_effect = { set_country_flag = jxp_52_utn_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_utn_shimotsuke_barriers duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_major_founder_house_policy.37
+	title = "jxp_major_founder_house_policy.37.t"
+	desc = "jxp_major_founder_house_policy.37.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_reform = jxp_reform_founder_tti_yamato_temple_compact
+		NOT = { has_country_flag = jxp_52_tti_major_founder_policy_seen }
+	}
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.37.a"
+		hidden_effect = { set_country_flag = jxp_52_tti_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_52_tti_nanto_temple_mediation duration = 3650 }
+	}
+	option = {
+		name = "jxp_major_founder_house_policy.37.b"
+		hidden_effect = { set_country_flag = jxp_52_tti_major_founder_policy_seen }
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_52_tti_yamato_manor_ledgers duration = 3650 }
+	}
+}

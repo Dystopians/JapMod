@@ -1,0 +1,1260 @@
+jxp_clamp_polity_values_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_tenka_order value = 0 } } }
+			set_variable = { which = jxp_tenka_order value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_tenka_order value = 100 } }
+			set_variable = { which = jxp_tenka_order value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_imperial_sanction value = 0 } } }
+			set_variable = { which = jxp_imperial_sanction value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_imperial_sanction value = 100 } }
+			set_variable = { which = jxp_imperial_sanction value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_oceanic_opening value = 0 } } }
+			set_variable = { which = jxp_oceanic_opening value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_oceanic_opening value = 100 } }
+			set_variable = { which = jxp_oceanic_opening value = 100 }
+		}
+	}
+}
+
+jxp_sync_polity_mechanic_from_variables_effect = {
+	hidden_effect = {
+		if = {
+			limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+			set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 0 }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 5 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 5 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 10 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 10 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 15 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 15 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 20 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 20 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 25 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 25 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 30 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 30 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 35 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 35 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 40 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 40 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 45 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 45 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 50 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 50 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 55 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 55 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 60 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 60 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 65 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 65 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 70 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 70 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 75 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 75 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 80 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 80 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 85 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 85 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 90 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 90 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 95 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 95 } }
+			if = { limit = { check_variable = { which = jxp_tenka_order value = 100 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 100 } }
+
+			set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 0 }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 5 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 5 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 10 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 10 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 15 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 15 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 20 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 20 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 25 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 25 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 30 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 30 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 35 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 35 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 40 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 40 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 45 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 45 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 50 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 50 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 55 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 55 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 60 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 60 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 65 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 65 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 70 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 70 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 75 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 75 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 80 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 80 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 85 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 85 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 90 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 90 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 95 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 95 } }
+			if = { limit = { check_variable = { which = jxp_imperial_sanction value = 100 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 100 } }
+
+			set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 0 }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 5 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 5 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 10 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 10 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 15 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 15 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 20 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 20 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 25 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 25 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 30 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 30 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 35 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 35 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 40 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 40 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 45 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 45 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 50 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 50 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 55 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 55 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 60 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 60 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 65 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 65 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 70 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 70 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 75 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 75 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 80 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 80 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 85 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 85 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 90 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 90 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 95 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 95 } }
+			if = { limit = { check_variable = { which = jxp_oceanic_opening value = 100 } } set_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 100 } }
+		}
+	}
+}
+
+jxp_ensure_polity_mechanic_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_reform = jxp_japanese_polity_reform } }
+			add_government_reform = jxp_japanese_polity_reform
+		}
+		regenerate_government_mechanics = yes
+		set_country_flag = jxp_polity_mechanic_registered
+		jxp_sync_polity_mechanic_from_variables_effect = yes
+	}
+}
+
+jxp_init_polity_values_effect = {
+	set_country_flag = jxp_polity_initialized
+	jxp_record_daimyo_origin_effect = yes
+	set_variable = { which = jxp_tenka_order value = 25 }
+	set_variable = { which = jxp_imperial_sanction value = 35 }
+	set_variable = { which = jxp_oceanic_opening value = 20 }
+	if = {
+		limit = {
+			OR = {
+				tag = JAP
+				has_reform = shogunate
+				owns = 1020
+			}
+		}
+		set_variable = { which = jxp_imperial_sanction value = 50 }
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = KJP
+				has_country_flag = jxp_path_kirishitan
+				tag = RFJ
+				tag = SJP
+				tag = WAK
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_wokou
+			}
+		}
+		set_variable = { which = jxp_oceanic_opening value = 45 }
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = IJP
+				has_country_flag = jxp_path_ikko
+			}
+		}
+		set_variable = { which = jxp_tenka_order value = 20 }
+		set_variable = { which = jxp_imperial_sanction value = 40 }
+	}
+	jxp_clamp_polity_values_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+}
+
+jxp_add_tenka_order_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_tenka_order value = 5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_tenka_order_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_tenka_order value = 10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = 10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_tenka_order_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_tenka_order value = -5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = -5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_tenka_order_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_tenka_order value = -10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_tenka_order value = -10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_imperial_sanction_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_imperial_sanction value = 5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_imperial_sanction_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_imperial_sanction value = 10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_imperial_sanction_15_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_imperial_sanction value = 15 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = 15 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_imperial_sanction_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_imperial_sanction value = -5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = -5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_imperial_sanction_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_imperial_sanction value = -10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_imperial_sanction value = -10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_oceanic_opening_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_oceanic_opening value = 5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_add_oceanic_opening_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_oceanic_opening value = 10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = 10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_oceanic_opening_5_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_oceanic_opening value = -5 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = -5 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_subtract_oceanic_opening_10_effect = {
+	hidden_effect = {
+		change_variable = { which = jxp_oceanic_opening value = -10 }
+	}
+	if = {
+		limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+		add_government_power = { mechanic_type = jxp_japanese_polity_mechanic power_type = jxp_oceanic_opening value = -10 }
+	}
+	jxp_clamp_polity_values_effect = yes
+}
+
+jxp_clear_route_reforms_effect = {
+	jxp_clear_route_high_office_reforms_effect = yes
+	jxp_clear_final_state_power_structures_effect = yes
+	jxp_clear_final_state_capstone_modifiers_effect = yes
+
+	if = { limit = { has_reform = jxp_reformed_japan_reform } remove_government_reform = jxp_reformed_japan_reform }
+	if = { limit = { has_reform = jxp_kaikyo_japan_reform } remove_government_reform = jxp_kaikyo_japan_reform }
+	if = { limit = { has_reform = jxp_ikko_commonwealth_reform } remove_government_reform = jxp_ikko_commonwealth_reform }
+	if = { limit = { has_reform = jxp_wokou_admiralty_reform } remove_government_reform = jxp_wokou_admiralty_reform }
+
+	if = { limit = { has_reform = jxp_reform_sakoku_buke_laws } remove_government_reform = jxp_reform_sakoku_buke_laws }
+	if = { limit = { has_reform = jxp_reform_sakoku_terauke_registers } remove_government_reform = jxp_reform_sakoku_terauke_registers }
+	if = { limit = { has_reform = jxp_reform_sakoku_dejima_inspectors } remove_government_reform = jxp_reform_sakoku_dejima_inspectors }
+	if = { limit = { has_reform = jxp_reform_open_red_seal_council } remove_government_reform = jxp_reform_open_red_seal_council }
+	if = { limit = { has_reform = jxp_reform_open_rangaku_bureaucracy } remove_government_reform = jxp_reform_open_rangaku_bureaucracy }
+	if = { limit = { has_reform = jxp_reform_open_chartered_harbors } remove_government_reform = jxp_reform_open_chartered_harbors }
+	if = { limit = { has_reform = jxp_reform_kirishitan_church_court } remove_government_reform = jxp_reform_kirishitan_church_court }
+	if = { limit = { has_reform = jxp_reform_kirishitan_port_congregations } remove_government_reform = jxp_reform_kirishitan_port_congregations }
+	if = { limit = { has_reform = jxp_reform_kirishitan_cross_sun_guard } remove_government_reform = jxp_reform_kirishitan_cross_sun_guard }
+	if = { limit = { has_reform = jxp_reform_confucian_shushi_academies } remove_government_reform = jxp_reform_confucian_shushi_academies }
+	if = { limit = { has_reform = jxp_reform_confucian_ritual_census } remove_government_reform = jxp_reform_confucian_ritual_census }
+	if = { limit = { has_reform = jxp_reform_confucian_kami_rites } remove_government_reform = jxp_reform_confucian_kami_rites }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan } remove_government_reform = jxp_reform_imperial_daijokan }
+	if = { limit = { has_reform = jxp_reform_imperial_kinri_guard } remove_government_reform = jxp_reform_imperial_kinri_guard }
+	if = { limit = { has_reform = jxp_reform_imperial_court_rites } remove_government_reform = jxp_reform_imperial_court_rites }
+	if = { limit = { has_reform = jxp_reform_reformed_consistory_ports } remove_government_reform = jxp_reform_reformed_consistory_ports }
+	if = { limit = { has_reform = jxp_reform_reformed_oranda_schools } remove_government_reform = jxp_reform_reformed_oranda_schools }
+	if = { limit = { has_reform = jxp_reform_reformed_elder_militias } remove_government_reform = jxp_reform_reformed_elder_militias }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_harbormasters } remove_government_reform = jxp_reform_kaikyo_qadi_harbormasters }
+	if = { limit = { has_reform = jxp_reform_kaikyo_hajj_sea_lanes } remove_government_reform = jxp_reform_kaikyo_hajj_sea_lanes }
+	if = { limit = { has_reform = jxp_reform_kaikyo_halal_granaries } remove_government_reform = jxp_reform_kaikyo_halal_granaries }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_covenant } remove_government_reform = jxp_reform_ikko_monto_covenant }
+	if = { limit = { has_reform = jxp_reform_ikko_terauchi_markets } remove_government_reform = jxp_reform_ikko_terauchi_markets }
+	if = { limit = { has_reform = jxp_reform_ikko_village_militias } remove_government_reform = jxp_reform_ikko_village_militias }
+	if = { limit = { has_reform = jxp_reform_wokou_letters_of_mark } remove_government_reform = jxp_reform_wokou_letters_of_mark }
+	if = { limit = { has_reform = jxp_reform_wokou_setouchi_pilotage } remove_government_reform = jxp_reform_wokou_setouchi_pilotage }
+	if = { limit = { has_reform = jxp_reform_wokou_free_harbor_codes } remove_government_reform = jxp_reform_wokou_free_harbor_codes }
+	if = { limit = { has_reform = jxp_reform_sakoku_sankin_kotai_roads } remove_government_reform = jxp_reform_sakoku_sankin_kotai_roads }
+	if = { limit = { has_reform = jxp_reform_sakoku_coastal_barriers } remove_government_reform = jxp_reform_sakoku_coastal_barriers }
+	if = { limit = { has_reform = jxp_reform_sakoku_hidden_learning } remove_government_reform = jxp_reform_sakoku_hidden_learning }
+	if = { limit = { has_reform = jxp_reform_open_silver_exchange } remove_government_reform = jxp_reform_open_silver_exchange }
+	if = { limit = { has_reform = jxp_reform_open_foreign_artillery_contracts } remove_government_reform = jxp_reform_open_foreign_artillery_contracts }
+	if = { limit = { has_reform = jxp_reform_open_chartered_factories } remove_government_reform = jxp_reform_open_chartered_factories }
+	if = { limit = { has_reform = jxp_reform_kirishitan_seminaries } remove_government_reform = jxp_reform_kirishitan_seminaries }
+	if = { limit = { has_reform = jxp_reform_kirishitan_misericordia_hospitals } remove_government_reform = jxp_reform_kirishitan_misericordia_hospitals }
+	if = { limit = { has_reform = jxp_reform_kirishitan_nagasaki_admiralty } remove_government_reform = jxp_reform_kirishitan_nagasaki_admiralty }
+	if = { limit = { has_reform = jxp_reform_confucian_examination_domains } remove_government_reform = jxp_reform_confucian_examination_domains }
+	if = { limit = { has_reform = jxp_reform_confucian_sinicized_codes } remove_government_reform = jxp_reform_confucian_sinicized_codes }
+	if = { limit = { has_reform = jxp_reform_confucian_three_teachings_board } remove_government_reform = jxp_reform_confucian_three_teachings_board }
+	if = { limit = { has_reform = jxp_reform_imperial_kokugaku_office } remove_government_reform = jxp_reform_imperial_kokugaku_office }
+	if = { limit = { has_reform = jxp_reform_imperial_kokushi_governors } remove_government_reform = jxp_reform_imperial_kokushi_governors }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_army } remove_government_reform = jxp_reform_imperial_restoration_army }
+	if = { limit = { has_reform = jxp_reform_reformed_printing_synods } remove_government_reform = jxp_reform_reformed_printing_synods }
+	if = { limit = { has_reform = jxp_reform_reformed_civic_compacts } remove_government_reform = jxp_reform_reformed_civic_compacts }
+	if = { limit = { has_reform = jxp_reform_reformed_contract_fleet } remove_government_reform = jxp_reform_reformed_contract_fleet }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_diwan } remove_government_reform = jxp_reform_kaikyo_monsoon_diwan }
+	if = { limit = { has_reform = jxp_reform_kaikyo_wakf_granaries } remove_government_reform = jxp_reform_kaikyo_wakf_granaries }
+	if = { limit = { has_reform = jxp_reform_kaikyo_spice_guard } remove_government_reform = jxp_reform_kaikyo_spice_guard }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_councils } remove_government_reform = jxp_reform_ikko_somon_councils }
+	if = { limit = { has_reform = jxp_reform_ikko_granary_communes } remove_government_reform = jxp_reform_ikko_granary_communes }
+	if = { limit = { has_reform = jxp_reform_ikko_ashigaru_congregations } remove_government_reform = jxp_reform_ikko_ashigaru_congregations }
+	if = { limit = { has_reform = jxp_reform_wokou_black_tide_law } remove_government_reform = jxp_reform_wokou_black_tide_law }
+	if = { limit = { has_reform = jxp_reform_wokou_island_freeports } remove_government_reform = jxp_reform_wokou_island_freeports }
+	if = { limit = { has_reform = jxp_reform_wokou_boarding_companies } remove_government_reform = jxp_reform_wokou_boarding_companies }
+	if = { limit = { has_reform = jxp_reform_sakoku_five_household_registers } remove_government_reform = jxp_reform_sakoku_five_household_registers }
+	if = { limit = { has_reform = jxp_reform_sakoku_castle_town_sumptuary } remove_government_reform = jxp_reform_sakoku_castle_town_sumptuary }
+	if = { limit = { has_reform = jxp_reform_open_nagasaki_customs } remove_government_reform = jxp_reform_open_nagasaki_customs }
+	if = { limit = { has_reform = jxp_reform_open_machishu_investors } remove_government_reform = jxp_reform_open_machishu_investors }
+	if = { limit = { has_reform = jxp_reform_kirishitan_confraternity_parishes } remove_government_reform = jxp_reform_kirishitan_confraternity_parishes }
+	if = { limit = { has_reform = jxp_reform_kirishitan_latin_colleges } remove_government_reform = jxp_reform_kirishitan_latin_colleges }
+	if = { limit = { has_reform = jxp_reform_confucian_domain_examiners } remove_government_reform = jxp_reform_confucian_domain_examiners }
+	if = { limit = { has_reform = jxp_reform_confucian_shrine_registers } remove_government_reform = jxp_reform_confucian_shrine_registers }
+	if = { limit = { has_reform = jxp_reform_imperial_court_nobles } remove_government_reform = jxp_reform_imperial_court_nobles }
+	if = { limit = { has_reform = jxp_reform_imperial_land_tax_revival } remove_government_reform = jxp_reform_imperial_land_tax_revival }
+	if = { limit = { has_reform = jxp_reform_reformed_synod_schools } remove_government_reform = jxp_reform_reformed_synod_schools }
+	if = { limit = { has_reform = jxp_reform_reformed_civic_oaths } remove_government_reform = jxp_reform_reformed_civic_oaths }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_registers } remove_government_reform = jxp_reform_kaikyo_qadi_registers }
+	if = { limit = { has_reform = jxp_reform_kaikyo_port_waqf } remove_government_reform = jxp_reform_kaikyo_port_waqf }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_judges } remove_government_reform = jxp_reform_ikko_somon_judges }
+	if = { limit = { has_reform = jxp_reform_ikko_temple_market_communes } remove_government_reform = jxp_reform_ikko_temple_market_communes }
+	if = { limit = { has_reform = jxp_reform_wokou_island_courts } remove_government_reform = jxp_reform_wokou_island_courts }
+	if = { limit = { has_reform = jxp_reform_wokou_smuggler_brokers } remove_government_reform = jxp_reform_wokou_smuggler_brokers }
+	if = { limit = { has_reform = jxp_reform_sakoku_offshore_patrols } remove_government_reform = jxp_reform_sakoku_offshore_patrols }
+	if = { limit = { has_reform = jxp_reform_sakoku_inland_arsenals } remove_government_reform = jxp_reform_sakoku_inland_arsenals }
+	if = { limit = { has_reform = jxp_reform_open_blue_water_contracts } remove_government_reform = jxp_reform_open_blue_water_contracts }
+	if = { limit = { has_reform = jxp_reform_open_foreign_drill_yards } remove_government_reform = jxp_reform_open_foreign_drill_yards }
+	if = { limit = { has_reform = jxp_reform_kirishitan_ordered_brotherhoods } remove_government_reform = jxp_reform_kirishitan_ordered_brotherhoods }
+	if = { limit = { has_reform = jxp_reform_kirishitan_mission_fleet } remove_government_reform = jxp_reform_kirishitan_mission_fleet }
+	if = { limit = { has_reform = jxp_reform_confucian_rite_army_inspectors } remove_government_reform = jxp_reform_confucian_rite_army_inspectors }
+	if = { limit = { has_reform = jxp_reform_confucian_wanghua_magistrates } remove_government_reform = jxp_reform_confucian_wanghua_magistrates }
+	if = { limit = { has_reform = jxp_reform_imperial_guard_mandates } remove_government_reform = jxp_reform_imperial_guard_mandates }
+	if = { limit = { has_reform = jxp_reform_imperial_fleet_of_the_sun } remove_government_reform = jxp_reform_imperial_fleet_of_the_sun }
+	if = { limit = { has_reform = jxp_reform_reformed_militia_musters } remove_government_reform = jxp_reform_reformed_militia_musters }
+	if = { limit = { has_reform = jxp_reform_reformed_contract_admiralty } remove_government_reform = jxp_reform_reformed_contract_admiralty }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_arsenals } remove_government_reform = jxp_reform_kaikyo_monsoon_arsenals }
+	if = { limit = { has_reform = jxp_reform_kaikyo_gunfounder_madrasas } remove_government_reform = jxp_reform_kaikyo_gunfounder_madrasas }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_militias } remove_government_reform = jxp_reform_ikko_monto_militias }
+	if = { limit = { has_reform = jxp_reform_ikko_fortified_terauchi } remove_government_reform = jxp_reform_ikko_fortified_terauchi }
+	if = { limit = { has_reform = jxp_reform_wokou_boarding_schools } remove_government_reform = jxp_reform_wokou_boarding_schools }
+	if = { limit = { has_reform = jxp_reform_wokou_tidewater_arsenals } remove_government_reform = jxp_reform_wokou_tidewater_arsenals }
+	if = { limit = { has_reform = jxp_reform_sakoku_embassy_seals } remove_government_reform = jxp_reform_sakoku_embassy_seals }
+	if = { limit = { has_reform = jxp_reform_sakoku_inner_learning } remove_government_reform = jxp_reform_sakoku_inner_learning }
+	if = { limit = { has_reform = jxp_reform_open_pacific_charters } remove_government_reform = jxp_reform_open_pacific_charters }
+	if = { limit = { has_reform = jxp_reform_open_silver_standard } remove_government_reform = jxp_reform_open_silver_standard }
+	if = { limit = { has_reform = jxp_reform_kirishitan_embassy_to_rome } remove_government_reform = jxp_reform_kirishitan_embassy_to_rome }
+	if = { limit = { has_reform = jxp_reform_kirishitan_sacred_monarchy } remove_government_reform = jxp_reform_kirishitan_sacred_monarchy }
+	if = { limit = { has_reform = jxp_reform_confucian_sinic_harmonizers } remove_government_reform = jxp_reform_confucian_sinic_harmonizers }
+	if = { limit = { has_reform = jxp_reform_confucian_tribute_bureau } remove_government_reform = jxp_reform_confucian_tribute_bureau }
+	if = { limit = { has_reform = jxp_reform_imperial_envoys_of_tenno } remove_government_reform = jxp_reform_imperial_envoys_of_tenno }
+	if = { limit = { has_reform = jxp_reform_imperial_subject_ranks } remove_government_reform = jxp_reform_imperial_subject_ranks }
+	if = { limit = { has_reform = jxp_reform_reformed_print_covenants } remove_government_reform = jxp_reform_reformed_print_covenants }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_factors } remove_government_reform = jxp_reform_reformed_dutch_factors }
+	if = { limit = { has_reform = jxp_reform_kaikyo_indian_ocean_diplomats } remove_government_reform = jxp_reform_kaikyo_indian_ocean_diplomats }
+	if = { limit = { has_reform = jxp_reform_kaikyo_haramayn_patronage } remove_government_reform = jxp_reform_kaikyo_haramayn_patronage }
+	if = { limit = { has_reform = jxp_reform_ikko_public_granaries } remove_government_reform = jxp_reform_ikko_public_granaries }
+	if = { limit = { has_reform = jxp_reform_ikko_common_oath } remove_government_reform = jxp_reform_ikko_common_oath }
+	if = { limit = { has_reform = jxp_reform_wokou_sea_law } remove_government_reform = jxp_reform_wokou_sea_law }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_charters } remove_government_reform = jxp_reform_wokou_black_current_charters }
+	if = { limit = { has_reform = jxp_reform_sakoku_kanei_border_cordon } remove_government_reform = jxp_reform_sakoku_kanei_border_cordon }
+	if = { limit = { has_reform = jxp_reform_sakoku_inner_almanacs } remove_government_reform = jxp_reform_sakoku_inner_almanacs }
+	if = { limit = { has_reform = jxp_reform_open_pacific_custom_houses } remove_government_reform = jxp_reform_open_pacific_custom_houses }
+	if = { limit = { has_reform = jxp_reform_open_foreign_drill_mission } remove_government_reform = jxp_reform_open_foreign_drill_mission }
+	if = { limit = { has_reform = jxp_reform_kirishitan_order_of_the_sun } remove_government_reform = jxp_reform_kirishitan_order_of_the_sun }
+	if = { limit = { has_reform = jxp_reform_kirishitan_nagasaki_crown_admiralty } remove_government_reform = jxp_reform_kirishitan_nagasaki_crown_admiralty }
+	if = { limit = { has_reform = jxp_reform_confucian_taigaku_censors } remove_government_reform = jxp_reform_confucian_taigaku_censors }
+	if = { limit = { has_reform = jxp_reform_confucian_rites_and_tenka_code } remove_government_reform = jxp_reform_confucian_rites_and_tenka_code }
+	if = { limit = { has_reform = jxp_reform_imperial_jingi_chancery } remove_government_reform = jxp_reform_imperial_jingi_chancery }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_banners } remove_government_reform = jxp_reform_imperial_restoration_banners }
+	if = { limit = { has_reform = jxp_reform_reformed_printed_oaths } remove_government_reform = jxp_reform_reformed_printed_oaths }
+	if = { limit = { has_reform = jxp_reform_reformed_port_consistories } remove_government_reform = jxp_reform_reformed_port_consistories }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_sultanate } remove_government_reform = jxp_reform_kaikyo_monsoon_sultanate }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_shipyards } remove_government_reform = jxp_reform_kaikyo_qadi_shipyards }
+	if = { limit = { has_reform = jxp_reform_ikko_sovereign_somon } remove_government_reform = jxp_reform_ikko_sovereign_somon }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_war_leagues } remove_government_reform = jxp_reform_ikko_monto_war_leagues }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_domain } remove_government_reform = jxp_reform_wokou_black_current_domain }
+	if = { limit = { has_reform = jxp_reform_wokou_free_captains } remove_government_reform = jxp_reform_wokou_free_captains }
+	if = { limit = { has_reform = jxp_reform_sakoku_gosanke_council } remove_government_reform = jxp_reform_sakoku_gosanke_council }
+	if = { limit = { has_reform = jxp_reform_sakoku_kaikin_watchtowers } remove_government_reform = jxp_reform_sakoku_kaikin_watchtowers }
+	if = { limit = { has_reform = jxp_reform_open_oceanic_cabinet } remove_government_reform = jxp_reform_open_oceanic_cabinet }
+	if = { limit = { has_reform = jxp_reform_open_treaty_port_commission } remove_government_reform = jxp_reform_open_treaty_port_commission }
+	if = { limit = { has_reform = jxp_reform_kirishitan_crown_patronage } remove_government_reform = jxp_reform_kirishitan_crown_patronage }
+	if = { limit = { has_reform = jxp_reform_kirishitan_deus_vult_council } remove_government_reform = jxp_reform_kirishitan_deus_vult_council }
+	if = { limit = { has_reform = jxp_reform_confucian_rites_ministry } remove_government_reform = jxp_reform_confucian_rites_ministry }
+	if = { limit = { has_reform = jxp_reform_confucian_harmonious_codes } remove_government_reform = jxp_reform_confucian_harmonious_codes }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan_cabinets } remove_government_reform = jxp_reform_imperial_daijokan_cabinets }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_guard } remove_government_reform = jxp_reform_imperial_restoration_guard }
+	if = { limit = { has_reform = jxp_reform_reformed_synodic_estates } remove_government_reform = jxp_reform_reformed_synodic_estates }
+	if = { limit = { has_reform = jxp_reform_reformed_print_capital } remove_government_reform = jxp_reform_reformed_print_capital }
+	if = { limit = { has_reform = jxp_reform_kaikyo_maritime_diwan } remove_government_reform = jxp_reform_kaikyo_maritime_diwan }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_kanrei_court } remove_government_reform = jxp_reform_kaikyo_qadi_kanrei_court }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_diet } remove_government_reform = jxp_reform_ikko_somon_diet }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_levy_charter } remove_government_reform = jxp_reform_ikko_monto_levy_charter }
+	if = { limit = { has_reform = jxp_reform_wokou_corsair_council } remove_government_reform = jxp_reform_wokou_corsair_council }
+	if = { limit = { has_reform = jxp_reform_wokou_tidewater_customs } remove_government_reform = jxp_reform_wokou_tidewater_customs }
+	if = { limit = { has_reform = jxp_reform_sakoku_kokka_ritsuryo } remove_government_reform = jxp_reform_sakoku_kokka_ritsuryo }
+	if = { limit = { has_reform = jxp_reform_sakoku_hidden_arsenal_network } remove_government_reform = jxp_reform_sakoku_hidden_arsenal_network }
+	if = { limit = { has_reform = jxp_reform_sakoku_selective_dutch_window } remove_government_reform = jxp_reform_sakoku_selective_dutch_window }
+	if = { limit = { has_reform = jxp_reform_open_port_guild_diet } remove_government_reform = jxp_reform_open_port_guild_diet }
+	if = { limit = { has_reform = jxp_reform_open_blue_water_navy_board } remove_government_reform = jxp_reform_open_blue_water_navy_board }
+	if = { limit = { has_reform = jxp_reform_open_translator_bureau_cabinet } remove_government_reform = jxp_reform_open_translator_bureau_cabinet }
+	if = { limit = { has_reform = jxp_reform_kirishitan_royal_baptismal_registers } remove_government_reform = jxp_reform_kirishitan_royal_baptismal_registers }
+	if = { limit = { has_reform = jxp_reform_kirishitan_confraternity_armories } remove_government_reform = jxp_reform_kirishitan_confraternity_armories }
+	if = { limit = { has_reform = jxp_reform_kirishitan_pacific_mission_patronage } remove_government_reform = jxp_reform_kirishitan_pacific_mission_patronage }
+	if = { limit = { has_reform = jxp_reform_confucian_ritual_provincial_examinations } remove_government_reform = jxp_reform_confucian_ritual_provincial_examinations }
+	if = { limit = { has_reform = jxp_reform_confucian_kokugaku_shushi_synthesis } remove_government_reform = jxp_reform_confucian_kokugaku_shushi_synthesis }
+	if = { limit = { has_reform = jxp_reform_confucian_tenka_censorate } remove_government_reform = jxp_reform_confucian_tenka_censorate }
+	if = { limit = { has_reform = jxp_reform_imperial_great_council_of_state } remove_government_reform = jxp_reform_imperial_great_council_of_state }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_military_academy } remove_government_reform = jxp_reform_imperial_restoration_military_academy }
+	if = { limit = { has_reform = jxp_reform_imperial_shrine_diplomacy } remove_government_reform = jxp_reform_imperial_shrine_diplomacy }
+	if = { limit = { has_reform = jxp_reform_reformed_printed_consistory_law } remove_government_reform = jxp_reform_reformed_printed_consistory_law }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_drill_contracts } remove_government_reform = jxp_reform_reformed_dutch_drill_contracts }
+	if = { limit = { has_reform = jxp_reform_reformed_maritime_elder_board } remove_government_reform = jxp_reform_reformed_maritime_elder_board }
+	if = { limit = { has_reform = jxp_reform_kaikyo_sharia_port_charter } remove_government_reform = jxp_reform_kaikyo_sharia_port_charter }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_fleet_diwan } remove_government_reform = jxp_reform_kaikyo_monsoon_fleet_diwan }
+	if = { limit = { has_reform = jxp_reform_kaikyo_madrasa_gunfounders } remove_government_reform = jxp_reform_kaikyo_madrasa_gunfounders }
+	if = { limit = { has_reform = jxp_reform_ikko_grand_somon_compact } remove_government_reform = jxp_reform_ikko_grand_somon_compact }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_levy_bells } remove_government_reform = jxp_reform_ikko_monto_levy_bells }
+	if = { limit = { has_reform = jxp_reform_ikko_templeschool_communes } remove_government_reform = jxp_reform_ikko_templeschool_communes }
+	if = { limit = { has_reform = jxp_reform_wokou_red_seal_corsair_law } remove_government_reform = jxp_reform_wokou_red_seal_corsair_law }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_admiralty } remove_government_reform = jxp_reform_wokou_black_current_admiralty }
+	if = { limit = { has_reform = jxp_reform_wokou_island_customs_federation } remove_government_reform = jxp_reform_wokou_island_customs_federation }
+	if = { limit = { has_reform = jxp_reform_sakoku_fudai_inspectorate } remove_government_reform = jxp_reform_sakoku_fudai_inspectorate }
+	if = { limit = { has_reform = jxp_reform_sakoku_coastal_gun_commissions } remove_government_reform = jxp_reform_sakoku_coastal_gun_commissions }
+	if = { limit = { has_reform = jxp_reform_sakoku_ancestral_domain_compact } remove_government_reform = jxp_reform_sakoku_ancestral_domain_compact }
+	if = { limit = { has_reform = jxp_reform_sakoku_controlled_knowledge_corridor } remove_government_reform = jxp_reform_sakoku_controlled_knowledge_corridor }
+	if = { limit = { has_reform = jxp_reform_open_red_seal_company_council } remove_government_reform = jxp_reform_open_red_seal_company_council }
+	if = { limit = { has_reform = jxp_reform_open_navy_contract_office } remove_government_reform = jxp_reform_open_navy_contract_office }
+	if = { limit = { has_reform = jxp_reform_open_pacific_exchange_standard } remove_government_reform = jxp_reform_open_pacific_exchange_standard }
+	if = { limit = { has_reform = jxp_reform_open_transoceanic_colony_board } remove_government_reform = jxp_reform_open_transoceanic_colony_board }
+	if = { limit = { has_reform = jxp_reform_kirishitan_sun_cross_chancery } remove_government_reform = jxp_reform_kirishitan_sun_cross_chancery }
+	if = { limit = { has_reform = jxp_reform_kirishitan_nagasaki_order_fleet } remove_government_reform = jxp_reform_kirishitan_nagasaki_order_fleet }
+	if = { limit = { has_reform = jxp_reform_kirishitan_martyr_levy_estates } remove_government_reform = jxp_reform_kirishitan_martyr_levy_estates }
+	if = { limit = { has_reform = jxp_reform_kirishitan_roman_embassy_cabinet } remove_government_reform = jxp_reform_kirishitan_roman_embassy_cabinet }
+	if = { limit = { has_reform = jxp_reform_confucian_shinbutsu_harmonizers } remove_government_reform = jxp_reform_confucian_shinbutsu_harmonizers }
+	if = { limit = { has_reform = jxp_reform_confucian_censorate_granaries } remove_government_reform = jxp_reform_confucian_censorate_granaries }
+	if = { limit = { has_reform = jxp_reform_confucian_ritual_core_commission } remove_government_reform = jxp_reform_confucian_ritual_core_commission }
+	if = { limit = { has_reform = jxp_reform_confucian_tenka_school_network } remove_government_reform = jxp_reform_confucian_tenka_school_network }
+	if = { limit = { has_reform = jxp_reform_imperial_jingikan_cabinet } remove_government_reform = jxp_reform_imperial_jingikan_cabinet }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_planning_board } remove_government_reform = jxp_reform_imperial_restoration_planning_board }
+	if = { limit = { has_reform = jxp_reform_imperial_sacred_envoy_system } remove_government_reform = jxp_reform_imperial_sacred_envoy_system }
+	if = { limit = { has_reform = jxp_reform_imperial_solar_guard_bureaus } remove_government_reform = jxp_reform_imperial_solar_guard_bureaus }
+	if = { limit = { has_reform = jxp_reform_reformed_scripture_printing_office } remove_government_reform = jxp_reform_reformed_scripture_printing_office }
+	if = { limit = { has_reform = jxp_reform_reformed_burgher_synod_chambers } remove_government_reform = jxp_reform_reformed_burgher_synod_chambers }
+	if = { limit = { has_reform = jxp_reform_reformed_civic_militia_covenant } remove_government_reform = jxp_reform_reformed_civic_militia_covenant }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_engineer_corps } remove_government_reform = jxp_reform_reformed_dutch_engineer_corps }
+	if = { limit = { has_reform = jxp_reform_kaikyo_harbor_qadi_bureau } remove_government_reform = jxp_reform_kaikyo_harbor_qadi_bureau }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_custom_house } remove_government_reform = jxp_reform_kaikyo_monsoon_custom_house }
+	if = { limit = { has_reform = jxp_reform_kaikyo_pilgrim_embassy_network } remove_government_reform = jxp_reform_kaikyo_pilgrim_embassy_network }
+	if = { limit = { has_reform = jxp_reform_kaikyo_cannon_foundry_madrasas } remove_government_reform = jxp_reform_kaikyo_cannon_foundry_madrasas }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_assembly_halls } remove_government_reform = jxp_reform_ikko_somon_assembly_halls }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_watch_bells } remove_government_reform = jxp_reform_ikko_monto_watch_bells }
+	if = { limit = { has_reform = jxp_reform_ikko_public_granary_leagues } remove_government_reform = jxp_reform_ikko_public_granary_leagues }
+	if = { limit = { has_reform = jxp_reform_ikko_equal_field_compact } remove_government_reform = jxp_reform_ikko_equal_field_compact }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_captains } remove_government_reform = jxp_reform_wokou_black_current_captains }
+	if = { limit = { has_reform = jxp_reform_wokou_island_broker_courts } remove_government_reform = jxp_reform_wokou_island_broker_courts }
+	if = { limit = { has_reform = jxp_reform_wokou_tidewater_admiralty_charters } remove_government_reform = jxp_reform_wokou_tidewater_admiralty_charters }
+	if = { limit = { has_reform = jxp_reform_wokou_red_seal_raiding_law } remove_government_reform = jxp_reform_wokou_red_seal_raiding_law }
+	if = { limit = { has_reform = jxp_reform_sakoku_fudai_roju_conference } remove_government_reform = jxp_reform_sakoku_fudai_roju_conference }
+	if = { limit = { has_reform = jxp_reform_sakoku_terauke_neighborhood_grids } remove_government_reform = jxp_reform_sakoku_terauke_neighborhood_grids }
+	if = { limit = { has_reform = jxp_reform_sakoku_namban_cordon_commissions } remove_government_reform = jxp_reform_sakoku_namban_cordon_commissions }
+	if = { limit = { has_reform = jxp_reform_sakoku_private_learning_license } remove_government_reform = jxp_reform_sakoku_private_learning_license }
+	if = { limit = { has_reform = jxp_reform_open_red_seal_stock_companies } remove_government_reform = jxp_reform_open_red_seal_stock_companies }
+	if = { limit = { has_reform = jxp_reform_open_translator_state_college } remove_government_reform = jxp_reform_open_translator_state_college }
+	if = { limit = { has_reform = jxp_reform_open_ocean_arsenal_contracts } remove_government_reform = jxp_reform_open_ocean_arsenal_contracts }
+	if = { limit = { has_reform = jxp_reform_open_pacific_settlement_board } remove_government_reform = jxp_reform_open_pacific_settlement_board }
+	if = { limit = { has_reform = jxp_reform_kirishitan_court_of_patronage } remove_government_reform = jxp_reform_kirishitan_court_of_patronage }
+	if = { limit = { has_reform = jxp_reform_kirishitan_confraternity_charities } remove_government_reform = jxp_reform_kirishitan_confraternity_charities }
+	if = { limit = { has_reform = jxp_reform_kirishitan_missionary_admiralty } remove_government_reform = jxp_reform_kirishitan_missionary_admiralty }
+	if = { limit = { has_reform = jxp_reform_kirishitan_sun_cross_crusade_council } remove_government_reform = jxp_reform_kirishitan_sun_cross_crusade_council }
+	if = { limit = { has_reform = jxp_reform_confucian_rite_law_ministry } remove_government_reform = jxp_reform_confucian_rite_law_ministry }
+	if = { limit = { has_reform = jxp_reform_confucian_shinto_harmonization_chamber } remove_government_reform = jxp_reform_confucian_shinto_harmonization_chamber }
+	if = { limit = { has_reform = jxp_reform_confucian_tenka_examination_routes } remove_government_reform = jxp_reform_confucian_tenka_examination_routes }
+	if = { limit = { has_reform = jxp_reform_confucian_east_asian_mandate_commission } remove_government_reform = jxp_reform_confucian_east_asian_mandate_commission }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan_ministries } remove_government_reform = jxp_reform_imperial_daijokan_ministries }
+	if = { limit = { has_reform = jxp_reform_imperial_shrine_constellation } remove_government_reform = jxp_reform_imperial_shrine_constellation }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_general_staff } remove_government_reform = jxp_reform_imperial_restoration_general_staff }
+	if = { limit = { has_reform = jxp_reform_imperial_subject_rank_order } remove_government_reform = jxp_reform_imperial_subject_rank_order }
+	if = { limit = { has_reform = jxp_reform_reformed_hirado_synod_court } remove_government_reform = jxp_reform_reformed_hirado_synod_court }
+	if = { limit = { has_reform = jxp_reform_reformed_printed_catechism_bureau } remove_government_reform = jxp_reform_reformed_printed_catechism_bureau }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_drill_admiralty } remove_government_reform = jxp_reform_reformed_dutch_drill_admiralty }
+	if = { limit = { has_reform = jxp_reform_reformed_covenant_militia_estates } remove_government_reform = jxp_reform_reformed_covenant_militia_estates }
+	if = { limit = { has_reform = jxp_reform_kaikyo_maritime_shura_council } remove_government_reform = jxp_reform_kaikyo_maritime_shura_council }
+	if = { limit = { has_reform = jxp_reform_kaikyo_waqf_port_endowments } remove_government_reform = jxp_reform_kaikyo_waqf_port_endowments }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_ship_register } remove_government_reform = jxp_reform_kaikyo_monsoon_ship_register }
+	if = { limit = { has_reform = jxp_reform_kaikyo_madrasa_navigation_corps } remove_government_reform = jxp_reform_kaikyo_madrasa_navigation_corps }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_public_council } remove_government_reform = jxp_reform_ikko_somon_public_council }
+	if = { limit = { has_reform = jxp_reform_ikko_terauchi_market_law } remove_government_reform = jxp_reform_ikko_terauchi_market_law }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_defense_leagues } remove_government_reform = jxp_reform_ikko_monto_defense_leagues }
+	if = { limit = { has_reform = jxp_reform_ikko_equal_oath_commons } remove_government_reform = jxp_reform_ikko_equal_oath_commons }
+	if = { limit = { has_reform = jxp_reform_wokou_letters_of_black_current } remove_government_reform = jxp_reform_wokou_letters_of_black_current }
+	if = { limit = { has_reform = jxp_reform_wokou_island_trade_courts } remove_government_reform = jxp_reform_wokou_island_trade_courts }
+	if = { limit = { has_reform = jxp_reform_wokou_privateering_admiralty } remove_government_reform = jxp_reform_wokou_privateering_admiralty }
+	if = { limit = { has_reform = jxp_reform_wokou_sea_lord_compacts } remove_government_reform = jxp_reform_wokou_sea_lord_compacts }
+	if = { limit = { has_reform = jxp_reform_sakoku_three_houses_privy_council } remove_government_reform = jxp_reform_sakoku_three_houses_privy_council }
+	if = { limit = { has_reform = jxp_reform_sakoku_coastal_quarantine_bureau } remove_government_reform = jxp_reform_sakoku_coastal_quarantine_bureau }
+	if = { limit = { has_reform = jxp_reform_sakoku_inner_texts_observatory } remove_government_reform = jxp_reform_sakoku_inner_texts_observatory }
+	if = { limit = { has_reform = jxp_reform_open_oceanic_trade_cabinet } remove_government_reform = jxp_reform_open_oceanic_trade_cabinet }
+	if = { limit = { has_reform = jxp_reform_open_foreign_military_advisory_board } remove_government_reform = jxp_reform_open_foreign_military_advisory_board }
+	if = { limit = { has_reform = jxp_reform_open_colonial_exchange_council } remove_government_reform = jxp_reform_open_colonial_exchange_council }
+	if = { limit = { has_reform = jxp_reform_kirishitan_apostolic_privy_council } remove_government_reform = jxp_reform_kirishitan_apostolic_privy_council }
+	if = { limit = { has_reform = jxp_reform_kirishitan_misericordia_domain_network } remove_government_reform = jxp_reform_kirishitan_misericordia_domain_network }
+	if = { limit = { has_reform = jxp_reform_kirishitan_romaji_chancery } remove_government_reform = jxp_reform_kirishitan_romaji_chancery }
+	if = { limit = { has_reform = jxp_reform_confucian_rites_and_censorate_council } remove_government_reform = jxp_reform_confucian_rites_and_censorate_council }
+	if = { limit = { has_reform = jxp_reform_confucian_shinto_ru_school_compact } remove_government_reform = jxp_reform_confucian_shinto_ru_school_compact }
+	if = { limit = { has_reform = jxp_reform_confucian_east_asian_law_commission } remove_government_reform = jxp_reform_confucian_east_asian_law_commission }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan_privy_board } remove_government_reform = jxp_reform_imperial_daijokan_privy_board }
+	if = { limit = { has_reform = jxp_reform_imperial_shrine_envoy_network } remove_government_reform = jxp_reform_imperial_shrine_envoy_network }
+	if = { limit = { has_reform = jxp_reform_imperial_guard_and_tax_office } remove_government_reform = jxp_reform_imperial_guard_and_tax_office }
+	if = { limit = { has_reform = jxp_reform_reformed_synodic_privy_court } remove_government_reform = jxp_reform_reformed_synodic_privy_court }
+	if = { limit = { has_reform = jxp_reform_reformed_print_and_map_office } remove_government_reform = jxp_reform_reformed_print_and_map_office }
+	if = { limit = { has_reform = jxp_reform_reformed_covenant_drill_board } remove_government_reform = jxp_reform_reformed_covenant_drill_board }
+	if = { limit = { has_reform = jxp_reform_kaikyo_shura_privy_diwan } remove_government_reform = jxp_reform_kaikyo_shura_privy_diwan }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_customs_council } remove_government_reform = jxp_reform_kaikyo_monsoon_customs_council }
+	if = { limit = { has_reform = jxp_reform_kaikyo_madrasa_foundry_board } remove_government_reform = jxp_reform_kaikyo_madrasa_foundry_board }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_privy_assembly } remove_government_reform = jxp_reform_ikko_somon_privy_assembly }
+	if = { limit = { has_reform = jxp_reform_ikko_granary_and_temple_commission } remove_government_reform = jxp_reform_ikko_granary_and_temple_commission }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_guard_league } remove_government_reform = jxp_reform_ikko_monto_guard_league }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_privy_admiralty } remove_government_reform = jxp_reform_wokou_black_current_privy_admiralty }
+	if = { limit = { has_reform = jxp_reform_wokou_island_custom_courts } remove_government_reform = jxp_reform_wokou_island_custom_courts }
+	if = { limit = { has_reform = jxp_reform_wokou_sea_lord_levy_contracts } remove_government_reform = jxp_reform_wokou_sea_lord_levy_contracts }
+	if = { limit = { has_reform = jxp_reform_sakoku_kokudaka_cadaster_state } remove_government_reform = jxp_reform_sakoku_kokudaka_cadaster_state }
+	if = { limit = { has_reform = jxp_reform_sakoku_kanei_sea_wall } remove_government_reform = jxp_reform_sakoku_kanei_sea_wall }
+	if = { limit = { has_reform = jxp_reform_sakoku_domain_hostage_offices } remove_government_reform = jxp_reform_sakoku_domain_hostage_offices }
+	if = { limit = { has_reform = jxp_reform_sakoku_inner_learning_license } remove_government_reform = jxp_reform_sakoku_inner_learning_license }
+	if = { limit = { has_reform = jxp_reform_open_red_seal_company_state } remove_government_reform = jxp_reform_open_red_seal_company_state }
+	if = { limit = { has_reform = jxp_reform_open_pacific_settlement_ministry } remove_government_reform = jxp_reform_open_pacific_settlement_ministry }
+	if = { limit = { has_reform = jxp_reform_open_foreign_drill_commission } remove_government_reform = jxp_reform_open_foreign_drill_commission }
+	if = { limit = { has_reform = jxp_reform_open_treaty_port_high_court } remove_government_reform = jxp_reform_open_treaty_port_high_court }
+	if = { limit = { has_reform = jxp_reform_kirishitan_sun_cross_curia } remove_government_reform = jxp_reform_kirishitan_sun_cross_curia }
+	if = { limit = { has_reform = jxp_reform_kirishitan_domain_seminary_network } remove_government_reform = jxp_reform_kirishitan_domain_seminary_network }
+	if = { limit = { has_reform = jxp_reform_kirishitan_martyr_estates } remove_government_reform = jxp_reform_kirishitan_martyr_estates }
+	if = { limit = { has_reform = jxp_reform_kirishitan_pacific_mission_admiralty } remove_government_reform = jxp_reform_kirishitan_pacific_mission_admiralty }
+	if = { limit = { has_reform = jxp_reform_confucian_great_rites_codex } remove_government_reform = jxp_reform_confucian_great_rites_codex }
+	if = { limit = { has_reform = jxp_reform_confucian_kami_harmonization_academy } remove_government_reform = jxp_reform_confucian_kami_harmonization_academy }
+	if = { limit = { has_reform = jxp_reform_confucian_tenka_granary_censorate } remove_government_reform = jxp_reform_confucian_tenka_granary_censorate }
+	if = { limit = { has_reform = jxp_reform_confucian_east_asian_rite_mandate } remove_government_reform = jxp_reform_confucian_east_asian_rite_mandate }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan_restoration_cabinet } remove_government_reform = jxp_reform_imperial_daijokan_restoration_cabinet }
+	if = { limit = { has_reform = jxp_reform_imperial_jingi_envoy_order } remove_government_reform = jxp_reform_imperial_jingi_envoy_order }
+	if = { limit = { has_reform = jxp_reform_imperial_konoe_drill_colleges } remove_government_reform = jxp_reform_imperial_konoe_drill_colleges }
+	if = { limit = { has_reform = jxp_reform_imperial_court_land_survey } remove_government_reform = jxp_reform_imperial_court_land_survey }
+	if = { limit = { has_reform = jxp_reform_reformed_consistory_state } remove_government_reform = jxp_reform_reformed_consistory_state }
+	if = { limit = { has_reform = jxp_reform_reformed_printed_common_law } remove_government_reform = jxp_reform_reformed_printed_common_law }
+	if = { limit = { has_reform = jxp_reform_reformed_burgher_militia_board } remove_government_reform = jxp_reform_reformed_burgher_militia_board }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_engineer_company } remove_government_reform = jxp_reform_reformed_dutch_engineer_company }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_port_circuits } remove_government_reform = jxp_reform_kaikyo_qadi_port_circuits }
+	if = { limit = { has_reform = jxp_reform_kaikyo_waqf_harbor_endowments } remove_government_reform = jxp_reform_kaikyo_waqf_harbor_endowments }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_admiralty } remove_government_reform = jxp_reform_kaikyo_monsoon_admiralty }
+	if = { limit = { has_reform = jxp_reform_kaikyo_madrasa_foundry_cities } remove_government_reform = jxp_reform_kaikyo_madrasa_foundry_cities }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_commonwealth_diet } remove_government_reform = jxp_reform_ikko_somon_commonwealth_diet }
+	if = { limit = { has_reform = jxp_reform_ikko_equal_field_registers } remove_government_reform = jxp_reform_ikko_equal_field_registers }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_war_bells } remove_government_reform = jxp_reform_ikko_monto_war_bells }
+	if = { limit = { has_reform = jxp_reform_ikko_temple_market_law } remove_government_reform = jxp_reform_ikko_temple_market_law }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_high_admiralty } remove_government_reform = jxp_reform_wokou_black_current_high_admiralty }
+	if = { limit = { has_reform = jxp_reform_wokou_island_brokerage_courts } remove_government_reform = jxp_reform_wokou_island_brokerage_courts }
+	if = { limit = { has_reform = jxp_reform_wokou_red_seal_privateering_law } remove_government_reform = jxp_reform_wokou_red_seal_privateering_law }
+	if = { limit = { has_reform = jxp_reform_wokou_sea_lord_federation } remove_government_reform = jxp_reform_wokou_sea_lord_federation }
+}
+
+jxp_grant_route_reforms_effect = {
+	jxp_sync_route_national_ideas_effect = yes
+	if = {
+		limit = { jxp_has_any_route_trigger = yes }
+		jxp_force_monarchical_route_effect = yes
+	}
+	jxp_remove_legacy_autogranted_route_reforms_effect = yes
+	if = {
+		limit = {
+			jxp_is_unified_japan_state_trigger = yes
+			NOT = { has_country_flag = jxp_founder_reform_unlocked_v0234 }
+		}
+		jxp_unlock_founder_house_reform_effect = yes
+	}
+	jxp_sync_final_state_power_structure_effect = yes
+	# Route flags live in reform triggers. Rebuild the option list immediately
+	# after a final-tag change instead of waiting for the government window to
+	# refresh on its own.
+	regenerate_government_mechanics = yes
+}
+
+jxp_clear_all_route_flags_effect = {
+	jxp_clear_route_reforms_effect = yes
+	jxp_clear_route_modifiers_effect = yes
+	clr_country_flag = jxp_route_ideas_synced_v0241
+	clr_country_flag = jxp_path_sakoku
+	clr_country_flag = jxp_path_open_trade
+	clr_country_flag = jxp_path_kirishitan
+	clr_country_flag = jxp_path_confucian
+	clr_country_flag = jxp_path_imperial
+	clr_country_flag = jxp_path_reformed
+	clr_country_flag = jxp_path_kaikyo
+	clr_country_flag = jxp_path_ikko
+	clr_country_flag = jxp_path_wokou
+}
+
+jxp_sync_route_national_ideas_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_custom_ideas = no
+				OR = {
+					tag = JAP
+					tag = KJP
+					tag = CJP
+					tag = EJP
+					tag = RFJ
+					tag = SJP
+					tag = IJP
+					tag = WAK
+					tag = TOY
+				}
+				OR = {
+					NOT = { has_country_flag = jxp_route_ideas_synced_v0241 }
+					AND = { tag = JAP NOT = { has_idea_group = JAP_ideas } }
+					AND = { tag = KJP NOT = { has_idea_group = KJP_ideas } }
+					AND = { tag = CJP NOT = { has_idea_group = CJP_ideas } }
+					AND = { tag = EJP NOT = { has_idea_group = EJP_ideas } }
+					AND = { tag = RFJ NOT = { has_idea_group = RFJ_ideas } }
+					AND = { tag = SJP NOT = { has_idea_group = SJP_ideas } }
+					AND = { tag = IJP NOT = { has_idea_group = IJP_ideas } }
+					AND = { tag = WAK NOT = { has_idea_group = WAK_ideas } }
+					AND = { tag = TOY NOT = { has_idea_group = TOY_ideas } }
+				}
+			}
+			swap_free_idea_group = yes
+			set_country_flag = jxp_route_ideas_synced_v0241
+		}
+	}
+}
+
+jxp_clear_route_modifiers_effect = {
+	jxp_72_wak_cleanup_effect = yes
+	jxp_74_ijp_route_exit_effect = yes
+	jxp_75_reset_route_parity_four_effect = yes
+	remove_country_modifier = jxp_route_sakoku
+	remove_country_modifier = jxp_route_open_trade
+	remove_country_modifier = jxp_route_kirishitan
+	remove_country_modifier = jxp_route_confucian
+	remove_country_modifier = jxp_route_imperial
+	remove_country_modifier = jxp_route_reformed
+	remove_country_modifier = jxp_route_kaikyo
+	remove_country_modifier = jxp_route_ikko
+	remove_country_modifier = jxp_route_wokou
+	remove_country_modifier = jxp_71_route_council_recent
+	remove_country_modifier = jxp_71_sakoku_post_road_registers
+	remove_country_modifier = jxp_71_sakoku_coastal_musters
+	remove_country_modifier = jxp_71_sakoku_sealed_translation_room
+	remove_country_modifier = jxp_71_open_silver_assay_board
+	remove_country_modifier = jxp_71_open_artillery_inspectors
+	remove_country_modifier = jxp_71_open_charter_auditors
+	remove_country_modifier = jxp_71_imperial_rite_register
+	remove_country_modifier = jxp_71_imperial_kokushi_circuit
+	remove_country_modifier = jxp_71_imperial_guard_muster
+}
+
+jxp_force_monarchical_route_effect = {
+	if = {
+		limit = { has_reform = presidential_despot_reform }
+		remove_government_reform = presidential_despot_reform
+	}
+	if = {
+		limit = { has_reform = military_dictatorship_reform }
+		remove_government_reform = military_dictatorship_reform
+	}
+	if = {
+		limit = { NOT = { government = monarchy } }
+		change_government_to_monarchy = yes
+	}
+}
+
+jxp_sanitize_confucian_route_effect = {
+	hidden_effect = {
+		jxp_import_shinto_isolationism_to_oceanic_opening_effect = yes
+		jxp_clear_all_route_flags_effect = yes
+		jxp_clear_route_modifiers_effect = yes
+		set_country_flag = jxp_path_confucian
+		if = {
+			limit = { NOT = { tag = CJP } }
+			jxp_record_daimyo_origin_effect = yes
+			change_tag = CJP
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+		}
+		jxp_force_monarchical_route_effect = yes
+		change_religion = confucianism
+		set_ruler_religion = confucianism
+		if = {
+			limit = { has_heir = yes }
+			set_heir_religion = confucianism
+		}
+		add_country_modifier = {
+			name = jxp_route_confucian
+			duration = -1
+		}
+		jxp_confucian_sync_shinto_effect = yes
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		if = {
+			limit = { NOT = { has_country_flag = jxp_confucian_centers_established } }
+			country_event = { id = jxp_confucian.2 days = 1 }
+		}
+	}
+}
+
+jxp_sanitize_route_state_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				OR = {
+					tag = CJP
+					AND = {
+						has_country_flag = jxp_path_confucian
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = EJP
+								tag = RFJ
+								tag = SJP
+								tag = IJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_confucian
+			if = {
+				limit = { NOT = { tag = CJP } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = CJP
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			change_religion = confucianism
+			set_ruler_religion = confucianism
+			if = { limit = { has_heir = yes } set_heir_religion = confucianism }
+			add_country_modifier = { name = jxp_route_confucian duration = -1 }
+			jxp_confucian_sync_shinto_effect = yes
+			if = {
+				limit = { NOT = { has_country_flag = jxp_confucian_centers_established } }
+				country_event = { id = jxp_confucian.2 days = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = KJP
+					AND = {
+						has_country_flag = jxp_path_kirishitan
+						NOT = {
+							OR = {
+								tag = CJP
+								tag = EJP
+								tag = RFJ
+								tag = SJP
+								tag = IJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_kirishitan
+			if = {
+				limit = { NOT = { tag = KJP } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = KJP
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			change_religion = catholic
+			set_ruler_religion = catholic
+			if = { limit = { has_heir = yes } set_heir_religion = catholic }
+			add_country_modifier = { name = jxp_route_kirishitan duration = -1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = EJP
+					AND = {
+						has_country_flag = jxp_path_imperial
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = CJP
+								tag = RFJ
+								tag = SJP
+								tag = IJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_imperial
+			if = {
+				limit = { NOT = { tag = EJP } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = EJP
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			add_country_modifier = { name = jxp_route_imperial duration = -1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = RFJ
+					AND = {
+						has_country_flag = jxp_path_reformed
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = CJP
+								tag = EJP
+								tag = SJP
+								tag = IJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_reformed
+			if = {
+				limit = { NOT = { tag = RFJ } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = RFJ
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			change_religion = reformed
+			set_ruler_religion = reformed
+			if = { limit = { has_heir = yes } set_heir_religion = reformed }
+			add_country_modifier = { name = jxp_route_reformed duration = -1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = SJP
+					AND = {
+						has_country_flag = jxp_path_kaikyo
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = CJP
+								tag = EJP
+								tag = RFJ
+								tag = IJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_kaikyo
+			if = {
+				limit = { NOT = { tag = SJP } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = SJP
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			change_religion = sunni
+			set_ruler_religion = sunni
+			if = { limit = { has_heir = yes } set_heir_religion = sunni }
+			add_country_modifier = { name = jxp_route_kaikyo duration = -1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = IJP
+					AND = {
+						has_country_flag = jxp_path_ikko
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = CJP
+								tag = EJP
+								tag = RFJ
+								tag = SJP
+								tag = WAK
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_ikko
+			set_country_flag = jxp_ikko_contact
+			if = {
+				limit = { NOT = { tag = IJP } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = IJP
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			add_country_modifier = { name = jxp_route_ikko duration = -1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = WAK
+					AND = {
+						has_country_flag = jxp_path_wokou
+						NOT = {
+							OR = {
+								tag = KJP
+								tag = CJP
+								tag = EJP
+								tag = RFJ
+								tag = SJP
+								tag = IJP
+							}
+						}
+					}
+				}
+			}
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_wokou
+			set_country_flag = jxp_wokou_contact
+			if = {
+				limit = { NOT = { tag = WAK } }
+				jxp_record_daimyo_origin_effect = yes
+				change_tag = WAK
+				on_change_tag_effect = yes
+				restore_country_name_effect = yes
+			}
+			jxp_force_monarchical_route_effect = yes
+			add_country_modifier = { name = jxp_route_wokou duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_flag = jxp_path_sakoku }
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_sakoku
+			jxp_force_monarchical_route_effect = yes
+			add_country_modifier = { name = jxp_route_sakoku duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_flag = jxp_path_open_trade }
+			jxp_clear_all_route_flags_effect = yes
+			set_country_flag = jxp_path_open_trade
+			jxp_force_monarchical_route_effect = yes
+			add_country_modifier = { name = jxp_route_open_trade duration = -1 }
+		}
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+jxp_grant_japan_region_claims_effect = {
+	every_province = {
+		limit = {
+			region = japan_region
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_grant_ikko_heartland_claims_effect = {
+	every_province = {
+		limit = {
+			OR = {
+				area = kinai_area
+				area = saigoku_area
+				has_province_flag = jxp_map_compat_ikko_heartland
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_grant_wokou_sea_claims_effect = {
+	every_province = {
+		limit = {
+			OR = {
+				area = northern_kyushu
+				area = kyushu_area
+				area = saigoku_area
+				has_province_flag = jxp_map_compat_wokou_waters
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+jxp_refresh_route_missions_effect = {
+	hidden_effect = {
+		# Refresh immediately so a route choice updates the open mission panel,
+		# then reconcile once more after tag/religion effects settle.
+		swap_non_generic_missions = yes
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_mission_refresh_pending }
+			}
+			set_country_flag = jxp_mission_refresh_pending
+			country_event = { id = jxp_mission_refresh.1 days = 1 }
+		}
+	}
+}
+
+jxp_change_to_kjp_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = KJP
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	change_religion = catholic
+	set_ruler_religion = catholic
+	if = {
+		limit = { has_heir = yes }
+		set_heir_religion = catholic
+	}
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	country_event = { id = jxp_kirishitan.5 days = 1 }
+}
+
+jxp_import_shinto_isolationism_to_oceanic_opening_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				religion = shinto
+				NOT = { has_country_flag = jxp_confucian_isolationism_imported }
+			}
+			# Preserve the old Shinto policy trajectory before Confucianism
+			# replaces the isolationism interface with harmony.
+			if = {
+				limit = {
+					isolationism = 0
+					NOT = { check_variable = { which = jxp_oceanic_opening value = 100 } }
+				}
+				set_variable = { which = jxp_oceanic_opening value = 100 }
+			}
+			else_if = {
+				limit = {
+					isolationism = 1
+					NOT = { check_variable = { which = jxp_oceanic_opening value = 75 } }
+				}
+				set_variable = { which = jxp_oceanic_opening value = 75 }
+			}
+			else_if = {
+				limit = {
+					isolationism = 2
+					NOT = { check_variable = { which = jxp_oceanic_opening value = 50 } }
+				}
+				set_variable = { which = jxp_oceanic_opening value = 50 }
+			}
+			else_if = {
+				limit = {
+					isolationism = 3
+					NOT = { check_variable = { which = jxp_oceanic_opening value = 25 } }
+				}
+				set_variable = { which = jxp_oceanic_opening value = 25 }
+			}
+			set_country_flag = jxp_confucian_isolationism_imported
+			jxp_clamp_polity_values_effect = yes
+			jxp_sync_polity_mechanic_from_variables_effect = yes
+		}
+	}
+}
+
+jxp_change_to_cjp_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	jxp_import_shinto_isolationism_to_oceanic_opening_effect = yes
+	change_tag = CJP
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	change_religion = confucianism
+	set_ruler_religion = confucianism
+	if = {
+		limit = { has_heir = yes }
+		set_heir_religion = confucianism
+	}
+	jxp_confucian_sync_shinto_effect = yes
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	country_event = { id = jxp_confucian.2 days = 1 }
+}
+
+jxp_change_to_ejp_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = EJP
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+}
+
+jxp_change_to_rfj_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = RFJ
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	change_religion = reformed
+	set_ruler_religion = reformed
+	if = {
+		limit = { has_heir = yes }
+		set_heir_religion = reformed
+	}
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	if = {
+		limit = { NOT = { has_reform = jxp_reformed_japan_reform } }
+		add_government_reform = jxp_reformed_japan_reform
+	}
+	country_event = { id = jxp_reformed.4 days = 1 }
+}
+
+jxp_change_to_sjp_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = SJP
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	change_religion = sunni
+	set_ruler_religion = sunni
+	if = {
+		limit = { has_heir = yes }
+		set_heir_religion = sunni
+	}
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	if = {
+		limit = { NOT = { has_reform = jxp_kaikyo_japan_reform } }
+		add_government_reform = jxp_kaikyo_japan_reform
+	}
+	country_event = { id = jxp_kaikyo.4 days = 1 }
+}
+
+jxp_change_to_ijp_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = IJP
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	if = {
+		limit = { NOT = { has_reform = jxp_ikko_commonwealth_reform } }
+		add_government_reform = jxp_ikko_commonwealth_reform
+	}
+	country_event = { id = jxp_ikko.1 days = 1 }
+}
+
+jxp_change_to_wak_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	change_tag = WAK
+	on_change_tag_effect = yes
+	restore_country_name_effect = yes
+	jxp_force_monarchical_route_effect = yes
+	jxp_refresh_route_missions_effect = yes
+	jxp_ensure_polity_mechanic_effect = yes
+	jxp_grant_route_reforms_effect = yes
+	if = {
+		limit = { NOT = { has_reform = jxp_wokou_admiralty_reform } }
+		add_government_reform = jxp_wokou_admiralty_reform
+	}
+	country_event = { id = jxp_wokou.1 days = 1 }
+}
+
+jxp_reduce_shimabara_pressure_effect = {
+	set_country_flag = jxp_shimabara_mitigated
+	add_country_modifier = {
+		name = jxp_shimabara_mediation
+		duration = 3650
+	}
+}

@@ -1,0 +1,22 @@
+Japan historical province and district boundaries
+================================================
+
+The map builder uses transformed and rasterized boundary data from:
+
+  "Old Provinces / Old Districts Dataset" by the Center for Open Data in
+  the Humanities (CODH), processed from the Bakumatsu-Meiji topographic-map
+  boundary data created by the National Institutes for the Humanities.
+
+  DOI: https://doi.org/10.20676/00000454
+  Dataset: https://geoshape.ex.nii.ac.jp/kg/
+
+Required Japanese attribution:
+
+  『旧国・旧郡データセット』（CODH作成）「幕末明治地勢地図境界データ」
+  （人間文化研究機構作成）を加工 doi:10.20676/00000454
+
+The source dataset is published under CC BY-NC. The generated EU4 raster is
+a simplified, transformed, non-commercial derivative. EU4 coastlines remain
+those of Europa Universalis IV 1.37.5; no source polygon is copied verbatim to
+the game map.
+

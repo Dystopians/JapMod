@@ -1,0 +1,602 @@
+jxp_reform_sakoku_sankin_kotai_roads = {
+	icon = "jxp_sakoku_hostage_roads"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_sakoku_sankin_kotai_roads
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_sakoku
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.05
+		global_tax_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_coastal_barriers = {
+	icon = "jxp_sakoku_coastal_watch"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_sakoku_coastal_barriers
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_sakoku
+	}
+	modifiers = {
+		defensiveness = 0.10
+		global_spy_defence = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_hidden_learning = {
+	icon = "jxp_sakoku_hidden_books"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_sakoku_hidden_learning
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_sakoku
+	}
+	modifiers = {
+		technology_cost = -0.02
+		advisor_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_silver_exchange = {
+	icon = "jxp_open_silver_scales"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_open_silver_exchange
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_open_trade
+	}
+	modifiers = {
+		trade_efficiency = 0.07
+		inflation_reduction = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_foreign_artillery_contracts = {
+	icon = "jxp_open_artillery_contract"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_open_foreign_artillery_contracts
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_open_trade
+	}
+	modifiers = {
+		artillery_cost = -0.05
+		fire_damage = 0.03
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_chartered_factories = {
+	icon = "jxp_open_chartered_factory"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_open_chartered_factories
+		}
+	}
+	trigger = {
+		has_country_flag = jxp_path_open_trade
+	}
+	modifiers = {
+		merchants = 1
+		trade_range_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_seminaries = {
+	icon = "jxp_kirishitan_seminary_book"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kirishitan_seminaries
+		}
+	}
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.01
+		advisor_pool = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_misericordia_hospitals = {
+	icon = "jxp_kirishitan_hospital_bell"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kirishitan_misericordia_hospitals
+		}
+	}
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_nagasaki_admiralty = {
+	icon = "jxp_kirishitan_nagasaki_admiralty"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kirishitan_nagasaki_admiralty
+		}
+	}
+	trigger = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		naval_forcelimit_modifier = 0.10
+		galley_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_examination_domains = {
+	icon = "jxp_confucian_exam_tablet"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_confucian_examination_domains
+		}
+	}
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.05
+		monthly_reform_progress_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_sinicized_codes = {
+	icon = "jxp_confucian_law_codex"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_confucian_sinicized_codes
+		}
+	}
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		core_creation = -0.05
+		num_accepted_cultures = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_three_teachings_board = {
+	icon = "jxp_confucian_three_teachings"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_confucian_three_teachings_board
+		}
+	}
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		harmonization_speed = 0.10
+		tolerance_heathen = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_kokugaku_office = {
+	icon = "jxp_imperial_kokugaku_scroll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_imperial_kokugaku_office
+		}
+	}
+	trigger = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		legitimacy = 0.5
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_kokushi_governors = {
+	icon = "jxp_imperial_governor_seal"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_imperial_kokushi_governors
+		}
+	}
+	trigger = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.03
+		governing_capacity_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_restoration_army = {
+	icon = "jxp_imperial_guard_banner"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_imperial_restoration_army
+		}
+	}
+	trigger = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		discipline = 0.025
+		land_forcelimit_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_printing_synods = {
+	icon = "jxp_reformed_printing_press"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_reformed_printing_synods
+		}
+	}
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		global_institution_spread = 0.10
+		embracement_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_civic_compacts = {
+	icon = "jxp_reformed_civic_oath"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_reformed_civic_compacts
+		}
+	}
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		religious_unity = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_contract_fleet = {
+	icon = "jxp_reformed_contract_ship"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_reformed_contract_fleet
+		}
+	}
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		trade_steering = 0.10
+		naval_maintenance_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_monsoon_diwan = {
+	icon = "jxp_kaikyo_monsoon_diwan"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kaikyo_monsoon_diwan
+		}
+	}
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.07
+		trade_range_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_wakf_granaries = {
+	icon = "jxp_kaikyo_waqf_granary"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kaikyo_wakf_granaries
+		}
+	}
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_spice_guard = {
+	icon = "jxp_kaikyo_spice_guard"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_kaikyo_spice_guard
+		}
+	}
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		naval_morale = 0.05
+		ship_durability = 0.02
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_somon_councils = {
+	icon = "jxp_ikko_somon_bell"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_ikko_somon_councils
+		}
+	}
+	trigger = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		manpower_recovery_speed = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_granary_communes = {
+	icon = "jxp_ikko_granary"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_ikko_granary_communes
+		}
+	}
+	trigger = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		global_manpower_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_ashigaru_congregations = {
+	icon = "jxp_ikko_ashigaru_oath"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_ikko_ashigaru_congregations
+		}
+	}
+	trigger = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		infantry_cost = -0.05
+		land_morale = 0.04
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_black_tide_law = {
+	icon = "jxp_wokou_black_tide_law"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_wokou_black_tide_law
+		}
+	}
+	trigger = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		privateer_efficiency = 0.15
+		embargo_efficiency = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_island_freeports = {
+	icon = "jxp_wokou_freeport"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_wokou_island_freeports
+		}
+	}
+	trigger = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.07
+		naval_forcelimit_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_boarding_companies = {
+	icon = "jxp_wokou_boarding_hooks"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_is_japanese_polity_trigger = yes
+			has_reform = jxp_reform_wokou_boarding_companies
+		}
+	}
+	trigger = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		capture_ship_chance = 0.10
+		blockade_efficiency = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}

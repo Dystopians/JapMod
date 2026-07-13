@@ -1,0 +1,49 @@
+jxp_25_warrior_muster_rolls = {
+	manpower_recovery_speed = 0.08
+	global_regiment_cost = -0.03
+}
+
+jxp_25_warrior_captain_oaths = {
+	land_morale = 0.04
+	army_tradition = 0.25
+}
+
+jxp_25_court_rank_petitions = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.08
+}
+
+jxp_25_court_local_stewards = {
+	state_maintenance_modifier = -0.05
+	global_tax_modifier = 0.04
+}
+
+jxp_25_maritime_port_registers = {
+	trade_efficiency = 0.06
+	global_ship_trade_power = 0.08
+}
+
+jxp_25_maritime_ship_rolls = {
+	naval_morale = 0.05
+	naval_forcelimit_modifier = 0.08
+}
+
+jxp_25_frontier_pass_wardens = {
+	defensiveness = 0.08
+	global_manpower_modifier = 0.05
+}
+
+jxp_25_frontier_market_brokers = {
+	production_efficiency = 0.05
+	trade_steering = 0.08
+}
+
+jxp_25_temple_market_privileges = {
+	religious_unity = 0.08
+	stability_cost_modifier = -0.05
+}
+
+jxp_25_temple_market_account_books = {
+	global_tax_modifier = 0.05
+	production_efficiency = 0.04
+}

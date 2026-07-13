@@ -1,0 +1,491 @@
+# Generated continuous subject intervals for the 88-province map.
+
+vassal = {
+	first = ASK
+	second = RKK
+	start_date = 1444.11.11
+	end_date = 1568.10.1
+}
+
+vassal = {
+	first = ASK
+	second = KYO
+	start_date = 1444.11.11
+	end_date = 1523.1.1
+}
+
+vassal = {
+	first = ASK
+	second = WKT
+	start_date = 1444.11.11
+	end_date = 1570.1.1
+}
+
+vassal = {
+	first = ASK
+	second = TGS
+	start_date = 1444.11.11
+	end_date = 1488.1.1
+}
+
+vassal = {
+	first = ASK
+	second = NHT
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = NHT
+	start_date = 1573.7.3
+	end_date = 1577.9.15
+}
+
+vassal = {
+	first = ASK
+	second = ANK
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = ANK
+	start_date = 1573.7.3
+	end_date = 1585.1.1
+}
+
+vassal = {
+	first = ASK
+	second = HNM
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = HNM
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = HNM
+	start_date = 1586.1.1
+	end_date = 1589.1.1
+}
+
+vassal = {
+	first = ASK
+	second = MOG
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = MOG
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = MOG
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = MOG
+	start_date = 1600.10.21
+	end_date = 1622.9.1
+}
+
+vassal = {
+	first = ASK
+	second = ASN
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = ASN
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = ASN
+	start_date = 1586.1.1
+	end_date = 1589.6.5
+}
+
+vassal = {
+	first = ASK
+	second = OSK
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = OSK
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = OSK
+	start_date = 1586.1.1
+	end_date = 1590.7.26
+}
+
+vassal = {
+	first = ASK
+	second = SMA
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = SMA
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = SMA
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = SMA
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = ASK
+	second = DHO
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = DHO
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = DHO
+	start_date = 1586.1.1
+	end_date = 1588.1.1
+}
+
+vassal = {
+	first = ASK
+	second = MKM
+	start_date = 1444.11.11
+	end_date = 1553.1.1
+}
+
+vassal = {
+	first = ASK
+	second = SGR
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = SGR
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = SGR
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = SGR
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = ASK
+	second = KMP
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = KMP
+	start_date = 1573.7.3
+	end_date = 1574.1.1
+}
+
+vassal = {
+	first = ASK
+	second = ARI
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = ARI
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = ARI
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = ARI
+	start_date = 1600.10.21
+	end_date = 1612.6.4
+}
+
+vassal = {
+	first = ASK
+	second = MTU
+	start_date = 1444.11.11
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = MTU
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = MTU
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = MTU
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = ASK
+	second = STM
+	start_date = 1456.1.1
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = STM
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = STM
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = STM
+	start_date = 1600.10.21
+	end_date = 1614.1.1
+}
+
+vassal = {
+	first = ASK
+	second = HNG
+	start_date = 1488.1.1
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = HNG
+	start_date = 1573.7.3
+	end_date = 1580.8.2
+}
+
+vassal = {
+	first = ASK
+	second = AZI
+	start_date = 1523.1.1
+	end_date = 1573.9.26
+}
+
+vassal = {
+	first = ASK
+	second = MYO
+	start_date = 1549.5.9
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ASK
+	second = STO
+	start_date = 1550.1.1
+	end_date = 1567.10.1
+}
+
+vassal = {
+	first = ASK
+	second = RZJ
+	start_date = 1559.2.18
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = RZJ
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = RZJ
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = RZJ
+	start_date = 1600.10.21
+	end_date = 1607.1.1
+}
+
+vassal = {
+	first = ASK
+	second = UKT
+	start_date = 1568.1.1
+	end_date = 1573.7.3
+}
+
+vassal = {
+	first = ODA
+	second = UKT
+	start_date = 1573.7.3
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = UKT
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = ODA
+	second = TGR
+	start_date = 1578.1.1
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = TGR
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = TGR
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = ODA
+	second = HCS
+	start_date = 1585.8.23
+	end_date = 1586.1.1
+}
+
+vassal = {
+	first = TOY
+	second = HCS
+	start_date = 1586.1.1
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = HCS
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = TOY
+	second = MTS
+	start_date = 1590.8.10
+	end_date = 1600.10.21
+}
+
+vassal = {
+	first = TKG
+	second = MTS
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = TKG
+	second = KRD
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = TKG
+	second = YMC
+	start_date = 1600.10.21
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = TKG
+	second = NBS
+	start_date = 1607.1.1
+	end_date = 1821.1.1
+}

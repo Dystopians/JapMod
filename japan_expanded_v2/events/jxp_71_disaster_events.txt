@@ -1,0 +1,66 @@
+namespace = jxp_disasters
+
+country_event = {
+	id = jxp_disasters.1
+	title = "jxp_disasters.1.t"
+	desc = "jxp_disasters.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_keian_ronin_crisis_active
+	}
+
+	option = {
+		name = "jxp_disasters.1.a"
+		add_adm_power = -50
+		add_country_modifier = {
+			name = jxp_keian_ronin_reemployment
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_disasters.1.b"
+		add_mil_power = -50
+		add_country_modifier = {
+			name = jxp_keian_ronin_patrols
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_disasters.2
+	title = "jxp_disasters.2.t"
+	desc = "jxp_disasters.2.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_tenmei_famine_active
+	}
+
+	option = {
+		name = "jxp_disasters.2.a"
+		add_adm_power = -75
+		add_treasury = -100
+		add_country_modifier = {
+			name = jxp_tenmei_relief_granaries
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_disasters.2.b"
+		add_dip_power = -50
+		add_country_modifier = {
+			name = jxp_tenmei_rationing
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}

@@ -1,0 +1,40 @@
+#4957 - Inaba
+
+owner = YMN
+controller = YMN
+culture = japanese
+religion = shinto
+capital = "Tottori"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_manpower = 2
+base_production = 1
+is_city = yes
+add_core = YMN
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1542.1.1 = { discovered_by = POR }
+
+1580.5.21 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = YMN
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

@@ -1,0 +1,51 @@
+# Generated historical daimyo country definition.
+graphical_culture = asiangfx
+color = { 39 113 89 }
+revolutionary_colors = { 8 1 8 }
+
+historical_idea_groups = {
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	quality_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"国清 #0" = 80
+	"义久 #0" = 40
+	"晴信 #0" = 40
+	"隆正 #0" = 40
+	"正信 #0" = 40
+	"德 #0" = -5
+	"绫 #0" = -5
+}
+
+leader_names = { 村上 斋藤 渡边 森 近藤 服部 酒井 阿部 伊藤 内藤 大久保 本多 鸟居 }
+ship_names = {
+	"村上 Maru" "Nippon Maru" "$PROVINCE$ Maru" "Asahi Maru" "Akatsuki Maru"
+	"Hachiman Maru" "Sumiyoshi Maru" "Kasuga Maru" "Matsukaze Maru" "Wakaba Maru"
+	"Shiranui Maru" "Chihaya Maru"
+}
+army_names = {
+	"村上 Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Ichi no Te" "Ni no Te" "San no Te" "Hata Bugyo Shu" "Kiba Shu" "Teppo Shu"
+}
+fleet_names = {
+	"村上 Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
+	"Ni no Fune" "San no Fune" "Ura Shu" "Oki Shu" "Hayafune Shu" "Sekibune Shu"
+}

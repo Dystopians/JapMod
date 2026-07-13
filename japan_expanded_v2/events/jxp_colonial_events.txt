@@ -1,0 +1,279 @@
+namespace = jxp_colonial
+
+country_event = {
+	id = jxp_colonial.1
+	title = "jxp_colonial.1.t"
+	desc = "jxp_colonial.1.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_can_use_overseas_expansion_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_year = 1620
+		NOT = { has_country_flag = jxp_pacific_charter_seen }
+		jxp_oceanic_opening_at_least_60 = yes
+		num_of_ports = 6
+		OR = {
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_wokou
+			tag = KJP
+			tag = RFJ
+			tag = SJP
+			tag = WAK
+			num_of_colonists = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = "jxp_colonial.1.a"
+		set_country_flag = jxp_pacific_charter_seen
+		jxp_enact_pacific_charter_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial.1.b"
+		set_country_flag = jxp_pacific_charter_seen
+		set_country_flag = jxp_pacific_charter_enacted
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		jxp_establish_oceanic_sun_state_effect = yes
+		add_country_modifier = {
+			name = jxp_oceanic_sun_state
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_colonial.5
+	title = "jxp_colonial.5.t"
+	desc = "jxp_colonial.5.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_colonial.5.a"
+		jxp_establish_pacific_admiralty_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial.5.b"
+		set_country_flag = jxp_pacific_admiralty_done
+		add_navy_tradition = 10
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_colonial.6
+	title = "jxp_colonial.6.t"
+	desc = "jxp_colonial.6.d"
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_colonial.6.a"
+		jxp_chart_north_pacific_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial.6.b"
+		add_navy_tradition = 5
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_colonial.7
+	title = "jxp_colonial.7.t"
+	desc = "jxp_colonial.7.d"
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_colonial.7.a"
+		jxp_apply_pacific_silver_flow_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial.7.b"
+		set_country_flag = jxp_pacific_silver_flow_done
+		add_treasury = 150
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_colonial.8
+	title = "jxp_colonial.8.t"
+	desc = "jxp_colonial.8.d"
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_colonial.8.a"
+		jxp_establish_new_world_japan_towns_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial.8.b"
+		set_country_flag = jxp_new_world_japan_towns_done
+		add_prestige = 10
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_colonial.2
+	title = "jxp_colonial.2.t"
+	desc = "jxp_colonial.2.d"
+	picture = TRADEGOODS_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_can_use_overseas_expansion_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_year = 1570
+		NOT = { has_country_flag = jxp_manila_nagasaki_route_seen }
+		jxp_oceanic_opening_at_least_35 = yes
+		owns_or_non_sovereign_subject_of = 4182
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			OR = {
+				area = luzon_area
+				area = southern_luzon_area
+			}
+			is_city = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	option = {
+		name = "jxp_colonial.2.a"
+		set_country_flag = jxp_manila_nagasaki_route_seen
+		jxp_add_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_manila_nagasaki_route
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_colonial.2.b"
+		set_country_flag = jxp_manila_nagasaki_route_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_colonial.3
+	title = "jxp_colonial.3.t"
+	desc = "jxp_colonial.3.d"
+	picture = COLONIZATION_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_can_use_overseas_expansion_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_random_new_world = no
+		is_year = 1580
+		NOT = { has_country_flag = jxp_alaska_survey_seen }
+		jxp_oceanic_opening_at_least_35 = yes
+		num_of_ports = 5
+		OR = {
+			colonial_alaska = { has_discovered = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				colonial_region = colonial_alaska
+				is_city = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_colonial.3.a"
+		set_country_flag = jxp_alaska_survey_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_pacific_waystations
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_colonial.3.b"
+		set_country_flag = jxp_alaska_survey_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_navy_tradition = 5
+	}
+}
+
+country_event = {
+	id = jxp_colonial.4
+	title = "jxp_colonial.4.t"
+	desc = "jxp_colonial.4.d"
+	picture = COLONIZATION_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_can_use_overseas_expansion_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_random_new_world = no
+		is_year = 1600
+		NOT = { has_country_flag = jxp_california_anchorages_seen }
+		jxp_oceanic_opening_at_least_50 = yes
+		OR = {
+			colonial_california = { has_discovered = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				colonial_region = colonial_california
+				is_city = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "jxp_colonial.4.a"
+		set_country_flag = jxp_california_anchorages_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_alaska_california_route
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_colonial.4.b"
+		set_country_flag = jxp_california_anchorages_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_colonial_sun_banner
+			duration = 3650
+		}
+	}
+}

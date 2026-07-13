@@ -1,0 +1,29 @@
+jxp_clear_route_high_office_reforms_effect = {
+	if = { limit = { has_reform = jxp_reform_sakoku_terauke_inquest_office } remove_government_reform = jxp_reform_sakoku_terauke_inquest_office }
+	if = { limit = { has_reform = jxp_reform_sakoku_alternate_attendance_treasury } remove_government_reform = jxp_reform_sakoku_alternate_attendance_treasury }
+	if = { limit = { has_reform = jxp_reform_sakoku_rangaku_observatory_license } remove_government_reform = jxp_reform_sakoku_rangaku_observatory_license }
+	if = { limit = { has_reform = jxp_reform_open_transpacific_company_board } remove_government_reform = jxp_reform_open_transpacific_company_board }
+	if = { limit = { has_reform = jxp_reform_open_treaty_port_circuit_courts } remove_government_reform = jxp_reform_open_treaty_port_circuit_courts }
+	if = { limit = { has_reform = jxp_reform_open_blue_water_gunnery_colleges } remove_government_reform = jxp_reform_open_blue_water_gunnery_colleges }
+	if = { limit = { has_reform = jxp_reform_kirishitan_apostolic_land_registers } remove_government_reform = jxp_reform_kirishitan_apostolic_land_registers }
+	if = { limit = { has_reform = jxp_reform_kirishitan_misericordia_state_hospitals } remove_government_reform = jxp_reform_kirishitan_misericordia_state_hospitals }
+	if = { limit = { has_reform = jxp_reform_kirishitan_sun_cross_overseas_orders } remove_government_reform = jxp_reform_kirishitan_sun_cross_overseas_orders }
+	if = { limit = { has_reform = jxp_reform_confucian_classics_examination_ministry } remove_government_reform = jxp_reform_confucian_classics_examination_ministry }
+	if = { limit = { has_reform = jxp_reform_confucian_shinbutsu_rite_courts } remove_government_reform = jxp_reform_confucian_shinbutsu_rite_courts }
+	if = { limit = { has_reform = jxp_reform_confucian_east_asian_prefectures } remove_government_reform = jxp_reform_confucian_east_asian_prefectures }
+	if = { limit = { has_reform = jxp_reform_imperial_jingikan_state_network } remove_government_reform = jxp_reform_imperial_jingikan_state_network }
+	if = { limit = { has_reform = jxp_reform_imperial_restoration_command_school } remove_government_reform = jxp_reform_imperial_restoration_command_school }
+	if = { limit = { has_reform = jxp_reform_imperial_court_land_revenue_board } remove_government_reform = jxp_reform_imperial_court_land_revenue_board }
+	if = { limit = { has_reform = jxp_reform_reformed_printed_public_law } remove_government_reform = jxp_reform_reformed_printed_public_law }
+	if = { limit = { has_reform = jxp_reform_reformed_burgher_militia_commissions } remove_government_reform = jxp_reform_reformed_burgher_militia_commissions }
+	if = { limit = { has_reform = jxp_reform_reformed_dutch_exchange_engineers } remove_government_reform = jxp_reform_reformed_dutch_exchange_engineers }
+	if = { limit = { has_reform = jxp_reform_kaikyo_harbor_qadi_high_courts } remove_government_reform = jxp_reform_kaikyo_harbor_qadi_high_courts }
+	if = { limit = { has_reform = jxp_reform_kaikyo_monsoon_pilgrim_fleet } remove_government_reform = jxp_reform_kaikyo_monsoon_pilgrim_fleet }
+	if = { limit = { has_reform = jxp_reform_kaikyo_madrasa_cast_foundries } remove_government_reform = jxp_reform_kaikyo_madrasa_cast_foundries }
+	if = { limit = { has_reform = jxp_reform_ikko_somon_equal_field_boards } remove_government_reform = jxp_reform_ikko_somon_equal_field_boards }
+	if = { limit = { has_reform = jxp_reform_ikko_temple_market_mutual_aid } remove_government_reform = jxp_reform_ikko_temple_market_mutual_aid }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_defense_compacts } remove_government_reform = jxp_reform_ikko_monto_defense_compacts }
+	if = { limit = { has_reform = jxp_reform_wokou_black_current_letter_office } remove_government_reform = jxp_reform_wokou_black_current_letter_office }
+	if = { limit = { has_reform = jxp_reform_wokou_island_broker_federation } remove_government_reform = jxp_reform_wokou_island_broker_federation }
+	if = { limit = { has_reform = jxp_reform_wokou_red_seal_raider_admiralty } remove_government_reform = jxp_reform_wokou_red_seal_raider_admiralty }
+}

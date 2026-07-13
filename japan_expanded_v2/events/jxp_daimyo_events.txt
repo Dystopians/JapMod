@@ -1,0 +1,179 @@
+namespace = jxp_daimyo
+
+country_event = {
+	id = jxp_daimyo.1
+	title = "jxp_daimyo.1.t"
+	desc = "jxp_daimyo.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo.1.a"
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_daimyo_domain_accounts
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo.2
+	title = "jxp_daimyo.2.t"
+	desc = "jxp_daimyo.2.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo.2.a"
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_daimyo_courtly_petition
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo.3
+	title = "jxp_daimyo.3.t"
+	desc = "jxp_daimyo.3.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo.3.a"
+		jxp_ensure_daimyo_polity_effect = yes
+		set_country_flag = jxp_tanegashima_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_daimyo_gun_foundries
+			duration = 5475
+		}
+	}
+	option = {
+		name = "jxp_daimyo.3.b"
+		jxp_ensure_daimyo_polity_effect = yes
+		set_country_flag = jxp_tanegashima_seen
+		add_mil_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_daimyo.4
+	title = "jxp_daimyo.4.t"
+	desc = "jxp_daimyo.4.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo.4.a"
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_daimyo_namban_letters
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jxp_daimyo.4.b"
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_daimyo.5
+	title = "jxp_daimyo.5.t"
+	desc = "jxp_daimyo.5.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		japan_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+
+	option = {
+		name = "jxp_daimyo.5.a"
+		clr_country_flag = jxp_24_unification_by_edict
+		clr_country_flag = jxp_24_unification_by_league
+		set_country_flag = jxp_24_unification_by_blade
+		add_mil_power = 50
+		add_army_tradition = 10
+		jxp_add_tenka_order_10_effect = yes
+		add_country_modifier = {
+			name = jxp_24_unification_blade
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					jxp_has_warrior_house_origin_trigger = yes
+					jxp_has_frontier_house_origin_trigger = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_daimyo.5.b"
+		clr_country_flag = jxp_24_unification_by_blade
+		clr_country_flag = jxp_24_unification_by_league
+		set_country_flag = jxp_24_unification_by_edict
+		add_dip_power = 50
+		add_prestige = 20
+		jxp_add_imperial_sanction_10_effect = yes
+		add_country_modifier = {
+			name = jxp_24_unification_edict
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					jxp_has_court_house_origin_trigger = yes
+					jxp_has_temple_market_house_origin_trigger = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_daimyo.5.c"
+		clr_country_flag = jxp_24_unification_by_blade
+		clr_country_flag = jxp_24_unification_by_edict
+		set_country_flag = jxp_24_unification_by_league
+		add_dip_power = 50
+		add_legitimacy = 10
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_24_unification_league
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				jxp_has_maritime_house_origin_trigger = yes
+			}
+		}
+	}
+}

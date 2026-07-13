@@ -1,0 +1,64 @@
+country_decisions = {
+	jxp_debug_fire_route_parity_sakoku = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_71_is_sakoku_route_trigger = yes
+			jxp_71_has_sakoku_council_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = jxp_71_route_council_recent
+			remove_country_modifier = jxp_71_sakoku_post_road_registers
+			remove_country_modifier = jxp_71_sakoku_coastal_musters
+			remove_country_modifier = jxp_71_sakoku_sealed_translation_room
+			country_event = { id = jxp_route_parity.1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_route_parity_open_trade = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_71_is_open_trade_route_trigger = yes
+			jxp_71_has_open_trade_council_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = jxp_71_route_council_recent
+			remove_country_modifier = jxp_71_open_silver_assay_board
+			remove_country_modifier = jxp_71_open_artillery_inspectors
+			remove_country_modifier = jxp_71_open_charter_auditors
+			country_event = { id = jxp_route_parity.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_route_parity_imperial = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_71_is_imperial_route_trigger = yes
+			jxp_71_has_imperial_council_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = jxp_71_route_council_recent
+			remove_country_modifier = jxp_71_imperial_rite_register
+			remove_country_modifier = jxp_71_imperial_kokushi_circuit
+			remove_country_modifier = jxp_71_imperial_guard_muster
+			country_event = { id = jxp_route_parity.3 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

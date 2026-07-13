@@ -1,0 +1,59 @@
+country_decisions = {
+	jxp_continue_shinto_incident_records = {
+		major = yes
+
+		potential = {
+			ai = no
+			jxp_confucian_shinto_bridge_country_trigger = yes
+			jxp_confucian_any_bridge_available_trigger = yes
+		}
+
+		allow = {
+			adm_power = 25
+			NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+		}
+
+		effect = {
+			add_adm_power = -25
+			custom_tooltip = jxp_continue_shinto_incident_records_tt
+			hidden_effect = {
+				set_country_flag = jxp_confucian_bridge_forced_dispatch
+				if = {
+					limit = { jxp_confucian_bridge_neo_available_trigger = yes }
+					country_event = { id = jxp_confucian_shinto.1 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_urban_available_trigger = yes }
+					country_event = { id = jxp_confucian_shinto.10 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_nanban_available_trigger = yes }
+					country_event = { id = jxp_confucian_shinto.20 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_firearms_available_trigger = yes }
+					country_event = { id = jxp_confucian_incident.1 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_christian_available_trigger = yes }
+					country_event = { id = jxp_confucian_incident.10 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_authority_available_trigger = yes }
+					country_event = { id = jxp_confucian_incident.20 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_ikko_available_trigger = yes }
+					country_event = { id = jxp_confucian_incident.30 }
+				}
+				else_if = {
+					limit = { jxp_confucian_bridge_wokou_available_trigger = yes }
+					country_event = { id = jxp_confucian_incident.40 }
+				}
+				country_event = { id = jxp_confucian_incident.99 days = 1 }
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+}

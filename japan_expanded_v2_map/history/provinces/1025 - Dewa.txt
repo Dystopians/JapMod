@@ -1,0 +1,47 @@
+#1025 - Dewa
+owner = DHO
+controller = DHO
+add_core = DHO
+
+
+
+culture = togoku
+religion = shinto
+capital = "Yamagata"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 1
+base_manpower = 2
+is_city = yes
+add_core = SBA
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1 = { discovered_by = POR }
+1598.1.10 = { add_core = UES   } # Uesugi Kagekatsu moved from Echigo to Aizu-Yonezawa
+1622.8.21 = { remove_core = SBA }
+
+# JXP 88-province continuous ownership overlay
+1588.1.1 = {
+	owner = UES
+	controller = UES
+	add_core = UES
+	remove_core = DHO
+}
+1601.1.1 = {
+	owner = MOG
+	controller = MOG
+	add_core = MOG
+	remove_core = UES
+}
+1622.9.1 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = MOG
+}

@@ -1,0 +1,58 @@
+jxp_record_daimyo_origin_effect = {
+	if = {
+		limit = {
+			NOT = { jxp_has_major_daimyo_origin_trigger = yes }
+			jxp_is_major_daimyo_tag_trigger = yes
+		}
+		if = { limit = { tag = ODA } set_country_flag = jxp_origin_oda }
+		if = { limit = { tag = TOY } set_country_flag = jxp_origin_oda }
+		if = { limit = { tag = TKG } set_country_flag = jxp_origin_tkg }
+		if = { limit = { tag = TKD } set_country_flag = jxp_origin_tkd }
+		if = { limit = { tag = UES } set_country_flag = jxp_origin_ues }
+		if = { limit = { tag = HJO } set_country_flag = jxp_origin_hjo }
+		if = { limit = { tag = MRI } set_country_flag = jxp_origin_mri }
+		if = { limit = { tag = SMZ } set_country_flag = jxp_origin_smz }
+		if = { limit = { tag = OTM } set_country_flag = jxp_origin_otm }
+		if = { limit = { tag = DTE } set_country_flag = jxp_origin_dte }
+		if = { limit = { tag = ASK } set_country_flag = jxp_origin_ask }
+		if = { limit = { tag = CSK } set_country_flag = jxp_origin_csk }
+		if = { limit = { tag = OUC } set_country_flag = jxp_origin_ouc }
+		if = { limit = { tag = IMG } set_country_flag = jxp_origin_img }
+		if = { limit = { tag = SOO } set_country_flag = jxp_origin_soo }
+		if = { limit = { tag = AMA } set_country_flag = jxp_origin_ama }
+		if = { limit = { tag = ASA } set_country_flag = jxp_origin_asa }
+		if = { limit = { tag = HSK } set_country_flag = jxp_origin_hsk }
+		if = { limit = { tag = HTK } set_country_flag = jxp_origin_htk }
+		if = { limit = { tag = IKE } set_country_flag = jxp_origin_ike }
+		if = { limit = { tag = MAE } set_country_flag = jxp_origin_mae }
+		if = { limit = { tag = SBA } set_country_flag = jxp_origin_sba }
+		if = { limit = { tag = YMN } set_country_flag = jxp_origin_ymn }
+		if = { limit = { tag = RFR } set_country_flag = jxp_origin_rfr }
+		if = { limit = { tag = KTB } set_country_flag = jxp_origin_ktb }
+		if = { limit = { tag = AKM } set_country_flag = jxp_origin_akm }
+		if = { limit = { tag = AKT } set_country_flag = jxp_origin_akt }
+		if = { limit = { tag = CBA } set_country_flag = jxp_origin_cba }
+		if = { limit = { tag = ISK } set_country_flag = jxp_origin_isk }
+		if = { limit = { tag = ITO } set_country_flag = jxp_origin_ito }
+		if = { limit = { tag = KKC } set_country_flag = jxp_origin_kkc }
+		if = { limit = { tag = KNO } set_country_flag = jxp_origin_kno }
+		if = { limit = { tag = OGS } set_country_flag = jxp_origin_ogs }
+		if = { limit = { tag = SHN } set_country_flag = jxp_origin_shn }
+		if = { limit = { tag = STK } set_country_flag = jxp_origin_stk }
+		if = { limit = { tag = TKI } set_country_flag = jxp_origin_tki }
+		if = { limit = { tag = UTN } set_country_flag = jxp_origin_utn }
+		if = { limit = { tag = TTI } set_country_flag = jxp_origin_tti }
+	}
+}
+
+jxp_ensure_daimyo_polity_effect = {
+	jxp_record_daimyo_origin_effect = yes
+	if = {
+		limit = { NOT = { has_country_flag = jxp_polity_initialized } }
+		jxp_init_polity_values_effect = yes
+	}
+	if = {
+		limit = { has_country_flag = jxp_polity_initialized }
+		jxp_ensure_polity_mechanic_effect = yes
+	}
+}

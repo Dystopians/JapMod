@@ -1,0 +1,559 @@
+namespace = jxp_realm
+
+country_event = {
+	id = jxp_realm.0
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_polity_initialized }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_init_polity_values_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_realm.3
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		NOT = { has_country_flag = jxp_polity_mechanic_registered }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_ensure_polity_mechanic_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_realm.4
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		OR = {
+			NOT = { tag = CJP }
+			NOT = { religion = confucianism }
+			NOT = { has_country_flag = jxp_path_confucian }
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+			has_reform = presidential_despot_reform
+			has_reform = military_dictatorship_reform
+			government = republic
+			government = dictatorship
+			NOT = { has_country_flag = jxp_confucian_shinto_syncretism }
+			NOT = { has_country_modifier = jxp_confucian_shinto_synthesis }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_sanitize_confucian_route_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_realm.5
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		NOT = { has_country_flag = jxp_reform_visibility_migration_v0232 }
+		OR = {
+			AND = {
+				has_country_flag = jxp_path_sakoku
+				OR = {
+					NOT = { has_reform = jxp_reform_sakoku_buke_laws }
+					NOT = { has_reform = jxp_reform_sakoku_sankin_kotai_roads }
+				}
+			}
+			AND = {
+				has_country_flag = jxp_path_open_trade
+				OR = {
+					NOT = { has_reform = jxp_reform_open_red_seal_council }
+					NOT = { has_reform = jxp_reform_open_silver_exchange }
+				}
+			}
+			AND = {
+				OR = {
+					tag = KJP
+					has_country_flag = jxp_path_kirishitan
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_kirishitan_church_court }
+					NOT = { has_reform = jxp_reform_kirishitan_seminaries }
+				}
+			}
+			AND = {
+				OR = {
+					tag = CJP
+					has_country_flag = jxp_path_confucian
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_confucian_shushi_academies }
+					NOT = { has_reform = jxp_reform_confucian_examination_domains }
+				}
+			}
+			AND = {
+				OR = {
+					tag = EJP
+					has_country_flag = jxp_path_imperial
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_imperial_daijokan }
+					NOT = { has_reform = jxp_reform_imperial_kokugaku_office }
+				}
+			}
+			AND = {
+				OR = {
+					tag = RFJ
+					has_country_flag = jxp_path_reformed
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_reformed_consistory_ports }
+					NOT = { has_reform = jxp_reform_reformed_printing_synods }
+				}
+			}
+			AND = {
+				OR = {
+					tag = SJP
+					has_country_flag = jxp_path_kaikyo
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_kaikyo_qadi_harbormasters }
+					NOT = { has_reform = jxp_reform_kaikyo_monsoon_diwan }
+				}
+			}
+			AND = {
+				OR = {
+					tag = IJP
+					has_country_flag = jxp_path_ikko
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_ikko_monto_covenant }
+					NOT = { has_reform = jxp_reform_ikko_somon_councils }
+				}
+			}
+			AND = {
+				OR = {
+					tag = WAK
+					has_country_flag = jxp_path_wokou
+				}
+				OR = {
+					NOT = { has_reform = jxp_reform_wokou_letters_of_mark }
+					NOT = { has_reform = jxp_reform_wokou_black_tide_law }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_migrate_visible_government_reforms_v0232_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_realm.6
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			jxp_has_any_route_trigger = yes
+		}
+		OR = {
+			government = republic
+			government = dictatorship
+			has_reform = presidential_despot_reform
+			has_reform = military_dictatorship_reform
+			AND = {
+				tag = KJP
+				OR = {
+					NOT = { has_country_flag = jxp_path_kirishitan }
+					NOT = { religion = catholic }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_ikko
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = CJP
+				OR = {
+					NOT = { has_country_flag = jxp_path_confucian }
+					NOT = { religion = confucianism }
+					NOT = { has_country_flag = jxp_confucian_shinto_syncretism }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_ikko
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = EJP
+				OR = {
+					NOT = { has_country_flag = jxp_path_imperial }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_ikko
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = RFJ
+				OR = {
+					NOT = { has_country_flag = jxp_path_reformed }
+					NOT = { religion = reformed }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_ikko
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = SJP
+				OR = {
+					NOT = { has_country_flag = jxp_path_kaikyo }
+					NOT = { religion = sunni }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_ikko
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = IJP
+				OR = {
+					NOT = { has_country_flag = jxp_path_ikko }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			AND = {
+				tag = WAK
+				OR = {
+					NOT = { has_country_flag = jxp_path_wokou }
+					has_country_flag = jxp_path_sakoku
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_ikko
+				}
+			}
+			AND = { has_country_flag = jxp_path_kirishitan NOT = { tag = KJP } }
+			AND = { has_country_flag = jxp_path_confucian NOT = { tag = CJP } }
+			AND = { has_country_flag = jxp_path_imperial NOT = { tag = EJP } }
+			AND = { has_country_flag = jxp_path_reformed NOT = { tag = RFJ } }
+			AND = { has_country_flag = jxp_path_kaikyo NOT = { tag = SJP } }
+			AND = { has_country_flag = jxp_path_ikko NOT = { tag = IJP } }
+			AND = { has_country_flag = jxp_path_wokou NOT = { tag = WAK } }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		jxp_sanitize_route_state_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_realm.1
+	title = "jxp_realm.1.t"
+	desc = "jxp_realm.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_realm.1.a"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			religion_group = eastern
+			NOT = { religion = confucianism }
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_sakoku
+		jxp_add_tenka_order_10_effect = yes
+		jxp_subtract_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_route_sakoku
+			duration = -1
+		}
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "jxp_realm.1.b"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			OR = {
+				jxp_oceanic_opening_at_least_35 = yes
+				num_of_ports = 5
+				any_owned_province = {
+					province_id = 4182
+					is_core = ROOT
+				}
+			}
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_open_trade
+		jxp_add_oceanic_opening_10_effect = yes
+		add_country_modifier = {
+			name = jxp_route_open_trade
+			duration = -1
+		}
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "jxp_realm.1.c"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_christian_opening_trigger = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_kirishitan
+		jxp_add_oceanic_opening_10_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		jxp_change_to_kjp_effect = yes
+		add_country_modifier = {
+			name = jxp_route_kirishitan
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.e"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_confucian_contact_trigger = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_confucian
+		jxp_add_imperial_sanction_10_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		jxp_change_to_cjp_effect = yes
+		add_country_modifier = {
+			name = jxp_route_confucian
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.f"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_imperial_sanction_at_least_70 = yes
+			owns = 1020
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_imperial
+		jxp_add_imperial_sanction_15_effect = yes
+		jxp_change_to_ejp_effect = yes
+		add_country_modifier = {
+			name = jxp_route_imperial
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.h"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_reformed_opening_trigger = yes
+			jxp_oceanic_opening_at_least_50 = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_reformed
+		change_religion = reformed
+		jxp_add_oceanic_opening_10_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		jxp_change_to_rfj_effect = yes
+		add_country_modifier = {
+			name = jxp_route_reformed
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.i"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_kaikyo_opening_trigger = yes
+			jxp_oceanic_opening_at_least_50 = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_kaikyo
+		change_religion = sunni
+		jxp_add_oceanic_opening_10_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_change_to_sjp_effect = yes
+		add_country_modifier = {
+			name = jxp_route_kaikyo
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.j"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_ikko_opening_trigger = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_ikko
+		set_country_flag = jxp_ikko_contact
+		jxp_subtract_tenka_order_10_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_change_to_ijp_effect = yes
+		jxp_grant_ikko_heartland_claims_effect = yes
+		add_country_modifier = {
+			name = jxp_route_ikko
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.k"
+		trigger = {
+			NOT = { jxp_has_any_route_trigger = yes }
+			jxp_has_wokou_opening_trigger = yes
+			jxp_oceanic_opening_at_least_35 = yes
+		}
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_wokou
+		set_country_flag = jxp_wokou_contact
+		jxp_add_oceanic_opening_10_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		jxp_change_to_wak_effect = yes
+		jxp_grant_wokou_sea_claims_effect = yes
+		add_country_modifier = {
+			name = jxp_route_wokou
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_realm.1.g"
+		trigger = {
+			jxp_has_any_route_trigger = yes
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_realm.2
+	title = "jxp_realm.2.t"
+	desc = "jxp_realm.2.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_realm.2.a"
+	}
+}

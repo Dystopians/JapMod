@@ -1,0 +1,442 @@
+jxp_shimabara_fire = {
+	potential = {
+		normal_or_historical_nations = yes
+		jxp_is_japanese_polity_trigger = yes
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = jxp_shimabara_resolved }
+		NOT = { has_country_flag = jxp_path_kirishitan }
+		NOT = { has_country_flag = jxp_path_reformed }
+		NOT = { tag = KJP }
+		NOT = { tag = RFJ }
+	}
+
+	can_start = {
+		has_any_disaster = no
+		is_year = 1620
+		OR = {
+			NOT = { stability = 1 }
+			war_exhaustion = 3
+			NOT = { religious_unity = 0.9 }
+		}
+		OR = {
+			has_country_flag = jxp_hidden_christians_seen
+			any_owned_province = {
+				OR = {
+					area = northern_kyushu
+					area = kyushu_area
+					has_province_flag = jxp_map_compat_shimabara_belt
+				}
+				OR = {
+					religion = catholic
+					religion = protestant
+					religion = reformed
+				}
+			}
+		}
+	}
+
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			has_country_flag = jxp_shimabara_resolved
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_reformed
+			tag = KJP
+			tag = RFJ
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 1
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = jxp_expelled_padres
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_reviewed_translations
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_dejima_window
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_shimabara_mediation
+		}
+	}
+
+	can_end = {
+		OR = {
+			has_country_flag = jxp_shimabara_resolved
+			AND = {
+				had_country_flag = {
+					flag = jxp_shimabara_crisis_active
+					days = 365
+				}
+				stability = 1
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = {
+					any_owned_province = {
+						OR = {
+							area = northern_kyushu
+							area = kyushu_area
+							has_province_flag = jxp_map_compat_shimabara_belt
+						}
+						OR = {
+							religion = catholic
+							religion = protestant
+							religion = reformed
+						}
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 4
+		tolerance_heretic = -2
+		stability_cost_modifier = 0.15
+	}
+
+	on_start = jxp_kirishitan.4
+
+	on_end = {
+		set_country_flag = jxp_shimabara_resolved
+		clr_country_flag = jxp_shimabara_crisis_active
+		clr_country_flag = jxp_shimabara_mitigated
+		remove_country_modifier = jxp_shimabara_mediation
+		remove_country_modifier = jxp_shimabara_suppressed
+	}
+}
+
+jxp_ikko_rising = {
+	potential = {
+		normal_or_historical_nations = yes
+		jxp_is_japanese_polity_trigger = yes
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = jxp_ikko_rising_resolved }
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { tag = IJP }
+	}
+
+	can_start = {
+		has_any_disaster = no
+		is_year = 1470
+		num_of_cities = 8
+		NOT = { jxp_tenka_order_at_least_50 = yes }
+		OR = {
+			owns = 1021
+			owns = 1020
+			any_owned_province = {
+				OR = {
+					area = kinai_area
+					area = saigoku_area
+					has_province_flag = jxp_map_compat_ikko_heartland
+				}
+			}
+		}
+		OR = {
+			NOT = { stability = 1 }
+			war_exhaustion = 3
+			NOT = { religious_unity = 0.9 }
+		}
+	}
+
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			has_country_flag = jxp_ikko_rising_resolved
+			has_country_flag = jxp_path_ikko
+			tag = IJP
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 1
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { jxp_tenka_order_at_least_25 = yes }
+		}
+		modifier = {
+			factor = -1
+			jxp_tenka_order_at_least_50 = yes
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_ikko_reconciled
+		}
+	}
+
+	can_end = {
+		OR = {
+			has_country_flag = jxp_ikko_rising_resolved
+			has_country_flag = jxp_path_ikko
+			tag = IJP
+			AND = {
+				had_country_flag = {
+					flag = jxp_ikko_rising_active
+					days = 365
+				}
+				stability = 1
+				jxp_tenka_order_at_least_50 = yes
+				NOT = { num_of_rebel_armies = 1 }
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 3
+		stability_cost_modifier = 0.10
+	}
+
+	on_start = jxp_ikko.6
+
+	on_end = {
+		set_country_flag = jxp_ikko_rising_resolved
+		clr_country_flag = jxp_ikko_rising_active
+		remove_country_modifier = jxp_ikko_reconciled
+		remove_country_modifier = jxp_ikko_suppressed
+	}
+}
+
+# The 1651 Keian uprising was an abortive ronin conspiracy against the
+# Tokugawa bakufu.  This alt-history form is deliberately limited to a large,
+# unified Japanese monarchy holding Edo and already under two distinct kinds
+# of military-fiscal pressure.
+jxp_keian_ronin_crisis = {
+	potential = {
+		normal_or_historical_nations = yes
+		jxp_is_japanese_polity_trigger = yes
+		is_free_or_tributary_trigger = yes
+		jxp_is_unified_japan_state_trigger = yes
+		government = monarchy
+		NOT = { has_country_flag = jxp_keian_ronin_crisis_resolved }
+		NOT = { tag = IJP }
+		NOT = { tag = WAK }
+	}
+
+	can_start = {
+		has_any_disaster = no
+		is_year = 1651
+		num_of_cities = 20
+		owns = 1028
+		OR = {
+			NOT = { stability = 1 }
+			war_exhaustion = 3
+		}
+		OR = {
+			num_of_loans = 2
+			NOT = { manpower_percentage = 0.50 }
+		}
+	}
+
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			has_country_flag = jxp_keian_ronin_crisis_resolved
+			NOT = { jxp_is_unified_japan_state_trigger = yes }
+			NOT = { government = monarchy }
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 1
+			num_of_loans = 2
+		}
+		modifier = {
+			factor = 1
+			NOT = { manpower_percentage = 0.50 }
+		}
+		modifier = {
+			factor = -1
+			stability = 1
+		}
+		modifier = {
+			factor = -1
+			NOT = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = -2
+			has_country_modifier = jxp_keian_ronin_reemployment
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_keian_ronin_patrols
+		}
+	}
+
+	can_end = {
+		OR = {
+			has_country_flag = jxp_keian_ronin_crisis_resolved
+			NOT = { jxp_is_unified_japan_state_trigger = yes }
+			NOT = { government = monarchy }
+			AND = {
+				had_country_flag = {
+					flag = jxp_keian_ronin_crisis_active
+					days = 365
+				}
+				stability = 1
+				NOT = { num_of_loans = 1 }
+				manpower_percentage = 0.60
+				NOT = { num_of_rebel_armies = 1 }
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 3
+		stability_cost_modifier = 0.10
+		global_manpower_modifier = -0.10
+	}
+
+	on_start = jxp_disasters.1
+
+	on_end = {
+		set_country_flag = jxp_keian_ronin_crisis_resolved
+		clr_country_flag = jxp_keian_ronin_crisis_active
+		remove_country_modifier = jxp_keian_ronin_reemployment
+		remove_country_modifier = jxp_keian_ronin_patrols
+	}
+}
+
+# The Tenmei famine began in 1783 and became a national subsistence crisis.
+# A unified state only enters this disaster when fiscal or military exhaustion
+# accompanies weak public order, keeping the date alone from creating it.
+jxp_tenmei_famine = {
+	potential = {
+		normal_or_historical_nations = yes
+		jxp_is_japanese_polity_trigger = yes
+		is_free_or_tributary_trigger = yes
+		jxp_is_unified_japan_state_trigger = yes
+		NOT = { has_country_flag = jxp_tenmei_famine_resolved }
+	}
+
+	can_start = {
+		has_any_disaster = no
+		is_year = 1783
+		num_of_cities = 20
+		total_development = 250
+		owns = 1028
+		OR = {
+			NOT = { stability = 1 }
+			war_exhaustion = 3
+		}
+		OR = {
+			num_of_loans = 3
+			NOT = { manpower_percentage = 0.60 }
+		}
+	}
+
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			has_country_flag = jxp_tenmei_famine_resolved
+			NOT = { jxp_is_unified_japan_state_trigger = yes }
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 3
+		}
+		modifier = {
+			factor = 1
+			num_of_loans = 3
+		}
+		modifier = {
+			factor = 1
+			NOT = { manpower_percentage = 0.60 }
+		}
+		modifier = {
+			factor = -1
+			stability = 1
+		}
+		modifier = {
+			factor = -1
+			NOT = { num_of_loans = 2 }
+		}
+		modifier = {
+			factor = -2
+			has_country_modifier = jxp_tenmei_relief_granaries
+		}
+		modifier = {
+			factor = -1
+			has_country_modifier = jxp_tenmei_rationing
+		}
+	}
+
+	can_end = {
+		OR = {
+			has_country_flag = jxp_tenmei_famine_resolved
+			NOT = { jxp_is_unified_japan_state_trigger = yes }
+			AND = {
+				had_country_flag = {
+					flag = jxp_tenmei_famine_active
+					days = 365
+				}
+				stability = 1
+				NOT = { num_of_loans = 2 }
+				manpower_percentage = 0.60
+				NOT = { num_of_rebel_armies = 1 }
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 3
+		global_tax_modifier = -0.15
+		global_manpower_modifier = -0.15
+		stability_cost_modifier = 0.10
+	}
+
+	on_start = jxp_disasters.2
+
+	on_end = {
+		set_country_flag = jxp_tenmei_famine_resolved
+		clr_country_flag = jxp_tenmei_famine_active
+		remove_country_modifier = jxp_tenmei_relief_granaries
+		remove_country_modifier = jxp_tenmei_rationing
+	}
+}

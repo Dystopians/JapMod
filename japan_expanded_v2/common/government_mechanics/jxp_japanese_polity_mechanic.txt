@@ -1,0 +1,420 @@
+jxp_japanese_polity_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 16
+
+	powers = {
+		jxp_tenka_order = {
+			show_before_interactions = yes
+			min = 0
+			max = 100
+			default = 25
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					global_tax_modifier = 0.05
+					global_manpower_modifier = 0.05
+				}
+			}
+			is_good = yes
+		}
+		jxp_imperial_sanction = {
+			show_before_interactions = yes
+			min = 0
+			max = 100
+			default = 35
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					legitimacy = 0.5
+					prestige = 0.5
+				}
+			}
+			is_good = yes
+		}
+		jxp_oceanic_opening = {
+			show_before_interactions = yes
+			min = 0
+			max = 100
+			default = 20
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					global_trade_power = 0.10
+					technology_cost = -0.05
+				}
+			}
+			is_good = yes
+		}
+	}
+
+	interactions = {
+		jxp_gov_conduct_land_survey = {
+			icon = GFX_jxp_gov_conduct_land_survey
+			trigger = {
+				adm_power = 75
+				treasury = 25
+				NOT = { check_variable = { which = jxp_tenka_order value = 95 } }
+				NOT = { has_country_modifier = jxp_land_survey_momentum }
+			}
+			effect = {
+				add_adm_power = -75
+				add_treasury = -25
+				jxp_add_tenka_order_10_effect = yes
+				add_country_modifier = {
+					name = jxp_land_survey_momentum
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { adm_power = 200 }
+				}
+			}
+		}
+
+		jxp_gov_relax_domains = {
+			icon = GFX_jxp_gov_relax_domains
+			trigger = {
+				check_variable = { which = jxp_tenka_order value = 10 }
+				NOT = { has_country_modifier = jxp_relaxed_domains }
+			}
+			effect = {
+				jxp_subtract_tenka_order_10_effect = yes
+				add_country_modifier = {
+					name = jxp_relaxed_domains
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { num_of_rebel_armies = 1 }
+					NOT = { war_exhaustion = 5 }
+				}
+			}
+		}
+
+		jxp_gov_restore_imperial_palace = {
+			icon = GFX_jxp_gov_restore_imperial_palace
+			trigger = {
+				dip_power = 75
+				treasury = 50
+				owns = 1020
+				NOT = { check_variable = { which = jxp_imperial_sanction value = 95 } }
+				NOT = { has_country_modifier = jxp_restored_imperial_palace }
+			}
+			effect = {
+				add_dip_power = -75
+				add_treasury = -50
+				jxp_add_imperial_sanction_10_effect = yes
+				1020 = {
+					if = {
+						limit = { owned_by = ROOT }
+						add_province_modifier = {
+							name = jxp_kyoto_renewed
+							duration = 7300
+						}
+					}
+				}
+				add_country_modifier = {
+					name = jxp_restored_imperial_palace
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { dip_power = 200 }
+				}
+			}
+		}
+
+		jxp_gov_request_imperial_edict = {
+			icon = GFX_jxp_gov_request_imperial_edict
+			trigger = {
+				dip_power = 50
+				check_variable = { which = jxp_imperial_sanction value = 10 }
+				NOT = { has_country_modifier = jxp_imperial_edict }
+			}
+			effect = {
+				add_dip_power = -50
+				jxp_subtract_imperial_sanction_10_effect = yes
+				jxp_grant_japan_region_claims_effect = yes
+				add_prestige = 5
+				add_country_modifier = {
+					name = jxp_imperial_edict
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 0
+			}
+		}
+
+		jxp_gov_kobu_gattai_rite = {
+			icon = GFX_jxp_gov_kobu_gattai_rite
+			trigger = {
+				adm_power = 25
+				dip_power = 25
+				NOT = { has_country_modifier = jxp_kobu_gattai_rite }
+			}
+			effect = {
+				add_adm_power = -25
+				add_dip_power = -25
+				if = {
+					limit = { NOT = { check_variable = { which = jxp_tenka_order value = 50 } } }
+					jxp_add_tenka_order_5_effect = yes
+				}
+				if = {
+					limit = { check_variable = { which = jxp_tenka_order value = 80 } }
+					jxp_subtract_tenka_order_5_effect = yes
+				}
+				if = {
+					limit = { NOT = { check_variable = { which = jxp_imperial_sanction value = 50 } } }
+					jxp_add_imperial_sanction_5_effect = yes
+				}
+				if = {
+					limit = { check_variable = { which = jxp_imperial_sanction value = 85 } }
+					jxp_subtract_imperial_sanction_5_effect = yes
+				}
+				add_country_modifier = {
+					name = jxp_kobu_gattai_rite
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { adm_power = 150 }
+				}
+			}
+		}
+
+		jxp_gov_open_foreign_factory = {
+			icon = GFX_jxp_gov_open_foreign_factory
+			trigger = {
+				dip_power = 75
+				treasury = 50
+				NOT = { check_variable = { which = jxp_oceanic_opening value = 95 } }
+				NOT = { has_country_modifier = jxp_foreign_factory }
+				any_owned_province = {
+					region = japan_region
+					has_port = yes
+				}
+			}
+			effect = {
+				add_dip_power = -75
+				add_treasury = -50
+				jxp_add_oceanic_opening_10_effect = yes
+				if = {
+					limit = { owns = 4182 }
+					4182 = {
+						add_province_modifier = {
+							name = jxp_nagasaki_factory
+							duration = 7300
+						}
+					}
+				}
+				add_country_modifier = {
+					name = jxp_foreign_factory
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { dip_power = 200 }
+				}
+			}
+		}
+
+		jxp_gov_expel_padres = {
+			icon = GFX_jxp_gov_expel_padres
+			trigger = {
+				adm_power = 75
+				check_variable = { which = jxp_oceanic_opening value = 10 }
+				NOT = { has_country_modifier = jxp_expelled_padres }
+				OR = {
+					is_year = 1540
+					has_country_flag = jxp_kirishitan_contact
+					any_owned_province = {
+						region = japan_region
+						OR = {
+							religion = catholic
+							religion = protestant
+							religion = reformed
+						}
+					}
+				}
+			}
+			effect = {
+				add_adm_power = -75
+				jxp_subtract_oceanic_opening_10_effect = yes
+				add_country_modifier = {
+					name = jxp_expelled_padres
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_country_flag = jxp_path_open_trade
+				}
+			}
+		}
+
+		jxp_gov_dejima_window = {
+			icon = GFX_jxp_gov_dejima_window
+			trigger = {
+				dip_power = 50
+				treasury = 25
+				NOT = { has_country_modifier = jxp_dejima_window }
+				any_owned_province = {
+					region = japan_region
+					has_port = yes
+				}
+			}
+			effect = {
+				add_dip_power = -50
+				add_treasury = -25
+				if = {
+					limit = { NOT = { check_variable = { which = jxp_oceanic_opening value = 25 } } }
+					jxp_add_oceanic_opening_5_effect = yes
+				}
+				if = {
+					limit = { check_variable = { which = jxp_oceanic_opening value = 45 } }
+					jxp_subtract_oceanic_opening_5_effect = yes
+				}
+				add_country_modifier = {
+					name = jxp_dejima_window
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+
+		jxp_gov_review_translations = {
+			icon = GFX_jxp_gov_review_translations
+			trigger = {
+				adm_power = 50
+				jxp_oceanic_opening_at_least_20 = yes
+				NOT = { has_country_modifier = jxp_reviewed_translations }
+			}
+			effect = {
+				add_adm_power = -50
+				if = {
+					limit = { NOT = { check_variable = { which = jxp_oceanic_opening value = 35 } } }
+					jxp_add_oceanic_opening_5_effect = yes
+				}
+				add_country_modifier = {
+					name = jxp_reviewed_translations
+					duration = 3650
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+
+		jxp_gov_invest_domain_registers = {
+			icon = GFX_jxp_gov_conduct_land_survey
+			trigger = {
+				adm_power = 75
+				treasury = 75
+				custom_trigger_tooltip = {
+					tooltip = jxp_no_active_long_investment_tt
+					NOT = { has_country_flag = jxp_investment_active }
+				}
+				NOT = { check_variable = { which = jxp_tenka_order value = 90 } }
+			}
+			effect = {
+				custom_tooltip = jxp_long_investment_tenka_tt
+				jxp_start_tenka_investment_effect = yes
+			}
+			cooldown_years = 8
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { adm_power = 200 }
+				}
+			}
+		}
+
+		jxp_gov_patronize_kinri_letters = {
+			icon = GFX_jxp_gov_restore_imperial_palace
+			trigger = {
+				dip_power = 75
+				treasury = 75
+				is_at_war = no
+				custom_trigger_tooltip = {
+					tooltip = jxp_no_active_long_investment_tt
+					NOT = { has_country_flag = jxp_investment_active }
+				}
+				NOT = { check_variable = { which = jxp_imperial_sanction value = 90 } }
+			}
+			effect = {
+				custom_tooltip = jxp_long_investment_court_tt
+				jxp_start_court_investment_effect = yes
+			}
+			cooldown_years = 8
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { dip_power = 200 }
+				}
+			}
+		}
+
+		jxp_gov_found_translation_house = {
+			icon = GFX_jxp_gov_review_translations
+			trigger = {
+				dip_power = 75
+				treasury = 75
+				num_of_ports = 1
+				custom_trigger_tooltip = {
+					tooltip = jxp_no_active_long_investment_tt
+					NOT = { has_country_flag = jxp_investment_active }
+				}
+				NOT = { check_variable = { which = jxp_oceanic_opening value = 90 } }
+			}
+			effect = {
+				custom_tooltip = jxp_long_investment_oceanic_tt
+				jxp_start_oceanic_investment_effect = yes
+			}
+			cooldown_years = 8
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { dip_power = 200 }
+				}
+			}
+		}
+	}
+}

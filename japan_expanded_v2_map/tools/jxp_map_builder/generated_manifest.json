@@ -1,0 +1,948 @@
+{
+  "cartographic_expansion_pixels": 53,
+  "cartographic_support_maps": {
+    "heightmap_changed_pixels": 89,
+    "rivers_changed_pixels": 53,
+    "terrain_changed_pixels": 53,
+    "world_normal_changed_pixels": 20
+  },
+  "changed_pixels": 3904,
+  "edit_mask_pixels": 8415,
+  "game_version": "1.37.5.0",
+  "input_sha256": {
+    "common/tradenodes/00_tradenodes.txt": "41c07da62554bd04a917aec255e66e08049b38b2ae6e6aa7329823e0d807d216",
+    "map/adjacencies.csv": "fb3ddf25320e9fa022d89e6b567b934b447314d0aad58db08d5bb0164553c0bd",
+    "map/area.txt": "51fd9f8c9bb177bba2939171dcecb2a538e5f7c72527807c64d6b799de94b44e",
+    "map/climate.txt": "27b00e20aeaf437bea3035dab3e59e1d0aca4d6b690f91f430ccbe0e3adc6126",
+    "map/continent.txt": "9b7f295c58d0774b5514c247b52b11b90a6d1a5c81a86915e76f3cdca944dc00",
+    "map/default.map": "70ed470492e6266d5ae809534ab56935e904fe2d3017451195001b8ba2a8cf0c",
+    "map/definition.csv": "ea6384a5b41f70bd179435e6626229e907c0d7b07a60d262c85776c74e1f2153",
+    "map/heightmap.bmp": "139c004965248a986d86ace927dcee62a7b27e6f091940e3b1adeb7230105694",
+    "map/positions.txt": "61bbceeacad9264db04f5fe284c577d41c8e3943c29303462208a6636e15c9ef",
+    "map/provinces.bmp": "40348545baf1886009eb46d8ffba0a76684061e44faa64ec788c756ce607e5c8",
+    "map/region.txt": "91fe977cb6a8645b66acabfffde7a35e6e050cd1ff9b2c8afc838e45d4e45929",
+    "map/rivers.bmp": "a4cf7f4f8f41c2790fadda92f5944a3a052e423dbfa56e763e6cc77d84d3dd15",
+    "map/terrain.bmp": "516b52ef99567666e6a9966bc20b9bb2c40d4e6c98b22f50698a8f6f7a30a054",
+    "map/world_normal.bmp": "3cdf5026ce1e569d8c8862a47637019e9457b8000c7fee1179edc8f92dc61d67"
+  },
+  "island_cartographic_expansion": [
+    {
+      "added_pixel_count": 20,
+      "added_pixels": [
+        {
+          "from_sea": 1376,
+          "x": 4831,
+          "y": 838
+        },
+        {
+          "from_sea": 1376,
+          "x": 4831,
+          "y": 840
+        },
+        {
+          "from_sea": 1376,
+          "x": 4829,
+          "y": 839
+        },
+        {
+          "from_sea": 1376,
+          "x": 4829,
+          "y": 838
+        },
+        {
+          "from_sea": 1376,
+          "x": 4829,
+          "y": 840
+        },
+        {
+          "from_sea": 1376,
+          "x": 4832,
+          "y": 839
+        },
+        {
+          "from_sea": 1376,
+          "x": 4830,
+          "y": 837
+        },
+        {
+          "from_sea": 1376,
+          "x": 4830,
+          "y": 841
+        },
+        {
+          "from_sea": 1376,
+          "x": 4832,
+          "y": 838
+        },
+        {
+          "from_sea": 1376,
+          "x": 4831,
+          "y": 837
+        },
+        {
+          "from_sea": 1376,
+          "x": 4832,
+          "y": 840
+        },
+        {
+          "from_sea": 1376,
+          "x": 4831,
+          "y": 841
+        },
+        {
+          "from_sea": 1376,
+          "x": 4829,
+          "y": 837
+        },
+        {
+          "from_sea": 1376,
+          "x": 4829,
+          "y": 841
+        },
+        {
+          "from_sea": 1376,
+          "x": 4828,
+          "y": 839
+        },
+        {
+          "from_sea": 1376,
+          "x": 4828,
+          "y": 838
+        },
+        {
+          "from_sea": 1376,
+          "x": 4828,
+          "y": 840
+        },
+        {
+          "from_sea": 1376,
+          "x": 4833,
+          "y": 839
+        },
+        {
+          "from_sea": 1376,
+          "x": 4830,
+          "y": 836
+        },
+        {
+          "from_sea": 1376,
+          "x": 4830,
+          "y": 842
+        }
+      ],
+      "allowed_sea_ids": [
+        1376
+      ],
+      "final_pixels": 24,
+      "max_radius": 3,
+      "province": 4969,
+      "target_pixels": 24
+    },
+    {
+      "added_pixel_count": 16,
+      "added_pixels": [
+        {
+          "from_sea": 1388,
+          "x": 4885,
+          "y": 792
+        },
+        {
+          "from_sea": 1388,
+          "x": 4887,
+          "y": 792
+        },
+        {
+          "from_sea": 1388,
+          "x": 4885,
+          "y": 795
+        },
+        {
+          "from_sea": 1388,
+          "x": 4887,
+          "y": 795
+        },
+        {
+          "from_sea": 1388,
+          "x": 4884,
+          "y": 793
+        },
+        {
+          "from_sea": 1388,
+          "x": 4884,
+          "y": 794
+        },
+        {
+          "from_sea": 1388,
+          "x": 4888,
+          "y": 793
+        },
+        {
+          "from_sea": 1388,
+          "x": 4888,
+          "y": 794
+        },
+        {
+          "from_sea": 1388,
+          "x": 4886,
+          "y": 791
+        },
+        {
+          "from_sea": 1388,
+          "x": 4886,
+          "y": 796
+        },
+        {
+          "from_sea": 1388,
+          "x": 4884,
+          "y": 792
+        },
+        {
+          "from_sea": 1388,
+          "x": 4885,
+          "y": 791
+        },
+        {
+          "from_sea": 1388,
+          "x": 4888,
+          "y": 792
+        },
+        {
+          "from_sea": 1388,
+          "x": 4887,
+          "y": 791
+        },
+        {
+          "from_sea": 1388,
+          "x": 4884,
+          "y": 795
+        },
+        {
+          "from_sea": 1388,
+          "x": 4885,
+          "y": 796
+        }
+      ],
+      "allowed_sea_ids": [
+        1388
+      ],
+      "final_pixels": 24,
+      "max_radius": 3,
+      "province": 4959,
+      "target_pixels": 24
+    },
+    {
+      "added_pixel_count": 9,
+      "added_pixels": [
+        {
+          "from_sea": 1392,
+          "x": 4799,
+          "y": 970
+        },
+        {
+          "from_sea": 1392,
+          "x": 4802,
+          "y": 971
+        },
+        {
+          "from_sea": 1392,
+          "x": 4799,
+          "y": 969
+        },
+        {
+          "from_sea": 1392,
+          "x": 4802,
+          "y": 972
+        },
+        {
+          "from_sea": 1392,
+          "x": 4801,
+          "y": 973
+        },
+        {
+          "from_sea": 1392,
+          "x": 4800,
+          "y": 974
+        },
+        {
+          "from_sea": 1392,
+          "x": 4802,
+          "y": 969
+        },
+        {
+          "from_sea": 1392,
+          "x": 4801,
+          "y": 968
+        },
+        {
+          "from_sea": 1392,
+          "x": 4799,
+          "y": 968
+        }
+      ],
+      "allowed_sea_ids": [
+        1392
+      ],
+      "final_pixels": 24,
+      "max_radius": 3,
+      "province": 4981,
+      "target_pixels": 24
+    },
+    {
+      "added_pixel_count": 8,
+      "added_pixels": [
+        {
+          "from_sea": 1391,
+          "x": 4908,
+          "y": 828
+        },
+        {
+          "from_sea": 1391,
+          "x": 4909,
+          "y": 827
+        },
+        {
+          "from_sea": 1391,
+          "x": 4910,
+          "y": 826
+        },
+        {
+          "from_sea": 1391,
+          "x": 4911,
+          "y": 831
+        },
+        {
+          "from_sea": 1391,
+          "x": 4908,
+          "y": 831
+        },
+        {
+          "from_sea": 1391,
+          "x": 4912,
+          "y": 829
+        },
+        {
+          "from_sea": 1391,
+          "x": 4912,
+          "y": 828
+        },
+        {
+          "from_sea": 1391,
+          "x": 4912,
+          "y": 830
+        }
+      ],
+      "allowed_sea_ids": [
+        1391
+      ],
+      "final_pixels": 24,
+      "max_radius": 3,
+      "province": 4964,
+      "target_pixels": 24
+    }
+  ],
+  "outside_edit_mask_changes": 0,
+  "pixel_rebalance": [
+    {
+      "final_pixels": 24,
+      "province": 4948,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4949": 16
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 4945,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4359": 13
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 1020,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4950": 12
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 4952,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4970": 9
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 4942,
+      "target_pixels": 24,
+      "transferred_from": {
+        "1832": 8
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 4943,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4187": 8
+      }
+    },
+    {
+      "final_pixels": 24,
+      "province": 4944,
+      "target_pixels": 24,
+      "transferred_from": {
+        "4359": 8
+      }
+    }
+  ],
+  "plan_sha256": "95d58dc8b3bea047a2b54e4c0518afdc22e7872399dd7a6b066cdae9114f7768",
+  "projection": {
+    "anchors": [
+      {
+        "error_pixels": 5.4227,
+        "province": 1020,
+        "source": "K01"
+      },
+      {
+        "error_pixels": 1.0338,
+        "province": 1832,
+        "source": "K02"
+      },
+      {
+        "error_pixels": 3.5569,
+        "province": 1021,
+        "source": "K05"
+      },
+      {
+        "error_pixels": 1.7273,
+        "province": 4359,
+        "source": "K07"
+      },
+      {
+        "error_pixels": 1.7918,
+        "province": 1030,
+        "source": "K09"
+      },
+      {
+        "error_pixels": 2.863,
+        "province": 4360,
+        "source": "K10"
+      },
+      {
+        "error_pixels": 2.9752,
+        "province": 1839,
+        "source": "K12"
+      },
+      {
+        "error_pixels": 1.6886,
+        "province": 1029,
+        "source": "K13"
+      },
+      {
+        "error_pixels": 3.9503,
+        "province": 4189,
+        "source": "K15"
+      },
+      {
+        "error_pixels": 2.626,
+        "province": 1028,
+        "source": "K16"
+      },
+      {
+        "error_pixels": 5.1545,
+        "province": 4190,
+        "source": "K19"
+      },
+      {
+        "error_pixels": 2.437,
+        "province": 1027,
+        "source": "K20"
+      },
+      {
+        "error_pixels": 6.1381,
+        "province": 1835,
+        "source": "K22"
+      },
+      {
+        "error_pixels": 1.3548,
+        "province": 4188,
+        "source": "K24"
+      },
+      {
+        "error_pixels": 3.2235,
+        "province": 1843,
+        "source": "K25"
+      },
+      {
+        "error_pixels": 5.4039,
+        "province": 4191,
+        "source": "K26"
+      },
+      {
+        "error_pixels": 14.4462,
+        "province": 1026,
+        "source": "K29"
+      },
+      {
+        "error_pixels": 8.8398,
+        "province": 4131,
+        "source": "K31"
+      },
+      {
+        "error_pixels": 6.9522,
+        "province": 4192,
+        "source": "K33"
+      },
+      {
+        "error_pixels": 1.7817,
+        "province": 1023,
+        "source": "K35"
+      },
+      {
+        "error_pixels": 5.0627,
+        "province": 1837,
+        "source": "K38"
+      },
+      {
+        "error_pixels": 3.4724,
+        "province": 1024,
+        "source": "K39"
+      },
+      {
+        "error_pixels": 3.6822,
+        "province": 4185,
+        "source": "K42"
+      },
+      {
+        "error_pixels": 4.9856,
+        "province": 1830,
+        "source": "K43"
+      },
+      {
+        "error_pixels": 3.2074,
+        "province": 1018,
+        "source": "K46"
+      },
+      {
+        "error_pixels": 1.6282,
+        "province": 4183,
+        "source": "K47"
+      },
+      {
+        "error_pixels": 1.9253,
+        "province": 1019,
+        "source": "K49"
+      },
+      {
+        "error_pixels": 3.6513,
+        "province": 4184,
+        "source": "K51"
+      },
+      {
+        "error_pixels": 5.6996,
+        "province": 1825,
+        "source": "K54"
+      },
+      {
+        "error_pixels": 5.2024,
+        "province": 1017,
+        "source": "K55"
+      },
+      {
+        "error_pixels": 2.085,
+        "province": 4187,
+        "source": "K57"
+      },
+      {
+        "error_pixels": 2.1325,
+        "province": 1820,
+        "source": "K59"
+      },
+      {
+        "error_pixels": 0.5075,
+        "province": 4186,
+        "source": "K61"
+      },
+      {
+        "error_pixels": 1.6418,
+        "province": 1819,
+        "source": "K62"
+      },
+      {
+        "error_pixels": 1.6796,
+        "province": 1818,
+        "source": "K63"
+      },
+      {
+        "error_pixels": 2.5359,
+        "province": 1014,
+        "source": "K66"
+      },
+      {
+        "error_pixels": 0.9714,
+        "province": 4182,
+        "source": "K67"
+      },
+      {
+        "error_pixels": 2.2488,
+        "province": 4181,
+        "source": "K68"
+      },
+      {
+        "error_pixels": 1.4272,
+        "province": 4180,
+        "source": "K69"
+      },
+      {
+        "error_pixels": 4.3098,
+        "province": 1012,
+        "source": "K71"
+      },
+      {
+        "error_pixels": 1.9854,
+        "province": 4651,
+        "source": "K73"
+      }
+    ],
+    "coefficients": [
+      [
+        15.39724878303189,
+        0.11305014060218355,
+        2830.8136975788175
+      ],
+      [
+        -0.15761008810613192,
+        17.945251882081983,
+        624.5014192790017
+      ]
+    ],
+    "max_error_pixels": 14.4462,
+    "median_error_pixels": 2.863,
+    "rmse_pixels": 4.3025
+  },
+  "province_pixel_counts": {
+    "1012": 114,
+    "1014": 110,
+    "1015": 28,
+    "1017": 86,
+    "1018": 78,
+    "1019": 112,
+    "1020": 24,
+    "1021": 39,
+    "1023": 104,
+    "1024": 422,
+    "1025": 74,
+    "1026": 32,
+    "1027": 146,
+    "1028": 159,
+    "1029": 142,
+    "1030": 34,
+    "1031": 948,
+    "1032": 306,
+    "1818": 48,
+    "1819": 234,
+    "1820": 86,
+    "1825": 150,
+    "1830": 61,
+    "1832": 64,
+    "1835": 161,
+    "1837": 152,
+    "1839": 41,
+    "1843": 165,
+    "1847": 753,
+    "1852": 733,
+    "4131": 686,
+    "4180": 193,
+    "4181": 177,
+    "4182": 86,
+    "4183": 92,
+    "4184": 51,
+    "4185": 43,
+    "4186": 151,
+    "4187": 183,
+    "4188": 307,
+    "4189": 45,
+    "4190": 71,
+    "4191": 195,
+    "4192": 367,
+    "4193": 211,
+    "4359": 80,
+    "4360": 82,
+    "4651": 22,
+    "4942": 24,
+    "4943": 24,
+    "4944": 24,
+    "4945": 24,
+    "4946": 82,
+    "4947": 37,
+    "4948": 24,
+    "4949": 42,
+    "4950": 60,
+    "4951": 107,
+    "4952": 24,
+    "4953": 72,
+    "4954": 68,
+    "4955": 29,
+    "4956": 82,
+    "4957": 40,
+    "4958": 38,
+    "4959": 24,
+    "4960": 79,
+    "4961": 79,
+    "4962": 106,
+    "4963": 113,
+    "4964": 24,
+    "4965": 51,
+    "4966": 27,
+    "4967": 33,
+    "4968": 116,
+    "4969": 24,
+    "4970": 60,
+    "4971": 239,
+    "4972": 237,
+    "4973": 178,
+    "4974": 98,
+    "4975": 178,
+    "4976": 59,
+    "4977": 60,
+    "4978": 22,
+    "4979": 100,
+    "4980": 39,
+    "4981": 24
+  },
+  "ryukyu_fallback": {
+    "components": [
+      {
+        "centroid": [
+          4830.0,
+          932.5
+        ],
+        "pixels": 2,
+        "province": 4980
+      },
+      {
+        "centroid": [
+          4825.115,
+          936.308
+        ],
+        "pixels": 26,
+        "province": 4980
+      },
+      {
+        "centroid": [
+          4834.2,
+          936.2
+        ],
+        "pixels": 5,
+        "province": 4980
+      },
+      {
+        "centroid": [
+          4818.333,
+          944.833
+        ],
+        "pixels": 6,
+        "province": 4980
+      },
+      {
+        "centroid": [
+          4813.286,
+          952.0
+        ],
+        "pixels": 7,
+        "province": 1015
+      },
+      {
+        "centroid": [
+          4804.714,
+          964.429
+        ],
+        "pixels": 21,
+        "province": 1015
+      },
+      {
+        "centroid": [
+          4800.133,
+          971.0
+        ],
+        "pixels": 15,
+        "province": 4981
+      }
+    ],
+    "method": "three_dominant_vanilla_1015_components"
+  },
+  "schema_version": 2,
+  "source_sha256": {
+    "G21001.geojson": "fe6f132f135e33d0b77d4aee5575f4c593a119a3bc791ec1116c7c245874357c",
+    "G21002.geojson": "1ea371f0b59adcad24cfb9a8f1576fead04adc07d647bdf628e0a7b3be2025fd",
+    "G21009.geojson": "4f6269d6deb2c1c9917ea142e1d77b30ce389b8b760fcd4d9b8838b516264ba1",
+    "G21010.geojson": "91510edd4e1d049e8a5b55ac74f81b8a619cfd4f4b53c294c41fcf7fe85e5589",
+    "G21011.geojson": "993c0135756e19b61ed71ddfd6ff78423ba645a9fb1a9b5614bac16487783521",
+    "G21012.geojson": "6dc2f386b605c3b0c35177943eee15b15c036aa6ce03404107c733cbd6e3c4dc",
+    "G24008.geojson": "ec886a7fea26ac33b894b200eaa0f364b8968431ed50f36020940007e629042e",
+    "G24009.geojson": "fdcf22e1b3b4ba0e4d7b8ae8e05279bef3621c867a33c2bace089e70111f596d",
+    "G24010.geojson": "a48840527a3f9eca505cfe95fd2d16b8b90bda8cf21c4073124a537f7a751fac",
+    "G24011.geojson": "28da6baec8371d30b651801f1cccda78685c7a433efd4af80cb5ce3b7d3bac64",
+    "G24012.geojson": "5086cc17accaaa0bb5278c0a7e6c329324a4f75487c41a49adb422a26343bc7b",
+    "G24013.geojson": "d2957033e4002aaba6b840db537fc55dff49402e774dc7b259e2ec5e870a54df",
+    "G29004.geojson": "4922db0662ef40684653efcae218dcd877e494526574822c7c57d61fc9f8cd9a",
+    "G29005.geojson": "3497b7ab82a2df5118581439a032e4eaa3afc517de8f87833c9404c6c8e96c03",
+    "G29006.geojson": "a90ff31ee3a2fdc6eb6d302804f54738dbd0c7ff74e01f3fc47f5d86485940b2",
+    "G29007.geojson": "46e54163d5042e900e79615676d0f3b2520198e45811c77d381b2e41b659beaa",
+    "G29008.geojson": "1255f02e4ef7e6c3a8bfa7b13ec75037523d937b5183771e8d783b893d936a46",
+    "G29009.geojson": "da1be62be4ca65b77cea063caa0feabe6315f4d4aacd9da1990289e387b69b87",
+    "G31005.geojson": "3ed856e71730365b563d740775ec5b8d10b54c7c00feda87ff1471766d82a109",
+    "G31006.geojson": "22d1976f32a62d98f53d55d162be1079f70f871e042586c8d4a613a523252c36",
+    "G31007.geojson": "147247bab6b83b6267465fec661b02cd67c88fb854d037c0f3d380f8cd0e8e74",
+    "G31008.geojson": "641b4c1a7251ddfac7dd83ef08f448d54c1e9ce77f06a13988c055b5e6393931",
+    "G31009.geojson": "55f89697937e29eae6578892dab30e650ace5c98307473c7d26a4ca96819abdf",
+    "G32004.geojson": "c29ec3fde6d04ea26760c9c722b16a2e1dce31efe8e041ce10cfaee09dd8669d",
+    "G32005.geojson": "e35564bfcddaececbdab7f3a01cc12cf5c934000d531ee968912b78996c0263b",
+    "G67001.geojson": "e9f180ef5f68934addc184abb1f88e4fffc53f02a58cded2095de644d0ecd3aa",
+    "G67002.geojson": "3a468ccf30349767220515546bf8519d522ec39bbf25f94878d435d6ae6628a1",
+    "G67003.geojson": "40f76a611e329f73635e60103483af86385ce88ab59e0b3578e6557dd4f8b160",
+    "G67004.geojson": "fb77831bb89d4cd9f14c2919f0ce0c01891c450e09afc1fe8bae38adafff486c",
+    "G67005.geojson": "f632197b3a47415c27c81572a59999f15c3dfb45999981d4fbf624eae98506db",
+    "G67006.geojson": "a77dea563a47db24a5805001b12f4b60d5858ea99d3b1b94771afdc1b9481a1f",
+    "G67007.geojson": "97f9fe655b31d8611a89a83b8816f9f6c445ca429e40b8195c715d5bdd6ad27a",
+    "G67008.geojson": "989034b443e7a84eb9a7242c0ef12f5423b4c2c97c4d18267d9ebe9852f0341d",
+    "G67009.geojson": "1c45a023def3dbc5231ec4eb73044103c11a51f990b39f5b32f7b3d10c461755",
+    "G67010.geojson": "0efd6ff581e7a50a00c35e91734ba1f18f4e4394d93bcb772aaed457a07acc9c",
+    "G68014.geojson": "35ad8dcc81837c797679458d4afce7f5913cc0f977a09d03559159e387343de8",
+    "K01.geojson": "4a7bd2f167ab1fce5c19dbf3d5ebed7750c33255bff07504069dda224b93e38e",
+    "K02.geojson": "07cae0f35985b9f664e5b901f2f9c449c55facbe466b7ab6a5ef3c5c10e65e8c",
+    "K03.geojson": "174d46f4d6cfa78a8214c7646fa9f6567d27e73704bc097c50e306366ae75dd6",
+    "K04.geojson": "69bf135437b87de34137a17af0bf9bca8f54623f4cb017cf43a67be851bfd6cc",
+    "K05.geojson": "770f6fed13d0a48921ef4d2a869655eeb56305db3686d9204c1e1b677401e312",
+    "K06.geojson": "e53631a4df809fa6ba94a061460dda7661a47f4d684d2e8174cf4327ad0902e8",
+    "K07.geojson": "68cc67b5695982fe2e7c1c3f4d4d16f8138d3b43cd8ee236d2d1c250db20ff96",
+    "K08.geojson": "dd27f3bd4df4488ddaa91fdf1589d342bb20a3e85993f30dee4780b5b2d21157",
+    "K09.geojson": "7d424a98241f310cfd0e2036b6c44d4800c236f559684bdb4498e2b3eb152009",
+    "K10.geojson": "07b0165158e942c30a36b3b0456032a2892a39ddd3b27dc081013882f67e3237",
+    "K11.geojson": "3651bc8bae912724a2c3daf5715cfa44951bb13b2669af1bce32475265f84b32",
+    "K12.geojson": "d733a40501c9ece638837fe49b1c94da93ac6521b2043f6918cc65ffe305c3d9",
+    "K13.geojson": "5fbc7998ad96fdb2db372948bf204a84463e05cab7d3cf6d794f405b3df8ce23",
+    "K14.geojson": "69fb13130b274877e525e48e92ee1c8462003112fbc40cf62317900a7530fde6",
+    "K15.geojson": "f300b1a493d6c9d704b7ce4020145d7c48bd76fb0e78de63477d42953eac8aca",
+    "K16.geojson": "a8ad0918c34af3f77bf332acb805f119bdbed1e2a9766fa48a834b6c36363ded",
+    "K17.geojson": "1ebeb6f29d538f37c080c6a8997b9da7de8e575be629319dd2126d7243c09fbc",
+    "K18.geojson": "99a2281e87f8c572f46148386685c8836266c74ae0f4c2abc3caeb777a93ee97",
+    "K19.geojson": "203aac2851eaba24073e9e11df94a3b0b1397294b941f76d8b1159a40e0a0976",
+    "K20.geojson": "17e86aea2b49cf57c9fa27e72b57f71d1ba2e3bf45adedcc2e3b66fdc5afeb7c",
+    "K21.geojson": "dbcd5f288cd954ed2fcbd624cd1de99e52847edbf476829925edd639ad6940f5",
+    "K22.geojson": "e834f7735e6c2e017d8bba912945e7d6a3abcaad9b2935393ff42ac41eac4829",
+    "K23.geojson": "69565985f12ef5f1bf11e039e944d79f5b0df1324cb620a1e423e6baab228ad4",
+    "K24.geojson": "1f29e351c73aa60fa73461253d7cf399152cda2cd7bb242b325a86162841b2da",
+    "K25.geojson": "3b675723e4e87a2e64c6dc96a4c7c1880529a24d231ce30a408b255e2791036e",
+    "K26.geojson": "175f7f184befa8370d3f0e7bb534b4d1a5881c0ef7b975d35717c618094ef0aa",
+    "K27.geojson": "0c3eee93a3b5bbffa60feaf47837d999b3c05f18fe1baae76de6a7bfa6b6fee4",
+    "K28.geojson": "b14b1b609029c7f2365e35d549cd55c83f6222c8a3413175920211f7a4f68644",
+    "K29.geojson": "a65250a735d11161fd8002e178e3d1ee0e6a433720519ec4356f9e704aad0152",
+    "K30.geojson": "28749b2af77532a3c1406dd0b87664a01db5fc28095ea04b24681d8df4e25d65",
+    "K31.geojson": "baab3031941c039fafa37dfb6b074194cda138ab20b273c041735ee5e3534128",
+    "K32.geojson": "109a33eea7229f07ad55b4e5b1accdecb025bb666bcbcc33005aab972dba311b",
+    "K33.geojson": "e87c2217f9937d0b35b67bcbebe6aed4a824031d40948937676374a49775e8fd",
+    "K34.geojson": "6b47ca283454dbeff802046a7cba9b617496f9e080f1b4552e6c83525aaf717c",
+    "K35.geojson": "a1389f03115e73a625259bc5b07c7b827528920775893bb0029b50a26b0f630d",
+    "K36.geojson": "588326a8b8236139fcea9e29b827398c55577c5a9af5c7a33cd445a45d8d53d4",
+    "K37.geojson": "db15dd6c77edaf8d90c2a79c862ab6a658cf5e10b1e93f7dafa0ccc509806f49",
+    "K38.geojson": "fd999f99ab55d48b936c8854887fda213a533d73605837f3f20d5b5a8f7a68e1",
+    "K39.geojson": "0eaf8b2625dbfa11be775b5a3aa9c8ca62f03350f2fb7f2b44ecbcb29c41ad31",
+    "K40.geojson": "f87d0eddec13aaf96d26b25928105c72438de4e18b3dd4ca908c513eea3563af",
+    "K41.geojson": "61b3c0467392b85a958ae3993f4cd751b8175ddc75c9acb93dc2ccb9ffdd7914",
+    "K42.geojson": "30d23ee8b36de9d34678e81762a64cfbe7dc55a869413ba1b12ff98f6c2ed2cb",
+    "K43.geojson": "c69f47cdd013a7fb64578f5d3cb7fc731b882214d7c4a623c0099e1e1d8895a4",
+    "K44.geojson": "794682588e56b2eb78a550f97ddda3433b8233989ddac606d9abe914f3fc3399",
+    "K45.geojson": "4c20d83d1fdb06c0fe2b1386315f25ea26a9320645b1612c40a76610c8200bf3",
+    "K46.geojson": "309d65bf2a2df3c79617ec708776cdb87284d319cda2e0a2d0f2d7ca6a417090",
+    "K47.geojson": "cd2586fb25a25ff514b7a7a662b8b3218a02d6203fd5fc44fcf6dc49456e8958",
+    "K48.geojson": "28a1caccd07668e53ebeb5a94e799d012783c6138eb481c2fbf1561768a4818d",
+    "K49.geojson": "4bab8620604c893299b351a21bedf31b93f2c3a5b51c53e5f54cb79236eb4110",
+    "K50.geojson": "58aaf0ab3f0b964ce3f6dde375011982b361c3d09643fa8a7a1a236ddd809178",
+    "K51.geojson": "9e3bb9215027e7d67f5f150fa14af87ed09b76f7a85ffb9013020a1365ff2fd5",
+    "K52.geojson": "b062fb6354ffb57887d04235d5f982af25e8d806c3928e729b670ef48869307c",
+    "K53.geojson": "6603df6294cd1269bb8f8486454889c2086a3fda87f1a566d791e2d58f6865dc",
+    "K54.geojson": "29404b219b5e75e75a6b24218ee2f72fe5d6d0a054165c9c6bc76aa0d8ade7bf",
+    "K55.geojson": "c2fcc4e3022509e3a368018e61015bf56b5a175668d76ee9a271831c33193d54",
+    "K56.geojson": "5d46e4a51126479baa0bfa120f07946b9f7abc7cd1cc9f40094600dc22280054",
+    "K57.geojson": "060d5e7b374e6bd4c68282756b616319eb93bdc8c8a75fec53767d50b1e367e7",
+    "K58.geojson": "df47da160675c8a6293b06bee976a2ade177c35d03d6d97a7a5b2c8ddeec1957",
+    "K59.geojson": "5752882e0d9eef537d4408c95f88f1b6f7e1465bbe2d6484ecb8c18be950daeb",
+    "K60.geojson": "312f5b055a587451749b291b6ecc160ce005cda20feb3239f54bb69476b24ad3",
+    "K61.geojson": "b98688f596389e6d7aacefc8b61e9aba09b1936e6a25ef42aa3f1f0f9077a733",
+    "K62.geojson": "758e4127ab03e9ef1de10a39c519824713b654cf0d79bfe0c21d71c59d4f940c",
+    "K63.geojson": "4425131f1f0f04eb0b702dce19eee872fa8544b985efcf761a5541913ce8c53c",
+    "K64.geojson": "0d71fcc12d4e95d2353f1c3c45814e2c9e5f374d98b4894ce8be8cfd90eed6e7",
+    "K65.geojson": "eee0bb0ef33c2d83b9444e848f998d760471bbb4588072eefa2a5e7694340d11",
+    "K66.geojson": "ffe38de098feedbbe91be40bd43dc7c97b645be6e238b785b24d001f65e19c1f",
+    "K67.geojson": "02b71d8719df72cce731297bf42a9e2db68a59b7858e5d1ddcdc22175eb3d011",
+    "K68.geojson": "e3d3abf750aa77790b3da2fb24479e18e58be983e31446f4bc50a07e0d486af0",
+    "K69.geojson": "f86aa14a6183e02c652f9e33f74134a8c8f05ffb002381d30babc9beabfc0f27",
+    "K70.geojson": "70d82d180056031577547eb29b3a3d8a66fbc759c1797a64d086e4ae879e2426",
+    "K71.geojson": "32eaf83743b6bd9dc272b9ed141daea83e80e4e26ea455b3f66de8926d085af5",
+    "K72.geojson": "49106c648515c2cfdf2339950da505a08953f58cfc44f3801d9d3ba26369d6ea",
+    "K73.geojson": "1b046e9c1d7510686a3401ed943b41031fcbaa3435523a5fc394093f99b8c653",
+    "K74.geojson": "e3c55fc83d3e664379c7db041d2729fff842572971049bf544bc3a3effca4fb3"
+  },
+  "topology_cleanup": [
+    {
+      "assigned_to": 4181,
+      "pixels": 1,
+      "province": 1012
+    },
+    {
+      "assigned_to": 4131,
+      "pixels": 23,
+      "province": 1026
+    },
+    {
+      "assigned_to": 4131,
+      "pixels": 5,
+      "province": 1026
+    },
+    {
+      "assigned_to": 1029,
+      "pixels": 21,
+      "province": 1839
+    },
+    {
+      "assigned_to": 4188,
+      "pixels": 1,
+      "province": 1839
+    },
+    {
+      "assigned_to": 4191,
+      "pixels": 3,
+      "province": 1843
+    },
+    {
+      "assigned_to": 1825,
+      "pixels": 1,
+      "province": 4186
+    },
+    {
+      "assigned_to": 1024,
+      "pixels": 1,
+      "province": 4188
+    },
+    {
+      "assigned_to": 1028,
+      "pixels": 4,
+      "province": 4189
+    },
+    {
+      "assigned_to": 4957,
+      "pixels": 1,
+      "province": 4958
+    },
+    {
+      "assigned_to": 1014,
+      "pixels": 1,
+      "province": 4966
+    }
+  ]
+}

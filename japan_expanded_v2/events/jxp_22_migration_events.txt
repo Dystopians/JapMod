@@ -1,0 +1,43 @@
+namespace = jxp_migration_v022
+
+country_event = {
+	id = jxp_migration_v022.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_reform_tier_migration_v022 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_clear_route_reforms_effect = yes
+		jxp_grant_route_reforms_effect = yes
+
+		if = {
+			limit = { jxp_confucian_route_country_trigger = yes }
+			jxp_confucian_sync_shinto_effect = yes
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_country_flag = jxp_confucian_native_centers_v1 }
+						NOT = { jxp_confucian_has_three_native_centers_trigger = yes }
+					}
+				}
+				jxp_spawn_confucian_reform_centers_effect = yes
+			}
+		}
+
+		regenerate_government_mechanics = yes
+		jxp_refresh_route_missions_effect = yes
+		set_country_flag = jxp_reform_tier_migration_v022
+	}
+
+	option = {
+		name = "OK"
+	}
+}

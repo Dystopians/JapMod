@@ -1,0 +1,30 @@
+# Semantic geography gates shared by the standalone and companion-map setups.
+# The companion flags are additive; every trigger retains a vanilla fallback.
+jxp_77_has_tsushima_channel_trigger = {
+	OR = {
+		owns_or_non_sovereign_subject_of = 4651
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_tsushima_channel
+		}
+	}
+}
+
+jxp_77_has_setouchi_circuit_trigger = {
+	OR = {
+		any_owned_province = {
+			area = saigoku_area
+		}
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_setouchi
+		}
+	}
+}
+
+jxp_77_has_ryukyu_gateway_trigger = {
+	OR = {
+		owns_or_non_sovereign_subject_of = 1015
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_ryukyu_gateway
+		}
+	}
+}

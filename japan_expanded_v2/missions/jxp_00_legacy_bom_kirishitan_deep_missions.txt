@@ -1,0 +1,7 @@
+﻿jxp_kirishitan_deep_missions = {
+	slot = 4
+	generic = no
+	ai = no
+	potential_on_load = { always = no }
+	potential = { always = no }
+}

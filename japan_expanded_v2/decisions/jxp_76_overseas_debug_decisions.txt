@@ -1,0 +1,64 @@
+country_decisions = {
+	jxp_debug_76_start_pacific_network = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_76_pacific_network_start_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_76_add_pacific_pressure = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_76_pacific_network_active
+		}
+		allow = { always = yes }
+		effect = { jxp_76_pacific_add_pressure_20_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_76_fire_pacific_review = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_76_pacific_network_active
+		}
+		allow = { always = yes }
+		effect = { country_event = { id = jxp_overseas_loop.1 } }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_76_fire_pacific_crisis = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_76_pacific_network_active
+		}
+		allow = { always = yes }
+		effect = {
+			set_variable = { which = jxp_76_pacific_pressure value = 85 }
+			country_event = { id = jxp_overseas_loop.3 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_76_reset_pacific_network = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = { jxp_76_pacific_debug_reset_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+}

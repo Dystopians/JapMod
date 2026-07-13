@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "shared_main_series": {
+    "1": "jxp_daimyo_domain_missions",
+    "2": "jxp_daimyo_contact_missions",
+    "4": "jxp_daimyo_society_missions",
+    "5": "jxp_daimyo_unification_missions"
+  },
+  "groups": {
+    "warrior": {
+      "tags": ["RKK", "ANK", "MOG", "ASN", "OSK", "SMA", "MKM", "STM", "STO"],
+      "map_series": "jxp_map_warrior_house_missions",
+      "map_anchor": "jxp_map_mission_warrior_muster",
+      "main_origin_trigger": "jxp_has_companion_map_warrior_origin_trigger",
+      "map_origin_trigger": "jxp_map_has_warrior_origin_trigger"
+    },
+    "court": {
+      "tags": ["KYO", "WKT", "NHT", "AZI", "MYO"],
+      "map_series": "jxp_map_court_house_missions",
+      "map_anchor": "jxp_map_mission_court_genealogies",
+      "main_origin_trigger": "jxp_has_companion_map_court_origin_trigger",
+      "map_origin_trigger": "jxp_map_has_court_origin_trigger"
+    },
+    "maritime": {
+      "tags": ["HNM", "ARI", "MTU", "RZJ", "MTS", "KRD", "NBS"],
+      "map_series": "jxp_map_sea_house_missions",
+      "map_anchor": "jxp_map_mission_sea_port_registers",
+      "main_origin_trigger": "jxp_has_companion_map_maritime_origin_trigger",
+      "map_origin_trigger": "jxp_map_has_sea_origin_trigger"
+    },
+    "frontier": {
+      "tags": ["DHO", "KMP", "SGR", "TGR"],
+      "map_series": "jxp_map_frontier_house_missions",
+      "map_anchor": "jxp_map_mission_frontier_passes",
+      "main_origin_trigger": "jxp_has_companion_map_frontier_origin_trigger",
+      "map_origin_trigger": "jxp_map_has_frontier_origin_trigger"
+    },
+    "temple_market": {
+      "tags": ["TGS", "HNG", "UKT", "HCS", "YMC"],
+      "map_series": "jxp_map_temple_market_house_missions",
+      "map_anchor": "jxp_map_mission_temple_ledgers",
+      "main_origin_trigger": "jxp_has_companion_map_temple_market_origin_trigger",
+      "map_origin_trigger": "jxp_map_has_temple_market_origin_trigger"
+    }
+  },
+  "strategic_anchors": {
+    "1015": "Okinawa",
+    "1020": "Kyoto",
+    "1021": "Settsu",
+    "1028": "Musashi",
+    "4182": "Hizen",
+    "4183": "Iwami",
+    "4193": "Oshima",
+    "4359": "Ise",
+    "4651": "Tsushima"
+  },
+  "geography_flags": {
+    "jxp_map_compat_shimabara_belt": ["jxp_western_kyushu_area"],
+    "jxp_map_compat_ikko_heartland": ["jxp_western_saigoku_area", "jxp_ise_kii_area"],
+    "jxp_map_compat_setouchi": ["jxp_western_saigoku_area"],
+    "jxp_map_compat_wokou_waters": ["jxp_western_kyushu_area", "jxp_western_saigoku_area", "jxp_ryukyu_area"],
+    "jxp_map_compat_ryukyu_gateway": ["jxp_ryukyu_area"]
+  },
+  "geography_province_flags": {
+    "jxp_map_compat_tsushima_channel": [4651]
+  }
+}

@@ -1,0 +1,369 @@
+jxp_31_otm_funai_bishopric_court = {
+	global_missionary_strength = 0.01
+	tolerance_own = 1
+}
+
+jxp_31_otm_bungo_retainer_compromise = {
+	religious_unity = 0.08
+	global_unrest = -1
+}
+
+jxp_31_mri_setouchi_red_seals = {
+	trade_efficiency = 0.08
+	naval_forcelimit_modifier = 0.08
+}
+
+jxp_31_mri_kokujin_sea_oaths = {
+	naval_morale = 0.05
+	global_ship_trade_power = 0.08
+}
+
+jxp_31_ask_imperial_restoration_letters = {
+	legitimacy = 1
+	prestige = 1
+}
+
+jxp_31_ask_hokoshu_court_guard = {
+	diplomatic_reputation = 1
+	global_unrest = -1
+}
+
+jxp_31_asa_ichijodani_academies = {
+	idea_cost = -0.03
+	yearly_harmony = 0.25
+}
+
+jxp_31_asa_echizen_house_rites = {
+	stability_cost_modifier = -0.05
+	global_tax_modifier = 0.05
+}
+
+jxp_31_dte_keicho_embassy_routes = {
+	trade_range_modifier = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_31_dte_oshu_envoy_oaths = {
+	land_morale = 0.04
+	global_foreign_trade_power = 0.08
+}
+
+jxp_31_soo_tsushima_channel_writs = {
+	trade_steering = 0.10
+	global_ship_trade_power = 0.08
+}
+
+jxp_31_soo_wakan_sea_wardens = {
+	privateer_efficiency = 0.12
+	capture_ship_chance = 0.08
+}
+
+jxp_31_oda_azuchi_red_seal_markets = {
+	trade_efficiency = 0.07
+	global_institution_spread = 0.08
+}
+
+jxp_31_oda_tenka_market_officers = {
+	global_tax_modifier = 0.05
+	governing_capacity_modifier = 0.04
+}
+
+jxp_31_tkg_fudai_closed_country = {
+	global_unrest = -1
+	stability_cost_modifier = -0.05
+}
+
+jxp_31_tkg_mikawa_hostage_order = {
+	manpower_recovery_speed = 0.06
+	global_spy_defence = 0.10
+}
+
+jxp_31_tkd_koshu_confucian_law = {
+	idea_cost = -0.03
+	land_morale = 0.03
+}
+
+jxp_31_tkd_mountain_house_codes = {
+	defensiveness = 0.08
+	war_exhaustion = -0.03
+}
+
+jxp_31_ues_imperial_kanrei_letters = {
+	prestige = 1
+	diplomatic_reputation = 1
+}
+
+jxp_31_ues_echigo_justice_oaths = {
+	land_morale = 0.04
+	global_unrest = -1
+}
+
+jxp_31_hjo_odawara_closed_cadasters = {
+	state_maintenance_modifier = -0.06
+	global_tax_modifier = 0.05
+}
+
+jxp_31_hjo_sogamae_domain_watch = {
+	defensiveness = 0.10
+	global_manpower_modifier = 0.05
+}
+
+jxp_31_smz_satsunan_halal_ports = {
+	trade_steering = 0.10
+	tolerance_heathen = 1
+}
+
+jxp_31_smz_satsuma_gunfounder_compact = {
+	infantry_power = 0.05
+	naval_morale = 0.04
+}
+
+jxp_31_csk_ichiryo_monto_muster = {
+	global_manpower_modifier = 0.08
+	global_regiment_cost = -0.04
+}
+
+jxp_31_csk_tosa_peasant_oaths = {
+	global_unrest = -1
+	production_efficiency = 0.05
+}
+
+jxp_31_ouc_yamaguchi_sea_tribute = {
+	global_foreign_trade_power = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_31_ouc_suofu_merchant_council = {
+	trade_efficiency = 0.06
+	improve_relation_modifier = 0.08
+}
+
+jxp_31_img_tokaido_confucian_codes = {
+	technology_cost = -0.03
+	legitimacy = 0.5
+}
+
+jxp_31_img_suruga_house_law = {
+	global_tax_modifier = 0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_31_ama_gassan_closed_mines = {
+	state_maintenance_modifier = -0.06
+	production_efficiency = 0.05
+}
+
+jxp_31_ama_shingu_retainer_rolls = {
+	manpower_recovery_speed = 0.06
+	global_spy_defence = 0.08
+}
+
+jxp_31_hsk_kanrei_restoration_cabinet = {
+	diplomatic_reputation = 1
+	legitimacy = 0.5
+}
+
+jxp_31_hsk_sakai_court_brokers = {
+	trade_efficiency = 0.05
+	prestige = 0.5
+}
+
+jxp_31_htk_wakae_synodic_oaths = {
+	tolerance_heretic = 1
+	production_efficiency = 0.05
+}
+
+jxp_31_htk_kawachi_retainer_compact = {
+	global_unrest = -1
+	global_manpower_modifier = 0.05
+}
+
+jxp_31_ike_himeji_oceanic_stewards = {
+	trade_steering = 0.10
+	global_foreign_trade_power = 0.08
+}
+
+jxp_31_ike_harima_castle_accounts = {
+	global_tax_modifier = 0.05
+	governing_capacity_modifier = 0.04
+}
+
+jxp_31_mae_kaga_confucian_academies = {
+	advisor_cost = -0.06
+	idea_cost = -0.03
+}
+
+jxp_31_mae_million_koku_granaries = {
+	production_efficiency = 0.05
+	global_unrest = -1
+}
+
+jxp_31_sba_buei_imperial_offices = {
+	diplomatic_reputation = 1
+	prestige = 0.5
+}
+
+jxp_31_sba_owari_house_guards = {
+	infantry_power = 0.04
+	global_manpower_modifier = 0.05
+}
+
+jxp_31_ymn_roku_bun_ichi_rankings = {
+	legitimacy = 0.5
+	global_unrest = -1
+}
+
+jxp_31_ymn_sanin_guard_houses = {
+	defensiveness = 0.08
+	land_morale = 0.03
+}
+
+jxp_31_rfr_mutsu_border_cordon = {
+	global_spy_defence = 0.10
+	defensiveness = 0.08
+}
+
+jxp_31_rfr_nine_gates_horse_rolls = {
+	cavalry_power = 0.06
+	manpower_recovery_speed = 0.04
+}
+
+jxp_31_ktb_ise_imperial_rites = {
+	prestige = 1
+	stability_cost_modifier = -0.05
+}
+
+jxp_31_ktb_kitabatake_court_law = {
+	advisor_cost = -0.05
+	global_tax_modifier = 0.05
+}
+
+jxp_31_akm_harima_closed_roads = {
+	defensiveness = 0.08
+	state_maintenance_modifier = -0.06
+}
+
+jxp_31_akm_akasaka_retainer_codes = {
+	land_morale = 0.03
+	global_manpower_modifier = 0.05
+}
+
+jxp_31_akt_ezochi_trade_brokers = {
+	trade_steering = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_31_akt_northern_watch_posts = {
+	global_spy_defence = 0.10
+	defensiveness = 0.08
+}
+
+jxp_31_cba_katori_closed_musters = {
+	global_manpower_modifier = 0.06
+	stability_cost_modifier = -0.05
+}
+
+jxp_31_cba_shimosa_barrier_law = {
+	global_unrest = -1
+	fort_maintenance_modifier = -0.05
+}
+
+jxp_31_isk_tango_open_wardens = {
+	global_ship_trade_power = 0.10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_31_isk_amanohashidate_pilots = {
+	trade_efficiency = 0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_31_ito_hyuga_seminary_castles = {
+	global_missionary_strength = 0.01
+	fort_maintenance_modifier = -0.05
+}
+
+jxp_31_ito_hyuga_clan_chapels = {
+	tolerance_own = 1
+	global_unrest = -1
+}
+
+jxp_31_kkc_aso_rite_schools = {
+	prestige = 0.5
+	advisor_cost = -0.05
+}
+
+jxp_31_kkc_kikuchi_hill_codes = {
+	defensiveness = 0.08
+	stability_cost_modifier = -0.05
+}
+
+jxp_31_kno_setouchi_corsair_pilots = {
+	privateer_efficiency = 0.15
+	naval_morale = 0.04
+}
+
+jxp_31_kno_iyo_sea_oaths = {
+	trade_steering = 0.08
+	global_sailors_modifier = 0.10
+}
+
+jxp_31_ogs_suwa_imperial_archers = {
+	cavalry_power = 0.05
+	prestige = 0.5
+}
+
+jxp_31_ogs_shinano_horse_law = {
+	land_morale = 0.03
+	manpower_recovery_speed = 0.04
+}
+
+jxp_31_shn_dazaifu_maritime_brokers = {
+	trade_efficiency = 0.06
+	tolerance_heathen = 1
+}
+
+jxp_31_shn_kyushu_gateway_guards = {
+	naval_forcelimit_modifier = 0.10
+	global_manpower_modifier = 0.05
+}
+
+jxp_31_stk_hitachi_imperial_musters = {
+	global_manpower_modifier = 0.06
+	prestige = 0.5
+}
+
+jxp_31_stk_eastern_warrior_rolls = {
+	infantry_power = 0.04
+	defensiveness = 0.08
+}
+
+jxp_31_tki_mino_confucian_river_offices = {
+	governing_capacity_modifier = 0.04
+	production_efficiency = 0.05
+}
+
+jxp_31_tki_toki_house_lawbooks = {
+	stability_cost_modifier = -0.05
+	advisor_cost = -0.05
+}
+
+jxp_31_utn_nikko_closed_barriers = {
+	tolerance_own = 1
+	global_spy_defence = 0.10
+}
+
+jxp_31_utn_shimotsuke_shrine_guard = {
+	defensiveness = 0.08
+	global_unrest = -1
+}
+
+jxp_31_tti_yamato_monto_compact = {
+	global_unrest = -1
+	production_efficiency = 0.05
+}
+
+jxp_31_tti_nara_temple_mediation = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.05
+}

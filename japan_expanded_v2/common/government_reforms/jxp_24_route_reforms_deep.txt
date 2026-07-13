@@ -1,0 +1,911 @@
+jxp_reform_sakoku_five_household_registers = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		global_unrest = -1
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_castle_town_sumptuary = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		state_maintenance_modifier = -0.05
+		global_tax_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_nagasaki_customs = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		trade_efficiency = 0.08
+		trade_steering = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_machishu_investors = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		development_cost = -0.05
+		build_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_confraternity_parishes = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_latin_colleges = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		advisor_pool = 1
+		technology_cost = -0.02
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_domain_examiners = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.05
+		monthly_reform_progress_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_shrine_registers = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		religious_unity = 0.10
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_court_nobles = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		legitimacy = 0.75
+		prestige = 0.5
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_land_tax_revival = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.08
+		governing_capacity_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_synod_schools = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		church_power_modifier = 0.15
+		global_institution_spread = 0.08
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_civic_oaths = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		religious_unity = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_qadi_registers = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		tolerance_heathen = 1
+		global_tax_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_port_waqf = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.05
+		production_efficiency = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_somon_judges = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		religious_unity = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_temple_market_communes = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.07
+		development_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_island_courts = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		privateer_efficiency = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_smuggler_brokers = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.07
+		embargo_efficiency = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_offshore_patrols = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		defensiveness = 0.10
+		naval_forcelimit_modifier = 0.08
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_inland_arsenals = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		artillery_cost = -0.05
+		defensiveness = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_blue_water_contracts = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		ship_durability = 0.03
+		naval_maintenance_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_foreign_drill_yards = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		fire_damage = 0.03
+		land_morale = 0.04
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_ordered_brotherhoods = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.08
+		land_morale = 0.04
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_mission_fleet = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		naval_morale = 0.06
+		global_missionary_strength = 0.01
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_rite_army_inspectors = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		land_morale = 0.04
+		army_tradition = 0.5
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_wanghua_magistrates = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		core_creation = -0.05
+		years_of_nationalism = -3
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_guard_mandates = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		discipline = 0.025
+		land_forcelimit_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_fleet_of_the_sun = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		naval_morale = 0.06
+		naval_forcelimit_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_militia_musters = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		infantry_cost = -0.05
+		land_morale = 0.04
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_contract_admiralty = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		naval_maintenance_modifier = -0.05
+		trade_steering = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_monsoon_arsenals = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		naval_morale = 0.06
+		ship_durability = 0.03
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_gunfounder_madrasas = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		artillery_cost = -0.05
+		technology_cost = -0.02
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_monto_militias = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.10
+		infantry_cost = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_fortified_terauchi = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		defensiveness = 0.10
+		manpower_recovery_speed = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_boarding_schools = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		capture_ship_chance = 0.10
+		naval_morale = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_tidewater_arsenals = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		ship_durability = 0.03
+		naval_forcelimit_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_embassy_seals = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		improve_relation_modifier = 0.10
+		diplomatic_reputation = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_sakoku_inner_learning = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_sakoku }
+	modifiers = {
+		technology_cost = -0.02
+		global_institution_spread = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_pacific_charters = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		global_colonial_growth = 10
+		trade_range_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_open_silver_standard = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = { has_country_flag = jxp_path_open_trade }
+	modifiers = {
+		inflation_reduction = 0.05
+		global_trade_power = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_embassy_to_rome = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		papal_influence = 1
+		diplomatic_reputation = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kirishitan_sacred_monarchy = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+	}
+	modifiers = {
+		legitimacy = 1
+		religious_unity = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_sinic_harmonizers = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		harmonization_speed = 0.15
+		tolerance_heathen = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_confucian_tribute_bureau = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+	}
+	modifiers = {
+		improve_relation_modifier = 0.10
+		diplomatic_upkeep = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_envoys_of_tenno = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		diplomats = 1
+		improve_relation_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_imperial_subject_ranks = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = EJP
+			has_country_flag = jxp_path_imperial
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		global_autonomy = -0.02
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_print_covenants = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		embracement_cost = -0.05
+		idea_cost = -0.04
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_reformed_dutch_factors = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.07
+		global_ship_trade_power = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_indian_ocean_diplomats = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		trade_range_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_kaikyo_haramayn_patronage = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		tolerance_own = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_public_granaries = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_ikko_common_oath = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_sea_law = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		blockade_efficiency = 0.10
+		naval_maintenance_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_wokou_black_current_charters = {
+	icon = "shogunate"
+	monarchy = yes
+	republic = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	modifiers = {
+		global_ship_trade_power = 0.15
+		trade_range_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}

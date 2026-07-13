@@ -1,0 +1,101 @@
+namespace = jxp_founder_idea_legacy
+
+country_event = {
+	id = jxp_founder_idea_legacy.1
+	title = "jxp_founder_idea_legacy.1.t"
+	desc = "jxp_founder_idea_legacy.1.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_founder_idea_legacy.1.a"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_founder_idea_legacy_modifier_effect = yes
+	}
+	option = {
+		name = "jxp_founder_idea_legacy.1.b"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_39_warrior_idea_house_school duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_founder_idea_legacy.2
+	title = "jxp_founder_idea_legacy.2.t"
+	desc = "jxp_founder_idea_legacy.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_founder_idea_legacy.2.a"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_founder_idea_legacy_modifier_effect = yes
+	}
+	option = {
+		name = "jxp_founder_idea_legacy.2.b"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_39_court_idea_house_school duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_founder_idea_legacy.3
+	title = "jxp_founder_idea_legacy.3.t"
+	desc = "jxp_founder_idea_legacy.3.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_founder_idea_legacy.3.a"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_add_founder_idea_legacy_modifier_effect = yes
+	}
+	option = {
+		name = "jxp_founder_idea_legacy.3.b"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_39_maritime_idea_house_school duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_founder_idea_legacy.4
+	title = "jxp_founder_idea_legacy.4.t"
+	desc = "jxp_founder_idea_legacy.4.d"
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_founder_idea_legacy.4.a"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_founder_idea_legacy_modifier_effect = yes
+	}
+	option = {
+		name = "jxp_founder_idea_legacy.4.b"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_39_frontier_idea_house_school duration = -1 }
+	}
+}
+
+country_event = {
+	id = jxp_founder_idea_legacy.5
+	title = "jxp_founder_idea_legacy.5.t"
+	desc = "jxp_founder_idea_legacy.5.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_founder_idea_legacy.5.a"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_founder_idea_legacy_modifier_effect = yes
+	}
+	option = {
+		name = "jxp_founder_idea_legacy.5.b"
+		set_country_flag = jxp_39_founder_idea_legacy_compiled
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_39_temple_market_idea_house_school duration = -1 }
+	}
+}

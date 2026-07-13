@@ -1,0 +1,49 @@
+namespace = jxp_mission_refresh
+
+# Mission candidates are evaluated after tag, religion, route flags and
+# government state have all settled. This avoids rebuilding against the old
+# country state in the same effect stack.
+country_event = {
+	id = jxp_mission_refresh.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = jxp_mission_refresh_pending
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_sync_route_national_ideas_effect = yes
+		swap_non_generic_missions = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+# Low-frequency repair for interrupted event queues, stale pending flags, and
+# old saves whose serialized mission series no longer match the current route.
+country_event = {
+	id = jxp_mission_refresh.2
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_mission_tree_needs_reconcile_trigger = yes
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	immediate = {
+		clr_country_flag = jxp_mission_refresh_pending
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}

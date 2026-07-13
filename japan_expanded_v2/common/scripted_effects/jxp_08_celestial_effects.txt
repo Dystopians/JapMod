@@ -1,0 +1,34 @@
+jxp_unlock_hakko_ichiu_reform_effect = {
+	custom_tooltip = jxp_hakko_ichiu_reform_unlocked_tt
+	hidden_effect = {
+		set_country_flag = jxp_unlocked_hakko_ichiu_reform
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+	}
+}
+
+# Imperial-reform candidates are cached separately from the mission reward that
+# unlocks them. Rebuild the current Japanese emperor's mechanics both when the
+# mission is completed and when an older save later acquires the Mandate.
+jxp_reconcile_hakko_ichiu_reform_visibility_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dlc = "Mandate of Heaven"
+				jxp_is_japanese_polity_trigger = yes
+				is_emperor_of_china = yes
+				OR = {
+					has_country_flag = jxp_unlocked_hakko_ichiu_reform
+					mission_completed = jxp_mission_eastasia_claim_mandate
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = jxp_unlocked_hakko_ichiu_reform }
+				}
+				set_country_flag = jxp_unlocked_hakko_ichiu_reform
+			}
+			regenerate_government_mechanics = yes
+			set_country_flag = jxp_hakko_visibility_reconciled_v0260
+		}
+	}
+}

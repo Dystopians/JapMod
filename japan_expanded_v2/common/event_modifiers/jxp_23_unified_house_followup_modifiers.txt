@@ -1,0 +1,49 @@
+jxp_23_warrior_reviewed_musters = {
+	land_morale = 0.02
+	manpower_recovery_speed = 0.05
+}
+
+jxp_23_warrior_local_oaths = {
+	global_unrest = -1
+	defensiveness = 0.05
+}
+
+jxp_23_court_rank_table = {
+	diplomatic_reputation = 1
+	prestige_decay = -0.005
+}
+
+jxp_23_court_service_offices = {
+	advisor_cost = -0.05
+	global_tax_modifier = 0.05
+}
+
+jxp_23_maritime_open_registers = {
+	global_trade_power = 0.05
+	global_ship_trade_power = 0.10
+}
+
+jxp_23_maritime_tightened_ports = {
+	trade_efficiency = 0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_23_frontier_warden_oaths = {
+	global_manpower_modifier = 0.05
+	land_attrition = -0.05
+}
+
+jxp_23_frontier_market_pacts = {
+	production_efficiency = 0.05
+	global_trade_power = 0.03
+}
+
+jxp_23_temple_privilege_compact = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.05
+}
+
+jxp_23_temple_public_registries = {
+	global_unrest = -1
+	production_efficiency = 0.05
+}

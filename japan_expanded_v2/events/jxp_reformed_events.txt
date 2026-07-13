@@ -1,0 +1,363 @@
+namespace = jxp_reformed
+
+country_event = {
+	id = jxp_reformed.0
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		jxp_not_sakoku_locked_trigger = yes
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { has_country_flag = jxp_reformed_contact }
+		jxp_oceanic_opening_at_least_50 = yes
+		OR = {
+			is_year = 1580
+			dip_tech = 10
+			any_known_country = {
+				OR = {
+					religion = protestant
+					religion = reformed
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	immediate = {
+		country_event = { id = jxp_reformed.1 days = 1 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_reformed.1
+	title = "jxp_reformed.1.t"
+	desc = "jxp_reformed.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_reformed.1.a"
+		set_country_flag = jxp_reformed_contact
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_hirado_synod
+			duration = 3650
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_province_modifier = {
+					name = jxp_hirado_congregation
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_reformed.1.b"
+		set_country_flag = jxp_reformed_contact
+		jxp_subtract_oceanic_opening_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_reformed.2
+	title = "jxp_reformed.2.t"
+	desc = "jxp_reformed.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		NOT = { has_country_flag = jxp_reformed_scriptures_done }
+		OR = {
+			has_country_modifier = jxp_reviewed_translations
+			adm_tech = 10
+			innovativeness = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_reformed.2.a"
+		set_country_flag = jxp_reformed_scriptures_done
+		add_country_modifier = {
+			name = jxp_oranda_scriptures
+			duration = 7300
+		}
+		add_adm_power = 50
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				change_religion = reformed
+				add_province_modifier = {
+					name = jxp_hirado_congregation
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_reformed.2.b"
+		set_country_flag = jxp_reformed_scriptures_done
+		add_country_modifier = {
+			name = jxp_oranda_scriptures
+			duration = 3650
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_reformed.3
+	title = "jxp_reformed.3.t"
+	desc = "jxp_reformed.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		NOT = { has_country_flag = jxp_reformed_covenant_done }
+		religious_unity = 0.75
+		stability = 1
+	}
+
+	mean_time_to_happen = {
+		months = 140
+	}
+
+	option = {
+		name = "jxp_reformed.3.a"
+		set_country_flag = jxp_reformed_covenant_done
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_reformed_court_covenant
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "jxp_reformed.3.b"
+		set_country_flag = jxp_reformed_covenant_done
+		add_country_modifier = {
+			name = jxp_reformed_court_covenant
+			duration = -1
+		}
+		add_dip_power = -50
+		add_stability = 1
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_reformed.4
+	title = "jxp_reformed.4.t"
+	desc = "jxp_reformed.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		religion = reformed
+		NOT = { has_country_flag = jxp_reformed_centers_established }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "jxp_reformed.4.a"
+		set_country_flag = jxp_reformed_centers_established
+		add_country_modifier = {
+			name = jxp_reformed_consistory
+			duration = 7300
+		}
+		jxp_spawn_reformed_reform_centers_effect = yes
+		hidden_effect = {
+			country_event = { id = jxp_reformed.5 days = 365 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_reformed.5
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_province = {
+					region = japan_region
+					NOT = { religion = reformed }
+				}
+			}
+			jxp_reformed_convert_one_japan_province_effect = yes
+			country_event = { id = jxp_reformed.5 days = 365 }
+		}
+		else = {
+			clr_country_flag = jxp_reformed_conversion_active
+			country_event = { id = jxp_reformed.6 days = 30 }
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_reformed.6
+	title = "jxp_reformed.6.t"
+	desc = "jxp_reformed.6.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		religion = reformed
+		NOT = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = reformed }
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_reformed.6.a"
+		add_prestige = 10
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_reformed.7
+	title = "jxp_reformed.7.t"
+	desc = "jxp_reformed.7.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		religion = reformed
+		NOT = { has_country_flag = jxp_reformed_oranda_schools_seen }
+		OR = {
+			has_institution = global_trade
+			has_country_modifier = jxp_reviewed_translations
+			adm_tech = 12
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 96
+	}
+
+	option = {
+		name = "jxp_reformed.7.a"
+		set_country_flag = jxp_reformed_oranda_schools_seen
+		add_country_modifier = {
+			name = jxp_reformed_oranda_schools
+			duration = 7300
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_reformed.7.b"
+		set_country_flag = jxp_reformed_oranda_schools_seen
+		add_country_modifier = {
+			name = jxp_reformed_oranda_schools
+			duration = 3650
+		}
+		add_adm_power = -50
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_reformed.8
+	title = "jxp_reformed.8.t"
+	desc = "jxp_reformed.8.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		jxp_not_sakoku_locked_trigger = yes
+		religion = reformed
+		num_of_ports = 8
+		jxp_oceanic_opening_at_least_60 = yes
+		NOT = { has_country_flag = jxp_reformed_elder_ports_seen }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_reformed.8.a"
+		set_country_flag = jxp_reformed_elder_ports_seen
+		add_country_modifier = {
+			name = jxp_reformed_elder_ports
+			duration = 7300
+		}
+		add_navy_tradition = 5
+	}
+
+	option = {
+		name = "jxp_reformed.8.b"
+		set_country_flag = jxp_reformed_elder_ports_seen
+		add_country_modifier = {
+			name = jxp_reformed_elder_ports
+			duration = 3650
+		}
+		add_treasury = -75
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+	}
+}

@@ -1,0 +1,154 @@
+namespace = jxp_77
+
+country_event = {
+	id = jxp_77.1
+	title = "jxp_77.1.t"
+	desc = "jxp_77.1.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_77.1.a"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_tsushima_interpreter_office
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_oceanic_opening_at_least_50 = yes }
+			}
+		}
+	}
+	option = {
+		name = "jxp_77.1.b"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_tsushima_coastal_watch
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				navy_tradition = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_77.2
+	title = "jxp_77.2.t"
+	desc = "jxp_77.2.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_77.2.a"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_setouchi_pilot_charters
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_oceanic_opening_at_least_50 = yes }
+			}
+		}
+	}
+	option = {
+		name = "jxp_77.2.b"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_setouchi_toll_compromise
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_tenka_order_at_least_50 = yes }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_77.3
+	title = "jxp_77.3.t"
+	desc = "jxp_77.3.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_77.3.a"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_ryukyu_tribute_bureau
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_imperial_sanction_at_least_50 = yes }
+			}
+		}
+	}
+	option = {
+		name = "jxp_77.3.b"
+		jxp_77_clear_regional_outcomes_effect = yes
+		add_country_modifier = {
+			name = jxp_77_regional_council_recent
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_77_ryukyu_free_port
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { jxp_oceanic_opening_at_least_50 = yes }
+			}
+		}
+	}
+}

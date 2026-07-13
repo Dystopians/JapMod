@@ -1,0 +1,375 @@
+namespace = jxp_kaikyo
+
+country_event = {
+	id = jxp_kaikyo.0
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		jxp_not_sakoku_locked_trigger = yes
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { has_country_flag = jxp_kaikyo_contact }
+		jxp_oceanic_opening_at_least_50 = yes
+		num_of_ports = 5
+		OR = {
+			is_year = 1550
+			any_known_country = { religion_group = muslim }
+			any_owned_province = {
+				OR = {
+					region = malaya_region
+					region = indonesia_region
+					region = moluccas_region
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	immediate = {
+		country_event = { id = jxp_kaikyo.1 days = 1 }
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.1
+	title = "jxp_kaikyo.1.t"
+	desc = "jxp_kaikyo.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_kaikyo.1.a"
+		set_country_flag = jxp_kaikyo_contact
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_malay_factory
+			duration = 3650
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_province_modifier = {
+					name = jxp_muslim_port_quarter
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_kaikyo.1.b"
+		set_country_flag = jxp_kaikyo_contact
+		jxp_subtract_oceanic_opening_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.2
+	title = "jxp_kaikyo.2.t"
+	desc = "jxp_kaikyo.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		NOT = { has_country_flag = jxp_halal_port_law_done }
+		stability = 0
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_kaikyo.2.a"
+		set_country_flag = jxp_halal_port_law_done
+		add_country_modifier = {
+			name = jxp_halal_port_law
+			duration = -1
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				change_religion = sunni
+				add_province_modifier = {
+					name = jxp_muslim_port_quarter
+					duration = -1
+				}
+			}
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_kaikyo.2.b"
+		set_country_flag = jxp_halal_port_law_done
+		add_country_modifier = {
+			name = jxp_halal_port_law
+			duration = -1
+		}
+		add_treasury = -50
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.3
+	title = "jxp_kaikyo.3.t"
+	desc = "jxp_kaikyo.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		jxp_not_sakoku_locked_trigger = yes
+		NOT = { has_country_flag = jxp_hajj_fleet_done }
+		jxp_oceanic_opening_at_least_60 = yes
+		num_of_ports = 8
+		dip_tech = 12
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	option = {
+		name = "jxp_kaikyo.3.a"
+		set_country_flag = jxp_hajj_fleet_done
+		add_prestige = 15
+		add_navy_tradition = 10
+		add_country_modifier = {
+			name = jxp_hajj_fleet
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "jxp_kaikyo.3.b"
+		set_country_flag = jxp_hajj_fleet_done
+		add_treasury = -100
+		add_adm_power = 50
+		add_country_modifier = {
+			name = jxp_hajj_fleet
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.4
+	title = "jxp_kaikyo.4.t"
+	desc = "jxp_kaikyo.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		religion = sunni
+		NOT = { has_country_flag = jxp_kaikyo_centers_established }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "jxp_kaikyo.4.a"
+		set_country_flag = jxp_kaikyo_centers_established
+		add_country_modifier = {
+			name = jxp_kaikyo_qadi_courts
+			duration = 7300
+		}
+		jxp_spawn_kaikyo_reform_centers_effect = yes
+		hidden_effect = {
+			country_event = { id = jxp_kaikyo.5 days = 365 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.5
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_province = {
+					region = japan_region
+					NOT = { religion = sunni }
+				}
+			}
+			jxp_kaikyo_convert_one_japan_province_effect = yes
+			country_event = { id = jxp_kaikyo.5 days = 365 }
+		}
+		else = {
+			clr_country_flag = jxp_kaikyo_conversion_active
+			country_event = { id = jxp_kaikyo.6 days = 30 }
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.6
+	title = "jxp_kaikyo.6.t"
+	desc = "jxp_kaikyo.6.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		religion = sunni
+		NOT = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { religion = sunni }
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_kaikyo.6.a"
+		add_prestige = 10
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.7
+	title = "jxp_kaikyo.7.t"
+	desc = "jxp_kaikyo.7.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		religion = sunni
+		stability = 1
+		NOT = { has_country_flag = jxp_kaikyo_qadi_courts_seen }
+	}
+
+	mean_time_to_happen = {
+		months = 96
+	}
+
+	option = {
+		name = "jxp_kaikyo.7.a"
+		set_country_flag = jxp_kaikyo_qadi_courts_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_qadi_courts
+			duration = 7300
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_kaikyo.7.b"
+		set_country_flag = jxp_kaikyo_qadi_courts_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_qadi_courts
+			duration = 3650
+		}
+		add_adm_power = -50
+		add_stability = 1
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_kaikyo.8
+	title = "jxp_kaikyo.8.t"
+	desc = "jxp_kaikyo.8.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		jxp_not_sakoku_locked_trigger = yes
+		religion = sunni
+		jxp_oceanic_opening_at_least_60 = yes
+		NOT = { has_country_flag = jxp_kaikyo_south_sea_compact_seen }
+		OR = {
+			any_known_country = { religion_group = muslim }
+			any_owned_province = {
+				OR = {
+					region = malaya_region
+					region = indonesia_region
+					region = moluccas_region
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "jxp_kaikyo.8.a"
+		set_country_flag = jxp_kaikyo_south_sea_compact_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_south_sea_compact
+			duration = 7300
+		}
+		if = {
+			limit = {
+				NOT = { accepted_culture = malayan }
+				NOT = { primary_culture = malayan }
+			}
+			add_accepted_culture = malayan
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+
+	option = {
+		name = "jxp_kaikyo.8.b"
+		set_country_flag = jxp_kaikyo_south_sea_compact_seen
+		add_country_modifier = {
+			name = jxp_kaikyo_south_sea_compact
+			duration = 3650
+		}
+		add_treasury = 100
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+}

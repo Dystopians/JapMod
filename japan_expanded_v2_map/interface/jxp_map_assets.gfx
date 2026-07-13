@@ -1,0 +1,174 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "jxp_map_mission_warrior_muster"
+		texturefile = "gfx/interface/missions/jxp_map_mission_warrior_muster.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_warrior_castle_roads"
+		texturefile = "gfx/interface/missions/jxp_map_mission_warrior_castle_roads.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_warrior_provincial_banner"
+		texturefile = "gfx/interface/missions/jxp_map_mission_warrior_provincial_banner.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_court_genealogies"
+		texturefile = "gfx/interface/missions/jxp_map_mission_court_genealogies.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_court_capital_petitions"
+		texturefile = "gfx/interface/missions/jxp_map_mission_court_capital_petitions.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_court_old_province_claim"
+		texturefile = "gfx/interface/missions/jxp_map_mission_court_old_province_claim.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_sea_port_registers"
+		texturefile = "gfx/interface/missions/jxp_map_mission_sea_port_registers.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_sea_shipwright_leagues"
+		texturefile = "gfx/interface/missions/jxp_map_mission_sea_shipwright_leagues.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_sea_inner_routes"
+		texturefile = "gfx/interface/missions/jxp_map_mission_sea_inner_routes.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_frontier_passes"
+		texturefile = "gfx/interface/missions/jxp_map_mission_frontier_passes.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_frontier_new_fields"
+		texturefile = "gfx/interface/missions/jxp_map_mission_frontier_new_fields.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_frontier_border_oaths"
+		texturefile = "gfx/interface/missions/jxp_map_mission_frontier_border_oaths.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_temple_ledgers"
+		texturefile = "gfx/interface/missions/jxp_map_mission_temple_ledgers.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_temple_market_towns"
+		texturefile = "gfx/interface/missions/jxp_map_mission_temple_market_towns.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_mission_temple_public_law"
+		texturefile = "gfx/interface/missions/jxp_map_mission_temple_public_law.dds"
+	}
+
+	spriteType = {
+		name = "jxp_map_kannonji_ledgers_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_kannonji_ledgers.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_kaga_common_granary_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_kaga_common_granary.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_yamagata_water_dispute_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_yamagata_water_dispute.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_tsugaru_land_survey_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_tsugaru_land_survey.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_hirado_iki_pass_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_hirado_iki_pass.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_shimabara_foreign_ship_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_shimabara_foreign_ship.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_sagara_law_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_sagara_law.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_kimotsuki_horse_pasture_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_kimotsuki_horse_pasture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_satomi_coastal_defense_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_satomi_coastal_defense.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_odani_biwa_route_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_odani_biwa_route.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_muster_ordinance_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_muster_ordinance.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_genealogy_and_merit_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_genealogy_and_merit.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_ship_league_rights_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_ship_league_rights.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_beyond_boundary_stones_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_beyond_boundary_stones.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_temple_market_law_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_temple_market_law.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_map_verification_ledger_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_map/jxp_map_verification_ledger.dds"
+		alwaystransparent = yes
+	}
+
+}

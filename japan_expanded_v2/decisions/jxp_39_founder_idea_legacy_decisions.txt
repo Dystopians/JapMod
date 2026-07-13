@@ -1,0 +1,46 @@
+country_decisions = {
+	jxp_decision_compile_founder_idea_legacy = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_50_show_legacy_detail_decisions
+			jxp_is_unified_japan_state_trigger = yes
+			jxp_has_founder_legacy_council_origin_trigger = yes
+			NOT = { has_country_flag = jxp_39_founder_idea_legacy_compiled }
+		}
+		allow = {
+			stability = 1
+			adm_power = 75
+		}
+		effect = {
+			add_adm_power = -75
+			jxp_ensure_polity_mechanic_effect = yes
+			if = {
+				limit = { jxp_has_warrior_house_origin_trigger = yes }
+				country_event = { id = jxp_founder_idea_legacy.1 }
+			}
+			else_if = {
+				limit = { jxp_has_court_house_origin_trigger = yes }
+				country_event = { id = jxp_founder_idea_legacy.2 }
+			}
+			else_if = {
+				limit = { jxp_has_maritime_house_origin_trigger = yes }
+				country_event = { id = jxp_founder_idea_legacy.3 }
+			}
+			else_if = {
+				limit = { jxp_has_frontier_house_origin_trigger = yes }
+				country_event = { id = jxp_founder_idea_legacy.4 }
+			}
+			else_if = {
+				limit = { jxp_has_temple_market_house_origin_trigger = yes }
+				country_event = { id = jxp_founder_idea_legacy.5 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 150 }
+			}
+		}
+	}
+}

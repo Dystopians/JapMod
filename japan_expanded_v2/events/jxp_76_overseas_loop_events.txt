@@ -1,0 +1,262 @@
+namespace = jxp_overseas_loop
+
+country_event = {
+	id = jxp_overseas_loop.1
+	title = "jxp_overseas_loop.1.t"
+	desc = "jxp_overseas_loop.1.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_76_pacific_network_active_trigger = yes
+		NOT = { has_country_modifier = jxp_76_public_network_hearing }
+	}
+
+	mean_time_to_happen = { days = 900 }
+
+	option = {
+		name = "jxp_overseas_loop.1.a"
+		trigger = { jxp_76_pacific_manila_profile_trigger = yes }
+		add_treasury = 75
+		add_country_modifier = {
+			name = jxp_76_brokerage_dividend
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_76_public_network_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_76_pacific_pressure_rises_15_tt
+		hidden_effect = { jxp_76_pacific_add_pressure_15_effect = yes }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.20
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.1.b"
+		trigger = {
+			OR = {
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_reformed
+				tag = KJP
+				tag = RFJ
+			}
+		}
+		add_prestige = 10
+		add_country_modifier = {
+			name = jxp_76_mission_house_network
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_76_public_network_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_76_pacific_pressure_rises_10_tt
+		hidden_effect = { jxp_76_pacific_add_pressure_10_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 stability = 2 }
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.1.c"
+		trigger = { jxp_76_pacific_court_profile_trigger = yes }
+		add_adm_power = -50
+		add_country_modifier = {
+			name = jxp_76_court_route_register
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_76_public_network_hearing
+			duration = 1095
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+		custom_tooltip = jxp_76_pacific_pressure_falls_10_tt
+		hidden_effect = { jxp_76_pacific_subtract_pressure_10_effect = yes }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				jxp_76_pacific_pressure_at_least_50_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.1.d"
+		add_dip_power = -50
+		add_country_modifier = {
+			name = jxp_76_public_network_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_76_pacific_pressure_falls_15_tt
+		hidden_effect = { jxp_76_pacific_subtract_pressure_15_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_overseas_loop.2
+	title = "jxp_overseas_loop.2.t"
+	desc = "jxp_overseas_loop.2.d"
+	picture = TRADEGOODS_eventPicture
+
+	trigger = {
+		jxp_76_pacific_network_active_trigger = yes
+		jxp_76_pacific_pressure_at_least_50_trigger = yes
+		NOT = { has_country_modifier = jxp_76_arbitration_recent }
+	}
+
+	mean_time_to_happen = { days = 540 }
+
+	option = {
+		name = "jxp_overseas_loop.2.a"
+		add_adm_power = -50
+		add_dip_power = -50
+		add_treasury = -100
+		add_country_modifier = {
+			name = jxp_76_arbitration_recent
+			duration = 1095
+		}
+		custom_tooltip = jxp_76_pacific_pressure_falls_20_tt
+		hidden_effect = { jxp_76_pacific_subtract_pressure_20_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.2.b"
+		add_treasury = 100
+		add_country_modifier = {
+			name = jxp_76_speculative_overreach
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_76_arbitration_recent
+			duration = 1095
+		}
+		custom_tooltip = jxp_76_pacific_pressure_rises_15_tt
+		hidden_effect = { jxp_76_pacific_add_pressure_15_effect = yes }
+		ai_chance = {
+			factor = 0.50
+			modifier = {
+				factor = 0.10
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.2.c"
+		add_mil_power = -50
+		add_navy_tradition = -5
+		add_country_modifier = {
+			name = jxp_76_arbitration_recent
+			duration = 1095
+		}
+		jxp_add_tenka_order_5_effect = yes
+		custom_tooltip = jxp_76_pacific_pressure_falls_10_tt
+		hidden_effect = { jxp_76_pacific_subtract_pressure_10_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 war_exhaustion = 4 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_overseas_loop.3
+	title = "jxp_overseas_loop.3.t"
+	desc = "jxp_overseas_loop.3.d"
+	picture = COLONIZATION_eventPicture
+
+	trigger = {
+		jxp_76_pacific_network_active_trigger = yes
+		jxp_76_pacific_pressure_at_least_85_trigger = yes
+		NOT = { has_country_modifier = jxp_76_crisis_recess }
+	}
+
+	mean_time_to_happen = { days = 120 }
+
+	option = {
+		name = "jxp_overseas_loop.3.a"
+		trigger = {
+			adm_power = 100
+			dip_power = 100
+			treasury = 250
+			stability = 1
+		}
+		add_adm_power = -100
+		add_dip_power = -100
+		add_treasury = -250
+		custom_tooltip = jxp_76_pacific_compact_tt
+		hidden_effect = { jxp_76_pacific_compact_effect = yes }
+		ai_chance = {
+			factor = 3
+			modifier = { factor = 2 stability = 2 }
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.3.b"
+		custom_tooltip = jxp_76_pacific_stand_down_tt
+		hidden_effect = { jxp_76_pacific_stand_down_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 war_exhaustion = 6 }
+		}
+	}
+
+	option = {
+		name = "jxp_overseas_loop.3.c"
+		add_mil_power = -75
+		add_treasury = -150
+		add_country_modifier = {
+			name = jxp_76_crisis_recess
+			duration = 1825
+		}
+		custom_tooltip = jxp_76_pacific_pressure_falls_40_tt
+		hidden_effect = { jxp_76_pacific_subtract_pressure_40_effect = yes }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 treasury = 350 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_overseas_loop.4
+	title = none
+	desc = none
+	picture = COLONIZATION_eventPicture
+	hidden = yes
+
+	trigger = {
+		has_country_flag = jxp_76_pacific_network_active
+		NOT = { jxp_76_pacific_network_active_trigger = yes }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_76_pacific_network_cleanup_effect = yes
+	}
+
+	option = { name = "OK" }
+}

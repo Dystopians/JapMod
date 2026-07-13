@@ -1,0 +1,1534 @@
+jxp_japan_state_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JAP
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			jxp_has_any_route_trigger = yes
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_secure_home_domain = {
+		icon = mission_japanese_fort
+		position = 1
+		required_missions = {  }
+		trigger = {
+			num_of_cities = 6
+			stability = 0
+		}
+		effect = {
+			add_prestige = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_road_to_kyoto = {
+		icon = mission_to_japan
+		position = 2
+		required_missions = { jxp_mission_secure_home_domain jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			owns = 1020
+		}
+		effect = {
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_unite_the_isles = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = { jxp_mission_road_to_kyoto jxp_mission_kyoto_and_edo }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			jxp_has_unite_the_isles_scope_trigger = yes
+			owns = 1020
+			owns = 1028
+		}
+		effect = {
+			add_adm_power = 50
+			jxp_add_tenka_order_10_effect = yes
+		}
+	}
+
+	jxp_mission_settle_the_realm = {
+		icon = mission_japanese_samurai
+		position = 4
+		required_missions = { jxp_mission_unite_the_isles jxp_mission_iwami_silver }
+		trigger = {
+			mission_completed = jxp_mission_iwami_silver
+			jxp_has_any_route_trigger = yes
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_mission_tenka_state
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_land_survey_state = {
+		icon = mission_rice_field
+		position = 5
+		required_missions = { jxp_mission_settle_the_realm jxp_mission_osaka_granary }
+		trigger = {
+			mission_completed = jxp_mission_osaka_granary
+			OR = {
+				jxp_tenka_order_at_least_50 = yes
+				has_country_modifier = jxp_land_survey_momentum
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_land_survey_momentum
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_modern_state = {
+		icon = mission_have_manufactories
+		position = 6
+		required_missions = { jxp_mission_land_survey_state jxp_mission_tanegashima_firearms }
+		trigger = {
+			mission_completed = jxp_mission_tanegashima_firearms
+			jxp_tenka_order_at_least_75 = yes
+			adm_tech = 12
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_mission_tenka_state
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_route_inherited_realm = {
+		icon = mission_unite_home_region
+		position = 7
+		required_missions = { jxp_mission_modern_state }
+		trigger = {
+			jxp_has_inherited_realm_order_trigger = yes
+			owns = 1020
+		}
+		effect = {
+			add_prestige = 10
+			jxp_add_tenka_order_5_effect = yes
+			if = {
+				limit = { has_country_flag = jxp_24_unification_by_blade }
+				add_country_modifier = {
+					name = jxp_24_foundation_blade
+					duration = -1
+				}
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_unification_by_edict }
+				add_country_modifier = {
+					name = jxp_24_foundation_edict
+					duration = -1
+				}
+			}
+			if = {
+				limit = { has_country_flag = jxp_24_unification_by_league }
+				add_country_modifier = {
+					name = jxp_24_foundation_league
+					duration = -1
+				}
+			}
+		}
+	}
+
+	jxp_mission_route_muster_rolls = {
+		icon = mission_japanese_samurai
+		position = 8
+		required_missions = { jxp_mission_route_inherited_realm }
+		trigger = {
+			mil_tech = 8
+			army_tradition = 20
+		}
+		effect = {
+			add_mil_power = 50
+			add_army_tradition = 5
+		}
+	}
+
+	jxp_mission_route_settle_new_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { jxp_mission_route_muster_rolls jxp_mission_route_rites_of_the_isles }
+		trigger = {
+			mission_completed = jxp_mission_route_two_capitals
+			mission_completed = jxp_mission_route_inherited_realm
+			mission_completed = jxp_mission_route_rites_of_the_isles
+			jxp_has_any_route_trigger = yes
+		}
+		effect = {
+			change_government_reform_progress = 50
+			jxp_grant_route_reforms_effect = yes
+		}
+	}
+
+	jxp_mission_route_province_registers = {
+		icon = mission_rice_field
+		position = 10
+		required_missions = { jxp_mission_route_settle_new_constitution }
+		trigger = {
+			mission_completed = jxp_mission_route_inherited_realm
+			mission_completed = jxp_mission_route_settle_new_constitution
+			stability = 1
+			adm_tech = 8
+			jxp_tenka_order_at_least_35 = yes
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_land_survey_momentum
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_route_firearm_offices = {
+		icon = mission_cannons_firing
+		position = 11
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_route_muster_rolls
+			mission_completed = jxp_mission_route_settle_new_constitution
+			OR = {
+				has_country_flag = jxp_tanegashima_seen
+				mil_tech = 12
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = jxp_tanegashima_foundries
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_route_laws_of_the_new_realm = {
+		icon = mission_early_modern_university
+		position = 12
+		required_missions = { jxp_mission_route_firearm_offices }
+		trigger = {
+			mission_completed = jxp_mission_route_rice_and_silver
+			mission_completed = jxp_mission_route_firearm_offices
+			mission_completed = jxp_mission_route_guard_the_sea_lanes
+			mission_completed = jxp_mission_route_province_registers
+			stability = 2
+			legitimacy = 70
+		}
+		effect = {
+			add_adm_power = 50
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_route_archipelago_circuit = {
+		icon = mission_to_japan
+		position = 13
+		required_missions = { jxp_mission_route_laws_of_the_new_realm }
+		trigger = {
+			mission_completed = jxp_mission_route_province_registers
+			mission_completed = jxp_mission_route_firearm_offices
+			mission_completed = jxp_mission_route_laws_of_the_new_realm
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = japan_region
+			}
+		}
+		effect = {
+			add_prestige = 15
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_route_renewed_japan = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { jxp_mission_route_archipelago_circuit }
+		trigger = {
+			mission_completed = jxp_mission_route_laws_of_the_new_realm
+			mission_completed = jxp_mission_route_archipelago_circuit
+			mission_completed = jxp_mission_route_post_station_ledger
+			jxp_has_renewed_japan_integration_trigger = yes
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_mission_tenka_state
+				duration = 7300
+			}
+		}
+	}
+}
+
+jxp_japan_court_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = JAP
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			jxp_has_any_route_trigger = yes
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_capital_cities = {
+		icon = mission_high_income
+		position = 1
+		required_missions = {  }
+		trigger = {
+			capital_scope = { development = 25 }
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+
+	jxp_mission_kyoto_and_edo = {
+		icon = mission_japanese_fort
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			owns = 1020
+			owns = 1028
+		}
+		effect = {
+			1020 = {
+				if = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = jxp_kyoto_renewed
+						duration = 7300
+					}
+				}
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_iwami_silver = {
+		icon = mission_high_income
+		position = 3
+		required_missions = { jxp_mission_kyoto_and_edo }
+		trigger = {
+			mission_completed = jxp_mission_road_to_kyoto
+			owns = 4183
+		}
+		effect = {
+			add_treasury = 100
+			add_mercantilism = 1
+		}
+	}
+
+	jxp_mission_osaka_granary = {
+		icon = mission_rice_field
+		position = 4
+		required_missions = { jxp_mission_iwami_silver }
+		trigger = {
+			mission_completed = jxp_mission_unite_the_isles
+			owns = 1021
+			treasury = 300
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_mission_court_order
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_tanegashima_firearms = {
+		icon = mission_cannons_firing
+		position = 5
+		required_missions = { jxp_mission_osaka_granary }
+		trigger = {
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				has_country_flag = jxp_tanegashima_seen
+				mil_tech = 9
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			add_country_modifier = {
+				name = jxp_tanegashima_foundries
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_massed_volley = {
+		icon = mission_cannons_firing
+		position = 6
+		required_missions = { jxp_mission_tanegashima_firearms }
+		trigger = {
+			mission_completed = jxp_mission_land_survey_state
+			mil_tech = 12
+			army_tradition = 30
+		}
+		effect = {
+			add_army_tradition = 10
+			add_prestige = 10
+		}
+	}
+
+	jxp_mission_route_two_capitals = {
+		icon = mission_japanese_fort
+		position = 7
+		required_missions = { jxp_mission_massed_volley }
+		trigger = {
+			owns = 1020
+			owns = 1028
+		}
+		effect = {
+			1020 = {
+				if = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = jxp_kyoto_renewed
+						duration = 7300
+					}
+				}
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_route_rites_of_the_isles = {
+		icon = mission_religious
+		position = 8
+		required_missions = { jxp_mission_route_two_capitals }
+		trigger = {
+			stability = 1
+			religious_unity = 0.85
+		}
+		effect = {
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_route_rice_and_silver = {
+		icon = mission_high_income
+		position = 9
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_route_settle_new_constitution
+			mission_completed = jxp_mission_route_two_capitals
+			owns = 1021
+			owns = 4183
+			treasury = 300
+		}
+		effect = {
+			add_treasury = 100
+			add_mercantilism = 1
+		}
+	}
+
+	jxp_mission_route_guard_the_sea_lanes = {
+		icon = mission_trade_with_japan
+		position = 10
+		required_missions = { jxp_mission_route_settle_new_constitution }
+		trigger = {
+			mission_completed = jxp_mission_route_rites_of_the_isles
+			mission_completed = jxp_mission_route_settle_new_constitution
+			num_of_ports = 5
+			navy_tradition = 20
+		}
+		effect = {
+			add_dip_power = 50
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_route_post_station_ledger = {
+		icon = mission_high_income
+		position = 11
+		required_missions = { jxp_mission_route_guard_the_sea_lanes }
+		trigger = {
+			mission_completed = jxp_mission_route_laws_of_the_new_realm
+			mission_completed = jxp_mission_route_rice_and_silver
+			mission_completed = jxp_mission_route_guard_the_sea_lanes
+			adm_tech = 10
+			jxp_has_post_station_office_network_trigger = yes
+		}
+		effect = {
+			change_government_reform_progress = 50
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_house_diet_into_realm = {
+		icon = mission_monarch_in_throne_room
+		position = 12
+		required_missions = { jxp_mission_route_post_station_ledger }
+		trigger = {
+			mission_completed = jxp_mission_massed_volley
+			mission_completed = jxp_mission_modern_state
+			has_country_flag = jxp_35_house_diet_law_integrated
+		}
+		effect = {
+			add_prestige = 10
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_36_integrated_house_diet_records
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_house_law_local_offices = {
+		icon = mission_high_income
+		position = 13
+		required_missions = { jxp_mission_house_diet_into_realm }
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						has_country_modifier = jxp_35_legacy_warrior_muster_law
+						has_country_modifier = jxp_35_legacy_warrior_captain_privileges
+					}
+					army_tradition = 40
+				}
+				AND = {
+					OR = {
+						has_country_modifier = jxp_35_legacy_court_rank_law
+						has_country_modifier = jxp_35_legacy_court_domain_law
+					}
+					legitimacy = 75
+				}
+				AND = {
+					OR = {
+						has_country_modifier = jxp_35_legacy_maritime_port_law
+						has_country_modifier = jxp_35_legacy_maritime_admiral_rolls
+					}
+					num_of_ports = 5
+				}
+				AND = {
+					OR = {
+						has_country_modifier = jxp_35_legacy_frontier_barrier_law
+						has_country_modifier = jxp_35_legacy_frontier_market_charter
+					}
+					jxp_has_frontier_local_office_network_trigger = yes
+				}
+				AND = {
+					OR = {
+						has_country_modifier = jxp_35_legacy_temple_privilege_law
+						has_country_modifier = jxp_35_legacy_temple_accounting_law
+					}
+					religious_unity = 0.8
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_36_house_law_local_offices
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_house_law_state_doctrine = {
+		icon = mission_early_modern_university
+		position = 14
+		required_missions = { jxp_mission_house_law_local_offices }
+		trigger = {
+			stability = 2
+			OR = {
+				jxp_tenka_order_at_least_75 = yes
+				jxp_imperial_sanction_at_least_70 = yes
+				jxp_oceanic_opening_at_least_75 = yes
+			}
+		}
+		effect = {
+			add_prestige = 20
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = jxp_36_house_law_state_doctrine
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_sakoku_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_country_flag = jxp_path_sakoku
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_temple_registration = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_shrine_land_registers
+			mission_completed = jxp_mission_settle_the_realm
+			stability = 1
+			religious_unity = 0.9
+		}
+		effect = {
+			add_prestige = 10
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_expel_padres = {
+		icon = mission_to_japan
+		position = 4
+		required_missions = { jxp_mission_temple_registration }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			mission_completed = jxp_mission_road_to_kyoto
+			OR = {
+				has_country_modifier = jxp_expelled_padres
+				NOT = { any_owned_province = { religion = catholic } }
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_expelled_padres
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_closed_country_edicts = {
+		icon = mission_japanese_fort
+		position = 6
+		required_missions = { jxp_mission_expel_padres jxp_mission_ise_pilgrim_roads }
+		trigger = {
+			NOT = { check_variable = { which = jxp_oceanic_opening value = 45 } }
+			jxp_tenka_order_at_least_50 = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_route_sakoku
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_dejima_window = {
+		icon = mission_trade_with_japan
+		position = 8
+		required_missions = { jxp_mission_closed_country_edicts jxp_mission_kami_castle_towns }
+		trigger = {
+			has_country_modifier = jxp_dejima_window
+		}
+		effect = {
+			jxp_add_oceanic_opening_5_effect = yes
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_warrior_house_laws = {
+		icon = mission_japanese_samurai
+		position = 10
+		required_missions = { jxp_mission_dejima_window jxp_mission_incident_order }
+		trigger = {
+			jxp_tenka_order_at_least_75 = yes
+			stability = 2
+		}
+		effect = {
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = jxp_mission_court_order
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_genroku_prosperity = {
+		icon = mission_high_income
+		position = 12
+		required_missions = { jxp_mission_warrior_house_laws jxp_mission_sacred_isles }
+		trigger = {
+			mission_completed = jxp_mission_massed_volley
+			mission_completed = jxp_mission_sacred_isles
+			stability = 2
+			treasury = 500
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 50
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_repulse_foreign_ships = {
+		icon = mission_japanese_fort
+		position = 14
+		required_missions = { jxp_mission_genroku_prosperity }
+		trigger = {
+			mission_completed = jxp_mission_modern_state
+			dip_tech = 15
+			num_of_ports = 6
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_route_sakoku
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_open_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_country_flag = jxp_path_open_trade
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_open_nagasaki = {
+		icon = mission_trade_with_japan
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				owns = 4182
+				num_of_ports = 5
+			}
+		}
+		effect = {
+			if = {
+				limit = { owns = 4182 }
+				4182 = {
+					add_province_modifier = {
+						name = jxp_nagasaki_factory
+						duration = -1
+					}
+				}
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_nanban_factory = {
+		icon = mission_trade_with_japan
+		position = 4
+		required_missions = { jxp_mission_open_nagasaki }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			mission_completed = jxp_mission_road_to_kyoto
+			jxp_oceanic_opening_at_least_50 = yes
+			has_country_modifier = jxp_foreign_factory
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_namban_trade
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_red_seal_ships = {
+		icon = mission_trade_with_japan
+		position = 6
+		required_missions = { jxp_mission_nanban_factory }
+		trigger = {
+			mission_completed = jxp_mission_iwami_silver
+			mission_completed = jxp_mission_unite_the_isles
+			num_of_ports = 8
+			dip_tech = 10
+		}
+		effect = {
+			add_mercantilism = 2
+			add_navy_tradition = 10
+		}
+	}
+
+	jxp_mission_translation_bureau = {
+		icon = mission_have_manufactories
+		position = 8
+		required_missions = { jxp_mission_red_seal_ships }
+		trigger = {
+			mission_completed = jxp_mission_osaka_granary
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				has_country_modifier = jxp_reviewed_translations
+				has_country_modifier = jxp_rangaku_bureau
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_rangaku_bureau
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_oceanic_shipyards = {
+		icon = mission_to_japan
+		position = 10
+		required_missions = { jxp_mission_translation_bureau }
+		trigger = {
+			mission_completed = jxp_mission_tanegashima_firearms
+			mission_completed = jxp_mission_land_survey_state
+			num_of_ports = 10
+			dip_tech = 14
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_mission_oceanic_ports
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_manila_route = {
+		icon = mission_trade_with_japan
+		position = 12
+		required_missions = { jxp_mission_oceanic_shipyards }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_nagasaki_interpreters
+			mission_completed = jxp_mission_pacific_manila_link
+			jxp_oceanic_opening_at_least_60 = yes
+			dip_tech = 16
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = jxp_route_open_trade
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_equal_treaties = {
+		icon = mission_to_japan
+		position = 14
+		required_missions = { jxp_mission_manila_route }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_balance_mandate
+			mission_completed = jxp_mission_pacific_north_charts
+			dip_tech = 18
+			jxp_oceanic_opening_at_least_60 = yes
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_route_open_trade
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_open_maritime_cabinet = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_equal_treaties }
+		trigger = {
+			has_reform = jxp_open_maritime_cabinet_reform
+			adm_tech = 18
+			stability = 2
+			diplomatic_reputation = 2
+		}
+		effect = {
+			add_dip_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_open_maritime_cabinet
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_kirishitan_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_welcome_missionaries = {
+		icon = mission_to_japan
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			has_country_flag = jxp_kirishitan_contact
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_kirishitan_networks
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_baptized_daimyo = {
+		icon = mission_japanese_samurai
+		position = 4
+		required_missions = { jxp_mission_welcome_missionaries }
+		trigger = {
+			mission_completed = jxp_mission_port_congregation_registers
+			OR = {
+				religion = catholic
+				any_owned_province = { religion = catholic }
+			}
+		}
+		effect = {
+			add_legitimacy = 10
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_nagasaki_church_port = {
+		icon = mission_trade_with_japan
+		position = 6
+		required_missions = { jxp_mission_baptized_daimyo }
+		trigger = {
+			mission_completed = jxp_mission_kana_doctrine
+			owns = 4182
+			4182 = { religion = catholic }
+		}
+		effect = {
+			4182 = {
+				add_province_modifier = {
+					name = jxp_nagasaki_factory
+					duration = -1
+				}
+			}
+			add_prestige = 15
+		}
+	}
+
+	jxp_mission_kyushu_seminary = {
+		icon = mission_have_manufactories
+		position = 8
+		required_missions = { jxp_mission_nagasaki_church_port }
+		trigger = {
+			mission_completed = jxp_mission_church_court_compact
+			any_owned_province = {
+				OR = {
+					area = northern_kyushu
+					area = kyushu_area
+					has_province_flag = jxp_map_compat_shimabara_belt
+				}
+				religion = catholic
+				development = 15
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_tensho_embassy = {
+		icon = mission_to_japan
+		position = 10
+		required_missions = { jxp_mission_kyushu_seminary }
+		trigger = {
+			mission_completed = jxp_mission_martyrs_and_merchants
+			jxp_oceanic_opening_at_least_60 = yes
+			dip_tech = 12
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_route_kirishitan
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_christian_sun = {
+		icon = mission_japanese_samurai
+		position = 12
+		required_missions = { jxp_mission_tensho_embassy }
+		trigger = {
+			mission_completed = jxp_mission_cross_sun_commonwealth
+			mission_completed = jxp_mission_roman_kyoto_embassy
+			tag = KJP
+			religious_unity = 0.9
+			jxp_oceanic_opening_at_least_60 = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_route_kirishitan
+				duration = -1
+			}
+			add_prestige = 25
+		}
+	}
+
+	jxp_mission_shimabara_reconciliation = {
+		icon = mission_japanese_fort
+		position = 14
+		required_missions = { jxp_mission_christian_sun }
+		trigger = {
+			mission_completed = jxp_mission_shimabara_healed
+			OR = {
+				tag = KJP
+				has_country_flag = jxp_shimabara_resolved
+				has_country_modifier = jxp_shimabara_mediation
+			}
+		}
+		effect = {
+			set_country_flag = jxp_shimabara_resolved
+			add_country_modifier = {
+				name = jxp_shimabara_mediation
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_reformed_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_hirado_synod = {
+		icon = mission_trade_with_japan
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				has_country_flag = jxp_reformed_contact
+				has_country_modifier = jxp_hirado_synod
+			}
+		}
+		effect = {
+			set_country_flag = jxp_reformed_contact
+			add_country_modifier = {
+				name = jxp_hirado_synod
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_oranda_scriptures = {
+		icon = mission_have_manufactories
+		position = 4
+		required_missions = { jxp_mission_hirado_synod }
+		trigger = {
+			mission_completed = jxp_mission_port_congregation_registers
+			OR = {
+				has_country_flag = jxp_reformed_scriptures_done
+				has_country_modifier = jxp_reviewed_translations
+				adm_tech = 10
+			}
+		}
+		effect = {
+			set_country_flag = jxp_reformed_scriptures_done
+			add_country_modifier = {
+				name = jxp_oranda_scriptures
+				duration = 7300
+			}
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_court_covenant = {
+		icon = mission_monarch_in_throne_room
+		position = 6
+		required_missions = { jxp_mission_oranda_scriptures }
+		trigger = {
+			mission_completed = jxp_mission_kana_doctrine
+			tag = RFJ
+			religion = reformed
+			religious_unity = 0.75
+			stability = 1
+		}
+		effect = {
+			set_country_flag = jxp_reformed_covenant_done
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_reformed_court_covenant
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_oranda_ports = {
+		icon = mission_to_japan
+		position = 8
+		required_missions = { jxp_mission_court_covenant }
+		trigger = {
+			mission_completed = jxp_mission_church_court_compact
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 8
+			dip_tech = 12
+		}
+		effect = {
+			add_dip_power = 75
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_mission_oceanic_ports
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_reformed_sun = {
+		icon = mission_japanese_samurai
+		position = 10
+		required_missions = { jxp_mission_oranda_ports }
+		trigger = {
+			mission_completed = jxp_mission_martyrs_and_merchants
+			tag = RFJ
+			jxp_tenka_order_at_least_75 = yes
+			jxp_oceanic_opening_at_least_60 = yes
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_route_reformed
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_confucian_imperial_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		religion = confucianism
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_zhu_xi_lectures = {
+		icon = mission_have_manufactories
+		position = 2
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				tag = CJP
+				has_country_flag = jxp_path_confucian
+				jxp_has_confucian_contact_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_confucian_academies
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_domain_schools = {
+		icon = mission_have_manufactories
+		position = 3
+		required_missions = { jxp_mission_zhu_xi_lectures }
+		trigger = {
+			mission_completed = jxp_mission_shrine_land_registers
+			adm_tech = 10
+			treasury = 300
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_confucian_academies
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_kyoto_rites = {
+		icon = mission_to_japan
+		position = 4
+		required_missions = { jxp_mission_domain_schools }
+		trigger = {
+			mission_completed = jxp_mission_ise_pilgrim_roads
+			owns = 1020
+			jxp_imperial_sanction_at_least_70 = yes
+		}
+		effect = {
+			1020 = {
+				add_province_modifier = {
+					name = jxp_kyoto_renewed
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = jxp_mission_court_order
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_merit_over_lineage = {
+		icon = mission_japanese_samurai
+		position = 5
+		required_missions = { jxp_mission_kyoto_rites }
+		trigger = {
+			mission_completed = jxp_mission_kami_castle_towns
+			has_country_modifier = jxp_confucian_academies
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 75
+			add_legitimacy = 10
+		}
+	}
+
+	jxp_mission_korean_envoys = {
+		icon = mission_to_japan
+		position = 6
+		required_missions = { jxp_mission_merit_over_lineage }
+		trigger = {
+			mission_completed = jxp_mission_incident_order
+			OR = {
+				any_known_country = { capital_scope = { region = korea_region } }
+				any_owned_province = { region = korea_region }
+			}
+		}
+		effect = {
+			add_dip_power = 75
+			add_prestige = 15
+		}
+	}
+
+	jxp_mission_yamato_restoration = {
+		icon = mission_to_japan
+		position = 7
+		required_missions = { jxp_mission_korean_envoys }
+		trigger = {
+			mission_completed = jxp_mission_sacred_isles
+			OR = {
+				tag = EJP
+				has_country_flag = jxp_path_imperial
+			}
+			jxp_imperial_sanction_at_least_70 = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_route_imperial
+				duration = -1
+			}
+			jxp_add_imperial_sanction_10_effect = yes
+		}
+	}
+
+	jxp_mission_ritual_state = {
+		icon = mission_japanese_samurai
+		position = 8
+		required_missions = { jxp_mission_yamato_restoration }
+		trigger = {
+			mission_completed = jxp_mission_massed_volley
+			mission_completed = jxp_mission_modern_state
+			stability = 2
+			jxp_tenka_order_at_least_75 = yes
+			jxp_imperial_sanction_at_least_70 = yes
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_mission_court_order
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_osaka_rice_ledger = {
+		icon = mission_rice_field
+		position = 9
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_ordered_rite_state
+			mission_completed = jxp_mission_settle_the_realm
+			mission_completed = jxp_mission_yamato_restoration
+			owns = 1021
+			jxp_has_osaka_rice_ledger_network_trigger = yes
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.20 }
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_castle_town_markets = {
+		icon = mission_high_income
+		position = 10
+		required_missions = { jxp_mission_osaka_rice_ledger }
+		trigger = {
+			mission_completed = jxp_mission_ritual_state
+			jxp_has_castle_town_market_network_trigger = yes
+			adm_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_castle_town_markets
+				duration = 7300
+			}
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_domain_school_network = {
+		icon = mission_early_modern_university
+		position = 11
+		required_missions = { jxp_mission_castle_town_markets }
+		trigger = {
+			mission_completed = jxp_mission_osaka_rice_ledger
+			OR = {
+				adm_tech = 12
+				has_institution = printing_press
+			}
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.21 }
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_nagasaki_translation_house = {
+		icon = mission_trade_with_japan
+		position = 12
+		required_missions = { jxp_mission_domain_school_network }
+		trigger = {
+			mission_completed = jxp_mission_castle_town_markets
+			owns = 4182
+			jxp_oceanic_opening_at_least_35 = yes
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.22 }
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_silver_silk_routing = {
+		icon = mission_trade_company_region_abroad
+		position = 13
+		required_missions = { jxp_mission_nagasaki_translation_house }
+		trigger = {
+			mission_completed = jxp_mission_domain_school_network
+			num_of_ports = 8
+			dip_tech = 12
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_silver_silk_routing
+				duration = 10950
+			}
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_three_capitals_ledgers = {
+		icon = mission_monarch_in_throne_room
+		position = 14
+		required_missions = { jxp_mission_silver_silk_routing }
+		trigger = {
+			owns = 1020
+			owns = 1021
+			owns = 4182
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_three_capitals_ledgers
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_kaikyo_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_malay_factory = {
+		icon = mission_trade_with_japan
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				has_country_flag = jxp_kaikyo_contact
+				has_country_modifier = jxp_malay_factory
+			}
+		}
+		effect = {
+			set_country_flag = jxp_kaikyo_contact
+			add_country_modifier = {
+				name = jxp_malay_factory
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_halal_port_law = {
+		icon = per_muslim_integration
+		position = 4
+		required_missions = { jxp_mission_malay_factory jxp_mission_harbor_mosque_registers }
+		trigger = {
+			OR = {
+				tag = SJP
+				has_country_flag = jxp_path_kaikyo
+			}
+			OR = {
+				religion = sunni
+				any_owned_province = {
+					region = japan_region
+					religion_group = muslim
+				}
+			}
+			religious_unity = 0.75
+		}
+		effect = {
+			set_country_flag = jxp_halal_port_law_done
+			add_country_modifier = {
+				name = jxp_halal_port_law
+				duration = -1
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_hajj_fleet = {
+		icon = mission_to_japan
+		position = 6
+		required_missions = { jxp_mission_halal_port_law jxp_mission_qadi_port_courts }
+		trigger = {
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 8
+			dip_tech = 12
+		}
+		effect = {
+			set_country_flag = jxp_hajj_fleet_done
+			add_prestige = 15
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_hajj_fleet
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_melaka_interpreters = {
+		icon = mission_muslim_administrators
+		position = 8
+		required_missions = { jxp_mission_hajj_fleet jxp_mission_south_sea_brokers }
+		trigger = {
+			OR = {
+				any_known_country = { religion_group = muslim }
+				any_owned_province = {
+					OR = {
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+			dip_tech = 14
+		}
+		effect = {
+			add_dip_power = 75
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = jxp_malay_factory
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_sultanate_of_wa = {
+		icon = mission_japanese_samurai
+		position = 10
+		required_missions = { jxp_mission_melaka_interpreters jxp_mission_halal_granary_law }
+		trigger = {
+			tag = SJP
+			jxp_tenka_order_at_least_75 = yes
+			jxp_oceanic_opening_at_least_60 = yes
+			religious_unity = 0.75
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_route_kaikyo
+				duration = -1
+			}
+		}
+	}
+}

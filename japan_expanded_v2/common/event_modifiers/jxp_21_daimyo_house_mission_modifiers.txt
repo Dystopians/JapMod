@@ -1,0 +1,74 @@
+jxp_21_warrior_muster_rolls = {
+	infantry_power = 0.05
+	manpower_recovery_speed = 0.05
+}
+
+jxp_21_warrior_castle_roads = {
+	defensiveness = 0.10
+	land_forcelimit_modifier = 0.05
+}
+
+jxp_21_warrior_banner_legacy = {
+	land_morale = 0.05
+	global_manpower_modifier = 0.05
+}
+
+jxp_21_court_genealogies = {
+	legitimacy = 0.5
+	prestige = 0.5
+}
+
+jxp_21_court_petitions = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_21_court_kanrei_memory = {
+	advisor_cost = -0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_21_sea_port_registers = {
+	trade_efficiency = 0.05
+	global_ship_trade_power = 0.05
+}
+
+jxp_21_sea_shipwrights = {
+	naval_forcelimit_modifier = 0.10
+	galley_cost = -0.05
+}
+
+jxp_21_sea_strait_laws = {
+	naval_morale = 0.05
+	trade_range_modifier = 0.10
+}
+
+jxp_21_frontier_passes = {
+	defensiveness = 0.10
+	global_unrest = -1
+}
+
+jxp_21_frontier_markets = {
+	production_efficiency = 0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_21_frontier_border_oaths = {
+	manpower_recovery_speed = 0.05
+	global_manpower_modifier = 0.05
+}
+
+jxp_21_temple_ledgers = {
+	global_tax_modifier = 0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_21_temple_market_towns = {
+	development_cost = -0.05
+	production_efficiency = 0.05
+}
+
+jxp_21_temple_public_law = {
+	tolerance_own = 1
+	global_unrest = -1
+}

@@ -1,0 +1,87 @@
+country_decisions = {
+	jxp_decision_daimyo_domain_survey = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_modifier = jxp_daimyo_domain_accounts }
+		}
+		allow = {
+			adm_power = 50
+			stability = 0
+		}
+		effect = {
+			add_adm_power = -50
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_daimyo_domain_accounts
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_daimyo_send_court_gifts = {
+		major = no
+		potential = {
+			jxp_is_daimyo_stage_trigger = yes
+			NOT = { has_country_modifier = jxp_daimyo_courtly_petition }
+		}
+		allow = {
+			dip_power = 50
+			treasury = 25
+			is_at_war = no
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -25
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_daimyo_courtly_petition
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_daimyo_license_port_trade = {
+		major = no
+		potential = {
+			jxp_daimyo_has_working_port_trigger = yes
+			NOT = { has_country_modifier = jxp_daimyo_namban_letters }
+		}
+		allow = {
+			dip_power = 50
+			num_of_ports = 1
+		}
+		effect = {
+			add_dip_power = -50
+			jxp_ensure_daimyo_polity_effect = yes
+			jxp_add_oceanic_opening_5_effect = yes
+			add_country_modifier = {
+				name = jxp_daimyo_namban_letters
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+}

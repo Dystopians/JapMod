@@ -1,0 +1,471 @@
+ASA_ideas = {
+	start = {
+		production_efficiency = 0.10
+		advisor_cost = -0.05
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.10
+		advisor_cost = -0.05
+	}
+
+	trigger = {
+		tag = ASA
+	}
+	free = yes
+
+	jxp_asa_hidden_diplomacy = {
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.10
+	}
+	jxp_asa_echizen_paper = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	jxp_asa_ichijodani_city = {
+		development_cost = -0.10
+	}
+	jxp_asa_soteki_teachings = {
+		infantry_power = 0.10
+		army_tradition_decay = -0.005
+	}
+	jxp_asa_seventeen_articles = {
+		global_unrest = -0.5
+		stability_cost_modifier = -0.05
+	}
+	jxp_asa_buddhist_settlements = {
+		tolerance_own = 1
+		tolerance_heretic = 1
+	}
+	jxp_asa_keitai_legacy = {
+		legitimacy = 0.5
+		diplomatic_reputation = 1
+		prestige_decay = -0.005
+	}
+}
+
+HTK_ideas = {
+	start = {
+		land_morale = 0.10
+		merc_maintenance_modifier = -0.10
+	}
+
+	bonus = {
+		global_institution_spread = 0.10
+		advisor_pool = 1
+	}
+
+	trigger = {
+		tag = HTK
+	}
+	free = yes
+
+	jxp_htk_kanrei_claim = {
+		prestige = 1
+		legitimacy = 0.5
+	}
+	jxp_htk_indomitable_generals = {
+		leader_land_shock = 1
+	}
+	jxp_htk_mount_koya = {
+		tolerance_own = 2
+	}
+	jxp_htk_retainers = {
+		global_manpower_modifier = 0.10
+		global_regiment_cost = -0.05
+	}
+	jxp_htk_wakae_castle = {
+		defensiveness = 0.15
+		garrison_size = 0.10
+	}
+	jxp_htk_clan_unification = {
+		global_unrest = -0.5
+		manpower_recovery_speed = 0.05
+	}
+	jxp_htk_saika_shu = {
+		fire_damage = 0.05
+		mercenary_cost = -0.10
+	}
+}
+
+IKE_ideas = {
+	start = {
+		build_cost = -0.10
+		global_tax_modifier = 0.10
+	}
+
+	bonus = {
+		development_cost = -0.10
+	}
+
+	trigger = {
+		tag = IKE
+	}
+	free = yes
+
+	jxp_ike_himeji_castle = {
+		defensiveness = 0.20
+		garrison_size = 0.10
+	}
+	jxp_ike_bizen_transfer = {
+		global_autonomy = -0.05
+	}
+	jxp_ike_terumasa_governance = {
+		global_unrest = -0.5
+		state_maintenance_modifier = -0.05
+	}
+	jxp_ike_domain_schools = {
+		advisor_cost = -0.05
+		global_institution_spread = 0.05
+	}
+	jxp_ike_cadet_houses = {
+		heir_chance = 0.50
+		legitimacy = 0.5
+	}
+	jxp_ike_setouchi_accounts = {
+		global_own_trade_power = 0.10
+		production_efficiency = 0.05
+		state_maintenance_modifier = -0.05
+	}
+	jxp_ike_tokugawa_ties = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.10
+	}
+}
+
+MAE_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.10
+		land_morale = 0.10
+	}
+
+	bonus = {
+		global_tax_modifier = 0.05
+		production_efficiency = 0.05
+	}
+
+	trigger = {
+		tag = MAE
+	}
+	free = yes
+
+	jxp_mae_kaga_million_koku = {
+		global_manpower_modifier = 0.20
+	}
+	jxp_mae_kanazawa_castle = {
+		defensiveness = 0.15
+		prestige = 0.5
+	}
+	jxp_mae_toshiie_retinue = {
+		infantry_power = 0.10
+	}
+	jxp_mae_hokuriku_gold = {
+		inflation_reduction = 0.10
+		production_efficiency = 0.05
+	}
+	jxp_mae_domain_schools = {
+		advisor_cost = -0.10
+	}
+	jxp_mae_tea_and_noh = {
+		prestige = 0.5
+		prestige_decay = -0.005
+	}
+	jxp_mae_outer_daimyo_balance = {
+		ae_impact = -0.05
+		improve_relation_modifier = 0.10
+	}
+}
+
+SBA_ideas = {
+	start = {
+		build_cost = -0.10
+		global_regiment_cost = -0.10
+	}
+
+	bonus = {
+		production_efficiency = 0.10
+		global_institution_spread = 0.05
+	}
+
+	trigger = {
+		tag = SBA
+	}
+	free = yes
+
+	jxp_sba_military_office = {
+		army_tradition = 0.5
+		prestige_from_land = 0.5
+	}
+	jxp_sba_three_provinces = {
+		global_autonomy = -0.05
+		state_maintenance_modifier = -0.05
+	}
+	jxp_sba_kanrei_consolidation = {
+		diplomatic_reputation = 1
+		governing_capacity_modifier = 0.05
+	}
+	jxp_sba_atsuta_shrine = {
+		tolerance_own = 2
+	}
+	jxp_sba_northern_access = {
+		global_own_trade_power = 0.10
+		trade_steering = 0.10
+	}
+	jxp_sba_retainers = {
+		global_unrest = -0.5
+		global_regiment_cost = -0.05
+	}
+	jxp_sba_mogami_branch = {
+		leader_land_shock = 1
+	}
+}
+
+YMN_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		global_manpower_modifier = 0.20
+	}
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+
+	trigger = {
+		tag = YMN
+	}
+	free = yes
+
+	jxp_ymn_nitta_descent = {
+		legitimacy = 0.5
+		improve_relation_modifier = 0.10
+	}
+	jxp_ymn_grand_shugo = {
+		diplomatic_upkeep = 1
+	}
+	jxp_ymn_succession_mediation = {
+		improve_relation_modifier = 0.15
+	}
+	jxp_ymn_western_army = {
+		land_morale = 0.10
+	}
+	jxp_ymn_torinin = {
+		prestige = 1
+	}
+	jxp_ymn_isolated_heartland = {
+		defensiveness = 0.15
+		hostile_attrition = 0.5
+	}
+	jxp_ymn_branch_reunion = {
+		global_unrest = -1
+		global_autonomy = -0.03
+	}
+}
+
+AKM_ideas = {
+	start = {
+		global_regiment_cost = -0.10
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		land_morale = 0.10
+	}
+
+	trigger = {
+		tag = AKM
+	}
+	free = yes
+
+	jxp_akm_harima_shugo = {
+		global_tax_modifier = 0.10
+	}
+	jxp_akm_enshin_standard = {
+		army_tradition_decay = -0.01
+	}
+	jxp_akm_kakitsu_shadow = {
+		spy_offence = 0.15
+		global_spy_defence = 0.10
+	}
+	jxp_akm_banshu_roads = {
+		movement_speed = 0.10
+	}
+	jxp_akm_castle_network = {
+		defensiveness = 0.15
+		global_spy_defence = 0.10
+	}
+	jxp_akm_red_pine_retainers = {
+		global_manpower_modifier = 0.15
+	}
+	jxp_akm_western_kinai_claims = {
+		fabricate_claims_cost = -0.20
+		improve_relation_modifier = 0.05
+	}
+}
+
+KKC_ideas = {
+	start = {
+		global_regiment_cost = -0.10
+		unjustified_demands = -0.25
+	}
+
+	bonus = {
+		diplomatic_upkeep = 1
+		global_unrest = -1
+	}
+
+	trigger = {
+		tag = KKC
+	}
+	free = yes
+
+	jxp_kkc_kyushu_lineage = {
+		prestige = 1
+	}
+	jxp_kkc_land_of_fire = {
+		global_manpower_modifier = 0.15
+	}
+	jxp_kkc_aso_shrine = {
+		tolerance_own = 2
+	}
+	jxp_kkc_foreign_resistance = {
+		fort_maintenance_modifier = -0.10
+		defensiveness = 0.10
+	}
+	jxp_kkc_religious_coexistence = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+		religious_unity = 0.10
+	}
+	jxp_kkc_three_retainers = {
+		advisor_pool = 1
+	}
+	jxp_kkc_kumamoto_castle = {
+		defensiveness = 0.20
+		garrison_size = 0.10
+	}
+}
+
+STK_ideas = {
+	start = {
+		war_exhaustion = -0.02
+		land_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		artillery_power = 0.10
+	}
+
+	trigger = {
+		tag = STK
+	}
+	free = yes
+
+	jxp_stk_hitachi_genji = {
+		legitimacy = 0.5
+		cavalry_power = 0.05
+		prestige_from_land = 0.5
+	}
+	jxp_stk_dual_administration = {
+		global_autonomy = -0.05
+	}
+	jxp_stk_ikki_suppression = {
+		global_unrest = -0.5
+		war_exhaustion = -0.01
+	}
+	jxp_stk_kashima_jingu = {
+		army_tradition = 0.5
+	}
+	jxp_stk_eastern_coalitions = {
+		diplomatic_reputation = 1
+	}
+	jxp_stk_mito_castle = {
+		defensiveness = 0.15
+		state_maintenance_modifier = -0.05
+	}
+	jxp_stk_fidelity = {
+		army_tradition_decay = -0.005
+		prestige = 0.5
+	}
+}
+
+TKI_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.20
+		global_garrison_growth = 0.20
+	}
+
+	bonus = {
+		global_regiment_cost = -0.10
+	}
+
+	trigger = {
+		tag = TKI
+	}
+	free = yes
+
+	jxp_tki_genji_mino = {
+		prestige = 1
+	}
+	jxp_tki_ranjatai = {
+		diplomatic_reputation = 1
+		prestige_decay = -0.005
+	}
+	jxp_tki_balloonflower_banner = {
+		land_morale = 0.10
+	}
+	jxp_tki_inabayama_castle = {
+		defensiveness = 0.15
+		spy_offence = 0.05
+	}
+	jxp_tki_manor_audits = {
+		global_tax_modifier = 0.10
+	}
+	jxp_tki_saito_house = {
+		advisor_cost = -0.10
+		global_spy_defence = 0.10
+	}
+	jxp_tki_three_rivers = {
+		production_efficiency = 0.05
+		state_maintenance_modifier = -0.05
+	}
+}
+
+UTN_ideas = {
+	start = {
+		army_tradition_decay = -0.01
+		build_cost = -0.10
+	}
+
+	bonus = {
+		leader_land_fire = 1
+	}
+
+	trigger = {
+		tag = UTN
+	}
+	free = yes
+
+	jxp_utn_fujiwara_descent = {
+		diplomatic_reputation = 1
+		prestige_decay = -0.005
+	}
+	jxp_utn_yoichi_legacy = {
+		army_tradition = 0.5
+	}
+	jxp_utn_shirakawa_barrier = {
+		defensiveness = 0.15
+		movement_speed = 0.05
+	}
+	jxp_utn_western_branches = {
+		diplomatic_upkeep = 1
+	}
+	jxp_utn_oyama_annexation = {
+		province_warscore_cost = -0.05
+	}
+	jxp_utn_kanto_mediator = {
+		improve_relation_modifier = 0.15
+	}
+	jxp_utn_mount_nikko = {
+		tolerance_own = 2
+		prestige = 0.5
+	}
+}

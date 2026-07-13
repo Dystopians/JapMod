@@ -1,0 +1,5 @@
+1021 = {
+	add_core = ROOT
+	cede_province = ROOT
+	change_religion = shinto
+}

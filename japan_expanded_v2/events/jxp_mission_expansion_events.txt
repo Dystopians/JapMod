@@ -1,0 +1,274 @@
+namespace = jxp_mission_expansion
+
+country_event = {
+	id = jxp_mission_expansion.1
+	title = "jxp_mission_expansion.1.t"
+	desc = "jxp_mission_expansion.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.1.a"
+		add_country_modifier = {
+			name = jxp_shrine_land_registers
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.2
+	title = "jxp_mission_expansion.2.t"
+	desc = "jxp_mission_expansion.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.2.a"
+		add_country_modifier = {
+			name = jxp_incident_order
+			duration = 7300
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.3
+	title = "jxp_mission_expansion.3.t"
+	desc = "jxp_mission_expansion.3.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.3.a"
+		add_country_modifier = {
+			name = jxp_port_congregation_registers
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.4
+	title = "jxp_mission_expansion.4.t"
+	desc = "jxp_mission_expansion.4.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.4.a"
+		add_country_modifier = {
+			name = jxp_church_court_compact
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.5
+	title = "jxp_mission_expansion.5.t"
+	desc = "jxp_mission_expansion.5.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.5.a"
+		add_country_modifier = {
+			name = jxp_confucian_exam_system
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.6
+	title = "jxp_mission_expansion.6.t"
+	desc = "jxp_mission_expansion.6.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.6.a"
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.7
+	title = "jxp_mission_expansion.7.t"
+	desc = "jxp_mission_expansion.7.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.7.a"
+		add_country_modifier = {
+			name = jxp_harbor_mosque_registers
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.8
+	title = "jxp_mission_expansion.8.t"
+	desc = "jxp_mission_expansion.8.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.8.a"
+		add_country_modifier = {
+			name = jxp_south_sea_brokers
+			duration = 7300
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_base_production = 1
+				add_province_modifier = {
+					name = jxp_south_sea_brokerage_port
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.9
+	title = "jxp_mission_expansion.9.t"
+	desc = "jxp_mission_expansion.9.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.9.a"
+		add_country_modifier = {
+			name = jxp_monto_rolls
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.10
+	title = "jxp_mission_expansion.10.t"
+	desc = "jxp_mission_expansion.10.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.10.a"
+		add_country_modifier = {
+			name = jxp_kinri_monto_compact
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.20
+	title = "jxp_mission_expansion.20.t"
+	desc = "jxp_mission_expansion.20.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.20.a"
+		add_country_modifier = {
+			name = jxp_osaka_rice_ledger
+			duration = 7300
+		}
+		if = {
+			limit = { owns = 1021 }
+			1021 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_province_modifier = {
+					name = jxp_osaka_ledger_city
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.21
+	title = "jxp_mission_expansion.21.t"
+	desc = "jxp_mission_expansion.21.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.21.a"
+		add_country_modifier = {
+			name = jxp_domain_school_network
+			duration = 7300
+		}
+		capital_scope = {
+			add_base_tax = 1
+			add_province_modifier = {
+				name = jxp_domain_school_city
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.22
+	title = "jxp_mission_expansion.22.t"
+	desc = "jxp_mission_expansion.22.d"
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.22.a"
+		add_country_modifier = {
+			name = jxp_translation_house
+			duration = 7300
+		}
+		if = {
+			limit = { owns = 4182 }
+			4182 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_province_modifier = {
+					name = jxp_translation_port_quarter
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_mission_expansion.30
+	title = "jxp_mission_expansion.30.t"
+	desc = "jxp_mission_expansion.30.d"
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_mission_expansion.30.a"
+		add_country_modifier = {
+			name = jxp_northern_sea_office
+			duration = 7300
+		}
+		random_owned_province = {
+			limit = {
+				region = japan_region
+				has_port = yes
+			}
+			add_base_production = 1
+			add_province_modifier = {
+				name = jxp_northern_sea_port_office
+				duration = 7300
+			}
+		}
+	}
+}

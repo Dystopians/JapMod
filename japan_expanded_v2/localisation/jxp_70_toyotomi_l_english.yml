@@ -1,0 +1,63 @@
+﻿l_english:
+ TOY:0 "0Nã"
+ TOY_ADJ:0 "0Nã"
+
+ TOY_ideas:0 "0NãtõV"
+ TOY_ideas_start:0 "0Nã.Oßu"
+ TOY_ideas_bonus:0 "0NãÎ‘ÃV"
+ jxp_toyotomi_osaka_fortress:0 "'YBWèTÎW"
+ jxp_toyotomi_osaka_fortress_desc:0 "ówqSçeNWNtQw„vNêS=fNµ^ÎW0èTów0X.nNÎWNHuqQT±RJTÿ°e„v)YN-N¢gòTÏu»yV‰RW0"
+ jxp_toyotomi_taiko_cadaster:0 "*Y–Àh0W"
+ jxp_toyotomi_taiko_cadaster_desc:0 "0u`u	cówØšNÏ‘ÿQgLu0t^!ŒT›QyVNv^™QeQßuN<hV0)YN1udkbHNïSåN8h—r0VÑSN‰Ršb„vMeSO0"
+ jxp_toyotomi_sword_hunt:0 "RérNuQœQR»y"
+ jxp_toyotomi_sword_hunt_desc:0 "QgK„uQhV«ˆ6e4ÿfkëXNŒvÓY„vyVRnRf0MeCgåNéy^KNT‹SNONÆcQw„vïSýw0"
+ jxp_toyotomi_kampaku_court:0 "sQ‹vlQ®‹"
+ jxp_toyotomi_kampaku_court_desc:0 "fk¶RCg›RPsQ‹v˜RMOÛeQg÷^<y^0ÅRO0ãS±RNø‹'YTw÷‹‡eqQT=e‘d°eMeCg„vTR0"
+ jxp_toyotomi_five_regents:0 "”N'YwN”NIYLˆ"
+ jxp_toyotomi_five_regents_desc:0 "Í‘ãNIYLˆ«ˆR+R³ueQT®‹0É‹¼‹ŒT0MeSOû|ÿO*NºNZglSHNïSåNö^íu„vMe¡RQÜu0"
+ jxp_toyotomi_red_seal_network:0 "1gpS9‚Nø‹=n"
+ jxp_toyotomi_red_seal_network_desc:0 "HX0•TNÑo7b…Q=n^1upS2RøvÞ0wmY'irNýV…QuQ®|(WTNWY¸‹ïSŒT&M|-NAm¨R0"
+ jxp_toyotomi_momoyama_patronage:0 "ChqSZêN"
+ jxp_toyotomi_momoyama_patronage_desc:0 "Ñ‘µxœ–ÁX06ƒONR'YÎWíŠbCg›RSHNïSÁ‰„vêNV0‡eS^©RmNbHNìSÆ–ø‹¯O0aˆÏ‘àVz˜„vKbµk0"
+
+ jxp_mission_oda_rakuichi_network_title:0 "^LˆPN^"
+ jxp_mission_oda_rakuichi_network_desc:0 "ã‰d–çeµ^mgÿŠbFUºNNåT.SVT×S,g¶RÝO²b„vÎWNÿ›Q—ŒTzn¿Oýw–SïNTibUS0"
+ jxp_mission_oda_tenka_fubu_mainline_title:0 ")YN^fk"
+ jxp_mission_oda_tenka_fubu_mainline_desc:0 ">S.VNýV„v›Q×eÅV‰˜SHN÷SäN)YN„v²u†˜0Á”®p0pS2RŒTÅwcÛ›QSHN°eéy^Vï0"
+ jxp_mission_oda_azuchi_statutes_mainline_title:0 "Ëz‰RWÕl¦^"
+ jxp_mission_oda_azuchi_statutes_mainline_desc:0 "VnTuØšÎWâe=f›QG•ÿmN=fMeäN-N¢g0Šb^HW0SïŒTø‹SLw1™QbÕl¦^ÿVgMbNObkŽNNb0"
+ jxp_mission_toyotomi_name_and_osaka_title:0 "×SÓY0NãÿQrÎW'YBW"
+ jxp_mission_toyotomi_name_and_osaka_desc:0 "sQ‹vKNMON0Nã°eÓYh×VNwCg›RNQêS=fÇu0u¶RãâV„vö^íu0'YBWÎWSb‹N*N°e„v)YNMeCg0"
+ jxp_mission_toyotomi_taiko_cadaster_title:0 "NÏ‘)YNówØš"
+ jxp_mission_toyotomi_taiko_cadaster_desc:0 "ßuNÏ‘6R00uŒQNówØšÿŠbT0W’NNøv„vçe&9e™QHN-N.YýwYVz0HNmN¨RXT„vHS¦^0"
+ jxp_mission_toyotomi_realm_settlement_title:0 "šR)YNÕNn"
+ jxp_mission_toyotomi_realm_settlement_desc:0 "ø‹¯O„v†˜0W0“ŠfNŒT›QyVý‰¥c×SÍ‘°eÁˆšR00NãMeCgÅV‰˜ÎN*NºNÜw)RpT†‰ÖvR›S„vlQqQéy^0"
+
+ jxp_decision_assume_toyotomi_name_title:0 "÷‹×S0NãÓY"
+ jxp_decision_assume_toyotomi_name_desc:0 "Çu0uçeINòTÿ‰RWSO6RmNN³åN¹R³uÊNåe„v)YN0Pg÷^˜RMO00Nã°eÓYN'YBW-N¢gÿú^Ëz^SŽN,g¶R„vMeCg0"
+ jxp_establish_toyotomi_identity_tt:0 "ýV¶RSlHN§Y0Nã§!ÿÝOYuÇu0uúQ«Ž°‹ÆVÿv^Tek0NãtõV0ûN¡RNMe»l9ei—0"
+
+ jxp_reform_founder_toyotomi_five_regents:0 "0Nã”N'YwMe¡R"
+ jxp_reform_founder_toyotomi_five_regents_desc:0 "*Y–Àh0W0IYLˆÉ‹¼‹N'YwT®‹qQT„gb0NãÕNn0ƒRâeb²‹HV'Yø‹¯O„vRÏ‘ÿmN‰Bl)YNMe¡RÇßuN&M|N“ŠfNÐl0"
+
+ jxp_70_toyotomi_market_charters:0 "PN^1gpSQ"
+ jxp_70_toyotomi_market_charters_desc:0 "ÎWN^HWåNßuN1gpSŒTSïÝO²bøvÞ0"
+ jxp_70_toyotomi_tenka_command:0 ")YN^fk›QäN"
+ jxp_70_toyotomi_tenka_command_desc:0 "›QäN0Á”®pNpS2R«ˆeQTNib.V²u†˜0"
+ jxp_70_toyotomi_azuchi_offices:0 "‰RWMe¡RNb"
+ jxp_70_toyotomi_azuchi_offices_desc:0 "ÎWNÕl¦^Šb0W¹e&ŒQGleQ°e„vMe¡R-N¢g0"
+ jxp_70_toyotomi_osaka_works:0 "'YBWnf÷‹"
+ jxp_70_toyotomi_osaka_works_desc:0 "èTÎWNÎWNHu„v%„ú^>fHy°eMeCg„vDnŒT÷SìS›R0"
+ jxp_70_toyotomi_cadaster_office:0 "*Y–Àh0WIYLˆ"
+ jxp_70_toyotomi_cadaster_office_desc:0 "IYLˆOßuNHS¦^NÏ‘0u`u08h—rówØš0"
+ jxp_70_toyotomi_realm_settlement:0 ")YNÕNn"
+ jxp_70_toyotomi_realm_settlement_desc:0 "ø‹¯O†˜0WN›QyV1u-N.YÍ‘°eÁˆšR0"
+ jxp_70_toyotomi_five_regents_policy:0 "'YwT®‹"
+ jxp_70_toyotomi_five_regents_policy_desc:0 "Í‘ã(WâešR“ŠfNŒTMe¡Rz^…QqQT®‹‹N0"
+ jxp_70_toyotomi_cadaster_policy:0 "IYLˆÀh0W"
+ jxp_70_toyotomi_cadaster_policy_desc:0 "Àh0WNÉ‹¼‹‡efNçuíuñmeQT0W0"
+
+ jxp_toyotomi.2.t:0 "'YwNIYLˆKNô•"
+ jxp_toyotomi.2.d:0 "0NãÕNnâeOV'Yw„vðXgNuQ›RÿmNOVIYLˆKb-N„v0uŒQ02RirŒTÉ‹¼‹z^02NwÅV‰˜RúQ,gnMe¡R„v‰Í‘0"
+ jxp_toyotomi.2.a:0 "HQäNIYLˆtePŸ)YN&ŒQ"
+ jxp_toyotomi.2.b:0 "HQåN'YwT®‹‰RšRø‹¯O"

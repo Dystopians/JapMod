@@ -1,0 +1,28 @@
+namespace = jxp_celestial_compat
+
+country_event = {
+	id = jxp_celestial_compat.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		jxp_is_japanese_polity_trigger = yes
+		is_emperor_of_china = yes
+		OR = {
+			mission_completed = jxp_mission_eastasia_claim_mandate
+			has_country_flag = jxp_unlocked_hakko_ichiu_reform
+		}
+		NOT = { has_country_flag = jxp_hakko_visibility_reconciled_v0260 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+	}
+
+	option = { name = "OK" }
+}

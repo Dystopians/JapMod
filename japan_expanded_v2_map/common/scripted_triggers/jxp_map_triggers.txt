@@ -1,0 +1,175 @@
+jxp_map_is_new_daimyo_tag_trigger = {
+	OR = {
+		tag = RKK tag = KYO tag = WKT tag = TGS tag = NHT tag = ANK
+		tag = HNM tag = MOG tag = ASN tag = OSK tag = SMA tag = DHO
+		tag = MKM tag = SGR tag = KMP tag = ARI tag = MTU tag = STM
+		tag = HNG tag = AZI tag = MYO tag = STO tag = RZJ tag = UKT
+		tag = TGR tag = HCS tag = MTS tag = KRD tag = YMC tag = NBS
+	}
+}
+
+jxp_map_is_warrior_house_trigger = {
+	OR = { tag = RKK tag = ANK tag = MOG tag = ASN tag = OSK tag = SMA tag = MKM tag = STM tag = STO }
+}
+
+jxp_map_is_court_house_trigger = {
+	OR = { tag = KYO tag = WKT tag = NHT tag = AZI tag = MYO }
+}
+
+jxp_map_is_sea_house_trigger = {
+	OR = { tag = HNM tag = ARI tag = MTU tag = RZJ tag = MTS tag = KRD tag = NBS }
+}
+
+jxp_map_is_frontier_house_trigger = {
+	OR = { tag = DHO tag = KMP tag = SGR tag = TGR }
+}
+
+jxp_map_is_temple_market_house_trigger = {
+	OR = { tag = TGS tag = HNG tag = UKT tag = HCS tag = YMC }
+}
+
+jxp_map_has_any_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_rkk has_country_flag = jxp_map_origin_kyo
+		has_country_flag = jxp_map_origin_wkt has_country_flag = jxp_map_origin_tgs
+		has_country_flag = jxp_map_origin_nht has_country_flag = jxp_map_origin_ank
+		has_country_flag = jxp_map_origin_hnm has_country_flag = jxp_map_origin_mog
+		has_country_flag = jxp_map_origin_asn has_country_flag = jxp_map_origin_osk
+		has_country_flag = jxp_map_origin_sma has_country_flag = jxp_map_origin_dho
+		has_country_flag = jxp_map_origin_mkm has_country_flag = jxp_map_origin_sgr
+		has_country_flag = jxp_map_origin_kmp has_country_flag = jxp_map_origin_ari
+		has_country_flag = jxp_map_origin_mtu has_country_flag = jxp_map_origin_stm
+		has_country_flag = jxp_map_origin_hng has_country_flag = jxp_map_origin_azi
+		has_country_flag = jxp_map_origin_myo has_country_flag = jxp_map_origin_sto
+		has_country_flag = jxp_map_origin_rzj has_country_flag = jxp_map_origin_ukt
+		has_country_flag = jxp_map_origin_tgr has_country_flag = jxp_map_origin_hcs
+		has_country_flag = jxp_map_origin_mts has_country_flag = jxp_map_origin_krd
+		has_country_flag = jxp_map_origin_ymc has_country_flag = jxp_map_origin_nbs
+	}
+}
+
+jxp_map_has_warrior_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_rkk has_country_flag = jxp_map_origin_ank
+		has_country_flag = jxp_map_origin_mog has_country_flag = jxp_map_origin_asn
+		has_country_flag = jxp_map_origin_osk has_country_flag = jxp_map_origin_sma
+		has_country_flag = jxp_map_origin_mkm has_country_flag = jxp_map_origin_stm
+		has_country_flag = jxp_map_origin_sto
+	}
+}
+
+jxp_map_has_court_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_kyo has_country_flag = jxp_map_origin_wkt
+		has_country_flag = jxp_map_origin_nht has_country_flag = jxp_map_origin_azi
+		has_country_flag = jxp_map_origin_myo
+	}
+}
+
+jxp_map_has_sea_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_hnm has_country_flag = jxp_map_origin_ari
+		has_country_flag = jxp_map_origin_mtu has_country_flag = jxp_map_origin_rzj
+		has_country_flag = jxp_map_origin_mts has_country_flag = jxp_map_origin_krd
+		has_country_flag = jxp_map_origin_nbs
+	}
+}
+
+jxp_map_has_frontier_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_dho has_country_flag = jxp_map_origin_kmp
+		has_country_flag = jxp_map_origin_sgr has_country_flag = jxp_map_origin_tgr
+	}
+}
+
+jxp_map_has_temple_market_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_map_origin_tgs has_country_flag = jxp_map_origin_hng
+		has_country_flag = jxp_map_origin_ukt has_country_flag = jxp_map_origin_hcs
+		has_country_flag = jxp_map_origin_ymc
+	}
+}
+
+# The main mod validates shared slots 1/2/4/5. The companion owns the exact
+# slot-3 fingerprint so the main mod never has to reference optional missions.
+jxp_map_daimyo_mission_fingerprint_valid_trigger = {
+	jxp_is_daimyo_stage_trigger = yes
+	jxp_map_has_any_origin_trigger = yes
+	NOT = {
+		OR = {
+			has_mission = jxp_mission_house_warrior_muster
+			has_mission = jxp_mission_house_court_genealogies
+			has_mission = jxp_mission_house_sea_port_registers
+			has_mission = jxp_mission_house_frontier_passes
+			has_mission = jxp_mission_house_temple_ledgers
+		}
+	}
+	OR = {
+		AND = {
+			jxp_map_has_warrior_origin_trigger = yes
+			has_mission = jxp_map_mission_warrior_muster
+			NOT = {
+				OR = {
+					has_mission = jxp_map_mission_court_genealogies
+					has_mission = jxp_map_mission_sea_port_registers
+					has_mission = jxp_map_mission_frontier_passes
+					has_mission = jxp_map_mission_temple_ledgers
+				}
+			}
+		}
+		AND = {
+			jxp_map_has_court_origin_trigger = yes
+			has_mission = jxp_map_mission_court_genealogies
+			NOT = {
+				OR = {
+					has_mission = jxp_map_mission_warrior_muster
+					has_mission = jxp_map_mission_sea_port_registers
+					has_mission = jxp_map_mission_frontier_passes
+					has_mission = jxp_map_mission_temple_ledgers
+				}
+			}
+		}
+		AND = {
+			jxp_map_has_sea_origin_trigger = yes
+			has_mission = jxp_map_mission_sea_port_registers
+			NOT = {
+				OR = {
+					has_mission = jxp_map_mission_warrior_muster
+					has_mission = jxp_map_mission_court_genealogies
+					has_mission = jxp_map_mission_frontier_passes
+					has_mission = jxp_map_mission_temple_ledgers
+				}
+			}
+		}
+		AND = {
+			jxp_map_has_frontier_origin_trigger = yes
+			has_mission = jxp_map_mission_frontier_passes
+			NOT = {
+				OR = {
+					has_mission = jxp_map_mission_warrior_muster
+					has_mission = jxp_map_mission_court_genealogies
+					has_mission = jxp_map_mission_sea_port_registers
+					has_mission = jxp_map_mission_temple_ledgers
+				}
+			}
+		}
+		AND = {
+			jxp_map_has_temple_market_origin_trigger = yes
+			has_mission = jxp_map_mission_temple_ledgers
+			NOT = {
+				OR = {
+					has_mission = jxp_map_mission_warrior_muster
+					has_mission = jxp_map_mission_court_genealogies
+					has_mission = jxp_map_mission_sea_port_registers
+					has_mission = jxp_map_mission_frontier_passes
+				}
+			}
+		}
+	}
+}
+
+jxp_map_daimyo_mission_tree_needs_reconcile_trigger = {
+	jxp_is_daimyo_stage_trigger = yes
+	jxp_map_has_any_origin_trigger = yes
+	NOT = { jxp_map_daimyo_mission_fingerprint_valid_trigger = yes }
+}

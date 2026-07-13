@@ -1,0 +1,52 @@
+#1021 - Settsu
+owner = HSK
+controller = HSK
+add_core = HSK
+
+
+
+culture = japanese
+religion = shinto
+capital = "Naniwa"
+trade_goods = chinaware
+hre = no
+base_tax = 5
+base_manpower = 3
+base_production = 5
+is_city = yes
+add_core = HSK
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+extra_cost = 8
+center_of_trade = 1
+
+1478.1.1 = { capital = "Sakai" }
+1542.1.1 = { discovered_by = POR }
+1561.1.1 = { fort_15th = yes } # Ishiyama Honganji
+1569.12.1 = { add_core = ODA   }
+1580.1.1 = { remove_core = HSK }
+1583.1.1 = { fort_16th = yes } # Osaka Castle
+1615.6.4 = {     fort_16th = no }
+
+# JXP 88-province continuous ownership overlay
+1569.12.1 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = HSK
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1615.6.4 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

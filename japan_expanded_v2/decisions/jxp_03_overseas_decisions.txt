@@ -1,0 +1,277 @@
+country_decisions = {
+	jxp_decision_claim_mandate_japan = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			NOT = { has_country_flag = jxp_mandate_claimed }
+			NOT = { has_country_flag = jxp_mandate_broken }
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			stability = 1
+			jxp_imperial_sanction_at_least_70 = yes
+			OR = {
+				is_year = 1550
+				any_known_country = { is_emperor_of_china = yes }
+				any_owned_province = {
+					OR = {
+						region = korea_region
+						region = north_china_region
+						region = south_china_region
+					}
+				}
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			jxp_apply_mandate_claim_reward_effect = yes
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 250 }
+			}
+		}
+	}
+
+	jxp_decision_break_mandate = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			NOT = { has_country_flag = jxp_mandate_claimed }
+			NOT = { has_country_flag = jxp_mandate_broken }
+		}
+		allow = {
+			mil_power = 100
+			dip_power = 75
+			stability = 0
+			jxp_tenka_order_at_least_75 = yes
+			OR = {
+				is_year = 1550
+				any_known_country = { is_emperor_of_china = yes }
+				any_owned_province = {
+					OR = {
+						region = korea_region
+						region = north_china_region
+						region = south_china_region
+					}
+				}
+			}
+		}
+		effect = {
+			add_mil_power = -100
+			add_dip_power = -75
+			jxp_apply_mandate_break_reward_effect = yes
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 250 }
+			}
+		}
+	}
+
+	jxp_decision_charter_pacific = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			NOT = { has_country_flag = jxp_pacific_charter_enacted }
+		}
+		allow = {
+			dip_power = 100
+			treasury = 200
+			dip_tech = 12
+			num_of_ports = 8
+			jxp_oceanic_opening_at_least_60 = yes
+			OR = {
+				num_of_colonists = 1
+				has_country_flag = jxp_manila_nagasaki_route_seen
+				has_country_modifier = jxp_pacific_waystations
+			}
+		}
+		effect = {
+			add_dip_power = -100
+			add_treasury = -200
+			set_country_flag = jxp_pacific_charter_seen
+			jxp_enact_pacific_charter_effect = yes
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 400 }
+			}
+		}
+	}
+
+	jxp_decision_establish_tsushima_office = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			NOT = { has_country_flag = jxp_tsushima_channel_office_done }
+		}
+		allow = {
+			dip_power = 50
+			num_of_ports = 6
+			OR = {
+				owns_or_non_sovereign_subject_of = 4651
+				has_country_modifier = jxp_manchu_korean_route
+				any_known_country = { capital_scope = { region = korea_region } }
+			}
+		}
+		effect = {
+			add_dip_power = -50
+			country_event = { id = jxp_eastasia.5 }
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 150 }
+			}
+		}
+	}
+
+	jxp_decision_register_ryukyu_tribute = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			NOT = { has_country_flag = jxp_ryukyu_tribute_port_done }
+		}
+		allow = {
+			dip_power = 50
+			treasury = 100
+			OR = {
+				owns_or_non_sovereign_subject_of = 1015
+				num_of_ports = 8
+				has_country_modifier = jxp_eastasia_tribute_registry
+			}
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -100
+			country_event = { id = jxp_eastasia.6 }
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 300 }
+			}
+		}
+	}
+
+	jxp_decision_create_pacific_admiralty = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			has_country_flag = jxp_pacific_charter_enacted
+			NOT = { has_country_flag = jxp_pacific_admiralty_done }
+		}
+		allow = {
+			mil_power = 75
+			OR = {
+				navy_tradition = 40
+				num_of_light_ship = 10
+				num_of_heavy_ship = 5
+			}
+		}
+		effect = {
+			add_mil_power = -75
+			country_event = { id = jxp_colonial.5 }
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 175 }
+			}
+		}
+	}
+
+	jxp_decision_codify_east_asian_rite_sphere = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			OR = {
+				has_country_flag = jxp_mandate_claimed
+				has_country_flag = jxp_mandate_broken
+			}
+			NOT = { has_country_flag = jxp_east_asian_rite_sphere_done }
+		}
+		allow = {
+			dip_power = 100
+			prestige = 50
+			OR = {
+				has_country_modifier = jxp_celestial_diplomacy
+				has_country_modifier = jxp_mandate_fallback_hegemony
+				has_country_flag = jxp_hakko_ichiu_reform_passed
+			}
+		}
+		effect = {
+			add_dip_power = -100
+			country_event = { id = jxp_eastasia.8 }
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 250 }
+			}
+		}
+	}
+
+	jxp_decision_proclaim_oceanic_sun_state = {
+		major = yes
+		potential = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+			has_country_flag = jxp_pacific_charter_enacted
+			NOT = { has_country_flag = jxp_oceanic_sun_state }
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			dip_tech = 16
+			jxp_oceanic_opening_at_least_75 = yes
+			OR = {
+				has_country_modifier = jxp_pacific_silver_flow
+				has_country_modifier = jxp_new_world_japan_towns
+				has_country_flag = jxp_pacific_admiralty_done
+				has_country_flag = jxp_pacific_silver_flow_done
+				has_country_flag = jxp_new_world_japan_towns_done
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			jxp_establish_oceanic_sun_state_effect = yes
+			jxp_refresh_route_missions_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_power = 250 }
+			}
+		}
+	}
+}

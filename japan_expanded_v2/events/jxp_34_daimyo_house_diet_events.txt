@@ -1,0 +1,110 @@
+namespace = jxp_house_diet
+
+country_event = {
+	id = jxp_house_diet.1
+	title = "jxp_house_diet.1.t"
+	desc = "jxp_house_diet.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_house_diet.1.warrior_a"
+		trigger = { jxp_has_warrior_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_warrior_muster_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_34_warrior_muster_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.warrior_b"
+		trigger = { jxp_has_warrior_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_warrior_captain_privileges
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		add_mil_power = 25
+		add_country_modifier = { name = jxp_34_warrior_captain_privileges duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.court_a"
+		trigger = { jxp_has_court_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_court_rank_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_10_effect = yes
+		add_country_modifier = { name = jxp_34_court_rank_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.court_b"
+		trigger = { jxp_has_court_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_court_domain_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_34_court_domain_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.maritime_a"
+		trigger = { jxp_has_maritime_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_maritime_port_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_10_effect = yes
+		add_country_modifier = { name = jxp_34_maritime_port_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.maritime_b"
+		trigger = { jxp_has_maritime_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_maritime_admiral_rolls
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_34_maritime_admiral_rolls duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.frontier_a"
+		trigger = { jxp_has_frontier_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_frontier_barrier_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_10_effect = yes
+		add_country_modifier = { name = jxp_34_frontier_barrier_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.frontier_b"
+		trigger = { jxp_has_frontier_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_frontier_market_charter
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_34_frontier_market_charter duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.temple_market_a"
+		trigger = { jxp_has_temple_market_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_temple_privilege_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_34_temple_privilege_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.temple_market_b"
+		trigger = { jxp_has_temple_market_house_origin_trigger = yes }
+		set_country_flag = jxp_34_house_diet_convened
+		set_country_flag = jxp_34_selected_temple_accounting_law
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_34_temple_accounting_law duration = 7300 }
+	}
+	option = {
+		name = "jxp_house_diet.1.fallback"
+		trigger = {
+			NOT = { jxp_has_founder_legacy_council_origin_trigger = yes }
+		}
+		set_country_flag = jxp_34_house_diet_convened
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_34_frontier_market_charter duration = 3650 }
+	}
+}

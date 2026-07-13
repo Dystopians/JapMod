@@ -1,0 +1,39 @@
+jxp_70_toyotomi_market_charters = {
+	trade_efficiency = 0.10
+	development_cost = -0.05
+}
+
+jxp_70_toyotomi_tenka_command = {
+	land_morale = 0.10
+	province_warscore_cost = -0.05
+}
+
+jxp_70_toyotomi_azuchi_offices = {
+	reform_progress_growth = 0.10
+	state_maintenance_modifier = -0.10
+}
+
+jxp_70_toyotomi_osaka_works = {
+	build_cost = -0.10
+	defensiveness = 0.10
+}
+
+jxp_70_toyotomi_cadaster_office = {
+	global_tax_modifier = 0.10
+	global_manpower_modifier = 0.10
+}
+
+jxp_70_toyotomi_realm_settlement = {
+	governing_capacity_modifier = 0.10
+	global_unrest = -1
+}
+
+jxp_70_toyotomi_five_regents_policy = {
+	advisor_cost = -0.10
+	governing_capacity_modifier = 0.05
+}
+
+jxp_70_toyotomi_cadaster_policy = {
+	global_tax_modifier = 0.10
+	state_maintenance_modifier = -0.10
+}

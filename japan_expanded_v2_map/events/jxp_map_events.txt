@@ -1,0 +1,363 @@
+namespace = jxp_map
+
+country_event = {
+	id = jxp_map.1
+	title = "jxp_map.1.t"
+	desc = "jxp_map.1.d"
+	picture = jxp_map_kannonji_ledgers_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = RKK owns = 4950 NOT = { has_country_flag = jxp_map_rkk_seen } }
+	mean_time_to_happen = { months = 160 }
+	option = {
+		name = "jxp_map.1.a"
+		set_country_flag = jxp_map_rkk_seen
+		4950 = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_adm_power = 20
+	}
+	option = {
+		name = "jxp_map.1.b"
+		set_country_flag = jxp_map_rkk_seen
+		add_mil_power = 30
+		add_country_modifier = { name = jxp_map_warrior_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.2
+	title = "jxp_map.2.t"
+	desc = "jxp_map.2.d"
+	picture = jxp_map_kaga_common_granary_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = HNG owns = 4953 NOT = { has_country_flag = jxp_map_hng_seen } }
+	mean_time_to_happen = { months = 150 }
+	option = {
+		name = "jxp_map.2.a"
+		set_country_flag = jxp_map_hng_seen
+		4953 = { add_base_production = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	option = {
+		name = "jxp_map.2.b"
+		set_country_flag = jxp_map_hng_seen
+		add_stability_or_adm_power = yes
+		add_country_modifier = { name = jxp_map_temple_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.3
+	title = "jxp_map.3.t"
+	desc = "jxp_map.3.d"
+	picture = jxp_map_yamagata_water_dispute_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = MOG owns = 4973 NOT = { has_country_flag = jxp_map_mog_seen } }
+	mean_time_to_happen = { months = 170 }
+	option = {
+		name = "jxp_map.3.a"
+		set_country_flag = jxp_map_mog_seen
+		4973 = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_treasury = 25
+	}
+	option = {
+		name = "jxp_map.3.b"
+		set_country_flag = jxp_map_mog_seen
+		4973 = { add_base_manpower = 1 }
+		add_mil_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_map.4
+	title = "jxp_map.4.t"
+	desc = "jxp_map.4.d"
+	picture = jxp_map_tsugaru_land_survey_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = TGR owns = 4972 NOT = { has_country_flag = jxp_map_tgr_seen } }
+	mean_time_to_happen = { months = 160 }
+	option = {
+		name = "jxp_map.4.a"
+		set_country_flag = jxp_map_tgr_seen
+		4972 = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_adm_power = 20
+	}
+	option = {
+		name = "jxp_map.4.b"
+		set_country_flag = jxp_map_tgr_seen
+		4972 = { add_base_manpower = 1 }
+		add_country_modifier = { name = jxp_map_frontier_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.5
+	title = "jxp_map.5.t"
+	desc = "jxp_map.5.d"
+	picture = jxp_map_hirado_iki_pass_eventPicture
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = MTU
+		OR = { owns = 4182 owns = 4969 }
+		NOT = { has_country_flag = jxp_map_mtu_seen }
+	}
+	mean_time_to_happen = { months = 150 }
+	option = {
+		name = "jxp_map.5.a"
+		set_country_flag = jxp_map_mtu_seen
+		if = { limit = { owns = 4182 } 4182 = { add_base_production = 1 add_province_modifier = { name = jxp_map_port_registers duration = 3650 } } }
+		if = { limit = { NOT = { owns = 4182 } owns = 4969 } 4969 = { add_base_production = 1 add_province_modifier = { name = jxp_map_port_registers duration = 3650 } } }
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_map.5.b"
+		set_country_flag = jxp_map_mtu_seen
+		add_navy_tradition = 5
+		add_country_modifier = { name = jxp_map_sea_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.6
+	title = "jxp_map.6.t"
+	desc = "jxp_map.6.d"
+	picture = jxp_map_shimabara_foreign_ship_eventPicture
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ARI
+		owns = 4978
+		is_year = 1543
+		NOT = { has_country_flag = jxp_map_ari_seen }
+	}
+	mean_time_to_happen = { months = 150 }
+	option = {
+		name = "jxp_map.6.a"
+		set_country_flag = jxp_map_ari_seen
+		4978 = { add_base_production = 1 add_province_modifier = { name = jxp_map_port_registers duration = 3650 } }
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_map.6.b"
+		set_country_flag = jxp_map_ari_seen
+		add_dip_power = 40
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_map.7
+	title = "jxp_map.7.t"
+	desc = "jxp_map.7.d"
+	picture = jxp_map_sagara_law_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = SGR owns = 4976 NOT = { has_country_flag = jxp_map_sgr_seen } }
+	mean_time_to_happen = { months = 180 }
+	option = {
+		name = "jxp_map.7.a"
+		set_country_flag = jxp_map_sgr_seen
+		4976 = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_legitimacy = 5
+	}
+	option = {
+		name = "jxp_map.7.b"
+		set_country_flag = jxp_map_sgr_seen
+		4976 = { add_base_manpower = 1 }
+		add_mil_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_map.8
+	title = "jxp_map.8.t"
+	desc = "jxp_map.8.d"
+	picture = jxp_map_kimotsuki_horse_pasture_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = KMP owns = 4968 NOT = { has_country_flag = jxp_map_kmp_seen } }
+	mean_time_to_happen = { months = 170 }
+	option = {
+		name = "jxp_map.8.a"
+		set_country_flag = jxp_map_kmp_seen
+		4968 = { add_base_manpower = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_map.8.b"
+		set_country_flag = jxp_map_kmp_seen
+		add_army_tradition = 5
+		add_country_modifier = { name = jxp_map_frontier_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.9
+	title = "jxp_map.9.t"
+	desc = "jxp_map.9.d"
+	picture = jxp_map_satomi_coastal_defense_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = STM owns = 4948 NOT = { has_country_flag = jxp_map_stm_seen } }
+	mean_time_to_happen = { months = 160 }
+	option = {
+		name = "jxp_map.9.a"
+		set_country_flag = jxp_map_stm_seen
+		4948 = { add_base_production = 1 add_province_modifier = { name = jxp_map_port_registers duration = 3650 } }
+		add_navy_tradition = 3
+	}
+	option = {
+		name = "jxp_map.9.b"
+		set_country_flag = jxp_map_stm_seen
+		4948 = { add_base_manpower = 1 }
+		add_country_modifier = { name = jxp_map_warrior_legacy duration = 3650 }
+	}
+}
+
+country_event = {
+	id = jxp_map.10
+	title = "jxp_map.10.t"
+	desc = "jxp_map.10.d"
+	picture = jxp_map_odani_biwa_route_eventPicture
+	trigger = { jxp_is_daimyo_stage_trigger = yes tag = AZI owns = 4970 NOT = { has_country_flag = jxp_map_azi_seen } }
+	mean_time_to_happen = { months = 150 }
+	option = {
+		name = "jxp_map.10.a"
+		set_country_flag = jxp_map_azi_seen
+		4970 = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_map.10.b"
+		set_country_flag = jxp_map_azi_seen
+		add_dip_power = 30
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_map.20
+	title = "jxp_map.20.t"
+	desc = "jxp_map.20.d"
+	picture = jxp_map_muster_ordinance_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_map.20.a"
+		set_country_flag = jxp_map_policy_warrior_taken
+		capital_scope = { add_base_manpower = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_country_modifier = { name = jxp_map_warrior_legacy duration = 3650 }
+	}
+	option = { name = "jxp_map.20.b" set_country_flag = jxp_map_policy_warrior_taken add_mil_power = 75 add_army_tradition = 3 }
+}
+
+country_event = {
+	id = jxp_map.21
+	title = "jxp_map.21.t"
+	desc = "jxp_map.21.d"
+	picture = jxp_map_genealogy_and_merit_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_map.21.a"
+		set_country_flag = jxp_map_policy_court_taken
+		capital_scope = { add_base_tax = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_country_modifier = { name = jxp_map_court_legacy duration = 3650 }
+	}
+	option = { name = "jxp_map.21.b" set_country_flag = jxp_map_policy_court_taken add_dip_power = 75 add_prestige = 5 }
+}
+
+country_event = {
+	id = jxp_map.22
+	title = "jxp_map.22.t"
+	desc = "jxp_map.22.d"
+	picture = jxp_map_ship_league_rights_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_map.22.a"
+		set_country_flag = jxp_map_policy_sea_taken
+		random_owned_province = { limit = { has_port = yes } add_base_production = 1 add_province_modifier = { name = jxp_map_port_registers duration = 3650 } }
+		add_country_modifier = { name = jxp_map_sea_legacy duration = 3650 }
+	}
+	option = { name = "jxp_map.22.b" set_country_flag = jxp_map_policy_sea_taken add_dip_power = 75 add_navy_tradition = 5 }
+}
+
+country_event = {
+	id = jxp_map.23
+	title = "jxp_map.23.t"
+	desc = "jxp_map.23.d"
+	picture = jxp_map_beyond_boundary_stones_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_map.23.a"
+		set_country_flag = jxp_map_policy_frontier_taken
+		capital_scope = { add_base_manpower = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_country_modifier = { name = jxp_map_frontier_legacy duration = 3650 }
+	}
+	option = { name = "jxp_map.23.b" set_country_flag = jxp_map_policy_frontier_taken add_mil_power = 75 add_prestige = 5 }
+}
+
+country_event = {
+	id = jxp_map.24
+	title = "jxp_map.24.t"
+	desc = "jxp_map.24.d"
+	picture = jxp_map_temple_market_law_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_map.24.a"
+		set_country_flag = jxp_map_policy_temple_taken
+		capital_scope = { add_base_production = 1 add_province_modifier = { name = jxp_map_local_development_drive duration = 3650 } }
+		add_country_modifier = { name = jxp_map_temple_legacy duration = 3650 }
+	}
+	option = { name = "jxp_map.24.b" set_country_flag = jxp_map_policy_temple_taken add_adm_power = 75 add_stability_or_adm_power = yes }
+}
+
+country_event = {
+	id = jxp_map.100
+	hidden = yes
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		jxp_map_has_any_origin_trigger = yes
+		NOT = { has_country_flag = jxp_map_legacy_granted }
+	}
+	immediate = {
+		set_country_flag = jxp_map_legacy_granted
+		if = { limit = { jxp_map_has_warrior_origin_trigger = yes } add_country_modifier = { name = jxp_map_warrior_legacy duration = -1 } }
+		else_if = { limit = { jxp_map_has_court_origin_trigger = yes } add_country_modifier = { name = jxp_map_court_legacy duration = -1 } }
+		else_if = { limit = { jxp_map_has_sea_origin_trigger = yes } add_country_modifier = { name = jxp_map_sea_legacy duration = -1 } }
+		else_if = { limit = { jxp_map_has_frontier_origin_trigger = yes } add_country_modifier = { name = jxp_map_frontier_legacy duration = -1 } }
+		else_if = { limit = { jxp_map_has_temple_market_origin_trigger = yes } add_country_modifier = { name = jxp_map_temple_legacy duration = -1 } }
+	}
+}
+
+# Low-frequency repair for old saves whose optional slot-3 series was absent,
+# stale, or replaced while the main mod's shared mission columns remained valid.
+country_event = {
+	id = jxp_map.101
+	hidden = yes
+	trigger = { jxp_map_daimyo_mission_tree_needs_reconcile_trigger = yes }
+	mean_time_to_happen = { days = 90 }
+	immediate = { jxp_refresh_route_missions_effect = yes }
+}
+
+# After a companion daimyo forms Japan or a route tag, retire its map-tag idea
+# identity through the main mod's one canonical free-idea synchronization path.
+country_event = {
+	id = jxp_map.102
+	hidden = yes
+	trigger = {
+		jxp_map_has_any_origin_trigger = yes
+		has_custom_ideas = no
+		NOT = { has_country_flag = jxp_map_post_tag_idea_sync_v012 }
+		OR = {
+			tag = JAP
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			tag = TOY
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		jxp_sync_route_national_ideas_effect = yes
+		set_country_flag = jxp_map_post_tag_idea_sync_v012
+	}
+}
+
+country_event = {
+	id = jxp_map.900
+	title = "jxp_map.900.t"
+	desc = "jxp_map.900.d"
+	picture = jxp_map_verification_ledger_eventPicture
+	is_triggered_only = yes
+	option = { name = "jxp_map.900.a" }
+}

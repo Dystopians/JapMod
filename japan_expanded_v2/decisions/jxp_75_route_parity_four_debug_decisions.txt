@@ -1,0 +1,73 @@
+country_decisions = {
+	jxp_debug_fire_route_parity_four_kirishitan = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_75_is_kirishitan_route_trigger = yes
+			jxp_75_has_kirishitan_policy_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_75_reset_route_parity_four_effect = yes
+			country_event = { id = jxp_route_parity_four.1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_route_parity_four_confucian = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_75_is_confucian_route_trigger = yes
+			jxp_75_has_confucian_policy_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_75_reset_route_parity_four_effect = yes
+			country_event = { id = jxp_route_parity_four.2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_route_parity_four_reformed = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_75_is_reformed_route_trigger = yes
+			jxp_75_has_reformed_policy_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_75_reset_route_parity_four_effect = yes
+			country_event = { id = jxp_route_parity_four.3 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_fire_route_parity_four_kaikyo = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_events_enabled
+			has_country_flag = jxp_debug_event_category_early
+			jxp_75_is_kaikyo_route_trigger = yes
+			jxp_75_has_kaikyo_policy_reform_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_75_reset_route_parity_four_effect = yes
+			country_event = { id = jxp_route_parity_four.4 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

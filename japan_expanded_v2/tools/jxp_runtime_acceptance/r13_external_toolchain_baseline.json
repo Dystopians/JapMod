@@ -1,0 +1,97 @@
+{
+  "schema": "jxp_r13_external_toolchain_baseline/v1",
+  "platform": {
+    "os_name": "nt",
+    "machine": "AMD64",
+    "python_implementation": "CPython",
+    "python_version": "3.13.1",
+    "cache_tag": "cpython-313",
+    "pointer_bits": 64,
+    "base_prefix": "C:\\Python313"
+  },
+  "records": [
+    {
+      "kind": "tree",
+      "path": "C:\\Python313",
+      "file_count": 1893,
+      "bytes": 79881252,
+      "sha256": "95139a19b7071a69ee5d9dee350156e2b311777ecc1a8b40c9c24c7537139356"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Python313\\DLLs",
+      "file_count": 43,
+      "bytes": 15009548,
+      "sha256": "4397c71415a5daab79ad3772b195b1e0397291578b284c44755512ca124728c6"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Python313\\Lib",
+      "file_count": 2278,
+      "bytes": 44439503,
+      "sha256": "d1300056dbbc9255988bd4a93aad140aeeae840666cfd4189c0bcbc2d8291157"
+    },
+    {
+      "kind": "absent",
+      "path": "C:\\Python313\\python313.zip"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Users\\meizhanxuan\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+      "bytes": 3394,
+      "sha256": "5347a0a09cfb546bba1c0d1a30dae0a233d9a05f57bd4e7877155c588bcdabf7"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\meizhanxuan\\AppData\\Roaming\\Python\\Python313\\site-packages::numpy",
+      "distribution": "numpy",
+      "version": "2.4.2",
+      "file_count": 1339,
+      "bytes": 52424432,
+      "sha256": "5dd8f5d8f1cee2072d1ee45d308accbe4c828cbd485ac38df9c843caf451e03f"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\meizhanxuan\\AppData\\Roaming\\Python\\Python313\\site-packages::pillow",
+      "distribution": "pillow",
+      "version": "12.3.0",
+      "file_count": 220,
+      "bytes": 16158670,
+      "sha256": "778e47c512ed0fff3a9c6c153d62f9e28cf8c48653bda38a1d3893be7415e5cc"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\meizhanxuan\\AppData\\Roaming\\Python\\Python313\\site-packages::PyYAML",
+      "distribution": "PyYAML",
+      "version": "6.0.3",
+      "file_count": 43,
+      "bytes": 738251,
+      "sha256": "e9236dd983b9bdf3303fd497a7dca852a0ad578dfeeffec138d6442c4c7ac69b"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "bytes": 289792,
+      "sha256": "badf4752413cb0cbdc03fb95820ca167f0cdc63b597ccdb5ef43111180e088b0"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules",
+      "file_count": 671,
+      "bytes": 11284757,
+      "sha256": "40bc613d906fa84299348fa6ba498a69c72178097b789b9f02f3393fac81b2ec"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "bytes": 455680,
+      "sha256": "9785001b0dcf755eddb8af294a373c0b87b2498660f724e76c4d53f9c217c7a3"
+    },
+    {
+      "kind": "file",
+      "path": "F:\\Git\\mingw64\\bin\\git.exe",
+      "bytes": 4179336,
+      "sha256": "d117eb75c7541372ed43a8e6bbb70230a846daff47946107a87e7c52b4c6581d"
+    }
+  ]
+}
