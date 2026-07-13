@@ -74,7 +74,7 @@ Install current main + companion snapshots without enabling or launching them:
 
 ```powershell
 python $tool deploy --label current `
-  --revision 028e667a12c3ab24f539b492a1b1da0afaa0ac4d `
+  --revision 2bf24123e41f86324cfc6b9780b9a89cd3919c6e `
   --user-data $userData
 ```
 
@@ -82,7 +82,7 @@ Install current main-only for old-save or no-map scenarios:
 
 ```powershell
 python $tool deploy --label current-main --main-only `
-  --revision 028e667a12c3ab24f539b492a1b1da0afaa0ac4d `
+  --revision 2bf24123e41f86324cfc6b9780b9a89cd3919c6e `
   --user-data $userData
 ```
 

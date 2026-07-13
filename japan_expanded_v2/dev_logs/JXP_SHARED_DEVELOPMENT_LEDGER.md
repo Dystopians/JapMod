@@ -25,7 +25,7 @@
 - Pinned game: `EU4 v1.37.5.0 Inca (491d)`
 - Supported version: `1.37.*`
 - Runtime acceptance: `PENDING_USER_APPROVAL`
-- Main static gate: `26/26 checks; 211/211 core unit tests; 13/13 acceptance-helper tests`
+- Main static gate: `26/26 checks; 221/221 core unit tests; 19/19 acceptance-helper tests`
 - Combined static gate: `0 errors; 0 warnings`
 - Main missions: `288 mission IDs; 41 custom series; 192 effective profiles`
 - Combined missions: `321 mission IDs; 46 series; 120 companion tag/DLC profiles`
@@ -168,8 +168,8 @@
 8. **dormant reforms。** 306 个旧定义仍保留以兼容/历史用途，任何生成器或手改不得把它们重新注册到 UI。
 9. **Chinese localisation pipeline。** source 与 active 文件不可混改；Markdown 日志不得经过 EU4SpecialEscape。
 10. **并行 agent 冲突。** Git 已提供提交与 worktree 边界，但总账仍采用 lead-agent 单写者协议；并行分支不得各自改写总账后假设可自动合并。
-11. **运行时隔离协议尚未获引擎证明。** 正式验收必须只启用场景声明的 exact owned descriptors，排除中文补丁、Graphical Map Improvements 与所有无关 Mod。Launcher 2026.6 的静态审计未发现受支持的 playset/mod CLI；EU4 二进制虽解析带值的 `userdir` 键，其准确命令行形式仍须在用户明确许可后做隔离协议探针。探针通过前不得修改默认 `launcher-v2.sqlite` 或 `dlc_load.json`。
-12. **pre-0.24.2 真实旧档缺口。** 当前 Git 最早完整源码是 `6e461e2` / `0.25.0`，本机现有 202 个存档也没有 JXP 元数据；仓库可由 `8a59626` / `0.27.0` 生成十状态迁移输入，但不能伪造早期 DOM/BOM series、BOM-prefixed key 或 stacked free-idea 的真实序列化档。若要补齐该历史回归的游戏内证据，必须找回原问题 `autosave.eu4`，或找回能实际生成故障状态的 pre-0.24.1 发布包及其引擎存档。
+11. **运行时隔离协议尚未获引擎证明。** 对 pinned EU4 1.37.5 的静态逆向已证明只允许 lower-case、non-repeated、非空的 `-userdir=C:\Users\meizhanxuan\Documents\JXP_Acceptance`；CLI 非空值优先于 game-root `userdir.txt`，后者再优先于 Documents 默认值。旧 `...\Europa Universalis IV - JXP Acceptance` 路径会在 Paradox option parser 中被空格后的 `-` 截断成日常根，普通外层 shell quotes 不能保护，故已永久禁用。正式验收仍须在用户明确许可后做可见协议探针，证明实际 VFS 写入与主机安全策略；只允许场景 exact owned descriptors，排除中文补丁、Graphical Map Improvements 与所有无关 Mod，且默认 `launcher-v2.sqlite` / `dlc_load.json` 必须保持 hash 不变。
+12. **pre-0.24.2 真实旧档缺口。** 当前 Git 最早完整源码仍是 `6e461e2` / `0.25.0`。已穷尽扫描 719,834 个本机唯一文件、220 个可解压/流式检查的 `.eu4` 存档、4,055 个有效 ZIP、113 个其他 archive、5,542 个 UnityFS bundle、33 个本地 Workshop Mod，以及 Git refs/reflog/fsck、GitHub refs/branches/PR/releases/actions/artifacts/forks、cloud cache、回收站、浏览器 history 与 Recent，均未找到 JXP pre-0.24.2 payload 或 serialization。旧开发机仍是唯一真实来源：0.23.1 报告记录两份 ZIP，0.23.2 报告记录第三份 ZIP 与原问题 `autosave.eu4`，0.24.1 报告记录 DOM/JXP 同时序列化和六个 BOM-prefixed series。仓库可由 `8a59626` / `0.27.0` 生成十状态迁移输入，但 R5 必须取得旧机原档/任一命名 ZIP 后由引擎生成真实失败档；禁止合成、改旗或重命名伪造。
 
 ## Validation Matrix
 
@@ -242,6 +242,20 @@ $repo = '<repo>'
 ## Update Journal
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
+
+### 2026-07-13 - RUNTIME-PREP-003 - Safe userdir, deterministic fixtures, and route-loop hardening (`no version bump`)
+
+- Status: `STATIC_PASS; SAFE_ROOT_REDEPLOYED_NOT_LAUNCHED; PENDING_USER_APPROVAL; R5_EXTERNAL_FIXTURE_REQUIRED`。
+- Scope: 在不启动 EU4、Launcher、dowser 或 observer 的前提下，修复 acceptance userdir 位置歧义，穷尽 pre-0.24.2 真实 fixture 来源，加固 playset/DLC/日常配置证据链，并收紧 R7 WAK 与 R8 IJP 的十年 charter 生命周期和负向 gate。
+- Userdir protocol: pinned `eu4.exe` SHA-256 为 `9AD3EFE1AF169F40EE577F9DAE5DEBBC87AF6FB8B5450FB345EBF110DC4D771A`，空 `userdir.txt` 为 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`。静态逆向证明旧 `Documents/Paradox Interactive/Europa Universalis IV - JXP Acceptance` 会因空格后的 `-` 被截断到日常根；新 canonical 根固定为无空格普通目录 `C:\Users\meizhanxuan\Documents\JXP_Acceptance`，helper 拒绝非 ASCII、空白、quote 及非 canonical fixture 目标。旧根仅保留历史内容并写有 `DO_NOT_USE_AS_USERDIR.txt`；没有将其重新用于验收。
+- Tooling: `preflight` 现固定 2 个协议文件与 9 个玩法文件；session/collection schema 升至 3。`configure-playset` 在进程停止、版本/组件/revision/dependency/phase 全部精确匹配后，只原子写隔离根 `dlc_load.json`，R11 使用 pinned Mandate of Heaven disabled mask；`before-session` 记录日常两个配置文件的 size/mtime/SHA-256，`collect` 同时要求隔离配置精确相等和日常 hash 不变。`install-fixtures` 只接受 canonical 根，先全量 conflict preflight，再 staging + no-clobber hard-link commit；partial copy、末项冲突及中途 commit 故障均无目标/temp 残留。
+- Runtime setup fixtures: 新增 5 个 UTF-8/no-BOM、manifest 固定 hash 的根级 `run` effects，覆盖 R4 0.25 天子准备、R6 四类受保护转教目标、R8 no-heartland/restore-heartland 与 R10 foreign-emperor same-unlock。全部只能标注 `DEBUG_FIXTURE_SETUP`，发布 payload whitelist 排除 `tools`，不得据此声称自然历史、事件 cadence、真实任务奖励或正常状态形成。
+- Gameplay hardening: IJP route 明确要求 Shinto；commons 同时要求 church/burgher estate 存在且 loyalty 分别不低于 40/35。WAK/IJP active trigger 与各自 3650-day charter 绑定，canonical start 在 day 3651 调度 generation-safe expiry；旧 timer 遇到新 charter 必须 no-op，route/religion/disaster/charter 失效由隐藏清理闭合。矩阵改为验证 estate presence + loyalty，并区分旧代清零与合法新代成套状态，不再把 MTTH 1 day 或随机 observer milestone 误写成固定结果。
+- Fixture search: 扫描 719,834 个唯一文件、220 个 `.eu4`、4,055 个有效 ZIP、113 个其他 archive、5,542 个 UnityFS bundle、33 个本地 Workshop Mod，以及全部可达本机/Git/GitHub/cloud/browser/recycle/recent 来源，JXP pre-0.24.2 命中为 0。真实线索仅存在旧机：`jxp_phase_report_0_23_1_mission_renderer_hotfix.md` 记录 ZIP 1/2，`jxp_phase_report_0_23_2_government_reform_visibility_hotfix.md` 记录 ZIP 3 与旧 autosave，`jxp_phase_report_0_24_1_runtime_state_hotfix.md` 记录目标 serialization；R5 继续等待外部原件，禁止伪造。
+- Candidate/deployment: runtime payload 固定提交 `2bf24123e41f86324cfc6b9780b9a89cd3919c6e`。新安全根中的 current-main 指纹为 `0d908ff8ae38f079950ebefc3db6929c0a803705ba4eb7478244818abd86a04b`（376 files），current-map 为 `9aa1589ffd6991359c0be969f8b217ebe8feaa7a4c7b3f2d4c143c68c1c56e30`（239 files）；legacy-025 `ce3648eda2d11eebb97333cd0256a3d54bbf6556f5c27cf7feafd0387f366337`（294 files）与 legacy-027 `51067cab6acbe9914d8d1b995ad79392a2212ae17dd812ae79de634367adb015`（356 files）仍为精确普通快照。日常 `mod` 根 acceptance 条目为 0。
+- Baseline: R1 隔离配置只启用新 main+map descriptors，SHA-256 为 `473BE71D84F7CEC93E49A3E59304695E4D32AE89FB1D29A38828A547006F1995`；schema-3 before-session 位于 `C:\Users\meizhanxuan\Documents\JXP_Acceptance\jxp_runtime_evidence\20260713T154227Z_r1_6e237503`。它记录日常 `dlc_load.json` 为 86 bytes / `BD29774AF54FFFB7804E72DAD37C4BAE5AB370E42413768878F846C217106404`，`launcher-v2.sqlite` 为 118784 bytes / `131EEF30058C5AABA7250463E0EE6994B106850A685AEE4F01AA779F80E2D3C5`；基线后只读复核仍完全一致。
+- Evidence: pinned preflight `11/11`；主门禁 `26/26`、Clausewitz `250/250`、主单测 `221/221`；R7/R8 定向 mutation `39/39`；acceptance helper `19/19`；5/5 fixture Clausewitz parse/hash/UTF-8/no-BOM 通过；联合 map/history/content/compat/assets 门禁 `0 errors / 0 warnings`，覆盖 120 profiles 与全部 137,382 个可选日期。
+- Runtime/TODO: 没有启动 EU4、Launcher、dowser 或 observer，没有新增 `RUNTIME_PASS`；真实 VFS 探针与 R1-R12 仍待用户明确启动许可。全部 Active TODO status/owner 保持不变；R5 原件未取得前 `JXP-002` 不得关闭。
 
 ### 2026-07-13 - RUNTIME-PREP-002 - Runtime evidence integrity and matrix hardening (`no version bump`)
 
