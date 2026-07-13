@@ -371,7 +371,10 @@ instead of the caller's environment. Python children run through the fixed
 validator roots follow it, and only exact NumPy/Pillow/PyYAML distribution files
 copied into a temporary isolated site are appended last. `PYTHONSAFEPATH=1` is
 also explicit; the caller's site, `.pth`, `sitecustomize`, cwd, and `PYTHONPATH`
-cannot supply imports. Before and after every command, the helper requires all
+cannot supply imports. The combined gate may execute only the exact
+Git-verified `skills/eu4-modding/scripts/check_mission_series_overlap.py` skill
+entrypoint; that canonical file is an execution capability, while its directory
+is never appended to `sys.path`. Before and after every command, the helper requires all
 repository toolchain inputs—including ignored/untracked files—to equal one exact
 Git HEAD and requires the installed skill to equal that Git-derived skill tree.
 Python/Windows/Git/quick-validator bytes are separately compared with the

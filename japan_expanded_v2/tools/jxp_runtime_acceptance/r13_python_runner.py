@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Run the fixed R13 Python gate surface under ``python -I -S -B``.
 
-The parent helper supplies four canonical, sealed roots.  Standard-library
-paths remain first; only the Git-verified validator roots and the isolated copy
-of the three approved validation distributions are appended afterwards.
+The parent helper supplies canonical, sealed validator, dependency, and exact
+file-capability paths. Standard-library paths remain first; only the
+Git-verified validator roots and the isolated copy of the three approved
+validation distributions are appended afterwards.
 """
 
 from __future__ import annotations
@@ -22,6 +23,7 @@ _ROOT_ENV = (
     "JXP_R13_DEPENDENCY_SITE",
     "JXP_R13_PYCACHE_ROOT",
     "JXP_R13_QUICK_VALIDATE",
+    "JXP_R13_MISSION_OVERLAP_SCRIPT",
 )
 _ALLOWED_CODE = {
     "import sys,numpy,PIL,yaml; assert sys.version_info >= (3,10); "
@@ -85,7 +87,7 @@ def _package_origin(name: str, root: Path) -> None:
         )
 
 
-def _configure_paths() -> tuple[Path, Path, Path, Path]:
+def _configure_paths() -> tuple[Path, Path, Path, Path, Path]:
     if not (
         sys.flags.isolated
         and sys.flags.no_site
@@ -100,6 +102,7 @@ def _configure_paths() -> tuple[Path, Path, Path, Path]:
     dependency_site = _ordinary(os.environ[_ROOT_ENV[2]], directory=True)
     pycache_root = _ordinary(os.environ[_ROOT_ENV[3]], directory=True)
     quick_validate = _ordinary(os.environ[_ROOT_ENV[4]], directory=False)
+    mission_overlap = _ordinary(os.environ[_ROOT_ENV[5]], directory=False)
     if sys.pycache_prefix is None or Path(sys.pycache_prefix).resolve() != pycache_root:
         raise RuntimeError("R13 Python runner has an unapproved pycache prefix")
 
@@ -118,11 +121,18 @@ def _configure_paths() -> tuple[Path, Path, Path, Path]:
     _package_origin("jxp_validation", main_tools)
     for package in ("numpy", "PIL", "yaml"):
         _package_origin(package, dependency_site)
-    return main_tools, map_tools, dependency_site, quick_validate
+    # The skill file is an execution capability, never an import root.
+    return main_tools, map_tools, dependency_site, quick_validate, mission_overlap
 
 
 def _run() -> None:
-    main_tools, map_tools, _dependency_site, quick_validate = _configure_paths()
+    (
+        main_tools,
+        map_tools,
+        _dependency_site,
+        quick_validate,
+        mission_overlap,
+    ) = _configure_paths()
     arguments = sys.argv[1:]
     if arguments == ["--version"]:
         print(f"Python {sys.version.split()[0]}")
@@ -153,6 +163,7 @@ def _run() -> None:
         _relative_to(script, main_tools)
         or _relative_to(script, map_tools)
         or script == quick_validate
+        or script == mission_overlap
     ):
         raise RuntimeError(f"R13 Python runner rejected script: {script}")
     sys.argv = [str(script), *arguments[1:]]

@@ -23,6 +23,7 @@ if str(TOOLS_ROOT) not in sys.path:
     sys.path.insert(0, str(TOOLS_ROOT))
 
 from jxp_runtime_acceptance import runtime_acceptance as runtime
+from jxp_runtime_acceptance import r13_python_runner as r13_runner
 
 
 LIVE_REPO = Path(__file__).resolve().parents[4]
@@ -2329,6 +2330,16 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     self.assertNotIn("CODEX_HOME", effective)
                     self.assertNotIn("PYTHONPATH", effective)
                     self.assertEqual("1", effective["PYTHONSAFEPATH"])
+                    self.assertEqual(
+                        str(
+                            env.repo
+                            / "skills"
+                            / "eu4-modding"
+                            / "scripts"
+                            / "check_mission_series_overlap.py"
+                        ),
+                        effective["JXP_R13_MISSION_OVERLAP_SCRIPT"],
+                    )
                     self.assertNotIn(r"C:\hostile-path", effective["PATH"])
                     self.assertEqual(effective, dict(effective))
                 for role, verification in results.items():
@@ -2494,6 +2505,111 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     runtime._run_r13_static_gate_verifications(
                         context, expected_payload
                     )
+
+    def test_r13_python_runner_allows_only_the_pinned_skill_script(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            main_tools = root / "main-tools"
+            map_tools = root / "map-tools"
+            dependency_site = root / "dependencies"
+            pycache = root / "pycache"
+            skill_scripts = root / "skill-scripts"
+            for directory in (
+                main_tools,
+                map_tools,
+                dependency_site,
+                pycache,
+                skill_scripts,
+            ):
+                directory.mkdir()
+            quick_validate = _write(root / "quick_validate.py")
+            allowed = _write(
+                skill_scripts / "check_mission_series_overlap.py",
+                "print('allowed')\n",
+            )
+            denied = _write(skill_scripts / "unrelated.py", "print('denied')\n")
+            same_name_elsewhere = _write(
+                root / "installed-skill" / "scripts" / allowed.name,
+                "print('same name, wrong capability')\n",
+            )
+            configured = (
+                main_tools,
+                map_tools,
+                dependency_site,
+                quick_validate,
+                allowed,
+            )
+            runner_environment = {
+                "JXP_R13_MAIN_TOOLS": str(main_tools),
+                "JXP_R13_MAP_TOOLS": str(map_tools),
+                "JXP_R13_DEPENDENCY_SITE": str(dependency_site),
+                "JXP_R13_PYCACHE_ROOT": str(pycache),
+                "JXP_R13_QUICK_VALIDATE": str(quick_validate),
+                "JXP_R13_MISSION_OVERLAP_SCRIPT": str(allowed),
+            }
+            base = Path(sys.base_prefix).resolve()
+            isolated_sys = SimpleNamespace(
+                flags=SimpleNamespace(isolated=1, no_site=1, safe_path=True),
+                dont_write_bytecode=True,
+                pycache_prefix=str(pycache),
+                base_prefix=str(base),
+                path=[str(base / "Lib")],
+            )
+            with (
+                patch.dict(os.environ, runner_environment, clear=True),
+                patch.object(r13_runner, "sys", isolated_sys),
+                patch.object(r13_runner, "_package_origin"),
+            ):
+                self.assertEqual(configured, r13_runner._configure_paths())
+            self.assertEqual(
+                [str(main_tools), str(map_tools), str(dependency_site)],
+                isolated_sys.path[-3:],
+            )
+            self.assertNotIn(str(skill_scripts), isolated_sys.path)
+            self.assertIn(
+                "skills/eu4-modding", runtime._R13_GIT_TOOLCHAIN_PATHS
+            )
+
+            incomplete_environment = dict(runner_environment)
+            incomplete_environment.pop("JXP_R13_MISSION_OVERLAP_SCRIPT")
+            with (
+                patch.dict(os.environ, incomplete_environment, clear=True),
+                patch.object(r13_runner, "sys", isolated_sys),
+                self.assertRaisesRegex(RuntimeError, "environment is incomplete"),
+            ):
+                r13_runner._configure_paths()
+
+            with (
+                patch.object(r13_runner, "_configure_paths", return_value=configured),
+                patch.object(
+                    r13_runner,
+                    "_ordinary",
+                    side_effect=lambda value, **_kwargs: Path(value).resolve(),
+                ),
+                patch.object(r13_runner.runpy, "run_path") as run_path,
+                patch.object(sys, "argv", ["r13_python_runner.py", str(allowed)]),
+            ):
+                r13_runner._run()
+            run_path.assert_called_once_with(str(allowed), run_name="__main__")
+
+            for rejected in (denied, same_name_elsewhere):
+                with (
+                    self.subTest(rejected=str(rejected)),
+                    patch.object(
+                        r13_runner, "_configure_paths", return_value=configured
+                    ),
+                    patch.object(
+                        r13_runner,
+                        "_ordinary",
+                        side_effect=lambda value, **_kwargs: Path(value).resolve(),
+                    ),
+                    patch.object(r13_runner.runpy, "run_path"),
+                    patch.object(
+                        sys, "argv", ["r13_python_runner.py", str(rejected)]
+                    ),
+                    self.assertRaisesRegex(RuntimeError, "rejected script"),
+                ):
+                    r13_runner._run()
 
     def test_r13_bounded_process_stops_output_floods_during_read(self) -> None:
         command = [

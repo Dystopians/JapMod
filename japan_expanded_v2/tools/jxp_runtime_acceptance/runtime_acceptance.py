@@ -8724,6 +8724,10 @@ def _r13_gate_toolchain_guard(context: dict[str, object]) -> dict[str, object]:
             "safe_path": True,
             "dont_write_bytecode": True,
             "stdlib_before_repo_and_dependencies": True,
+            "skill_scripts_are_not_import_roots": True,
+            "allowed_skill_script": (
+                "skills/eu4-modding/scripts/check_mission_series_overlap.py"
+            ),
         },
         "installed_skill": {
             "path": str(installed_skill_root.resolve()),
@@ -8791,6 +8795,13 @@ def _r13_gate_environment(
         "JXP_R13_DEPENDENCY_SITE": str(runtime_paths["dependency_site"]),
         "JXP_R13_PYCACHE_ROOT": str(runtime_paths["pycache"]),
         "JXP_R13_QUICK_VALIDATE": str(quick_validate),
+        "JXP_R13_MISSION_OVERLAP_SCRIPT": str(
+            repo
+            / "skills"
+            / "eu4-modding"
+            / "scripts"
+            / "check_mission_series_overlap.py"
+        ),
     }
 
 

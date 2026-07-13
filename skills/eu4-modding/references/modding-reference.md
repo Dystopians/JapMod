@@ -76,7 +76,9 @@ Bind every repo tool input and the installed skill to one exact Git HEAD while
 rejecting ignored/untracked additions; bind external Python/Windows/Git inputs to
 a reviewed Git-tracked manifest. Run Python with isolated/no-site/safe-path
 startup, standard library before Git-verified roots, and only exact copied
-dependency distributions afterward. Compare the candidate runtime payload plus
+dependency distributions afterward. If a Git-verified skill script must run,
+allow only its exact canonical file as an execution target and do not append the
+skill directory to `sys.path`. Compare the candidate runtime payload plus
 that validation toolchain before and after, and bound both output pipes while
 they are being drained. Seal raw stdout/stderr bytes, sizes, framed hashes, cwd, UTC times, exits,
 required markers, the effective environment, and toolchain digests. An
