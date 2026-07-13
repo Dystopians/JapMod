@@ -24,6 +24,20 @@
       "sha256": "c2120c1668081085f27aba1b72515896dafb9cceca276505eb7fde126f577807"
     },
     {
+      "name": "JXP_ACC_R8_missing_church.txt",
+      "scenario": "R8",
+      "purpose": "Disable only the church estate on one fork of a proven otherwise-eligible R8 baseline; reload the common parent save after this negative.",
+      "bytes": 51,
+      "sha256": "257a63be31ad0fd1e1a4bacc72619db3329bd1c80d15abd53e9545c3f3f699d5"
+    },
+    {
+      "name": "JXP_ACC_R8_missing_burghers.txt",
+      "scenario": "R8",
+      "purpose": "Disable only the burghers estate on one fork of a proven otherwise-eligible R8 baseline; reload the common parent save after this negative.",
+      "bytes": 53,
+      "sha256": "3f78812f43226e642419a76b06225940e52e6e93dda25d38c615952ef70d8d01"
+    },
+    {
       "name": "JXP_ACC_R8_restore_heartland.txt",
       "scenario": "R8",
       "purpose": "Restore only the heartland gate by granting province 1021 to the disposable R8 fixture.",

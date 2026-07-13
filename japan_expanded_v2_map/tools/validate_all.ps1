@@ -8,6 +8,8 @@ param(
 
     [string]$PythonPath,
 
+    [string]$PowerShellPath,
+
     [switch]$SkipMainModValidation
 )
 
@@ -29,9 +31,13 @@ if (-not $PythonPath) {
         }
     }
 }
+if (-not $PowerShellPath) {
+    $PowerShellPath = Join-Path ([Environment]::GetFolderPath('System')) "WindowsPowerShell\v1.0\powershell.exe"
+}
 
 foreach ($requiredPath in @(
     $PythonPath,
+    $PowerShellPath,
     (Join-Path $GameRoot "launcher-settings.json"),
     (Join-Path $MainMod "descriptor.mod"),
     (Join-Path $ModRoot "descriptor.mod"),
@@ -45,7 +51,7 @@ foreach ($requiredPath in @(
 $pythonProbeOutput = @()
 $pythonProbeExitCode = 1
 try {
-    $pythonProbeOutput = & $PythonPath -c "import sys,numpy,PIL; assert sys.version_info >= (3,10); nv=int(numpy.__version__.split(chr(46))[0]); pv=int(PIL.__version__.split(chr(46))[0]); assert 2 <= nv < 3; assert 10 <= pv < 13" 2>&1
+    $pythonProbeOutput = & $PythonPath -c "import sys,numpy,PIL,yaml; assert sys.version_info >= (3,10); nv=int(numpy.__version__.split(chr(46))[0]); pv=int(PIL.__version__.split(chr(46))[0]); yv=int(yaml.__version__.split(chr(46))[0]); assert 2 <= nv < 3; assert 10 <= pv < 13; assert 6 <= yv < 7" 2>&1
     $pythonProbeExitCode = $LASTEXITCODE
 }
 catch {
@@ -53,11 +59,11 @@ catch {
 }
 if ($pythonProbeExitCode -ne 0) {
     $requirements = Join-Path $PSScriptRoot "requirements-validation.txt"
-    throw "Validation requires Python 3.10+ with NumPy and Pillow. Create an isolated runtime, run '& <python> -m pip install -r $requirements', and pass its executable with -PythonPath. Probe output: $($pythonProbeOutput -join ' ')"
+    throw "Validation requires Python 3.10+ with NumPy, Pillow, and PyYAML. Create an isolated runtime, run '& <python> -m pip install -r $requirements', and pass its executable with -PythonPath. Probe output: $($pythonProbeOutput -join ' ')"
 }
 $pythonVersion = & $PythonPath --version
-$dependencyVersions = & $PythonPath -c "import numpy,PIL; print(numpy.__version__+chr(32)+PIL.__version__)"
-Write-Host "$pythonVersion; NumPy/Pillow $dependencyVersions satisfy validation ranges"
+$dependencyVersions = & $PythonPath -c "import numpy,PIL,yaml; print(numpy.__version__+chr(32)+PIL.__version__+chr(32)+yaml.__version__)"
+Write-Host "$pythonVersion; NumPy/Pillow/PyYAML $dependencyVersions satisfy validation ranges"
 
 function Invoke-PythonFile {
     param(
@@ -83,7 +89,7 @@ function Invoke-PowerShellFile {
     )
 
     Write-Host "`n>>> $([IO.Path]::GetFileName($ScriptPath)) $($ScriptArguments -join ' ')"
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $ScriptPath @ScriptArguments
+    & $PowerShellPath -NoProfile -ExecutionPolicy Bypass -File $ScriptPath @ScriptArguments
     if ($LASTEXITCODE -ne 0) {
         throw "$ScriptPath failed with exit code $LASTEXITCODE"
     }
@@ -107,6 +113,10 @@ Invoke-PythonFile `
 
 Invoke-PythonFile `
     -ScriptPath (Join-Path $ModRoot "tools\jxp_map_validation\validate_assets.py")
+
+Invoke-PythonFile `
+    -ScriptPath (Join-Path $ModRoot "tools\jxp_map_validation\build_runtime_oracles.py") `
+    -ScriptArguments @("--game-root", $GameRoot, "--main-mod", $MainMod, "--check")
 
 $pinnedSkillScripts = Join-Path $RepoRoot "skills\eu4-modding\scripts"
 $skillScripts = $pinnedSkillScripts

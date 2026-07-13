@@ -17,6 +17,80 @@ Mods:      %USERPROFILE%\Documents\Paradox Interactive\Europa Universalis IV\mod
 Logs:      %USERPROFILE%\Documents\Paradox Interactive\Europa Universalis IV\logs
 ```
 
+### Isolated Runtime Userdir Contract (EU4 1.37.5)
+
+EU4 1.37.5's command-line option parser can terminate an option value at
+whitespace followed by option-like punctuation (`-`, `/`, `+`, or `"`). A path
+such as `...\Europa Universalis IV - Acceptance` can therefore be accepted by a
+wrapper yet reach EU4 only as the earlier `...\Europa Universalis IV` prefix.
+Quoting does not make this a safe acceptance path. Use one lower-case,
+non-repeated argument in this exact form:
+
+```text
+-userdir=C:\Users\Example\Documents\EU4_Acceptance
+```
+
+The value must be an absolute ASCII Windows path with no whitespace or quotes.
+Pin and verify `eu4.exe`, `launcher-settings.json`, and the game-root
+`userdir.txt` before every approved run. Keep `userdir.txt` empty: on the pinned
+1.37.5 build, a non-empty command-line userdir wins over a non-empty
+`userdir.txt`, which wins over the Documents default, but a stale file is still
+an independent redirect risk.
+
+Do not prove isolation by merely creating the target tree or observing one
+expected file. Before gameplay acceptance, run a separate permission-gated,
+visible probe and record all of the following as one evidence chain:
+
+- the exact executable path, PID, and process command line, with exactly one
+  matching lower-case `-userdir=` argument;
+- a pre-run inventory of both the isolated root and normal Documents user-data
+  root, including configuration and runtime-write surfaces;
+- fresh probe artifacts under the isolated root with valid file signatures;
+- no unexpected mutation anywhere in the normal user-data root;
+- an immutable session receipt linking the pinned inputs, expected argument,
+  pre-run inventories, artifact hashes, and manual visible-screen attestation.
+
+A prepared playset, unchanged `dlc_load.json`, or a copied launcher database is
+not sufficient evidence. Refuse concurrent acceptance sessions, seal the active
+session before launch, and explicitly collect or abort it before configuring the
+next scenario. Launch remains a disruptive action and still requires an explicit
+active user instruction.
+
+Reserve one canonical evidence directory that is disjoint from the deployed
+`mod` tree and every configuration/runtime surface (`logs`, `Screenshots`,
+`save games`, settings, and caches). Do not let a caller redirect session output
+into an otherwise valid payload or game-output directory. Before any recovery
+code unlinks a partial collection or recursively removes an `after` tree, verify
+the immutable session seal, recorded canonical evidence root, and nonce-bound
+active lock. Cleanup is a write operation and must never run merely because an
+arbitrary directory happens to contain familiar filenames.
+
+For a release-closure bundle, treat every required artifact role as a semantic
+contract rather than accepting non-empty text or JSON. Reconstruct the complete
+parent assertion and lineage indexes from sealed collections. Do not accept a
+static-gate JSON merely because it declares a command, exit zero, and PASS. On
+the first closure and every replay, execute a fixed `shell=False` argv registry,
+reject game/launcher/userdir/skip-main arguments, derive system executables
+without caller environment variables, and pass a complete minimal environment.
+Bind every repo tool input and the installed skill to one exact Git HEAD while
+rejecting ignored/untracked additions; bind external Python/Windows/Git inputs to
+a reviewed Git-tracked manifest. Run Python with isolated/no-site/safe-path
+startup, standard library before Git-verified roots, and only exact copied
+dependency distributions afterward. Compare the candidate runtime payload plus
+that validation toolchain before and after, and bound both output pipes while
+they are being drained. Seal raw stdout/stderr bytes, sizes, framed hashes, cwd, UTC times, exits,
+required markers, the effective environment, and toolchain digests. An
+idempotent replay remains read-only: it reruns the controlled gates as current
+authorization, independently verifies the historical sealed executions, and
+never overwrites them. Parse the canonical ledger using only CommonMark LF/CRLF/CR
+lines, one real Update Journal heading, and one exact reserved structured JSON
+block outside Markdown fences; pseudo-line controls and reserved-info aliases fail closed.
+That object contains the status, candidate, matrix, ordered parent hashes,
+blockers, and no-overclaim flags; whole-file substring searches or fenced fake
+headings allow unrelated entries to counterfeit a closure. Cross-check the final daily-state hashes and
+compute the closure's automated result from these validations instead of
+allowing an operator-authored `automated_checks_passed = true`.
+
 ## Descriptor Files
 
 Local mods need an outer descriptor in the user `mod` folder and an inner `descriptor.mod`:
