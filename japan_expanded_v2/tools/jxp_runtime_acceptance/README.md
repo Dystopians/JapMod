@@ -120,6 +120,16 @@ python $tool deploy --label current-main --main-only `
   --user-data $userData
 ```
 
+Pinned revision deployment does not trust a `git archive` ZIP. The helper reads
+only the runtime whitelist from the resolved commit with the pinned Git binary,
+authenticates each bounded `cat-file --batch` body against its blob OID, writes
+and re-hashes a unique staging checkout, then atomically exposes the complete
+tree. A transient body mismatch gets at most three reads; malformed protocol,
+oversized blobs, and development-only members fail closed. A detected staged
+file hash mismatch gets at most three writes, and each refreshed authenticated
+fetch gets its own three-read ceiling; a partial checkout is never exposed and
+is removed on failure.
+
 Deploy immutable legacy main-only sources when the matrix phase requires them:
 
 ```powershell

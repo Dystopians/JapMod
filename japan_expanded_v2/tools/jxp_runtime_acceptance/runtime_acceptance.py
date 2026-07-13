@@ -30,7 +30,7 @@ import subprocess
 import sys
 import tempfile
 import threading
-from typing import Iterable, Sequence
+from typing import Callable, Iterable, Iterator, Sequence
 import uuid
 import zipfile
 import zlib
@@ -126,6 +126,13 @@ CLOSURE_SEAL_NAME = "closure.seal.json"
 PROCESS_OBSERVATION_NAME = "process_observation.json"
 EVIDENCE_MANIFEST_NAME = "evidence_manifest.json"
 EXPECTED_GAME_VERSION_LOG = "Game Version: EU4 v1.37.5.0 Inca"
+_GIT_BATCH_READ_ATTEMPTS = 3
+_GIT_CHECKOUT_WRITE_ATTEMPTS = 3
+_GIT_BATCH_MAX_BODY_BYTES = 64 * 1024 * 1024
+_GIT_BATCH_MAX_RECORDS = 1024
+_GIT_TREE_MAX_RECORDS = 4096
+_GIT_TREE_MAX_OUTPUT_BYTES = 8 * 1024 * 1024
+_GIT_TREE_MAX_TOTAL_BLOB_BYTES = 512 * 1024 * 1024
 ISOLATED_CONFIGURATION_PATHS = (
     "dlc_load.json",
     "launcher-v2.sqlite",
@@ -1209,6 +1216,227 @@ def _current_revision(repo: Path) -> str:
     return f"{revision}{'+dirty' if dirty else ''}"
 
 
+def _git_batch_blob_chunk(
+    repo: Path,
+    records: Sequence[dict[str, object]],
+    label: str,
+    *,
+    treeish: str | None = None,
+) -> list[bytes]:
+    """Read one bounded Git batch and authenticate every response body."""
+
+    if treeish is not None and not re.fullmatch(r"[0-9a-f]{40}", treeish):
+        raise AcceptanceError(f"{label} Git batch treeish is malformed")
+    requests: list[str] = []
+    for item in records:
+        oid = item.get("git_blob")
+        path_value = item.get("path")
+        if not isinstance(oid, str) or not re.fullmatch(r"[0-9a-f]{40}", oid):
+            raise AcceptanceError(f"{label} Git batch OID is malformed")
+        if not isinstance(path_value, str):
+            raise AcceptanceError(f"{label} Git batch path is malformed")
+        path_text = path_value
+        if any(
+            ord(character) < 32 or ord(character) == 127
+            for character in path_text
+        ):
+            raise AcceptanceError(f"{label} Git batch path contains control data")
+        requests.append(
+            oid if treeish is None else f"{treeish}:{path_text}"
+        )
+    batch_input = "".join(f"{request}\n" for request in requests).encode("utf-8")
+    for attempt in range(_GIT_BATCH_READ_ATTEMPTS):
+        batch = _git_bytes(repo, "cat-file", "--batch", input_bytes=batch_input)
+        cursor = 0
+        bodies: list[bytes] = []
+        body_mismatch_path: str | None = None
+        for item in records:
+            header_end = batch.find(b"\n", cursor)
+            if header_end < 0:
+                raise AcceptanceError(f"{label} Git blob batch is truncated")
+            header = batch[cursor:header_end].split()
+            oid = str(item["git_blob"])
+            if (
+                len(header) != 3
+                or header[0].decode("ascii", errors="strict") != oid
+                or header[1] != b"blob"
+                or not header[2].isdigit()
+            ):
+                raise AcceptanceError(f"{label} Git blob batch header disagrees")
+            size = int(header[2])
+            start = header_end + 1
+            end = start + size
+            if end >= len(batch) or batch[end : end + 1] != b"\n":
+                raise AcceptanceError(f"{label} Git blob batch body is truncated")
+            content = batch[start:end]
+            if size != item["bytes"]:
+                raise AcceptanceError(f"{label} Git blob size disagrees")
+            git_digest = sha1()
+            git_digest.update(f"blob {size}\0".encode("ascii"))
+            git_digest.update(content)
+            if (
+                git_digest.hexdigest() != oid
+                and body_mismatch_path is None
+            ):
+                body_mismatch_path = str(item["path"])
+            bodies.append(content)
+            cursor = end + 1
+        if cursor != len(batch):
+            raise AcceptanceError(f"{label} Git blob batch has trailing data")
+        if body_mismatch_path is not None:
+            if attempt + 1 < _GIT_BATCH_READ_ATTEMPTS:
+                continue
+            raise AcceptanceError(
+                f"{label} Git blob body hash disagrees after "
+                f"{_GIT_BATCH_READ_ATTEMPTS} reads: {body_mismatch_path}"
+            )
+        return bodies
+    raise AcceptanceError(f"{label} Git blob batch verification did not complete")
+
+
+def _git_batch_blob_chunks(
+    repo: Path,
+    records: Sequence[dict[str, object]],
+    label: str,
+    *,
+    treeish: str | None = None,
+) -> Iterator[tuple[Sequence[dict[str, object]], list[bytes]]]:
+    """Yield authenticated blobs without holding an unbounded tree in memory."""
+
+    chunk: list[dict[str, object]] = []
+    chunk_bytes = 0
+    for record in records:
+        size = record.get("bytes")
+        if isinstance(size, bool) or not isinstance(size, int) or size < 0:
+            raise AcceptanceError(f"{label} Git blob size is malformed")
+        if size > _GIT_BATCH_MAX_BODY_BYTES:
+            raise AcceptanceError(
+                f"{label} Git blob exceeds the authenticated batch limit"
+            )
+        if chunk and (
+            chunk_bytes + size > _GIT_BATCH_MAX_BODY_BYTES
+            or len(chunk) >= _GIT_BATCH_MAX_RECORDS
+        ):
+            yield chunk, _git_batch_blob_chunk(
+                repo, chunk, label, treeish=treeish
+            )
+            chunk = []
+            chunk_bytes = 0
+        chunk.append(record)
+        chunk_bytes += size
+    if chunk:
+        yield chunk, _git_batch_blob_chunk(repo, chunk, label, treeish=treeish)
+
+
+def _git_expected_blob_records(
+    repo: Path,
+    revision: str,
+    relatives: Sequence[str],
+    label: str,
+    *,
+    include_path: Callable[[str], bool] | None = None,
+) -> tuple[str, list[dict[str, object]]]:
+    """Resolve one commit tree and parse its regular-blob identities."""
+
+    resolved = _git(repo, "rev-parse", "--verify", f"{revision}^{{commit}}")
+    if not re.fullmatch(r"[0-9a-f]{40}", resolved):
+        raise AcceptanceError(f"{label} Git revision is not a SHA-1 commit")
+    if _git(repo, "rev-parse", "--show-object-format") != "sha1":
+        raise AcceptanceError(f"{label} requires a SHA-1 Git object store")
+    pathspecs: list[str] = []
+    for relative in relatives:
+        relative_path = PurePosixPath(relative)
+        if (
+            not relative
+            or "\\" in relative
+            or any(
+                ord(character) < 32 or ord(character) == 127
+                for character in relative
+            )
+            or relative_path.is_absolute()
+            or ".." in relative_path.parts
+            or relative != relative_path.as_posix()
+            or any(":" in part for part in relative_path.parts)
+        ):
+            raise AcceptanceError(f"{label} Git path is unsafe: {relative}")
+        pathspecs.append(relative)
+    if not pathspecs or len(set(pathspecs)) != len(pathspecs):
+        raise AcceptanceError(f"{label} Git path set is empty or duplicated")
+    if len(pathspecs) > 128:
+        raise AcceptanceError(f"{label} Git path set exceeds the fixed limit")
+    raw = _git_bytes(
+        repo,
+        "ls-tree",
+        "-r",
+        "-l",
+        "-z",
+        "--full-tree",
+        resolved,
+        "--",
+        *pathspecs,
+    )
+    if len(raw) > _GIT_TREE_MAX_OUTPUT_BYTES:
+        raise AcceptanceError(f"{label} Git tree output exceeds the fixed limit")
+    records: list[dict[str, object]] = []
+    pattern = re.compile(
+        rb"^(?P<mode>[0-9]{6}) (?P<kind>[^ ]+) (?P<oid>[0-9a-f]{40}) +"
+        rb"(?P<size>[0-9]+)\t(?P<path>.+)$"
+    )
+    for raw_entry in raw.split(b"\0"):
+        if not raw_entry:
+            continue
+        match = pattern.fullmatch(raw_entry)
+        if (
+            match is None
+            or match.group("kind") != b"blob"
+            or match.group("mode") not in {b"100644", b"100755"}
+        ):
+            raise AcceptanceError(f"{label} has an unsupported Git tree entry")
+        try:
+            path_text = match.group("path").decode("utf-8", errors="strict")
+        except UnicodeError as exc:
+            raise AcceptanceError(f"{label} has a non-UTF-8 Git path") from exc
+        relative_path = PurePosixPath(path_text)
+        if (
+            "\\" in path_text
+            or any(
+                ord(character) < 32 or ord(character) == 127
+                for character in path_text
+            )
+            or relative_path.is_absolute()
+            or ".." in relative_path.parts
+            or path_text != relative_path.as_posix()
+            or any(":" in part for part in relative_path.parts)
+            or not any(
+                path_text == pathspec or path_text.startswith(pathspec + "/")
+                for pathspec in pathspecs
+            )
+        ):
+            raise AcceptanceError(f"{label} has an unsafe Git path: {path_text}")
+        if include_path is not None and not include_path(path_text):
+            continue
+        if len(records) >= _GIT_TREE_MAX_RECORDS:
+            raise AcceptanceError(f"{label} Git tree has too many blob records")
+        records.append(
+            {
+                "path": path_text,
+                "mode": match.group("mode").decode("ascii"),
+                "bytes": int(match.group("size")),
+                "git_blob": match.group("oid").decode("ascii"),
+            }
+        )
+    if not records:
+        raise AcceptanceError(
+            f"{label} has no Git-tracked files: {', '.join(pathspecs)}"
+        )
+    records.sort(key=lambda item: str(item["path"]))
+    if len({str(item["path"]).casefold() for item in records}) != len(records):
+        raise AcceptanceError(f"{label} has case-colliding Git paths")
+    if sum(int(item["bytes"]) for item in records) > _GIT_TREE_MAX_TOTAL_BLOB_BYTES:
+        raise AcceptanceError(f"{label} Git tree blob bytes exceed the fixed limit")
+    return resolved, records
+
+
 def _safe_extract_zip(archive: Path, destination: Path) -> None:
     with zipfile.ZipFile(archive) as bundle:
         for member in bundle.infolist():
@@ -1239,33 +1467,214 @@ def _safe_extract_zip(archive: Path, destination: Path) -> None:
                 shutil.copyfileobj(source, output)
 
 
+def _verify_materialized_git_checkout(
+    root: Path,
+    records: Sequence[dict[str, object]],
+    label: str,
+) -> None:
+    """Recheck the exact staged tree immediately before it becomes visible."""
+
+    root = _require_ordinary_directory(root, label)
+    expected: dict[str, dict[str, object]] = {}
+    expected_directories: set[str] = set()
+    for record in records:
+        path_value = record.get("path")
+        if not isinstance(path_value, str):
+            raise AcceptanceError(f"{label} expected path is malformed")
+        relative = PurePosixPath(path_value)
+        if (
+            relative.is_absolute()
+            or ".." in relative.parts
+            or path_value != relative.as_posix()
+            or path_value in expected
+        ):
+            raise AcceptanceError(f"{label} expected path is unsafe: {path_value}")
+        expected[path_value] = record
+        for parent in relative.parents:
+            if parent == PurePosixPath("."):
+                break
+            expected_directories.add(parent.as_posix())
+
+    actual_files: set[str] = set()
+    actual_directories: set[str] = set()
+    stack = [root]
+    while stack:
+        directory = stack.pop()
+        for path in directory.iterdir():
+            if _is_link_or_junction(path):
+                raise AcceptanceError(f"{label} contains a link or junction: {path}")
+            relative = path.relative_to(root).as_posix()
+            if path.is_dir():
+                if relative not in expected_directories:
+                    raise AcceptanceError(
+                        f"{label} contains an unexpected directory: {relative}"
+                    )
+                actual_directories.add(relative)
+                stack.append(path)
+                continue
+            record = expected.get(relative)
+            if record is None or not path.is_file():
+                raise AcceptanceError(
+                    f"{label} contains an unexpected file: {relative}"
+                )
+            size, git_blob, content_sha256 = _r13_git_blob_hashes(path, label)
+            if (
+                size != record.get("bytes")
+                or git_blob != record.get("git_blob")
+                or content_sha256 != record.get("sha256")
+            ):
+                raise AcceptanceError(
+                    f"{label} final tree disagrees: {relative}"
+                )
+            actual_files.add(relative)
+    if actual_files != set(expected) or actual_directories != expected_directories:
+        raise AcceptanceError(f"{label} final tree entry set disagrees")
+
+
 def _revision_components(
     repo: Path, revision: str, temporary_root: Path, main_only: bool
 ) -> tuple[tuple[Component, ...], str]:
-    resolved = _git(repo, "rev-parse", "--verify", f"{revision}^{{commit}}")
-    archive = temporary_root / "source.zip"
-    archive_paths = ["japan_expanded_v2", "japan_expanded_v2.mod"]
-    if not main_only:
-        archive_paths.extend(["japan_expanded_v2_map", "japan_expanded_v2_map.mod"])
-    try:
-        subprocess.run(
-            [
-                "git",
-                "-C",
-                str(repo),
-                "archive",
-                "--format=zip",
-                f"--output={archive}",
-                resolved,
-                *archive_paths,
-            ],
-            check=True,
-            capture_output=True,
+    temporary_root = _require_ordinary_directory(
+        temporary_root, "revision checkout root"
+    )
+    component_keys = ("main",) if main_only else ("main", "map")
+    component_roots = {
+        "main": "japan_expanded_v2",
+        "map": "japan_expanded_v2_map",
+    }
+    checkout_paths: list[str] = []
+    for component_key in component_keys:
+        component_root = component_roots[component_key]
+        checkout_paths.append(f"{component_root}.mod")
+        checkout_paths.extend(
+            f"{component_root}/{directory}"
+            for directory in RUNTIME_DIRECTORIES[component_key]
         )
-    except (OSError, subprocess.CalledProcessError) as exc:
-        raise AcceptanceError(f"git archive failed for {resolved}: {exc}") from exc
-    _safe_extract_zip(archive, temporary_root / "checkout")
+        checkout_paths.extend(
+            f"{component_root}/{filename}" for filename in RUNTIME_ROOT_FILES
+        )
+
+    def include_runtime_path(path_text: str) -> bool:
+        for component_key in component_keys:
+            component_root = component_roots[component_key]
+            if path_text == f"{component_root}.mod":
+                return True
+            prefix = component_root + "/"
+            if not path_text.startswith(prefix):
+                continue
+            relative = PurePosixPath(path_text[len(prefix) :])
+            return (
+                relative.as_posix() in RUNTIME_ROOT_FILES
+                or (
+                    len(relative.parts) > 1
+                    and relative.parts[0] in RUNTIME_DIRECTORIES[component_key]
+                    and not _is_development_runtime_path(Path(*relative.parts))
+                )
+            )
+        return False
+
+    resolved, records = _git_expected_blob_records(
+        repo,
+        revision,
+        checkout_paths,
+        "candidate revision checkout",
+        include_path=include_runtime_path,
+    )
     checkout = temporary_root / "checkout"
+    if os.path.lexists(checkout):
+        raise AcceptanceError(f"revision checkout target already exists: {checkout}")
+    staging = temporary_root / f".checkout-stage-{uuid.uuid4().hex}"
+    staging.mkdir()
+    try:
+        for chunk_records, bodies in _git_batch_blob_chunks(
+            repo,
+            records,
+            "candidate revision checkout",
+            treeish=resolved,
+        ):
+            for record, content in zip(chunk_records, bodies, strict=True):
+                relative = PurePosixPath(str(record["path"]))
+                target = staging.joinpath(*relative.parts)
+                if not _is_relative_to(target, staging) or os.path.lexists(target):
+                    raise AcceptanceError(
+                        f"unsafe revision checkout target: {target}"
+                    )
+                target.parent.mkdir(parents=True, exist_ok=True)
+                authenticated_content_sha256 = sha256(content).hexdigest()
+                record["sha256"] = authenticated_content_sha256
+                for write_attempt in range(_GIT_CHECKOUT_WRITE_ATTEMPTS):
+                    if write_attempt:
+                        refreshed = _git_batch_blob_chunk(
+                            repo,
+                            [record],
+                            "candidate revision checkout refresh",
+                            treeish=resolved,
+                        )[0]
+                        if (
+                            sha256(refreshed).hexdigest()
+                            != authenticated_content_sha256
+                        ):
+                            raise AcceptanceError(
+                                "candidate revision checkout refreshed body "
+                                f"disagrees: {record['path']}"
+                            )
+                        content = refreshed
+                    parent = _require_ordinary_directory(
+                        target.parent, "candidate revision checkout parent"
+                    )
+                    if (
+                        not _is_relative_to(parent, staging)
+                        or os.path.lexists(target)
+                    ):
+                        raise AcceptanceError(
+                            f"unsafe revision checkout retry target: {target}"
+                        )
+                    with target.open("xb") as stream:
+                        written = stream.write(content)
+                    if written != len(content):
+                        raise AcceptanceError(
+                            "candidate revision checkout write was truncated: "
+                            f"{record['path']}"
+                        )
+                    size, git_blob, content_sha256 = _r13_git_blob_hashes(
+                        target, "candidate revision checkout"
+                    )
+                    if (
+                        size == record["bytes"]
+                        and git_blob == record["git_blob"]
+                        and content_sha256 == authenticated_content_sha256
+                    ):
+                        break
+                    if write_attempt + 1 >= _GIT_CHECKOUT_WRITE_ATTEMPTS:
+                        raise AcceptanceError(
+                            "candidate revision checkout write disagrees after "
+                            f"{_GIT_CHECKOUT_WRITE_ATTEMPTS} writes: "
+                            f"{record['path']}"
+                        )
+                    target.unlink()
+                target.chmod(0o755 if record["mode"] == "100755" else 0o644)
+        _verify_materialized_git_checkout(
+            staging, records, "candidate revision checkout"
+        )
+        if os.path.lexists(checkout):
+            raise AcceptanceError(
+                f"revision checkout target appeared concurrently: {checkout}"
+            )
+        staging.rename(checkout)
+    except OSError as exc:
+        raise AcceptanceError(f"cannot materialize revision checkout: {exc}") from exc
+    finally:
+        if os.path.lexists(staging):
+            if (
+                staging.parent != temporary_root
+                or not staging.is_dir()
+                or _is_link_or_junction(staging)
+                or staging.resolve() != staging
+            ):
+                raise AcceptanceError(
+                    f"unsafe revision checkout staging path remains: {staging}"
+                )
+            shutil.rmtree(staging)
     components = [
         Component(
             "main",
@@ -1311,8 +1720,8 @@ def _git_snapshot_manifest_records(
     """Derive the runtime manifest from the claimed immutable Git object.
 
     Installed marker metadata is intentionally not an authority.  Rebuilding
-    the whitelist from ``git archive`` binds every accepted byte to the exact
-    commit claimed by the snapshot.
+    the whitelist from OID-authenticated Git blobs binds every accepted byte to
+    the exact commit claimed by the snapshot.
     """
     if component_key not in RUNTIME_DIRECTORIES:
         raise AcceptanceError(f"unknown snapshot component: {component_key!r}")
@@ -7932,7 +8341,6 @@ _R13_TRUSTED_GIT = Path(r"F:\Git\mingw64\bin\git.exe")
 _R13_TRUSTED_GIT_SHA256 = (
     "d117eb75c7541372ed43a8e6bbb70230a846daff47946107a87e7c52b4c6581d"
 )
-_R13_GIT_BATCH_READ_ATTEMPTS = 3
 _R13_GIT_TOOLCHAIN_PATHS = (
     "japan_expanded_v2/tools",
     "japan_expanded_v2/AGENTS.md",
@@ -8095,115 +8503,26 @@ def _r13_git_batch_sha256(
     repo: Path,
     records: Sequence[dict[str, object]],
     label: str,
+    *,
+    revision: str | None = None,
 ) -> list[str]:
-    """Read Git blobs in one batch and authenticate every response body."""
-
-    batch_input = "".join(f"{item['git_blob']}\n" for item in records).encode(
-        "ascii"
-    )
-    for attempt in range(_R13_GIT_BATCH_READ_ATTEMPTS):
-        batch = _git_bytes(repo, "cat-file", "--batch", input_bytes=batch_input)
-        cursor = 0
-        digests: list[str] = []
-        body_mismatch_path: str | None = None
-        for item in records:
-            header_end = batch.find(b"\n", cursor)
-            if header_end < 0:
-                raise AcceptanceError(f"{label} Git blob batch is truncated")
-            header = batch[cursor:header_end].split()
-            oid = str(item["git_blob"])
-            if (
-                len(header) != 3
-                or header[0].decode("ascii", errors="strict") != oid
-                or header[1] != b"blob"
-                or not header[2].isdigit()
-            ):
-                raise AcceptanceError(f"{label} Git blob batch header disagrees")
-            size = int(header[2])
-            start = header_end + 1
-            end = start + size
-            if end >= len(batch) or batch[end : end + 1] != b"\n":
-                raise AcceptanceError(f"{label} Git blob batch body is truncated")
-            content = batch[start:end]
-            if size != item["bytes"]:
-                raise AcceptanceError(f"{label} Git blob size disagrees")
-            git_digest = sha1()
-            git_digest.update(f"blob {size}\0".encode("ascii"))
-            git_digest.update(content)
-            if (
-                git_digest.hexdigest() != oid
-                and body_mismatch_path is None
-            ):
-                body_mismatch_path = str(item["path"])
-            digests.append(sha256(content).hexdigest())
-            cursor = end + 1
-        if cursor != len(batch):
-            raise AcceptanceError(f"{label} Git blob batch has trailing data")
-        if body_mismatch_path is not None:
-            if attempt + 1 < _R13_GIT_BATCH_READ_ATTEMPTS:
-                continue
-            raise AcceptanceError(
-                f"{label} Git blob body hash disagrees after "
-                f"{_R13_GIT_BATCH_READ_ATTEMPTS} reads: {body_mismatch_path}"
-            )
-        return digests
-    raise AcceptanceError(f"{label} Git blob batch verification did not complete")
+    digests: list[str] = []
+    for _chunk, bodies in _git_batch_blob_chunks(
+        repo, records, label, treeish=revision
+    ):
+        digests.extend(sha256(content).hexdigest() for content in bodies)
+    return digests
 
 
 def _r13_git_expected_manifest(
     repo: Path, relative: str, label: str
 ) -> tuple[str, list[dict[str, object]]]:
-    revision = _git(repo, "rev-parse", "--verify", "HEAD^{commit}")
-    if not re.fullmatch(r"[0-9a-f]{40}", revision):
-        raise AcceptanceError("R13 toolchain Git HEAD is not a SHA-1 commit")
-    if _git(repo, "rev-parse", "--show-object-format") != "sha1":
-        raise AcceptanceError("R13 toolchain requires a SHA-1 Git object store")
-    raw = _git_bytes(
-        repo,
-        "ls-tree",
-        "-r",
-        "-l",
-        "-z",
-        "--full-tree",
-        revision,
-        "--",
-        relative,
+    revision, records = _git_expected_blob_records(
+        repo, "HEAD", (relative,), label
     )
-    records: list[dict[str, object]] = []
-    pattern = re.compile(
-        rb"^(?P<mode>[0-9]{6}) (?P<kind>[^ ]+) (?P<oid>[0-9a-f]{40}) +"
-        rb"(?P<size>[0-9]+)\t(?P<path>.+)$"
+    digests = _r13_git_batch_sha256(
+        repo, records, label, revision=revision
     )
-    for raw_entry in raw.split(b"\0"):
-        if not raw_entry:
-            continue
-        match = pattern.fullmatch(raw_entry)
-        if (
-            match is None
-            or match.group("kind") != b"blob"
-            or match.group("mode") not in {b"100644", b"100755"}
-        ):
-            raise AcceptanceError(f"{label} has an unsupported Git tree entry")
-        try:
-            path_text = match.group("path").decode("utf-8", errors="strict")
-        except UnicodeError as exc:
-            raise AcceptanceError(f"{label} has a non-UTF-8 Git path") from exc
-        if "\\" in path_text or PurePosixPath(path_text).is_absolute():
-            raise AcceptanceError(f"{label} has an unsafe Git path: {path_text}")
-        records.append(
-            {
-                "path": path_text,
-                "mode": match.group("mode").decode("ascii"),
-                "bytes": int(match.group("size")),
-                "git_blob": match.group("oid").decode("ascii"),
-            }
-        )
-    if not records:
-        raise AcceptanceError(f"{label} has no Git-tracked files: {relative}")
-    records.sort(key=lambda item: str(item["path"]))
-    if len({str(item["path"]).casefold() for item in records}) != len(records):
-        raise AcceptanceError(f"{label} has case-colliding Git paths")
-    digests = _r13_git_batch_sha256(repo, records, label)
     for item, digest in zip(records, digests, strict=True):
         item["sha256"] = digest
     return revision, records

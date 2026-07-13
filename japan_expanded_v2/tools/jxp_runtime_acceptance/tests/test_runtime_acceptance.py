@@ -1028,6 +1028,242 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             self.assertEqual(["main", "map"], [item.key for item in components])
             self.assertTrue(all(item.source.is_dir() for item in components))
 
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            repo = root / "repo"
+            repo.mkdir()
+            runtime._git(repo, "init")
+            payload = repo / "japan_expanded_v2" / "events" / "payload.bin"
+            payload.parent.mkdir(parents=True)
+            payload.write_bytes(b"trusted body\n")
+            development = (
+                repo
+                / "japan_expanded_v2"
+                / "events"
+                / "source"
+                / "not-runtime.bin"
+            )
+            development.parent.mkdir()
+            development.write_bytes(b"development-only body\n")
+            _write(repo / "japan_expanded_v2.mod", 'name="test"\n')
+            runtime._git(
+                repo,
+                "add",
+                "japan_expanded_v2",
+                "japan_expanded_v2.mod",
+            )
+            runtime._git(
+                repo,
+                "-c",
+                "user.name=Snapshot Test",
+                "-c",
+                "user.email=snapshot@example.invalid",
+                "-c",
+                "commit.gpgsign=false",
+                "commit",
+                "-m",
+                "snapshot",
+            )
+            revision = runtime._git(repo, "rev-parse", "HEAD")
+            payload_oid = runtime._git(
+                repo,
+                "rev-parse",
+                f"{revision}:japan_expanded_v2/events/payload.bin",
+            )
+            with self.assertRaisesRegex(
+                runtime.AcceptanceError, "Git blob batch header disagrees"
+            ):
+                list(
+                    runtime._git_batch_blob_chunks(
+                        repo,
+                        [
+                            {
+                                "path": "japan_expanded_v2.mod",
+                                "bytes": len(b"trusted body\n"),
+                                "git_blob": payload_oid,
+                            }
+                        ],
+                        "test path-bound Git batch",
+                        treeish=revision,
+                    )
+                )
+            original_git_bytes = runtime._git_bytes
+            original_blob_hashes = runtime._r13_git_blob_hashes
+            batch_reads = 0
+            batch_requests: list[bytes] = []
+            payload_hash_reads = 0
+
+            def corrupt_first_batch(
+                target_repo: Path,
+                *args: str,
+                input_bytes: bytes | None = None,
+            ) -> bytes:
+                nonlocal batch_reads
+                result = original_git_bytes(
+                    target_repo, *args, input_bytes=input_bytes
+                )
+                if args[:2] == ("cat-file", "--batch"):
+                    batch_reads += 1
+                    self.assertIsInstance(input_bytes, bytes)
+                    batch_requests.append(input_bytes or b"")
+                    if batch_reads == 1:
+                        body_start = result.find(b"\n") + 1
+                        self.assertGreater(body_start, 0)
+                        corrupted = bytearray(result)
+                        corrupted[body_start] ^= 1
+                        return bytes(corrupted)
+                return result
+
+            def mismatch_first_staged_read(
+                path: Path, label: str
+            ) -> tuple[int, str, str]:
+                nonlocal payload_hash_reads
+                result = original_blob_hashes(path, label)
+                if path.name == "payload.bin":
+                    payload_hash_reads += 1
+                    if payload_hash_reads == 1:
+                        return result[0], result[1], "0" * 64
+                return result
+
+            checkout_root = root / "checkout-root"
+            checkout_root.mkdir()
+            with (
+                self.subTest(case="authenticated batch recovery"),
+                patch.object(
+                    runtime, "_git_bytes", side_effect=corrupt_first_batch
+                ),
+                patch.object(
+                    runtime,
+                    "_r13_git_blob_hashes",
+                    side_effect=mismatch_first_staged_read,
+                ),
+            ):
+                components, resolved = runtime._revision_components(
+                    repo, revision, checkout_root, True
+                )
+            self.assertEqual(revision, resolved)
+            self.assertEqual(3, batch_reads)
+            self.assertEqual(3, payload_hash_reads)
+            self.assertNotIn(b"events/source", b"".join(batch_requests))
+            self.assertEqual(["main"], [item.key for item in components])
+            self.assertEqual(
+                b"trusted body\n",
+                (components[0].source / "events" / "payload.bin").read_bytes(),
+            )
+            self.assertFalse((checkout_root / "source.zip").exists())
+            self.assertFalse(
+                (
+                    components[0].source
+                    / "events"
+                    / "source"
+                    / "not-runtime.bin"
+                ).exists()
+            )
+
+            failed_batch_reads = 0
+
+            def corrupt_every_batch(
+                target_repo: Path,
+                *args: str,
+                input_bytes: bytes | None = None,
+            ) -> bytes:
+                nonlocal failed_batch_reads
+                result = original_git_bytes(
+                    target_repo, *args, input_bytes=input_bytes
+                )
+                if args[:2] == ("cat-file", "--batch"):
+                    failed_batch_reads += 1
+                    body_start = result.find(b"\n") + 1
+                    self.assertGreater(body_start, 0)
+                    corrupted = bytearray(result)
+                    corrupted[body_start] ^= 1
+                    return bytes(corrupted)
+                return result
+
+            failed_root = root / "failed-checkout-root"
+            failed_root.mkdir()
+            with (
+                self.subTest(case="failed batches leave no partial checkout"),
+                patch.object(
+                    runtime, "_git_bytes", side_effect=corrupt_every_batch
+                ),
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "body hash disagrees after 3 reads"
+                ),
+            ):
+                runtime._revision_components(repo, revision, failed_root, True)
+            self.assertEqual(3, failed_batch_reads)
+            self.assertFalse((failed_root / "checkout").exists())
+            self.assertEqual([], list(failed_root.glob(".checkout-stage-*")))
+
+            failed_write_reads = 0
+
+            def reject_every_staged_payload_read(
+                path: Path, label: str
+            ) -> tuple[int, str, str]:
+                nonlocal failed_write_reads
+                result = original_blob_hashes(path, label)
+                if path.name == "payload.bin":
+                    failed_write_reads += 1
+                    return result[0], result[1], "0" * 64
+                return result
+
+            failed_write_root = root / "failed-write-root"
+            failed_write_root.mkdir()
+            with (
+                self.subTest(case="failed writes leave no partial checkout"),
+                patch.object(
+                    runtime,
+                    "_r13_git_blob_hashes",
+                    side_effect=reject_every_staged_payload_read,
+                ),
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "write disagrees after 3 writes"
+                ),
+            ):
+                runtime._revision_components(
+                    repo, revision, failed_write_root, True
+                )
+            self.assertEqual(3, failed_write_reads)
+            self.assertFalse((failed_write_root / "checkout").exists())
+            self.assertEqual(
+                [], list(failed_write_root.glob(".checkout-stage-*"))
+            )
+
+            terminal_drifted = False
+
+            def mutate_after_staged_read(
+                path: Path, label: str
+            ) -> tuple[int, str, str]:
+                nonlocal terminal_drifted
+                result = original_blob_hashes(path, label)
+                if path.name == "payload.bin" and not terminal_drifted:
+                    terminal_drifted = True
+                    path.write_bytes(b"Xrusted body\n")
+                return result
+
+            terminal_drift_root = root / "terminal-drift-root"
+            terminal_drift_root.mkdir()
+            with (
+                self.subTest(case="terminal tree verification catches late drift"),
+                patch.object(
+                    runtime,
+                    "_r13_git_blob_hashes",
+                    side_effect=mutate_after_staged_read,
+                ),
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "final tree disagrees"
+                ),
+            ):
+                runtime._revision_components(
+                    repo, revision, terminal_drift_root, True
+                )
+            self.assertTrue(terminal_drifted)
+            self.assertFalse((terminal_drift_root / "checkout").exists())
+            self.assertEqual(
+                [], list(terminal_drift_root.glob(".checkout-stage-*"))
+            )
+
     def test_matrix_schema2_has_independent_probe_and_exact_blocker_scope(self) -> None:
         matrix = runtime._scenario_matrix()
         self.assertEqual(2, matrix["schema"])
@@ -3089,6 +3325,52 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             self.assertEqual(2, read.call_count)
             self.assertNotIn("sha256", batch_record)
             self.assertNotIn("sha256", second_record)
+
+            second_batch = (
+                f"{second_oid} blob {len(second_blob)}\n".encode("ascii")
+                + second_blob
+                + b"\n"
+            )
+            with (
+                patch.object(
+                    runtime,
+                    "_GIT_BATCH_MAX_BODY_BYTES",
+                    max(len(trusted_blob), len(second_blob)),
+                ),
+                patch.object(
+                    runtime,
+                    "_git_bytes",
+                    side_effect=[batch(trusted_blob), second_batch],
+                ) as read,
+            ):
+                self.assertEqual(
+                    [
+                        sha256(trusted_blob).hexdigest(),
+                        sha256(second_blob).hexdigest(),
+                    ],
+                    runtime._r13_git_batch_sha256(
+                        repo,
+                        [batch_record, second_record],
+                        "test chunked Git batch",
+                    ),
+                )
+            self.assertEqual(2, read.call_count)
+
+            with (
+                patch.object(
+                    runtime,
+                    "_GIT_BATCH_MAX_BODY_BYTES",
+                    len(trusted_blob) - 1,
+                ),
+                patch.object(runtime, "_git_bytes") as forbidden_read,
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "exceeds the authenticated batch limit"
+                ),
+            ):
+                runtime._r13_git_batch_sha256(
+                    repo, [batch_record], "test oversized Git batch"
+                )
+            forbidden_read.assert_not_called()
 
             with (
                 patch.object(

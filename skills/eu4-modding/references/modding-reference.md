@@ -65,6 +65,15 @@ the immutable session seal, recorded canonical evidence root, and nonce-bound
 active lock. Cleanup is a write operation and must never run merely because an
 arbitrary directory happens to contain familiar filenames.
 
+When a deployment is pinned to a Git commit, avoid unauthenticated archive
+materialization. Resolve the exact commit with a pinned Git binary, restrict the
+tree to runtime-whitelisted regular blobs, independently bind every bounded
+batch body to its Git object OID, and re-hash files after writing them into a
+unique staging directory. Rename only the complete verified tree into view;
+only identified body or staged-write integrity mismatches receive a small fixed
+retry budget. Oversized blobs, malformed batch framing, and partial staging
+trees fail closed.
+
 For a release-closure bundle, treat every required artifact role as a semantic
 contract rather than accepting non-empty text or JSON. Reconstruct the complete
 parent assertion and lineage indexes from sealed collections. Do not accept a
