@@ -390,7 +390,9 @@ The complete live result/toolchain proof is validated before the temporary
 Python tree is removed. Post-cleanup and historical replay validation requires
 that temporary root to be absent, reconstructs its expected dependency/wrapper
 records from persistent approved inputs, and still rechecks every persistent
-Git, external-toolchain, payload, and installed-skill input.
+Git, external-toolchain, payload, and installed-skill input. The authoritative
+validator always acquires that guard itself; only a private pure comparator may
+consume an already acquired live guard inside the pre-cleanup critical section.
 Per-process raw output is bounded while both pipes are being drained at 1 MiB,
 and aggregate raw output is bounded at 4 MiB. The eleven caller-controlled
 closure inputs share an 8 MiB pre-parse/copy budget; the complete staged or

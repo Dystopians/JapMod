@@ -8437,6 +8437,24 @@ def _r13_gate_runtime_paths(context: dict[str, object]) -> dict[str, Path]:
     }
 
 
+def _r13_require_gate_temp_state(
+    context: dict[str, object], *, require_live: bool
+) -> Path:
+    user_data = _require_ordinary_directory(
+        Path(str(context["user_data"])), "R13 gate acceptance root"
+    )
+    root = _r13_gate_runtime_paths(context)["root"]
+    if root.parent != user_data:
+        raise AcceptanceError("R13 gate temp root escaped the acceptance root")
+    if require_live:
+        return _require_ordinary_directory(root, "R13 live gate temp root")
+    if os.path.lexists(root):
+        raise AcceptanceError(
+            "R13 gate temp root must be absent during post-cleanup verification"
+        )
+    return root
+
+
 def _r13_expected_isolated_dependency_manifest(
     dependencies: Sequence[dict[str, str]],
 ) -> list[dict[str, object]]:
@@ -8685,6 +8703,10 @@ def _r13_gate_toolchain_guard(
     """Bind repository inputs to HEAD and external inputs to a reviewed baseline."""
 
     repo = _require_ordinary_directory(Path(str(context["repo"])), "R13 repository")
+    runtime_paths = _r13_gate_runtime_paths(context)
+    _r13_require_gate_temp_state(
+        context, require_live=require_live_ephemeral
+    )
     toolchain_revision = context.get("toolchain_revision")
     if (
         not isinstance(toolchain_revision, str)
@@ -8703,7 +8725,20 @@ def _r13_gate_toolchain_guard(
 
     _dependency_sites, dependencies = _r13_python_dependency_sites()
     external = _r13_external_toolchain_baseline(context, dependencies)
-    runtime_paths = _r13_gate_runtime_paths(context)
+    repo_skill = _r13_plain_tree_manifest(
+        repo / "skills" / "eu4-modding", "repository EU4 skill"
+    )
+    installed_skill_root = codex_home / "skills" / "eu4-modding"
+    installed_skill = _r13_plain_tree_manifest(
+        installed_skill_root, "installed EU4 skill"
+    )
+    if not _json_exact_equal(repo_skill, installed_skill):
+        raise AcceptanceError(
+            "installed EU4 skill differs from the Git-verified repository skill"
+        )
+    skill_git = next(
+        item for item in git_records if item["git_path"] == "skills/eu4-modding"
+    )
     expected_isolated = _r13_expected_isolated_dependency_manifest(dependencies)
     expected_wrapper = _r13_python_wrapper_payload(context)
     if require_live_ephemeral:
@@ -8728,10 +8763,6 @@ def _r13_gate_toolchain_guard(
         ):
             raise AcceptanceError("R13 isolated Python wrapper differs from policy")
     else:
-        if os.path.lexists(runtime_paths["root"]):
-            raise AcceptanceError(
-                "R13 gate temp root must be absent during post-cleanup verification"
-            )
         isolated_manifest = expected_isolated
         wrapper = {
             "kind": "file",
@@ -8741,19 +8772,8 @@ def _r13_gate_toolchain_guard(
             "bytes": len(expected_wrapper),
             "sha256": sha256(expected_wrapper).hexdigest(),
         }
-    repo_skill = _r13_plain_tree_manifest(
-        repo / "skills" / "eu4-modding", "repository EU4 skill"
-    )
-    installed_skill_root = codex_home / "skills" / "eu4-modding"
-    installed_skill = _r13_plain_tree_manifest(
-        installed_skill_root, "installed EU4 skill"
-    )
-    if not _json_exact_equal(repo_skill, installed_skill):
-        raise AcceptanceError(
-            "installed EU4 skill differs from the Git-verified repository skill"
-        )
-    skill_git = next(
-        item for item in git_records if item["git_path"] == "skills/eu4-modding"
+    _r13_require_gate_temp_state(
+        context, require_live=require_live_ephemeral
     )
     body = {
         "schema": "jxp_r13_gate_toolchain/v2",
@@ -8793,6 +8813,9 @@ def _r13_gate_toolchain_guard(
             "sha256": _object_sha256(installed_skill),
         },
     }
+    _r13_require_gate_temp_state(
+        context, require_live=require_live_ephemeral
+    )
     return {**body, "toolchain_sha256": _object_sha256(body)}
 
 
@@ -9407,11 +9430,11 @@ def _run_r13_static_gate_verifications(
         final_live_guard = _r13_gate_toolchain_guard(context)
         validated: dict[str, dict[str, object]] = {}
         for role in _R13_GATE_CHECK_IDS:
-            item = _validated_r13_live_gate_verification(
+            item = _validated_r13_gate_verification_against_guard(
                 role,
                 context,
                 results.get(role),
-                trusted_toolchain_guard=final_live_guard,
+                final_live_guard,
             )
             if not _json_exact_equal(
                 item.get("payload_guard"), list(expected_payload)
@@ -9588,12 +9611,11 @@ def _r13_common_evidence_identity(
     }
 
 
-def _validated_r13_live_gate_verification(
+def _validated_r13_gate_verification_against_guard(
     role: str,
     context: dict[str, object],
     verification: object,
-    *,
-    trusted_toolchain_guard: dict[str, object] | None = None,
+    toolchain_guard: dict[str, object],
 ) -> dict[str, object]:
     expectation = _r13_gate_receipt_expectation(role, context)
     specs = _r13_static_gate_specs(context)
@@ -9621,17 +9643,13 @@ def _validated_r13_live_gate_verification(
         raise AcceptanceError(f"R13 live gate verification schema disagrees: {role}")
     executions = verification.get("executions")
     marker_proofs = verification.get("marker_proofs")
-    live_toolchain_guard = (
-        trusted_toolchain_guard
-        if trusted_toolchain_guard is not None
-        else _r13_gate_toolchain_guard(context, require_live_ephemeral=False)
-    )
-    if not isinstance(live_toolchain_guard, dict):
+    if not isinstance(toolchain_guard, dict):
         raise AcceptanceError(f"R13 live gate toolchain is malformed: {role}")
     if not _json_exact_equal(
-        verification.get("toolchain_guard"), live_toolchain_guard
+        verification.get("toolchain_guard"), toolchain_guard
     ):
         raise AcceptanceError(f"R13 live gate toolchain disagrees: {role}")
+    live_toolchain_guard = toolchain_guard
     commands = expectation["commands"]
     required_markers = spec["required_markers"]
     execution_keys = {
@@ -9771,6 +9789,21 @@ def _validated_r13_live_gate_verification(
     elif additional_proof:
         raise AcceptanceError(f"R13 gate has unexpected additional proof: {role}")
     return dict(verification)
+
+
+def _validated_r13_live_gate_verification(
+    role: str,
+    context: dict[str, object],
+    verification: object,
+) -> dict[str, object]:
+    """Authoritatively validate a result after the ephemeral gate root is gone."""
+
+    toolchain_guard = _r13_gate_toolchain_guard(
+        context, require_live_ephemeral=False
+    )
+    return _validated_r13_gate_verification_against_guard(
+        role, context, verification, toolchain_guard
+    )
 
 
 def _r13_gate_total_raw_bytes(

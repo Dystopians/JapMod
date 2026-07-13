@@ -2297,13 +2297,16 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                         b"",
                     )
 
-                guard_observations: list[bool] = []
+                guard_observations: list[tuple[bool, bool]] = []
 
                 def guarded_toolchain(
                     _context: dict[str, object], **_kwargs: object
                 ) -> dict[str, object]:
                     guard_observations.append(
-                        (env.user / ".jxp_r13_gate_temp").is_dir()
+                        (
+                            (env.user / ".jxp_r13_gate_temp").is_dir(),
+                            _kwargs.get("require_live_ephemeral", True) is True,
+                        )
                     )
                     return fake_toolchain
 
@@ -2333,7 +2336,9 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                         context, expected_payload
                     )
                 self.assertTrue(guard_observations)
-                self.assertTrue(all(guard_observations))
+                self.assertTrue(
+                    all(exists and live for exists, live in guard_observations)
+                )
                 self.assertFalse((env.user / ".jxp_r13_gate_temp").exists())
                 self.assertEqual(set(runtime._R13_GATE_CHECK_IDS), set(results))
                 self.assertEqual(7, run.call_count)
@@ -2521,6 +2526,175 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     runtime._run_r13_static_gate_verifications(
                         context, expected_payload
                     )
+
+                gate_temp = env.user / ".jxp_r13_gate_temp"
+                self.assertEqual(
+                    gate_temp,
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=False
+                    ),
+                )
+                with self.assertRaisesRegex(
+                    runtime.AcceptanceError, "live gate temp root"
+                ):
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=True
+                    )
+                gate_temp.mkdir()
+                self.assertEqual(
+                    gate_temp,
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=True
+                    ),
+                )
+                with self.assertRaisesRegex(
+                    runtime.AcceptanceError, "must be absent"
+                ):
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=False
+                    )
+                gate_temp.rmdir()
+                gate_temp.write_bytes(b"not a directory")
+                with self.assertRaisesRegex(
+                    runtime.AcceptanceError, "live gate temp root"
+                ):
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=True
+                    )
+                with self.assertRaisesRegex(
+                    runtime.AcceptanceError, "must be absent"
+                ):
+                    runtime._r13_require_gate_temp_state(
+                        context, require_live=False
+                    )
+                gate_temp.unlink()
+
+                profile = env.root / "guard-profile"
+                (profile / ".codex").mkdir(parents=True)
+                skill_manifest = [
+                    {"path": "SKILL.md", "bytes": 1, "sha256": "a" * 64}
+                ]
+                external_guard = {
+                    "path": str(env.root / "external-baseline.json"),
+                    "record_count": 0,
+                }
+
+                def fake_git_record(
+                    _repo: Path, relative: str, _label: str
+                ) -> dict[str, object]:
+                    return {
+                        "git_path": relative,
+                        "revision": context["toolchain_revision"],
+                        "file_count": 1,
+                        "bytes": 1,
+                        "sha256": sha256(relative.encode("utf-8")).hexdigest(),
+                    }
+
+                original_plain_tree_manifest = runtime._r13_plain_tree_manifest
+
+                def fake_plain_tree_manifest(
+                    root: Path, label: str
+                ) -> list[dict[str, object]]:
+                    if label == "R13 isolated dependency site":
+                        return original_plain_tree_manifest(root, label)
+                    return skill_manifest
+
+                @contextlib.contextmanager
+                def guard_input_mocks(external_scan: object):
+                    with (
+                        patch.object(
+                            runtime, "_known_profile_root", return_value=profile
+                        ),
+                        patch.object(
+                            runtime,
+                            "_r13_current_toolchain_revision",
+                            return_value=context["toolchain_revision"],
+                        ),
+                        patch.object(
+                            runtime,
+                            "_r13_git_tree_record",
+                            side_effect=fake_git_record,
+                        ),
+                        patch.object(
+                            runtime,
+                            "_r13_python_dependency_sites",
+                            return_value=((), []),
+                        ),
+                        patch.object(
+                            runtime,
+                            "_r13_external_toolchain_baseline",
+                            side_effect=external_scan,
+                        ),
+                        patch.object(
+                            runtime,
+                            "_r13_plain_tree_manifest",
+                            side_effect=fake_plain_tree_manifest,
+                        ),
+                    ):
+                        yield
+
+                def create_temp_during_persistent_scan(
+                    _context: dict[str, object],
+                    _dependencies: object,
+                ) -> dict[str, object]:
+                    gate_temp.mkdir()
+                    return external_guard
+
+                with (
+                    self.subTest(case="offline temp appears during persistent scan"),
+                    guard_input_mocks(create_temp_during_persistent_scan),
+                    self.assertRaisesRegex(
+                        runtime.AcceptanceError, "must be absent"
+                    ),
+                ):
+                    runtime._r13_gate_toolchain_guard(
+                        context, require_live_ephemeral=False
+                    )
+                self.assertTrue(gate_temp.is_dir())
+                gate_temp.rmdir()
+
+                runtime_paths = runtime._r13_gate_runtime_paths(context)
+                gate_temp.mkdir()
+                runtime_paths["dependency_site"].mkdir()
+                runtime_paths["pycache"].mkdir()
+                runtime_paths["python_wrapper"].write_bytes(
+                    runtime._r13_python_wrapper_payload(context)
+                )
+                original_file_record = runtime._r13_toolchain_file_record
+
+                def remove_temp_after_ephemeral_scan(
+                    path: Path, label: str, *, allow_empty: bool = False
+                ) -> dict[str, object]:
+                    record = original_file_record(
+                        path, label, allow_empty=allow_empty
+                    )
+                    if Path(path) == runtime_paths["python_wrapper"]:
+                        runtime_paths["python_wrapper"].unlink()
+                        runtime_paths["dependency_site"].rmdir()
+                        runtime_paths["pycache"].rmdir()
+                        gate_temp.rmdir()
+                    return record
+
+                def stable_external_scan(
+                    _context: dict[str, object],
+                    _dependencies: object,
+                ) -> dict[str, object]:
+                    return external_guard
+
+                with (
+                    self.subTest(case="live temp disappears before post-scan check"),
+                    guard_input_mocks(stable_external_scan),
+                    patch.object(
+                        runtime,
+                        "_r13_toolchain_file_record",
+                        side_effect=remove_temp_after_ephemeral_scan,
+                    ),
+                    self.assertRaisesRegex(
+                        runtime.AcceptanceError, "live gate temp root"
+                    ),
+                ):
+                    runtime._r13_gate_toolchain_guard(context)
+                self.assertFalse(gate_temp.exists())
 
     def test_r13_python_runner_allows_only_the_pinned_skill_script(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
