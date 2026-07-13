@@ -244,6 +244,25 @@ class FinalStateContractTests(unittest.TestCase):
         )
         self.assertIn("final_state.debug_cleanup", _codes(root))
 
+    def test_rejects_baseline_that_reinitializes_before_cleanup(self) -> None:
+        root = self._temporary_contract()
+        _mutate(
+            root,
+            DEBUG_FILE,
+            "\t\tjxp_debug_clear_route_state_effect = yes\n"
+            "\t\tjxp_debug_clear_event_state_effect = yes\n"
+            "\t\tjxp_debug_prepare_polity_effect = yes\n",
+            "\t\tjxp_debug_prepare_polity_effect = yes\n"
+            "\t\tjxp_debug_clear_route_state_effect = yes\n"
+            "\t\tjxp_debug_clear_event_state_effect = yes\n",
+        )
+        self.assertIn("final_state.debug_baseline_order", _codes(root))
+
+    def test_rejects_baseline_that_cannot_return_toy_to_jap(self) -> None:
+        root = self._temporary_contract()
+        _mutate(root, DEBUG_FILE, "\t\t\t\t\ttag = TOY\n", "")
+        self.assertIn("final_state.debug_baseline_toy", _codes(root))
+
     def test_rejects_capstone_without_its_power_structure_gate(self) -> None:
         root = self._temporary_contract()
         _mutate(

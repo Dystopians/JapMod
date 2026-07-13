@@ -14,6 +14,7 @@ LIVE_GAME_ROOT = Path(r"D:\Steam\steamapps\common\Europa Universalis IV")
 MOD_CONTRACT_FILES = (
     Path("common/cb_types/jxp_08_cb_types.txt"),
     Path("common/imperial_reforms/jxp_08_celestial_reforms.txt"),
+    Path("common/scripted_effects/jxp_debug_effects.txt"),
     Path("common/scripted_effects/jxp_03_overseas_effects.txt"),
     Path("common/wargoal_types/jxp_08_wargoal_types.txt"),
     Path("decisions/jxp_03_overseas_decisions.txt"),
@@ -128,6 +129,20 @@ class MandateContractTests(unittest.TestCase):
             source.write_text(text.replace(original, replacement, 1), encoding="utf-8")
             self.assertIn(
                 "mandate.mission_only_unlock", self._codes(mod_root, game_root)
+            )
+
+    def test_rejects_debug_scaffold_that_bypasses_emperor_setup(self) -> None:
+        temporary, mod_root, game_root = self._temporary_contract()
+        with temporary:
+            source = mod_root / Path(
+                "common/scripted_effects/jxp_debug_effects.txt"
+            )
+            text = source.read_text(encoding="utf-8")
+            original = "\t\t\tset_emperor_of_china = ROOT\n"
+            self.assertIn(original, text)
+            source.write_text(text.replace(original, "", 1), encoding="utf-8")
+            self.assertIn(
+                "mandate.debug_emperor_scaffold", self._codes(mod_root, game_root)
             )
 
     def test_rejects_missing_non_mandate_fallback(self) -> None:

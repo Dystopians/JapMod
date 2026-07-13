@@ -19,17 +19,17 @@
 ## Current Snapshot
 
 - Ledger schema: `1`
-- Last updated: `2026-07-10`
+- Last updated: `2026-07-13`
 - Main Mod version: `0.28.0`
 - Companion Map version: `0.1.3-alpha`
 - Pinned game: `EU4 v1.37.5.0 Inca (491d)`
 - Supported version: `1.37.*`
 - Runtime acceptance: `PENDING_USER_APPROVAL`
-- Main static gate: `26/26 checks; 208/208 unit tests`
+- Main static gate: `26/26 checks; 211/211 core unit tests; 7/7 acceptance-helper tests`
 - Combined static gate: `0 errors; 0 warnings`
 - Main missions: `288 mission IDs; 41 custom series; 192 effective profiles`
 - Combined missions: `321 mission IDs; 46 series; 120 companion tag/DLC profiles`
-- Combined content inventory: `498 events; 287 decisions; 383 scripted callables; 918 modifiers`
+- Combined content inventory: `498 events; 289 decisions; 385 scripted callables; 918 modifiers`
 - State safety: `538 country flags; 8 province flags; 918 modifiers; 4 disasters; 0 failures`
 - Companion geography: `88/88 japan_region provinces; 137382 selectable days; 299 owner intervals; 70 subject intervals`
 - Localisation: `0 missing combined mission localisation keys`
@@ -132,11 +132,11 @@
 
 | ID | Priority | Status | Owner | Scope | Task | Acceptance evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| JXP-001 | P0 | OPEN | UNCLAIMED | Runtime | 主 Mod + 地图 Mod 新战役冷启动验收 | 用户明确许可；1444 冷启动、一天后任务/改革、fresh error.log 均通过 |
-| JXP-002 | P0 | OPEN | UNCLAIMED | Migration | 旧存档依次验收十种统一状态的任务、理念、改革迁移 | 保存/重载后 flags、已完成任务与五列树稳定，fresh error.log 无 JXP 错误 |
+| JXP-001 | P0 | IN_PROGRESS | CODEX_ROOT | Runtime | 主 Mod + 地图 Mod 新战役冷启动验收 | 用户明确许可；1444 冷启动、一天后任务/改革、fresh error.log 均通过 |
+| JXP-002 | P0 | IN_PROGRESS | CODEX_ROOT | Migration | 旧存档依次验收十种统一状态的任务、理念、改革迁移 | 保存/重载后 flags、已完成任务与五列树稳定，fresh error.log 无 JXP 错误 |
 | JXP-003 | P0 | DONE | CODEX_ROOT | Balance/Compatibility | 逐项重构 19 个 `num_of_cities = 25/30` 地图尺度敏感门槛 | 每项记录历史意图，改为统一度、战略省份、area、发展或合理城市数；联合门禁 0 warning |
-| JXP-004 | P0 | OPEN | UNCLAIMED | CJP/Religion | 运行时证明 CJP 单次融合神道、改革中心传播和神道事件桥 | 不重复 harmonize；Ise 等保护地不转；Nanban/urbanization/Neo-Confucian bridge 可触发 |
-| JXP-005 | P1 | OPEN | UNCLAIMED | UI | 对大名五家系、十种统一状态与地图任务做视觉布局/政府 UI 验收 | 无断线、空洞、重叠、通用树、缺失 icon 或错误 tier；截图留档 |
+| JXP-004 | P0 | IN_PROGRESS | CODEX_ROOT | CJP/Religion | 运行时证明 CJP 单次融合神道、改革中心传播和神道事件桥 | 不重复 harmonize；Ise 等保护地不转；Nanban/urbanization/Neo-Confucian bridge 可触发 |
+| JXP-005 | P1 | IN_PROGRESS | CODEX_ROOT | UI | 对大名五家系、十种统一状态与地图任务做视觉布局/政府 UI 验收 | 无断线、空洞、重叠、通用树、缺失 icon 或错误 tier；截图留档 |
 | JXP-006 | P1 | DONE | CODEX_ROOT | Route parity | 审计九条路线的任务、事件、决议、改革、调试入口深度 | 生成可比较覆盖报告并补齐明显短板，互斥 gate 无矛盾 |
 | JXP-007 | P1 | DONE | CODEX_ROOT | Disasters | 将完整灾难系统扩展到原规划的 4-5 个 | 每个灾难窄触发、推进/结束/清理闭合，并有 debug 验收入口 |
 | JXP-008 | P1 | IN_PROGRESS | CODEX_ROOT | WAK | 完成倭寇联盟、私掠、港市与海上国家的长期循环 | 有进入、投资、压力、收益、退出与 AI 行为；地图语义范围兼容 |
@@ -148,7 +148,7 @@
 | JXP-014 | P2 | DONE | CODEX_ROOT | Era attributes | 审计任务、事件、改革、幕府政策、投资对三项时代属性的非决议交互 | 每条路线有多种长期改变方式；刀狩令不与原版幕府行动重复 |
 | JXP-015 | P1 | DONE | CODEX_ROOT | Safety | 审计全部 event flags/modifiers 的 debug cleanup 与灾难误触发 | 自动覆盖报告无孤立状态；岛原及后续灾难无明显 false positive |
 | JXP-016 | P2 | IN_PROGRESS | PROJECT | Process | 持续维护本总账、历史索引与 skill 协议 | 每个开发切片同步更新版本、TODO、证据、风险和 Update Journal |
-| JXP-017 | P0 | OPEN | UNCLAIMED | Map runtime | 验收 88 省地图渲染、港口、海峡、标签、书签与日期滑块 | 用户许可后按 map implementation report 清单完整执行并归档截图/log |
+| JXP-017 | P0 | IN_PROGRESS | CODEX_ROOT | Map runtime | 验收 88 省地图渲染、港口、海峡、标签、书签与日期滑块 | 用户许可后按 map implementation report 清单完整执行并归档截图/log |
 | JXP-018 | P1 | IN_PROGRESS | CODEX_ROOT | Toyotomi/History | 建立独立丰臣家身份，修复秀吉掌权后仍沿用织田家的历史与玩法链 | 专属 tag、旗帜、名称、理念及任务身份完整；秀吉路线在正确节点转为丰臣，任务、理念、政府、属国和旧存档迁移不丢失；伴随地图可选日期保持一致 |
 | JXP-019 | P1 | DONE | CODEX_ROOT | Daimyo ideas/missions | 建立全部日本大名的理念与任务覆盖矩阵，按历史影响力分层扩展；织田家加入“天下布武”专属主线 | 主/地图全部可选大名均有非通用理念与身份任务；历史重要大名拥有更深且较强的专属分支；联合 profile 无 generic fallback、冲突或断链，并有强度分层审计 |
 | JXP-020 | P0 | IN_PROGRESS | CODEX_ROOT | Ideas/UI | 给国家理念结构增加硬性上限，修复理念超限造成的 UI 重叠 | 所有可激活理念组均符合 `start + 7 ideas + bonus` 标准结构；生成器与 validator 对超限 hard fail；获准运行时截图确认无重叠或越界 |
@@ -168,6 +168,8 @@
 8. **dormant reforms。** 306 个旧定义仍保留以兼容/历史用途，任何生成器或手改不得把它们重新注册到 UI。
 9. **Chinese localisation pipeline。** source 与 active 文件不可混改；Markdown 日志不得经过 EU4SpecialEscape。
 10. **并行 agent 冲突。** Git 已提供提交与 worktree 边界，但总账仍采用 lead-agent 单写者协议；并行分支不得各自改写总账后假设可自动合并。
+11. **运行时 playset 隔离。** 主 Mod + 伴随地图验收必须使用专用 playset，并排除 Graphical Map Improvements 及任何其他地图 overhaul；不得以用户日常 playset 的成功或失败代替 JXP 当前版本证据。
+12. **pre-0.24.2 真实旧档缺口。** 当前 Git 最早完整源码是 `6e461e2` / `0.25.0`，本机现有 202 个存档也没有 JXP 元数据；仓库可由 `8a59626` / `0.27.0` 生成十状态迁移输入，但不能伪造早期 DOM/BOM series、BOM-prefixed key 或 stacked free-idea 的真实序列化档。若要补齐该历史回归的游戏内证据，必须找回原问题 `autosave.eu4`，或找回能实际生成故障状态的 pre-0.24.1 发布包及其引擎存档。
 
 ## Validation Matrix
 
@@ -240,6 +242,20 @@ $repo = '<repo>'
 ## Update Journal
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
+
+### 2026-07-13 - RUNTIME-PREP-001 - Deterministic acceptance preparation (`no version bump`)
+
+- Status: `STATIC_PASS; DEPLOYED_NOT_ENABLED; PENDING_USER_APPROVAL`。
+- Scope: `CODEX_ROOT` 为 `JXP-001` / `002` / `004` / `005` / `008` / `009` / `010` / `017` / `018` / `020` / `022` / `023` 建立 R1-R13 去重运行矩阵、不启动游戏的 pinned preflight、普通目录快照部署、playset 隔离守卫、fresh log/screenshot/save 归档与 blocker 扫描；`JXP-016` 继续承担最终收口。
+- Debug reliability: 修复 `jxp_debug_return_jap_baseline_effect` 的“先初始化后清标记”顺序错误并补 `TOY -> JAP`；新增 Hakko 天朝身份 scaffold 与 ODA 丰臣正式决议前置 scaffold。两者均由静态合同禁止伪造任务解锁、改革通过或 `ODA -> TOY` 正式转换。
+- Tooling: 新增 `tools/jxp_runtime_acceptance/`；CLI 只有 `preflight` / `deploy` / `before-session` / `collect`，没有 launch 命令，且不写 `launcher-v2.sqlite` / `dlc_load.json`。部署 payload 白名单排除 tools、dev_logs、localisation_source、源图与备份，外层 descriptor 在完整复制和逐文件 SHA-256 验证后最后写入。
+- Environment: 已只读确认 `launcher-settings.json` 为 EU4 `v1.37.5.0`，用户数据根为 `Documents/Paradox Interactive/Europa Universalis IV`；部署前无 JXP 本地 descriptor，当前日常 playset 仍只启用中文补丁与 Graphical Map Improvements，正式验收必须另建排除二者的专用 playset。
+- Legacy fixtures: 已证明不可变提交 `8a5962628014e696bda764bcad10bfd3faee188e` 是可生成十状态真实输入的 `0.27.0`；最早完整源码仅到 `0.25.0`，仓库和本机存档均无 pre-0.24.2 JXP fixture，因此明确记录外部证据缺口而不合成假档。
+- Deployment: 当前主 `0.28.0` 普通快照 `c5a4825037ff55a3e3dcfa954eaf2a8d1c9bfc3dca92f7bc9f662a4d5407ddc3`（467 files）、地图 `0.1.3-alpha` 快照 `6b101376ee5312cdf3050a413737984858fedcbe5bfe8a31f2d9a267bf1cc4c0`（361 files）、旧版主 `0.27.0` 快照 `e7df9d31a9519a8c28216483f706dea3f4ac30ec27a614c7dffeb7a9d107b22d`（446 files）已放入用户 `mod` 目录但未启用；三者均为普通目录，无 link/junction。
+- Configuration safety: 部署后 `launcher-v2.sqlite` 仍为 2026-02-09 文件，SHA-256 `131EEF30058C5AABA7250463E0EE6994B106850A685AEE4F01AA779F80E2D3C5`；`dlc_load.json` 仍为原中文补丁 + GMI，SHA-256 `BD29774AF54FFFB7804E72DAD37C4BAE5AB370E42413768878F846C217106404`。
+- Evidence: pinned preflight `9/9` vanilla hashes；主门禁 `26/26`、Clausewitz `250/250`、主单测 `211/211`、acceptance helper `7/7`；联合 map/history/content/compat/assets 全部 `0 errors / 0 warnings`；联合 inventory `498 events / 289 decisions / 385 scripted callables / 918 modifiers`；state safety `538 country flags / 8 province flags / 918 modifiers / 4 disasters / 0 failures`；历史连续 `137,382` 天。
+- Runtime: 未启动 EU4、启动器或 observer；当前 descriptor 仅 `DEPLOYED_NOT_ENABLED`，没有任何新运行时证据。
+- TODO: 所有运行时项保持 `IN_PROGRESS / CODEX_ROOT`；获得明确启动许可并实际完成对应 R 批次前，任何一项都不得改为 `DONE`。
 
 ### 2026-07-10 - RELEASE-028 - Pacific, regional, writing, and final-state politics (`0.28.0` + `0.1.3-alpha`)
 

@@ -763,6 +763,42 @@ def check_final_states(context: ValidationContext) -> CheckResult:
             f"debug cleanup does not clear {MIGRATION_FLAG}",
             str(DEBUG_FILE),
         )
+    baseline_objects = debug_objects.get("jxp_debug_return_jap_baseline_effect", [])
+    baseline_hidden = (
+        first_object(baseline_objects[0], "hidden_effect")
+        if len(baseline_objects) == 1
+        else None
+    )
+    baseline_setup_order = (
+        tuple(
+            entry.key
+            for entry in baseline_hidden.entries
+            if entry.key
+            in {
+                "jxp_debug_clear_route_state_effect",
+                "jxp_debug_clear_event_state_effect",
+                "jxp_debug_prepare_polity_effect",
+            }
+        )
+        if baseline_hidden is not None
+        else ()
+    )
+    if baseline_setup_order != (
+        "jxp_debug_clear_route_state_effect",
+        "jxp_debug_clear_event_state_effect",
+        "jxp_debug_prepare_polity_effect",
+    ):
+        result.add(
+            "final_state.debug_baseline_order",
+            "JAP baseline reset must clear route/event state before rebuilding polity state",
+            str(DEBUG_FILE),
+        )
+    if not _contains_assignment(baseline_hidden, "tag", "TOY"):
+        result.add(
+            "final_state.debug_baseline_toy",
+            "JAP baseline reset does not return TOY to JAP",
+            str(DEBUG_FILE),
+        )
     lifecycle_objects = _top_objects(context, LIFECYCLE_FILE)
     lifecycle_cleanup = lifecycle_objects.get("jxp_debug_clear_legacy_state_debt_effect", [])
     if len(lifecycle_cleanup) != 1 or not _contains_assignment(

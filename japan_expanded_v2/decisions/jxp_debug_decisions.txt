@@ -483,6 +483,37 @@ country_decisions = {
 		ai_will_do = { factor = 0 }
 	}
 
+	jxp_debug_prepare_hakko_emperor = {
+		major = no
+		potential = {
+			ai = no
+			has_dlc = "Mandate of Heaven"
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_hakko_emperor_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_debug_prepare_toyotomi_decision = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			has_country_flag = jxp_debug_panel_routes
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = { always = yes }
+		effect = {
+			jxp_debug_prepare_toyotomi_decision_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	jxp_debug_force_reformed_route = {
 		major = no
 		potential = {

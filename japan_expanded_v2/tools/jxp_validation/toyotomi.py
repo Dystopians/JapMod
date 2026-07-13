@@ -335,6 +335,71 @@ def _check_missions_and_decision(context: ValidationContext, result: CheckResult
             "decisions/jxp_70_toyotomi_decisions.txt",
         )
 
+    debug_decisions = _document(context, "decisions/jxp_debug_decisions.txt", result)
+    debug_root = (
+        first_object(debug_decisions.root, "country_decisions")
+        if debug_decisions
+        else None
+    )
+    scaffold_decision = first_object(
+        debug_root, "jxp_debug_prepare_toyotomi_decision"
+    )
+    scaffold_potential = first_object(scaffold_decision, "potential")
+    scaffold_decision_effect = first_object(scaffold_decision, "effect")
+    debug_effects = _document(
+        context, "common/scripted_effects/jxp_debug_effects.txt", result
+    )
+    scaffold_effect = (
+        first_object(
+            debug_effects.root, "jxp_debug_prepare_toyotomi_decision_effect"
+        )
+        if debug_effects
+        else None
+    )
+    scaffold_hidden = first_object(scaffold_effect, "hidden_effect")
+    scaffold_requirements = (
+        ("jxp_debug_return_jap_baseline_effect", "yes"),
+        ("change_tag", "ODA"),
+        ("change_government", "monarchy"),
+        ("add_government_reform", "shogunate"),
+        ("regenerate_government_mechanics", "yes"),
+        ("jxp_record_daimyo_origin_effect", "yes"),
+        ("jxp_debug_unify_japan_effect", "yes"),
+        ("set_country_flag", "jxp_15_oda_tenka_fubu_edicts_taken"),
+        ("add_legitimacy", "100"),
+        ("add_stability", "3"),
+        ("jxp_refresh_route_missions_effect", "yes"),
+    )
+    if not (
+        _has(scaffold_potential, "ai", "no")
+        and _has(scaffold_potential, "has_country_flag", "jxp_debug_enabled")
+        and _has(
+            scaffold_decision_effect,
+            "jxp_debug_prepare_toyotomi_decision_effect",
+            "yes",
+        )
+        and all(
+            _has(scaffold_hidden, key, value)
+            for key, value in scaffold_requirements
+        )
+        and not _has(scaffold_hidden, "change_tag", "TOY")
+        and not _has(
+            scaffold_hidden, "jxp_establish_toyotomi_identity_effect", "yes"
+        )
+        and not _has(
+            scaffold_hidden,
+            "set_country_flag",
+            "jxp_toyotomi_identity_established",
+        )
+    ):
+        result.add(
+            "toyotomi.debug_scaffold",
+            "Toyotomi runtime scaffold must prepare ODA eligibility without "
+            "performing the production identity transition",
+            "common/scripted_effects/jxp_debug_effects.txt",
+        )
+    result.metrics["toyotomi_debug_scaffolds"] = 1
+
 
 def _check_reform(context: ValidationContext, result: CheckResult) -> None:
     reforms = _document(context, "common/government_reforms/jxp_28_founder_house_reforms.txt", result)

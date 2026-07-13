@@ -31,6 +31,7 @@ JXP_EFFECT_FILE = Path("common/scripted_effects/jxp_03_overseas_effects.txt")
 JXP_MISSION_FILE = Path("missions/jxp_03_overseas_missions.txt")
 JXP_DECISION_FILE = Path("decisions/jxp_03_overseas_decisions.txt")
 JXP_DEBUG_FILE = Path("decisions/jxp_debug_decisions.txt")
+JXP_DEBUG_EFFECT_FILE = Path("common/scripted_effects/jxp_debug_effects.txt")
 JXP_LOCALISATION_FILE = Path(
     "localisation_source/jxp_08_l_english_utf8_source.yml"
 )
@@ -335,6 +336,12 @@ def _check_mod_contract(context: ValidationContext, result: CheckResult) -> None
     decision_root = _load_document(
         context, JXP_DECISION_FILE, result, "mandate.decision_file"
     )
+    debug_decision_root = _load_document(
+        context, JXP_DEBUG_FILE, result, "mandate.debug_decision_file"
+    )
+    debug_effect_root = _load_document(
+        context, JXP_DEBUG_EFFECT_FILE, result, "mandate.debug_effect_file"
+    )
 
     vanilla_cb_overrides: list[str] = []
     cb_directory = context.mod_root / "common" / "cb_types"
@@ -511,6 +518,44 @@ def _check_mod_contract(context: ValidationContext, result: CheckResult) -> None
             f"found {sorted(unlock_callers)}",
         )
 
+    debug_decisions = first_object(debug_decision_root, "country_decisions")
+    emperor_scaffold = first_object(
+        debug_decisions, "jxp_debug_prepare_hakko_emperor"
+    )
+    scaffold_potential = first_object(emperor_scaffold, "potential")
+    scaffold_decision_effect = first_object(emperor_scaffold, "effect")
+    scaffold_effect = first_object(
+        debug_effect_root, "jxp_debug_prepare_hakko_emperor_effect"
+    )
+    scaffold_hidden = first_object(scaffold_effect, "hidden_effect")
+    if not (
+        _has_direct(scaffold_potential, "ai", "no")
+        and _has_direct(scaffold_potential, "has_dlc", "Mandate of Heaven")
+        and _has_direct(
+            scaffold_potential, "has_country_flag", "jxp_debug_enabled"
+        )
+        and _has_direct(
+            scaffold_decision_effect,
+            "jxp_debug_prepare_hakko_emperor_effect",
+            "yes",
+        )
+        and _has(scaffold_hidden, "set_emperor_of_china", "ROOT")
+        and _has(scaffold_hidden, "add_mandate", "100")
+        and _has(
+            scaffold_hidden,
+            "jxp_reconcile_hakko_ichiu_reform_visibility_effect",
+            "yes",
+        )
+        and not _has(scaffold_hidden, HAKKO_UNLOCK_EFFECT, "yes")
+        and not _has(scaffold_hidden, "set_country_flag", HAKKO_PASSED_FLAG)
+    ):
+        result.add(
+            "mandate.debug_emperor_scaffold",
+            "Hakko runtime scaffold must create only a DLC-gated Japanese Emperor "
+            "fixture without unlocking or passing the reform",
+            JXP_DEBUG_EFFECT_FILE.as_posix(),
+        )
+
     localisation_source = context.mod_root / JXP_LOCALISATION_FILE
     localisation = (
         localisation_source.read_text(encoding="utf-8-sig")
@@ -558,6 +603,7 @@ def check_mandate_contract(
             "hakko_ae_factor": 0.5,
             "hakko_superregions": len(EAST_ASIA_SUPERREGIONS),
             "mission_unlock_callers": len(EXPECTED_UNLOCK_CALLERS),
+            "debug_emperor_scaffolds": 1,
         }
     )
     result.notes.extend(

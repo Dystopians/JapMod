@@ -1073,13 +1073,14 @@ jxp_debug_set_route_ready_effect = {
 jxp_debug_return_jap_baseline_effect = {
 	custom_tooltip = jxp_debug_internal_effect_tt
 	hidden_effect = {
-		jxp_debug_prepare_polity_effect = yes
 		jxp_debug_clear_route_state_effect = yes
 		jxp_debug_clear_event_state_effect = yes
+		jxp_debug_prepare_polity_effect = yes
 		if = {
 			limit = {
 				NOT = { tag = JAP }
 				OR = {
+					tag = TOY
 					tag = KJP
 					tag = CJP
 					tag = EJP
@@ -1100,6 +1101,52 @@ jxp_debug_return_jap_baseline_effect = {
 			set_heir_religion = shinto
 		}
 		jxp_debug_set_polity_balanced_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+# Disposable runtime scaffold only: this transfers the Mandate but deliberately
+# does not unlock or pass Hakko Ichiu. The normal mission/reform UI remains the
+# acceptance surface for JXP-010/JXP-023.
+jxp_debug_prepare_hakko_emperor_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_prepare_polity_effect = yes
+		if = {
+			limit = {
+				has_dlc = "Mandate of Heaven"
+				jxp_is_japanese_polity_trigger = yes
+			}
+			set_emperor_of_china = ROOT
+			add_mandate = 100
+			add_meritocracy = 100
+			add_stability = 3
+			regenerate_government_mechanics = yes
+			jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+		}
+	}
+}
+
+# Prepares every non-date requirement for the ordinary ODA -> TOY decision.
+# The tester must still reach 1586 and click the production decision itself.
+jxp_debug_prepare_toyotomi_decision_effect = {
+	custom_tooltip = jxp_debug_internal_effect_tt
+	hidden_effect = {
+		jxp_debug_return_jap_baseline_effect = yes
+		if = {
+			limit = { NOT = { tag = ODA } }
+			change_tag = ODA
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+		}
+		change_government = monarchy
+		add_government_reform = shogunate
+		regenerate_government_mechanics = yes
+		jxp_record_daimyo_origin_effect = yes
+		jxp_debug_unify_japan_effect = yes
+		set_country_flag = jxp_15_oda_tenka_fubu_edicts_taken
+		add_legitimacy = 100
+		add_stability = 3
 		jxp_refresh_route_missions_effect = yes
 	}
 }
