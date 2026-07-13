@@ -29,7 +29,7 @@
 - Combined static gate: `0 errors; 0 warnings`
 - Main missions: `288 mission IDs; 41 custom series; 192 effective profiles`
 - Combined missions: `321 mission IDs; 46 series; 120 companion tag/DLC profiles`
-- Combined content inventory: `498 events; 289 decisions; 385 scripted callables; 918 modifiers`
+- Combined content inventory: `500 events; 289 decisions; 385 scripted callables; 918 modifiers`
 - State safety: `538 country flags; 8 province flags; 918 modifiers; 4 disasters; 0 failures`
 - Companion geography: `88/88 japan_region provinces; 137382 selectable days; 299 owner intervals; 70 subject intervals`
 - Localisation: `0 missing combined mission localisation keys`
@@ -242,6 +242,14 @@ $repo = '<repo>'
 ## Update Journal
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
+
+### 2026-07-13 - HANDOFF-001 - Original-machine continuation and GitHub publication (`no version bump`)
+
+- Status: `STATIC_PASS; PORTABLE_HANDOFF_PREPARED; PENDING_RUNTIME; R5_EXTERNAL_FIXTURE_REQUIRED`。
+- Scope: 在根 `AGENT_HANDOFF_GUIDE.md` 中加入可直接复制的原机器 continuation prompt，并将当前线性开发历史纳入既有 draft PR #1 的 fast-forward 交接路径；prompt 只规定取得当前 Git/ledger 真相、skill 镜像、R5 防伪取证、host-portability、权限、运行顺序与完成标准，不建立第二份 current TODO/status。
+- Original-machine boundary: 原 Windows profile 路径含空格，当前 helper 固定的交接机 roots 不可直接复用。原机器必须先只读封存真实 autosave/三份命名 ZIP，并按 JAP/open-trade/DOM+JXP mission serialization/JXP completed missions/六个 BOM series 与 pre-0.24.2 来源链复核内容身份，再对实际 game/daily/repo/acceptance roots 做受审查 portability 切片；任何 root/matrix/toolchain 变化后必须在最终 matrix SHA 下从 PROBE 起重跑，禁止用宽松路径参数、junction、旧 collection 或手工重标绕过 guard。
+- Evidence: `git diff --check` 通过；主 Mod release gate `26/26`、Clausewitz `250/250`、core unit tests `221/221`；无 `-SkipMainModValidation` 的联合 map/history/content/compat/assets gate 为 `0 errors / 0 warnings`，覆盖 88 省、120 profiles 与全部 137,382 个可选日期；acceptance-helper tests `52/52`；runtime oracle `--check` 为 current；repo/installed skill 均 `Skill is valid!` 且 `11/11` 文件逐字节镜像。Current Snapshot 的联合事件实测数由陈旧 `498` 修正为 `500`；没有改玩法、地图、descriptor、runtime payload candidate、场景 blocker 或版本。
+- Runtime/TODO: 没有启动 EU4、Launcher、dowser、bootstrapper 或 observer，没有生成或声称新的运行时证据；`JXP-016` 保持 `IN_PROGRESS / PROJECT`，其余 Active TODO status/owner 不变。R5 仍只能来自原机器真实未修改原件，prompt 本身不构成启动或上传许可。
 
 ### 2026-07-13 - RUNTIME-PREP-004 - Runtime evidence proof-chain hardening (`no version bump`)
 
