@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import base64
 import contextlib
-from hashlib import sha256
+from hashlib import sha1, sha256
 import json
 import os
 from pathlib import Path
@@ -2812,6 +2812,171 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             ignored.write_bytes(b"ignored but executable import data")
             with self.assertRaises(runtime.AcceptanceError):
                 runtime._r13_git_tree_record(repo, "tools", "test tools")
+
+            trusted_blob = b"trusted Git batch body\n"
+            corrupt_blob = b"X" + trusted_blob[1:]
+            git_oid = sha1(
+                f"blob {len(trusted_blob)}\0".encode("ascii") + trusted_blob
+            ).hexdigest()
+            batch_record: dict[str, object] = {
+                "path": "tools/blob.bin",
+                "bytes": len(trusted_blob),
+                "git_blob": git_oid,
+            }
+
+            def batch(body: bytes) -> bytes:
+                return (
+                    f"{git_oid} blob {len(body)}\n".encode("ascii")
+                    + body
+                    + b"\n"
+                )
+
+            with patch.object(
+                runtime, "_git_bytes", return_value=batch(trusted_blob)
+            ) as read:
+                self.assertEqual(
+                    [sha256(trusted_blob).hexdigest()],
+                    runtime._r13_git_batch_sha256(
+                        repo, [batch_record], "test clean Git batch"
+                    ),
+                )
+            self.assertEqual(1, read.call_count)
+
+            with patch.object(
+                runtime,
+                "_git_bytes",
+                side_effect=[batch(corrupt_blob), batch(trusted_blob)],
+            ) as read:
+                self.assertEqual(
+                    [sha256(trusted_blob).hexdigest()],
+                    runtime._r13_git_batch_sha256(
+                        repo, [batch_record], "test Git batch"
+                    ),
+                )
+            self.assertEqual(2, read.call_count)
+            self.assertNotIn("sha256", batch_record)
+
+            second_blob = b"second trusted Git batch body\n"
+            corrupt_second = second_blob[:-1] + b"X"
+            second_oid = sha1(
+                f"blob {len(second_blob)}\0".encode("ascii") + second_blob
+            ).hexdigest()
+            second_record: dict[str, object] = {
+                "path": "tools/second.bin",
+                "bytes": len(second_blob),
+                "git_blob": second_oid,
+            }
+
+            def multi_batch(first: bytes, second: bytes) -> bytes:
+                return b"".join(
+                    (
+                        batch(first),
+                        f"{second_oid} blob {len(second)}\n".encode("ascii"),
+                        second,
+                        b"\n",
+                    )
+                )
+
+            with patch.object(
+                runtime,
+                "_git_bytes",
+                side_effect=[
+                    multi_batch(trusted_blob, corrupt_second),
+                    multi_batch(trusted_blob, second_blob),
+                ],
+            ) as read:
+                self.assertEqual(
+                    [
+                        sha256(trusted_blob).hexdigest(),
+                        sha256(second_blob).hexdigest(),
+                    ],
+                    runtime._r13_git_batch_sha256(
+                        repo,
+                        [batch_record, second_record],
+                        "test multi Git batch",
+                    ),
+                )
+            self.assertEqual(2, read.call_count)
+            self.assertNotIn("sha256", batch_record)
+            self.assertNotIn("sha256", second_record)
+
+            with (
+                patch.object(
+                    runtime, "_git_bytes", return_value=b"malformed header\n"
+                ) as read,
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "Git blob batch header disagrees"
+                ),
+            ):
+                runtime._r13_git_batch_sha256(
+                    repo, [batch_record], "test malformed Git batch"
+                )
+            self.assertEqual(1, read.call_count)
+
+            structural_failures = (
+                (
+                    "wrong type",
+                    f"{git_oid} tree {len(trusted_blob)}\n".encode("ascii")
+                    + trusted_blob
+                    + b"\n",
+                    "Git blob batch header disagrees",
+                ),
+                (
+                    "wrong size",
+                    f"{git_oid} blob {len(trusted_blob) - 1}\n".encode("ascii")
+                    + trusted_blob[:-1]
+                    + b"\n",
+                    "Git blob size disagrees",
+                ),
+                (
+                    "truncated",
+                    batch(trusted_blob)[:-1],
+                    "Git blob batch body is truncated",
+                ),
+            )
+            for case, response, pattern in structural_failures:
+                with (
+                    self.subTest(case=case),
+                    patch.object(
+                        runtime, "_git_bytes", return_value=response
+                    ) as read,
+                    self.assertRaisesRegex(runtime.AcceptanceError, pattern),
+                ):
+                    runtime._r13_git_batch_sha256(
+                        repo, [batch_record], "test structural Git batch"
+                    )
+                self.assertEqual(1, read.call_count)
+
+            with (
+                patch.object(
+                    runtime,
+                    "_git_bytes",
+                    return_value=batch(corrupt_blob) + b"trailing",
+                ) as read,
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError, "Git blob batch has trailing data"
+                ),
+            ):
+                runtime._r13_git_batch_sha256(
+                    repo, [batch_record], "test trailing Git batch"
+                )
+            self.assertEqual(1, read.call_count)
+
+            with (
+                patch.object(
+                    runtime,
+                    "_git_bytes",
+                    side_effect=[batch(corrupt_blob)] * 3,
+                ) as read,
+                self.assertRaisesRegex(
+                    runtime.AcceptanceError,
+                    "Git blob body hash disagrees after 3 reads",
+                ),
+            ):
+                runtime._r13_git_batch_sha256(
+                    repo, [batch_record], "test Git batch"
+                )
+            self.assertEqual(3, read.call_count)
 
     def test_close_release_rejects_missing_failed_stale_and_inexact_inputs(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

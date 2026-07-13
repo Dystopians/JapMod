@@ -377,6 +377,10 @@ entrypoint; that canonical file is an execution capability, while its directory
 is never appended to `sys.path`. Before and after every command, the helper requires all
 repository toolchain inputs—including ignored/untracked files—to equal one exact
 Git HEAD and requires the installed skill to equal that Git-derived skill tree.
+Every `cat-file --batch` response body is independently reframed and matched to
+its Git object OID before its SHA-256 enters the manifest; an authenticated body
+mismatch permits at most three immediate reads, while all other protocol errors
+fail without retry.
 Python/Windows/Git/quick-validator bytes are separately compared with the
 Git-tracked `r13_external_toolchain_baseline.json`. It also checks the runtime
 payload and stopped-process guard, and seals that toolchain revision/baseline,

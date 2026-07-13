@@ -7932,6 +7932,7 @@ _R13_TRUSTED_GIT = Path(r"F:\Git\mingw64\bin\git.exe")
 _R13_TRUSTED_GIT_SHA256 = (
     "d117eb75c7541372ed43a8e6bbb70230a846daff47946107a87e7c52b4c6581d"
 )
+_R13_GIT_BATCH_READ_ATTEMPTS = 3
 _R13_GIT_TOOLCHAIN_PATHS = (
     "japan_expanded_v2/tools",
     "japan_expanded_v2/AGENTS.md",
@@ -8090,6 +8091,65 @@ def _r13_git_blob_hashes(path: Path, label: str) -> tuple[int, str, str]:
     return after.st_size, git_digest.hexdigest(), content_digest.hexdigest()
 
 
+def _r13_git_batch_sha256(
+    repo: Path,
+    records: Sequence[dict[str, object]],
+    label: str,
+) -> list[str]:
+    """Read Git blobs in one batch and authenticate every response body."""
+
+    batch_input = "".join(f"{item['git_blob']}\n" for item in records).encode(
+        "ascii"
+    )
+    for attempt in range(_R13_GIT_BATCH_READ_ATTEMPTS):
+        batch = _git_bytes(repo, "cat-file", "--batch", input_bytes=batch_input)
+        cursor = 0
+        digests: list[str] = []
+        body_mismatch_path: str | None = None
+        for item in records:
+            header_end = batch.find(b"\n", cursor)
+            if header_end < 0:
+                raise AcceptanceError(f"{label} Git blob batch is truncated")
+            header = batch[cursor:header_end].split()
+            oid = str(item["git_blob"])
+            if (
+                len(header) != 3
+                or header[0].decode("ascii", errors="strict") != oid
+                or header[1] != b"blob"
+                or not header[2].isdigit()
+            ):
+                raise AcceptanceError(f"{label} Git blob batch header disagrees")
+            size = int(header[2])
+            start = header_end + 1
+            end = start + size
+            if end >= len(batch) or batch[end : end + 1] != b"\n":
+                raise AcceptanceError(f"{label} Git blob batch body is truncated")
+            content = batch[start:end]
+            if size != item["bytes"]:
+                raise AcceptanceError(f"{label} Git blob size disagrees")
+            git_digest = sha1()
+            git_digest.update(f"blob {size}\0".encode("ascii"))
+            git_digest.update(content)
+            if (
+                git_digest.hexdigest() != oid
+                and body_mismatch_path is None
+            ):
+                body_mismatch_path = str(item["path"])
+            digests.append(sha256(content).hexdigest())
+            cursor = end + 1
+        if cursor != len(batch):
+            raise AcceptanceError(f"{label} Git blob batch has trailing data")
+        if body_mismatch_path is not None:
+            if attempt + 1 < _R13_GIT_BATCH_READ_ATTEMPTS:
+                continue
+            raise AcceptanceError(
+                f"{label} Git blob body hash disagrees after "
+                f"{_R13_GIT_BATCH_READ_ATTEMPTS} reads: {body_mismatch_path}"
+            )
+        return digests
+    raise AcceptanceError(f"{label} Git blob batch verification did not complete")
+
+
 def _r13_git_expected_manifest(
     repo: Path, relative: str, label: str
 ) -> tuple[str, list[dict[str, object]]]:
@@ -8143,33 +8203,9 @@ def _r13_git_expected_manifest(
     records.sort(key=lambda item: str(item["path"]))
     if len({str(item["path"]).casefold() for item in records}) != len(records):
         raise AcceptanceError(f"{label} has case-colliding Git paths")
-    batch_input = "".join(f"{item['git_blob']}\n" for item in records).encode("ascii")
-    batch = _git_bytes(repo, "cat-file", "--batch", input_bytes=batch_input)
-    cursor = 0
-    for item in records:
-        header_end = batch.find(b"\n", cursor)
-        if header_end < 0:
-            raise AcceptanceError(f"{label} Git blob batch is truncated")
-        header = batch[cursor:header_end].split()
-        if (
-            len(header) != 3
-            or header[0].decode("ascii", errors="strict") != item["git_blob"]
-            or header[1] != b"blob"
-            or not header[2].isdigit()
-        ):
-            raise AcceptanceError(f"{label} Git blob batch header disagrees")
-        size = int(header[2])
-        start = header_end + 1
-        end = start + size
-        if end >= len(batch) or batch[end : end + 1] != b"\n":
-            raise AcceptanceError(f"{label} Git blob batch body is truncated")
-        content = batch[start:end]
-        if size != item["bytes"]:
-            raise AcceptanceError(f"{label} Git blob size disagrees")
-        item["sha256"] = sha256(content).hexdigest()
-        cursor = end + 1
-    if cursor != len(batch):
-        raise AcceptanceError(f"{label} Git blob batch has trailing data")
+    digests = _r13_git_batch_sha256(repo, records, label)
+    for item, digest in zip(records, digests, strict=True):
+        item["sha256"] = digest
     return revision, records
 
 

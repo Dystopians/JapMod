@@ -74,7 +74,10 @@ reject game/launcher/userdir/skip-main arguments, derive system executables
 without caller environment variables, and pass a complete minimal environment.
 Bind every repo tool input and the installed skill to one exact Git HEAD while
 rejecting ignored/untracked additions; bind external Python/Windows/Git inputs to
-a reviewed Git-tracked manifest. Run Python with isolated/no-site/safe-path
+a reviewed Git-tracked manifest. Independently reframe and hash every batched Git
+blob response against its declared object OID before deriving SHA-256; retry only
+an identified body-integrity failure and keep that retry count small and fixed.
+Run Python with isolated/no-site/safe-path
 startup, standard library before Git-verified roots, and only exact copied
 dependency distributions afterward. If a Git-verified skill script must run,
 allow only its exact canonical file as an execution target and do not append the
