@@ -3,11 +3,16 @@
   "canonical_status_source": "japan_expanded_v2/dev_logs/JXP_SHARED_DEVELOPMENT_LEDGER.md",
   "purpose": "Execution and evidence matrix only; this file never changes TODO status.",
   "pinned_game": "EU4 v1.37.5.0 Inca (491d)",
+  "current_candidate_revision": "7551fc528f26148d25e0f3ae28e581b63ca70813",
   "current_release": {
     "main": "0.28.0",
     "map": "0.1.3-alpha"
   },
   "legacy_sources": {
+    "0.25.0": {
+      "commit": "6e461e2e47a839a77b2e376ce61ceb317d393320",
+      "use": "Generate real pre-Toyotomi and pre-0.26 Hakko-visibility saves for current migration."
+    },
     "0.27.0": {
       "commit": "8a5962628014e696bda764bcad10bfd3faee188e",
       "use": "Generate ten real 0.27 final-state saves for 0.28 migration."
@@ -34,6 +39,12 @@
       "todos": ["JXP-001", "JXP-005", "JXP-017"],
       "playset": "current main + map only",
       "fixture": "1444.11.11 new campaign",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 3,
+        "minimum_saves": 1
+      },
       "steps": [
         "Pause immediately and capture map, mission tree, and government state.",
         "Advance one day and then a second day to allow startup migration and two-phase mission refresh.",
@@ -56,6 +67,12 @@
       "todos": ["JXP-005", "JXP-020", "JXP-017"],
       "playset": "current main + map only",
       "fixture": "new 1444 starts for RKK, KYO, HNM, DHO, TGS",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 15,
+        "minimum_saves": 0
+      },
       "steps": [
         "Open each representative warrior, court, maritime, frontier, and temple-market profile.",
         "Advance two days and inspect missions, national ideas, and government reforms."
@@ -73,10 +90,17 @@
       "todos": ["JXP-005", "JXP-020", "JXP-022"],
       "playset": "current main-only",
       "fixture": "branches from one disposable unified-Japan save",
+      "session_contract": {
+        "required_components": ["main"],
+        "required_versions": {"main": "0.28.0"},
+        "minimum_screenshots": 30,
+        "minimum_saves": 2
+      },
       "steps": [
         "Use the debug menu to construct uncommitted, Sakoku, Open, KJP, CJP, EJP, RFJ, SJP, IJP, and WAK states.",
-        "For each state inspect immediately and after one day, then capture missions, ideas, and reforms.",
-        "Perform at least one JAP-route to JAP-route and one final-tag to final-tag transition."
+        "For each state inspect immediately and after one day; capture missions, ideas, every matching route/power-structure reform at its exact tier, and prove foreign-route reforms are absent.",
+        "In at least one JAP route and one final tag, satisfy and click the real political capstone mission, record its permanent modifier, save, and only then transition JAP-route to JAP-route and final-tag to final-tag.",
+        "After each transition advance two days, save/reload, and prove the prior power structure and completed capstone modifier clear while the destination signature remains stable."
       ],
       "evidence": ["30 state UI screenshots", "transition before/after saves", "fresh log"],
       "acceptance": [
@@ -87,20 +111,45 @@
     },
     {
       "id": "R4",
-      "title": "Real 0.27 ten-state migration",
-      "todos": ["JXP-002", "JXP-022"],
-      "playset": "0.27 main-only to generate; current main-only to migrate",
-      "fixture": "ten engine saves from commit 8a5962628014e696bda764bcad10bfd3faee188e",
+      "title": "Real 0.25/0.27 migration matrix",
+      "todos": ["JXP-002", "JXP-018", "JXP-022", "JXP-023"],
+      "playset": "0.25 and 0.27 main-only to generate; current main-only to migrate",
+      "fixture": "engine saves from immutable commits 6e461e2e47a839a77b2e376ce61ceb317d393320 and 8a5962628014e696bda764bcad10bfd3faee188e",
+      "session_phases": {
+        "legacy-025-generate": {
+          "required_components": ["main"],
+          "required_versions": {"main": "0.25.0"},
+          "required_source_revisions": {"main": "6e461e2e47a839a77b2e376ce61ceb317d393320"},
+          "minimum_screenshots": 4,
+          "minimum_saves": 2
+        },
+        "legacy-027-generate": {
+          "required_components": ["main"],
+          "required_versions": {"main": "0.27.0"},
+          "required_source_revisions": {"main": "8a5962628014e696bda764bcad10bfd3faee188e"},
+          "minimum_screenshots": 10,
+          "minimum_saves": 10
+        },
+        "current-migrate": {
+          "required_components": ["main"],
+          "required_versions": {"main": "0.28.0"},
+          "minimum_screenshots": 14,
+          "minimum_saves": 12
+        }
+      },
       "steps": [
-        "Create a stable 0.27 uncommitted baseline and branch it before any route forcing.",
-        "Generate each state independently, advance two days, complete one shared and one route mission, save/reload, and save again.",
-        "Load each input under 0.28, advance two days, save/reload, and advance two more days."
+        "Run before-session R4 --phase legacy-027-generate, create a stable uncommitted baseline, and branch it before any route forcing.",
+        "Under 0.27 generate each of the ten states independently, advance two days, complete one shared and one route mission, save/reload, and save again.",
+        "Run before-session R4 --phase legacy-025-generate and create two genuine engine fixtures without serialization edits: an ODA/JAP pre-Toyotomi transition save and a Japanese emperor with the real Hakko mission unlock but without the 0.26 visibility-reconcile state.",
+        "Switch to an exactly isolated current-main playset, run before-session R4 --phase current-migrate, and load all twelve inputs; advance two days, save/reload, and advance two more days.",
+        "For the 0.25 ODA fixture execute the current production Toyotomi decision and verify TOY identity; for the 0.25 Hakko fixture verify the current migration regenerates celestial candidates without debug-granting the reform."
       ],
-      "evidence": ["ten input/output save pairs with SHA-256", "state UI screenshots", "one fresh log per migration batch"],
+      "evidence": ["twelve input/output save pairs with SHA-256 and source commit", "state/Toyotomi/Hakko UI screenshots", "one fresh log per phase"],
       "acceptance": [
         "Route/tag, completed missions, unique ideas, unique power structure, and five-column tree survive.",
         "No DOM/BOM or foreign route series remains active.",
-        "jxp_final_state_power_migration_v0280 settles once and remains stable after reload."
+        "jxp_final_state_power_migration_v0280 settles once and remains stable after reload.",
+        "The genuine 0.25 fixtures prove Toyotomi identity migration and jxp_hakko_visibility_reconciled_v0260 candidate regeneration without hand-edited flags."
       ]
     },
     {
@@ -109,6 +158,12 @@
       "todos": ["JXP-002"],
       "playset": "current main-only",
       "fixture": "external real failing save only",
+      "session_contract": {
+        "required_components": ["main"],
+        "required_versions": {"main": "0.28.0"},
+        "minimum_screenshots": 2,
+        "minimum_saves": 2
+      },
       "steps": [
         "Acquire the original problem autosave or a real pre-0.24.1 failing engine save.",
         "Record its unmodified hash before loading; never seed flags or edit serialization.",
@@ -125,18 +180,35 @@
       "id": "R6",
       "title": "CJP harmonization and native center behavior",
       "todos": ["JXP-004"],
-      "playset": "current main + map only",
-      "fixture": "new disposable CJP route campaign",
+      "playset": "current main + map for new campaign; current main-only for a genuine 0.27 CJP save",
+      "fixture": "new disposable CJP route campaign plus the real 0.27 CJP input from R4",
+      "session_phases": {
+        "current-map-new": {
+          "required_components": ["main", "map"],
+          "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+          "minimum_screenshots": 8,
+          "minimum_saves": 2
+        },
+        "current-main-old-save": {
+          "required_components": ["main"],
+          "required_versions": {"main": "0.28.0"},
+          "minimum_screenshots": 4,
+          "minimum_saves": 2
+        }
+      },
       "steps": [
-        "Enter CJP and allow the normal Confucian setup event to create native centers.",
-        "Verify Shinto harmonizes once, exactly three native centers are possible, and Ise province 4359 stays protected.",
-        "Observe at least one natural engine conversion and exercise Neo-Confucian, urbanization, and Nanban bridge entries."
+        "Run the current-map-new phase, enter CJP, and allow the normal Confucian setup event to create native centers without directly placing centers or harmonization flags.",
+        "Record harmony, setup flags, and native-center count before and after a second route reconcile; Shinto must harmonize once and no fourth center may appear.",
+        "Protect four separate Shinto targets before natural spread: Ise 4359, one religious_center province, one religious_zeal_at_conv province, and one existing reformation center; prove each remains ineligible.",
+        "Observe at least one natural engine conversion on an eligible province and exercise Neo-Confucian, urbanization, and Nanban bridge entries; record source-chain and bridge flags before/after to prove no duplicate scheduling.",
+        "Run the current-main-old-save phase with the genuine 0.27 CJP save from R4, advance two days, and repeat the center-count, harmonization, protected-target, bridge, save/reload, and natural-conversion checks."
       ],
       "evidence": ["religion/harmony/map/Ise screenshots", "before/after saves", "fresh log"],
       "acceptance": [
         "Shinto is not harmonized repeatedly.",
-        "Ise remains Shinto and never hosts a Confucian center.",
-        "Bridge events fire in CJP without duplicating their source chains."
+        "Ise and every other engine-protected target remain Shinto and never host a Confucian center.",
+        "New and genuine old saves both settle at no more than three native centers and permit an eligible natural conversion.",
+        "Bridge events fire in CJP without duplicating their source chains or completion flags."
       ]
     },
     {
@@ -145,16 +217,23 @@
       "todos": ["JXP-008"],
       "playset": "current main + map only",
       "fixture": "new WAK disposable campaign plus observer branch",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 8,
+        "minimum_saves": 3
+      },
       "steps": [
         "Exercise all three investments, 50 and 85 pressure thresholds, dividend and crisis events, and both exits.",
-        "Save/reload mid-cycle, then leave the route and advance one day to verify cleanup.",
-        "Run an AI observer sample without debug forcing outcomes."
+        "Save/reload mid-cycle, leave the route and advance one day to verify cleanup, then return and naturally pass the 1825-day cooldown to prove a finite investment can be selected again without permanent stacking.",
+        "Run an AI observer sample for at least two complete 1825-day cycles without debug-forcing outcomes; record dates, AI country, each investment, 50/85 threshold, dividend, crisis, exit, and final flag/modifier counts."
       ],
       "evidence": ["pressure/tooltips/events screenshots", "mid-cycle and exit saves", "observer notes", "fresh log"],
       "acceptance": [
         "Finite modifiers do not stack permanently and both exits close the cycle.",
         "Route loss clears active state.",
-        "Companion jxp_map_compat_wokou_waters scope behaves as intended."
+        "Companion jxp_map_compat_wokou_waters scope behaves as intended.",
+        "The fixed observer window shows AI participation and ends with no orphaned cycle flag or modifier."
       ]
     },
     {
@@ -163,16 +242,26 @@
       "todos": ["JXP-009"],
       "playset": "current main + map only",
       "fixture": "new IJP disposable campaign plus observer branch",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 12,
+        "minimum_saves": 3
+      },
       "steps": [
         "Exercise all three governance choices, 50 and 85 thresholds, petition and crisis events, and both exits.",
-        "Save/reload mid-cycle and verify route-loss cleanup.",
-        "Prove the entry is unavailable during Shimabara or another active disaster and returns after cleanup; run an AI observer sample."
+        "Save/reload mid-cycle, verify route-loss cleanup, return, and naturally pass the 1825-day cooldown to prove repeatability without permanent stacking.",
+        "Independently prove entry is unavailable for a wrong religion, missing required estate/community state, outside every vanilla/companion Ikko geography, during Shimabara, and during another active disaster; restore each prerequisite one at a time and prove availability returns only when all gates pass.",
+        "Complete jxp_mission_terauchi_league and jxp_mission_pure_land_covenant through their real mission buttons, verify jxp_ikko.2 and jxp_ikko.8 schedule exactly once, then complete jxp_mission_ikko_realm_of_fellowship and jxp_mission_ijp_somon_constitution and inspect their persistent state after reload.",
+        "Run an AI observer sample for at least two complete 1825-day cycles without debug-forcing outcomes; record dates, AI country, choices, thresholds, petitions, crises, exits, and final flag/modifier counts."
       ],
       "evidence": ["positive/negative UI screenshots", "mid-cycle and exit saves", "observer notes", "fresh log"],
       "acceptance": [
         "IJP does not overlap Shimabara or another active disaster.",
         "Finite modifiers and cycle flags close on either exit or route loss.",
-        "Companion jxp_map_compat_ikko_heartland scope behaves as intended."
+        "Religion, estate/community, geography, and disaster gates each reject an otherwise identical negative fixture.",
+        "The two named route missions schedule jxp_ikko.2/.8 once, while the two named final missions and their persistent results survive reload.",
+        "Companion jxp_map_compat_ikko_heartland scope behaves as intended and the fixed observer window ends clean."
       ]
     },
     {
@@ -181,10 +270,16 @@
       "todos": ["JXP-018", "JXP-017"],
       "playset": "current main + map only",
       "fixture": "disposable ODA campaign prepared by debug scaffold but transitioned by production decision",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 10,
+        "minimum_saves": 2
+      },
       "steps": [
         "Use jxp_debug_prepare_toyotomi_decision, set the date to 1586, and click jxp_decision_assume_toyotomi_name itself.",
         "Inspect before/after tag, flag, name, ideas, missions, Five Regents reform, and subjects; save/reload.",
-        "Inspect 1585-12-31/1586-01-01, 1600-10-20/21, and Settsu 1615-06-03/04 boundaries."
+        "From the country/date selection screen create separate starts at 1585-12-31/1586-01-01, 1600-10-20/21, and Settsu 1615-06-03/04; do not use a console date change as history-boundary evidence."
       ],
       "evidence": ["transition UI screenshots", "before/after save pair", "date-boundary screenshots", "fresh log"],
       "acceptance": [
@@ -199,10 +294,18 @@
       "todos": ["JXP-010", "JXP-023"],
       "playset": "current main-only with Mandate of Heaven enabled",
       "fixture": "two disposable Japanese campaigns for both unlock orderings",
+      "session_contract": {
+        "required_components": ["main"],
+        "required_versions": {"main": "0.28.0"},
+        "required_runtime_dlc": {"Mandate of Heaven": "Enabled"},
+        "minimum_screenshots": 10,
+        "minimum_saves": 4
+      },
       "steps": [
         "Test emperor-first then normal mission unlock, and mission-first then emperor acquisition.",
         "The emperor debug scaffold may transfer the Mandate but must not unlock or pass Hakko; complete the real mission and click the real reform.",
-        "Compare a fixed East Asian province under a normal conquest CB and cb_jxp_hakko_ichiu, then execute the peace. Test locked and foreign-emperor negatives."
+        "Fork one baseline save with the same attacker, defender, target province, claim state, development, and modifiers; use normal conquest in one branch and cb_jxp_hakko_ichiu in the other, record the exact AE tooltip/coalition result, and execute both otherwise identical peaces.",
+        "Test mission-locked Japanese emperor, unlocked non-emperor, and foreign-emperor negatives before and after save/reload."
       ],
       "evidence": ["two ordering sequences", "reform/declaration/peace screenshots", "AE comparison", "before/after saves", "fresh logs"],
       "acceptance": [
@@ -217,9 +320,16 @@
       "todos": ["JXP-010", "JXP-023"],
       "playset": "current main-only with Mandate of Heaven disabled",
       "fixture": "new disposable Japanese campaign",
+      "session_contract": {
+        "required_components": ["main"],
+        "required_versions": {"main": "0.28.0"},
+        "required_runtime_dlc": {"Mandate of Heaven": "Disabled"},
+        "minimum_screenshots": 5,
+        "minimum_saves": 1
+      },
       "steps": [
         "Record launcher DLC state, take the normal fallback path, and complete the mandate-claim mission.",
-        "Inspect rewards, modifiers, reform list, and CB list; save/reload."
+        "Record the exact fallback modifier, imperial-sanction/task rewards, reform list, and CB list before and after save/reload."
       ],
       "evidence": ["DLC-state screenshot", "fallback/mission/reform/CB screenshots", "save", "fresh log"],
       "acceptance": [
@@ -234,16 +344,25 @@
       "todos": ["JXP-005", "JXP-017"],
       "playset": "current main + map only",
       "fixture": "new campaigns and official bookmark/date selections only",
+      "session_contract": {
+        "required_components": ["main", "map"],
+        "required_versions": {"main": "0.28.0", "map": "0.1.3-alpha"},
+        "minimum_screenshots": 40,
+        "minimum_saves": 2
+      },
       "steps": [
-        "Inspect key islands, ports, straits, unit/fleet positions, labels, and all 12 official bookmarks.",
-        "Inspect dates around 1456, 1488, 1523, 1549, 1568, 1582, 1600, 1609, 1622, and 1820 transitions.",
-        "Exercise all 19 visible map/regional events, 33 map missions, five origins, and 88-province unification; save/reload and run several months."
+        "Inspect Japan-wide land connectivity, straits, every port direction, unit/fleet positions, and label legibility; capture focused views of Iki, Tsushima, Sado, Oki, Amami, Okinawa, and Sakishima.",
+        "Open all 12 official bookmarks and create separate date-selection starts for the previous day, exact day, and next day of every planned boundary around 1456, 1488, 1523, 1549, 1568, 1582, 1600, 1609, 1622, and 1820; verify owner, core, capital, and subject state rather than changing date by console.",
+        "Exercise all 19 visible map/regional events and every option; verify localisation, event art, modifier/development target, one-time flag behavior, and all five origin-specific six-node mission/icon chains (33 map missions total).",
+        "Use the production/debug unification action, then audit all 88 provinces for transfer, cores, cleared illegal occupations, semantic geography flags, origin-legacy continuity, and immediate-plus-next-day main mission refresh.",
+        "Save, fully exit, reload, and advance beyond at least one 1 January annual tick and for at least twelve total months; prove initialization, annual legacy scheduling, and one-time flags do not duplicate."
       ],
       "evidence": ["full-map and focus screenshots", "bookmark/date screenshots", "event/mission screenshots", "unification save", "fresh log"],
       "acceptance": [
         "No black province, bad adjacency, wrong port, displaced unit, unreadable label, or history gap.",
         "All event effects land on intended semantic geography.",
-        "Save/reload and several months remain stable."
+        "Every boundary start has the planned owner/core/capital/subject state and all 88 provinces unify/core/clean correctly.",
+        "Save/reload, an annual tick, and twelve months remain stable without duplicate origin inheritance or one-time content."
       ]
     },
     {
