@@ -3,7 +3,7 @@
   "canonical_status_source": "japan_expanded_v2/dev_logs/JXP_SHARED_DEVELOPMENT_LEDGER.md",
   "purpose": "Execution and evidence matrix only; this file never changes TODO status.",
   "pinned_game": "EU4 v1.37.5.0 Inca (491d)",
-  "current_candidate_revision": "7551fc528f26148d25e0f3ae28e581b63ca70813",
+  "current_candidate_revision": "028e667a12c3ab24f539b492a1b1da0afaa0ac4d",
   "current_release": {
     "main": "0.28.0",
     "map": "0.1.3-alpha"

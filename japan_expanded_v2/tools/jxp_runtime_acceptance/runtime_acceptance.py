@@ -695,8 +695,9 @@ def deploy(
         "launcher_configuration_modified": False,
         "game_started": False,
         "instruction": (
-            "Use the launcher UI to create an isolated playset. Exclude Graphical "
-            "Map Improvements and every unrelated mod."
+            "Prepare only this dedicated user-data root's dlc_load.json. After "
+            "explicit startup permission, prove the pinned EU4 userdir protocol; "
+            "never fall back to the daily Launcher configuration."
         ),
     }
 

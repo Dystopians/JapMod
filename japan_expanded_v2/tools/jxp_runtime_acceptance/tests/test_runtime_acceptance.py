@@ -232,6 +232,8 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             self.assertFalse(dlc_check["matched"])
 
     def test_live_release_manifest_is_tracked_and_development_free(self) -> None:
+        candidate_revision = runtime._current_candidate_revision()
+        candidate_paths = ["japan_expanded_v2.mod", "japan_expanded_v2_map.mod"]
         tracked = set(
             subprocess.run(
                 ["git", "-C", str(LIVE_REPO), "ls-files"],
@@ -242,6 +244,14 @@ class RuntimeAcceptanceTests(unittest.TestCase):
             ).stdout.splitlines()
         )
         for component in runtime._current_components(LIVE_REPO, False):
+            component_root = component.source.relative_to(LIVE_REPO).as_posix()
+            candidate_paths.extend(
+                f"{component_root}/{relative}"
+                for relative in (
+                    *runtime.RUNTIME_DIRECTORIES[component.key],
+                    *runtime.RUNTIME_ROOT_FILES,
+                )
+            )
             files = runtime._runtime_files(component)
             relative_to_repo = {
                 path.relative_to(LIVE_REPO).as_posix() for path in files
@@ -256,6 +266,19 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     for path in files
                 )
             )
+        subprocess.run(
+            [
+                "git",
+                "-C",
+                str(LIVE_REPO),
+                "diff",
+                "--quiet",
+                candidate_revision,
+                "--",
+                *candidate_paths,
+            ],
+            check=True,
+        )
 
     def test_content_addressed_deploy_is_ordinary_verified_and_idempotent(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

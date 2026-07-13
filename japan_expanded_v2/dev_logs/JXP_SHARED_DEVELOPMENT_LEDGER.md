@@ -25,7 +25,7 @@
 - Pinned game: `EU4 v1.37.5.0 Inca (491d)`
 - Supported version: `1.37.*`
 - Runtime acceptance: `PENDING_USER_APPROVAL`
-- Main static gate: `26/26 checks; 211/211 core unit tests; 7/7 acceptance-helper tests`
+- Main static gate: `26/26 checks; 211/211 core unit tests; 13/13 acceptance-helper tests`
 - Combined static gate: `0 errors; 0 warnings`
 - Main missions: `288 mission IDs; 41 custom series; 192 effective profiles`
 - Combined missions: `321 mission IDs; 46 series; 120 companion tag/DLC profiles`
@@ -168,7 +168,7 @@
 8. **dormant reforms。** 306 个旧定义仍保留以兼容/历史用途，任何生成器或手改不得把它们重新注册到 UI。
 9. **Chinese localisation pipeline。** source 与 active 文件不可混改；Markdown 日志不得经过 EU4SpecialEscape。
 10. **并行 agent 冲突。** Git 已提供提交与 worktree 边界，但总账仍采用 lead-agent 单写者协议；并行分支不得各自改写总账后假设可自动合并。
-11. **运行时 playset 隔离。** 主 Mod + 伴随地图验收必须使用专用 playset，并排除 Graphical Map Improvements 及任何其他地图 overhaul；不得以用户日常 playset 的成功或失败代替 JXP 当前版本证据。
+11. **运行时隔离协议尚未获引擎证明。** 正式验收必须只启用场景声明的 exact owned descriptors，排除中文补丁、Graphical Map Improvements 与所有无关 Mod。Launcher 2026.6 的静态审计未发现受支持的 playset/mod CLI；EU4 二进制虽解析带值的 `userdir` 键，其准确命令行形式仍须在用户明确许可后做隔离协议探针。探针通过前不得修改默认 `launcher-v2.sqlite` 或 `dlc_load.json`。
 12. **pre-0.24.2 真实旧档缺口。** 当前 Git 最早完整源码是 `6e461e2` / `0.25.0`，本机现有 202 个存档也没有 JXP 元数据；仓库可由 `8a59626` / `0.27.0` 生成十状态迁移输入，但不能伪造早期 DOM/BOM series、BOM-prefixed key 或 stacked free-idea 的真实序列化档。若要补齐该历史回归的游戏内证据，必须找回原问题 `autosave.eu4`，或找回能实际生成故障状态的 pre-0.24.1 发布包及其引擎存档。
 
 ## Validation Matrix
@@ -242,6 +242,19 @@ $repo = '<repo>'
 ## Update Journal
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
+
+### 2026-07-13 - RUNTIME-PREP-002 - Runtime evidence integrity and matrix hardening (`no version bump`)
+
+- Status: `STATIC_PASS; ISOLATED_REDEPLOYED_NOT_ENABLED; PENDING_USER_APPROVAL`。
+- Scope: 仅加固 `tools/jxp_runtime_acceptance/` 的 README、helper、R1-R13 场景矩阵与测试；未改玩法、地图、descriptor 版本或 release content。
+- Snapshot correction: 审计发现 `RUNTIME-PREP-001` 的递归 `gfx` 白名单包含 `source` / `preview` / `backup*` 开发目录，当前主快照还包含 Git 忽略的 `gfx/flags/source/__pycache__/build_toyotomi_flag.cpython-313.pyc`。旧主 `d184753285c7...`、旧地图 `29dcb6e01d93...`、旧 0.27 主 `e7df9d31a951...` 的内容 hash 虽自洽，但不能从所记录 Git revision 重现，故其历史部署记录保留但 acceptance-evidence 资格撤销；核对 owned marker、descriptor path、目标根与全部 reparse 状态后，三套旧 payload/descriptor 已从日常 `mod` 目录安全退役。
+- Tooling: runtime manifest 现排除 source/preview/backup、构建脚本、源图与 bytecode，并拒绝 Windows drive/UNC/backslash、archive escape、symlink 与 junction；部署复用及 `before-session` 强制核对 exact marker、canonical owned path、manifest/file set、逐文件 hash、clean 40-char source revision、component/version/dependency/phase。当前场景绑定候选提交 `028e667a12c3ab24f539b492a1b1da0afaa0ac4d`；session schema 2 拒绝旧/缺字段记录，R13 只允许发布收口而不能伪装游戏会话。`collect` 只扫描本 session 实际变化的 fresh logs，复核 payload/playset/场景 DLC 的全部观测状态，并只以不同且 fresh 的 screenshot/save 满足最低数量；clean collection gate 仍不替代人工 UI/引擎断言。
+- Matrix: R4 新增真实 `0.25.0`（`6e461e2e47a839a77b2e376ce61ceb317d393320`）与 `0.27.0`（`8a5962628014e696bda764bcad10bfd3faee188e`）生成阶段及 current migration 阶段；R6 拆分新地图局与真实旧 CJP 档；R3/R7/R8/R9/R10/R11/R12 补齐 capstone 清理、双 1825-day 周期、负向 gate、正式任务事件接线、日期选择边界、同基线 AE、DLC log 状态、88 省统一及全年运行合同。R5 继续只接受外部真实 pre-0.24.2 fixture，禁止合成或改旗伪造。
+- Deployment: 候选提交 `028e667a12c3ab24f539b492a1b1da0afaa0ac4d` 的 current-main `e2708062178e01cc2d0337ac34c37ef6f33ed952916d9e93de9e284343021845`（376 files）与 current-map `1a89f41ae351e29c9d851d64598407801ce893fd2b9fed4af224a52211bbd01f`（239 files），以及 legacy-025 `ce3648eda2d11eebb97333cd0256a3d54bbf6556f5c27cf7feafd0387f366337`（294 files）和 legacy-027 `51067cab6acbe9914d8d1b995ad79392a2212ae17dd812ae79de634367adb015`（356 files）已作为普通目录部署到专用 `Documents/Paradox Interactive/Europa Universalis IV - JXP Acceptance` 根且未启动、未启用到日常配置；全部 current manifest 文件受 Git 跟踪且开发材料为 0。隔离根另保存 current main+map、current main、MoH-disabled current main、legacy-025 与 legacy-027 的精确 `dlc_load` 模板。
+- Configuration safety: 部署和旧快照退役后，默认 `launcher-v2.sqlite` SHA-256 仍为 `131EEF30058C5AABA7250463E0EE6994B106850A685AEE4F01AA779F80E2D3C5`；默认 `dlc_load.json` 仍为中文补丁 + GMI，SHA-256 `BD29774AF54FFFB7804E72DAD37C4BAE5AB370E42413768878F846C217106404`；日常 `mod` 目录中的 acceptance 条目为 0。
+- Evidence: pinned preflight `9/9`；主门禁 `26/26`、Clausewitz `250/250`、主单测 `211/211`、acceptance helper `13/13`；联合 map/history/content/compat/assets 全部 `0 errors / 0 warnings`；current runtime manifests 为主 376 / 地图 239 files，Git-tracked 100%、development material 0。
+- Runtime: 未启动 EU4、Launcher、dowser 或 observer；`userdir` 隔离语法仅有静态二进制证据，仍待用户明确许可后的协议探针，因此没有新增 `RUNTIME_PASS`。
+- TODO: `JXP-001` / `002` / `004` / `005` / `008` / `009` / `010` / `017` / `018` / `020` / `022` / `023` 全部保持 `IN_PROGRESS / CODEX_ROOT`；`JXP-016` 保持 `IN_PROGRESS / PROJECT`。R5 外部 fixture 未取得前，`JXP-002` 不得关闭。
 
 ### 2026-07-13 - RUNTIME-PREP-001 - Deterministic acceptance preparation (`no version bump`)
 
