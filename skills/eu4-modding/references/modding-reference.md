@@ -83,7 +83,10 @@ dependency distributions afterward. If a Git-verified skill script must run,
 allow only its exact canonical file as an execution target and do not append the
 skill directory to `sys.path`. Compare the candidate runtime payload plus
 that validation toolchain before and after, and bound both output pipes while
-they are being drained. Seal raw stdout/stderr bytes, sizes, framed hashes, cwd, UTC times, exits,
+they are being drained. Validate the complete live toolchain and results before
+removing ephemeral validation files. Later verification must require that temp
+root to be absent, reconstruct only deterministic expected ephemeral records,
+and recheck every persistent authority. Seal raw stdout/stderr bytes, sizes, framed hashes, cwd, UTC times, exits,
 required markers, the effective environment, and toolchain digests. An
 idempotent replay remains read-only: it reruns the controlled gates as current
 authorization, independently verifies the historical sealed executions, and

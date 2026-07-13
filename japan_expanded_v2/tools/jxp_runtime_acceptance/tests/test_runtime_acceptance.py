@@ -2297,6 +2297,16 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                         b"",
                     )
 
+                guard_observations: list[bool] = []
+
+                def guarded_toolchain(
+                    _context: dict[str, object], **_kwargs: object
+                ) -> dict[str, object]:
+                    guard_observations.append(
+                        (env.user / ".jxp_r13_gate_temp").is_dir()
+                    )
+                    return fake_toolchain
+
                 with (
                     patch.object(
                         runtime,
@@ -2313,7 +2323,7 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     patch.object(
                         runtime,
                         "_r13_gate_toolchain_guard",
-                        return_value=fake_toolchain,
+                        side_effect=guarded_toolchain,
                     ),
                     patch.object(
                         runtime, "_run_r13_bounded_process", side_effect=completed
@@ -2322,6 +2332,9 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                     results = runtime._run_r13_static_gate_verifications(
                         context, expected_payload
                     )
+                self.assertTrue(guard_observations)
+                self.assertTrue(all(guard_observations))
+                self.assertFalse((env.user / ".jxp_r13_gate_temp").exists())
                 self.assertEqual(set(runtime._R13_GATE_CHECK_IDS), set(results))
                 self.assertEqual(7, run.call_count)
                 for invocation in run.call_args_list:
@@ -2350,10 +2363,13 @@ class RuntimeAcceptanceTests(unittest.TestCase):
                         runtime,
                         "_r13_gate_toolchain_guard",
                         return_value=fake_toolchain,
-                    ):
+                    ) as post_cleanup_guard:
                         validated = runtime._validated_r13_live_gate_verification(
                             role, context, verification
                         )
+                    post_cleanup_guard.assert_called_once_with(
+                        context, require_live_ephemeral=False
+                    )
                     self.assertEqual(verification, validated)
                     for execution in verification["executions"]:
                         argv = execution["argv"]

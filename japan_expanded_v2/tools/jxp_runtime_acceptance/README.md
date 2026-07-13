@@ -386,6 +386,11 @@ Git-tracked `r13_external_toolchain_baseline.json`. It also checks the runtime
 payload and stopped-process guard, and seals that toolchain revision/baseline,
 the complete effective environment, raw stdout/stderr base64, sizes, framed
 hashes, exact argv, cwd, UTC times, exit codes, and required-marker proofs.
+The complete live result/toolchain proof is validated before the temporary
+Python tree is removed. Post-cleanup and historical replay validation requires
+that temporary root to be absent, reconstructs its expected dependency/wrapper
+records from persistent approved inputs, and still rechecks every persistent
+Git, external-toolchain, payload, and installed-skill input.
 Per-process raw output is bounded while both pipes are being drained at 1 MiB,
 and aggregate raw output is bounded at 4 MiB. The eleven caller-controlled
 closure inputs share an 8 MiB pre-parse/copy budget; the complete staged or

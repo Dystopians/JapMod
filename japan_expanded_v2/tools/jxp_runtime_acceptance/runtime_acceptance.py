@@ -8677,7 +8677,11 @@ def _r13_external_toolchain_baseline(
     }
 
 
-def _r13_gate_toolchain_guard(context: dict[str, object]) -> dict[str, object]:
+def _r13_gate_toolchain_guard(
+    context: dict[str, object],
+    *,
+    require_live_ephemeral: bool = True,
+) -> dict[str, object]:
     """Bind repository inputs to HEAD and external inputs to a reviewed baseline."""
 
     repo = _require_ordinary_directory(Path(str(context["repo"])), "R13 repository")
@@ -8700,28 +8704,43 @@ def _r13_gate_toolchain_guard(context: dict[str, object]) -> dict[str, object]:
     _dependency_sites, dependencies = _r13_python_dependency_sites()
     external = _r13_external_toolchain_baseline(context, dependencies)
     runtime_paths = _r13_gate_runtime_paths(context)
-    isolated_manifest = _r13_plain_tree_manifest(
-        runtime_paths["dependency_site"], "R13 isolated dependency site"
-    )
     expected_isolated = _r13_expected_isolated_dependency_manifest(dependencies)
-    if not _json_exact_equal(isolated_manifest, expected_isolated):
-        raise AcceptanceError(
-            "R13 isolated dependency site differs from approved distributions"
-        )
-    pycache_root = _require_ordinary_directory(
-        runtime_paths["pycache"], "R13 isolated pycache root"
-    )
-    if any(pycache_root.iterdir()):
-        raise AcceptanceError("R13 isolated pycache root must remain empty")
-    wrapper = _r13_toolchain_file_record(
-        runtime_paths["python_wrapper"], "R13 isolated Python wrapper"
-    )
     expected_wrapper = _r13_python_wrapper_payload(context)
-    if (
-        wrapper["bytes"] != len(expected_wrapper)
-        or wrapper["sha256"] != sha256(expected_wrapper).hexdigest()
-    ):
-        raise AcceptanceError("R13 isolated Python wrapper differs from policy")
+    if require_live_ephemeral:
+        isolated_manifest = _r13_plain_tree_manifest(
+            runtime_paths["dependency_site"], "R13 isolated dependency site"
+        )
+        if not _json_exact_equal(isolated_manifest, expected_isolated):
+            raise AcceptanceError(
+                "R13 isolated dependency site differs from approved distributions"
+            )
+        pycache_root = _require_ordinary_directory(
+            runtime_paths["pycache"], "R13 isolated pycache root"
+        )
+        if any(pycache_root.iterdir()):
+            raise AcceptanceError("R13 isolated pycache root must remain empty")
+        wrapper = _r13_toolchain_file_record(
+            runtime_paths["python_wrapper"], "R13 isolated Python wrapper"
+        )
+        if (
+            wrapper["bytes"] != len(expected_wrapper)
+            or wrapper["sha256"] != sha256(expected_wrapper).hexdigest()
+        ):
+            raise AcceptanceError("R13 isolated Python wrapper differs from policy")
+    else:
+        if os.path.lexists(runtime_paths["root"]):
+            raise AcceptanceError(
+                "R13 gate temp root must be absent during post-cleanup verification"
+            )
+        isolated_manifest = expected_isolated
+        wrapper = {
+            "kind": "file",
+            "path": str(
+                Path(os.path.abspath(str(runtime_paths["python_wrapper"])))
+            ),
+            "bytes": len(expected_wrapper),
+            "sha256": sha256(expected_wrapper).hexdigest(),
+        }
     repo_skill = _r13_plain_tree_manifest(
         repo / "skills" / "eu4-modding", "repository EU4 skill"
     )
@@ -9384,7 +9403,25 @@ def _run_r13_static_gate_verifications(
         if _require_ordinary_directory(temporary, "R13 gate temp root").parent != user_data:
             raise AcceptanceError("R13 gate temp root escaped the acceptance root")
         _r13_prepare_gate_python_runtime(context)
-        return _execute_r13_static_gate_verifications(context, expected_payload)
+        results = _execute_r13_static_gate_verifications(context, expected_payload)
+        final_live_guard = _r13_gate_toolchain_guard(context)
+        validated: dict[str, dict[str, object]] = {}
+        for role in _R13_GATE_CHECK_IDS:
+            item = _validated_r13_live_gate_verification(
+                role,
+                context,
+                results.get(role),
+                trusted_toolchain_guard=final_live_guard,
+            )
+            if not _json_exact_equal(
+                item.get("payload_guard"), list(expected_payload)
+            ):
+                raise AcceptanceError(
+                    f"R13 gate payload changed before cleanup: {role}"
+                )
+            validated[role] = item
+        _r13_gate_total_raw_bytes(validated, "live pre-cleanup R13")
+        return validated
     finally:
         if os.path.lexists(temporary):
             if (
@@ -9555,6 +9592,8 @@ def _validated_r13_live_gate_verification(
     role: str,
     context: dict[str, object],
     verification: object,
+    *,
+    trusted_toolchain_guard: dict[str, object] | None = None,
 ) -> dict[str, object]:
     expectation = _r13_gate_receipt_expectation(role, context)
     specs = _r13_static_gate_specs(context)
@@ -9582,7 +9621,13 @@ def _validated_r13_live_gate_verification(
         raise AcceptanceError(f"R13 live gate verification schema disagrees: {role}")
     executions = verification.get("executions")
     marker_proofs = verification.get("marker_proofs")
-    live_toolchain_guard = _r13_gate_toolchain_guard(context)
+    live_toolchain_guard = (
+        trusted_toolchain_guard
+        if trusted_toolchain_guard is not None
+        else _r13_gate_toolchain_guard(context, require_live_ephemeral=False)
+    )
+    if not isinstance(live_toolchain_guard, dict):
+        raise AcceptanceError(f"R13 live gate toolchain is malformed: {role}")
     if not _json_exact_equal(
         verification.get("toolchain_guard"), live_toolchain_guard
     ):
