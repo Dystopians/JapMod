@@ -1,0 +1,77 @@
+﻿l_english:
+ jxp_a_establish_kokujin_relation:0 "ÓuÄR²N—ÄRPRsQû|"
+ jxp_a_establish_kokujin_relation_title:0 "ÓuÄR²N—ÄRPRsQû|"
+ jxp_a_establish_kokujin_relation_desc:0 "=f&TåN“Š¸u0‰R5XŒTºN(¦umg§Y[From.GetName]§!ÿOvQbHNb¶R„vj–ã'YTÿÙN=f°e„vVÎd^SýVÿ[From.GetName]ÍN(WÕltNôv^SU^œ^ÿFOO(W›QyV0!³uŒTÝO²bNOD–b¶R0"
+ jxp_a_establish_kokujin_relation_tooltip:0 "(W2N¶RKNô•ú^Ëz=UN0ïSÍ‘ú^„vNBSýVOÎN^SsQû|0úWNx¹RÏ‘HN1ÿÏk100I`ÑSUS¦^žX R1ÿlxNP–3ÿ5uNP–20"
+ jxp_a_establish_kokujin_relation_alert_tooltip:0 "	gºNÐc®‹ÓuÄR²N—ÄRPRsQû|"
+ jxp_a_establish_kokujin_relation_dialog:0 "§Y[This.GetName]§!Ðc®‹åN‰R5XŒT›QyVQY¦uSb¶R³ueQvQ¶R-Néy^0ÕltNbìNÍN=fU^œ^ôv^S'YTÿFOSbÅb!³uN›QyVIN¡R0"
+
+ jxp_a_release_kokujin_relation:0 "ã‰d–ýVOÎN^S"
+ jxp_a_release_kokujin_relation_title:0 "ã‰d–ýVOÎN^S"
+ jxp_a_release_kokujin_relation_desc:0 "ã‰d–N§Y[From.GetName]§!„vÄR²N—ÄRPRQY¦uÿOvQb`YŒRhQ„vU^œ^ôv^S0WMO0"
+ jxp_a_release_kokujin_relation_tooltip:0 "nd–ÌS¹esQû|h°‹v^ÔØN<h¶R-Nßu–¹RÏ‘0"
+
+ jxp_a_request_kokujin_defection:0 "ñ‹Oj–ãPb"
+ jxp_a_request_kokujin_defection_title:0 "ñ‹Oj–ãPb"
+ jxp_a_request_kokujin_defection_desc:0 "=f&TRñ‹§Y[From.GetName]§!•dÁkçe“Š0l•bb¶RÿÙSw9Y²NDnÿv^Ào`vQŸSÄR²NŒTU^œ^0"
+ jxp_a_request_kokujin_defection_tooltip:0 "å‚ùR¹e¥c×SÿvQ=UNÄR²NO«ˆÿfbcÿŸSÄR²N·ƒ—V¥bYTRÿU^œ^mNO4Œ1Ù!k*gÏuÁˆšR„vlØN0"
+ jxp_a_request_kokujin_defection_alert_tooltip:0 "	gºNÕ‹þVñ‹Ob¶RPb"
+ jxp_a_request_kokujin_defection_dialog:0 "§Y[This.GetName]§!¸‹ú‹°e„v‰R5XNÝO²bÿ‰BlbìN•dÁkçe“Šv^l•bvQ¶R-N0ŸSÄR²NŒTU^œ^ÅVSjOúQÍS”^0"
+
+ jxp_a_shogunal_adjudicate_kokujin:0 "U^œ^ÁˆšRÎN^S"
+ jxp_a_shogunal_adjudicate_kokujin_title:0 "U^œ^ÁˆšRÎN^S"
+ jxp_a_shogunal_adjudicate_kokujin_desc:0 "1uU^œ^²d•§Y[From.GetName]§!„v¶R-NÎN^SQY¦uÿSvQb`YHNôv^S'YT0ŸSÄR²NO1Y»SZgv^NánŽNU^œ^ÁˆšR0"
+ jxp_a_shogunal_adjudicate_kokujin_tooltip:0 "åNY²N¹ppeã‰d–ÙµkÎN^SsQû|ÿnd–Pb¶r`ÿv^©‹ÌS¹eXRŽNNN!kOSŒöeÍ‘°e6eie0"
+
+ jxp_a_request_kokujin_military_service:0 "÷‹BlýVO“›QyV"
+ jxp_a_request_kokujin_military_service_title:0 "÷‹BlýVO“›QyV"
+ jxp_a_request_kokujin_military_service_desc:0 "‰Bl§Y[From.GetName]§!“uQXTŒT®|w™01uŽNEU4àeÕl‰RhQ0WŠb,gìSÆ–P–šR(WNHWb‰Nÿ,gLˆ¨RêSlûy›QyVDnÿ§RNO§!äNj–ãê¨R ReQSVMRbÊNT„vhQèb‰N0"
+ jxp_a_request_kokujin_military_service_tooltip:0 "·ƒ—VíwguQXTN¨RXT RbÿùR¹eïSåNÒbÝuÿv^àVdkÛeQ—b‹T¶r`0"
+ jxp_a_request_kokujin_military_service_alert_tooltip:0 "ÄR²N‰Bl“›QyV"
+ jxp_a_request_kokujin_military_service_dialog:0 "§Y[This.GetName]§!‰BlbìN“uQXTŒT®|w™0ÙN=fÂSbìSÆ–ÿ¥c×SêSOûy²NèRºN›R0"
+
+ jxp_a_nested_client_status:0 "j–ã'YT"
+ jxp_a_nested_client_status_desc:0 "b¶R(WÕltNÍNôv^SU^œ^ÿFOåe8^›QyV0ÝO²bŒT!³u×SÄR²N¦umgÿNN—VQåb	gêñT„vj–ã0"
+ jxp_a_nested_patron_status:0 "ÄR²Nßu–"
+ jxp_a_nested_patron_status_desc:0 "óSN*NS'YTNb¶RÓu†NÄR²N—ÄRPRQY¦uÿHN¶R-NÐc›O	gP–›QyV0"
+ jxp_a_nested_lord_defiance:0 "ýVO—b‹T"
+ jxp_a_nested_lord_defiance_desc:0 "PbbÒbÝu›QyVO¶R-Néy^¨RGdÿmNHNŸSÄR²NbU^œ^YuN†NývzTR0"
+ jxp_a_nested_military_service:0 "ýVO›QyV“"
+ jxp_a_nested_military_service_desc:0 "j–ã'YT“†NuQXTŒT®|w™ÿFOv^*g«ˆ,gHV6R ReQûNUOb‰N0"
+
+ jxp_a_opinion_kokujin_patron:0 "ÄR²NsQû|h°‹"
+ jxp_a_opinion_protected_kokujin:0 "ÄRPRsQû|h°‹"
+ jxp_a_opinion_nested_lord_released:0 "¥Y„Uã‰d–ÎN^S"
+ jxp_a_opinion_nested_lord_betrayal:0 "ýVOÌw“Š"
+ jxp_a_opinion_illegal_nested_transfer:0 "*gÏuU^œ^ÁˆšRlØNj–ã"
+ jxp_a_opinion_shogunal_adjudication:0 "U^œ^²d•ÎN^S"
+
+ cb_jxp_a_daimyo_border_dispute:0 "ýVƒXøvº‹"
+ cb_jxp_a_daimyo_border_dispute_desc:0 "åN¹ƒX‰N®‹ŒTnf±RðyHNOncÿ	gP–¦^0W‰NHYåe,gƒX…Q„vøv»†˜0W0˜bcbNOjO(uŽNwmYÿmNOYuN0W¹eteT‹S›R0"
+ cb_jxp_a_kokujin_subjugation:0 "ýVOYR"
+ cb_jxp_a_kokujin_subjugation_desc:0 "ývz—b‹Tj–ã„vÌw“Š1ûN0å‹b‰NêSýw0tÖSåe,gƒX…Q„vnf†˜WagöNÿ§RNO§!Šb,gsQû|*OÅˆbŸSu^SýVŒTs^ag>k0"
+ cb_jxp_a_shogunal_censure:0 "U^œ^ý¨‹"
+ cb_jxp_a_shogunal_censure_desc:0 "U^œ^ˆ”ùRPbN—b‹T'YTÑS^ý¨‹äN0˜bcb%N<hP–šRŽNßuNMR„våe,g'YTŒTåe,gƒX…QwýN0"
+
+ jxp_a_daimyo_border_dispute:0 "ýVƒXøvº‹"
+ jxp_a_kokujin_subjugation:0 "ýVOYR"
+ jxp_a_shogunal_censure:0 "U^œ^ý¨‹"
+ JXP_A_DAIMYO_BORDER_DISPUTE_COUNTRY_DESC:0 "ýVƒXøvº‹ÅNýw0tÖSMOŽNåe,g0^SŽNåe,g'YTNNb¹eøv»bòT	gnf±Rðy„vwýN0"
+ JXP_A_DAIMYO_BORDER_DISPUTE_PROV_DESC:0 "dkwÅV‰˜MOŽNåe,g0^SŽNßuNMRåe,g'YTÿv^Nb¹eøv»bòT	gnf±Rðy0"
+ JXP_A_DAIMYO_BORDER_DISPUTE_WAR_NAME:0 "$ORDER$$FIRST$—$SECOND$ýVƒXøvº‹"
+ JXP_A_KOKUJIN_SUBJUGATION_COUNTRY_DESC:0 "ýVOYRêSýw0tÖSåe,gƒX…Q^SŽNßuNMRåe,g'YT„vwýNÿNýwåN^SýVSag>k*O.ŸSuLTWY0"
+ JXP_A_KOKUJIN_SUBJUGATION_PROV_DESC:0 "dkwÅV‰˜MOŽNåe,gv^^SŽNßuNMRåe,g'YT0"
+ JXP_A_KOKUJIN_SUBJUGATION_WAR_NAME:0 "$ORDER$$FIRST$¨‹O$SECOND$—b‹TýVOKNb"
+ JXP_A_SHOGUNAL_CENSURE_COUNTRY_DESC:0 "U^œ^ý¨‹êSýwYtåe,gƒX…Q„vßuNMRåe,g'YT†˜W0"
+ JXP_A_SHOGUNAL_CENSURE_PROV_DESC:0 "dkwÅV‰˜MOŽNåe,gv^^SŽNßuNMRåe,g'YT0"
+ JXP_A_SHOGUNAL_CENSURE_WAR_NAME:0 "$ORDER$$FIRST$ùR$SECOND$„vU^œ^ý¨‹"
+
+ jxp_a_press_border_arbitration:0 "ÐcúQýVƒXøvº‹"
+ jxp_a_press_border_arbitration_title:0 "ÐcúQýVƒXøvº‹"
+ jxp_a_press_border_arbitration_desc:0 "tetçe8R0Àh0W^ŒTúR>y‡efNÿùR§Y[From.GetName]§!„vNYåe,g¹ƒX†˜0WÐcúQ§Ynf±Rðy§!0±RðyO	c8^Ä‰R–öeô•ˆmÿÝu^—8lEN±Rðy0"
+ jxp_a_press_border_arbitration_tooltip:0 "±‚9Y²N¹ppeNZgÿ(Wøv»„våe,gwýN-NÖS—VN*Nnf±Rðyÿ”Nt^…QNýwQ!kÐcúQ0"
+
+ jxp_a_border_arbitration_cooldown:0 "ýVƒXøvº‹tetg"
+ jxp_a_border_arbitration_cooldown_desc:0 "¶RãcktetNN—R¹ƒXÉ‹¼‹„v‡efNNÁ‹ºN0"
+ jxp_a_disputed_internal_integration:0 "çeIN¶RãNlS‰N®‹"
+ jxp_a_disputed_internal_integration_desc:0 "åe,g…Qè|Qv^‹†6qÔkèwmVgôff·ƒ—Vb²‹ÿçeIN¶Rã0úR>y0HuONýVºNÍNOÍSùR°e†˜IN„vÀh0WŒTlS0"

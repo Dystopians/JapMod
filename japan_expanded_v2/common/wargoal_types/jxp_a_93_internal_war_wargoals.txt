@@ -1,0 +1,103 @@
+jxp_a_daimyo_border_dispute = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.70
+		prestige_factor = 1
+		peace_cost_factor = 0.85
+
+		allowed_provinces = {
+			region = japan_region
+			owner = {
+				culture_group = japanese_g
+				jxp_is_daimyo_stage_trigger = yes
+			}
+			ROOT = { jxp_a_internal_war_actor_trigger = yes }
+			OR = {
+				is_claim = ROOT
+				any_neighbor_province = { owned_by = ROOT }
+			}
+		}
+
+		peace_options = { po_demand_provinces }
+		country_desc = JXP_A_DAIMYO_BORDER_DISPUTE_COUNTRY_DESC
+		prov_desc = JXP_A_DAIMYO_BORDER_DISPUTE_PROV_DESC
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = { po_demand_provinces }
+	}
+
+	war_name = JXP_A_DAIMYO_BORDER_DISPUTE_WAR_NAME
+}
+
+jxp_a_kokujin_subjugation = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.70
+		prestige_factor = 1
+		peace_cost_factor = 0.90
+
+		allowed_provinces = {
+			region = japan_region
+			owner = {
+				culture_group = japanese_g
+				jxp_is_daimyo_stage_trigger = yes
+			}
+			ROOT = { jxp_a_internal_war_actor_trigger = yes }
+		}
+
+		peace_options = { po_demand_provinces }
+		country_desc = JXP_A_KOKUJIN_SUBJUGATION_COUNTRY_DESC
+		prov_desc = JXP_A_KOKUJIN_SUBJUGATION_PROV_DESC
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = { po_demand_provinces }
+	}
+
+	war_name = JXP_A_KOKUJIN_SUBJUGATION_WAR_NAME
+}
+
+jxp_a_shogunal_censure = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.90
+
+		allowed_provinces = {
+			region = japan_region
+			owner = {
+				culture_group = japanese_g
+				jxp_is_daimyo_stage_trigger = yes
+			}
+			ROOT = {
+				culture_group = japanese_g
+				has_reform = shogunate
+				jxp_is_daimyo_stage_trigger = yes
+			}
+		}
+
+		peace_options = { po_demand_provinces }
+		country_desc = JXP_A_SHOGUNAL_CENSURE_COUNTRY_DESC
+		prov_desc = JXP_A_SHOGUNAL_CENSURE_PROV_DESC
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = { po_demand_provinces }
+	}
+
+	war_name = JXP_A_SHOGUNAL_CENSURE_WAR_NAME
+}

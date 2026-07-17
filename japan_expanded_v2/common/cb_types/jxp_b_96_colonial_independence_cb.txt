@@ -1,0 +1,15 @@
+cb_jxp_b_colonial_independence = {
+	exclusive = yes
+	independence = yes
+	valid_for_subject = yes
+
+	prerequisites_self = {
+		jxp_b_96_can_use_colonial_independence_cb_trigger = yes
+	}
+
+	prerequisites = {
+		is_subject_of = FROM
+	}
+
+	war_goal = jxp_b_colonial_independence_wargoal
+}

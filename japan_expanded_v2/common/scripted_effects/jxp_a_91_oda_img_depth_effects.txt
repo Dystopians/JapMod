@@ -1,0 +1,122 @@
+jxp_a_mark_house_government_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_government_ready } }
+		set_country_flag = jxp_iface_house_government_ready
+	}
+}
+
+jxp_a_mark_house_diplomacy_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_diplomacy_ready } }
+		set_country_flag = jxp_iface_house_diplomacy_ready
+	}
+}
+
+jxp_a_mark_house_maritime_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_maritime_ready } }
+		set_country_flag = jxp_iface_house_maritime_ready
+	}
+}
+
+jxp_a_mark_house_logistics_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_logistics_ready } }
+		set_country_flag = jxp_iface_house_logistics_ready
+	}
+}
+
+jxp_a_mark_house_frontier_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_frontier_ready } }
+		set_country_flag = jxp_iface_house_frontier_ready
+	}
+}
+
+jxp_a_mark_house_religious_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_religious_ready } }
+		set_country_flag = jxp_iface_house_religious_ready
+	}
+}
+
+jxp_a_mark_house_mass_mobilization_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_house_mass_mobilization_ready } }
+		set_country_flag = jxp_iface_house_mass_mobilization_ready
+	}
+}
+
+jxp_a_mark_buddhist_diplomacy_ready_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_buddhist_diplomacy_ready } }
+		set_country_flag = jxp_iface_buddhist_diplomacy_ready
+	}
+}
+
+jxp_a_clear_oda_government_choice_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_a_oda_government_azuchi
+		clr_country_flag = jxp_a_oda_government_legion_domains
+		clr_country_flag = jxp_a_oda_government_ashikaga_protectorate
+	}
+}
+
+jxp_a_clear_oda_succession_choice_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_a_oda_succession_toyotomi
+	}
+}
+
+jxp_a_reconcile_oda_government_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				OR = {
+					NOT = { tag = ODA }
+					NOT = { jxp_is_daimyo_stage_trigger = yes }
+				}
+			}
+			if = {
+				limit = { has_reform = jxp_a_oda_azuchi_magistracy_reform }
+				remove_government_reform = jxp_a_oda_azuchi_magistracy_reform
+			}
+			if = {
+				limit = { has_reform = jxp_a_oda_legion_domains_reform }
+				remove_government_reform = jxp_a_oda_legion_domains_reform
+			}
+			if = {
+				limit = { has_reform = jxp_a_oda_ashikaga_protectorate_reform }
+				remove_government_reform = jxp_a_oda_ashikaga_protectorate_reform
+			}
+			jxp_a_clear_oda_government_choice_effect = yes
+			jxp_a_clear_oda_succession_choice_effect = yes
+			clr_country_flag = jxp_a_oda_government_terminal_unlocked
+			clr_country_flag = jxp_a_oda_legion_autonomy
+			clr_country_flag = jxp_a_oda_direct_magistrates
+		}
+		else = {
+			if = {
+				limit = {
+					has_reform = jxp_a_oda_azuchi_magistracy_reform
+					NOT = { has_country_flag = jxp_a_oda_government_azuchi }
+				}
+				remove_government_reform = jxp_a_oda_azuchi_magistracy_reform
+			}
+			if = {
+				limit = {
+					has_reform = jxp_a_oda_legion_domains_reform
+					NOT = { has_country_flag = jxp_a_oda_government_legion_domains }
+				}
+				remove_government_reform = jxp_a_oda_legion_domains_reform
+			}
+			if = {
+				limit = {
+					has_reform = jxp_a_oda_ashikaga_protectorate_reform
+					NOT = { has_country_flag = jxp_a_oda_government_ashikaga_protectorate }
+				}
+				remove_government_reform = jxp_a_oda_ashikaga_protectorate_reform
+			}
+		}
+	}
+}

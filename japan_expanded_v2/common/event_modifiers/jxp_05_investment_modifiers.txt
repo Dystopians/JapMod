@@ -1,0 +1,14 @@
+jxp_invest_domain_registers = {
+	global_tax_modifier = -0.05
+	stability_cost_modifier = 0.05
+}
+
+jxp_invest_court_patronage = {
+	advisor_cost = 0.05
+	diplomatic_reputation = -1
+}
+
+jxp_invest_translation_house = {
+	global_trade_power = -0.05
+	global_missionary_strength = -0.01
+}

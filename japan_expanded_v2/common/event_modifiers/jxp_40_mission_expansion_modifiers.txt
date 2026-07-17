@@ -1,0 +1,274 @@
+jxp_24_daimyo_province_code = {
+	global_tax_modifier = 0.08
+	stability_cost_modifier = -0.05
+	state_maintenance_modifier = -0.05
+}
+
+jxp_24_daimyo_land_measure = {
+	global_tax_modifier = 0.10
+	development_cost = -0.05
+}
+
+jxp_24_daimyo_household_council = {
+	advisor_cost = -0.08
+	reform_progress_growth = 0.08
+	governing_capacity_modifier = 0.10
+}
+
+jxp_24_daimyo_market_roads = {
+	trade_efficiency = 0.05
+	production_efficiency = 0.05
+}
+
+jxp_24_daimyo_artisan_guilds = {
+	production_efficiency = 0.10
+	infantry_cost = -0.05
+}
+
+jxp_24_daimyo_licensed_caravans = {
+	global_trade_power = 0.10
+	trade_range_modifier = 0.10
+}
+
+jxp_24_daimyo_shrine_village_compact = {
+	tolerance_own = 1
+	global_unrest = -1
+}
+
+jxp_24_daimyo_irrigation_works = {
+	global_tax_modifier = 0.05
+	production_efficiency = 0.08
+}
+
+jxp_24_daimyo_town_magistrates = {
+	global_unrest = -1
+	advisor_cost = -0.05
+	governing_capacity_modifier = 0.05
+}
+
+jxp_24_daimyo_domain_school = {
+	technology_cost = -0.03
+	idea_cost = -0.03
+}
+
+jxp_24_daimyo_famine_reserves = {
+	global_unrest = -1
+	manpower_recovery_speed = 0.10
+}
+
+jxp_24_daimyo_people_of_the_domain = {
+	global_tax_modifier = 0.10
+	global_manpower_modifier = 0.10
+}
+
+jxp_24_daimyo_raised_banner = {
+	land_morale = 0.05
+	manpower_recovery_speed = 0.05
+}
+
+jxp_24_daimyo_regional_command = {
+	land_forcelimit_modifier = 0.10
+	global_unrest = -1
+}
+
+jxp_24_daimyo_road_to_kyoto = {
+	improve_relation_modifier = 0.10
+	ae_impact = -0.08
+}
+
+jxp_24_unification_blade = {
+	land_morale = 0.08
+	siege_ability = 0.10
+}
+
+jxp_24_unification_edict = {
+	diplomatic_reputation = 1
+	ae_impact = -0.10
+}
+
+jxp_24_unification_league = {
+	improve_relation_modifier = 0.20
+	liberty_desire = -10
+}
+
+jxp_24_foundation_blade = {
+	army_tradition_decay = -0.005
+	siege_ability = 0.05
+}
+
+jxp_24_foundation_edict = {
+	legitimacy = 0.25
+	improve_relation_modifier = 0.10
+}
+
+jxp_24_foundation_league = {
+	diplomatic_reputation = 1
+	liberty_desire = -5
+}
+
+jxp_24_warrior_war_council = {
+	army_tradition_decay = -0.01
+	land_morale = 0.03
+}
+
+jxp_24_warrior_firearm_drill = {
+	infantry_power = 0.05
+	fire_damage = 0.03
+}
+
+jxp_24_warrior_commanders_oath = {
+	leader_land_shock = 1
+	manpower_recovery_speed = 0.10
+}
+
+jxp_24_court_rank_and_office = {
+	prestige = 0.5
+	legitimacy = 0.5
+}
+
+jxp_24_court_mediator_network = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.15
+}
+
+jxp_24_court_kinri_escort = {
+	stability_cost_modifier = -0.08
+	prestige = 0.5
+}
+
+jxp_24_sea_harbor_council = {
+	trade_efficiency = 0.08
+	global_ship_trade_power = 0.10
+}
+
+jxp_24_sea_atakebune = {
+	naval_morale = 0.08
+	galley_cost = -0.10
+}
+
+jxp_24_sea_tide_brokers = {
+	global_trade_power = 0.10
+	trade_range_modifier = 0.15
+}
+
+jxp_24_frontier_border_council = {
+	defensiveness = 0.10
+	land_forcelimit_modifier = 0.08
+}
+
+jxp_24_frontier_guides = {
+	land_attrition = -0.10
+	manpower_recovery_speed = 0.08
+}
+
+jxp_24_frontier_hostage_oaths = {
+	global_unrest = -1
+	legitimacy = 0.5
+}
+
+jxp_24_temple_market_council = {
+	global_tax_modifier = 0.08
+	tolerance_own = 1
+}
+
+jxp_24_temple_free_markets = {
+	trade_efficiency = 0.08
+	production_efficiency = 0.08
+}
+
+jxp_24_temple_debt_relief = {
+	global_unrest = -1
+	development_cost = -0.05
+}
+
+jxp_24_uncommitted_warrior_reckoning = {
+	reform_progress_growth = 0.05
+	land_forcelimit_modifier = 0.05
+}
+
+jxp_24_uncommitted_court_camp_balance = {
+	stability_cost_modifier = -0.05
+	diplomatic_reputation = 1
+}
+
+jxp_24_uncommitted_four_seas_watch = {
+	naval_forcelimit_modifier = 0.10
+	naval_morale = 0.05
+}
+
+jxp_24_uncommitted_border_ports = {
+	global_ship_trade_power = 0.10
+	trade_range_modifier = 0.10
+}
+
+jxp_24_sakoku_coastal_magistrates = {
+	defensiveness = 0.10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_24_sakoku_matsumae_compact = {
+	global_tax_modifier = 0.05
+	land_attrition = -0.10
+}
+
+jxp_24_sakoku_tsushima_interpreters = {
+	diplomatic_reputation = 1
+	trade_efficiency = 0.05
+}
+
+jxp_24_sakoku_ryukyu_protocol = {
+	improve_relation_modifier = 0.15
+	global_ship_trade_power = 0.10
+}
+
+jxp_24_sakoku_beacon_coast = {
+	defensiveness = 0.15
+	naval_morale = 0.05
+}
+
+jxp_24_sakoku_permitted_window = {
+	technology_cost = -0.03
+	advisor_cost = -0.08
+}
+
+jxp_24_sakoku_four_seas_watch = {
+	global_unrest = -1
+	defensiveness = 0.15
+	technology_cost = -0.02
+}
+
+jxp_24_ikko_temple_granaries = {
+	global_tax_modifier = 0.08
+	manpower_recovery_speed = 0.08
+}
+
+jxp_24_ikko_debt_remission = {
+	global_unrest = -1
+	development_cost = -0.05
+}
+
+jxp_24_ikko_pilgrim_roads = {
+	manpower_recovery_speed = 0.10
+	global_trade_power = 0.05
+}
+
+jxp_24_ikko_commoner_schools = {
+	technology_cost = -0.03
+	idea_cost = -0.05
+}
+
+jxp_24_ikko_guild_councils = {
+	production_efficiency = 0.10
+	trade_efficiency = 0.08
+}
+
+jxp_24_ikko_communal_shipyards = {
+	naval_forcelimit_modifier = 0.15
+	galley_cost = -0.10
+}
+
+jxp_24_ikko_realm_of_fellowship = {
+	global_manpower_modifier = 0.10
+	production_efficiency = 0.10
+	tolerance_own = 1
+}

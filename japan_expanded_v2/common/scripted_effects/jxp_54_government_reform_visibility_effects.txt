@@ -1,0 +1,62 @@
+jxp_remove_legacy_autogranted_route_reforms_effect = {
+	if = { limit = { has_reform = jxp_reform_sakoku_buke_laws } remove_government_reform = jxp_reform_sakoku_buke_laws }
+	if = { limit = { has_reform = jxp_reform_sakoku_terauke_registers } remove_government_reform = jxp_reform_sakoku_terauke_registers }
+	if = { limit = { has_reform = jxp_reform_sakoku_dejima_inspectors } remove_government_reform = jxp_reform_sakoku_dejima_inspectors }
+	if = { limit = { has_reform = jxp_reform_open_red_seal_council } remove_government_reform = jxp_reform_open_red_seal_council }
+	if = { limit = { has_reform = jxp_reform_open_rangaku_bureaucracy } remove_government_reform = jxp_reform_open_rangaku_bureaucracy }
+	if = { limit = { has_reform = jxp_reform_open_chartered_harbors } remove_government_reform = jxp_reform_open_chartered_harbors }
+	if = { limit = { has_reform = jxp_reform_kirishitan_church_court } remove_government_reform = jxp_reform_kirishitan_church_court }
+	if = { limit = { has_reform = jxp_reform_kirishitan_port_congregations } remove_government_reform = jxp_reform_kirishitan_port_congregations }
+	if = { limit = { has_reform = jxp_reform_kirishitan_cross_sun_guard } remove_government_reform = jxp_reform_kirishitan_cross_sun_guard }
+	if = { limit = { has_reform = jxp_reform_confucian_shushi_academies } remove_government_reform = jxp_reform_confucian_shushi_academies }
+	if = { limit = { has_reform = jxp_reform_confucian_ritual_census } remove_government_reform = jxp_reform_confucian_ritual_census }
+	if = { limit = { has_reform = jxp_reform_confucian_kami_rites } remove_government_reform = jxp_reform_confucian_kami_rites }
+	if = { limit = { has_reform = jxp_reform_imperial_daijokan } remove_government_reform = jxp_reform_imperial_daijokan }
+	if = { limit = { has_reform = jxp_reform_imperial_kinri_guard } remove_government_reform = jxp_reform_imperial_kinri_guard }
+	if = { limit = { has_reform = jxp_reform_imperial_court_rites } remove_government_reform = jxp_reform_imperial_court_rites }
+	if = { limit = { has_reform = jxp_reform_reformed_consistory_ports } remove_government_reform = jxp_reform_reformed_consistory_ports }
+	if = { limit = { has_reform = jxp_reform_reformed_oranda_schools } remove_government_reform = jxp_reform_reformed_oranda_schools }
+	if = { limit = { has_reform = jxp_reform_reformed_elder_militias } remove_government_reform = jxp_reform_reformed_elder_militias }
+	if = { limit = { has_reform = jxp_reform_kaikyo_qadi_harbormasters } remove_government_reform = jxp_reform_kaikyo_qadi_harbormasters }
+	if = { limit = { has_reform = jxp_reform_kaikyo_hajj_sea_lanes } remove_government_reform = jxp_reform_kaikyo_hajj_sea_lanes }
+	if = { limit = { has_reform = jxp_reform_kaikyo_halal_granaries } remove_government_reform = jxp_reform_kaikyo_halal_granaries }
+	if = { limit = { has_reform = jxp_reform_ikko_monto_covenant } remove_government_reform = jxp_reform_ikko_monto_covenant }
+	if = { limit = { has_reform = jxp_reform_ikko_terauchi_markets } remove_government_reform = jxp_reform_ikko_terauchi_markets }
+	if = { limit = { has_reform = jxp_reform_ikko_village_militias } remove_government_reform = jxp_reform_ikko_village_militias }
+	if = { limit = { has_reform = jxp_reform_wokou_letters_of_mark } remove_government_reform = jxp_reform_wokou_letters_of_mark }
+	if = { limit = { has_reform = jxp_reform_wokou_setouchi_pilotage } remove_government_reform = jxp_reform_wokou_setouchi_pilotage }
+	if = { limit = { has_reform = jxp_reform_wokou_free_harbor_codes } remove_government_reform = jxp_reform_wokou_free_harbor_codes }
+}
+
+jxp_unlock_founder_house_reform_effect = {
+	if = {
+		limit = { jxp_is_unified_japan_state_trigger = yes }
+		set_country_flag = jxp_founder_reform_unlocked_v0234
+		regenerate_government_mechanics = yes
+	}
+}
+
+jxp_migrate_visible_government_reforms_v0232_effect = {
+	jxp_remove_legacy_autogranted_route_reforms_effect = yes
+	if = {
+		limit = { jxp_is_unified_japan_state_trigger = yes }
+		jxp_unlock_founder_house_reform_effect = yes
+	}
+	regenerate_government_mechanics = yes
+	set_country_flag = jxp_reform_visibility_migration_v0232
+}
+
+jxp_reclassify_founder_house_reforms_v0234_effect = {
+	if = {
+		limit = { jxp_is_unified_japan_state_trigger = yes }
+		if = {
+			limit = { jxp_has_any_founder_house_reform_trigger = yes }
+			jxp_clear_founder_house_reforms_effect = yes
+			add_government_reform = quash_noble_power_reform
+			change_government_reform_progress = 100
+		}
+		clr_country_flag = jxp_founder_reform_assigned_v0232
+		jxp_unlock_founder_house_reform_effect = yes
+	}
+	set_country_flag = jxp_founder_reform_reclassified_v0234
+}

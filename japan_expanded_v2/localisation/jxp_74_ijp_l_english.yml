@@ -1,0 +1,74 @@
+﻿l_english:
+ jxp_74_decision_convene_somon_commonwealth_title:0 "ìSVã`è•HuOOßv"
+ jxp_74_decision_convene_somon_commonwealth_desc:0 "úRb–„v²‹-^0úR…QHu„vt^ÄRNè•’VQgK„TcêñT„v“Š¸uN&ŒQ0å‚‰ŠbÙ›NqQTSO³ueQNWY•ENýV6Rÿ1SÅV‰˜b²‹vQê»l.OßuÿmNÅV‰˜bÅbƒRìNåeÊvîX'YTùRýV¶Réy^„v‹S›R0"
+ jxp_74_decision_invest_temple_markets_title:0 "•bDúR…QHu^HW"
+ jxp_74_decision_invest_temple_markets_desc:0 "ibú^ÓNÒ^0PKSNqQTäyµ^ÿïSåN©‹úR…QHubHNø‹ýV'irAml„v‚‚¹p0HuOOàVdkôfMaaúQDÿtSmNO‰Blôf'Y„vÁˆ2RCgNMQzCg0"
+ jxp_74_decision_fund_mediation_circuits_title:0 "D©Rã`è•ŒjPáTÞV"
+ jxp_74_decision_fund_mediation_circuits_desc:0 "1uçP±O0t^ÄRNýVºNqQTÄubáTÞVÄ‹®‹ÿŠbQgLu0HPQYNuQ®|‰N®‹&^0RlQV-^NÁˆ­e0ŒjPw90KÿtSýwI–bkN¸u“Š¦uoØSbfkÅˆNÆc0"
+ jxp_74_decision_enforce_war_bell_register_title:0 "tebŸ”TM|"
+ jxp_74_decision_enforce_war_bell_register_desc:0 "úR‰v°‹Ÿ”ðXNbìSÆ–„vè•’V0uQwQN®|ãyÿŠbÁyN¨RXT9eHN×SýVÕl¦umg„vˆRYís!k0HVlx¹pŒšïSåNÅ‹SNO1YµcÎ˜i–ÿmNO2O³RúR>yùRqQTSO„váOûN0"
+ jxp_74_decision_charter_temple_town_state_title:0 "b‡eSúR>yHuOýV"
+ jxp_74_decision_charter_temple_town_state_desc:0 "ã`è•OßvòTÏuàeÕlQ`—4Nöe“Š¸uôuc0SúRb–0HuO0è•’VQgK„NýVœ^eQb‡e®‹-^ÿïSåNŠb‹S›RlSHN3zšR„vqQTSOýV¶RÿFOçe	g„vfkëXVÑSCgÅV‰˜HNdk©‹ek0"
+ jxp_74_decision_stand_down_armed_leagues_title:0 "ã‰cefkÅˆè•’VTwßv"
+ jxp_74_decision_stand_down_armed_leagues_desc:0 "6eÞVbŸ”TM|0SXRqQTuQwQv^Šb‰N¼‹²NØýVœ^ÿïSåNÓumgÙnOßv00W¹eO‚föe‰RšRÿýV¶RmNS1Y»SNèR1uè•’VêÑSÐc›O„vuQ›R0"
+
+ jxp_debug_74_ijp_start_cycle_title:0 "ŒÕ‹ÿ=T¨RNTqQTSOªV¯s"
+ jxp_debug_74_ijp_start_cycle_desc:0 "ËzsSú^ËzúR>yHuOªV¯sv^Šb‹S›R¾‹HNRËY<P0"
+ jxp_debug_74_ijp_add_pressure_title:0 "ŒÕ‹ÿžX RNTqQTSO‹S›R"
+ jxp_debug_74_ijp_add_pressure_desc:0 "ËzsSžX RNTqQTSO‹S›Rv^gbLˆNP–!hck0"
+ jxp_debug_74_ijp_fire_petition_title:0 "ŒÕ‹ÿæ‰ÑSúR…QHu÷‹Ma"
+ jxp_debug_74_ijp_fire_petition_desc:0 "ËzsSæ‰ÑSúR>yHuOªV¯s„v8^Ä‰ÖS‚‹NöN0"
+ jxp_debug_74_ijp_fire_crisis_title:0 "ŒÕ‹ÿæ‰ÑSã`è•qSHg"
+ jxp_debug_74_ijp_fire_crisis_desc:0 "Šb‹S›R¾‹0RqSHg–<Pv^ËzsSæ‰ÑSgÈuÖS‚‹NöN0"
+ jxp_debug_74_ijp_reset_cycle_title:0 "ŒÕ‹ÿÍ‘nNTqQTSOªV¯s"
+ jxp_debug_74_ijp_reset_cycle_desc:0 "nd–ªV¯s×eh0‹S›R0Nb	gN^SîOckN…VYt„v!kåeï¿u!hck0"
+
+ jxp_ijp_loop.1.t:0 "úR…QHuRM‘KNcR"
+ jxp_ijp_loop.1.d:0 "Ëy6eN^ßyòTÏueQúR…QHu„vqQTÓN0HuO‰Bl	cúQDR¢uÿè•’VQgK„IN.VHQYuuQ®|ÿýVœ^IYLˆR&^egNýNÍ‘°e8hz„vTŒQ0‚YUORM‘ÙNcR„vÈvYOÿS³QšROßvNNt^„vHV1V0"
+ jxp_ijp_loop.1.a:0 "ÆQ¸‹HuOgqçeRÖS¢u)R0"
+ jxp_ijp_loop.1.b:0 "HQEQžRqQTÓNNQeNm®|0"
+ jxp_ijp_loop.1.c:0 "ågS&ŒQÿÍ‘¡R^HWyrCg0"
+ jxp_ijp_loop.2.t:0 "ã`è•®‹-^KN‰N"
+ jxp_ijp_loop.2.d:0 "úRb–²‹-^0HuOt^ÄRNè•’V4YºNýðXðyêñT”^INcNN!kã`è•Ä‹®‹0ÖNìN&^egçe“Š¸u0PncNˆRÎWŸR³Rÿ–ÎNR(WÊ^YNOðX‰Ngb0å‚-^!kNýw—V0RqQTb²‹ÿ‰N®‹ˆVëV1SO.O0RQgK„N›Q5–0"
+ jxp_ijp_loop.2.a:0 "äN	N¹elQVùRû‹“Š¸uN&ŒQ0"
+ jxp_ijp_loop.2.b:0 "b²‹HuOåN0KbcÖSôf'Y®‹-^0"
+ jxp_ijp_loop.2.c:0 "reÍTbŸ”ÿåNˆRYTM|ÁˆšR-^!k0"
+ jxp_ijp_loop.3.t:0 "qQT“Š¦u„vgP–"
+ jxp_ijp_loop.3.d:0 "T0W„vbŸ”0^HWNã`è•®‹-^òTÏuÞbN.V³åNcbýVœ^‹TäN„vQÜu0çežRÕlêSýw‚f²QzÿýV¶RÅV‰˜ŠbqQTSO™QeQÕl¦^0åNfk›RÆbceƒRÿb¥c×S0W¹e“Š¦uçuíuib.V0"
+ jxp_ijp_loop.3.a:0 "ŠbqQT®‹-^™QeQýV¶RÕl¦^0"
+ jxp_ijp_loop.3.b:0 "ã‰d–uQwQÿåNHV6Rte˜bcÖS˜Uo`0"
+ jxp_ijp_loop.3.c:0 "b²‹0W¹e“Š¦uÿ©‹OßvêLˆib.V0"
+
+ jxp_74_ijp_temple_market_charter:0 "úR>yHuOOßv"
+ jxp_74_ijp_temple_market_charter_desc:0 "úRb–0úR…QHuNè•’VQgK„åNqQT“Š¸uOSŒ0KŒTˆRYÿýV¶RÎN-N·ƒ—VDnÿmNÅV‰˜b×SYÍ‘®‹-^&^eg„vLˆMeÅb0"
+ jxp_74_ijp_machishu_investment:0 "HuO^HW•bD"
+ jxp_74_ijp_machishu_investment_desc:0 "qQTÓNNäyµ^ÃOÛuµNŒT²NfÿFO·ƒ)R„vHuO‰BlôfYê»lCg0"
+ jxp_74_ijp_somon_mediation:0 "ã`è•ŒjPáTÞV"
+ jxp_74_ijp_somon_mediation_desc:0 "lQVÄ‹®‹ÏQSQgHu²QzÿtS—‰cíuÏQMQNHNm0"
+ jxp_74_ijp_war_bell_enforcement:0 "bŸ”TM|te"
+ jxp_74_ijp_war_bell_enforcement_desc:0 "è•’VˆRY«ˆeQßuNTM|ÿ›Q›Rôffb`YÿúR…QHuuµNRàV¹pŒšw×Smc0"
+ jxp_74_ijp_market_dividend:0 "úR…QHucR+g¢u)R"
+ jxp_74_ijp_market_dividend_desc:0 "'irN^ßy«ˆÅRM‘ÿíwgAucƒ4O–NwôfØš„vqQTSO‹S›R0"
+ jxp_74_ijp_assembly_hearing:0 "ã`è•lQV,T®‹"
+ jxp_74_ijp_assembly_hearing_desc:0 "T¹e(WlQV-^NùRû‹“Š¸uN&ŒQÿåN0Me©‹ekbcÖS3zšR0"
+ jxp_74_ijp_hardline_aftershock:0 "HVlxteYOâl"
+ jxp_74_ijp_hardline_aftershock_desc:0 "fk›R¹pŒš‹SN<wMR‰N®‹ÿtSOQgHuùRýVœ^ôf RbY0"
+ jxp_74_ijp_covenant_overreach:0 "0W¹e“Š¦uŠCg"
+ jxp_74_ijp_covenant_overreach_desc:0 "ê»lQÜuÃOÛuµNÿtSJR1V-N.YðXgv^>e'Y0W¹eN‰R0"
+ jxp_74_ijp_crisis_recess:0 "qSHgT„víw‚fOO"
+ jxp_74_ijp_crisis_recess_desc:0 "ã`è•®‹-^‚föece»SÿFO*gã‰³Q„v“Š¦uÍN(W0W¹eïy=t0"
+ jxp_74_ijp_chartered_commonwealth:0 "b‡eúR>yHuOýV"
+ jxp_74_ijp_chartered_commonwealth_desc:0 "qQT®‹-^«ˆ³ueQýV¶RÕl¦^ÿÏuNmNùRYáO(u—V0R9e„Uÿ.OßufkëXVÑSýw›RR	gNb6e)0"
+ jxp_74_ijp_secular_settlement:0 "fkÅˆTwßvã‰ceäN"
+ jxp_74_ijp_secular_settlement_desc:0 "‰N¼‹ÞVRVýVœ^T0W¹eôf R‰RšRÿFOè•’VêYuQyVNQýw–bŸ”ÅÆ–Óu0"
+
+ jxp_74_ijp_pressure_starts_15_tt:0 "è•’VfkÅˆSSÎN§Y15§!VËY0"
+ jxp_74_ijp_pressure_rises_10_tt:0 "è•’VfkÅˆSSžX R§R10§!0"
+ jxp_74_ijp_pressure_rises_15_tt:0 "è•’VfkÅˆSSžX R§R15§!0"
+ jxp_74_ijp_pressure_rises_20_tt:0 "è•’VfkÅˆSSžX R§R20§!0"
+ jxp_74_ijp_pressure_falls_10_tt:0 "è•’VfkÅˆSSM–NO§G10§!0"
+ jxp_74_ijp_pressure_falls_15_tt:0 "è•’VfkÅˆSSM–NO§G15§!0"
+ jxp_74_ijp_pressure_falls_20_tt:0 "è•’VfkÅˆSSM–NO§G20§!0"
+ jxp_74_ijp_pressure_falls_40_tt:0 "è•’VfkÅˆSSM–NO§G40§!0"
+ jxp_74_ijp_transform_tt:0 "Óumg,gn‹S›RªV¯sÿv^(WŒNASt^…QžRLˆb‡eúR>yHuOýV0"
+ jxp_74_ijp_stand_down_tt:0 "Óumg,gn‹S›RªV¯sÿv^(WASt^…QbÅbã‰cefkÅˆTwßv„vãN÷N0"

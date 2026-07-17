@@ -1,0 +1,133 @@
+jxp_b_91_clamp_colonial_variables_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_colonial_identity value = 0 } } }
+			set_variable = { which = jxp_b_colonial_identity value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_colonial_identity value = 100 } }
+			set_variable = { which = jxp_b_colonial_identity value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_metropole_control value = 0 } } }
+			set_variable = { which = jxp_b_metropole_control value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_metropole_control value = 100 } }
+			set_variable = { which = jxp_b_metropole_control value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_local_compact value = 0 } } }
+			set_variable = { which = jxp_b_local_compact value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_local_compact value = 100 } }
+			set_variable = { which = jxp_b_local_compact value = 100 }
+		}
+	}
+}
+
+jxp_b_91_add_identity_5_effect = { change_variable = { which = jxp_b_colonial_identity value = 5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_identity_10_effect = { change_variable = { which = jxp_b_colonial_identity value = 10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_identity_15_effect = { change_variable = { which = jxp_b_colonial_identity value = 15 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_identity_5_effect = { change_variable = { which = jxp_b_colonial_identity value = -5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_identity_10_effect = { change_variable = { which = jxp_b_colonial_identity value = -10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+
+jxp_b_91_add_control_5_effect = { change_variable = { which = jxp_b_metropole_control value = 5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_control_10_effect = { change_variable = { which = jxp_b_metropole_control value = 10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_control_15_effect = { change_variable = { which = jxp_b_metropole_control value = 15 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_control_5_effect = { change_variable = { which = jxp_b_metropole_control value = -5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_control_10_effect = { change_variable = { which = jxp_b_metropole_control value = -10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_control_15_effect = { change_variable = { which = jxp_b_metropole_control value = -15 } jxp_b_91_clamp_colonial_variables_effect = yes }
+
+jxp_b_91_add_compact_5_effect = { change_variable = { which = jxp_b_local_compact value = 5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_compact_10_effect = { change_variable = { which = jxp_b_local_compact value = 10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_add_compact_15_effect = { change_variable = { which = jxp_b_local_compact value = 15 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_compact_5_effect = { change_variable = { which = jxp_b_local_compact value = -5 } jxp_b_91_clamp_colonial_variables_effect = yes }
+jxp_b_91_subtract_compact_10_effect = { change_variable = { which = jxp_b_local_compact value = -10 } jxp_b_91_clamp_colonial_variables_effect = yes }
+
+jxp_b_91_clear_stage_modifiers_effect = {
+	remove_country_modifier = jxp_b_91_stage_anchorage
+	remove_country_modifier = jxp_b_91_stage_chartered_settlement
+	remove_country_modifier = jxp_b_91_stage_autonomous_society
+	remove_country_modifier = jxp_b_91_stage_colonial_state
+}
+
+jxp_b_91_sync_colonial_stage_effect = {
+	jxp_b_91_clamp_colonial_variables_effect = yes
+	jxp_b_91_clear_stage_modifiers_effect = yes
+	if = {
+		limit = { jxp_b_91_colonial_identity_at_least_75_trigger = yes }
+		clr_country_flag = jxp_b_colonial_stage_autonomous
+		clr_country_flag = jxp_b_colonial_stage_chartered
+		add_country_modifier = { name = jxp_b_91_stage_colonial_state duration = -1 }
+	}
+	else_if = {
+		limit = { jxp_b_91_colonial_identity_at_least_50_trigger = yes }
+		clr_country_flag = jxp_b_colonial_stage_state
+		clr_country_flag = jxp_b_colonial_stage_chartered
+		add_country_modifier = { name = jxp_b_91_stage_autonomous_society duration = -1 }
+	}
+	else_if = {
+		limit = { jxp_b_91_colonial_identity_at_least_25_trigger = yes }
+		clr_country_flag = jxp_b_colonial_stage_state
+		clr_country_flag = jxp_b_colonial_stage_autonomous
+		add_country_modifier = { name = jxp_b_91_stage_chartered_settlement duration = -1 }
+	}
+	else = {
+		clr_country_flag = jxp_b_colonial_stage_state
+		clr_country_flag = jxp_b_colonial_stage_autonomous
+		clr_country_flag = jxp_b_colonial_stage_chartered
+		add_country_modifier = { name = jxp_b_91_stage_anchorage duration = -1 }
+	}
+}
+
+jxp_b_91_schedule_colonial_pulse_effect = {
+	if = {
+		limit = {
+			jxp_b_91_colonial_society_active_trigger = yes
+			NOT = { has_country_flag = jxp_b_colonial_pulse_scheduled }
+		}
+		set_country_flag = jxp_b_colonial_pulse_scheduled
+		country_event = { id = jxp_colonial_society.2 days = 365 }
+	}
+}
+
+jxp_b_91_colonial_society_initialize_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_colonial_society_initialized } }
+		set_country_flag = jxp_b_colonial_society_initialized
+		set_country_flag = jxp_b_colonial_society_active
+		clr_country_flag = jxp_b_colonial_society_retired
+		set_country_flag = jxp_iface_overseas_charter_ready
+		set_variable = { which = jxp_b_colonial_identity value = 10 }
+		set_variable = { which = jxp_b_metropole_control value = 45 }
+		set_variable = { which = jxp_b_local_compact value = 40 }
+		if = { limit = { has_country_flag = jxp_pacific_charter_enacted } jxp_b_91_add_identity_10_effect = yes jxp_b_91_add_control_10_effect = yes }
+		if = { limit = { has_country_flag = jxp_new_world_japan_towns_done } jxp_b_91_add_identity_15_effect = yes jxp_b_91_add_compact_10_effect = yes }
+		if = { limit = { has_country_flag = jxp_oceanic_sun_state } jxp_b_91_add_identity_15_effect = yes jxp_b_91_add_control_5_effect = yes }
+		if = { limit = { has_country_flag = jxp_76_pacific_network_active } jxp_b_91_add_control_5_effect = yes }
+		if = { limit = { has_country_flag = jxp_manila_nagasaki_route_seen } jxp_b_91_add_compact_5_effect = yes }
+		if = { limit = { has_country_flag = jxp_alaska_survey_seen } jxp_b_91_add_compact_5_effect = yes }
+		if = { limit = { has_country_flag = jxp_california_anchorages_seen } jxp_b_91_add_identity_10_effect = yes }
+	}
+	else = {
+		set_country_flag = jxp_b_colonial_society_active
+		clr_country_flag = jxp_b_colonial_society_retired
+		set_country_flag = jxp_iface_overseas_charter_ready
+	}
+	jxp_b_91_sync_colonial_stage_effect = yes
+	jxp_b_91_schedule_colonial_pulse_effect = yes
+}
+
+jxp_b_91_colonial_society_cleanup_effect = {
+	clr_country_flag = jxp_b_colonial_society_active
+	clr_country_flag = jxp_iface_overseas_charter_ready
+	set_country_flag = jxp_b_colonial_society_retired
+	clr_country_flag = jxp_b_colonial_pulse_scheduled
+	clr_country_flag = jxp_b_colonial_stage_state
+	clr_country_flag = jxp_b_colonial_stage_autonomous
+	clr_country_flag = jxp_b_colonial_stage_chartered
+	jxp_b_91_clear_stage_modifiers_effect = yes
+	remove_country_modifier = jxp_b_91_recent_colonial_review
+}

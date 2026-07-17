@@ -1,0 +1,111 @@
+jxp_b_94_clear_japanese_home_paths_effect = {
+	clr_country_flag = jxp_path_sakoku
+	clr_country_flag = jxp_path_open_trade
+	clr_country_flag = jxp_path_kirishitan
+	clr_country_flag = jxp_path_confucian
+	clr_country_flag = jxp_path_imperial
+	clr_country_flag = jxp_path_reformed
+	clr_country_flag = jxp_path_kaikyo
+	clr_country_flag = jxp_path_ikko
+	clr_country_flag = jxp_path_wokou
+}
+
+jxp_b_94_clear_foundational_reforms_effect = {
+	if = { limit = { has_reform = colonial_government } remove_government_reform = colonial_government }
+	if = { limit = { has_reform = crown_colony_government } remove_government_reform = crown_colony_government }
+	if = { limit = { has_reform = private_enterprise_colony_government } remove_government_reform = private_enterprise_colony_government }
+	if = { limit = { has_reform = self_governing_colony_government } remove_government_reform = self_governing_colony_government }
+	if = { limit = { has_reform = jxp_b_94_federal_assembly_reform } remove_government_reform = jxp_b_94_federal_assembly_reform }
+	if = { limit = { has_reform = jxp_b_94_frontier_military_republic_reform } remove_government_reform = jxp_b_94_frontier_military_republic_reform }
+	if = { limit = { has_reform = jxp_b_94_merchant_commonwealth_reform } remove_government_reform = jxp_b_94_merchant_commonwealth_reform }
+	if = { limit = { has_reform = jxp_b_94_oceanic_monarchy_reform } remove_government_reform = jxp_b_94_oceanic_monarchy_reform }
+}
+
+jxp_b_94_mark_agent_a_refresh_interfaces_effect = {
+	set_country_flag = jxp_iface_b_nya_needs_mission_refresh
+	set_country_flag = jxp_iface_b_nya_needs_idea_refresh
+	set_country_flag = jxp_iface_b_nya_needs_government_registry
+	custom_tooltip = jxp_b_94_agent_a_refresh_interface_tt
+}
+
+jxp_b_94_apply_federal_assembly_effect = {
+	jxp_b_94_clear_foundational_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_94_federal_assembly_reform
+	set_country_flag = jxp_b_94_constitution_chosen
+	add_republican_tradition = 5
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_94_apply_frontier_military_republic_effect = {
+	jxp_b_94_clear_foundational_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_94_frontier_military_republic_reform
+	set_country_flag = jxp_b_94_constitution_chosen
+	add_army_tradition = 5
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+}
+
+jxp_b_94_apply_merchant_commonwealth_effect = {
+	jxp_b_94_clear_foundational_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_94_merchant_commonwealth_reform
+	set_country_flag = jxp_b_94_constitution_chosen
+	add_mercantilism = 1
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_10_effect = yes
+}
+
+jxp_b_94_apply_oceanic_monarchy_effect = {
+	jxp_b_94_clear_foundational_reforms_effect = yes
+	change_government = monarchy
+	add_government_reform = jxp_b_94_oceanic_monarchy_reform
+	set_country_flag = jxp_b_94_constitution_chosen
+	add_legitimacy = 10
+	jxp_b_91_add_control_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+}
+
+jxp_b_94_form_new_yamato_effect = {
+	set_country_flag = jxp_b_94_new_yamato_formed
+	set_country_flag = jxp_iface_colonial_self_rule
+	set_country_flag = jxp_b_colonial_society_active
+	clr_country_flag = jxp_b_colonial_society_retired
+	jxp_b_94_clear_japanese_home_paths_effect = yes
+	change_tag = NYA
+	jxp_refresh_route_missions_effect = yes
+	on_change_tag_effect = yes
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_subtract_control_10_effect = yes
+	jxp_b_91_sync_colonial_stage_effect = yes
+	add_country_modifier = { name = jxp_b_94_foundation_strain duration = 1825 }
+	jxp_b_94_mark_agent_a_refresh_interfaces_effect = yes
+	country_event = { id = jxp_new_yamato.1 days = 1 }
+}
+
+jxp_b_94_reward_local_compact_effect = {
+	jxp_b_91_add_compact_5_effect = yes
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_94_reward_metropole_continuity_effect = {
+	jxp_b_91_add_control_5_effect = yes
+	jxp_b_91_add_compact_5_effect = yes
+	jxp_b_91_subtract_identity_5_effect = yes
+}
+
+jxp_b_94_reward_frontier_mobilization_effect = {
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+	add_country_modifier = { name = jxp_b_94_frontier_muster_strain duration = 1825 }
+}
+
+jxp_b_94_reward_commercial_autonomy_effect = {
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+	add_country_modifier = { name = jxp_b_94_merchant_concessions duration = 1825 }
+}

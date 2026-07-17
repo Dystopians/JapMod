@@ -1,0 +1,58 @@
+jxp_b_99_continental_campaign_wargoal = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1.50
+		prestige_factor = 1
+		peace_cost_factor = 1.25
+
+		allowed_provinces = {
+			OR = {
+				AND = { ROOT = { has_country_flag = jxp_b_99_campaign_ryukyu } province_id = 1015 }
+				AND = {
+					ROOT = { has_country_flag = jxp_b_99_campaign_north }
+					OR = { region = manchuria_region region = east_siberia_region area = sakhalin_area }
+				}
+				AND = {
+					ROOT = { has_country_flag = jxp_b_99_campaign_taiwan_fujian }
+					OR = { area = taiwan_area area = fujian_area }
+				}
+				AND = {
+					ROOT = { has_country_flag = jxp_b_99_campaign_southeast_asia }
+					OR = {
+						region = indo_china_region
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+		}
+
+		peace_options = {
+			po_demand_provinces
+			po_gold
+			po_trade_power
+			po_annul_treaties
+			po_concede_defeat
+		}
+
+		country_desc = JXP_B_99_CONTINENTAL_CAMPAIGN_COUNTRY_DESC
+		prov_desc = JXP_B_99_CONTINENTAL_CAMPAIGN_PROV_DESC
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_demand_provinces
+			po_gold
+			po_trade_power
+			po_annul_treaties
+			po_concede_defeat
+		}
+	}
+
+	war_name = JXP_B_99_CONTINENTAL_CAMPAIGN_WAR_NAME
+}

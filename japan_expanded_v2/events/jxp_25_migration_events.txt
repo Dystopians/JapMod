@@ -1,0 +1,43 @@
+namespace = jxp_migration_v025
+
+# Reconcile 0.24.x saves with the compact, route-distinct final-tag mission
+# layout. The canonical refresh runs immediately and once more on the next day.
+country_event = {
+	id = jxp_migration_v025.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_final_tag_tree_migration_v0250 }
+	}
+
+	immediate = {
+		clr_country_flag = jxp_mission_refresh_pending
+		if = {
+			limit = {
+				OR = {
+					AND = { tag = KJP NOT = { has_country_flag = jxp_path_kirishitan } }
+					AND = { tag = CJP NOT = { has_country_flag = jxp_path_confucian } }
+					AND = { tag = EJP NOT = { has_country_flag = jxp_path_imperial } }
+					AND = { tag = RFJ NOT = { has_country_flag = jxp_path_reformed } }
+					AND = { tag = SJP NOT = { has_country_flag = jxp_path_kaikyo } }
+					AND = { tag = IJP NOT = { has_country_flag = jxp_path_ikko } }
+					AND = { tag = WAK NOT = { has_country_flag = jxp_path_wokou } }
+				}
+			}
+			jxp_sanitize_route_state_effect = yes
+		}
+		jxp_sync_route_national_ideas_effect = yes
+		jxp_grant_route_reforms_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		set_country_flag = jxp_final_tag_tree_migration_v0250
+	}
+
+	option = {
+		name = "OK"
+	}
+}

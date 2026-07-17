@@ -1,0 +1,28 @@
+po_jxp_b_end_metropole_colonial_rule = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 0
+	warscore_cost = { no_provinces = 85.0 }
+	warscore_cap = 85
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = {
+		THIS = { jxp_b_97_can_end_metropole_rule_trigger = yes }
+		FROM = { jxp_b_97_has_overseas_colonial_rule_trigger = yes }
+	}
+	is_allowed = { FROM = { jxp_b_97_has_overseas_colonial_rule_trigger = yes } }
+	effect = {
+		FROM = {
+			jxp_b_97_break_metropole_new_world_rule_effect = yes
+			country_event = { id = jxp_end_metropole_rule.2 days = 1 }
+		}
+		THIS = {
+			add_country_modifier = { name = jxp_b_97_liberator_of_pacific_states duration = 7300 }
+			country_event = { id = jxp_end_metropole_rule.1 days = 1 }
+		}
+	}
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 90 } }
+}

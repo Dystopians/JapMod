@@ -1,0 +1,24 @@
+cb_jxp_b_99_continental_campaign = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_modifier = jxp_b_99_campaign_preparations
+		OR = {
+			has_country_flag = jxp_b_99_campaign_ryukyu
+			has_country_flag = jxp_b_99_campaign_north
+			has_country_flag = jxp_b_99_campaign_taiwan_fujian
+			has_country_flag = jxp_b_99_campaign_southeast_asia
+		}
+	}
+
+	prerequisites = {
+		OR = {
+			AND = { ROOT = { has_country_flag = jxp_b_99_campaign_ryukyu } FROM = { has_country_modifier = jxp_b_99_alarm_ryukyu } }
+			AND = { ROOT = { has_country_flag = jxp_b_99_campaign_north } FROM = { has_country_modifier = jxp_b_99_alarm_north } }
+			AND = { ROOT = { has_country_flag = jxp_b_99_campaign_taiwan_fujian } FROM = { has_country_modifier = jxp_b_99_alarm_taiwan_fujian } }
+			AND = { ROOT = { has_country_flag = jxp_b_99_campaign_southeast_asia } FROM = { has_country_modifier = jxp_b_99_alarm_southeast_asia } }
+		}
+	}
+
+	war_goal = jxp_b_99_continental_campaign_wargoal
+}

@@ -1,0 +1,280 @@
+namespace = jxp_colonial_independence
+
+country_event = {
+	id = jxp_colonial_independence.1
+	title = "jxp_colonial_independence.1.t"
+	desc = "jxp_colonial_independence.1.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_96_colonial_crisis_ready_trigger = yes }
+	option = {
+		name = "jxp_colonial_independence.1.a"
+		set_country_flag = jxp_b_96_independence_crisis_active
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		country_event = { id = jxp_colonial_independence.2 days = 365 }
+		ai_chance = { factor = 2 modifier = { factor = 2 jxp_b_91_colonial_identity_at_least_75_trigger = yes } }
+	}
+	option = {
+		name = "jxp_colonial_independence.1.b"
+		jxp_b_96_resolve_with_loyalty_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 jxp_b_91_metropole_control_at_least_40_trigger = yes } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.2
+	title = "jxp_colonial_independence.2.t"
+	desc = "jxp_colonial_independence.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.2.a"
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		country_event = { id = jxp_colonial_independence.3 days = 365 }
+		ai_chance = { factor = 2 modifier = { factor = 2 jxp_b_91_local_compact_at_least_60_trigger = yes } }
+	}
+	option = {
+		name = "jxp_colonial_independence.2.b"
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		country_event = { id = jxp_colonial_independence.3 days = 365 }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.3
+	title = "jxp_colonial_independence.3.t"
+	desc = "jxp_colonial_independence.3.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.3.a"
+		set_country_flag = jxp_b_96_tax_refusal
+		add_country_modifier = { name = jxp_b_96_tax_refusal_modifier duration = 1825 }
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		country_event = { id = jxp_colonial_independence.4 days = 365 }
+		ai_chance = { factor = 2 modifier = { factor = 2 NOT = { jxp_b_91_metropole_control_at_least_40_trigger = yes } } }
+	}
+	option = {
+		name = "jxp_colonial_independence.3.b"
+		add_treasury = -100
+		jxp_b_91_add_compact_5_effect = yes
+		country_event = { id = jxp_colonial_independence.4 days = 365 }
+		ai_chance = { factor = 1 modifier = { factor = 2 treasury = 300 } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.4
+	title = "jxp_colonial_independence.4.t"
+	desc = "jxp_colonial_independence.4.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.4.a"
+		add_country_modifier = { name = jxp_b_96_port_boycott_modifier duration = 1825 }
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		country_event = { id = jxp_colonial_independence.5 days = 365 }
+		ai_chance = { factor = 2 modifier = { factor = 2 has_country_flag = jxp_b_96_tax_refusal } }
+	}
+	option = {
+		name = "jxp_colonial_independence.4.b"
+		add_dip_power = -50
+		jxp_b_91_add_compact_10_effect = yes
+		country_event = { id = jxp_colonial_independence.5 days = 365 }
+		ai_chance = { factor = 1 modifier = { factor = 2 dip_power = 150 } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.5
+	title = "jxp_colonial_independence.5.t"
+	desc = "jxp_colonial_independence.5.d"
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.5.a"
+		add_country_modifier = { name = jxp_b_96_colonial_militia_modifier duration = 1825 }
+		add_mil_power = -50
+		jxp_b_91_add_identity_5_effect = yes
+		country_event = { id = jxp_colonial_independence.6 days = 365 }
+		ai_chance = { factor = 2 modifier = { factor = 2 mil_power = 150 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.5.b"
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		country_event = { id = jxp_colonial_independence.6 days = 365 }
+		ai_chance = { factor = 1 modifier = { factor = 2 jxp_b_91_local_compact_at_least_60_trigger = yes } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.6
+	title = "jxp_colonial_independence.6.t"
+	desc = "jxp_colonial_independence.6.d"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.6.a"
+		add_country_modifier = { name = jxp_b_96_loyalist_independent_split duration = 1825 }
+		overlord = { country_event = { id = jxp_colonial_independence.20 } }
+		ai_chance = { factor = 2 modifier = { factor = 2 jxp_b_91_colonial_identity_at_least_75_trigger = yes } }
+	}
+	option = {
+		name = "jxp_colonial_independence.6.b"
+		jxp_b_96_resolve_with_loyalty_effect = yes
+		add_prestige = -10
+		ai_chance = { factor = 1 modifier = { factor = 2 war_exhaustion = 5 } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.7
+	title = "jxp_colonial_independence.7.t"
+	desc = "jxp_colonial_independence.7.d"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_metropole_hardline is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.7.a"
+		jxp_b_96_resolve_with_loyalty_effect = yes
+		add_stability_or_adm_power = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 war_exhaustion = 5 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.7.b"
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		country_event = { id = jxp_colonial_independence.8 days = 180 }
+		ai_chance = { factor = 2 modifier = { factor = 2 jxp_b_91_colonial_identity_at_least_75_trigger = yes } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.8
+	title = "jxp_colonial_independence.8.t"
+	desc = "jxp_colonial_independence.8.d"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.8.a"
+		add_mil_power = -75
+		add_manpower = -1
+		jxp_b_91_add_identity_10_effect = yes
+		country_event = { id = jxp_colonial_independence.9 days = 180 }
+		ai_chance = { factor = 2 modifier = { factor = 2 manpower_percentage = 0.50 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.8.b"
+		add_dip_power = -75
+		jxp_b_96_resolve_with_autonomous_compact_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 jxp_b_91_local_compact_at_least_60_trigger = yes } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.9
+	title = "jxp_colonial_independence.9.t"
+	desc = "jxp_colonial_independence.9.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.9.a"
+		set_country_flag = jxp_b_96_independence_declared
+		jxp_b_91_add_identity_10_effect = yes
+		country_event = { id = jxp_colonial_independence.10 days = 30 }
+		ai_chance = { factor = 2 modifier = { factor = 2 jxp_b_91_colonial_identity_at_least_75_trigger = yes } }
+	}
+	option = {
+		name = "jxp_colonial_independence.9.b"
+		jxp_b_96_resolve_with_trade_independence_effect = yes
+		add_prestige = -10
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.10
+	title = "jxp_colonial_independence.10.t"
+	desc = "jxp_colonial_independence.10.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_96_independence_declared is_subject = yes }
+	option = {
+		name = "jxp_colonial_independence.10.a"
+		trigger = { is_at_war = no }
+		overlord = {
+			ROOT = {
+				declare_war_with_cb = { who = PREV casus_belli = cb_jxp_b_colonial_independence }
+			}
+		}
+		ai_chance = { factor = 2 modifier = { factor = 2 army_size_percentage = 0.80 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.10.b"
+		add_country_modifier = { name = jxp_b_96_foreign_support_search duration = 1825 }
+		add_prestige = -5
+		custom_tooltip = jxp_b_96_independence_cb_waits_tt
+		ai_chance = { factor = 1 modifier = { factor = 2 war_exhaustion = 3 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.10.c"
+		jxp_b_96_resolve_with_loyalty_effect = yes
+		add_prestige = -20
+		ai_chance = { factor = 1 modifier = { factor = 3 NOT = { manpower_percentage = 0.25 } } }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_independence.20
+	title = "jxp_colonial_independence.20.t"
+	desc = "jxp_colonial_independence.20.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { FROM = { is_subject_of = ROOT has_country_flag = jxp_b_96_independence_crisis_active } }
+	option = {
+		name = "jxp_colonial_independence.20.a"
+		add_prestige = -10
+		FROM = { jxp_b_96_resolve_with_autonomous_compact_effect = yes }
+		ai_chance = { factor = 2 modifier = { factor = 2 stability = 1 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.20.b"
+		add_treasury = -150
+		FROM = { jxp_b_96_resolve_with_trade_independence_effect = yes }
+		ai_chance = { factor = 2 modifier = { factor = 2 treasury = 400 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.20.c"
+		add_mil_power = -75
+		FROM = {
+			set_country_flag = jxp_b_96_metropole_hardline
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_10_effect = yes
+			country_event = { id = jxp_colonial_independence.7 days = 30 }
+		}
+		ai_chance = { factor = 1 modifier = { factor = 0.25 war_exhaustion = 5 } }
+	}
+	option = {
+		name = "jxp_colonial_independence.20.independence"
+		add_prestige = -20
+		FROM = {
+			grant_independence = yes
+			jxp_b_96_mark_full_independence_effect = yes
+		}
+		ai_chance = { factor = 0.25 modifier = { factor = 4 war_exhaustion = 8 } modifier = { factor = 3 has_any_disaster = yes } }
+	}
+}

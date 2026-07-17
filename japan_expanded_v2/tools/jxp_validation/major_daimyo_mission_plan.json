@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "main": [
+    {
+      "tag": "ASK",
+      "family": "court",
+      "focus": "diplomatic",
+      "legacy_title": "公方奉公体制",
+      "legacy_desc": "奉公众、奉行人和守护家门再次围绕将军权威运转，使足利家得以用名分调停刀兵。",
+      "modifier": {"diplomatic_reputation": "1", "improve_relation_modifier": "0.15"},
+      "chapters": [
+        {"slug": "genji_headship", "title": "源氏栋梁", "desc": "足利家以清和源氏栋梁自居。谱牒、官位与御教书必须重新成为诸国武家的共同语言。"},
+        {"slug": "hokoshu_rolls", "title": "整编奉公众", "desc": "直属将军的奉公众若只存于旧册，幕府便只剩空名。重新核定其知行与军役，方能在京中立足。"},
+        {"slug": "higashiyama_court", "title": "东山殿余晖", "desc": "连歌、茶汤、庭园与唐物并非无用奢华。文化威望能把离散公家、寺社与守护再次聚到花之御所。"},
+        {"slug": "tosen_bugyo", "title": "唐船奉行", "desc": "渡海船、勘合与港税须由可信的奉行统摄。海贸所得可为衰微的幕府重新筹措奉公之资。"},
+        {"slug": "shugo_order", "title": "重申守护秩序", "desc": "守护并非各自为政的国主，而应是幕府在诸国的手足。以旧职约束新势力，方可使名分赶上现实。"},
+        {"slug": "realm_mediation", "title": "调停诸国", "desc": "一纸停战令未必胜过铁炮，却能让敌对诸家在御前承认共同裁判。幕府的力量正在于使战争也有名义。"},
+        {"slug": "restore_bakufu_service", "title": "再兴幕府奉公", "desc": "奉行、评定与近习被纳入稳定官署，不再只依赖将军个人恩宠。旧幕府由此获得新的筋骨。"},
+        {"slug": "tenka_kubo", "title": "天下公方", "desc": "当诸国再次以公方之命为天下尺度，京都便不只是被争夺的城池，而成为武家秩序的中枢。"}
+      ]
+    },
+    {
+      "tag": "CSK",
+      "family": "warrior",
+      "focus": "military",
+      "legacy_title": "一领具足军役",
+      "legacy_desc": "农兵、地侍与浦户船手按土佐家法编为一体，平时耕作，战时随旗而出。",
+      "modifier": {"land_morale": "0.10", "global_manpower_modifier": "0.10"},
+      "chapters": [
+        {"slug": "ichiryo_gusoku", "title": "一领具足", "desc": "土佐乡士披一领具足便可离田赴阵。若将这种迅捷军役写入名册，贫瘠之国也能聚起可畏兵势。"},
+        {"slug": "tosa_seven_clans", "title": "调伏土佐七雄", "desc": "本山、安芸与津野等旧族各据山川。以盟约、婚姻和战阵逐一收束，长宗我部方能号令全土佐。"},
+        {"slug": "okoh_castle_law", "title": "冈丰城法", "desc": "山城道路、兵粮仓与家臣屋敷围绕冈丰整饬，临时军势由此转为可以持久经营的家中。"},
+        {"slug": "shikoku_crossings", "title": "四国渡海", "desc": "吉野川与濑户内诸渡口决定四国征伐的节奏。掌握舟梁，山地便不再阻隔军令。"},
+        {"slug": "hundred_article_code", "title": "百箇条掟书", "desc": "从喧哗口论到军役赋课，家法必须能落到村里与阵中。法度使一领具足不致沦为无纪之众。"},
+        {"slug": "urahado_fleet", "title": "浦户水军", "desc": "浦户与土佐湾的船手为陆军打开外海。海陆相济，四国诸城便难以彼此声援。"},
+        {"slug": "shikoku_board", "title": "四国之棋", "desc": "阿波、赞岐、伊予和土佐如同一局棋。与其逐城纠缠，不如先断粮道、渡口与诸家盟约。"},
+        {"slug": "tosa_unified", "title": "土佐一统", "desc": "从田畴中起身的军役制度如今足以统辖一国乃至四国。土佐之旗不再是边陲小邦的旗号。"}
+      ]
+    },
+    {
+      "tag": "DTE",
+      "family": "frontier",
+      "focus": "diplomatic",
+      "legacy_title": "奥州伊达仕置",
+      "legacy_desc": "婚姻、城下经营与远洋使节共同服务于奥州霸权，使北国不再远离天下与海洋。",
+      "modifier": {"diplomatic_reputation": "1", "global_institution_spread": "0.10"},
+      "chapters": [
+        {"slug": "oshu_tandai", "title": "奥州探题之名", "desc": "伊达家旧有奥州探题的名分。将古老官职与现实兵权结合，才能令北方诸家信服。"},
+        {"slug": "marriage_web", "title": "伊达婚姻网", "desc": "女婿、外甥和养子遍布奥羽。婚书有时比军令更快打开城门，也可能把纷争引入家中。"},
+        {"slug": "black_armor_corps", "title": "黑具足先阵", "desc": "整齐甲胄与火器队列塑造新的伊达军容。军势既要迅猛，也要让敌人在交锋前先知畏惧。"},
+        {"slug": "yonezawa_sendai", "title": "米泽与仙台", "desc": "山间旧领与海滨新府各有所长。道路、町割和河运将奥州腹地接入更广阔的商路。"},
+        {"slug": "red_seal_ships", "title": "北国朱印船", "desc": "奥州亦可面向太平洋。为商船颁朱印、整修港泊，北方物产便能越过关东而达远海。"},
+        {"slug": "keicho_embassy", "title": "庆长遣欧", "desc": "遣使横渡万里波涛，不只为奇观。使节带回的航海、铸炮与外交知识足以改变北国眼界。"},
+        {"slug": "one_eyed_dragon", "title": "独眼龙之旗", "desc": "险峻奥羽不容软弱之主。谋略、威仪与果断被编入家法，令诸将知道伊达军令不可轻侮。"},
+        {"slug": "lord_of_oshu", "title": "奥州之主", "desc": "当山道、海港与诸家盟书皆归一手，奥州便不再是天下边缘，而是足以参与天下之争的一极。"}
+      ]
+    },
+    {
+      "tag": "HJO",
+      "family": "warrior",
+      "focus": "administrative",
+      "legacy_title": "小田原领国制",
+      "legacy_desc": "支城、评定与分国法贯通关八州，使后北条的扩张拥有远胜寻常战国大名的行政骨架。",
+      "modifier": {"governing_capacity_modifier": "0.10", "defensiveness": "0.15"},
+      "chapters": [
+        {"slug": "odawara_council", "title": "小田原评定", "desc": "后北条家以小田原为政务中枢。诉讼、军役与年贡由评定裁断，扩张才不致使家中失序。"},
+        {"slug": "night_battle", "title": "夜战之胜", "desc": "河越夜战的记忆提醒诸将，机动与情报可胜过数量。夜色不应只是危险，也可成为兵法。"},
+        {"slug": "soji_code", "title": "早云寺殿廿一箇条", "desc": "节俭、忠勤与慎言被写成家中日用之法。能约束近臣的小法度，往往比空泛大令更有力量。"},
+        {"slug": "kanto_castle_ring", "title": "关东支城网", "desc": "玉绳、八王子与诸支城互为犄角。道路、烽火和兵粮使敌军难以直抵小田原。"},
+        {"slug": "kamakura_legacy", "title": "镰仓旧绪", "desc": "关东武家仍记得镰仓公方与执权旧名。后北条必须把新兴实力包装为关东秩序的继承。"},
+        {"slug": "five_colored_corps", "title": "五色备", "desc": "以颜色区分军阵与职责，使大军在尘土和号角中仍能辨认命令。军制由此超越临时集结。"},
+        {"slug": "hakone_lock", "title": "箱根锁钥", "desc": "箱根山路是关东门户。关所、宿驿与山城若能协同，东海道上的每一次进退都将受我节制。"},
+        {"slug": "lord_of_kanto", "title": "关八州之主", "desc": "支城与法度已经覆盖关东平野。后北条不再只是小田原之主，而要以关八州为一个领国来治理。"}
+      ]
+    },
+    {
+      "tag": "IMG",
+      "family": "temple_market",
+      "focus": "diplomatic",
+      "legacy_title": "东海道今川秩序",
+      "legacy_desc": "分国法、海道商路与公家礼仪相互支撑，使骏河政权得以把上洛野心建立在稳固领国之上。",
+      "modifier": {"trade_efficiency": "0.10", "diplomatic_reputation": "1"},
+      "chapters": [
+        {"slug": "suruga_residence", "title": "骏河今川馆", "desc": "骏府的馆舍、寺院与市町汇聚东海道人流。今川家必须令此处既像武家政厅，也像一座小京都。"},
+        {"slug": "kana_catalogue", "title": "今川假名目录", "desc": "诉讼、土地与军役不可只凭旧例口传。寿桂尼增补法条之后，领民与家臣都应知何事可为、何事必禁。", "required_missions": ["jxp_mission_img_suruga_residence", "jxp_a_mission_img_additional_laws"], "triggers": ["mission_completed = jxp_a_mission_img_additional_laws"]},
+        {"slug": "triple_alliance", "title": "甲相骏三国同盟", "desc": "与武田、北条的婚盟可以暂时锁住背后；若两家已经消亡，也须以相邻日本诸侯织成同等坚实的东方均势。", "triggers": ["jxp_a_img_three_power_network_trigger = yes"], "extra_effects": ["country_event = { id = jxp_daimyo_depth.107 }"]},
+        {"slug": "tokaido_markets", "title": "东海道诸国评定", "desc": "骏河、远江与三河的奉行、宿场和盟约必须进入同一评定。海道秩序不是一条商路，而是一套跨国治理。", "required_missions": ["jxp_mission_img_triple_alliance", "jxp_a_mission_img_eastern_arbitration"], "triggers": ["mission_completed = jxp_a_mission_img_eastern_arbitration"]},
+        {"slug": "fuji_sengen", "title": "松平家安堵", "desc": "三河松平既可成为东海道前锋，也可能倒向尾张。以安堵、婚姻与人质重写双方关系。", "triggers": ["mission_completed = jxp_a_mission_img_matsudaira_assurance"], "extra_effects": ["country_event = { id = jxp_daimyo_depth.104 }"]},
+        {"slug": "firearm_retinue", "title": "东海道人质网络", "desc": "人质并非只为威吓；妥善教育、婚配与归还，能把海道诸家的继承人变成今川秩序的共同语言。", "required_missions": ["jxp_mission_img_fuji_sengen", "jxp_a_mission_img_sumpu_cultural_court"], "triggers": ["mission_completed = jxp_a_mission_img_sumpu_cultural_court"], "extra_effects": ["country_event = { id = jxp_daimyo_depth.105 }"]},
+        {"slug": "road_to_kyoto", "title": "奉公上洛", "desc": "上洛不是一次豪赌，而是道路、兵粮、朝廷礼仪与后方治理的总和。今川军应以奉公与秩序之名西进。", "required_missions": ["jxp_mission_img_firearm_retinue"], "triggers": ["mission_completed = jxp_a_mission_img_marriage_adoption_registers"]},
+        {"slug": "command_kinai", "title": "桶狭间之日", "desc": "狭窄谷地与骤雨足以颠倒大军胜负。无论大捷、撤退还是转向东海道联盟，今川家都必须为这一天留下制度答案。", "triggers": ["mission_completed = jxp_mission_daimyo_tenka_strategy"], "extra_effects": ["country_event = { id = jxp_daimyo_depth.108 }"]}
+      ]
+    },
+    {
+      "tag": "MRI",
+      "family": "maritime",
+      "focus": "naval",
+      "legacy_title": "三矢与濑户内军制",
+      "legacy_desc": "国人盟誓、银山财赋和村上水军被编入同一西国体制，山城与海路由此互相支援。",
+      "modifier": {"naval_morale": "0.10", "diplomatic_reputation": "1"},
+      "chapters": [
+        {"slug": "aki_kokujin_league", "title": "安艺国人盟誓", "desc": "安艺山谷间的国人众各守旧盟。毛利家若能以起请文约束诸家，便可把松散同盟化为持久军役。"},
+        {"slug": "koriyama_defense", "title": "吉田郡山守城", "desc": "郡山城并非巨郭，却能借山势、村落与援军消磨强敌。守城之胜应被整理成西国山城的共同法度。"},
+        {"slug": "itsukushima_stratagem", "title": "严岛奇谋", "desc": "潮汐、风雨与狭窄岛岸可以把众寡之势颠倒。熟悉濑户内者，能把海水本身纳入军议。"},
+        {"slug": "three_arrows", "title": "三矢之训", "desc": "一矢易折，三矢难摧。将兄弟团结的训诫扩为家臣与国人众的共同誓约，西国霸业方能长久。"},
+        {"slug": "iwami_silver", "title": "石见银山", "desc": "银山的坑道、吹屋与运上账足以供养军船和使节。矿利必须进入公账，不能任由山师与豪族瓜分。"},
+        {"slug": "murakami_fleets", "title": "村上水军", "desc": "能岛、因岛与来岛船手熟悉每一道潮门。以朱印和船役收束水军，濑户内便成为毛利的内海。"},
+        {"slug": "chugoku_governance", "title": "中国经营", "desc": "山阳商路与山阴山道需要不同治理。毛利奉行必须让银、米、兵与书信越过中国山地而不断绝。"},
+        {"slug": "lord_of_saigoku", "title": "西国之主", "desc": "当国人盟誓、严岛潮路与石见银脉同归一制，毛利旗帜便足以代表整个西国参与天下之争。"}
+      ]
+    },
+    {
+      "tag": "OTM",
+      "family": "maritime",
+      "focus": "religious",
+      "legacy_title": "丰后南蛮政厅",
+      "legacy_desc": "府内奉行、海外商馆与火器工匠在审慎保护下共存，使丰后成为九州最开放而有力的门户。",
+      "modifier": {"global_institution_spread": "0.10", "siege_ability": "0.10"},
+      "chapters": [
+        {"slug": "bungo_funai", "title": "丰后府内", "desc": "府内的馆、港与寺社构成大友统治核心。先整饬本领，方能让海外财富真正服务于领国。"},
+        {"slug": "kyushu_tandai", "title": "九州探题遗绪", "desc": "大友家以守护与探题名分介入九州诸国。古老官职须由现实军力和调停能力重新支撑。"},
+        {"slug": "nanban_factory", "title": "南蛮商馆", "desc": "葡萄牙商船带来丝绸、硝石与陌生信仰。商馆需要法度，使贸易不致变成港町争端。"},
+        {"slug": "kunikuzushi_foundry", "title": "国崩铸炮", "desc": "大筒之威可摧城门，却需铜铁、火药与工匠长期供给。将铸炮纳入奉行体系，才能使奇器成为军制。"},
+        {"slug": "kirishitan_lords", "title": "吉利支丹大名", "desc": "新的信仰既能联络海外，也会触动寺社与家臣。国家必须决定保护、限制或调和其传播。"},
+        {"slug": "tensho_embassy", "title": "天正遣欧", "desc": "少年使节越海而去，向遥远宫廷展示日本诸侯之名。归国者也将带回世界远比九州辽阔的证据。"},
+        {"slug": "northern_kyushu", "title": "九州北镇", "desc": "筑前、肥前与丰前是港口、寺社和强族交错之地。大友必须用军政并举的方式守住北九州。"},
+        {"slug": "kingdom_of_bungo", "title": "丰后王国", "desc": "当府内、商馆、铸炮场和九州诸将皆听同一号令，丰后便能以海上王国之姿面向天下。"}
+      ]
+    },
+    {
+      "tag": "OUC",
+      "family": "maritime",
+      "focus": "diplomatic",
+      "legacy_title": "西京勘合体制",
+      "legacy_desc": "山口文化、博多商权与遣明船务共同构成大内家的西国秩序。",
+      "modifier": {"global_trade_power": "0.10", "improve_relation_modifier": "0.15"},
+      "chapters": [
+        {"slug": "western_kyoto", "title": "西京山口", "desc": "公家、僧侣与工匠在山口营造西国京都。保护他们，文化威望便能转化为大内统治的正当性。"},
+        {"slug": "hakata_tally_trade", "title": "博多与勘合", "desc": "博多商人熟悉明、朝鲜与琉球航路。勘合、仓库和市舶之税须被纳入一套可信账册。"},
+        {"slug": "missions_to_ming", "title": "遣明船", "desc": "渡海使团既是贸易，也是外交仪礼。船队的名分、货单与护卫必须在出港前便无可争议。"},
+        {"slug": "anti_wokou_fleet", "title": "靖海水军", "desc": "海商与倭寇常只隔一纸许可。以护航和缉私区分合法船队，才能维持海外信任。"},
+        {"slug": "ouchi_culture", "title": "大内文化", "desc": "连歌、禅林与唐物为山口带来声望。让文化赞助服务于官僚教育，大内家便可兼具文治与武威。"},
+        {"slug": "retainer_balance", "title": "陶与内藤之衡", "desc": "强大重臣能支撑远征，也能倾覆主家。军权、奉行与知行必须彼此牵制。"},
+        {"slug": "gate_of_kyushu", "title": "九州门户", "desc": "长门、周防与博多之间的海峡是西国门户。掌握此处，便能在九州和本州之间调兵理财。"},
+        {"slug": "capital_of_the_west", "title": "西国之京", "desc": "当山口文化与博多海贸同受一政，大内家便能以西国之京号令山阳、北九州与海外航路。"}
+      ]
+    },
+    {
+      "tag": "SMZ",
+      "family": "maritime",
+      "focus": "military",
+      "legacy_title": "萨隅日军国法",
+      "legacy_desc": "乡中武风、钓野伏与种子岛火器被纳入严整军役，使岛津足以横扫南九州。",
+      "modifier": {"infantry_power": "0.10", "manpower_recovery_speed": "0.10"},
+      "chapters": [
+        {"slug": "satsuma_hayato", "title": "萨摩隼人", "desc": "南九州武士以坚忍和乡党闻名。将地方武风纳入家中军役，勇猛才不会流于私斗。"},
+        {"slug": "iroha_song", "title": "伊吕波歌", "desc": "以歌诀训示忠孝、节制与处世，使家法进入武士日常。能自律的家臣方能承受长久征战。"},
+        {"slug": "tsurinobuse", "title": "钓野伏", "desc": "佯退、伏兵与地形配合可诱强敌入围。此法须由严密号令维系，稍有躁进便会反噬。"},
+        {"slug": "tanegashima_foundries", "title": "种子岛制铳", "desc": "传来的火绳枪应在本地仿制、修理并配给。工匠、硝石与训练共同决定火器能否成为常制。"},
+        {"slug": "three_provinces", "title": "萨隅日三州", "desc": "萨摩、大隅与日向各有旧族和险路。将三州置于同一检地与军役之下，是九州征伐的根本。"},
+        {"slug": "ryukyu_gateway", "title": "琉球口", "desc": "琉球航路通往明与南海。保护商船并掌握贡舶消息，可为岛津带来远方财富与技术。"},
+        {"slug": "kyushu_campaign", "title": "九州征", "desc": "九州山川破碎、强族林立。岛津军必须以分进合击和快速围城摧毁敌方联盟。"},
+        {"slug": "demon_shimazu", "title": "鬼岛津", "desc": "当南九州兵法、火器和三州军役融为一体，鬼岛津之名便足以令九州诸军先闻而惧。"}
+      ]
+    },
+    {
+      "tag": "SOO",
+      "family": "maritime",
+      "focus": "diplomatic",
+      "legacy_title": "对马两国津梁",
+      "legacy_desc": "翻译、岁遣船与海峡巡检共同维系日朝之间的贸易与和平，使宗氏以小岛周旋两国。",
+      "modifier": {"trade_efficiency": "0.10", "diplomatic_reputation": "1"},
+      "chapters": [
+        {"slug": "tsushima_house", "title": "对马宗氏", "desc": "岛地贫瘠却居海峡中央。宗氏的生存依赖把地理位置转化为两国都需要的秩序。"},
+        {"slug": "waegwan_trade", "title": "倭馆与岁遣船", "desc": "入港名册、贸易限额和使船节次若无凭据，边贸便会迅速变成争端。旧约必须整理为常制。"},
+        {"slug": "korean_communications", "title": "朝鲜通信", "desc": "礼仪、文书与译官是海峡和平的第一道防线。一次措辞失当，足以抵消多年经营。"},
+        {"slug": "strait_ship_service", "title": "海峡船役", "desc": "潮急雾重的对马海峡需要熟练船头。将领航、救难与巡检编为船役，商旅才敢按季渡海。"},
+        {"slug": "bridle_wokou", "title": "羁縻倭寇", "desc": "无法消灭的海上武装必须被许可与惩罚同时约束。合法护航和非法劫掠之间要划出清晰界线。"},
+        {"slug": "interpreters_office", "title": "边界译官", "desc": "通晓汉文、朝鲜语与港市习例的译官，比一支临时军队更能维护长期利益。"},
+        {"slug": "bridge_of_two_realms", "title": "两国之津梁", "desc": "宗氏既不应只是日本前哨，也不应沦为朝鲜附庸。中介者的价值在于维持双方都不愿失去的桥梁。"},
+        {"slug": "gate_of_genkai", "title": "玄海之门", "desc": "当使船、译官和巡检皆受一制，对马便能以玄海门户之名，支配远超其土地大小的事务。"}
+      ]
+    },
+    {
+      "tag": "TKD",
+      "family": "warrior",
+      "focus": "military",
+      "legacy_title": "甲州军法",
+      "legacy_desc": "信玄堤、分国法、金山与骑马军役共同支撑武田军，使甲斐山国拥有争夺天下的力量。",
+      "modifier": {"cavalry_power": "0.10", "land_morale": "0.10"},
+      "chapters": [
+        {"slug": "kai_genji", "title": "甲斐源氏", "desc": "武田家以甲斐源氏名门自许。古老血统要由守护领国、约束家臣的现实能力来证明。"},
+        {"slug": "shingen_dikes", "title": "信玄堤", "desc": "釜无川洪水决定甲斐农田的丰歉。堤防、分水与村役是军粮和民心共同的根基。"},
+        {"slug": "koshu_code", "title": "甲州法度之次第", "desc": "主从争讼、土地边界与军役义务应有明文。法度约束家臣，也约束武田当主自身。"},
+        {"slug": "kurokawa_gold", "title": "黑川金山", "desc": "甲斐金脉为军马、兵粮与外交提供现金。矿山奉行必须防止私采和成色混乱。"},
+        {"slug": "furin_kazan", "title": "风林火山", "desc": "疾如风，徐如林，侵掠如火，不动如山。军旗上的古语必须落实为行军、阵法与纪律。"},
+        {"slug": "twenty_four_generals", "title": "武田二十四将", "desc": "名将并非只靠传说。明确军团职责和知行赏罚，诸将之勇才能服务同一战策。"},
+        {"slug": "shinano_strategy", "title": "信浓经略", "desc": "信浓盆地被山脉分割，逐谷经营胜过一次会战。城砦、道路与人质共同稳固新领。"},
+        {"slug": "banner_to_kyoto", "title": "上洛旗", "desc": "甲信军制若已跨越山岭，武田菱便可沿东海道或中山道直指京都，争夺天下名分。"}
+      ]
+    },
+    {
+      "tag": "TKG",
+      "family": "warrior",
+      "focus": "administrative",
+      "legacy_title": "三河旗本政权",
+      "legacy_desc": "三河武士、检使与关东新府被编成耐久政权，令德川家善于把苦战所得转化为长治。",
+      "modifier": {"global_unrest": "-1", "governing_capacity_modifier": "0.10"},
+      "chapters": [
+        {"slug": "mikawa_bushi", "title": "三河武士", "desc": "松平旧臣在贫瘠三河相互扶持。忠诚不应只靠情谊，还要有知行、军役和申诉的制度。"},
+        {"slug": "hostage_years", "title": "人质岁月", "desc": "幼年辗转于今川与织田之间的经验说明，忍耐、情报与等待时机同样是君主之术。"},
+        {"slug": "mikawa_ikko", "title": "平定三河一揆", "desc": "门徒、寺社与家臣亲族彼此交错。胜利之后若不重建信任，领国仍会从内部裂开。"},
+        {"slug": "hatamoto_vanguard", "title": "旗本先手", "desc": "直属旗本和先手役必须有稳定编制，方能在诸侯军势混杂时守住主将与军令。"},
+        {"slug": "five_province_rule", "title": "五国经营", "desc": "三河之外的新领不能只靠旧臣分封。检地、代官和城郭配置要随版图扩张而更新。"},
+        {"slug": "kanto_entry", "title": "关东入国", "desc": "辽阔关东既是赏赐也是考验。迁封、城下与河川工程必须同时推进，才能把陌生土地变为根本。"},
+        {"slug": "edo_works", "title": "江户普请", "desc": "湿地小城可因水路、町割和天下普请成为大府。建设本身便是在重排诸侯与商人的力量。"},
+        {"slug": "toshogu_realm", "title": "东照天下", "desc": "能忍人所不能忍者，方能把战国胜利化作百年秩序。德川政权要以法度而非不停征战维持天下。"}
+      ]
+    },
+    {
+      "tag": "UES",
+      "family": "warrior",
+      "focus": "military",
+      "legacy_title": "越后义军体制",
+      "legacy_desc": "国人众、青苎财赋与关东管领名分环绕春日山结合，使上杉军兼具道义与战力。",
+      "modifier": {"army_tradition": "0.5", "infantry_power": "0.10"},
+      "chapters": [
+        {"slug": "echigo_kokujin", "title": "越后国人众", "desc": "越后豪族习于自立。上杉家必须以盟誓、裁判和共同军役，把雪国诸众凝成一军。"},
+        {"slug": "bishamonten_banner", "title": "毗沙门天之旗", "desc": "毗沙门天的信仰给予军势共同象征。敬神之名也要求将领克制私欲、维护军纪。"},
+        {"slug": "kawanakajima", "title": "川中岛", "desc": "信浓北部的反复会战磨炼侦察、渡河与阵法。胜负之外，持续投送与撤军同样决定强弱。"},
+        {"slug": "kanto_kanrei", "title": "关东管领", "desc": "山内上杉旧职把越后军带入关东纷争。名分可召集旧臣，但必须由实际保护与裁判来维持。"},
+        {"slug": "kasugayama_council", "title": "春日山评定", "desc": "山城之下聚集奉行、国人和寺社。将军议常制化，义理便不再只是当主个人判断。"},
+        {"slug": "ramie_revenues", "title": "青苎之利", "desc": "越后青苎沿北国海道贩运。规范市场与运上，可让雪国商利供养远征。"},
+        {"slug": "cross_the_mountains", "title": "越山", "desc": "每次越山都考验积雪、驿路与兵粮。建立固定行军体系，关东便不再是季节性的远方战场。"},
+        {"slug": "god_of_war", "title": "义之军神", "desc": "当道义名分、越后财赋与百战军势相互支撑，上杉家便能以军神之名号召天下武士。"}
+      ]
+    }
+  ],
+  "map": [
+    {
+      "tag": "ARI", "family": "maritime", "focus": "religious",
+      "legacy_title": "岛原南蛮门户", "legacy_desc": "口之津商馆、教会町与火器工匠在有马法度下共存，使岛原成为九州面向外海的窗口。",
+      "modifier": {"global_institution_spread": "0.10", "global_missionary_strength": "0.01"},
+      "chapters": [
+        {"slug": "kuchinotsu_port", "title": "口之津港", "desc": "岛原半岛的港湾可迎接远方商船。先立港法，贸易才不会被私斗和走私吞噬。"},
+        {"slug": "nanban_ships", "title": "南蛮船来", "desc": "丝绸、硝石与陌生书籍随黑船入港。有马家必须选择吸收，而非被新奇之物牵着走。"},
+        {"slug": "shimabara_leagues", "title": "岛原诸众", "desc": "半岛豪族、渔村与寺社各有旧权。以共同防务收束他们，方能抵挡肥前强邻。"},
+        {"slug": "gunpowder_workshops", "title": "铳炮作", "desc": "火器需要工匠、硝石和操练。将进口奇物变成本地军制，岛原才有自卫之力。"},
+        {"slug": "church_towns", "title": "教会町", "desc": "新教会与旧寺社并处一地，必须有清楚法度保护信徒也约束冲突。"},
+        {"slug": "counter_ryuzoji", "title": "抗衡龙造寺", "desc": "北肥前霸主步步进逼。山城、盟约与海上补给要比对手更快结合。"},
+        {"slug": "amakusa_sea", "title": "天草海道", "desc": "天草诸岛连接岛原与南九州。掌握海道便能联络盟友，也能避开陆上围困。"},
+        {"slug": "western_gateway", "title": "海西门户", "desc": "当港口、信仰与火器皆受一制，有马领便可成为日本西海最耀眼的门户。"}
+      ]
+    },
+    {
+      "tag": "AZI", "family": "court", "focus": "diplomatic",
+      "legacy_title": "北近江湖国政权", "legacy_desc": "小谷城、琵琶湖舟运与朝仓盟约支撑浅井家，使北近江成为京道上的独立强权。",
+      "modifier": {"trade_efficiency": "0.10", "diplomatic_upkeep": "1"},
+      "chapters": [
+        {"slug": "northern_omi", "title": "北近江国众", "desc": "湖北诸众熟悉山道与湖湾。浅井家要以共同军役把他们从京极旧秩序中分离出来。"},
+        {"slug": "biwa_shipping", "title": "琵琶湖舟运", "desc": "湖上船运可绕开崎岖陆路。港津和舟役是北近江财富与动员的命脉。"},
+        {"slug": "kyogoku_legacy", "title": "京极旧权", "desc": "浅井崛起于旧守护权力的裂缝。吸收而非尽毁旧官僚，才能迅速治理湖北。"},
+        {"slug": "odani_castle", "title": "小谷山城", "desc": "小谷城控扼北国脇往还。强化曲轮、道路和兵粮，可令强敌止步湖北。"},
+        {"slug": "asakura_alliance", "title": "朝仓之盟", "desc": "越前盟友为浅井提供北方支援，却也可能束缚选择。盟约须建立在互利而非旧情上。"},
+        {"slug": "lake_markets", "title": "湖国市镇", "desc": "近江商人穿行京都、北陆与东国。保护市场可把地理优势转化为常年收入。"},
+        {"slug": "control_kyoto_road", "title": "扼守京道", "desc": "任何上洛之军都难绕过近江。掌握道路便能左右天下诸侯的进退。"},
+        {"slug": "hegemon_of_omi", "title": "近江霸权", "desc": "湖北国众、湖运与京道同归一制，浅井家便有资格统合整个近江。"}
+      ]
+    },
+    {
+      "tag": "HNG", "family": "temple_market", "focus": "religious",
+      "legacy_title": "本愿寺寺内共同体", "legacy_desc": "门徒名册、寺内町与讲组织把信仰化为军粮、自治和跨国动员。",
+      "modifier": {"global_unrest": "-1", "manpower_recovery_speed": "0.10"},
+      "chapters": [
+        {"slug": "ishiyama_honganji", "title": "石山本愿寺", "desc": "石山据水陆要冲。寺院、城郭与町市结合，可成为门徒共同体的坚固中心。"},
+        {"slug": "monto_registers", "title": "门徒名册", "desc": "讲与坊记录信众、粮米和役务。名册使分散信仰拥有共同动员能力。"},
+        {"slug": "jinai_towns", "title": "寺内町", "desc": "受保护的市镇吸引商人和工匠。自治须与法主权威相互支撑。"},
+        {"slug": "bokan_network", "title": "坊官众", "desc": "坊官在教义与俗务之间穿梭。明确职责可避免地方道场各自为政。"},
+        {"slug": "ko_village_compacts", "title": "讲与惣村", "desc": "村落共同体是门徒军粮与情报的根。保护其自治也要防止私怨冒用佛法。"},
+        {"slug": "nagashima_bastion", "title": "长岛砦", "desc": "水网与洲岛可阻强军。把天然险势与寺内互援结合，长岛便能久守。"},
+        {"slug": "abbots_proclamation", "title": "法主檄文", "desc": "一纸法旨可越过国界召集信众。号召越强，越需节制其用途。"},
+        {"slug": "pure_land_realm", "title": "净土之国", "desc": "当信仰、町众与惣村形成稳定秩序，本愿寺便不再只是寺院，而成为一种国家。"}
+      ]
+    },
+    {
+      "tag": "KRD", "family": "maritime", "focus": "administrative",
+      "legacy_title": "黑田军师奉行制", "legacy_desc": "攻城术、兵粮账和筑前奉行相互配合，使黑田家以精密筹划放大有限兵力。",
+      "modifier": {"leader_siege": "1", "state_maintenance_modifier": "-0.10"},
+      "chapters": [
+        {"slug": "chikuzen_service", "title": "筑前黑田", "desc": "新领需要比战场更耐心的经营。先安置旧臣与村落，军师之名才有根基。"},
+        {"slug": "kanbei_counsel", "title": "官兵卫之策", "desc": "情报、谈判与时机同样属于兵法。将谋略变成评定流程，而非只依赖一人奇才。"},
+        {"slug": "nakatsu_castle", "title": "中津城", "desc": "河口城郭连接丰前陆海。城下、港口与仓储应按同一规划建设。"},
+        {"slug": "provision_office", "title": "兵粮奉行", "desc": "远征常败于粮道。统一度量、仓单和转运，可令军势持久。"},
+        {"slug": "siege_works", "title": "攻城普请", "desc": "土木、火器与劝降须协同。围城不是蛮力，而是一套可重复的工程。"},
+        {"slug": "great_return", "title": "中国大返", "desc": "道路、驿马与预先筹粮使大军能出人意料地回师。速度来自准备。"},
+        {"slug": "kyushu_settlement", "title": "九州仕置", "desc": "战后分封与旧族安置决定胜利能否长存。奉行应先于掠夺进入新领。"},
+        {"slug": "josui_strategy", "title": "如水之策", "desc": "黑田家将谋略、攻城与行政熔为一体，以小势撬动天下大局。"}
+      ]
+    },
+    {
+      "tag": "MOG", "family": "warrior", "focus": "administrative",
+      "legacy_title": "最上川领国制", "legacy_desc": "山形城、最上川舟运与庄内沃野被纳入同一北国行政网络。",
+      "modifier": {"manpower_recovery_speed": "0.10", "production_efficiency": "0.10"},
+      "chapters": [
+        {"slug": "dewa_house", "title": "出羽最上", "desc": "最上盆地诸族各有根基。以宗族与家臣团重新编排出羽权力。"},
+        {"slug": "yamagata_castle", "title": "山形城下", "desc": "城下町汇集道路与年贡。山形应成为北国政务而非单一堡垒。"},
+        {"slug": "mogami_river", "title": "最上川舟运", "desc": "河流贯穿盆地与庄内。整治舟运可把内陆米谷送往日本海。"},
+        {"slug": "ushu_tandai", "title": "羽州探题遗绪", "desc": "旧官名能召集服从，也会招来竞争。以实政重新赋予名分意义。"},
+        {"slug": "marriage_intrigue", "title": "婚姻与调略", "desc": "北国诸家犬牙交错。婚盟、离间和人质有时比冬季远征更有效。"},
+        {"slug": "shonai_fields", "title": "庄内沃野", "desc": "庄内平野是出羽粮仓。水利与检地能支持更大军势。"},
+        {"slug": "northern_dewa", "title": "北羽经略", "desc": "山道与雪期决定征服速度。分区设城，逐步消化北方新领。"},
+        {"slug": "hegemon_of_dewa", "title": "出羽霸主", "desc": "河运、沃野与山形政厅合为一体，最上家便可号令全出羽。"}
+      ]
+    },
+    {
+      "tag": "MTS", "family": "maritime", "focus": "naval",
+      "legacy_title": "松前北海奉行", "legacy_desc": "渡岛馆、夷地互市与北海航路被编入边疆奉行体系。",
+      "modifier": {"global_sailors_modifier": "0.20", "trade_efficiency": "0.10"},
+      "chapters": [
+        {"slug": "kakizaki_merchants", "title": "蠣崎海商", "desc": "北海领地依赖商船多于稻田。保护船团就是保护家中根本。"},
+        {"slug": "oshima_forts", "title": "渡岛馆", "desc": "沿岸诸馆既是城砦也是交易站。明确隶属可避免各馆自立。"},
+        {"slug": "ezo_trade", "title": "夷地互市", "desc": "与阿伊努诸部的贸易需要约定价格、季节与纠纷裁判。"},
+        {"slug": "northern_sea_routes", "title": "北海船路", "desc": "雾、寒流与漫长海岸考验航海。记录航线可减少每年损失。"},
+        {"slug": "market_fiefs", "title": "商场知行", "desc": "以交易场收入分配家臣，使边疆军役不必依赖贫薄石高。"},
+        {"slug": "matsumae_gateway", "title": "松前口", "desc": "控制南端港口便能管理北海货物进入本州的门户。"},
+        {"slug": "northern_lock", "title": "北边锁钥", "desc": "沿岸烽火与巡船应对走私和外来船影，北境不可无人守望。"},
+        {"slug": "ezo_commission", "title": "虾夷奉行", "desc": "贸易、交涉与防务归于常设奉行，松前家由海商领主成长为北疆政权。"}
+      ]
+    },
+    {
+      "tag": "MTU", "family": "maritime", "focus": "naval",
+      "legacy_title": "松浦海党法", "legacy_desc": "平户港、松浦党与远洋贸易在朱印法下结合，形成玄海强韧水军。",
+      "modifier": {"privateer_efficiency": "0.20", "naval_morale": "0.10"},
+      "chapters": [
+        {"slug": "matsuura_league", "title": "松浦党", "desc": "岛屿领主与船手以血缘和盟誓相连。把海党变成可调度的共同军役。"},
+        {"slug": "hirado_port", "title": "平户港", "desc": "平户可接纳唐船与南蛮船。仓库、税则与治安必须先行。"},
+        {"slug": "sea_warriors", "title": "海贼众", "desc": "善战船手既能护航也能劫掠。许可制度决定他们服务谁。"},
+        {"slug": "foreign_quarters", "title": "唐船宿", "desc": "外商需要固定居所与翻译，减少冲突也便于征税。"},
+        {"slug": "gun_trade", "title": "铁炮商", "desc": "火器贸易带来利润和风险。登记买卖可保证军中优先供应。"},
+        {"slug": "red_seal_fleet", "title": "朱印船", "desc": "以印状区分商船与海盗，让远洋船队以松浦名义航行。"},
+        {"slug": "goto_routes", "title": "五岛海道", "desc": "五岛列岛是通往大陆的踏脚石。灯标与补给点可延伸航程。"},
+        {"slug": "genkai_fleet", "title": "玄海水军", "desc": "平户、五岛与海党合为一军，松浦家便能支配玄海潮路。"}
+      ]
+    },
+    {
+      "tag": "MYO", "family": "court", "focus": "diplomatic",
+      "legacy_title": "三好畿内政权", "legacy_desc": "阿波家臣、堺会合与京畿城郭构成不依赖旧幕府的畿内霸权。",
+      "modifier": {"province_warscore_cost": "-0.10", "diplomatic_reputation": "1"},
+      "chapters": [
+        {"slug": "awa_retainers", "title": "阿波三好众", "desc": "三好家由阿波武士与细川被官中崛起。先使家臣团忠于本家。"},
+        {"slug": "hosokawa_stewardship", "title": "细川旧务", "desc": "掌握管领家政务的经验可转化为自己的奉行体系。"},
+        {"slug": "sakai_council", "title": "堺会合", "desc": "堺町众掌握财富和船舶。与会合众合作胜过粗暴征发。"},
+        {"slug": "iimoriyama", "title": "饭盛山城", "desc": "据守河内高地可控制京都与堺之间的道路。"},
+        {"slug": "kinai_government", "title": "畿内政权", "desc": "摄津、河内与阿波需由跨海政务网连接，而非临时军镇。"},
+        {"slug": "manage_the_shogun", "title": "奉戴将军", "desc": "将军名号仍有价值，但不应反过来支配三好实权。"},
+        {"slug": "capital_hegemony", "title": "京洛霸权", "desc": "控制京都、堺和周边要塞，畿内诸家便只能在三好秩序内行动。"},
+        {"slug": "miyoshi_realm", "title": "三好天下", "desc": "由被官而至天下执权，三好政权证明新秩序不必出自古老名门。"}
+      ]
+    },
+    {
+      "tag": "NBS", "family": "maritime", "focus": "administrative",
+      "legacy_title": "锅岛佐贺仕置", "legacy_desc": "检地、海堤与旧臣安置构成务实严密的肥前治理。",
+      "modifier": {"global_tax_modifier": "0.10", "state_maintenance_modifier": "-0.10"},
+      "chapters": [
+        {"slug": "naoshige_council", "title": "锅岛直茂之议", "desc": "谨慎谋划和及时进言是锅岛崛起的根本。让评定容纳异议。"},
+        {"slug": "saga_plain", "title": "佐贺平野", "desc": "低湿平野需要水利与堤防，方能稳定产粮。"},
+        {"slug": "survey_accounts", "title": "检地算用", "desc": "统一田亩与年贡账，旧豪族隐匿的资源才归公用。"},
+        {"slug": "ryuzoji_retainers", "title": "安置龙造寺旧臣", "desc": "旧主家臣既危险也有用。分级安置可减少反乱。"},
+        {"slug": "ariake_dikes", "title": "有明海堤", "desc": "围海造田与港渠整治同时扩大农业和航运。"},
+        {"slug": "pottery_and_ports", "title": "陶器与港税", "desc": "工匠产品和港口税收可使肥前经济不只依赖稻米。"},
+        {"slug": "hizen_settlement", "title": "肥前仕置", "desc": "城郭、代官和法度须覆盖肥前诸郡。"},
+        {"slug": "nabeshima_code", "title": "锅岛藩法", "desc": "务实节制成为家中常法，使佐贺政权经得起长期考验。"}
+      ]
+    },
+    {
+      "tag": "RKK", "family": "warrior", "focus": "diplomatic",
+      "legacy_title": "六角近江守护网", "legacy_desc": "观音寺、甲贺众与近江商路在氏式目下结合，恢复六角家对湖国的守护权。",
+      "modifier": {"diplomatic_reputation": "1", "spy_offence": "0.15"},
+      "chapters": [
+        {"slug": "kannonji_court", "title": "观音寺评定", "desc": "南近江诸家围绕观音寺汇集。评定必须平衡守护权与国人旧习。"},
+        {"slug": "rokkaku_code", "title": "六角氏式目", "desc": "家臣连署的分国法既约束臣下，也提醒当主不可任性。"},
+        {"slug": "koka_networks", "title": "甲贺众", "desc": "甲贺乡士熟悉山路与情报。以契约雇用他们，避免私斗失控。"},
+        {"slug": "biwa_tolls", "title": "琵琶湖关津", "desc": "湖岸关津和舟运税是南近江财源，税则必须统一。"},
+        {"slug": "omi_merchants", "title": "近江商人", "desc": "行商遍及诸国。保护其信用网络可带回财富与消息。"},
+        {"slug": "retainer_compact", "title": "家臣连署", "desc": "强臣参与法度制定，既能分享责任，也能限制内讧。"},
+        {"slug": "kyoto_roads", "title": "京道控制", "desc": "南近江扼守东国入京之路，关所与宿驿足以左右诸侯。"},
+        {"slug": "shugo_of_omi", "title": "近江守护", "desc": "当湖运、甲贺与氏式目合为一体，六角家便可恢复全近江号令。"}
+      ]
+    },
+    {
+      "tag": "RZJ", "family": "maritime", "focus": "military",
+      "legacy_title": "龙造寺肥前军制", "legacy_desc": "肥前国人、佐嘉城与有明海动员共同支撑龙造寺的九州霸权。",
+      "modifier": {"infantry_power": "0.10", "global_manpower_modifier": "0.10"},
+      "chapters": [
+        {"slug": "hizen_kokujin", "title": "肥前国人众", "desc": "肥前豪族众多且反复无常。盟誓和人质必须先于征伐。"},
+        {"slug": "saga_castle", "title": "佐嘉城", "desc": "河川低地上的城郭需要堤防、仓储和水路共同保护。"},
+        {"slug": "imayama_night_attack", "title": "今山夜袭", "desc": "以小军突袭大营，依赖情报、胆略与统一号令。"},
+        {"slug": "five_provinces_two_islands", "title": "五州二岛", "desc": "霸主名号必须由跨海动员和分区治理支撑。"},
+        {"slug": "ariake_fleet", "title": "有明海舟师", "desc": "浅海潮汐适合轻船。熟悉水路可绕过陆上坚城。"},
+        {"slug": "northern_kyushu_rivals", "title": "北九州争衡", "desc": "大友、有马与诸小家交错，龙造寺须逐个拆解敌盟。"},
+        {"slug": "hizen_command", "title": "肥前号令", "desc": "检地、军役和旧臣安置使征服不再反复。"},
+        {"slug": "bear_of_hizen", "title": "肥前之熊", "desc": "当国人军势与佐嘉政厅同心，肥前之熊足以震动九州。"}
+      ]
+    },
+    {
+      "tag": "STM", "family": "warrior", "focus": "naval",
+      "legacy_title": "里见房总海防", "legacy_desc": "安房山城、东京湾水军与抗北条防线共同守护房总半岛。",
+      "modifier": {"naval_morale": "0.10", "defensiveness": "0.15"},
+      "chapters": [
+        {"slug": "awa_satomi", "title": "安房里见", "desc": "安房山海狭小，却可凭险自立。整合半岛诸众是第一步。"},
+        {"slug": "inamura_castle", "title": "稻村城", "desc": "山城俯瞰沿岸道路，须备足兵粮并联络诸砦。"},
+        {"slug": "edo_bay_fleet", "title": "江户湾水军", "desc": "湾内轻船可袭扰补给、护送商旅并快速调兵。"},
+        {"slug": "counter_hojo", "title": "抗衡北条", "desc": "小田原强权逼近房总，里见必须借海路和盟友维持纵深。"},
+        {"slug": "kururi_line", "title": "久留里防线", "desc": "内陆山城与沿海港砦形成互相支援的防御网。"},
+        {"slug": "boso_markets", "title": "房总市舶", "desc": "东京湾贸易可供养长期战争，商税不应被私吞。"},
+        {"slug": "peninsula_defense", "title": "房总海防", "desc": "烽火、巡船和山道守备使敌军难以在半岛立足。"},
+        {"slug": "satomi_fleet", "title": "里见水军", "desc": "当山城与湾内船队协同，里见家便成为关东南门的主人。"}
+      ]
+    },
+    {
+      "tag": "STO", "family": "warrior", "focus": "administrative",
+      "legacy_title": "美浓斋藤国取制", "legacy_desc": "稻叶山城、商路与调略奉行使斋藤家把国盗之术转化为稳定领国。",
+      "modifier": {"spy_offence": "0.15", "global_tax_modifier": "0.10"},
+      "chapters": [
+        {"slug": "oil_merchant_legacy", "title": "油商之道", "desc": "市井经营教会斋藤家衡量成本与人心。财富和情报同样能开国。"},
+        {"slug": "inabayama_castle", "title": "稻叶山城", "desc": "金华山城俯瞰浓尾平野，是美浓权力的天然中枢。"},
+        {"slug": "country_stealing", "title": "国盗之术", "desc": "调略、婚姻和逐步夺权往往胜过正面战争。"},
+        {"slug": "toki_retainers", "title": "收纳土岐旧臣", "desc": "旧守护家臣熟悉地方事务，善用他们可减少反抗。"},
+        {"slug": "castle_town", "title": "井之口城下", "desc": "市场、工匠和道路围绕山城成长，提供稳定税源。"},
+        {"slug": "two_faced_diplomacy", "title": "两面外交", "desc": "尾张、近江与飞驒势力环伺，美浓必须灵活结盟。"},
+        {"slug": "mino_triumvirs", "title": "美浓三人众", "desc": "强臣需要被纳入制度，让其才能服务而非瓜分主家。"},
+        {"slug": "throat_of_japan", "title": "天下咽喉", "desc": "控制美浓便能扼东山与东海道之间的要冲，斋藤家可左右天下交通。"}
+      ]
+    },
+    {
+      "tag": "TGR", "family": "frontier", "focus": "military",
+      "legacy_title": "津轻雪国经略", "legacy_desc": "弘前平野、十三湊与冬季道路被纳入北奥羽独立政权。",
+      "modifier": {"hostile_attrition": "0.5", "land_morale": "0.10"},
+      "chapters": [
+        {"slug": "tsugaru_independence", "title": "津轻独立", "desc": "北端豪族要摆脱南部控制，必须先团结津轻诸城。"},
+        {"slug": "namioka_legacy", "title": "浪冈旧秩序", "desc": "吸收北畠旧臣与公家威望，为新政权增加名分。"},
+        {"slug": "hirosaki_plain", "title": "弘前平野", "desc": "开垦平野与整治河流可支撑更大人口和军队。"},
+        {"slug": "winter_roads", "title": "雪国道路", "desc": "冬季行军依赖驿站、仓储与熟悉雪路的向导。"},
+        {"slug": "tosaminato", "title": "十三湊", "desc": "古港连接日本海与北方贸易，复兴港市可充实国用。"},
+        {"slug": "ezo_trade", "title": "虾夷贸易", "desc": "北海货物经津轻南下，规范互市能带来稳定收益。"},
+        {"slug": "counter_nanbu", "title": "抗衡南部", "desc": "南部骑兵随时可能北上，山道防线和盟友缺一不可。"},
+        {"slug": "unify_tsugaru", "title": "津轻一统", "desc": "雪路、港口和平野同归一制，北奥羽便有了独立而持久的主人。"}
+      ]
+    },
+    {
+      "tag": "UKT", "family": "temple_market", "focus": "diplomatic",
+      "legacy_title": "宇喜多备前调略制", "legacy_desc": "浦上旧臣、儿岛港与精密调略共同构成备前新兴政权。",
+      "modifier": {"improve_relation_modifier": "0.15", "spy_offence": "0.15"},
+      "chapters": [
+        {"slug": "bizen_ukita", "title": "备前宇喜多", "desc": "新兴家门必须在旧守护与国人夹缝中建立自己的奉行团。"},
+        {"slug": "uragami_overlord", "title": "浦上旧主", "desc": "从被官到独立需要谨慎处理旧主名分和旧臣关系。"},
+        {"slug": "stratagem_network", "title": "谋略调略", "desc": "书信、内应与婚姻可在开战前决定城池归属。"},
+        {"slug": "kojima_port", "title": "儿岛港", "desc": "濑户内港口连接备前与四国，船运可供养城下。"},
+        {"slug": "bizen_crafts", "title": "备前刀与烧物", "desc": "工匠产品提升商利，也为军队提供精良器具。"},
+        {"slug": "naoie_household", "title": "直家家中", "desc": "以才能而非旧门第任用家臣，需同时建立严密监察。"},
+        {"slug": "hideie_reform", "title": "秀家新政", "desc": "新一代应把创业期谋略转化为公开法度与稳定行政。"},
+        {"slug": "eastern_chugoku_gate", "title": "中国东门", "desc": "备前控制畿内与西国之间的门户，宇喜多家可据此参与天下大势。"}
+      ]
+    }
+  ]
+}

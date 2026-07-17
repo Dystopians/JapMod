@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 216 206 120 }
+revolutionary_colors = { 9 7 1 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	administrative_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	trade_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"元仁 #0" = 20
+	"美仁 #0" = 20
+	"彦仁 #0" = 20
+	"和仁 #0" = 20
+	"友仁 #0" = 20
+	"康仁 #0" = 20
+	"俊子 #0" = -10
+	"兴子 #0" = -10
+}
+
+leader_names = {
+	藤原 源 平 橘 北畠 三条 近卫 西园寺 德川 九条
+}
+
+ship_names = {
+	Yamato Ise Kii Kyoto Nara Heian Kinri Mikado Hachiman Kashihara
+}
+
+army_names = {
+	"Imperial Guard" "$PROVINCE$ Gun" "$PROVINCE$ Kinri Tai"
+}
+
+fleet_names = {
+	"Yamato Navy" "$PROVINCE$ Sendan" "$PROVINCE$ Imperial Fleet"
+}

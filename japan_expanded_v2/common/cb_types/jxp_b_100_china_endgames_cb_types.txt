@@ -1,0 +1,65 @@
+cb_jxp_b_100_claim_mandate = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		jxp_b_100_can_use_mandate_acquisition_cb_trigger = yes
+	}
+
+	prerequisites = {
+		FROM = {
+			is_emperor_of_china = yes
+			is_subject = no
+		}
+		NOT = { truce_with = FROM }
+	}
+
+	war_goal = jxp_b_100_take_mandate_wargoal
+}
+
+cb_jxp_b_100_rites_sphere = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		jxp_b_100_can_use_rites_cb_trigger = yes
+	}
+
+	prerequisites = {
+		FROM = {
+			is_subject = no
+			any_owned_province = {
+				has_port = yes
+				OR = {
+					superregion = china_superregion
+					superregion = far_east_superregion
+				}
+			}
+		}
+		NOT = { truce_with = FROM }
+	}
+
+	war_goal = jxp_b_100_rites_sphere_wargoal
+}
+
+cb_jxp_b_100_break_mandate = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		jxp_b_100_can_use_break_cb_trigger = yes
+	}
+
+	prerequisites = {
+		FROM = {
+			is_subject = no
+			OR = {
+				is_emperor_of_china = yes
+				any_owned_province = {
+					has_port = yes
+					superregion = china_superregion
+				}
+			}
+		}
+		NOT = { truce_with = FROM }
+	}
+
+	war_goal = jxp_b_100_break_mandate_wargoal
+}

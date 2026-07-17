@@ -1,0 +1,33 @@
+jxp_b_102_is_colonial_successor_trigger = {
+	OR = {
+		tag = NYA
+		tag = HKK
+		tag = NJF
+		tag = OIA
+		tag = TPF
+	}
+}
+
+jxp_b_102_has_legacy_overseas_milestone_trigger = {
+	OR = {
+		has_country_flag = jxp_pacific_charter_enacted
+		has_country_flag = jxp_new_world_japan_towns_done
+		has_country_flag = jxp_manila_nagasaki_route_seen
+		has_country_flag = jxp_alaska_survey_seen
+		has_country_flag = jxp_california_anchorages_seen
+		has_country_flag = jxp_76_pacific_network_active
+		has_country_flag = jxp_oceanic_sun_state
+	}
+}
+
+jxp_b_102_needs_startup_migration_trigger = {
+	NOT = { has_country_flag = jxp_b_102_overseas_program_migrated }
+	OR = {
+		jxp_b_102_is_colonial_successor_trigger = yes
+		jxp_b_102_has_legacy_overseas_milestone_trigger = yes
+		has_country_flag = jxp_b_colonial_society_initialized
+		has_country_flag = jxp_iface_metropole_new_world_rule_broken
+		has_country_flag = jxp_iface_b99_china_campaign_requested
+		has_country_flag = jxp_b_101_korea_campaign_active
+	}
+}

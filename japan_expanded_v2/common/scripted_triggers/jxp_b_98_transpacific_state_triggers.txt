@@ -1,0 +1,44 @@
+jxp_b_98_has_two_pacific_relays_trigger = {
+	OR = {
+		has_country_flag = jxp_b_92_transpacific_settlement_arc_completed
+		AND = {
+			has_country_flag = jxp_b_92_pacific_island_compact_established
+			OR = {
+				has_country_flag = jxp_b_92_west_coast_machiya_established
+				has_country_flag = jxp_b_92_rnw_machiya_established
+			}
+		}
+		AND = {
+			has_country_flag = jxp_b_92_north_pacific_exchange_established
+			OR = {
+				has_country_flag = jxp_b_92_west_coast_machiya_established
+				has_country_flag = jxp_b_92_rnw_machiya_established
+			}
+		}
+	}
+}
+
+jxp_b_98_can_launch_eastward_revolution_trigger = {
+	jxp_b_96_colonial_origin_trigger = yes
+	is_subject = no
+	has_country_flag = jxp_iface_colonial_independence
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	jxp_b_98_has_two_pacific_relays_trigger = yes
+	total_development = 300
+	num_of_ports = 10
+	navy_size = 30
+	NOT = { has_country_flag = jxp_iface_transpacific_state_created }
+}
+
+jxp_b_98_vulnerable_japanese_metropole_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	is_subject = no
+	OR = {
+		NOT = { stability = 0 }
+		war_exhaustion = 8
+		num_of_loans = 5
+		has_any_disaster = yes
+		is_bankrupt = yes
+		AND = { government = monarchy NOT = { legitimacy = 50 } }
+	}
+}

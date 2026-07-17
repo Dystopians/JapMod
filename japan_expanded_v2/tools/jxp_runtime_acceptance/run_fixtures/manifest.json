@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "claim_limit": "DEBUG_FIXTURE_SETUP only; these effects do not prove natural history, event cadence, mission rewards, or production formation.",
+  "files": [
+    {
+      "name": "JXP_ACC_R4_025_emperor_only.txt",
+      "scenario": "R4",
+      "purpose": "Give the 0.25 branch the Celestial Emperor mechanic without writing any JXP unlock or migration state.",
+      "bytes": 106,
+      "sha256": "be986f6c1603015056b79b252c5ffc7e41c38dc2ade72a819f37c9b049cb27e3"
+    },
+    {
+      "name": "JXP_ACC_R6_protected_targets.txt",
+      "scenario": "R6",
+      "purpose": "Prepare four isolated Shinto conversion-protection targets after the native CJP centers exist.",
+      "bytes": 308,
+      "sha256": "3cf858f425dff5054edba150e2c3c7bfafe2b5e0f080f46aa8532853282b494b"
+    },
+    {
+      "name": "JXP_ACC_R8_no_heartland.txt",
+      "scenario": "R8",
+      "purpose": "Prepare an otherwise eligible RKK-derived IJP branch whose heartland geography alone is absent.",
+      "bytes": 477,
+      "sha256": "c2120c1668081085f27aba1b72515896dafb9cceca276505eb7fde126f577807"
+    },
+    {
+      "name": "JXP_ACC_R8_missing_church.txt",
+      "scenario": "R8",
+      "purpose": "Disable only the church estate on one fork of a proven otherwise-eligible R8 baseline; reload the common parent save after this negative.",
+      "bytes": 51,
+      "sha256": "257a63be31ad0fd1e1a4bacc72619db3329bd1c80d15abd53e9545c3f3f699d5"
+    },
+    {
+      "name": "JXP_ACC_R8_missing_burghers.txt",
+      "scenario": "R8",
+      "purpose": "Disable only the burghers estate on one fork of a proven otherwise-eligible R8 baseline; reload the common parent save after this negative.",
+      "bytes": 53,
+      "sha256": "3f78812f43226e642419a76b06225940e52e6e93dda25d38c615952ef70d8d01"
+    },
+    {
+      "name": "JXP_ACC_R8_restore_heartland.txt",
+      "scenario": "R8",
+      "purpose": "Restore only the heartland gate by granting province 1021 to the disposable R8 fixture.",
+      "bytes": 76,
+      "sha256": "e2820a89f801da042b3e73aba028464347b30d28f1c73ad778a5f9c32a4882d7"
+    },
+    {
+      "name": "JXP_ACC_R10_foreign_emperor_same_unlock.txt",
+      "scenario": "R10",
+      "purpose": "Prepare a non-Japanese Celestial Emperor with the canonical Hakko unlock but no passed/reconciled state.",
+      "bytes": 320,
+      "sha256": "12e71e5687701d5b0cd2daa9dfbbd0a69b81bb908896e114044480df0c211d5d"
+    }
+  ]
+}

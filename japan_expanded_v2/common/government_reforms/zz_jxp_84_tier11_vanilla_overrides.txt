@@ -1,0 +1,48 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+political_absolutism_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		is_revolutionary = no
+	}
+	modifiers = {
+		administrative_efficiency = 0.025
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+
+legislative_houses_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		is_revolutionary = no
+	}
+	modifiers = {
+		free_policy = 1
+	}
+}
+
+presidential_monarchy_reform = {
+	icon = "queen"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	modifiers = {
+		national_focus_years = -5
+		no_stability_loss_on_monarch_death = yes
+		monarch_diplomatic_power = 1
+	}
+}

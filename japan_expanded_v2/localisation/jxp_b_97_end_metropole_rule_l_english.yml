@@ -1,0 +1,21 @@
+﻿l_english:
+ cb_jxp_b_end_metropole_colonial_rule:0 "ÈuÓuåe,g°eNLußu»l"
+ cb_jxp_b_end_metropole_colonial_rule_desc:0 "N*NòTÏuìrËzwbŸq„våe,g–klýV¶RïSåNëOçe—RIN>eVùRŽ2mN*Ys^m–kl>yO„vßu»l0b‰NNOˆcˆNåe,g,gW8hÃVÿmNNýw0tÖSàesQ†˜W0"
+ jxp_b_end_metropole_colonial_rule_wargoal:0 "`S†˜çe—RIN–™ý"
+ jxp_b_end_metropole_colonial_rule_wargoal_desc:0 "`S†˜çe—RIN„vMe»l-NÃVÿëOvQb²‹Üm–klCgòTÏu1Y»S0"
+ JXP_B_END_METROPOLE_RULE_WAR_NAME:0 "$ORDER$$FIRST$*Ys^mø‹¦ã‰>eb‰N"
+ po_jxp_b_end_metropole_colonial_rule:0 "ÈuÓuåe,g°eNLußu»l"
+ po_jxp_b_end_metropole_colonial_rule_desc:0 "%N<hir	–™ýMOŽN°e'YF–b'Ym2m0Nåb	gåe,g–klwn„vôv¥c^SýVv^OvQìrËzÿntçe—RIN(WÙ›NHSßW„v±RðyN–klàzzÿv^eRHYvQÛVASt^„vÜmUe¸‹Cg0gœœ0	ttÊSvQÖN^—–kl^SýVN×SqVÍT0"
+
+ jxp_end_metropole_rule.1.t:0 "*Ys^mø‹¦·ƒ—Vê1u"
+ jxp_end_metropole_rule.1.d:0 "ŒT¦u¡l	gŠbçe—RIN„vwmYýV¶RSVjOb)RÁTl²NÙuæSN*NINºN0&rT–klwnN0WtagöN„vø‹¦Tê·ƒ—VìrËzÿ*gegïSåNêMaÓußv0ÛeQTw¦ÿbÝOc’NN¶–^S0"
+ jxp_end_metropole_rule.1.a:0 "ê1uNýwêS=fbcNMO—RIN0"
+ jxp_end_metropole_rule.2.t:0 "ÜmCg)R«ˆeRHY"
+ jxp_end_metropole_rule.2.d:0 "9‚pS0FU†™yr¸‹Nèm^SýVsQû|(WŒT¦u-N«ˆy˜èl•0ÛVASt^…QÿbìNNýwÍ‘°eÑSLˆTNWY–klàzzÿå‚‰Í‘ÔÜwmÿêSýw(WP–6RÓumgTÍ‘°e•beQýV›R0"
+ jxp_end_metropole_rule.2.a:0 "wm±N¹òTNQgÎN0"
+
+ jxp_b_97_overseas_rights_revoked:0 "ÜmCg)R«ˆeRHY"
+ jxp_b_97_overseas_rights_revoked_desc:0 "%bŒT¦uèl•†NwmYUe¸‹0–kl—RINCgNøvsQ±Rðy0ÛVASt^…QýV¶RàeÕlÍ‘°eú^ËzT‰|–klàzzÿÜwm8fáO‰ŠmN%NÍ‘×Smc0"
+ jxp_b_97_liberator_of_pacific_states:0 "*Ys^mø‹¦„vã‰>ew"
+ jxp_b_97_liberator_of_pacific_states_desc:0 "Üw)RwÒbÝuŠb·ƒ—Vê1u„v–klø‹¦SVjO°e„vb)RÁTÿvQY²NáO(uàVdkžX•0"
+ jxp_b_97_release_only_safety_tt:0 ",gŒT¦uÇ‘(u‰RhQ„v§YýVìrËz§!!jVÿNOŠbŸSHr¨R`–klýVHVLˆ9ecÙuÜw)RwÿmNNOqVÍTåe,g(WšN2m„v^—–kl^SýV0"

@@ -1,0 +1,67 @@
+country_decisions = {
+	jxp_decision_review_sakoku_council = {
+		major = yes
+		potential = {
+			jxp_71_is_sakoku_route_trigger = yes
+		}
+		allow = {
+			jxp_71_has_sakoku_council_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_71_route_council_recent }
+			is_at_war = no
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			country_event = { id = jxp_route_parity.1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { adm_power = 75 } }
+		}
+	}
+
+	jxp_decision_audit_open_trade_council = {
+		major = yes
+		potential = {
+			jxp_71_is_open_trade_route_trigger = yes
+		}
+		allow = {
+			jxp_71_has_open_trade_council_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_71_route_council_recent }
+			is_at_war = no
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			country_event = { id = jxp_route_parity.2 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { dip_power = 75 } }
+		}
+	}
+
+	jxp_decision_convene_imperial_circuit_council = {
+		major = yes
+		potential = {
+			jxp_71_is_imperial_route_trigger = yes
+		}
+		allow = {
+			jxp_71_has_imperial_council_reform_trigger = yes
+			NOT = { has_country_modifier = jxp_71_route_council_recent }
+			is_at_war = no
+			adm_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			country_event = { id = jxp_route_parity.3 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 NOT = { adm_power = 75 } }
+		}
+	}
+}

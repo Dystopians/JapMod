@@ -1,0 +1,49 @@
+jxp_79_uncommitted_realm_program = {
+	governing_capacity_modifier = 0.05
+	advisor_cost = -0.05
+}
+
+jxp_79_sakoku_bakuhan_constitution = {
+	state_maintenance_modifier = -0.05
+	global_spy_defence = 0.10
+}
+
+jxp_79_open_maritime_cabinet = {
+	trade_efficiency = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_79_kirishitan_estates_concordat = {
+	tolerance_own = 1
+	papal_influence = 1
+}
+
+jxp_79_confucian_censorate_charter = {
+	advisor_cost = -0.05
+	harmonization_speed = 0.10
+}
+
+jxp_79_imperial_daijokan_charter = {
+	global_autonomy = -0.02
+	diplomatic_reputation = 1
+}
+
+jxp_79_reformed_synodic_constitution = {
+	church_power_modifier = 0.10
+	technology_cost = -0.02
+}
+
+jxp_79_kaikyo_diwan_constitution = {
+	tolerance_heathen = 1
+	global_trade_power = 0.05
+}
+
+jxp_79_ikko_somon_constitution = {
+	global_unrest = -1
+	manpower_recovery_speed = 0.05
+}
+
+jxp_79_wokou_admiralty_articles = {
+	privateer_efficiency = 0.15
+	naval_forcelimit_modifier = 0.10
+}

@@ -1,0 +1,37 @@
+jxp_b_98_schedule_federal_council_effect = {
+	if = {
+		limit = {
+			has_country_flag = jxp_iface_transpacific_state_created
+			NOT = { has_country_flag = jxp_b_98_federal_council_scheduled }
+		}
+		set_country_flag = jxp_b_98_federal_council_scheduled
+		country_event = { id = jxp_transpacific_state.10 days = 1095 }
+	}
+}
+
+jxp_b_98_establish_old_world_member_effect = {
+	set_country_flag = jxp_b_98_old_world_member
+	add_country_modifier = { name = jxp_b_98_old_world_member_autonomy duration = -1 }
+	add_liberty_desire = 50
+}
+
+jxp_b_98_form_two_ocean_federation_effect = {
+	change_tag = TPF
+	set_country_flag = jxp_iface_transpacific_state_created
+	set_country_flag = jxp_iface_colonial_independence
+	set_country_flag = jxp_b_colonial_origin_japanese
+	add_country_modifier = { name = jxp_b_98_two_ocean_federal_burdens duration = -1 }
+	set_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+	set_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+	set_country_flag = jxp_iface_b_tpf_needs_government_registry
+	jxp_refresh_route_missions_effect = yes
+	on_change_tag_effect = yes
+	jxp_b_98_schedule_federal_council_effect = yes
+}
+
+jxp_b_98_eastward_capital_effect = {
+	set_capital = 1020
+	add_country_modifier = { name = jxp_b_98_eastward_legitimacy_crisis duration = 7300 }
+	add_stability = -1
+	add_prestige = -20
+}

@@ -1,0 +1,104 @@
+namespace = jxp_colonial_switch
+
+country_event = {
+	id = jxp_colonial_switch.1
+	title = "jxp_colonial_switch.1.t"
+	desc = "jxp_colonial_switch.1.d"
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	trigger = { jxp_b_95_player_switch_review_ready_trigger = yes }
+
+	option = {
+		name = "jxp_colonial_switch.1.a"
+		custom_tooltip = jxp_b_95_continue_metropole_tt
+		add_country_modifier = { name = jxp_b_95_colonial_switch_deferred duration = 3650 }
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.b"
+		trigger = { NYA = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes } }
+		custom_tooltip = jxp_b_95_switch_nya_tt
+		hidden_effect = {
+			NYA = {
+				set_country_flag = jxp_iface_colonial_self_rule
+				if = {
+					limit = { NOT = { has_country_flag = jxp_b_colonial_switch_startup_received } }
+					set_country_flag = jxp_b_colonial_switch_startup_received
+					add_treasury = 100
+				}
+			}
+			switch_tag = NYA
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.c"
+		trigger = { HKK = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes } }
+		custom_tooltip = jxp_b_95_switch_hkk_tt
+		hidden_effect = {
+			HKK = {
+				set_country_flag = jxp_iface_colonial_self_rule
+				if = {
+					limit = { NOT = { has_country_flag = jxp_b_colonial_switch_startup_received } }
+					set_country_flag = jxp_b_colonial_switch_startup_received
+					add_treasury = 100
+				}
+			}
+			switch_tag = HKK
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.njf"
+		trigger = { NJF = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes } }
+		custom_tooltip = jxp_b_95_switch_njf_tt
+		hidden_effect = {
+			NJF = {
+				set_country_flag = jxp_iface_colonial_self_rule
+				if = {
+					limit = { NOT = { has_country_flag = jxp_b_colonial_switch_startup_received } }
+					set_country_flag = jxp_b_colonial_switch_startup_received
+					add_treasury = 100
+				}
+			}
+			switch_tag = NJF
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.e"
+		trigger = { OIA = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes } }
+		custom_tooltip = jxp_b_95_switch_oia_tt
+		hidden_effect = {
+			OIA = {
+				set_country_flag = jxp_iface_colonial_self_rule
+				if = {
+					limit = { NOT = { has_country_flag = jxp_b_colonial_switch_startup_received } }
+					set_country_flag = jxp_b_colonial_switch_startup_received
+					add_treasury = 100
+				}
+			}
+			switch_tag = OIA
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.f"
+		custom_tooltip = jxp_b_95_defer_switch_tt
+		add_country_modifier = { name = jxp_b_95_colonial_switch_deferred duration = 3650 }
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.g"
+		trigger = { jxp_b_95_dynamic_colonial_switch_fallback_trigger = yes }
+		custom_tooltip = jxp_b_95_release_and_play_fallback_tt
+		add_country_modifier = { name = jxp_b_95_colonial_switch_deferred duration = 3650 }
+	}
+
+	option = {
+		name = "jxp_colonial_switch.1.h"
+		set_country_flag = jxp_b_never_offer_colonial_switch
+		custom_tooltip = jxp_b_95_never_switch_tt
+	}
+}

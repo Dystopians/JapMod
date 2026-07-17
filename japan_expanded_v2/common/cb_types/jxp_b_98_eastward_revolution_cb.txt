@@ -1,0 +1,11 @@
+cb_jxp_b_eastward_revolution = {
+	valid_for_subject = no
+
+	prerequisites_self = { jxp_b_98_can_launch_eastward_revolution_trigger = yes }
+
+	prerequisites = {
+		FROM = { jxp_b_98_vulnerable_japanese_metropole_trigger = yes }
+	}
+
+	war_goal = jxp_b_eastward_revolution_wargoal
+}

@@ -1,0 +1,669 @@
+# B8 secondary colonial successors: five exact-tag series and fifteen missions
+# per country. Each column follows the RSMTS odd/even parity grid.
+
+jxp_b_95_hkk_cold_frontier_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { tag = HKK }
+	has_country_shield = yes
+
+	jxp_b_95_hkk_cold_harbors = {
+		icon = mission_colonize_alaska
+		position = 1
+		trigger = { num_of_ports = 6 }
+		effect = {
+			add_dip_power = 40
+			add_country_modifier = { name = jxp_b_95_hkk_cold_harbor_network duration = -1 }
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_seasonal_storehouses = {
+		icon = mission_rice_field
+		position = 3
+		required_missions = { jxp_b_95_hkk_cold_harbors }
+		trigger = { manpower_percentage = 0.50 stability = 1 }
+		effect = {
+			add_adm_power = 35
+			add_country_modifier = { name = jxp_b_95_hkk_winter_storehouses duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.3 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_northern_shipyards = {
+		icon = mission_establish_high_seas_navy
+		position = 5
+		required_missions = { jxp_b_95_hkk_seasonal_storehouses }
+		trigger = { navy_size_percentage = 0.80 navy_tradition = 20 }
+		effect = {
+			add_navy_tradition = 5
+			add_sailors = 1000
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_hkk_peoples_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { tag = HKK }
+	has_country_shield = yes
+
+	jxp_b_95_hkk_ainu_compacts = {
+		icon = mission_diplomatic_relation
+		position = 2
+		trigger = { jxp_b_91_local_compact_at_least_60_trigger = yes }
+		effect = {
+			add_dip_power = 35
+			jxp_b_91_add_compact_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.2 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_fur_ledger = {
+		icon = mission_asian_trader
+		position = 4
+		required_missions = { jxp_b_95_hkk_ainu_compacts }
+		trigger = { monthly_income = 15 treasury = 300 }
+		effect = {
+			add_dip_power = 30
+			add_mercantilism = 1
+			country_event = { id = jxp_secondary_colonies.6 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_northern_citizenship = {
+		icon = mission_plc_governance_act
+		position = 6
+		required_missions = { jxp_b_95_hkk_fur_ledger }
+		trigger = { stability = 2 religious_unity = 0.80 }
+		effect = {
+			change_government_reform_progress = 35
+			add_country_modifier = { name = jxp_b_95_hkk_northern_citizenship duration = -1 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_hkk_north_pacific_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { tag = HKK }
+	has_country_shield = yes
+
+	jxp_b_95_hkk_aleutian_chain = {
+		icon = mission_invade_island
+		position = 1
+		trigger = { num_of_ports = 7 num_of_light_ship = 8 }
+		effect = {
+			add_dip_power = 40
+			add_navy_tradition = 3
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_storm_routes = {
+		icon = mission_polynesian_navy_build
+		position = 3
+		required_missions = { jxp_b_95_hkk_aleutian_chain }
+		trigger = { num_of_light_ship = 12 navy_tradition = 25 }
+		effect = {
+			add_country_modifier = { name = jxp_b_95_hkk_storm_rescue_code duration = 7300 }
+			jxp_b_91_add_compact_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.7 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_north_pacific_convoys = {
+		icon = mission_junk_boat
+		position = 5
+		required_missions = { jxp_b_95_hkk_storm_routes }
+		trigger = { navy_size_percentage = 0.90 monthly_income = 25 }
+		effect = {
+			add_country_modifier = { name = jxp_b_95_hkk_convoy_season duration = -1 }
+			add_dip_power = 50
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_hkk_rivalry_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { tag = HKK }
+	has_country_shield = yes
+
+	jxp_b_95_hkk_watch_russian_advance = {
+		icon = mission_great_wall
+		position = 2
+		trigger = { army_size_percentage = 0.75 num_of_ports = 6 }
+		effect = {
+			add_mil_power = 40
+			add_army_tradition = 3
+			country_event = { id = jxp_secondary_colonies.4 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_fortified_sound = {
+		icon = mission_japanese_fort
+		position = 4
+		required_missions = { jxp_b_95_hkk_watch_russian_advance }
+		trigger = { army_size_percentage = 0.85 manpower_percentage = 0.50 }
+		effect = {
+			add_mil_power = 35
+			add_country_modifier = { name = jxp_b_95_hkk_mixed_crews duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.5 days = 1 }
+		}
+	}
+
+	jxp_b_95_hkk_northern_balance = {
+		icon = mission_diplomatic_relation
+		position = 6
+		required_missions = { jxp_b_95_hkk_fortified_sound }
+		trigger = { prestige = 25 is_at_war = no }
+		effect = {
+			add_dip_power = 50
+			add_prestige = 10
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_hkk_constitution_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { tag = HKK }
+	has_country_shield = yes
+
+	jxp_b_95_hkk_founders_diet = {
+		icon = mission_monarch_in_throne_room
+		position = 1
+		trigger = { jxp_b_95_has_secondary_constitution_trigger = yes stability = 1 }
+		effect = {
+			change_government_reform_progress = 40
+			add_adm_power = 30
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_choose_northern_order = {
+		icon = mission_censorate
+		position = 3
+		required_missions = { jxp_b_95_hkk_founders_diet }
+		trigger = {
+			total_development = 150
+			OR = { republican_tradition = 65 legitimacy = 65 }
+		}
+		effect = {
+			change_government_reform_progress = 50
+			add_country_modifier = { name = jxp_b_95_hkk_northern_autonomy duration = 7300 }
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_northern_self_rule = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_95_hkk_choose_northern_order }
+		trigger = {
+			mission_completed = jxp_b_95_hkk_northern_citizenship
+			mission_completed = jxp_b_95_hkk_north_pacific_convoys
+			OR = { is_subject = no has_country_flag = jxp_iface_colonial_independence }
+		}
+		effect = {
+			add_prestige = 15
+			jxp_b_91_add_identity_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.8 days = 1 }
+		}
+	}
+}
+
+jxp_b_95_njf_port_network_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { tag = NJF }
+	has_country_shield = yes
+
+	jxp_b_95_njf_japan_town_registers = {
+		icon = mission_portuguese_malacca
+		position = 1
+		trigger = { num_of_ports = 6 }
+		effect = {
+			add_adm_power = 35
+			add_country_modifier = { name = jxp_b_95_njf_port_federation duration = -1 }
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_harbor_magistrates = {
+		icon = mission_censorate
+		position = 3
+		required_missions = { jxp_b_95_njf_japan_town_registers }
+		trigger = { stability = 1 monthly_income = 15 }
+		effect = {
+			change_government_reform_progress = 30
+			add_adm_power = 30
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_interport_couriers = {
+		icon = mission_diplomatic_relation
+		position = 5
+		required_missions = { jxp_b_95_njf_harbor_magistrates }
+		trigger = { num_of_ports = 8 diplomatic_reputation = 1 }
+		effect = {
+			add_dip_power = 45
+			add_country_modifier = { name = jxp_b_95_njf_interpreter_service duration = -1 }
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_njf_society_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { tag = NJF }
+	has_country_shield = yes
+
+	jxp_b_95_njf_royal_licenses = {
+		icon = mission_diplomatic_relation
+		position = 2
+		trigger = { jxp_b_91_local_compact_at_least_60_trigger = yes }
+		effect = {
+			add_dip_power = 35
+			add_country_modifier = { name = jxp_b_95_njf_royal_patents duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.103 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_interpreters_guild = {
+		icon = mission_early_modern_university
+		position = 4
+		required_missions = { jxp_b_95_njf_royal_licenses }
+		trigger = { diplomatic_reputation = 1 adm_tech = 11 }
+		effect = {
+			add_dip_power = 40
+			add_country_modifier = { name = jxp_b_95_njf_interpreter_guild duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.102 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_plural_wards = {
+		icon = mission_religious
+		position = 6
+		required_missions = { jxp_b_95_njf_interpreters_guild }
+		trigger = { religious_unity = 0.80 stability = 2 }
+		effect = {
+			add_adm_power = 40
+			add_country_modifier = { name = jxp_b_95_njf_plural_wards duration = -1 }
+			country_event = { id = jxp_secondary_colonies.104 days = 1 }
+		}
+	}
+}
+
+jxp_b_95_njf_commerce_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { tag = NJF }
+	has_country_shield = yes
+
+	jxp_b_95_njf_red_seal_consortium = {
+		icon = mission_trade_company_region_abroad
+		position = 1
+		trigger = { monthly_income = 18 treasury = 300 }
+		effect = {
+			add_mercantilism = 1
+			add_dip_power = 35
+			country_event = { id = jxp_secondary_colonies.105 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_tropical_warehouses = {
+		icon = mission_have_manufactories
+		position = 3
+		required_missions = { jxp_b_95_njf_red_seal_consortium }
+		trigger = { monthly_income = 25 num_of_cities = 12 }
+		effect = {
+			add_adm_power = 40
+			add_country_modifier = { name = jxp_b_95_njf_monsoon_relief duration = 7300 }
+			jxp_b_91_add_compact_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.107 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_monsoon_exchange = {
+		icon = mission_to_the_south_china_sea
+		position = 5
+		required_missions = { jxp_b_95_njf_tropical_warehouses }
+		trigger = { monthly_income = 30 num_of_light_ship = 12 }
+		effect = {
+			add_country_modifier = { name = jxp_b_95_njf_monsoon_exchange duration = -1 }
+			add_dip_power = 50
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_njf_security_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { tag = NJF }
+	has_country_shield = yes
+
+	jxp_b_95_njf_ronin_companies = {
+		icon = mission_japanese_samurai
+		position = 2
+		trigger = { army_size_percentage = 0.75 manpower_percentage = 0.40 }
+		effect = {
+			add_mil_power = 40
+			add_country_modifier = { name = jxp_b_95_njf_ronin_contracts duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.106 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_convoy_law = {
+		icon = mission_junk_boat
+		position = 4
+		required_missions = { jxp_b_95_njf_ronin_companies }
+		trigger = { navy_size_percentage = 0.80 num_of_light_ship = 10 }
+		effect = {
+			add_navy_tradition = 5
+			add_sailors = 1000
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_maritime_militia = {
+		icon = mission_establish_high_seas_navy
+		position = 6
+		required_missions = { jxp_b_95_njf_convoy_law }
+		trigger = { army_size_percentage = 0.85 navy_size_percentage = 0.90 }
+		effect = {
+			add_mil_power = 45
+			add_army_tradition = 3
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_njf_federation_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { tag = NJF }
+	has_country_shield = yes
+
+	jxp_b_95_njf_port_congress = {
+		icon = mission_monarch_in_throne_room
+		position = 1
+		trigger = { jxp_b_95_has_secondary_constitution_trigger = yes stability = 1 }
+		effect = {
+			change_government_reform_progress = 40
+			add_adm_power = 30
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_federation_compact = {
+		icon = mission_plc_governance_act
+		position = 3
+		required_missions = { jxp_b_95_njf_port_congress }
+		trigger = {
+			total_development = 160
+			OR = { republican_tradition = 65 legitimacy = 65 }
+		}
+		effect = {
+			change_government_reform_progress = 50
+			add_country_modifier = { name = jxp_b_95_njf_free_port_charter duration = 7300 }
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_terms_with_japan = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_95_njf_federation_compact }
+		trigger = {
+			mission_completed = jxp_b_95_njf_plural_wards
+			mission_completed = jxp_b_95_njf_monsoon_exchange
+			OR = { is_subject = no has_country_flag = jxp_iface_colonial_independence }
+		}
+		effect = {
+			add_prestige = 15
+			jxp_b_91_add_identity_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.108 days = 1 }
+		}
+	}
+}
+
+jxp_b_95_oia_navigation_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { tag = OIA }
+	has_country_shield = yes
+
+	jxp_b_95_oia_star_paths = {
+		icon = mission_polynesian_navy_build
+		position = 1
+		trigger = { num_of_ports = 6 navy_tradition = 15 }
+		effect = {
+			add_dip_power = 40
+			add_country_modifier = { name = jxp_b_95_oia_wayfinding_houses duration = -1 }
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_waystations = {
+		icon = mission_invade_island
+		position = 3
+		required_missions = { jxp_b_95_oia_star_paths }
+		trigger = { num_of_ports = 8 num_of_light_ship = 8 }
+		effect = {
+			add_dip_power = 35
+			add_sailors = 750
+			country_event = { id = jxp_secondary_colonies.203 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_blue_water_hulls = {
+		icon = mission_establish_high_seas_navy
+		position = 5
+		required_missions = { jxp_b_95_oia_waystations }
+		trigger = { navy_size_percentage = 0.90 num_of_heavy_ship = 3 }
+		effect = {
+			add_navy_tradition = 5
+			add_dip_power = 45
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_oia_society_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { tag = OIA }
+	has_country_shield = yes
+
+	jxp_b_95_oia_chiefly_compacts = {
+		icon = mission_diplomatic_relation
+		position = 2
+		trigger = { jxp_b_91_local_compact_at_least_60_trigger = yes }
+		effect = {
+			add_dip_power = 35
+			add_country_modifier = { name = jxp_b_95_oia_chiefly_compact duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.202 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_land_and_reef_customs = {
+		icon = mission_rice_field
+		position = 4
+		required_missions = { jxp_b_95_oia_chiefly_compacts }
+		trigger = { stability = 1 num_of_cities = 10 }
+		effect = {
+			add_adm_power = 40
+			add_country_modifier = { name = jxp_b_95_oia_reef_customs duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.204 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_common_council = {
+		icon = mission_plc_governance_act
+		position = 6
+		required_missions = { jxp_b_95_oia_land_and_reef_customs }
+		trigger = { stability = 2 religious_unity = 0.80 }
+		effect = {
+			change_government_reform_progress = 35
+			add_country_modifier = { name = jxp_b_95_oia_reef_compact duration = -1 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_oia_ocean_economy_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { tag = OIA }
+	has_country_shield = yes
+
+	jxp_b_95_oia_harbor_gardens = {
+		icon = mission_rice_field
+		position = 1
+		trigger = { monthly_income = 12 stability = 1 }
+		effect = {
+			add_adm_power = 35
+			add_country_modifier = { name = jxp_b_95_oia_reef_customs duration = 3650 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_sandalwood_exchange = {
+		icon = mission_asian_trader
+		position = 3
+		required_missions = { jxp_b_95_oia_harbor_gardens }
+		trigger = { monthly_income = 20 treasury = 250 }
+		effect = {
+			add_mercantilism = 1
+			add_dip_power = 40
+			country_event = { id = jxp_secondary_colonies.206 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_ocean_entrepot = {
+		icon = mission_market_place_with_asian_traders
+		position = 5
+		required_missions = { jxp_b_95_oia_sandalwood_exchange }
+		trigger = { monthly_income = 28 num_of_light_ship = 12 }
+		effect = {
+			add_country_modifier = { name = jxp_b_95_oia_harbor_dues duration = 7300 }
+			add_dip_power = 50
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+}
+
+jxp_b_95_oia_defense_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { tag = OIA }
+	has_country_shield = yes
+
+	jxp_b_95_oia_reef_watch = {
+		icon = mission_galleys_in_port
+		position = 2
+		trigger = { navy_size_percentage = 0.75 manpower_percentage = 0.35 }
+		effect = {
+			add_mil_power = 35
+			add_navy_tradition = 3
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_island_squadrons = {
+		icon = mission_sea_battles
+		position = 4
+		required_missions = { jxp_b_95_oia_reef_watch }
+		trigger = { navy_size_percentage = 0.90 navy_tradition = 25 }
+		effect = {
+			add_mil_power = 40
+			add_country_modifier = { name = jxp_b_95_oia_mixed_fleet duration = 7300 }
+			country_event = { id = jxp_secondary_colonies.205 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_oceanic_defense_pact = {
+		icon = mission_establish_high_seas_navy
+		position = 6
+		required_missions = { jxp_b_95_oia_island_squadrons }
+		trigger = { num_of_heavy_ship = 5 navy_tradition = 35 }
+		effect = {
+			add_country_modifier = { name = jxp_b_95_oia_ocean_defense duration = -1 }
+			add_sailors = 1500
+			country_event = { id = jxp_secondary_colonies.207 days = 1 }
+		}
+	}
+}
+
+jxp_b_95_oia_polity_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { tag = OIA }
+	has_country_shield = yes
+
+	jxp_b_95_oia_island_congress = {
+		icon = mission_monarch_in_throne_room
+		position = 1
+		trigger = { jxp_b_95_has_secondary_constitution_trigger = yes stability = 1 }
+		effect = {
+			change_government_reform_progress = 40
+			add_adm_power = 30
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_choose_constitution = {
+		icon = mission_censorate
+		position = 3
+		required_missions = { jxp_b_95_oia_island_congress }
+		trigger = {
+			total_development = 130
+			OR = { republican_tradition = 65 legitimacy = 65 }
+		}
+		effect = {
+			change_government_reform_progress = 50
+			add_country_modifier = { name = jxp_b_95_oia_equal_seas duration = 7300 }
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_equal_seas_compact = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_95_oia_choose_constitution }
+		trigger = {
+			mission_completed = jxp_b_95_oia_common_council
+			mission_completed = jxp_b_95_oia_oceanic_defense_pact
+			OR = { is_subject = no has_country_flag = jxp_iface_colonial_independence }
+		}
+		effect = {
+			add_prestige = 15
+			jxp_b_91_add_identity_5_effect = yes
+			country_event = { id = jxp_secondary_colonies.208 days = 1 }
+		}
+	}
+}

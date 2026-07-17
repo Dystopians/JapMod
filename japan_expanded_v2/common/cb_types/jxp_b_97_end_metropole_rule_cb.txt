@@ -1,0 +1,11 @@
+cb_jxp_b_end_metropole_colonial_rule = {
+	valid_for_subject = no
+
+	prerequisites_self = { jxp_b_97_can_end_metropole_rule_trigger = yes }
+
+	prerequisites = {
+		FROM = { jxp_b_97_has_overseas_colonial_rule_trigger = yes }
+	}
+
+	war_goal = jxp_b_end_metropole_colonial_rule_wargoal
+}

@@ -1,0 +1,89 @@
+po_jxp_b_liberate_overseas = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 0
+	warscore_cost = { no_provinces = 80.0 }
+	warscore_cap = 80
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = { THIS = { jxp_b_98_can_launch_eastward_revolution_trigger = yes } }
+	is_allowed = { FROM = { jxp_b_98_vulnerable_japanese_metropole_trigger = yes } }
+	effect = {
+		FROM = { jxp_b_97_break_metropole_new_world_rule_effect = yes }
+		THIS = { country_event = { id = jxp_transpacific_state.1 days = 1 } }
+	}
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 100 } }
+}
+
+po_jxp_b_old_world_member = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 0.20
+	warscore_cost = { no_provinces = 90.0 }
+	warscore_cap = 90
+	requires_demand_independence = no
+	is_make_subject = yes
+	requires_is_allowed = yes
+	is_visible = { THIS = { jxp_b_98_can_launch_eastward_revolution_trigger = yes } }
+	is_allowed = { FROM = { jxp_b_98_vulnerable_japanese_metropole_trigger = yes } }
+	effect = {
+		FROM = { jxp_b_97_break_metropole_new_world_rule_effect = yes }
+		THIS = { create_subject = { subject = FROM subject_type = vassal } }
+		FROM = { jxp_b_98_establish_old_world_member_effect = yes }
+		THIS = { country_event = { id = jxp_transpacific_state.2 days = 1 } }
+	}
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 45 } }
+}
+
+po_jxp_b_two_ocean_federation = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 0.25
+	warscore_cost = { no_provinces = 100.0 }
+	warscore_cap = 100
+	requires_demand_independence = no
+	is_make_subject = yes
+	requires_is_allowed = yes
+	is_visible = { THIS = { jxp_b_98_can_launch_eastward_revolution_trigger = yes } }
+	is_allowed = { FROM = { jxp_b_98_vulnerable_japanese_metropole_trigger = yes } }
+	effect = {
+		FROM = { jxp_b_97_break_metropole_new_world_rule_effect = yes }
+		THIS = { create_subject = { subject = FROM subject_type = vassal } }
+		FROM = { jxp_b_98_establish_old_world_member_effect = yes }
+		THIS = { jxp_b_98_form_two_ocean_federation_effect = yes country_event = { id = jxp_transpacific_state.3 days = 1 } }
+	}
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 15 } }
+}
+
+po_jxp_b_eastward_capital = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 0.35
+	warscore_cost = { no_provinces = 100.0 }
+	warscore_cap = 100
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = {
+		THIS = { jxp_b_98_can_launch_eastward_revolution_trigger = yes }
+		FROM = { owns = 1020 }
+	}
+	is_allowed = { FROM = { owns = 1020 jxp_b_98_vulnerable_japanese_metropole_trigger = yes } }
+	effect = {
+		FROM = {
+			jxp_b_97_break_metropole_new_world_rule_effect = yes
+			1020 = { cede_province = ROOT }
+		}
+		THIS = { jxp_b_98_eastward_capital_effect = yes country_event = { id = jxp_transpacific_state.4 days = 1 } }
+	}
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 5 } }
+}

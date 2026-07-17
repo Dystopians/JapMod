@@ -1,0 +1,558 @@
+jxp_japan_uncommitted_council_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = JAP
+		NOT = { jxp_has_any_route_trigger = yes }
+	}
+	has_country_shield = yes
+
+	jxp_mission_uncommitted_reckon_warrior_houses = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			num_of_cities = 10
+			legitimacy = 60
+		}
+		effect = {
+			change_government_reform_progress = 20
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_24_uncommitted_warrior_reckoning
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_uncommitted_balance_court_and_camp = {
+		icon = mission_monarch_in_throne_room
+		position = 4
+		required_missions = { jxp_mission_uncommitted_reckon_warrior_houses }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			mission_completed = jxp_mission_shrine_land_registers
+			owns = 1020
+			stability = 1
+			prestige = 20
+		}
+		effect = {
+			add_dip_power = 40
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_24_uncommitted_court_camp_balance
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_uncommitted_summon_realm_council = {
+		icon = mission_empire
+		position = 6
+		required_missions = { jxp_mission_uncommitted_balance_court_and_camp }
+		trigger = {
+			mission_completed = jxp_mission_iwami_silver
+			mission_completed = jxp_mission_ise_pilgrim_roads
+			mission_completed = jxp_mission_unite_the_isles
+			jxp_can_summon_realm_council_trigger = yes
+			stability = 1
+		}
+		effect = {
+			add_prestige = 15
+			change_government_reform_progress = 30
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_uncommitted_hear_domain_memorials = {
+		icon = mission_diplomatic_relation
+		position = 8
+		required_missions = { jxp_mission_uncommitted_summon_realm_council }
+		trigger = {
+			mission_completed = jxp_mission_settle_the_realm
+			jxp_has_domain_memorial_network_trigger = yes
+			legitimacy = 70
+		}
+		effect = {
+			add_adm_power = 40
+			add_dip_power = 40
+			change_government_reform_progress = 25
+		}
+	}
+
+	jxp_mission_uncommitted_draft_realm_program = {
+		icon = mission_monarch_in_throne_room
+		position = 10
+		required_missions = { jxp_mission_uncommitted_hear_domain_memorials }
+		trigger = {
+			mission_completed = jxp_mission_modern_state
+			stability = 2
+			jxp_tenka_order_at_least_50 = yes
+			jxp_imperial_sanction_at_least_50 = yes
+		}
+		effect = {
+			add_prestige = 15
+			change_government_reform_progress = 40
+		}
+	}
+
+	jxp_mission_uncommitted_codify_realm_council = {
+		icon = mission_monarch_in_throne_room
+		position = 12
+		required_missions = { jxp_mission_uncommitted_draft_realm_program }
+		trigger = {
+			jxp_final_state_uncommitted_power_active_trigger = yes
+			adm_tech = 12
+			stability = 2
+			legitimacy = 75
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_uncommitted_realm_program
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_japan_uncommitted_horizon_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = JAP
+		NOT = { jxp_has_any_route_trigger = yes }
+	}
+	has_country_shield = yes
+
+	jxp_mission_uncommitted_watch_the_four_seas = {
+		icon = mission_establish_high_seas_navy
+		position = 2
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			num_of_ports = 4
+			navy_size_percentage = 0.6
+		}
+		effect = {
+			add_navy_tradition = 5
+			jxp_add_oceanic_opening_5_effect = yes
+			add_country_modifier = {
+				name = jxp_24_uncommitted_four_seas_watch
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_uncommitted_register_border_ports = {
+		icon = mission_trade_with_japan
+		position = 4
+		required_missions = { jxp_mission_uncommitted_watch_the_four_seas jxp_mission_shrine_land_registers }
+		trigger = {
+			num_of_ports = 5
+			dip_tech = 7
+			OR = {
+				owns_or_non_sovereign_subject_of = 4651
+				owns_or_non_sovereign_subject_of = 4193
+				jxp_has_border_port_coverage_trigger = yes
+			}
+		}
+		effect = {
+			add_dip_power = 40
+			add_country_modifier = {
+				name = jxp_24_uncommitted_border_ports
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_uncommitted_choose_the_horizon = {
+		icon = mission_look_west
+		position = 6
+		required_missions = { jxp_mission_uncommitted_register_border_ports jxp_mission_ise_pilgrim_roads }
+		trigger = {
+			mission_completed = jxp_mission_unite_the_isles
+			dip_tech = 8
+			num_of_ports = 6
+		}
+		effect = {
+			add_dip_power = 50
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_uncommitted_compare_foreign_models = {
+		icon = mission_early_modern_university
+		position = 8
+		required_missions = { jxp_mission_uncommitted_choose_the_horizon }
+		trigger = {
+			OR = {
+				has_institution = printing_press
+				dip_tech = 10
+			}
+			num_of_ports = 7
+		}
+		effect = {
+			add_adm_power = 40
+			add_dip_power = 40
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_uncommitted_keep_all_courses_open = {
+		icon = mission_look_west
+		position = 10
+		required_missions = { jxp_mission_uncommitted_compare_foreign_models }
+		trigger = {
+			mission_completed = jxp_mission_massed_volley
+			num_of_ports = 8
+			navy_size_percentage = 0.8
+		}
+		effect = {
+			add_dip_power = 50
+			add_navy_tradition = 5
+		}
+	}
+}
+
+jxp_japan_sakoku_horizon_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = JAP
+		has_country_flag = jxp_path_sakoku
+	}
+	has_country_shield = yes
+
+	jxp_mission_sakoku_coastal_magistrates = {
+		icon = mission_establish_high_seas_navy
+		position = 2
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			num_of_ports = 5
+			navy_size_percentage = 0.7
+		}
+		effect = {
+			add_navy_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_24_sakoku_coastal_magistrates
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_sakoku_matsumae_compact = {
+		icon = mission_japanese_fort
+		position = 4
+		required_missions = { jxp_mission_sakoku_coastal_magistrates jxp_mission_shrine_land_registers }
+		trigger = {
+			OR = {
+				owns_or_non_sovereign_subject_of = 4193
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					area = hokkaido_area
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_24_sakoku_matsumae_compact
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_sakoku_tsushima_interpreters = {
+		icon = mission_asian_trader
+		position = 6
+		required_missions = { jxp_mission_sakoku_matsumae_compact jxp_mission_ise_pilgrim_roads }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 4651
+			dip_tech = 8
+			num_of_ports = 6
+		}
+		effect = {
+			add_dip_power = 50
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_24_sakoku_tsushima_interpreters
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_sakoku_ryukyu_protocol = {
+		icon = mission_diplomatic_relation
+		position = 8
+		required_missions = { jxp_mission_sakoku_tsushima_interpreters jxp_mission_kami_castle_towns }
+		trigger = {
+			OR = {
+				any_subject_country = { tag = RYU }
+				any_ally = { tag = RYU }
+				owns_or_non_sovereign_subject_of = 1015
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = jxp_24_sakoku_ryukyu_protocol
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_sakoku_beacon_coast = {
+		icon = mission_japanese_fort
+		position = 10
+		required_missions = { jxp_mission_sakoku_ryukyu_protocol jxp_mission_incident_order }
+		trigger = {
+			num_of_ports = 8
+			navy_size_percentage = 0.9
+			mil_tech = 10
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = jxp_24_sakoku_beacon_coast
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_sakoku_one_permitted_window = {
+		icon = mission_early_modern_university
+		position = 12
+		required_missions = { jxp_mission_sakoku_beacon_coast jxp_mission_sacred_isles }
+		trigger = {
+			mission_completed = jxp_mission_dejima_window
+			adm_tech = 12
+			dip_tech = 12
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_24_sakoku_permitted_window
+				duration = 9125
+			}
+		}
+	}
+
+	jxp_mission_sakoku_four_seas_under_watch = {
+		icon = mission_empire
+		position = 14
+		required_missions = { jxp_mission_sakoku_one_permitted_window }
+		trigger = {
+			mission_completed = jxp_mission_repulse_foreign_ships
+			jxp_tenka_order_at_least_75 = yes
+			stability = 2
+			num_of_ports = 10
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_24_sakoku_four_seas_watch
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_sakoku_bakuhan_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_sakoku_four_seas_under_watch }
+		trigger = {
+			jxp_final_state_sakoku_power_active_trigger = yes
+			adm_tech = 14
+			stability = 2
+			jxp_tenka_order_at_least_75 = yes
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_sakoku_bakuhan_constitution
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_ikko_common_economy_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_ikko_temple_granaries = {
+		icon = mission_rice_field
+		position = 2
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			num_of_cities = 10
+			treasury = 100
+		}
+		effect = {
+			add_adm_power = 40
+			add_country_modifier = {
+				name = jxp_24_ikko_temple_granaries
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_mission_ikko_remit_war_debts = {
+		icon = mission_high_income
+		position = 4
+		required_missions = { jxp_mission_ikko_temple_granaries jxp_mission_monto_rolls }
+		trigger = {
+			stability = 1
+			religious_unity = 0.85
+			treasury = 150
+		}
+		effect = {
+			add_stability = 1
+			add_country_modifier = {
+				name = jxp_24_ikko_debt_remission
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_ikko_pilgrim_post_roads = {
+		icon = mission_buddhist_monk_praying
+		position = 6
+		required_missions = { jxp_mission_ikko_remit_war_debts jxp_mission_terauchi_market_charters }
+		trigger = {
+			num_of_cities = 15
+			adm_tech = 8
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_24_ikko_pilgrim_roads
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_ikko_commoner_schools = {
+		icon = mission_early_modern_university
+		position = 8
+		required_missions = { jxp_mission_ikko_pilgrim_post_roads jxp_mission_village_militia_oaths }
+		trigger = {
+			adm_tech = 10
+			adm_power = 100
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_24_ikko_commoner_schools
+				duration = 9125
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_ikko_guild_councils = {
+		icon = mission_market_place_with_asian_traders
+		position = 10
+		required_missions = { jxp_mission_ikko_commoner_schools jxp_mission_kinri_monto_compact }
+		trigger = {
+			monthly_income = 15
+			num_of_cities = 20
+			stability = 1
+		}
+		effect = {
+			add_treasury = 100
+			add_country_modifier = {
+				name = jxp_24_ikko_guild_councils
+				duration = 9125
+			}
+		}
+	}
+
+	jxp_mission_ikko_communal_shipyards = {
+		icon = mission_galleys_in_port
+		position = 12
+		required_missions = { jxp_mission_ikko_guild_councils jxp_mission_commonwealth_covenant }
+		trigger = {
+			num_of_ports = 6
+			navy_size_percentage = 0.8
+			dip_tech = 10
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_24_ikko_communal_shipyards
+				duration = 9125
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_ikko_realm_of_fellowship = {
+		icon = mission_empire
+		position = 14
+		required_missions = { jxp_mission_ikko_communal_shipyards }
+		trigger = {
+			mission_completed = jxp_mission_pure_land_covenant
+			mission_completed = jxp_mission_commonwealth_covenant
+			jxp_has_ikko_fellowship_integration_trigger = yes
+			stability = 2
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_24_ikko_realm_of_fellowship
+				duration = -1
+			}
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_ijp_somon_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_mission_ikko_realm_of_fellowship }
+		trigger = {
+			jxp_final_state_ikko_power_active_trigger = yes
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_ikko_somon_constitution
+				duration = -1
+			}
+		}
+	}
+}

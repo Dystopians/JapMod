@@ -1,0 +1,246 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 1030
+
+1440.1.1 = {
+	monarch = {
+		name = "ENï"
+		dynasty = "«u0u"
+		birth_date = 1420.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = incorruptible_personality
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+}
+
+1452.1.1 = {
+	heir = {
+		name = "OeöR"
+		monarch_name = "OeöR"
+		dynasty = "«u0u"
+		birth_date = 1452.1.1
+		death_date = 1495.7.26
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1465.1.1 = {
+	monarch = {
+		name = "OeöR"
+		dynasty = "«u0u"
+		birth_date = 1452.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = strict_personality
+	add_ruler_personality = zealot_personality
+	add_ruler_personality = lawgiver_personality
+}
+
+1495.7.26 = {
+	monarch = {
+		name = "‹èöR"
+		dynasty = "«u0u"
+		birth_date = 1470.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+}
+
+1495.9.1 = {
+	monarch = {
+		name = "≈RQg"
+		dynasty = "«u0u"
+		birth_date = 1475.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = kind_hearted_personality
+}
+
+1503.1.1 = {
+	monarch = {
+		name = "æèöR"
+		dynasty = "«u0u"
+		birth_date = 1486.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = loose_lips_personality
+	add_ruler_personality = babbling_buffoon_personality
+}
+
+1513.6.8 = {
+	monarch = {
+		name = "æè‹w"
+		dynasty = "«u0u"
+		birth_date = 1490.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = malevolent_personality
+	add_ruler_personality = naive_personality
+}
+
+1520.1.1 = {
+	monarch = {
+		name = "·OöR"
+		dynasty = "«u0u"
+		birth_date = 1490.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = midas_touched_personality
+}
+
+1520.1.1 = {
+	heir = {
+		name = "·O¿y"
+		monarch_name = "·O¿y"
+		dynasty = "«u0u"
+		birth_date = 1511.1.1
+		death_date = 1552.4.8
+		claim = 80
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1527.1.1 = {
+	monarch = {
+		name = "·O¿y"
+		dynasty = "«u0u"
+		birth_date = 1511.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = midas_touched_personality
+}
+
+1534.6.23 = {
+	heir = {
+		name = "·Oï"
+		monarch_name = "·Oï"
+		dynasty = "«u0u"
+		birth_date = 1534.6.23
+		death_date = 1582.6.21
+		claim = 90
+		adm = 6
+		dip = 5
+		mil = 6
+	}
+}
+
+1552.4.8 = {
+	monarch = {
+		name = "·Oï"
+		dynasty = "«u0u"
+		birth_date = 1534.6.23
+		adm = 6
+		dip = 5
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = tolerant_personality
+	add_ruler_personality = midas_touched_personality
+}
+
+1557.1.1 = {
+	heir = {
+		name = "·O‡V"
+		monarch_name = "·O‡V"
+		dynasty = "«u0u"
+		birth_date = 1557.1.1
+		death_date = 1582.6.21
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1567.1.1 = {
+	capital = 1835
+}
+
+1573.7.3 = {
+	capital = 1020
+	government = monarchy
+	add_government_reform = shogunate
+	government_rank = 2
+}
+
+# Hideyoshi governs the Oda succession under the Hashiba name until 1586.
+1582.6.21 = {
+	monarch = {
+		name = "¿y	T"
+		dynasty = "ÀÙg"
+		birth_date = 1537.3.17
+		death_date = 1598.9.18
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = infertile_personality
+}
+
+# The Toyotomi state assumes every Oda-held province on this date.  This
+# residual history keeps a released ODA distinct instead of duplicating Hideyoshi.
+1586.1.1 = {
+	capital = 1030
+	government = monarchy
+	add_government_reform = daimyo
+	government_rank = 1
+	monarch = {
+		name = "·Oƒñ"
+		dynasty = "«u0u"
+		birth_date = 1558.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = naive_personality
+	heir = {
+		name = "¿yƒñ"
+		monarch_name = "¿yƒñ"
+		dynasty = "«u0u"
+		birth_date = 1583.1.1
+		claim = 70
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

@@ -1,0 +1,91 @@
+jxp_route_ikko = {
+	global_manpower_modifier = 0.10
+	stability_cost_modifier = -0.05
+	tolerance_own = 1
+}
+
+jxp_ikko_terauchi_town = {
+	local_production_efficiency = 0.10
+	local_manpower_modifier = 0.10
+	local_unrest = -1
+}
+
+jxp_ikko_monto_militia = {
+	global_manpower_modifier = 0.15
+	infantry_power = 0.05
+}
+
+jxp_ishiyama_fortress = {
+	local_defensiveness = 0.25
+	local_manpower_modifier = 0.10
+}
+
+jxp_kinri_protected_by_monto = {
+	legitimacy = 1
+	diplomatic_reputation = 1
+}
+
+jxp_peasant_commonwealth = {
+	global_tax_modifier = 0.10
+	production_efficiency = 0.05
+	global_unrest = -1
+}
+
+jxp_pure_land_covenant = {
+	religious_unity = 0.15
+	stability_cost_modifier = -0.10
+	global_unrest = -1
+}
+
+jxp_ikko_reconciled = {
+	tolerance_own = 1
+	global_unrest = -1
+}
+
+jxp_ikko_suppressed = {
+	global_manpower_modifier = -0.05
+	global_unrest = -1
+}
+
+jxp_route_wokou = {
+	privateer_efficiency = 0.15
+	naval_forcelimit_modifier = 0.10
+	global_ship_trade_power = 0.05
+}
+
+jxp_wokou_letters_of_mark = {
+	privateer_efficiency = 0.20
+	spy_offence = 0.10
+}
+
+jxp_setouchi_pilot_leagues = {
+	galley_power = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_tsushima_brokers = {
+	diplomatic_reputation = 1
+	trade_efficiency = 0.05
+}
+
+jxp_ryukyu_sea_gate = {
+	global_ship_trade_power = 0.10
+	ship_power_propagation = 0.10
+}
+
+jxp_ming_sea_smugglers = {
+	trade_efficiency = 0.10
+	privateer_efficiency = 0.10
+}
+
+jxp_wokou_admiralty = {
+	naval_forcelimit_modifier = 0.20
+	naval_morale = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_eastern_sea_lords = {
+	naval_morale = 0.10
+	global_ship_trade_power = 0.15
+	diplomatic_reputation = 1
+}

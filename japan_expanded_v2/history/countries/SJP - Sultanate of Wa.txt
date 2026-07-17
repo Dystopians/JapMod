@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+primary_culture = togoku
+religion = sunni
+technology_group = chinese
+capital = 4182
+
+1444.11.11 = {
+	monarch = {
+		name = "Yusuf"
+		dynasty = "•T"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

@@ -1,0 +1,29 @@
+jxp_b_96_colonial_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_b_colonial_origin_japanese
+		tag = NYA
+		tag = HKK
+		tag = NJF
+		tag = OIA
+	}
+}
+
+jxp_b_96_colonial_crisis_ready_trigger = {
+	jxp_b_91_colonial_society_active_trigger = yes
+	jxp_b_96_colonial_origin_trigger = yes
+	is_subject = yes
+	NOT = { is_at_war = yes }
+	num_of_cities = 8
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+	NOT = { jxp_b_91_metropole_control_at_least_60_trigger = yes }
+	NOT = { has_country_flag = jxp_b_96_independence_crisis_active }
+	NOT = { has_country_flag = jxp_b_96_independence_crisis_resolved }
+	NOT = { has_country_modifier = jxp_b_96_independence_crisis_cooldown }
+}
+
+jxp_b_96_can_use_colonial_independence_cb_trigger = {
+	jxp_b_96_colonial_origin_trigger = yes
+	is_subject = yes
+	has_country_flag = jxp_b_96_independence_declared
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+}

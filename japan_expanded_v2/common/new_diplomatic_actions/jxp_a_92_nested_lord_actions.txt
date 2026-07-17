@@ -1,0 +1,394 @@
+jxp_a_establish_kokujin_relation = {
+	category = influence
+	alert_index = 17
+	alert_tooltip = jxp_a_establish_kokujin_relation_alert_tooltip
+	require_acceptance = yes
+
+	is_visible = {
+		jxp_a_nested_patron_eligible_trigger = yes
+		FROM = { jxp_a_nested_client_eligible_trigger = yes }
+	}
+	is_allowed = {
+		jxp_a_nested_has_capacity_trigger = yes
+		legitimacy = 50
+		prestige = 25
+		dip_power = 50
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+			OR = {
+				is_allied_to = ROOT
+				marriage_with = ROOT
+				has_opinion = { who = ROOT value = 100 }
+			}
+		}
+	}
+	on_accept = {
+		add_dip_power = -50
+		add_prestige = -15
+		FROM = { jxp_a_clear_nested_relations_effect = yes }
+		add_opinion = {
+			who = FROM
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		FROM = {
+			set_country_flag = jxp_a_nested_client
+			add_country_modifier = {
+				name = jxp_a_nested_client_status
+				duration = -1
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+		}
+		jxp_a_rebuild_nested_client_cache_effect = yes
+	}
+	on_decline = {
+		add_prestige = -5
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = { which = ai_value value = 2 }
+			subtract_variable = { which = ai_value value = 40 }
+		}
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { which = ai_value value = 50 }
+		}
+	}
+	ai_will_do = { always = no }
+}
+
+jxp_a_release_kokujin_relation = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		has_opinion_modifier = {
+			who = FROM
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		FROM = {
+			has_country_flag = jxp_a_nested_client
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+	on_accept = {
+		add_prestige = -10
+		remove_opinion = {
+			who = FROM
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		FROM = {
+			remove_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+			clr_country_flag = jxp_a_nested_client
+			remove_country_modifier = jxp_a_nested_client_status
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_nested_lord_released
+			}
+		}
+		jxp_a_rebuild_nested_client_cache_effect = yes
+	}
+	ai_will_do = { always = no }
+}
+
+jxp_a_request_kokujin_defection = {
+	category = influence
+	alert_index = 17
+	alert_tooltip = jxp_a_request_kokujin_defection_alert_tooltip
+	require_acceptance = yes
+
+	is_visible = {
+		jxp_a_nested_patron_eligible_trigger = yes
+		FROM = {
+			has_country_flag = jxp_a_nested_client
+			jxp_a_nested_member_eligible_trigger = yes
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+		any_country = {
+			has_opinion_modifier = {
+				who = FROM
+				modifier = jxp_a_opinion_protected_kokujin
+			}
+			FROM = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+	}
+	is_allowed = {
+		jxp_a_nested_has_capacity_trigger = yes
+		prestige = 50
+		dip_power = 75
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+			has_opinion = { who = ROOT value = 125 }
+		}
+	}
+	on_accept = {
+		FROM = { save_event_target_as = jxp_a_nested_defecting_client }
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = event_target:jxp_a_nested_defecting_client
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+				event_target:jxp_a_nested_defecting_client = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = jxp_a_opinion_kokujin_patron
+					}
+				}
+			}
+			save_event_target_as = jxp_a_nested_old_patron
+		}
+		if = {
+			limit = { exists = event_target:jxp_a_nested_old_patron }
+			event_target:jxp_a_nested_defecting_client = {
+				jxp_a_clear_nested_relations_effect = yes
+			}
+			event_target:jxp_a_nested_old_patron = {
+				remove_opinion = {
+					who = event_target:jxp_a_nested_defecting_client
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+				add_opinion = {
+					who = event_target:jxp_a_nested_defecting_client
+					modifier = jxp_a_opinion_nested_lord_betrayal
+				}
+				add_prestige = -15
+				jxp_a_rebuild_nested_client_cache_effect = yes
+			}
+			event_target:jxp_a_nested_defecting_client = {
+				remove_opinion = {
+					who = event_target:jxp_a_nested_old_patron
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+		add_dip_power = -75
+		add_prestige = -20
+		add_opinion = {
+			who = event_target:jxp_a_nested_defecting_client
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		event_target:jxp_a_nested_defecting_client = {
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+			add_country_modifier = {
+				name = jxp_a_nested_lord_defiance
+				duration = 3650
+			}
+		}
+		every_country = {
+			limit = { has_reform = shogunate }
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_illegal_nested_transfer
+			}
+		}
+		jxp_a_rebuild_nested_client_cache_effect = yes
+	}
+	on_decline = {
+		add_prestige = -10
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = { which = ai_value value = 2 }
+			subtract_variable = { which = ai_value value = 60 }
+		}
+	}
+	ai_will_do = { always = no }
+}
+
+jxp_a_shogunal_adjudicate_kokujin = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		has_reform = shogunate
+		FROM = { has_country_flag = jxp_a_nested_client }
+		any_country = {
+			has_opinion_modifier = {
+				who = FROM
+				modifier = jxp_a_opinion_protected_kokujin
+			}
+			FROM = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+	}
+	is_allowed = {
+		dip_power = 25
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+	on_accept = {
+		add_dip_power = -25
+		FROM = { save_event_target_as = jxp_a_nested_adjudicated_client }
+		random_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = event_target:jxp_a_nested_adjudicated_client
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+				event_target:jxp_a_nested_adjudicated_client = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = jxp_a_opinion_kokujin_patron
+					}
+				}
+			}
+			save_event_target_as = jxp_a_nested_adjudicated_patron
+		}
+		if = {
+			limit = { exists = event_target:jxp_a_nested_adjudicated_patron }
+			event_target:jxp_a_nested_adjudicated_client = {
+				jxp_a_clear_nested_relations_effect = yes
+			}
+			event_target:jxp_a_nested_adjudicated_patron = {
+				remove_opinion = {
+					who = event_target:jxp_a_nested_adjudicated_client
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = jxp_a_opinion_shogunal_adjudication
+				}
+				add_prestige = -10
+				jxp_a_rebuild_nested_client_cache_effect = yes
+			}
+			event_target:jxp_a_nested_adjudicated_client = {
+				remove_opinion = {
+					who = event_target:jxp_a_nested_adjudicated_patron
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+		event_target:jxp_a_nested_adjudicated_client = {
+			clr_country_flag = jxp_a_nested_client
+			remove_country_modifier = jxp_a_nested_client_status
+			remove_country_modifier = jxp_a_nested_lord_defiance
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_nested_lord_released
+			}
+		}
+	}
+	ai_will_do = { always = no }
+}
+
+# This is material aid, not a war CTA. EU4's join_all_* effects cannot target
+# exactly one war, so the relation never auto-enlists a client in every war.
+jxp_a_request_kokujin_military_service = {
+	category = influence
+	alert_index = 17
+	alert_tooltip = jxp_a_request_kokujin_military_service_alert_tooltip
+	require_acceptance = yes
+
+	is_visible = {
+		has_opinion_modifier = {
+			who = FROM
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		FROM = {
+			has_country_flag = jxp_a_nested_client
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = yes
+		prestige = 10
+		FROM = { manpower_percentage = 0.20 }
+	}
+	on_accept = {
+		add_prestige = -10
+		add_manpower = 0.10
+		add_country_modifier = {
+			name = jxp_a_nested_military_service
+			duration = 730
+		}
+		FROM = {
+			add_manpower = -0.10
+			add_opinion = {
+				who = ROOT
+				modifier = jxp_a_opinion_nested_lord_released
+			}
+		}
+	}
+	on_decline = {
+		add_prestige = -5
+		add_opinion = {
+			who = FROM
+			modifier = jxp_a_opinion_nested_lord_betrayal
+		}
+		FROM = {
+			add_country_modifier = {
+				name = jxp_a_nested_lord_defiance
+				duration = 1825
+			}
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = { which = ai_value value = 4 }
+			subtract_variable = { which = ai_value value = 15 }
+		}
+	}
+	ai_will_do = { always = no }
+}

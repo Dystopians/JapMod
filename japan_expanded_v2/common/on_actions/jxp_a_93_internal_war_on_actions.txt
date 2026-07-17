@@ -1,0 +1,23 @@
+# Province-scoped integration pressure supplies the counterweight to the lower
+# AE/war-score factors. It is confined to transfers between Japanese daimyo in
+# Japan and disappears entirely after either side leaves the daimyo stage.
+on_province_owner_change = {
+	if = {
+		limit = {
+			region = japan_region
+			owner = {
+				culture_group = japanese_g
+				jxp_is_daimyo_stage_trigger = yes
+			}
+			FROM = {
+				culture_group = japanese_g
+				jxp_is_daimyo_stage_trigger = yes
+			}
+		}
+		add_local_autonomy = 10
+		add_province_modifier = {
+			name = jxp_a_disputed_internal_integration
+			duration = 3650
+		}
+	}
+}

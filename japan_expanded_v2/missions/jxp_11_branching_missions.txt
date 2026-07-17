@@ -1,0 +1,728 @@
+jxp_shinto_branch_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		tag = JAP
+		religion = shinto
+		NOT = {
+			OR = {
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_ikko
+				has_country_flag = jxp_path_wokou
+				has_country_flag = jxp_path_buddhist
+			}
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_shrine_land_registers = {
+		icon = mission_religious
+		position = 3
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			religious_unity = 0.8
+			stability = 1
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.1 }
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_ise_pilgrim_roads = {
+		icon = mission_to_japan
+		position = 5
+		required_missions = { jxp_mission_shrine_land_registers }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			mission_completed = jxp_mission_road_to_kyoto
+			owns = 4359
+			4359 = { religion = shinto }
+		}
+		effect = {
+			4359 = {
+				add_province_modifier = {
+					name = jxp_ise_pilgrim_roads
+					duration = 7300
+				}
+			}
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_kami_castle_towns = {
+		icon = mission_high_income
+		position = 7
+		required_missions = { jxp_mission_ise_pilgrim_roads }
+		trigger = {
+			mission_completed = jxp_mission_iwami_silver
+			mission_completed = jxp_mission_shrine_land_registers
+			mission_completed = jxp_mission_unite_the_isles
+			jxp_has_shrine_castle_town_network_trigger = yes
+			adm_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_kami_castle_towns
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_incident_order = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { jxp_mission_kami_castle_towns }
+		trigger = {
+			mission_completed = jxp_mission_ise_pilgrim_roads
+			mission_completed = jxp_mission_settle_the_realm
+			stability = 2
+			jxp_tenka_order_at_least_50 = yes
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.2 }
+			add_mil_power = 50
+		}
+	}
+
+	jxp_mission_sacred_isles = {
+		icon = mission_japanese_samurai
+		position = 11
+		required_missions = { jxp_mission_incident_order }
+		trigger = {
+			mission_completed = jxp_mission_land_survey_state
+			mission_completed = jxp_mission_tanegashima_firearms
+			owns = 1020
+			owns = 4359
+			religious_unity = 0.9
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_sacred_isles_settlement
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_christian_branch_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		religion_group = christian
+	}
+	has_country_shield = yes
+
+	jxp_mission_port_congregation_registers = {
+		icon = mission_trade_with_japan
+		position = 4
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			religion_group = christian
+			num_of_ports = 5
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.3 }
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_kana_doctrine = {
+		icon = mission_early_modern_university
+		position = 6
+		required_missions = { jxp_mission_port_congregation_registers }
+		trigger = {
+			mission_completed = jxp_mission_kyoto_and_edo
+			mission_completed = jxp_mission_road_to_kyoto
+			OR = {
+				adm_tech = 10
+				has_institution = printing_press
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_translated_doctrine
+				duration = 7300
+			}
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_church_court_compact = {
+		icon = mission_monarch_in_throne_room
+		position = 8
+		required_missions = { jxp_mission_kana_doctrine }
+		trigger = {
+			mission_completed = jxp_mission_iwami_silver
+			mission_completed = jxp_mission_port_congregation_registers
+			mission_completed = jxp_mission_unite_the_isles
+			religious_unity = 0.8
+			stability = 1
+			jxp_imperial_sanction_at_least_30 = yes
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.4 }
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_martyrs_and_merchants = {
+		icon = mission_religious
+		position = 10
+		required_missions = { jxp_mission_church_court_compact }
+		trigger = {
+			mission_completed = jxp_mission_kana_doctrine
+			mission_completed = jxp_mission_osaka_granary
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				religious_unity = 0.85
+				has_country_flag = jxp_shimabara_resolved
+				has_country_modifier = jxp_shimabara_mediation
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_martyrs_and_merchants
+				duration = 10950
+			}
+			add_prestige = 15
+		}
+	}
+
+	jxp_mission_cross_sun_commonwealth = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		required_missions = { jxp_mission_martyrs_and_merchants }
+		trigger = {
+			mission_completed = jxp_mission_land_survey_state
+			mission_completed = jxp_mission_tanegashima_firearms
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 8
+		}
+		effect = {
+			add_dip_power = 75
+			add_country_modifier = {
+				name = jxp_cross_sun_commonwealth
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_confucian_branch_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = CJP
+			has_country_flag = jxp_path_confucian
+		}
+		religion = confucianism
+		has_harmonized_with = shinto
+	}
+	has_country_shield = yes
+
+	jxp_mission_domain_school_exams = {
+		icon = mission_early_modern_university
+		position = 2
+		required_missions = { jxp_mission_capital_cities }
+		trigger = {
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_zhu_xi_lectures
+			mission_completed = jxp_mission_settle_the_realm
+			OR = {
+				religion = confucianism
+				AND = {
+					religion = shinto
+					OR = {
+						tag = EJP
+						has_country_flag = jxp_path_imperial
+					}
+				}
+			}
+			adm_tech = 10
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.5 }
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_ritual_census = {
+		icon = mission_rice_field
+		position = 4
+		required_missions = { jxp_mission_domain_school_exams }
+		trigger = {
+			mission_completed = jxp_mission_domain_schools
+			stability = 1
+			jxp_has_ritual_census_network_trigger = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_ritual_census_state
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_harmonize_kami_rites = {
+		icon = mission_religious
+		position = 6
+		required_missions = { jxp_mission_ritual_census }
+		trigger = {
+			mission_completed = jxp_mission_domain_school_exams
+			mission_completed = jxp_mission_kyoto_rites
+			OR = {
+				has_harmonized_with = shinto
+				AND = {
+					religion = shinto
+					OR = {
+						tag = EJP
+						has_country_flag = jxp_path_imperial
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.6 }
+			add_country_modifier = {
+				name = jxp_kami_harmony_register
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_embassies_of_rite = {
+		icon = mission_to_japan
+		position = 8
+		required_missions = { jxp_mission_harmonize_kami_rites }
+		trigger = {
+			mission_completed = jxp_mission_merit_over_lineage
+			mission_completed = jxp_mission_ritual_census
+			OR = {
+				dip_tech = 12
+				any_known_country = {
+					OR = {
+						capital_scope = { region = korea_region }
+						capital_scope = { region = north_china_region }
+						capital_scope = { region = south_china_region }
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_embassies_of_rite
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_ordered_rite_state = {
+		icon = mission_monarch_in_throne_room
+		position = 10
+		required_missions = { jxp_mission_embassies_of_rite }
+		trigger = {
+			mission_completed = jxp_mission_korean_envoys
+			jxp_tenka_order_at_least_75 = yes
+			jxp_imperial_sanction_at_least_70 = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_ordered_rite_state
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_muslim_branch_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+			religion_group = muslim
+		}
+		NOT = {
+			OR = {
+				tag = KJP
+				tag = RFJ
+				tag = CJP
+				tag = IJP
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_ikko
+			}
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_harbor_mosque_registers = {
+		icon = mission_muslim_administrators
+		position = 3
+		required_missions = { jxp_mission_malay_factory }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			religion_group = muslim
+			num_of_ports = 5
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.7 }
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_qadi_port_courts = {
+		icon = mission_monarch_in_throne_room
+		position = 5
+		required_missions = { jxp_mission_harbor_mosque_registers jxp_mission_halal_port_law }
+		trigger = {
+			stability = 1
+			adm_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_qadi_port_courts_expanded
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_south_sea_brokers = {
+		icon = mission_trade_company_region_abroad
+		position = 7
+		required_missions = { jxp_mission_qadi_port_courts jxp_mission_hajj_fleet }
+		trigger = {
+			mission_completed = jxp_mission_harbor_mosque_registers
+			jxp_oceanic_opening_at_least_50 = yes
+			num_of_ports = 8
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.8 }
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_halal_granary_law = {
+		icon = mission_rice_field
+		position = 9
+		required_missions = { jxp_mission_south_sea_brokers jxp_mission_melaka_interpreters }
+		trigger = {
+			mission_completed = jxp_mission_qadi_port_courts
+			religious_unity = 0.8
+			jxp_has_halal_granary_network_trigger = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_halal_granary_law
+				duration = 10950
+			}
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_south_sea_maritime_law = {
+		icon = mission_establish_high_seas_navy
+		position = 11
+		required_missions = { jxp_mission_halal_granary_law jxp_mission_sultanate_of_wa }
+		trigger = {
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 10
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_sultanate_sea_law
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_popular_branch_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = IJP
+			has_country_flag = jxp_path_ikko
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_monto_rolls = {
+		icon = mission_religious
+		position = 3
+		required_missions = { jxp_mission_terauchi_league }
+		trigger = {
+			mission_completed = jxp_mission_capital_cities
+			mission_completed = jxp_mission_secure_home_domain
+			mission_completed = jxp_mission_settle_the_realm
+			stability = 1
+			num_of_cities = 10
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.9 }
+			add_mil_power = 50
+		}
+	}
+
+	jxp_mission_terauchi_market_charters = {
+		icon = mission_high_income
+		position = 5
+		required_missions = { jxp_mission_monto_rolls jxp_mission_monto_muskets }
+		trigger = {
+			OR = {
+				owns = 1021
+				owns = 1020
+				any_owned_province = {
+					region = japan_region
+					has_province_modifier = jxp_ikko_terauchi_town
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_terauchi_market_charters
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_village_militia_oaths = {
+		icon = mission_japanese_samurai
+		position = 7
+		required_missions = { jxp_mission_terauchi_market_charters jxp_mission_ishiyama_honganji }
+		trigger = {
+			mission_completed = jxp_mission_monto_rolls
+			OR = {
+				mil_tech = 9
+				army_tradition = 25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_monto_militia_oaths
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_kinri_monto_compact = {
+		icon = mission_to_japan
+		position = 9
+		required_missions = { jxp_mission_village_militia_oaths jxp_mission_break_warrior_country }
+		trigger = {
+			mission_completed = jxp_mission_terauchi_market_charters
+			owns = 1020
+			jxp_imperial_sanction_at_least_30 = yes
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.10 }
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_commonwealth_covenant = {
+		icon = mission_monarch_in_throne_room
+		position = 11
+		required_missions = { jxp_mission_kinri_monto_compact jxp_mission_guard_the_kinri }
+		trigger = {
+			religious_unity = 0.85
+			jxp_tenka_order_at_least_50 = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_commonwealth_covenant
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_frontier_diplomacy_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_japanese_polity_trigger = yes
+		OR = {
+			tag = WAK
+			has_country_flag = jxp_path_wokou
+		}
+	}
+	has_country_shield = yes
+
+	jxp_mission_northern_sea_office = {
+		icon = mission_establish_high_seas_navy
+		position = 4
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_massed_volley
+			mission_completed = jxp_mission_modern_state
+			mission_completed = jxp_mission_wokou_admiralty
+			num_of_ports = 5
+			OR = {
+				owns_or_non_sovereign_subject_of = 4193
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					area = hokkaido_area
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_mission_expansion.30 }
+			add_navy_tradition = 5
+		}
+	}
+
+	jxp_mission_matsumae_treaties = {
+		icon = mission_to_japan
+		position = 6
+		required_missions = { jxp_mission_northern_sea_office }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				area = hokkaido_area
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_matsumae_treaties
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_coastal_beacon_chain = {
+		icon = mission_japanese_fort
+		position = 8
+		required_missions = { jxp_mission_matsumae_treaties }
+		trigger = {
+			mission_completed = jxp_mission_northern_sea_office
+			num_of_ports = 8
+			mil_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_coastal_beacon_chain
+				duration = 7300
+			}
+			add_mil_power = 50
+		}
+	}
+
+	jxp_mission_tsushima_interpreters = {
+		icon = mission_trade_with_japan
+		position = 10
+		required_missions = { jxp_mission_coastal_beacon_chain }
+		trigger = {
+			mission_completed = jxp_mission_lords_of_eastern_sea
+			OR = {
+				owns_or_non_sovereign_subject_of = 4651
+				any_known_country = { capital_scope = { region = korea_region } }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					region = korea_region
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_tsushima_interpreters
+				duration = 7300
+			}
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_ryukyu_embassy_records = {
+		icon = mission_asian_trader
+		position = 12
+		required_missions = { jxp_mission_tsushima_interpreters }
+		trigger = {
+			OR = {
+				owns_or_non_sovereign_subject_of = 1015
+				num_of_ports = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_ryukyu_embassy_records
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_east_sea_protocol = {
+		icon = mission_trade_company_region_abroad
+		position = 14
+		required_missions = { jxp_mission_ryukyu_embassy_records }
+		trigger = {
+			mission_completed = jxp_mission_matsumae_treaties
+			num_of_ports = 12
+			dip_tech = 14
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_east_sea_protocol
+				duration = -1
+			}
+		}
+	}
+}

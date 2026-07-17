@@ -1,0 +1,392 @@
+namespace = jxp_route_parity_four
+
+# Each visible council is both a low-frequency natural event and the endpoint
+# of its route's player decision.  Every selected reform owns an independent
+# option with a real era-attribute gain/cost and a finite ten-year result.
+country_event = {
+	id = jxp_route_parity_four.1
+	title = "jxp_route_parity_four.1.t"
+	desc = "jxp_route_parity_four.1.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_75_is_kirishitan_route_trigger = yes
+		jxp_75_has_kirishitan_policy_reform_trigger = yes
+		NOT = { has_country_modifier = jxp_75_route_policy_recent }
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	option = {
+		name = "jxp_route_parity_four.1.a"
+		trigger = {
+			jxp_75_is_kirishitan_route_trigger = yes
+			has_reform = jxp_reform_kirishitan_seminaries
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kirishitan_seminary_visitation
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_oceanic_opening_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.1.b"
+		trigger = {
+			jxp_75_is_kirishitan_route_trigger = yes
+			has_reform = jxp_reform_kirishitan_misericordia_hospitals
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kirishitan_mercy_accounts
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_tenka_order_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.1.c"
+		trigger = {
+			jxp_75_is_kirishitan_route_trigger = yes
+			has_reform = jxp_reform_kirishitan_nagasaki_admiralty
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kirishitan_harbor_chaplains
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_oceanic_opening_at_least_50 = yes } }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_route_parity_four.2
+	title = "jxp_route_parity_four.2.t"
+	desc = "jxp_route_parity_four.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_75_is_confucian_route_trigger = yes
+		jxp_75_has_confucian_policy_reform_trigger = yes
+		NOT = { has_country_modifier = jxp_75_route_policy_recent }
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	option = {
+		name = "jxp_route_parity_four.2.a"
+		trigger = {
+			jxp_75_is_confucian_route_trigger = yes
+			has_reform = jxp_reform_confucian_examination_domains
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_confucian_examination_rosters
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_tenka_order_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.2.b"
+		trigger = {
+			jxp_75_is_confucian_route_trigger = yes
+			has_reform = jxp_reform_confucian_sinicized_codes
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_confucian_code_commission
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_tenka_order_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.2.c"
+		trigger = {
+			jxp_75_is_confucian_route_trigger = yes
+			has_reform = jxp_reform_confucian_three_teachings_board
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_confucian_three_teachings_concordance
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_imperial_sanction_at_least_50 = yes } }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_route_parity_four.3
+	title = "jxp_route_parity_four.3.t"
+	desc = "jxp_route_parity_four.3.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_75_is_reformed_route_trigger = yes
+		jxp_75_has_reformed_policy_reform_trigger = yes
+		NOT = { has_country_modifier = jxp_75_route_policy_recent }
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	option = {
+		name = "jxp_route_parity_four.3.a"
+		trigger = {
+			jxp_75_is_reformed_route_trigger = yes
+			has_reform = jxp_reform_reformed_printing_synods
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_reformed_printing_consistory
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_oceanic_opening_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.3.b"
+		trigger = {
+			jxp_75_is_reformed_route_trigger = yes
+			has_reform = jxp_reform_reformed_civic_compacts
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_reformed_civic_auditors
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_tenka_order_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.3.c"
+		trigger = {
+			jxp_75_is_reformed_route_trigger = yes
+			has_reform = jxp_reform_reformed_contract_fleet
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_reformed_fleet_articles
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_tenka_order_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_oceanic_opening_at_least_50 = yes } }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_route_parity_four.4
+	title = "jxp_route_parity_four.4.t"
+	desc = "jxp_route_parity_four.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_75_is_kaikyo_route_trigger = yes
+		jxp_75_has_kaikyo_policy_reform_trigger = yes
+		NOT = { has_country_modifier = jxp_75_route_policy_recent }
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	option = {
+		name = "jxp_route_parity_four.4.a"
+		trigger = {
+			jxp_75_is_kaikyo_route_trigger = yes
+			has_reform = jxp_reform_kaikyo_monsoon_diwan
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kaikyo_monsoon_accounts
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_oceanic_opening_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.4.b"
+		trigger = {
+			jxp_75_is_kaikyo_route_trigger = yes
+			has_reform = jxp_reform_kaikyo_wakf_granaries
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kaikyo_endowment_granaries
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_imperial_sanction_at_least_50 = yes } }
+		}
+	}
+	option = {
+		name = "jxp_route_parity_four.4.c"
+		trigger = {
+			jxp_75_is_kaikyo_route_trigger = yes
+			has_reform = jxp_reform_kaikyo_spice_guard
+		}
+		add_country_modifier = {
+			name = jxp_75_route_policy_recent
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = jxp_75_kaikyo_convoy_muster
+			duration = 3650
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 NOT = { jxp_tenka_order_at_least_50 = yes } }
+		}
+	}
+}
+
+# Defensive fallback for a route change that bypasses the canonical cleanup
+# path.  The public reset effect still gives route/debug roots an immediate
+# cleanup hook; this hidden event bounds any stale state to roughly one day.
+country_event = {
+	id = jxp_route_parity_four.100
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					has_country_modifier = jxp_75_kirishitan_seminary_visitation
+					has_country_modifier = jxp_75_kirishitan_mercy_accounts
+					has_country_modifier = jxp_75_kirishitan_harbor_chaplains
+				}
+				NOT = { jxp_75_is_kirishitan_route_trigger = yes }
+			}
+			AND = {
+				OR = {
+					has_country_modifier = jxp_75_confucian_examination_rosters
+					has_country_modifier = jxp_75_confucian_code_commission
+					has_country_modifier = jxp_75_confucian_three_teachings_concordance
+				}
+				NOT = { jxp_75_is_confucian_route_trigger = yes }
+			}
+			AND = {
+				OR = {
+					has_country_modifier = jxp_75_reformed_printing_consistory
+					has_country_modifier = jxp_75_reformed_civic_auditors
+					has_country_modifier = jxp_75_reformed_fleet_articles
+				}
+				NOT = { jxp_75_is_reformed_route_trigger = yes }
+			}
+			AND = {
+				OR = {
+					has_country_modifier = jxp_75_kaikyo_monsoon_accounts
+					has_country_modifier = jxp_75_kaikyo_endowment_granaries
+					has_country_modifier = jxp_75_kaikyo_convoy_muster
+				}
+				NOT = { jxp_75_is_kaikyo_route_trigger = yes }
+			}
+			AND = {
+				has_country_modifier = jxp_75_route_policy_recent
+				NOT = {
+					OR = {
+						jxp_75_is_kirishitan_route_trigger = yes
+						jxp_75_is_confucian_route_trigger = yes
+						jxp_75_is_reformed_route_trigger = yes
+						jxp_75_is_kaikyo_route_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_75_reset_route_parity_four_effect = yes
+	}
+
+	option = { name = "OK" }
+}

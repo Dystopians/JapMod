@@ -1,0 +1,49 @@
+jxp_35_legacy_warrior_muster_law = {
+	manpower_recovery_speed = 0.05
+	global_regiment_recruit_speed = 0.05
+}
+
+jxp_35_legacy_warrior_captain_privileges = {
+	land_morale = 0.03
+	army_tradition = 0.25
+}
+
+jxp_35_legacy_court_rank_law = {
+	diplomatic_reputation = 1
+	prestige_decay = -0.005
+}
+
+jxp_35_legacy_court_domain_law = {
+	state_maintenance_modifier = -0.05
+	global_tax_modifier = 0.03
+}
+
+jxp_35_legacy_maritime_port_law = {
+	trade_efficiency = 0.05
+	global_ship_trade_power = 0.05
+}
+
+jxp_35_legacy_maritime_admiral_rolls = {
+	naval_morale = 0.04
+	naval_forcelimit_modifier = 0.05
+}
+
+jxp_35_legacy_frontier_barrier_law = {
+	defensiveness = 0.05
+	global_unrest = -1
+}
+
+jxp_35_legacy_frontier_market_charter = {
+	production_efficiency = 0.03
+	trade_steering = 0.05
+}
+
+jxp_35_legacy_temple_privilege_law = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.03
+}
+
+jxp_35_legacy_temple_accounting_law = {
+	global_tax_modifier = 0.03
+	production_efficiency = 0.03
+}

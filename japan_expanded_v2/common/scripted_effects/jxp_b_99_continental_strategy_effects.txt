@@ -1,0 +1,321 @@
+jxp_b_99_clear_active_theater_effect = {
+	clr_country_flag = jxp_b_99_active_ryukyu
+	clr_country_flag = jxp_b_99_active_korea
+	clr_country_flag = jxp_b_99_active_north
+	clr_country_flag = jxp_b_99_active_taiwan_fujian
+	clr_country_flag = jxp_b_99_active_china
+	clr_country_flag = jxp_b_99_active_southeast_asia
+}
+
+jxp_b_99_clear_campaign_theater_effect = {
+	clr_country_flag = jxp_b_99_campaign_ryukyu
+	clr_country_flag = jxp_b_99_campaign_korea
+	clr_country_flag = jxp_b_99_campaign_north
+	clr_country_flag = jxp_b_99_campaign_taiwan_fujian
+	clr_country_flag = jxp_b_99_campaign_china
+	clr_country_flag = jxp_b_99_campaign_southeast_asia
+	clr_country_flag = jxp_iface_b99_shogunate_mobilization_requested
+	clr_country_flag = jxp_iface_b99_korea_campaign_requested
+	clr_country_flag = jxp_iface_b99_china_campaign_requested
+	clr_country_flag = jxp_b_100_b99_direct_campaign_authorized
+	remove_country_modifier = jxp_b_99_campaign_preparations
+	remove_country_modifier = jxp_b_99_governance_deliberations
+}
+
+jxp_b_99_clear_route_doctrine_modifiers_effect = {
+	remove_country_modifier = jxp_b_99_doctrine_uncommitted
+	remove_country_modifier = jxp_b_99_doctrine_sakoku
+	remove_country_modifier = jxp_b_99_doctrine_open_trade
+	remove_country_modifier = jxp_b_99_doctrine_kirishitan
+	remove_country_modifier = jxp_b_99_doctrine_confucian
+	remove_country_modifier = jxp_b_99_doctrine_imperial
+	remove_country_modifier = jxp_b_99_doctrine_reformed
+	remove_country_modifier = jxp_b_99_doctrine_kaikyo
+	remove_country_modifier = jxp_b_99_doctrine_ikko
+	remove_country_modifier = jxp_b_99_doctrine_wokou
+	remove_country_modifier = jxp_b_99_doctrine_buddhist
+	remove_country_modifier = jxp_b_99_doctrine_toyotomi
+}
+
+jxp_b_99_apply_route_doctrine_effect = {
+	jxp_b_99_clear_route_doctrine_modifiers_effect = yes
+	if = {
+		limit = { tag = TOY }
+		add_country_modifier = { name = jxp_b_99_doctrine_toyotomi duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = WAK has_country_flag = jxp_path_wokou } }
+		add_country_modifier = { name = jxp_b_99_doctrine_wokou duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = IJP has_country_flag = jxp_path_ikko } }
+		add_country_modifier = { name = jxp_b_99_doctrine_ikko duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = SJP has_country_flag = jxp_path_kaikyo } }
+		add_country_modifier = { name = jxp_b_99_doctrine_kaikyo duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = RFJ has_country_flag = jxp_path_reformed } }
+		add_country_modifier = { name = jxp_b_99_doctrine_reformed duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = EJP has_country_flag = jxp_path_imperial } }
+		add_country_modifier = { name = jxp_b_99_doctrine_imperial duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = CJP has_country_flag = jxp_path_confucian } }
+		add_country_modifier = { name = jxp_b_99_doctrine_confucian duration = 3650 }
+	}
+	else_if = {
+		limit = { OR = { tag = KJP has_country_flag = jxp_path_kirishitan } }
+		add_country_modifier = { name = jxp_b_99_doctrine_kirishitan duration = 3650 }
+	}
+	else_if = {
+		limit = { has_country_flag = jxp_path_open_trade }
+		add_country_modifier = { name = jxp_b_99_doctrine_open_trade duration = 3650 }
+	}
+	else_if = {
+		limit = { has_country_flag = jxp_path_sakoku }
+		add_country_modifier = { name = jxp_b_99_doctrine_sakoku duration = 3650 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				religion = mahayana
+				religion = theravada
+				religion = vajrayana
+				religion = jodo_shinshu
+			}
+		}
+		add_country_modifier = { name = jxp_b_99_doctrine_buddhist duration = 3650 }
+	}
+	else = {
+		add_country_modifier = { name = jxp_b_99_doctrine_uncommitted duration = 3650 }
+	}
+}
+
+jxp_b_99_apply_shogunate_mobilization_cost_effect = {
+	if = {
+		limit = { jxp_b_99_shogunate_stage_trigger = yes }
+		jxp_subtract_tenka_order_10_effect = yes
+		add_prestige = -10
+		add_country_modifier = { name = jxp_b_99_shogunate_mobilization_burden duration = 3650 }
+	}
+}
+
+jxp_b_99_pay_trade_mission_effect = {
+	add_dip_power = -75
+	add_treasury = -100
+	add_prestige = -5
+	if = {
+		limit = { jxp_b_99_shogunate_stage_trigger = yes }
+		jxp_subtract_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_b_99_shogunate_mobilization_burden duration = 1825 }
+	}
+	jxp_b_99_apply_route_doctrine_effect = yes
+	country_event = { id = jxp_b_continental_strategy.198 days = 30 }
+}
+
+jxp_b_99_pay_protection_mission_effect = {
+	add_dip_power = -100
+	add_mil_power = -75
+	add_treasury = -250
+	add_prestige = -10
+	jxp_b_99_apply_shogunate_mobilization_cost_effect = yes
+	jxp_b_99_apply_route_doctrine_effect = yes
+	country_event = { id = jxp_b_continental_strategy.198 days = 30 }
+}
+
+jxp_b_99_pay_treaty_port_mission_effect = {
+	add_adm_power = -100
+	add_dip_power = -100
+	add_treasury = -400
+	add_sailors = -500
+	add_prestige = -10
+	jxp_b_99_apply_shogunate_mobilization_cost_effect = yes
+	jxp_b_99_apply_route_doctrine_effect = yes
+	country_event = { id = jxp_b_continental_strategy.198 days = 30 }
+}
+
+jxp_b_99_pay_direct_campaign_effect = {
+	add_adm_power = -150
+	add_mil_power = -150
+	add_treasury = -500
+	add_manpower = -10
+	add_sailors = -1000
+	add_prestige = -15
+	add_war_exhaustion = 1
+	if = {
+		limit = { has_country_flag = jxp_path_sakoku }
+		add_stability = -1
+		jxp_subtract_oceanic_opening_10_effect = yes
+	}
+	jxp_b_99_apply_shogunate_mobilization_cost_effect = yes
+	jxp_b_99_apply_route_doctrine_effect = yes
+}
+
+jxp_b_99_select_ryukyu_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_ryukyu_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_select_korea_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_korea_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_select_northern_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_northern_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_select_taiwan_fujian_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_taiwan_fujian_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_select_china_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_china_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_select_southeast_asia_target_effect = {
+	random_known_country = {
+		limit = { jxp_b_99_southeast_asia_target_trigger = yes }
+		save_event_target_as = jxp_b_99_theater_target
+	}
+}
+
+jxp_b_99_apply_trade_outcome_effect = {
+	add_country_modifier = { name = jxp_b_99_diplomatic_trade_network duration = 5475 }
+	if = { limit = { has_country_flag = jxp_b_99_active_ryukyu } add_country_modifier = { name = jxp_b_99_ryukyu_trade_protocol duration = 5475 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_korea } add_country_modifier = { name = jxp_b_99_korean_envoy_protocol duration = 5475 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_north } add_country_modifier = { name = jxp_b_99_northern_exchange_protocol duration = 5475 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_taiwan_fujian } add_country_modifier = { name = jxp_b_99_fujian_sea_protocol duration = 5475 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_china } add_country_modifier = { name = jxp_b_99_china_ritual_trade_protocol duration = 5475 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_southeast_asia } add_country_modifier = { name = jxp_b_99_south_seas_compact duration = 5475 } }
+	jxp_b_99_clear_active_theater_effect = yes
+}
+
+jxp_b_99_apply_protection_outcome_effect = {
+	add_country_modifier = { name = jxp_b_99_protection_network duration = 7300 }
+	if = { limit = { has_country_flag = jxp_b_99_active_ryukyu } add_country_modifier = { name = jxp_b_99_ryukyu_trade_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_korea } add_country_modifier = { name = jxp_b_99_korean_envoy_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_north } add_country_modifier = { name = jxp_b_99_northern_exchange_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_taiwan_fujian } add_country_modifier = { name = jxp_b_99_fujian_sea_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_china } add_country_modifier = { name = jxp_b_99_china_ritual_trade_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_southeast_asia } add_country_modifier = { name = jxp_b_99_south_seas_compact duration = 7300 } }
+	jxp_b_99_clear_active_theater_effect = yes
+}
+
+jxp_b_99_apply_treaty_port_outcome_effect = {
+	add_country_modifier = { name = jxp_b_99_treaty_port_network duration = 7300 }
+	if = { limit = { has_country_flag = jxp_b_99_active_ryukyu } add_country_modifier = { name = jxp_b_99_ryukyu_trade_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_korea } add_country_modifier = { name = jxp_b_99_korean_envoy_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_north } add_country_modifier = { name = jxp_b_99_northern_exchange_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_taiwan_fujian } add_country_modifier = { name = jxp_b_99_fujian_sea_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_china } add_country_modifier = { name = jxp_b_99_china_ritual_trade_protocol duration = 7300 } }
+	if = { limit = { has_country_flag = jxp_b_99_active_southeast_asia } add_country_modifier = { name = jxp_b_99_south_seas_compact duration = 7300 } }
+	jxp_b_99_clear_active_theater_effect = yes
+}
+
+jxp_b_99_mark_direct_campaign_effect = {
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_ryukyu }
+		set_country_flag = jxp_b_99_campaign_ryukyu
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_ryukyu duration = 3650 } }
+	}
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_korea }
+		set_country_flag = jxp_b_99_campaign_korea
+		set_country_flag = jxp_iface_b99_korea_campaign_requested
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_korea duration = 3650 } }
+	}
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_north }
+		set_country_flag = jxp_b_99_campaign_north
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_north duration = 3650 } }
+	}
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_taiwan_fujian }
+		set_country_flag = jxp_b_99_campaign_taiwan_fujian
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_taiwan_fujian duration = 3650 } }
+	}
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_china }
+		set_country_flag = jxp_b_99_campaign_china
+		set_country_flag = jxp_iface_b99_china_campaign_requested
+		jxp_b_100_accept_b99_china_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_china duration = 3650 } }
+	}
+	if = {
+		limit = { has_country_flag = jxp_b_99_active_southeast_asia }
+		set_country_flag = jxp_b_99_campaign_southeast_asia
+		event_target:jxp_b_99_theater_target = { add_country_modifier = { name = jxp_b_99_alarm_southeast_asia duration = 3650 } }
+	}
+	add_country_modifier = { name = jxp_b_99_campaign_preparations duration = 3650 }
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_country_flag = jxp_b_99_active_korea
+					has_country_flag = jxp_b_99_active_china
+				}
+			}
+		}
+		add_casus_belli = { target = event_target:jxp_b_99_theater_target type = cb_jxp_b_99_continental_campaign months = 120 }
+	}
+	jxp_b_99_clear_active_theater_effect = yes
+	country_event = { id = jxp_b_continental_strategy.199 days = 3650 }
+}
+
+jxp_b_99_apply_military_commission_governance_effect = {
+	every_owned_province = {
+		limit = { jxp_b_99_province_in_pending_theater_trigger = yes }
+		add_local_autonomy = 10
+		add_province_modifier = { name = jxp_b_99_military_commission_province duration = 7300 }
+	}
+	add_country_modifier = { name = jxp_b_99_military_commission_government duration = 7300 }
+	jxp_b_99_clear_campaign_theater_effect = yes
+}
+
+jxp_b_99_apply_local_dynasty_governance_effect = {
+	every_owned_province = {
+		limit = { jxp_b_99_province_in_pending_theater_trigger = yes }
+		add_local_autonomy = 20
+		add_province_modifier = { name = jxp_b_99_local_dynasty_province duration = 7300 }
+	}
+	add_country_modifier = { name = jxp_b_99_local_dynasty_government duration = 7300 }
+	jxp_b_99_clear_campaign_theater_effect = yes
+}
+
+jxp_b_99_apply_tribute_trade_governance_effect = {
+	every_owned_province = {
+		limit = { jxp_b_99_province_in_pending_theater_trigger = yes }
+		add_local_autonomy = 15
+		add_province_modifier = { name = jxp_b_99_tribute_trade_province duration = 7300 }
+	}
+	add_country_modifier = { name = jxp_b_99_tribute_trade_government duration = 7300 }
+	jxp_b_99_clear_campaign_theater_effect = yes
+}
+
+jxp_b_99_apply_direct_governor_governance_effect = {
+	every_owned_province = {
+		limit = { jxp_b_99_province_in_pending_theater_trigger = yes }
+		add_local_autonomy = -10
+		add_province_modifier = { name = jxp_b_99_direct_governor_province duration = 7300 }
+	}
+	add_country_modifier = { name = jxp_b_99_direct_governor_government duration = 7300 }
+	jxp_b_99_clear_campaign_theater_effect = yes
+}

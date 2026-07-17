@@ -1,0 +1,362 @@
+jxp_b_92_accept_authorized_japan_town_effect = {
+	clr_country_flag = jxp_b_92_south_seas_negotiation_pending
+	set_country_flag = jxp_b_92_south_seas_japan_town_established
+	set_country_flag = jxp_b_92_south_seas_model_authorized
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_south_seas_japan_town_network } }
+		add_country_modifier = { name = jxp_b_92_south_seas_japan_town_network duration = -1 }
+	}
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_sync_colonial_stage_effect = yes
+}
+
+jxp_b_92_begin_owned_south_seas_japan_town_effect = {
+	set_country_flag = jxp_b_92_south_seas_japan_town_established
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_south_seas_japan_town_network } }
+		add_country_modifier = { name = jxp_b_92_south_seas_japan_town_network duration = -1 }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				jxp_b_92_southeast_asian_port_province_trigger = yes
+				NOT = { has_province_modifier = jxp_b_92_administered_japan_town_port }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				jxp_b_92_southeast_asian_port_province_trigger = yes
+				NOT = { has_province_modifier = jxp_b_92_administered_japan_town_port }
+			}
+			add_province_modifier = { name = jxp_b_92_administered_japan_town_port duration = -1 }
+		}
+	}
+}
+
+jxp_b_92_begin_pacific_island_compact_effect = {
+	set_country_flag = jxp_b_92_pacific_island_compact_established
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_pacific_island_network } }
+		add_country_modifier = { name = jxp_b_92_pacific_island_network duration = -1 }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				region = oceanea_region
+				has_port = yes
+				is_city = yes
+				NOT = { has_province_modifier = jxp_b_92_island_compact_harbor }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = oceanea_region
+				has_port = yes
+				is_city = yes
+				NOT = { has_province_modifier = jxp_b_92_island_compact_harbor }
+			}
+			add_province_modifier = { name = jxp_b_92_island_compact_harbor duration = -1 }
+		}
+	}
+}
+
+jxp_b_92_begin_north_pacific_exchange_effect = {
+	set_country_flag = jxp_b_92_north_pacific_exchange_established
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_north_pacific_exchange_network } }
+		add_country_modifier = { name = jxp_b_92_north_pacific_exchange_network duration = -1 }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				has_port = yes
+				is_city = yes
+				OR = {
+					area = hokkaido_area
+					area = sakhalin_area
+					area = kamchatka_area
+					colonial_region = colonial_alaska
+				}
+				NOT = { has_province_modifier = jxp_b_92_northern_exchange_port }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_port = yes
+				is_city = yes
+				OR = {
+					area = hokkaido_area
+					area = sakhalin_area
+					area = kamchatka_area
+					colonial_region = colonial_alaska
+				}
+				NOT = { has_province_modifier = jxp_b_92_northern_exchange_port }
+			}
+			add_province_modifier = { name = jxp_b_92_northern_exchange_port duration = -1 }
+		}
+	}
+	else_if = {
+		limit = {
+			any_subject_country = {
+				any_owned_province = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						area = hokkaido_area
+						area = sakhalin_area
+						area = kamchatka_area
+						colonial_region = colonial_alaska
+					}
+					NOT = { has_province_modifier = jxp_b_92_northern_exchange_port }
+				}
+			}
+		}
+		random_subject_country = {
+			limit = {
+				any_owned_province = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						area = hokkaido_area
+						area = sakhalin_area
+						area = kamchatka_area
+						colonial_region = colonial_alaska
+					}
+					NOT = { has_province_modifier = jxp_b_92_northern_exchange_port }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						area = hokkaido_area
+						area = sakhalin_area
+						area = kamchatka_area
+						colonial_region = colonial_alaska
+					}
+					NOT = { has_province_modifier = jxp_b_92_northern_exchange_port }
+				}
+				add_province_modifier = { name = jxp_b_92_northern_exchange_port duration = -1 }
+			}
+		}
+	}
+}
+
+jxp_b_92_begin_normal_west_coast_machiya_effect = {
+	set_country_flag = jxp_b_92_west_coast_machiya_established
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_west_coast_settlement_network } }
+		add_country_modifier = { name = jxp_b_92_west_coast_settlement_network duration = -1 }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				has_port = yes
+				is_city = yes
+				OR = {
+					colonial_region = colonial_california
+					colonial_region = colonial_alaska
+					region = california_region
+					region = cascadia_region
+				}
+				NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_port = yes
+				is_city = yes
+				OR = {
+					colonial_region = colonial_california
+					colonial_region = colonial_alaska
+					region = california_region
+					region = cascadia_region
+				}
+				NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+			}
+			add_province_modifier = { name = jxp_b_92_new_world_machiya_port duration = -1 }
+		}
+	}
+	else_if = {
+		limit = {
+			any_subject_country = {
+				any_owned_province = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						colonial_region = colonial_california
+						colonial_region = colonial_alaska
+						region = california_region
+						region = cascadia_region
+					}
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+			}
+		}
+		random_subject_country = {
+			limit = {
+				any_owned_province = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						colonial_region = colonial_california
+						colonial_region = colonial_alaska
+						region = california_region
+						region = cascadia_region
+					}
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					is_city = yes
+					OR = {
+						colonial_region = colonial_california
+						colonial_region = colonial_alaska
+						region = california_region
+						region = cascadia_region
+					}
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+				add_province_modifier = { name = jxp_b_92_new_world_machiya_port duration = -1 }
+			}
+		}
+	}
+}
+
+jxp_b_92_begin_rnw_machiya_effect = {
+	set_country_flag = jxp_b_92_rnw_machiya_established
+	jxp_b_91_colonial_society_initialize_effect = yes
+	if = {
+		limit = { NOT = { has_country_modifier = jxp_b_92_rnw_settlement_network } }
+		add_country_modifier = { name = jxp_b_92_rnw_settlement_network duration = -1 }
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				continent = new_world
+				has_port = yes
+				is_city = yes
+				NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				continent = new_world
+				has_port = yes
+				is_city = yes
+				NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+			}
+			add_province_modifier = { name = jxp_b_92_new_world_machiya_port duration = -1 }
+		}
+	}
+	else_if = {
+		limit = {
+			any_subject_country = {
+				any_owned_province = {
+					continent = new_world
+					has_port = yes
+					is_city = yes
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+			}
+		}
+		random_subject_country = {
+			limit = {
+				any_owned_province = {
+					continent = new_world
+					has_port = yes
+					is_city = yes
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					continent = new_world
+					has_port = yes
+					is_city = yes
+					NOT = { has_province_modifier = jxp_b_92_new_world_machiya_port }
+				}
+				add_province_modifier = { name = jxp_b_92_new_world_machiya_port duration = -1 }
+			}
+		}
+	}
+}
+
+jxp_b_92_complete_normal_transpacific_arc_effect = {
+	set_country_flag = jxp_b_92_transpacific_settlement_arc_completed
+	add_country_modifier = { name = jxp_b_92_transpacific_settlement_arc duration = -1 }
+}
+
+jxp_b_92_complete_rnw_transpacific_arc_effect = {
+	set_country_flag = jxp_b_92_transpacific_settlement_arc_completed
+	add_country_modifier = { name = jxp_b_92_rnw_transpacific_settlement_arc duration = -1 }
+}
+
+jxp_b_92_regional_colonial_cleanup_effect = {
+	clr_country_flag = jxp_b_92_south_seas_negotiation_pending
+	clr_country_flag = jxp_b_92_south_seas_japan_town_established
+	clr_country_flag = jxp_b_92_pacific_island_compact_established
+	clr_country_flag = jxp_b_92_north_pacific_exchange_established
+	clr_country_flag = jxp_b_92_west_coast_machiya_established
+	clr_country_flag = jxp_b_92_rnw_machiya_established
+	clr_country_flag = jxp_b_92_transpacific_settlement_arc_completed
+	clr_country_flag = jxp_b_92_south_seas_model_authorized
+	clr_country_flag = jxp_b_92_south_seas_model_merchant
+	clr_country_flag = jxp_b_92_south_seas_model_magistrate
+	clr_country_flag = jxp_b_92_south_seas_model_faith
+	clr_country_flag = jxp_b_92_island_model_council
+	clr_country_flag = jxp_b_92_island_model_navigation
+	clr_country_flag = jxp_b_92_island_model_faith
+	clr_country_flag = jxp_b_92_island_model_garrison
+	clr_country_flag = jxp_b_92_north_model_ainu_brokers
+	clr_country_flag = jxp_b_92_north_model_frontier
+	clr_country_flag = jxp_b_92_north_model_free_harbor
+	clr_country_flag = jxp_b_92_north_model_competition
+	clr_country_flag = jxp_b_92_north_model_relief
+	clr_country_flag = jxp_b_92_north_model_state_harbor
+	clr_country_flag = jxp_b_92_west_model_land_compact
+	clr_country_flag = jxp_b_92_west_model_military
+	clr_country_flag = jxp_b_92_west_model_silver
+	clr_country_flag = jxp_b_92_arc_model_convoys
+	clr_country_flag = jxp_b_92_arc_model_delegates
+	remove_country_modifier = jxp_b_92_south_seas_negotiation_rebuffed
+	remove_country_modifier = jxp_b_92_south_seas_japan_town_network
+	remove_country_modifier = jxp_b_92_south_seas_merchant_council
+	remove_country_modifier = jxp_b_92_south_seas_port_magistracy
+	remove_country_modifier = jxp_b_92_south_seas_faith_quarter
+	remove_country_modifier = jxp_b_92_pacific_island_network
+	remove_country_modifier = jxp_b_92_island_council_compact
+	remove_country_modifier = jxp_b_92_island_navigation_houses
+	remove_country_modifier = jxp_b_92_island_faith_houses
+	remove_country_modifier = jxp_b_92_island_naval_garrison
+	remove_country_modifier = jxp_b_92_north_pacific_exchange_network
+	remove_country_modifier = jxp_b_92_ainu_brokerage_compact
+	remove_country_modifier = jxp_b_92_northern_frontier_garrison
+	remove_country_modifier = jxp_b_92_northern_free_harbor
+	remove_country_modifier = jxp_b_92_northern_competition_office
+	remove_country_modifier = jxp_b_92_northern_relief_network
+	remove_country_modifier = jxp_b_92_state_cold_harbors
+	remove_country_modifier = jxp_b_92_west_coast_settlement_network
+	remove_country_modifier = jxp_b_92_rnw_settlement_network
+	remove_country_modifier = jxp_b_92_western_land_compact
+	remove_country_modifier = jxp_b_92_western_military_allotments
+	remove_country_modifier = jxp_b_92_western_silver_current
+	remove_country_modifier = jxp_b_92_transpacific_settlement_arc
+	remove_country_modifier = jxp_b_92_rnw_transpacific_settlement_arc
+	every_owned_province = {
+		remove_province_modifier = jxp_b_92_administered_japan_town_port
+		remove_province_modifier = jxp_b_92_island_compact_harbor
+		remove_province_modifier = jxp_b_92_northern_exchange_port
+		remove_province_modifier = jxp_b_92_new_world_machiya_port
+	}
+}

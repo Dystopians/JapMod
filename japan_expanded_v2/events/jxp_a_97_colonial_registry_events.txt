@@ -1,0 +1,38 @@
+namespace = jxp_a_colonial_registry
+
+# The formation effects do not all set their A-facing flags on the same side of
+# on_change_tag_effect. A one-day hidden retry therefore gives all three
+# registries a deterministic post-formation convergence point.
+country_event = {
+	id = jxp_a_colonial_registry.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			jxp_b_102_needs_startup_migration_trigger = yes
+			has_country_flag = jxp_iface_b_nya_needs_mission_refresh
+			has_country_flag = jxp_iface_b_nya_needs_idea_refresh
+			has_country_flag = jxp_iface_b_nya_needs_government_registry
+			has_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+			has_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+			has_country_flag = jxp_iface_b_secondary_needs_government_registry
+			has_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+			has_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+			has_country_flag = jxp_iface_b_tpf_needs_government_registry
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		# B restores overseas state and raises A-owned refresh handshakes;
+		# consume those handshakes only after the migration transaction.
+		jxp_b_102_overseas_program_startup_migration_effect = yes
+		jxp_a_consume_colonial_registry_interfaces_effect = yes
+	}
+
+	option = { name = "OK" }
+}

@@ -1,0 +1,181 @@
+jxp_b_95_clear_japanese_home_paths_effect = {
+	clr_country_flag = jxp_path_sakoku
+	clr_country_flag = jxp_path_open_trade
+	clr_country_flag = jxp_path_kirishitan
+	clr_country_flag = jxp_path_confucian
+	clr_country_flag = jxp_path_imperial
+	clr_country_flag = jxp_path_reformed
+	clr_country_flag = jxp_path_kaikyo
+	clr_country_flag = jxp_path_ikko
+	clr_country_flag = jxp_path_wokou
+}
+
+jxp_b_95_mark_agent_a_refresh_interfaces_effect = {
+	set_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+	set_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+	set_country_flag = jxp_iface_b_secondary_needs_government_registry
+	custom_tooltip = jxp_b_95_agent_a_refresh_interface_tt
+}
+
+jxp_b_95_clear_secondary_reforms_effect = {
+	if = { limit = { has_reform = jxp_b_95_hkk_company_republic_reform } remove_government_reform = jxp_b_95_hkk_company_republic_reform }
+	if = { limit = { has_reform = jxp_b_95_hkk_frontier_bakufu_reform } remove_government_reform = jxp_b_95_hkk_frontier_bakufu_reform }
+	if = { limit = { has_reform = jxp_b_95_hkk_northern_peoples_assembly_reform } remove_government_reform = jxp_b_95_hkk_northern_peoples_assembly_reform }
+	if = { limit = { has_reform = jxp_b_95_njf_japan_town_league_reform } remove_government_reform = jxp_b_95_njf_japan_town_league_reform }
+	if = { limit = { has_reform = jxp_b_95_njf_red_seal_company_state_reform } remove_government_reform = jxp_b_95_njf_red_seal_company_state_reform }
+	if = { limit = { has_reform = jxp_b_95_njf_southern_military_diaspora_reform } remove_government_reform = jxp_b_95_njf_southern_military_diaspora_reform }
+	if = { limit = { has_reform = jxp_b_95_njf_plural_port_federation_reform } remove_government_reform = jxp_b_95_njf_plural_port_federation_reform }
+	if = { limit = { has_reform = jxp_b_95_oia_island_kingdom_reform } remove_government_reform = jxp_b_95_oia_island_kingdom_reform }
+	if = { limit = { has_reform = jxp_b_95_oia_harbor_assembly_reform } remove_government_reform = jxp_b_95_oia_harbor_assembly_reform }
+	if = { limit = { has_reform = jxp_b_95_oia_oceanic_naval_league_reform } remove_government_reform = jxp_b_95_oia_oceanic_naval_league_reform }
+}
+
+jxp_b_95_prepare_secondary_state_effect = {
+	set_country_flag = jxp_b_95_secondary_state_formed
+	set_country_flag = jxp_iface_colonial_self_rule
+	set_country_flag = jxp_b_colonial_society_active
+	clr_country_flag = jxp_b_colonial_society_retired
+	jxp_b_95_clear_japanese_home_paths_effect = yes
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_subtract_control_10_effect = yes
+	jxp_b_91_sync_colonial_stage_effect = yes
+}
+
+jxp_b_95_form_hkk_effect = {
+	jxp_b_95_prepare_secondary_state_effect = yes
+	change_tag = HKK
+	jxp_refresh_route_missions_effect = yes
+	on_change_tag_effect = yes
+	add_country_modifier = { name = jxp_b_95_hkk_foundation_strain duration = 1825 }
+	jxp_b_95_mark_agent_a_refresh_interfaces_effect = yes
+	country_event = { id = jxp_secondary_colonies.1 days = 1 }
+}
+
+jxp_b_95_form_njf_effect = {
+	jxp_b_95_prepare_secondary_state_effect = yes
+	change_tag = NJF
+	jxp_refresh_route_missions_effect = yes
+	on_change_tag_effect = yes
+	add_country_modifier = { name = jxp_b_95_njf_foundation_strain duration = 1825 }
+	jxp_b_95_mark_agent_a_refresh_interfaces_effect = yes
+	country_event = { id = jxp_secondary_colonies.101 days = 1 }
+}
+
+jxp_b_95_form_oia_effect = {
+	jxp_b_95_prepare_secondary_state_effect = yes
+	change_tag = OIA
+	jxp_refresh_route_missions_effect = yes
+	on_change_tag_effect = yes
+	add_country_modifier = { name = jxp_b_95_oia_foundation_strain duration = 1825 }
+	jxp_b_95_mark_agent_a_refresh_interfaces_effect = yes
+	country_event = { id = jxp_secondary_colonies.201 days = 1 }
+}
+
+jxp_b_95_apply_hkk_company_republic_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_hkk_company_republic_reform
+	override_country_name = HKK_REPUBLIC
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_95_apply_hkk_frontier_bakufu_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = monarchy
+	add_government_reform = jxp_b_95_hkk_frontier_bakufu_reform
+	override_country_name = HKK_SEA_REALM
+	jxp_b_91_add_control_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+}
+
+jxp_b_95_apply_hkk_northern_assembly_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_hkk_northern_peoples_assembly_reform
+	override_country_name = HKK_REPUBLIC
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_95_apply_njf_japan_town_league_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_njf_japan_town_league_reform
+	jxp_b_91_add_compact_5_effect = yes
+}
+
+jxp_b_95_apply_njf_red_seal_company_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_njf_red_seal_company_state_reform
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_95_apply_njf_military_diaspora_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = monarchy
+	add_government_reform = jxp_b_95_njf_southern_military_diaspora_reform
+	jxp_b_91_add_control_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+}
+
+jxp_b_95_apply_njf_plural_port_federation_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_njf_plural_port_federation_reform
+	jxp_b_91_add_compact_10_effect = yes
+	jxp_b_91_subtract_control_5_effect = yes
+}
+
+jxp_b_95_apply_oia_island_kingdom_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = monarchy
+	add_government_reform = jxp_b_95_oia_island_kingdom_reform
+	jxp_b_91_add_control_5_effect = yes
+	jxp_b_91_add_compact_5_effect = yes
+}
+
+jxp_b_95_apply_oia_harbor_assembly_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_oia_harbor_assembly_reform
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_add_compact_5_effect = yes
+}
+
+jxp_b_95_apply_oia_naval_league_effect = {
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	change_government = republic
+	add_government_reform = jxp_b_95_oia_oceanic_naval_league_reform
+	jxp_b_91_add_identity_5_effect = yes
+	jxp_b_91_subtract_compact_5_effect = yes
+}
+
+jxp_b_95_secondary_states_cleanup_effect = {
+	clr_country_flag = jxp_b_95_secondary_state_formed
+	clr_country_flag = jxp_b_95_colonial_origin_hkk
+	clr_country_flag = jxp_b_95_colonial_origin_njf
+	clr_country_flag = jxp_b_95_colonial_origin_oia
+	clr_country_flag = jxp_b_95_hkk_formed
+	clr_country_flag = jxp_b_95_njf_formed
+	clr_country_flag = jxp_b_95_oia_formed
+	clr_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+	clr_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+	clr_country_flag = jxp_iface_b_secondary_needs_government_registry
+	jxp_b_95_clear_secondary_reforms_effect = yes
+	remove_country_modifier = jxp_b_95_hkk_foundation_strain
+	remove_country_modifier = jxp_b_95_njf_foundation_strain
+	remove_country_modifier = jxp_b_95_oia_foundation_strain
+	remove_country_modifier = jxp_b_95_hkk_cold_harbor_network
+	remove_country_modifier = jxp_b_95_hkk_northern_citizenship
+	remove_country_modifier = jxp_b_95_hkk_convoy_season
+	remove_country_modifier = jxp_b_95_njf_port_federation
+	remove_country_modifier = jxp_b_95_njf_interpreter_service
+	remove_country_modifier = jxp_b_95_njf_monsoon_exchange
+	remove_country_modifier = jxp_b_95_oia_wayfinding_houses
+	remove_country_modifier = jxp_b_95_oia_reef_compact
+	remove_country_modifier = jxp_b_95_oia_ocean_defense
+}

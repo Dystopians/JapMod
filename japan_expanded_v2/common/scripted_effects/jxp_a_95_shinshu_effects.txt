@@ -1,0 +1,222 @@
+jxp_a_shinshu_clamp_militancy_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_a_shinshu_militancy value = 0 } } }
+			set_variable = { which = jxp_a_shinshu_militancy value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_a_shinshu_militancy value = 100 } }
+			set_variable = { which = jxp_a_shinshu_militancy value = 100 }
+		}
+	}
+}
+
+jxp_a_shinshu_add_militancy_5_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = 5 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_add_militancy_10_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = 10 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_add_militancy_15_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = 15 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_add_militancy_20_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = 20 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_subtract_militancy_5_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = -5 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_subtract_militancy_10_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = -10 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_subtract_militancy_15_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = -15 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_subtract_militancy_20_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = -20 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+jxp_a_shinshu_subtract_militancy_40_effect = {
+	change_variable = { which = jxp_a_shinshu_militancy value = -40 }
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+
+jxp_a_shinshu_initialize_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_a_shinshu_initialized } }
+		set_country_flag = jxp_a_shinshu_initialized
+		set_variable = { which = jxp_a_shinshu_militancy value = 20 }
+		if = {
+			limit = { has_country_flag = jxp_map_origin_hng }
+			set_variable = { which = jxp_a_shinshu_militancy value = 50 }
+		}
+	}
+	jxp_a_shinshu_clamp_militancy_effect = yes
+}
+
+jxp_a_shinshu_sync_identity_effect = {
+	if = {
+		limit = {
+			OR = {
+				tag = IJP
+				has_country_flag = jxp_path_ikko
+				has_country_flag = jxp_map_origin_hng
+			}
+			NOT = { religion = jodo_shinshu }
+		}
+		change_religion = jodo_shinshu
+	}
+	if = {
+		limit = { religion = jodo_shinshu }
+		set_ruler_religion = jodo_shinshu
+		if = { limit = { has_heir = yes } set_heir_religion = jodo_shinshu }
+		capital_scope = { change_religion = jodo_shinshu }
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1021
+					province_id = 1023
+					has_province_flag = jxp_map_compat_ikko_formable_heartland
+					has_province_modifier = jxp_ikko_terauchi_town
+				}
+			}
+			change_religion = jodo_shinshu
+		}
+	}
+	jxp_a_shinshu_initialize_effect = yes
+}
+
+jxp_a_shinshu_clear_stage_effect = {
+	clr_country_flag = jxp_a_shinshu_stage_1_congregations
+	clr_country_flag = jxp_a_shinshu_stage_2_petitions
+	clr_country_flag = jxp_a_shinshu_stage_3_temple_town
+	clr_country_flag = jxp_a_shinshu_stage_4_armed_oath
+	clr_country_flag = jxp_a_shinshu_stage_5_settlement
+}
+
+jxp_a_shinshu_set_stage_1_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+	set_country_flag = jxp_a_shinshu_stage_1_congregations
+}
+jxp_a_shinshu_set_stage_2_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+	set_country_flag = jxp_a_shinshu_stage_2_petitions
+}
+jxp_a_shinshu_set_stage_3_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+	set_country_flag = jxp_a_shinshu_stage_3_temple_town
+}
+jxp_a_shinshu_set_stage_4_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+	set_country_flag = jxp_a_shinshu_stage_4_armed_oath
+}
+jxp_a_shinshu_set_stage_5_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+}
+
+jxp_a_shinshu_cleanup_crisis_effect = {
+	jxp_a_shinshu_clear_stage_effect = yes
+	clr_country_flag = jxp_ikko_rising_active
+	remove_country_modifier = jxp_a_shinshu_petition_compromise
+	remove_country_modifier = jxp_a_shinshu_temple_town_charter
+	remove_country_modifier = jxp_a_shinshu_armed_oath
+	remove_country_modifier = jxp_ikko_reconciled
+	remove_country_modifier = jxp_ikko_suppressed
+}
+
+jxp_a_ijp_clear_terminal_settlement_effect = {
+	clr_country_flag = jxp_a_ijp_final_hoshu_state
+	clr_country_flag = jxp_a_ijp_final_somon_council
+	clr_country_flag = jxp_a_ijp_final_secular_commonwealth
+	remove_country_modifier = jxp_a_ijp_hoshu_state
+	remove_country_modifier = jxp_a_ijp_somon_council
+	remove_country_modifier = jxp_a_ijp_secular_commonwealth
+}
+
+jxp_a_ijp_choose_hoshu_state_effect = {
+	jxp_a_ijp_clear_terminal_settlement_effect = yes
+	jxp_74_ijp_cleanup_effect = yes
+	set_country_flag = jxp_a_ijp_final_hoshu_state
+	set_variable = { which = jxp_a_shinshu_militancy value = 75 }
+	add_country_modifier = { name = jxp_a_ijp_hoshu_state duration = -1 }
+	jxp_a_shinshu_cleanup_crisis_effect = yes
+	if = { limit = { has_disaster = jxp_ikko_rising } end_disaster = jxp_ikko_rising }
+}
+
+jxp_a_ijp_choose_somon_council_effect = {
+	jxp_a_ijp_clear_terminal_settlement_effect = yes
+	jxp_74_ijp_cleanup_effect = yes
+	set_country_flag = jxp_a_ijp_final_somon_council
+	set_variable = { which = jxp_a_shinshu_militancy value = 50 }
+	add_country_modifier = { name = jxp_a_ijp_somon_council duration = -1 }
+	jxp_a_shinshu_cleanup_crisis_effect = yes
+	if = { limit = { has_disaster = jxp_ikko_rising } end_disaster = jxp_ikko_rising }
+}
+
+jxp_a_ijp_choose_secular_commonwealth_effect = {
+	jxp_a_ijp_clear_terminal_settlement_effect = yes
+	jxp_74_ijp_cleanup_effect = yes
+	set_country_flag = jxp_a_ijp_final_secular_commonwealth
+	set_variable = { which = jxp_a_shinshu_militancy value = 20 }
+	add_country_modifier = { name = jxp_a_ijp_secular_commonwealth duration = -1 }
+	jxp_a_shinshu_cleanup_crisis_effect = yes
+	if = { limit = { has_disaster = jxp_ikko_rising } end_disaster = jxp_ikko_rising }
+}
+
+jxp_a_shinshu_migrate_v029_effect = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_country_flag = jxp_a_shinshu_migration_v029 }
+				NOT = { jxp_a_shinshu_migration_postcondition_trigger = yes }
+			}
+		}
+		clr_country_flag = jxp_a_shinshu_migration_v029
+		if = {
+			limit = { jxp_a_shinshu_country_trigger = yes }
+			if = {
+				limit = { tag = IJP }
+				jxp_74_ijp_enforce_route_exclusivity_effect = yes
+			}
+			jxp_a_shinshu_sync_identity_effect = yes
+			if = {
+				limit = { check_variable = { which = jxp_74_ijp_pressure value = 85 } }
+				set_variable = { which = jxp_a_shinshu_militancy value = 85 }
+			}
+			else_if = {
+				limit = { check_variable = { which = jxp_74_ijp_pressure value = 70 } }
+				set_variable = { which = jxp_a_shinshu_militancy value = 70 }
+			}
+			else_if = {
+				limit = { check_variable = { which = jxp_74_ijp_pressure value = 50 } }
+				set_variable = { which = jxp_a_shinshu_militancy value = 50 }
+			}
+			else_if = {
+				limit = { check_variable = { which = jxp_74_ijp_pressure value = 10 } }
+				set_variable = { which = jxp_a_shinshu_militancy value = 20 }
+			}
+			set_variable = { which = jxp_74_ijp_pressure value = 0 }
+			if = {
+				limit = {
+					OR = {
+						has_disaster = jxp_ikko_rising
+						has_country_flag = jxp_ikko_rising_active
+					}
+				}
+				set_country_flag = jxp_ikko_rising_active
+				jxp_a_shinshu_set_stage_4_effect = yes
+			}
+		}
+		if = {
+			limit = { jxp_a_shinshu_migration_postcondition_trigger = yes }
+			set_country_flag = jxp_a_shinshu_migration_v029
+		}
+	}
+}

@@ -1,0 +1,275 @@
+country_decisions = {
+	jxp_76_decision_open_pacific_network = {
+		major = yes
+		potential = {
+			jxp_76_pacific_network_eligible_trigger = yes
+			jxp_76_pacific_any_anchor_trigger = yes
+			has_any_disaster = no
+			NOT = { has_country_flag = jxp_76_pacific_network_active }
+			NOT = { has_country_modifier = jxp_76_pacific_compact }
+			NOT = { has_country_modifier = jxp_76_pacific_retrenchment }
+		}
+		allow = {
+			dip_power = 75
+			treasury = 150
+			dip_tech = 12
+			num_of_ports = 6
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -150
+			custom_tooltip = jxp_76_pacific_network_scope_tt
+			custom_tooltip = jxp_76_pacific_pressure_starts_10_tt
+			hidden_effect = {
+				jxp_76_pacific_network_start_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_country_flag = jxp_path_open_trade
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_country_flag = jxp_path_wokou
+					has_country_flag = jxp_path_kaikyo
+				}
+			}
+			modifier = {
+				factor = 0
+				is_bankrupt = yes
+			}
+		}
+	}
+
+	jxp_76_decision_fund_manila_nagasaki_convoys = {
+		major = no
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+			jxp_76_pacific_manila_profile_trigger = yes
+			jxp_76_pacific_manila_anchor_trigger = yes
+		}
+		allow = {
+			dip_power = 50
+			treasury = 100
+			NOT = { has_country_modifier = jxp_76_manila_nagasaki_convoys }
+			NOT = { jxp_76_pacific_pressure_at_least_85_trigger = yes }
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -100
+			add_country_modifier = {
+				name = jxp_76_manila_nagasaki_convoys
+				duration = 1825
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			custom_tooltip = jxp_76_pacific_pressure_rises_15_tt
+			hidden_effect = {
+				jxp_76_pacific_add_pressure_15_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_wokou
+				}
+			}
+			modifier = {
+				factor = 0.25
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_76_decision_build_alaska_survey_stations = {
+		major = no
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+			jxp_76_pacific_alaska_profile_trigger = yes
+			jxp_76_pacific_alaska_anchor_trigger = yes
+		}
+		allow = {
+			dip_power = 50
+			navy_tradition = 20
+			NOT = { has_country_modifier = jxp_76_alaska_survey_stations }
+			NOT = { jxp_76_pacific_pressure_at_least_85_trigger = yes }
+		}
+		effect = {
+			add_dip_power = -50
+			add_navy_tradition = -5
+			add_country_modifier = {
+				name = jxp_76_alaska_survey_stations
+				duration = 1825
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+			custom_tooltip = jxp_76_pacific_pressure_rises_10_tt
+			hidden_effect = {
+				jxp_76_pacific_add_pressure_10_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				factor = 2
+				num_of_colonists = 1
+			}
+			modifier = {
+				factor = 0.30
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_76_decision_charter_california_settlements = {
+		major = no
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+			jxp_76_pacific_california_profile_trigger = yes
+			jxp_76_pacific_california_anchor_trigger = yes
+		}
+		allow = {
+			adm_power = 50
+			treasury = 125
+			NOT = { has_country_modifier = jxp_76_california_settlement_compacts }
+			NOT = { jxp_76_pacific_pressure_at_least_85_trigger = yes }
+		}
+		effect = {
+			add_adm_power = -50
+			add_treasury = -125
+			add_country_modifier = {
+				name = jxp_76_california_settlement_compacts
+				duration = 1825
+			}
+			jxp_add_tenka_order_5_effect = yes
+			custom_tooltip = jxp_76_pacific_pressure_rises_20_tt
+			hidden_effect = {
+				jxp_76_pacific_add_pressure_20_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_reformed
+				}
+			}
+			modifier = {
+				factor = 0.20
+				jxp_76_pacific_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	jxp_76_decision_convene_pacific_court_council = {
+		major = no
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+			jxp_76_pacific_court_profile_trigger = yes
+		}
+		allow = {
+			adm_power = 50
+			dip_power = 50
+			jxp_76_pacific_pressure_at_least_10_trigger = yes
+			NOT = { has_country_modifier = jxp_76_pacific_court_council }
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_country_modifier = {
+				name = jxp_76_pacific_court_council
+				duration = 1825
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+			custom_tooltip = jxp_76_pacific_pressure_falls_15_tt
+			hidden_effect = {
+				jxp_76_pacific_subtract_pressure_15_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_76_pacific_pressure_at_least_50_trigger = yes
+			}
+		}
+	}
+
+	jxp_76_decision_proclaim_pacific_compact = {
+		major = yes
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_power = 100
+			dip_power = 100
+			treasury = 250
+			jxp_76_pacific_pressure_at_least_70_trigger = yes
+			OR = {
+				has_country_modifier = jxp_76_manila_nagasaki_convoys
+				has_country_modifier = jxp_76_alaska_survey_stations
+				has_country_modifier = jxp_76_california_settlement_compacts
+				has_country_modifier = jxp_76_pacific_court_council
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_treasury = -250
+			custom_tooltip = jxp_76_pacific_compact_tt
+			hidden_effect = {
+				jxp_76_pacific_compact_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_76_pacific_pressure_at_least_85_trigger = yes
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { treasury = 500 }
+			}
+		}
+	}
+
+	jxp_76_decision_stand_down_pacific_network = {
+		major = yes
+		potential = {
+			jxp_76_pacific_network_active_trigger = yes
+		}
+		allow = {
+			is_at_war = no
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			custom_tooltip = jxp_76_pacific_stand_down_tt
+			hidden_effect = {
+				jxp_76_pacific_stand_down_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.50
+			modifier = {
+				factor = 4
+				jxp_76_pacific_pressure_at_least_85_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 8
+			}
+		}
+	}
+}

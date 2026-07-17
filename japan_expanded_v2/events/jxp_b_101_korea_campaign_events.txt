@@ -1,0 +1,749 @@
+namespace = jxp_korea_campaign
+
+# Readiness and war-end monitors are self-scheduled only for the prepared country.
+country_event = {
+	id = jxp_korea_campaign.940
+	title = "jxp_korea_campaign.940.t"
+	desc = "jxp_korea_campaign.940.d"
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { has_country_flag = jxp_b_101_korea_campaign_active }
+
+	option = {
+		name = "jxp_korea_campaign.940.a"
+		clr_country_flag = jxp_b_101_korea_monitor_scheduled
+		if = {
+			limit = {
+				war_with = KOR
+				NOT = { has_country_flag = jxp_b_101_korea_war_started }
+			}
+			set_country_flag = jxp_b_101_korea_war_started
+			country_event = { id = jxp_korea_campaign.100 days = 1 }
+			country_event = { id = jxp_korea_campaign.101 days = 45 }
+			country_event = { id = jxp_korea_campaign.941 days = 90 }
+		}
+		else_if = {
+			limit = { has_country_flag = jxp_b_101_korea_war_started }
+			country_event = { id = jxp_korea_campaign.941 days = 30 }
+		}
+		else_if = {
+			limit = { NOT = { has_country_modifier = jxp_b_101_korea_expedition_ready } }
+			jxp_b_101_korea_campaign_active_cleanup_effect = yes
+		}
+		else = {
+			set_country_flag = jxp_b_101_korea_monitor_scheduled
+			country_event = { id = jxp_korea_campaign.940 days = 60 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.941
+	title = "jxp_korea_campaign.941.t"
+	desc = "jxp_korea_campaign.941.d"
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { has_country_flag = jxp_b_101_korea_war_started }
+
+	option = {
+		name = "jxp_korea_campaign.941.a"
+		if = {
+			limit = { war_with = KOR }
+			country_event = { id = jxp_korea_campaign.941 days = 90 }
+		}
+		else = { country_event = { id = jxp_korea_campaign.180 days = 1 } }
+	}
+}
+
+# 100: Joseon's answer after war has actually begun.
+country_event = {
+	id = jxp_korea_campaign.100
+	title = "jxp_korea_campaign.100.t"
+	desc = "jxp_korea_campaign.100.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_100_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_100_seen }
+	option = {
+		name = "jxp_korea_campaign.100.a"
+		ai_chance = { factor = 65 }
+		add_dip_power = -50
+		add_country_modifier = { name = jxp_b_101_strict_field_code duration = 1825 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.100.b"
+		ai_chance = { factor = 35 modifier = { factor = 0.25 war_exhaustion = 3 } }
+		add_prestige = 10
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+}
+
+# 101: Busan landing.
+country_event = {
+	id = jxp_korea_campaign.101
+	title = "jxp_korea_campaign.101.t"
+	desc = "jxp_korea_campaign.101.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_101_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_101_seen }
+	option = {
+		name = "jxp_korea_campaign.101.a"
+		trigger = { jxp_b_101_transport_at_least_40_trigger = yes }
+		ai_chance = { factor = 70 }
+		add_treasury = -75
+		add_country_modifier = { name = jxp_b_101_secure_landing duration = 730 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_transport_capacity value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.101.b"
+		ai_chance = { factor = 30 }
+		add_manpower = -5
+		add_war_exhaustion = 1
+		add_country_modifier = { name = jxp_b_101_secure_landing duration = 365 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_transport_capacity value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.102 days = 150 } }
+}
+
+# 102: The grain road stretches north.
+country_event = {
+	id = jxp_korea_campaign.102
+	title = "jxp_korea_campaign.102.t"
+	desc = "jxp_korea_campaign.102.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_102_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_102_seen }
+	option = {
+		name = "jxp_korea_campaign.102.a"
+		trigger = { jxp_b_101_grain_at_least_40_trigger = yes }
+		ai_chance = { factor = 70 }
+		add_treasury = -100
+		add_war_exhaustion = -0.5
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_grain_reserve value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.102.b"
+		ai_chance = { factor = 30 }
+		add_country_modifier = { name = jxp_b_101_stretched_supply duration = 1095 }
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_grain_reserve value = -15 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.103 days = 150 } }
+}
+
+# 103: Local resistance and occupation discipline.
+country_event = {
+	id = jxp_korea_campaign.103
+	title = "jxp_korea_campaign.103.t"
+	desc = "jxp_korea_campaign.103.d"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_103_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_103_seen }
+	option = {
+		name = "jxp_korea_campaign.103.a"
+		ai_chance = { factor = 75 }
+		add_adm_power = -50
+		add_dip_power = -50
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_accommodation duration = 1825 }
+			}
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_korea_campaign.103.b"
+		ai_chance = { factor = 25 modifier = { factor = 0.10 has_country_flag = jxp_iface_house_diplomacy_ready } }
+		set_country_flag = jxp_b_101_korea_atrocity_committed
+		add_stability = -1
+		add_war_exhaustion = 2
+		add_country_modifier = { name = jxp_b_101_atrocity_stain duration = 7300 }
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_reprisals duration = 7300 }
+			}
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.104 days = 150 } }
+}
+
+# 104: Korean naval counterattack.
+country_event = {
+	id = jxp_korea_campaign.104
+	title = "jxp_korea_campaign.104.t"
+	desc = "jxp_korea_campaign.104.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_104_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_104_seen }
+	option = {
+		name = "jxp_korea_campaign.104.a"
+		trigger = { jxp_b_101_sea_control_at_least_40_trigger = yes }
+		ai_chance = { factor = 70 }
+		add_treasury = -100
+		add_sailors = -1000
+		add_navy_tradition = 5
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_sea_control value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.104.b"
+		ai_chance = { factor = 30 }
+		add_navy_tradition = -5
+		add_country_modifier = { name = jxp_b_101_korean_naval_pressure duration = 1095 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_sea_control value = -15 }
+			change_variable = { which = jxp_b_korea_transport_capacity value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.105 days = 150 } }
+}
+
+# 105: Ming or Qing response.
+country_event = {
+	id = jxp_korea_campaign.105
+	title = "jxp_korea_campaign.105.t"
+	desc = "jxp_korea_campaign.105.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_105_seen } }
+	immediate = {
+		set_country_flag = jxp_b_101_korea_event_105_seen
+		if = {
+			limit = { exists = MNG }
+			MNG = {
+				add_country_modifier = { name = jxp_b_101_ming_intervention_force duration = 1825 }
+				add_casus_belli = { target = ROOT type = cb_insult months = 60 }
+			}
+		}
+		else_if = {
+			limit = { exists = QNG }
+			QNG = {
+				add_country_modifier = { name = jxp_b_101_ming_intervention_force duration = 1825 }
+				add_casus_belli = { target = ROOT type = cb_insult months = 60 }
+			}
+		}
+		KOR = { add_country_modifier = { name = jxp_b_101_korean_ming_relief duration = 1825 } }
+	}
+	option = {
+		name = "jxp_korea_campaign.105.a"
+		ai_chance = { factor = 65 modifier = { factor = 1.5 has_country_flag = jxp_iface_house_diplomacy_ready } }
+		add_dip_power = -75
+		add_treasury = -100
+		add_country_modifier = { name = jxp_b_101_ming_warning duration = 1095 }
+	}
+	option = {
+		name = "jxp_korea_campaign.105.b"
+		ai_chance = { factor = 35 }
+		add_mil_power = -75
+		add_war_exhaustion = 1
+		add_country_modifier = { name = jxp_b_101_second_expedition duration = 1095 }
+	}
+	after = { country_event = { id = jxp_korea_campaign.106 days = 150 } }
+}
+
+# 106: Winter in Korea.
+country_event = {
+	id = jxp_korea_campaign.106
+	title = "jxp_korea_campaign.106.t"
+	desc = "jxp_korea_campaign.106.d"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_106_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_106_seen }
+	option = {
+		name = "jxp_korea_campaign.106.a"
+		trigger = { jxp_b_101_grain_at_least_40_trigger = yes }
+		ai_chance = { factor = 70 }
+		add_treasury = -100
+		add_country_modifier = { name = jxp_b_101_winter_quarters duration = 365 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_grain_reserve value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.106.b"
+		ai_chance = { factor = 30 }
+		add_manpower = -5
+		add_war_exhaustion = 1.5
+		add_country_modifier = { name = jxp_b_101_stretched_supply duration = 730 }
+	}
+	after = { country_event = { id = jxp_korea_campaign.107 days = 150 } }
+}
+
+# 107: Disease in the camps.
+country_event = {
+	id = jxp_korea_campaign.107
+	title = "jxp_korea_campaign.107.t"
+	desc = "jxp_korea_campaign.107.d"
+	picture = PLAGUE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_107_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_107_seen }
+	option = {
+		name = "jxp_korea_campaign.107.a"
+		ai_chance = { factor = 70 }
+		add_adm_power = -75
+		add_treasury = -75
+		add_country_modifier = { name = jxp_b_101_epidemic_camps duration = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.107.b"
+		ai_chance = { factor = 30 }
+		add_manpower = -8
+		add_war_exhaustion = 1
+		add_country_modifier = { name = jxp_b_101_epidemic_camps duration = 1095 }
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_resistance duration = 1825 }
+			}
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.108 days = 150 } }
+}
+
+# 108: Rivalry among daimyo contingents.
+country_event = {
+	id = jxp_korea_campaign.108
+	title = "jxp_korea_campaign.108.t"
+	desc = "jxp_korea_campaign.108.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_108_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_108_seen }
+	option = {
+		name = "jxp_korea_campaign.108.a"
+		trigger = { jxp_b_101_compliance_at_least_40_trigger = yes }
+		ai_chance = { factor = 70 }
+		add_mil_power = -50
+		add_prestige = -10
+		add_country_modifier = { name = jxp_b_101_strict_field_code duration = 1095 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.108.b"
+		ai_chance = { factor = 30 }
+		add_country_modifier = { name = jxp_b_101_daimyo_rivalry duration = 1095 }
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = -15 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.109 days = 150 } }
+}
+
+# 109: Discipline or atrocity.
+country_event = {
+	id = jxp_korea_campaign.109
+	title = "jxp_korea_campaign.109.t"
+	desc = "jxp_korea_campaign.109.d"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_109_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_109_seen }
+	option = {
+		name = "jxp_korea_campaign.109.a"
+		ai_chance = { factor = 80 }
+		add_mil_power = -75
+		add_prestige = -5
+		add_country_modifier = { name = jxp_b_101_strict_field_code duration = 1825 }
+	}
+	option = {
+		name = "jxp_korea_campaign.109.b"
+		ai_chance = { factor = 20 modifier = { factor = 0.05 has_country_flag = jxp_iface_house_religious_ready } }
+		set_country_flag = jxp_b_101_korea_atrocity_committed
+		add_treasury = 100
+		add_stability = -1
+		add_prestige = -15
+		add_war_exhaustion = 2
+		add_country_modifier = { name = jxp_b_101_atrocity_stain duration = 7300 }
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_reprisals duration = 7300 }
+			}
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.110 days = 150 } }
+}
+
+# 110: Artisans and captives.
+country_event = {
+	id = jxp_korea_campaign.110
+	title = "jxp_korea_campaign.110.t"
+	desc = "jxp_korea_campaign.110.d"
+	picture = CULTURE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_110_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_110_seen }
+	option = {
+		name = "jxp_korea_campaign.110.a"
+		ai_chance = { factor = 70 }
+		add_treasury = -100
+		add_dip_power = -50
+		add_prestige = 10
+		add_war_exhaustion = -0.5
+	}
+	option = {
+		name = "jxp_korea_campaign.110.b"
+		ai_chance = { factor = 30 }
+		add_adm_power = 50
+		add_prestige = -10
+		add_country_modifier = { name = jxp_b_101_captive_artisans_stain duration = 3650 }
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_resistance duration = 3650 }
+			}
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.111 days = 150 } }
+}
+
+# 111: Negotiation through the envoys.
+country_event = {
+	id = jxp_korea_campaign.111
+	title = "jxp_korea_campaign.111.t"
+	desc = "jxp_korea_campaign.111.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_111_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_111_seen }
+	option = {
+		name = "jxp_korea_campaign.111.a"
+		ai_chance = { factor = 70 modifier = { factor = 2 war_exhaustion = 5 } }
+		add_dip_power = -75
+		add_prestige = -5
+		add_war_exhaustion = -1
+		add_country_modifier = { name = jxp_b_101_peace_feelers duration = 730 }
+	}
+	option = {
+		name = "jxp_korea_campaign.111.b"
+		ai_chance = { factor = 30 modifier = { factor = 0.25 war_exhaustion = 5 } }
+		add_prestige = 10
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.112 days = 150 } }
+}
+
+# 112: A second expedition.
+country_event = {
+	id = jxp_korea_campaign.112
+	title = "jxp_korea_campaign.112.t"
+	desc = "jxp_korea_campaign.112.d"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_112_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_112_seen }
+	option = {
+		name = "jxp_korea_campaign.112.a"
+		ai_chance = { factor = 55 modifier = { factor = 0.25 war_exhaustion = 5 } }
+		add_manpower = -10
+		add_treasury = -150
+		add_country_modifier = { name = jxp_b_101_second_expedition duration = 1095 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+			change_variable = { which = jxp_b_korea_transport_capacity value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.112.b"
+		ai_chance = { factor = 45 modifier = { factor = 2 war_exhaustion = 5 } }
+		add_war_exhaustion = -0.5
+		add_country_modifier = { name = jxp_b_101_winter_quarters duration = 730 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.113 days = 150 } }
+}
+
+# 113: Domestic finance.
+country_event = {
+	id = jxp_korea_campaign.113
+	title = "jxp_korea_campaign.113.t"
+	desc = "jxp_korea_campaign.113.d"
+	picture = BANKRUPTCY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_113_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_113_seen }
+	option = {
+		name = "jxp_korea_campaign.113.a"
+		ai_chance = { factor = 60 }
+		add_treasury = 150
+		add_stability = -1
+		add_country_modifier = { name = jxp_b_101_home_finance_strain duration = 1825 }
+	}
+	option = {
+		name = "jxp_korea_campaign.113.b"
+		ai_chance = { factor = 40 modifier = { factor = 0.25 num_of_loans = 3 } }
+		add_treasury = 200
+		add_inflation = 2
+		add_country_modifier = { name = jxp_b_101_home_finance_strain duration = 1095 }
+	}
+	after = { country_event = { id = jxp_korea_campaign.114 days = 150 } }
+}
+
+# 114: Death of an old ruler, or of the expedition commander for a younger court.
+country_event = {
+	id = jxp_korea_campaign.114
+	title = "jxp_korea_campaign.114.t"
+	desc = "jxp_korea_campaign.114.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_114_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_114_seen }
+	option = {
+		name = "jxp_korea_campaign.114.a"
+		trigger = { ruler_age = 60 }
+		ai_chance = { factor = 100 }
+		set_country_flag = jxp_b_101_korea_old_ruler_died
+		kill_ruler = yes
+		add_stability = -1
+		add_country_modifier = { name = jxp_b_101_succession_shock duration = 3650 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = -15 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.114.b"
+		trigger = { NOT = { ruler_age = 60 } }
+		ai_chance = { factor = 100 }
+		add_army_tradition = -10
+		add_country_modifier = { name = jxp_b_101_succession_shock duration = 1825 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.115 days = 150 } }
+}
+
+# 115: Debate over withdrawal.
+country_event = {
+	id = jxp_korea_campaign.115
+	title = "jxp_korea_campaign.115.t"
+	desc = "jxp_korea_campaign.115.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_115_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_115_seen }
+	option = {
+		name = "jxp_korea_campaign.115.a"
+		ai_chance = { factor = 65 modifier = { factor = 2 war_exhaustion = 5 } modifier = { factor = 2 has_country_flag = jxp_b_101_korea_old_ruler_died } }
+		set_country_flag = jxp_b_101_korea_withdrawal_preferred
+		add_prestige = -10
+		add_war_exhaustion = -1
+		add_country_modifier = { name = jxp_b_101_orderly_withdrawal_plan duration = 1825 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.115.b"
+		ai_chance = { factor = 35 modifier = { factor = 0.25 war_exhaustion = 5 } }
+		add_treasury = -100
+		add_manpower = -5
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.116 days = 150 } }
+}
+
+# 116: Long occupation.
+country_event = {
+	id = jxp_korea_campaign.116
+	title = "jxp_korea_campaign.116.t"
+	desc = "jxp_korea_campaign.116.d"
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_116_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_116_seen }
+	option = {
+		name = "jxp_korea_campaign.116.a"
+		ai_chance = { factor = 35 modifier = { factor = 0.25 has_country_flag = jxp_iface_house_diplomacy_ready } }
+		add_country_modifier = { name = jxp_b_101_long_occupation_burden duration = 1825 }
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_resistance duration = 3650 }
+			}
+		}
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.116.b"
+		ai_chance = { factor = 65 }
+		add_adm_power = -75
+		add_dip_power = -50
+		KOR = {
+			every_owned_province = {
+				limit = { controlled_by = ROOT }
+				add_province_modifier = { name = jxp_b_101_korean_accommodation duration = 3650 }
+			}
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.117 days = 150 } }
+}
+
+# 117: Final strain on the strait convoy.
+country_event = {
+	id = jxp_korea_campaign.117
+	title = "jxp_korea_campaign.117.t"
+	desc = "jxp_korea_campaign.117.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_117_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_117_seen }
+	option = {
+		name = "jxp_korea_campaign.117.a"
+		ai_chance = { factor = 55 modifier = { factor = 0.25 num_of_loans = 3 } }
+		add_treasury = -100
+		add_sailors = -1000
+		remove_country_modifier = jxp_b_101_korean_naval_pressure
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_sea_control value = 10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.117.b"
+		ai_chance = { factor = 45 modifier = { factor = 2 war_exhaustion = 5 } }
+		set_country_flag = jxp_b_101_korea_withdrawal_preferred
+		add_war_exhaustion = -1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_transport_capacity value = -10 }
+			change_variable = { which = jxp_b_korea_sea_control value = -10 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+}
+
+# Six postwar settlements. None transfers provinces, creates cores, or grants claims.
+country_event = {
+	id = jxp_korea_campaign.180
+	title = "jxp_korea_campaign.180.t"
+	desc = "jxp_korea_campaign.180.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = jxp_b_101_korea_war_started
+		NOT = { war_with = KOR }
+	}
+
+	option = {
+		name = "jxp_korea_campaign.180.a"
+		trigger = {
+			exists = KOR
+			NOT = { jxp_b_101_korea_is_subject_trigger = yes }
+			NOT = { jxp_b_101_owns_korean_province_trigger = yes }
+		}
+		ai_chance = { factor = 100 modifier = { factor = 2 has_country_flag = jxp_iface_house_diplomacy_ready } }
+		custom_tooltip = jxp_b_101_korea_trade_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_trade_effect = yes }
+	}
+	option = {
+		name = "jxp_korea_campaign.180.b"
+		trigger = {
+			OR = {
+				jxp_b_101_owns_southern_korean_foothold_trigger = yes
+				jxp_b_101_korea_is_subject_trigger = yes
+			}
+		}
+		ai_chance = { factor = 60 modifier = { factor = 0.5 war_exhaustion = 5 } }
+		custom_tooltip = jxp_b_101_korea_southern_protectorate_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_southern_protectorate_effect = yes }
+	}
+	option = {
+		name = "jxp_korea_campaign.180.c"
+		trigger = { jxp_b_101_korea_is_subject_trigger = yes }
+		ai_chance = { factor = 80 modifier = { factor = 0.5 war_exhaustion = 5 } }
+		custom_tooltip = jxp_b_101_korea_puppet_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_puppet_effect = yes }
+	}
+	option = {
+		name = "jxp_korea_campaign.180.direct_rule"
+		trigger = { jxp_b_101_owns_direct_rule_base_trigger = yes }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 0.25 war_exhaustion = 5 }
+			modifier = { factor = 0.25 has_country_flag = jxp_b_101_korea_atrocity_committed }
+		}
+		custom_tooltip = jxp_b_101_korea_direct_rule_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_direct_rule_effect = yes }
+	}
+	option = {
+		name = "jxp_korea_campaign.180.e"
+		trigger = { NOT = { jxp_b_101_owns_direct_rule_base_trigger = yes } }
+		ai_chance = {
+			factor = 70
+			modifier = { factor = 2 war_exhaustion = 5 }
+			modifier = { factor = 2 has_country_flag = jxp_b_101_korea_withdrawal_preferred }
+		}
+		custom_tooltip = jxp_b_101_korea_strategic_retreat_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_strategic_retreat_effect = yes }
+	}
+	option = {
+		name = "jxp_korea_campaign.180.f"
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 10 war_exhaustion = 10 }
+			modifier = { factor = 10 num_of_loans = 5 }
+			modifier = { factor = 5 NOT = { stability = 0 } }
+		}
+		custom_tooltip = jxp_b_101_korea_disaster_outcome_tt
+		hidden_effect = { jxp_b_101_korea_outcome_disaster_effect = yes }
+	}
+}

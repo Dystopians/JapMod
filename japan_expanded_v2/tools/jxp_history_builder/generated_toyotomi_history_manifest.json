@@ -1,0 +1,461 @@
+{
+  "country_history_overrides": [
+    "ODA",
+    "TOY"
+  ],
+  "diplomacy_override": "history/diplomacy/Japanese_alliances.txt",
+  "game_version": "1.37.5.0",
+  "gameplay_name_encoding": "EU4SpecialEscape-CP1252-no-BOM",
+  "gameplay_name_outputs": [
+    "history/countries/ODA - Oda.txt",
+    "history/countries/TOY - Toyotomi.txt",
+    "common/countries/TOY - Toyotomi.txt"
+  ],
+  "imjin_jeju_policy": "KOR owner/controller; no Namwon occupation",
+  "imjin_occupation_interval_count": 19,
+  "imjin_province_override_count": 18,
+  "imjin_province_overrides": [
+    {
+      "file": "732 - South Hamgyeong.txt",
+      "id": 732,
+      "intervals": [
+        [
+          "1592.7.18",
+          "1593.2.22"
+        ]
+      ]
+    },
+    {
+      "file": "733 - Hwangju.txt",
+      "id": 733,
+      "intervals": [
+        [
+          "1592.6.9",
+          "1593.2.15"
+        ]
+      ]
+    },
+    {
+      "file": "735 - Hanseong.txt",
+      "id": 735,
+      "intervals": [
+        [
+          "1592.6.11",
+          "1593.5.20"
+        ]
+      ]
+    },
+    {
+      "file": "736 - Sangju.txt",
+      "id": 736,
+      "intervals": [
+        [
+          "1592.5.26",
+          "1598.12.24"
+        ]
+      ]
+    },
+    {
+      "file": "737 - Jeonju.txt",
+      "id": 737,
+      "intervals": [
+        [
+          "1597.9.26",
+          "1597.11.1"
+        ]
+      ]
+    },
+    {
+      "file": "1013 - Cheongju.txt",
+      "id": 1013,
+      "intervals": [
+        [
+          "1592.6.6",
+          "1593.6.10"
+        ],
+        [
+          "1597.9.30",
+          "1597.11.1"
+        ]
+      ]
+    },
+    {
+      "file": "1845 - South Pyongan.txt",
+      "id": 1845,
+      "intervals": [
+        [
+          "1592.7.19",
+          "1593.2.8"
+        ]
+      ]
+    },
+    {
+      "file": "2741 - Jeju.txt",
+      "id": 2741,
+      "intervals": []
+    },
+    {
+      "file": "2742 - Yukjin.txt",
+      "id": 2742,
+      "intervals": [
+        [
+          "1592.7.18",
+          "1593.2.22"
+        ]
+      ]
+    },
+    {
+      "file": "2743 - North Hamgyeong.txt",
+      "id": 2743,
+      "intervals": [
+        [
+          "1592.7.18",
+          "1593.2.22"
+        ]
+      ]
+    },
+    {
+      "file": "2744 - Nyeongbyeon.txt",
+      "id": 2744,
+      "intervals": [
+        [
+          "1592.7.19",
+          "1593.2.8"
+        ]
+      ]
+    },
+    {
+      "file": "2745 - Gyengju.txt",
+      "id": 2745,
+      "intervals": [
+        [
+          "1592.5.25",
+          "1598.12.24"
+        ]
+      ]
+    },
+    {
+      "file": "4227 - Daegu.txt",
+      "id": 4227,
+      "intervals": [
+        [
+          "1592.5.26",
+          "1598.12.24"
+        ]
+      ]
+    },
+    {
+      "file": "4228 - Naju.txt",
+      "id": 4228,
+      "intervals": [
+        [
+          "1597.9.26",
+          "1597.11.1"
+        ]
+      ]
+    },
+    {
+      "file": "4229 - Chungju.txt",
+      "id": 4229,
+      "intervals": [
+        [
+          "1592.6.6",
+          "1593.6.10"
+        ],
+        [
+          "1597.9.30",
+          "1597.11.1"
+        ]
+      ]
+    },
+    {
+      "file": "4230 - Suwon.txt",
+      "id": 4230,
+      "intervals": [
+        [
+          "1592.6.11",
+          "1593.5.20"
+        ]
+      ]
+    },
+    {
+      "file": "4231 - Haeju.txt",
+      "id": 4231,
+      "intervals": [
+        [
+          "1592.6.9",
+          "1593.2.15"
+        ]
+      ]
+    },
+    {
+      "file": "4232 - Ganggye.txt",
+      "id": 4232,
+      "intervals": [
+        [
+          "1592.7.19",
+          "1593.2.8"
+        ]
+      ]
+    }
+  ],
+  "oda_intervals_split": 23,
+  "osaka_fall": "1615.6.4",
+  "pinned_vanilla_source_count": 41,
+  "pinned_vanilla_sources": [
+    {
+      "path": "history/diplomacy/Japanese_alliances.txt",
+      "sha256": "7d4e14b368b0c382bb8b0f42f5ed2f92d5bcf027a0eeb4590162af60b540d3d7"
+    },
+    {
+      "path": "history/provinces/1013 - Cheongju.txt",
+      "sha256": "22d1cafc7e94fe196444247bff56d2b196cfe4779d50ae955085be1aeb28810f"
+    },
+    {
+      "path": "history/provinces/1019 - Harima.txt",
+      "sha256": "17e74219d556224947496ea234d25e494f8182f5fa43513508164cba9992017d"
+    },
+    {
+      "path": "history/provinces/1020 - Yamashiro.txt",
+      "sha256": "6f845914812d31e4cd9ff4023f2aac8dda0940fea1c24df8f040ed6d198b78f8"
+    },
+    {
+      "path": "history/provinces/1021 - Settsu.txt",
+      "sha256": "e1c0d9b51a24e82804e9b4ef9af85c4ec169c84da2b38cdfcc5e91033a7e6c45"
+    },
+    {
+      "path": "history/provinces/1023 - Echizen.txt",
+      "sha256": "dcab4fe416131306fbb17a2c8d85fc245711eccd5a4e7be646d8880e119004d5"
+    },
+    {
+      "path": "history/provinces/1024 - Echigo.txt",
+      "sha256": "fff18a3f8ea9870cdaf4e2c9d5de3f3b9c6f527840cb8c5297fd7431fd32cff4"
+    },
+    {
+      "path": "history/provinces/1029 - Kai.txt",
+      "sha256": "acdf53a209038fb273b778227a3901cf65d87c10a970669e80bd5cdc02fe7499"
+    },
+    {
+      "path": "history/provinces/1030 - Owari.txt",
+      "sha256": "fd289a390b5bd2b67bb78c13f7a62d5abfa958241d0bf56173423451c6c08ddd"
+    },
+    {
+      "path": "history/provinces/1820 - Awa.txt",
+      "sha256": "29392a5f35e931e83e8859382d9e242b5142879793e761c9c9172a4f2e60adc5"
+    },
+    {
+      "path": "history/provinces/1830 - Tajima.txt",
+      "sha256": "e65df4b0f0ec693209820dced9d647efaf01883fcef7ac03aa28913cac273e34"
+    },
+    {
+      "path": "history/provinces/1832 - Yamato.txt",
+      "sha256": "5874bcab760faa58ecc4b47d0b4d2ecaa4a891a839468a340e64afec0eed06f0"
+    },
+    {
+      "path": "history/provinces/1835 - Mino.txt",
+      "sha256": "a6f259e89d2721425c5e9f0ff467f2583504a142c0824066f50d48ec7691cd2d"
+    },
+    {
+      "path": "history/provinces/1839 - Suruga.txt",
+      "sha256": "234ef6c70b22a0896345d4d33400e72635b3a560bd1db5d4cde3806d3d094cbf"
+    },
+    {
+      "path": "history/provinces/1845 - South Pyongan.txt",
+      "sha256": "b279c3dc2aa062ae2b13d12f99ae1bd32cdcc894b470beb1b06dc9e9cef85161"
+    },
+    {
+      "path": "history/provinces/2741 - Jeju.txt",
+      "sha256": "7d6d6c622afd91ecc45b3a7b79390efc4b610e6655518b088ae58b01c2318e66"
+    },
+    {
+      "path": "history/provinces/2742 - Yukjin.txt",
+      "sha256": "331a47b74c32ae3a23694b8077b9c6c96f76e3c9761d2daf9f28b995212273a3"
+    },
+    {
+      "path": "history/provinces/2743 - North Hamgyeong.txt",
+      "sha256": "ef0f06b833ca21ed16dcb69547a463d1161e3cf4376f85b6c89eaee74fe90123"
+    },
+    {
+      "path": "history/provinces/2744 - Nyeongbyeon.txt",
+      "sha256": "79c259fc6cb9f4b70cdce1a6fd3bf32efde1ee78994c179f9da9dacd202508ff"
+    },
+    {
+      "path": "history/provinces/2745 - Gyengju.txt",
+      "sha256": "a7a80e20e8ae0d2369a00f1c235f1b449e296f57712245f9ec9eaa6e45896ea3"
+    },
+    {
+      "path": "history/provinces/4181 - Higo.txt",
+      "sha256": "4bba427730abff21266b3524f1e0e0d2b9c6b84998528ae719ec4443d4d6f5a9"
+    },
+    {
+      "path": "history/provinces/4184 - Bizen.txt",
+      "sha256": "9634359c0fb515f6f6103b0d6bff976f5d0e79e0f0cb29e5d73d2d17942e0f22"
+    },
+    {
+      "path": "history/provinces/4187 - Kii.txt",
+      "sha256": "6e94c072040eca971080a6badc0037dc9e79f0b2cb8cdf58068b82707b9ad418"
+    },
+    {
+      "path": "history/provinces/4188 - Shinano.txt",
+      "sha256": "9d75b8c0116c2d553ec5ac8615c778e4d30cd85bd7122a6daa10bc0a0e6e9e2f"
+    },
+    {
+      "path": "history/provinces/4193 - Oshima.txt",
+      "sha256": "fe6d9f0b955b6e00a31e1bf26e4c1b970224a7a9ee2420e71278d01c321e968a"
+    },
+    {
+      "path": "history/provinces/4227 - Daegu.txt",
+      "sha256": "cac5196c5d57463c940dc7a851e90579c95724d60cbdddc8cd3655959bc9d467"
+    },
+    {
+      "path": "history/provinces/4228 - Naju.txt",
+      "sha256": "fc4fb1822d2115331d81579ca9e16811ac6b70f440ee9b2a0d670e610f677622"
+    },
+    {
+      "path": "history/provinces/4229 - Chungju.txt",
+      "sha256": "71ad369c11347b09f4db72c53c6ca1aadc6cc96d98e8c5953f5b6dbf5b65c6b2"
+    },
+    {
+      "path": "history/provinces/4230 - Suwon.txt",
+      "sha256": "e8df869b29a2032396995ac8accf96e3800cd281559f10a2b573d7f7e70a35ba"
+    },
+    {
+      "path": "history/provinces/4231 - Haeju.txt",
+      "sha256": "49414f0dbea8f28b0897d561ac7876755345b6df8b0d08ce09f777441557fca2"
+    },
+    {
+      "path": "history/provinces/4232 - Ganggye.txt",
+      "sha256": "b08eb6b5ed5515a1f32b9658122bce33fb610afbc6da7907ec48b7b9b13567ee"
+    },
+    {
+      "path": "history/provinces/4359 - Ise.txt",
+      "sha256": "d19a91042ebb240e4b7723129aa0a3ed6f85d4e5a9af53a8400f2d39d1266fa5"
+    },
+    {
+      "path": "history/provinces/732 - South Hamgyeong.txt",
+      "sha256": "07df24b9e37f6ef71c82ab87ff74d54e857e92a647cc506ec8c4ebef1ee76385"
+    },
+    {
+      "path": "history/provinces/733 - Hwangju.txt",
+      "sha256": "0a0399a2ef49ddcf0a7f677df4ed7be2c283ad5a1d485c6fe4ebef6570cb4b56"
+    },
+    {
+      "path": "history/provinces/735 - Hanseong.txt",
+      "sha256": "bdf43d859113691ee3ac73ca278159438d47902e9ca6a7b2f6142dd83f1cf5ce"
+    },
+    {
+      "path": "history/provinces/736 - Sangju.txt",
+      "sha256": "38df20d6bbe23046229d5793e6e78ccd4c5a5e0575a1e9031efa0d971b56f774"
+    },
+    {
+      "path": "history/provinces/737 - Jeonju.txt",
+      "sha256": "f1a83fe8b974d57e929d9ac3613061f8aec1fc55ab92daf39a74e33f3ff1fccd"
+    },
+    {
+      "path": "history/wars/KoreanSevenYearsWar.txt",
+      "sha256": "82a95a2810819475d6b3024038dce1b6c60d0be22669080ec4e4f6fe32eb2c4e"
+    },
+    {
+      "path": "history/wars/SekigaharaCampaign.txt",
+      "sha256": "486fbce11224fe4ad35a79d95fdfc3fa24ce0791558ec5880f7b9b64d0fc2fe8"
+    },
+    {
+      "path": "history/wars/SubjugationOfKanto.txt",
+      "sha256": "51bcd894322f78943154d70a89f61453b1026add8945327008e70d693eb1600a"
+    },
+    {
+      "path": "history/wars/SubjugationOfKyushu.txt",
+      "sha256": "7c2ba7426c9a7227a2cf12d762b9f899022c6a2520fab3269343c743356a7de2"
+    }
+  ],
+  "province_override_count": 18,
+  "province_overrides": [
+    {
+      "file": "1019 - Harima.txt",
+      "id": 1019
+    },
+    {
+      "file": "1020 - Yamashiro.txt",
+      "id": 1020
+    },
+    {
+      "file": "1021 - Settsu.txt",
+      "id": 1021
+    },
+    {
+      "file": "1023 - Echizen.txt",
+      "id": 1023
+    },
+    {
+      "file": "1024 - Echigo.txt",
+      "id": 1024
+    },
+    {
+      "file": "1029 - Kai.txt",
+      "id": 1029
+    },
+    {
+      "file": "1030 - Owari.txt",
+      "id": 1030
+    },
+    {
+      "file": "1820 - Awa.txt",
+      "id": 1820
+    },
+    {
+      "file": "1830 - Tajima.txt",
+      "id": 1830
+    },
+    {
+      "file": "1832 - Yamato.txt",
+      "id": 1832
+    },
+    {
+      "file": "1835 - Mino.txt",
+      "id": 1835
+    },
+    {
+      "file": "1839 - Suruga.txt",
+      "id": 1839
+    },
+    {
+      "file": "4181 - Higo.txt",
+      "id": 4181
+    },
+    {
+      "file": "4184 - Bizen.txt",
+      "id": 4184
+    },
+    {
+      "file": "4187 - Kii.txt",
+      "id": 4187
+    },
+    {
+      "file": "4188 - Shinano.txt",
+      "id": 4188
+    },
+    {
+      "file": "4193 - Oshima.txt",
+      "id": 4193
+    },
+    {
+      "file": "4359 - Ise.txt",
+      "id": 4359
+    }
+  ],
+  "schema_version": 4,
+  "sekigahara_handoff": "1600.10.21",
+  "settsu_province": 1021,
+  "toyotomi_start": "1586.1.1",
+  "toyotomi_subject_intervals": 24,
+  "war_display_language": "zh-Hans",
+  "war_display_name_count": 13,
+  "war_display_name_encoding": "EU4SpecialEscape-CP1252-no-BOM",
+  "war_override_count": 4,
+  "war_overrides": [
+    "SubjugationOfKyushu.txt",
+    "SubjugationOfKanto.txt",
+    "KoreanSevenYearsWar.txt",
+    "SekigaharaCampaign.txt"
+  ]
+}

@@ -1,0 +1,1 @@
+disable_estate_effect = { estate = estate_burghers }

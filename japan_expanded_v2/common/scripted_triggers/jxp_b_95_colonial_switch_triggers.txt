@@ -1,0 +1,25 @@
+jxp_b_95_fixed_colonial_switch_ready_trigger = {
+	OR = {
+		NYA = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes }
+		HKK = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes }
+		NJF = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes }
+		OIA = { is_subject_of = ROOT jxp_b_91_colonial_identity_at_least_50_trigger = yes }
+	}
+}
+
+jxp_b_95_dynamic_colonial_switch_fallback_trigger = {
+	any_subject_country = {
+		is_colonial_nation = yes
+		jxp_b_91_colonial_identity_at_least_50_trigger = yes
+	}
+}
+
+jxp_b_95_player_switch_review_ready_trigger = {
+	ai = no
+	NOT = { has_country_flag = jxp_b_never_offer_colonial_switch }
+	NOT = { has_country_modifier = jxp_b_95_colonial_switch_deferred }
+	OR = {
+		jxp_b_95_fixed_colonial_switch_ready_trigger = yes
+		jxp_b_95_dynamic_colonial_switch_fallback_trigger = yes
+	}
+}

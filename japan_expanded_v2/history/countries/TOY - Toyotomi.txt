@@ -1,0 +1,70 @@
+government = monarchy
+add_government_reform = jxp_toyotomi_kampaku_taiko_reform
+government_rank = 2
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 1021
+
+1586.1.1 = {
+	monarch = {
+		name = "¿y	T"
+		dynasty = "0N„Å"
+		birth_date = 1537.3.17
+		death_date = 1598.9.18
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = infertile_personality
+}
+
+1591.11.1 = {
+	heir = {
+		name = "¿y!k"
+		monarch_name = "¿y!k"
+		dynasty = "0N„Å"
+		birth_date = 1568.1.1
+		death_date = 1595.8.20
+		claim = 80
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1593.8.29 = {
+	heir = {
+		name = "¿yVç"
+		monarch_name = "¿yVç"
+		dynasty = "0N„Å"
+		birth_date = 1593.8.29
+		death_date = 1615.6.4
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1598.9.18 = {
+	monarch = {
+		name = "¿yVç"
+		dynasty = "0N„Å"
+		birth_date = 1593.8.29
+		death_date = 1615.6.4
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = naive_personality
+}
+
+1600.10.21 = {
+	government_rank = 1
+}

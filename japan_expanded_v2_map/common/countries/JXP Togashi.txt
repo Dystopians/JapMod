@@ -1,0 +1,56 @@
+# Generated historical daimyo country definition.
+graphical_culture = asiangfx
+color = { 164 57 131 }
+revolutionary_colors = { 8 1 8 }
+
+historical_idea_groups = {
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	quality_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Me≤N #0" = 80
+	"INEN #0" = 40
+	"tf·O #0" = 40
+	"Üñck #0" = 40
+	"ck·O #0" = 40
+	"∑V #0" = -5
+	"Îu #0" = -5
+}
+
+leader_names = { ÃR+j ãe‰Ö !nπè Óh —è‰Ö gËê RëïN MñËê O‰Ö ÖQ‰Ö 'YEN›O ,gY ûES }
+ship_names = {
+	"TogashiAkebonoMaru" "TogashiAsahiMaru" "TogashiAkatsukiMaru" "TogashiHachimanMaru"
+	"TogashiSumiyoshiMaru" "TogashiKasugaMaru" "TogashiMatsukazeMaru" "TogashiWakabaMaru"
+	"TogashiShiranuiMaru" "TogashiChihayaMaru" "TogashiHayabusaMaru" "TogashiKongoMaru"
+	"TogashiFusoMaru" "TogashiYamashiroMaru" "TogashiMusashiMaru" "TogashiNagatoMaru"
+	"TogashiMutsuMaru" "TogashiAkiMaru" "TogashiSettsuMaru" "TogashiKawachiMaru"
+	"TogashiHizenMaru" "TogashiSatsumaMaru" "TogashiSuwoMaru" "TogashiSagamiMaru"
+	"TogashiTangoMaru" "TogashiHarunaMaru" "TogashiKirishimaMaru" "TogashiTakaoMaru"
+	"TogashiAtagoMaru" "TogashiChokaiMaru" "TogashiMayaMaru" "TogashiAobaMaru"
+}
+army_names = {
+	"ÃR+j Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Ichi no Te" "Ni no Te" "San no Te" "Hata Bugyo Shu" "Kiba Shu" "Teppo Shu"
+}
+fleet_names = {
+	"ÃR+j Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
+	"Ni no Fune" "San no Fune" "Ura Shu" "Oki Shu" "Hayafune Shu" "Sekibune Shu"
+}

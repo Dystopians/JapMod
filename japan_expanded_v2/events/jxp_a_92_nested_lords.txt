@@ -1,0 +1,79 @@
+namespace = jxp_nested_lords
+
+# AI-only, deliberately rare formation path. It never exceeds two clients and
+# requires a durable alliance or marriage plus very high mutual opinion.
+country_event = {
+	id = jxp_nested_lords.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		ai = yes
+		jxp_a_nested_has_capacity_trigger = yes
+		legitimacy = 70
+		prestige = 50
+		dip_power = 75
+		any_country = {
+			ai = yes
+			jxp_a_nested_client_eligible_trigger = yes
+			OR = {
+				is_allied_to = ROOT
+				marriage_with = ROOT
+			}
+			has_opinion = { who = ROOT value = 150 }
+			ROOT = { has_opinion = { who = PREV value = 150 } }
+		}
+	}
+
+	immediate = {
+		random_list = {
+			95 = { }
+			5 = {
+				random_country = {
+					limit = {
+						ai = yes
+						jxp_a_nested_client_eligible_trigger = yes
+						OR = {
+							is_allied_to = ROOT
+							marriage_with = ROOT
+						}
+						has_opinion = { who = ROOT value = 150 }
+						ROOT = { has_opinion = { who = PREV value = 150 } }
+					}
+					save_event_target_as = jxp_a_nested_ai_client
+				}
+				if = {
+					limit = { exists = event_target:jxp_a_nested_ai_client }
+					add_dip_power = -75
+					add_prestige = -15
+					event_target:jxp_a_nested_ai_client = {
+						jxp_a_clear_nested_relations_effect = yes
+					}
+					add_opinion = {
+						who = event_target:jxp_a_nested_ai_client
+						modifier = jxp_a_opinion_protected_kokujin
+					}
+					event_target:jxp_a_nested_ai_client = {
+						set_country_flag = jxp_a_nested_client
+						add_country_modifier = {
+							name = jxp_a_nested_client_status
+							duration = -1
+						}
+						add_opinion = {
+							who = ROOT
+							modifier = jxp_a_opinion_kokujin_patron
+						}
+					}
+					jxp_a_rebuild_nested_client_cache_effect = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "OK"
+	}
+}

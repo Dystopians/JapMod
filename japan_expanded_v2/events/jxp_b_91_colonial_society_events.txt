@@ -1,0 +1,105 @@
+namespace = jxp_colonial_society
+
+country_event = {
+	id = jxp_colonial_society.1
+	title = "jxp_colonial_society.1.t"
+	desc = "jxp_colonial_society.1.d"
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		jxp_b_91_colonial_society_initialize_effect = yes
+	}
+
+	option = {
+		name = "jxp_colonial_society.1.a"
+		add_prestige = 5
+		custom_tooltip = jxp_b_91_society_initialized_tt
+		hidden_effect = { country_event = { id = jxp_colonial_charter.1 days = 1 } }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = jxp_colonial_society.2
+	title = none
+	desc = none
+	picture = COLONIZATION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = jxp_b_colonial_pulse_scheduled
+		if = {
+			limit = { jxp_b_91_colonial_society_active_trigger = yes }
+			jxp_b_91_clamp_colonial_variables_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+			if = {
+				limit = { jxp_b_96_colonial_crisis_ready_trigger = yes }
+				country_event = { id = jxp_colonial_independence.1 days = 30 }
+			}
+			if = {
+				limit = { NOT = { has_country_modifier = jxp_b_93_society_event_recess } }
+				add_country_modifier = { name = jxp_b_93_society_event_recess duration = 730 }
+				country_event = { id = jxp_colonial_society.90 days = 1 }
+			}
+			jxp_b_91_schedule_colonial_pulse_effect = yes
+		}
+		else = { jxp_b_91_colonial_society_cleanup_effect = yes }
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_colonial_society.3
+	title = "jxp_colonial_society.3.t"
+	desc = "jxp_colonial_society.3.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	trigger = { jxp_b_91_colonial_society_active_trigger = yes }
+
+	option = {
+		name = "jxp_colonial_society.3.a"
+		add_dip_power = -25
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		add_country_modifier = { name = jxp_b_91_recent_colonial_review duration = 1095 }
+		custom_tooltip = jxp_b_91_local_registers_tt
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 2 jxp_b_91_local_compact_at_least_40_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_society.3.b"
+		add_adm_power = -25
+		jxp_b_91_add_control_10_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		add_country_modifier = { name = jxp_b_91_recent_colonial_review duration = 1095 }
+		custom_tooltip = jxp_b_91_metropole_registers_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_imperial }
+			modifier = { factor = 0.25 war_exhaustion = 5 }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_society.3.c"
+		add_treasury = -75
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_10_effect = yes
+		add_country_modifier = { name = jxp_b_91_recent_colonial_review duration = 1095 }
+		custom_tooltip = jxp_b_91_town_councils_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 treasury = 300 }
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+		}
+	}
+}

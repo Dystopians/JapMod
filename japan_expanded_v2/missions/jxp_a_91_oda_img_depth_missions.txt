@@ -1,0 +1,433 @@
+# Exact Oda and Imagawa companion columns.  Their public slot-2/slot-4
+# columns are excluded by jxp_a_uses_depth_slot_*_trigger.
+
+jxp_a_oda_government_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ODA
+	}
+	has_country_shield = yes
+
+	jxp_a_mission_oda_kiyosu_judgment = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { jxp_mission_daimyo_domain_accounts }
+		trigger = { num_of_cities = 2 }
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			country_event = { id = jxp_daimyo_depth.1 }
+		}
+	}
+
+	jxp_a_mission_oda_owari_kokujin_oath = {
+		icon = mission_diplomatic_relation
+		position = 4
+		required_missions = { jxp_a_mission_oda_kiyosu_judgment }
+		trigger = {
+			legitimacy = 45
+			army_size_percentage = 0.60
+		}
+		effect = {
+			add_dip_power = 35
+			country_event = { id = jxp_daimyo_depth.2 }
+		}
+	}
+
+	jxp_a_mission_oda_household_magistrate_register = {
+		icon = mission_rice_field
+		position = 6
+		required_missions = { jxp_a_mission_oda_owari_kokujin_oath }
+		trigger = {
+			adm_power = 75
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 40
+			change_government_reform_progress = 20
+			add_country_modifier = {
+				name = jxp_a_oda_household_registers
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_a_mission_oda_abolish_checkpoints = {
+		icon = mission_market_place_with_asian_traders
+		position = 8
+		required_missions = { jxp_a_mission_oda_household_magistrate_register }
+		trigger = {
+			num_of_cities = 6
+			treasury = 150
+		}
+		effect = {
+			add_mercantilism = 1
+			add_country_modifier = {
+				name = jxp_a_oda_checkpoint_abolition
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_a_mission_oda_front_commands = {
+		icon = mission_assemble_an_army
+		position = 10
+		required_missions = { jxp_a_mission_oda_abolish_checkpoints }
+		trigger = {
+			num_of_cities = 8
+			army_tradition = 20
+		}
+		effect = {
+			add_mil_power = 50
+			add_army_tradition = 5
+			add_country_modifier = {
+				name = jxp_a_oda_front_commands
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_a_mission_oda_legion_domains = {
+		icon = mission_japanese_samurai
+		position = 12
+		required_missions = { jxp_a_mission_oda_front_commands }
+		trigger = {
+			num_of_cities = 10
+			army_size_percentage = 0.80
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.3 }
+		}
+	}
+
+	jxp_a_mission_oda_provisions_post_horses = {
+		icon = mission_high_income
+		position = 14
+		required_missions = { jxp_a_mission_oda_legion_domains }
+		trigger = {
+			num_of_cities = 12
+			war_exhaustion = 3
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_a_oda_post_horse_logistics
+				duration = 7300
+			}
+			jxp_a_mark_house_logistics_ready_effect = yes
+		}
+	}
+
+	jxp_a_mission_oda_rename_gifu = {
+		icon = mission_japanese_fort
+		position = 16
+		required_missions = { jxp_a_mission_oda_provisions_post_horses }
+		trigger = {
+			num_of_cities = 15
+			prestige = 25
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_a_oda_gifu_command
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+}
+
+jxp_a_oda_settlement_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ODA
+	}
+	has_country_shield = yes
+
+	jxp_a_mission_oda_gun_foundry_guild = {
+		icon = mission_cannons_firing
+		position = 2
+		required_missions = { jxp_mission_oda_rakuichi_network }
+		trigger = {
+			mil_tech = 5
+			treasury = 100
+		}
+		effect = {
+			add_mil_power = 35
+			add_country_modifier = {
+				name = jxp_a_oda_foundry_guild
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_a_mission_oda_surrendered_lords_assurance = {
+		icon = mission_diplomatic_relation
+		position = 4
+		required_missions = { jxp_a_mission_oda_gun_foundry_guild }
+		trigger = {
+			num_of_cities = 6
+			prestige = 10
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.4 }
+		}
+	}
+
+	jxp_a_mission_oda_kyoto_sakai_dual_hub = {
+		icon = mission_trade_with_japan
+		position = 6
+		required_missions = { jxp_a_mission_oda_surrendered_lords_assurance }
+		trigger = {
+			num_of_cities = 8
+			num_of_ports = 2
+		}
+		effect = {
+			add_dip_power = 45
+			add_country_modifier = {
+				name = jxp_a_oda_kyoto_sakai_hub
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_a_mission_oda_court_petition = {
+		icon = mission_monarch_in_throne_room
+		position = 8
+		required_missions = { jxp_a_mission_oda_kyoto_sakai_dual_hub }
+		trigger = {
+			prestige = 25
+			legitimacy = 60
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_a_oda_court_petitions
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_a_mission_oda_disposition_of_shogun = {
+		icon = mission_to_japan
+		position = 10
+		required_missions = { jxp_a_mission_oda_court_petition }
+		trigger = {
+			num_of_cities = 12
+			prestige = 30
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.5 }
+		}
+	}
+
+	jxp_a_mission_oda_sect_adjudication = {
+		icon = mission_religious
+		position = 12
+		required_missions = { jxp_a_mission_oda_disposition_of_shogun }
+		trigger = {
+			religious_unity = 0.80
+			stability = 1
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.6 }
+		}
+	}
+
+	jxp_a_mission_oda_honnoji_shadow = {
+		icon = mission_japanese_samurai
+		position = 14
+		required_missions = { jxp_a_mission_oda_sect_adjudication }
+		trigger = {
+			is_year = 1575
+			num_of_cities = 15
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.7 }
+		}
+	}
+
+	jxp_a_mission_oda_succession_settlement = {
+		icon = mission_monarch_in_throne_room
+		position = 16
+		required_missions = { jxp_a_mission_oda_honnoji_shadow }
+		trigger = {
+			stability = 1
+			legitimacy = 60
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.8 }
+		}
+	}
+}
+
+jxp_a_img_law_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		tag = IMG
+	}
+	has_country_shield = yes
+
+	jxp_a_mission_img_additional_laws = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { jxp_mission_daimyo_domain_accounts }
+		trigger = {
+			adm_power = 50
+			legitimacy = 45
+		}
+		effect = {
+			add_adm_power = 35
+			add_country_modifier = {
+				name = jxp_a_img_additional_laws
+				duration = 5475
+			}
+		}
+	}
+
+	jxp_a_mission_img_suruga_cadastral_survey = {
+		icon = mission_rice_field
+		position = 4
+		required_missions = { jxp_a_mission_img_additional_laws }
+		trigger = {
+			num_of_cities = 4
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 40
+			add_country_modifier = {
+				name = jxp_a_img_suruga_cadaster
+				duration = 7300
+			}
+			jxp_a_mark_house_logistics_ready_effect = yes
+		}
+	}
+
+	jxp_a_mission_img_regular_markets = {
+		icon = mission_market_place_with_asian_traders
+		position = 6
+		required_missions = { jxp_a_mission_img_suruga_cadastral_survey }
+		trigger = {
+			num_of_cities = 6
+			treasury = 150
+		}
+		effect = {
+			add_mercantilism = 1
+			add_country_modifier = {
+				name = jxp_a_img_regular_markets
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_a_mission_img_jukeini_seal = {
+		icon = mission_diplomatic_relation
+		position = 8
+		required_missions = { jxp_a_mission_img_regular_markets }
+		trigger = {
+			legitimacy = 55
+			prestige = 10
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.101 }
+		}
+	}
+
+	jxp_a_mission_img_sumpu_cultural_court = {
+		icon = mission_early_modern_university
+		position = 10
+		required_missions = { jxp_a_mission_img_jukeini_seal }
+		trigger = {
+			num_of_cities = 9
+			prestige = 20
+		}
+		effect = {
+			add_dip_power = 50
+			add_prestige = 10
+			add_country_modifier = {
+				name = jxp_a_img_sumpu_court
+				duration = 7300
+			}
+		}
+	}
+}
+
+jxp_a_img_diplomacy_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		tag = IMG
+	}
+	has_country_shield = yes
+
+	jxp_a_mission_img_sessai_envoys = {
+		icon = mission_diplomatic_relation
+		position = 4
+		required_missions = { jxp_mission_img_kana_catalogue }
+		trigger = {
+			num_of_allies = 1
+			prestige = 5
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.102 }
+		}
+	}
+
+	jxp_a_mission_img_eastern_arbitration = {
+		icon = mission_to_japan
+		position = 6
+		required_missions = { jxp_a_mission_img_sessai_envoys }
+		trigger = { jxp_a_img_three_power_network_trigger = yes }
+		effect = {
+			country_event = { id = jxp_daimyo_depth.103 }
+			jxp_a_mark_house_diplomacy_ready_effect = yes
+		}
+	}
+
+	jxp_a_mission_img_matsudaira_assurance = {
+		icon = mission_monarch_in_throne_room
+		position = 8
+		required_missions = { jxp_a_mission_img_eastern_arbitration }
+		trigger = {
+			num_of_cities = 8
+			legitimacy = 60
+		}
+		effect = {
+			add_dip_power = 45
+			add_country_modifier = {
+				name = jxp_a_img_matsudaira_assurance
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_a_mission_img_marriage_adoption_registers = {
+		icon = mission_diplomatic_relation
+		position = 10
+		required_missions = { jxp_a_mission_img_matsudaira_assurance }
+		trigger = {
+			num_of_allies = 2
+			legitimacy = 65
+		}
+		effect = {
+			country_event = { id = jxp_daimyo_depth.106 }
+		}
+	}
+}

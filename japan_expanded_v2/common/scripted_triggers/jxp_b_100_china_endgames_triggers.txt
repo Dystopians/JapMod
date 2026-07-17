@@ -1,0 +1,150 @@
+jxp_b_100_has_any_china_endgame_path_trigger = {
+	OR = {
+		has_country_flag = jxp_b_100_china_path_mandate
+		has_country_flag = jxp_b_100_china_path_rites
+		has_country_flag = jxp_b_100_china_path_break
+	}
+}
+
+jxp_b_100_can_choose_china_endgame_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	jxp_is_unified_japan_state_trigger = yes
+	is_subject = no
+	is_year = 1550
+	capital_scope = { region = japan_region }
+	owns = 1020
+	total_development = 350
+	num_of_ports = 8
+	NOT = { jxp_b_100_has_any_china_endgame_path_trigger = yes }
+}
+
+jxp_b_100_has_east_asian_coastal_foothold_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		has_port = yes
+		OR = {
+			region = korea_region
+			region = north_china_region
+			region = south_china_region
+			area = taiwan_area
+		}
+		is_city = yes
+	}
+}
+
+jxp_b_100_limited_strategic_port_trigger = {
+	has_port = yes
+	OR = {
+		province_id = 2745
+		province_id = 2741
+		province_id = 667
+		province_id = 669
+		province_id = 2149
+		province_id = 2154
+		province_id = 656
+		province_id = 4352
+	}
+}
+
+jxp_b_100_mandate_endgame_ready_trigger = {
+	has_country_flag = jxp_b_100_china_path_mandate
+	NOT = { has_country_flag = jxp_b_100_china_endgame_mandate_complete }
+	total_development = 500
+	prestige = 50
+	OR = {
+		AND = {
+			has_dlc = "Mandate of Heaven"
+			is_emperor_of_china = yes
+			imperial_mandate = 70
+		}
+		AND = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+			has_country_flag = jxp_mandate_claim_fallback
+			legitimacy = 80
+		}
+	}
+}
+
+jxp_b_100_rites_endgame_ready_trigger = {
+	has_country_flag = jxp_b_100_china_path_rites
+	NOT = { has_country_flag = jxp_b_100_china_endgame_rites_complete }
+	total_development = 450
+	dip_tech = 16
+	prestige = 50
+	num_of_ports = 14
+	num_of_merchants = 3
+	jxp_b_100_has_east_asian_coastal_foothold_trigger = yes
+}
+
+jxp_b_100_break_endgame_ready_trigger = {
+	has_country_flag = jxp_b_100_china_path_break
+	NOT = { has_country_flag = jxp_b_100_china_endgame_break_complete }
+	total_development = 500
+	mil_tech = 15
+	prestige = 50
+	num_of_ports = 12
+	navy_tradition = 40
+	OR = {
+		num_of_heavy_ship = 10
+		num_of_light_ship = 25
+	}
+	jxp_b_100_has_east_asian_coastal_foothold_trigger = yes
+}
+
+jxp_b_100_can_use_mandate_acquisition_cb_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	has_country_flag = jxp_b_100_china_path_mandate
+	NOT = { has_country_flag = jxp_b_100_china_endgame_mandate_complete }
+	has_dlc = "Mandate of Heaven"
+	is_emperor_of_china = no
+	is_subject = no
+	NOT = { has_reform = shogunate }
+	is_revolutionary = no
+	OR = {
+		religion_group = pagan
+		religion_group = eastern
+	}
+	prestige = 25
+	num_of_ports = 8
+	OR = {
+		ai = no
+		AND = {
+			war = no
+			stability = 1
+			NOT = { is_bankrupt = yes }
+		}
+	}
+}
+
+jxp_b_100_can_use_rites_cb_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	has_country_flag = jxp_b_100_china_path_rites
+	is_subject = no
+	num_of_ports = 10
+	OR = {
+		ai = no
+		AND = {
+			war = no
+			stability = 1
+			NOT = { is_bankrupt = yes }
+		}
+	}
+}
+
+jxp_b_100_can_use_break_cb_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		has_country_flag = jxp_b_100_china_path_break
+		has_country_flag = jxp_b_100_b99_direct_campaign_authorized
+	}
+	is_subject = no
+	num_of_ports = 10
+	OR = {
+		ai = no
+		AND = {
+			war = no
+			stability = 1
+			NOT = { is_bankrupt = yes }
+		}
+	}
+}

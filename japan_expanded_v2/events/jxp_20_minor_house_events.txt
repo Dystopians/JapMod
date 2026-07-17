@@ -1,0 +1,552 @@
+namespace = jxp_minor_house
+
+country_event = {
+	id = jxp_minor_house.1
+	title = "jxp_minor_house.1.t"
+	desc = "jxp_minor_house.1.d"
+	picture = SIEGE_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = AMA
+		NOT = { has_country_flag = jxp_20_ama_moon_mountain_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.1.a"
+		set_country_flag = jxp_20_ama_moon_mountain_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_ama_gassan_toda_registers duration = 3650 }
+		add_mil_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.1.b"
+		set_country_flag = jxp_20_ama_moon_mountain_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_ama_sanin_sea_ledgers duration = 3650 }
+		add_dip_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.2
+	title = "jxp_minor_house.2.t"
+	desc = "jxp_minor_house.2.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = HSK
+		NOT = { has_country_flag = jxp_20_hsk_sakai_council_seen }
+	}
+
+	mean_time_to_happen = { months = 230 }
+
+	option = {
+		name = "jxp_minor_house.2.a"
+		set_country_flag = jxp_20_hsk_sakai_council_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_hsk_sakai_kanrei_council duration = 3650 }
+		add_dip_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.2.b"
+		set_country_flag = jxp_20_hsk_sakai_council_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_hsk_kanrei_petitions duration = 3650 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.3
+	title = "jxp_minor_house.3.t"
+	desc = "jxp_minor_house.3.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = SHN
+		NOT = { has_country_flag = jxp_20_shn_dazaifu_brokers_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.3.a"
+		set_country_flag = jxp_20_shn_dazaifu_brokers_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_shn_dazaifu_brokers duration = 3650 }
+		add_dip_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.3.b"
+		set_country_flag = jxp_20_shn_dazaifu_brokers_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_shn_hakata_wind_books duration = 3650 }
+		add_navy_tradition = 3
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.4
+	title = "jxp_minor_house.4.t"
+	desc = "jxp_minor_house.4.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = OGS
+		NOT = { has_country_flag = jxp_20_ogs_suwa_horse_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.4.a"
+		set_country_flag = jxp_20_ogs_suwa_horse_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_ogs_suwa_horse_masters duration = 3650 }
+		add_mil_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.4.b"
+		set_country_flag = jxp_20_ogs_suwa_horse_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_ogs_suwa_rites duration = 3650 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.5
+	title = "jxp_minor_house.5.t"
+	desc = "jxp_minor_house.5.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = KTB
+		NOT = { has_country_flag = jxp_20_ktb_ise_petition_seen }
+	}
+
+	mean_time_to_happen = { months = 230 }
+
+	option = {
+		name = "jxp_minor_house.5.a"
+		set_country_flag = jxp_20_ktb_ise_petition_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_ktb_ise_court_petition duration = 3650 }
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_minor_house.5.b"
+		set_country_flag = jxp_20_ktb_ise_petition_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_ktb_jingu_domain_accounts duration = 3650 }
+		add_adm_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.6
+	title = "jxp_minor_house.6.t"
+	desc = "jxp_minor_house.6.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = AKT
+		NOT = { has_country_flag = jxp_20_akt_ezochi_brokers_seen }
+	}
+
+	mean_time_to_happen = { months = 250 }
+
+	option = {
+		name = "jxp_minor_house.6.a"
+		set_country_flag = jxp_20_akt_ezochi_brokers_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_akt_ezochi_trade_brokers duration = 3650 }
+		add_dip_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.6.b"
+		set_country_flag = jxp_20_akt_ezochi_brokers_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_akt_northern_kin_guard duration = 3650 }
+		add_mil_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.7
+	title = "jxp_minor_house.7.t"
+	desc = "jxp_minor_house.7.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = CBA
+		NOT = { has_country_flag = jxp_20_cba_katori_oaths_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.7.a"
+		set_country_flag = jxp_20_cba_katori_oaths_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_cba_katori_muster duration = 3650 }
+		add_army_tradition = 3
+	}
+	option = {
+		name = "jxp_minor_house.7.b"
+		set_country_flag = jxp_20_cba_katori_oaths_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_cba_kanto_letters duration = 3650 }
+		add_dip_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.8
+	title = "jxp_minor_house.8.t"
+	desc = "jxp_minor_house.8.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = ISK
+		NOT = { has_country_flag = jxp_20_isk_tango_port_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.8.a"
+		set_country_flag = jxp_20_isk_tango_port_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_isk_tango_port_wardens duration = 3650 }
+		add_dip_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.8.b"
+		set_country_flag = jxp_20_isk_tango_port_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_isk_tango_road_accounts duration = 3650 }
+		add_adm_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.9
+	title = "jxp_minor_house.9.t"
+	desc = "jxp_minor_house.9.d"
+	picture = SIEGE_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ITO
+		NOT = { has_country_flag = jxp_20_ito_hyuga_forts_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.9.a"
+		set_country_flag = jxp_20_ito_hyuga_forts_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_ito_hyuga_fort_network duration = 3650 }
+		add_mil_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.9.b"
+		set_country_flag = jxp_20_ito_hyuga_forts_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_ito_mountain_rite_compacts duration = 3650 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.10
+	title = "jxp_minor_house.10.t"
+	desc = "jxp_minor_house.10.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = KNO
+		NOT = { has_country_flag = jxp_20_kno_inland_sea_seen }
+	}
+
+	mean_time_to_happen = { months = 240 }
+
+	option = {
+		name = "jxp_minor_house.10.a"
+		set_country_flag = jxp_20_kno_inland_sea_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_kno_inland_sea_pilots duration = 3650 }
+		add_navy_tradition = 3
+	}
+	option = {
+		name = "jxp_minor_house.10.b"
+		set_country_flag = jxp_20_kno_inland_sea_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_kno_island_oaths duration = 3650 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.11
+	title = "jxp_minor_house.11.t"
+	desc = "jxp_minor_house.11.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = TTI
+		NOT = { has_country_flag = jxp_20_tti_yamato_temples_seen }
+	}
+
+	mean_time_to_happen = { months = 230 }
+
+	option = {
+		name = "jxp_minor_house.11.a"
+		set_country_flag = jxp_20_tti_yamato_temples_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_20_tti_yamato_temple_compact duration = 3650 }
+		add_adm_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.11.b"
+		set_country_flag = jxp_20_tti_yamato_temples_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_tti_temple_ledgers duration = 3650 }
+		add_legitimacy = 5
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.12
+	title = "jxp_minor_house.12.t"
+	desc = "jxp_minor_house.12.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = RFR
+		NOT = { has_country_flag = jxp_20_rfr_nine_gates_seen }
+	}
+
+	mean_time_to_happen = { months = 250 }
+
+	option = {
+		name = "jxp_minor_house.12.a"
+		set_country_flag = jxp_20_rfr_nine_gates_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_20_rfr_mutsu_nine_gates duration = 3650 }
+		add_mil_power = 20
+	}
+	option = {
+		name = "jxp_minor_house.12.b"
+		set_country_flag = jxp_20_rfr_nine_gates_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_20_rfr_northern_sea_posts duration = 3650 }
+		add_dip_power = 20
+	}
+}
+
+country_event = {
+	id = jxp_minor_house.100
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		NOT = { has_country_flag = jxp_20_minor_house_legacy_granted }
+		NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching }
+		OR = {
+			has_country_flag = jxp_origin_ama
+			has_country_flag = jxp_origin_hsk
+			has_country_flag = jxp_origin_shn
+			has_country_flag = jxp_origin_ogs
+			has_country_flag = jxp_origin_ktb
+			has_country_flag = jxp_origin_akt
+			has_country_flag = jxp_origin_cba
+			has_country_flag = jxp_origin_isk
+			has_country_flag = jxp_origin_ito
+			has_country_flag = jxp_origin_kno
+			has_country_flag = jxp_origin_tti
+			has_country_flag = jxp_origin_rfr
+		}
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	immediate = {
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_ama } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.101 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_hsk } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.102 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_shn } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.103 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_ogs } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.104 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_ktb } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.105 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_akt } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.106 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_cba } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.107 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_isk } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.108 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_ito } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.109 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_kno } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.110 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_tti } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.111 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = jxp_20_minor_house_legacy_dispatching } has_country_flag = jxp_origin_rfr } set_country_flag = jxp_20_minor_house_legacy_dispatching country_event = { id = jxp_minor_house.112 days = 1 } }
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_minor_house.101
+	title = "jxp_minor_house.101.t"
+	desc = "jxp_minor_house.101.d"
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_ama NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_ama duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.102
+	title = "jxp_minor_house.102.t"
+	desc = "jxp_minor_house.102.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_hsk NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_hsk duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.103
+	title = "jxp_minor_house.103.t"
+	desc = "jxp_minor_house.103.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_shn NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_shn duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.104
+	title = "jxp_minor_house.104.t"
+	desc = "jxp_minor_house.104.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_ogs NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_ogs duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.105
+	title = "jxp_minor_house.105.t"
+	desc = "jxp_minor_house.105.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_ktb NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_ktb duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.106
+	title = "jxp_minor_house.106.t"
+	desc = "jxp_minor_house.106.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_akt NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_akt duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.107
+	title = "jxp_minor_house.107.t"
+	desc = "jxp_minor_house.107.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_cba NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_cba duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.108
+	title = "jxp_minor_house.108.t"
+	desc = "jxp_minor_house.108.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_isk NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_isk duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.109
+	title = "jxp_minor_house.109.t"
+	desc = "jxp_minor_house.109.d"
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_ito NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_ito duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.110
+	title = "jxp_minor_house.110.t"
+	desc = "jxp_minor_house.110.d"
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_kno NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_kno duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.111
+	title = "jxp_minor_house.111.t"
+	desc = "jxp_minor_house.111.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_tti NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_tti duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}
+
+country_event = {
+	id = jxp_minor_house.112
+	title = "jxp_minor_house.112.t"
+	desc = "jxp_minor_house.112.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_is_unified_japan_state_trigger = yes has_country_flag = jxp_origin_rfr NOT = { has_country_flag = jxp_20_minor_house_legacy_granted } }
+	option = { name = "jxp_minor_house.legacy.a" add_country_modifier = { name = jxp_20_legacy_rfr duration = -1 } add_prestige = 5 set_country_flag = jxp_20_minor_house_legacy_granted clr_country_flag = jxp_20_minor_house_legacy_dispatching }
+}

@@ -1,0 +1,57 @@
+jxp_apply_founder_house_compromise_effect = {
+	jxp_ensure_polity_mechanic_effect = yes
+	if = {
+		limit = { jxp_has_warrior_house_origin_trigger = yes }
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_29_house_warrior_tempered_route duration = 5475 }
+	}
+	else_if = {
+		limit = { jxp_has_court_house_origin_trigger = yes }
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_29_house_court_tempered_route duration = 5475 }
+	}
+	else_if = {
+		limit = { jxp_has_maritime_house_origin_trigger = yes }
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = { name = jxp_29_house_maritime_tempered_route duration = 5475 }
+	}
+	else_if = {
+		limit = { jxp_has_frontier_house_origin_trigger = yes }
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = { name = jxp_29_house_frontier_tempered_route duration = 5475 }
+	}
+	else_if = {
+		limit = { jxp_has_temple_market_house_origin_trigger = yes }
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = { name = jxp_29_house_temple_market_tempered_route duration = 5475 }
+	}
+}
+
+jxp_clear_route_house_compromise_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_29_route_house_compromise_taken
+		clr_country_flag = jxp_29_sakoku_house_compromise_seen
+		clr_country_flag = jxp_29_open_house_compromise_seen
+		clr_country_flag = jxp_29_kirishitan_house_compromise_seen
+		clr_country_flag = jxp_29_confucian_house_compromise_seen
+		clr_country_flag = jxp_29_imperial_house_compromise_seen
+		clr_country_flag = jxp_29_reformed_house_compromise_seen
+		clr_country_flag = jxp_29_kaikyo_house_compromise_seen
+		clr_country_flag = jxp_29_ikko_house_compromise_seen
+		clr_country_flag = jxp_29_wokou_house_compromise_seen
+	}
+	remove_country_modifier = jxp_29_sakoku_house_ordinance
+	remove_country_modifier = jxp_29_open_house_ordinance
+	remove_country_modifier = jxp_29_kirishitan_house_ordinance
+	remove_country_modifier = jxp_29_confucian_house_ordinance
+	remove_country_modifier = jxp_29_imperial_house_ordinance
+	remove_country_modifier = jxp_29_reformed_house_ordinance
+	remove_country_modifier = jxp_29_kaikyo_house_ordinance
+	remove_country_modifier = jxp_29_ikko_house_ordinance
+	remove_country_modifier = jxp_29_wokou_house_ordinance
+	remove_country_modifier = jxp_29_house_warrior_tempered_route
+	remove_country_modifier = jxp_29_house_court_tempered_route
+	remove_country_modifier = jxp_29_house_maritime_tempered_route
+	remove_country_modifier = jxp_29_house_frontier_tempered_route
+	remove_country_modifier = jxp_29_house_temple_market_tempered_route
+}

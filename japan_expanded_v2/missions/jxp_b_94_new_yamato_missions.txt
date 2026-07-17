@@ -1,0 +1,534 @@
+jxp_b_94_nya_west_coast_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { OR = { tag = NYA tag = TPF } }
+	has_country_shield = yes
+
+	jxp_b_94_mission_pacific_shore_foundation = {
+		icon = mission_colonize_alaska
+		position = 1
+		required_missions = { }
+		trigger = {
+			num_of_cities = 8
+			num_of_ports = 3
+			jxp_b_94_west_coast_heartland_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_coastal_survey_office duration = 3650 }
+			add_navy_tradition = 3
+		}
+	}
+
+	jxp_b_94_mission_harbor_survey_office = {
+		icon = mission_junk_boat
+		position = 2
+		required_missions = { jxp_b_94_mission_pacific_shore_foundation }
+		trigger = {
+			treasury = 150
+			any_owned_province = {
+				has_port = yes
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = shipyard
+				}
+			}
+		}
+		effect = {
+			add_treasury = -50
+			add_country_modifier = { name = jxp_b_94_harbor_works duration = 3650 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_mountain_pass_roads = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = { jxp_b_94_mission_harbor_survey_office }
+		trigger = {
+			adm_tech = 12
+			total_development = 160
+		}
+		effect = {
+			add_adm_power = -40
+			add_country_modifier = { name = jxp_b_94_frontier_roads duration = 3650 }
+			change_government_reform_progress = 15
+		}
+	}
+
+	jxp_b_94_mission_northern_frontier_watch = {
+		icon = mission_japanese_fort
+		position = 4
+		required_missions = { jxp_b_94_mission_mountain_pass_roads }
+		trigger = {
+			mil_tech = 12
+			army_size_percentage = 0.70
+			jxp_b_94_northern_reach_trigger = yes
+		}
+		effect = {
+			add_mil_power = -40
+			add_country_modifier = { name = jxp_b_94_coastal_watch duration = 3650 }
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_coastal_defense_circuit = {
+		icon = mission_establish_high_seas_navy
+		position = 5
+		required_missions = { jxp_b_94_mission_northern_frontier_watch }
+		trigger = {
+			navy_size_percentage = 0.75
+			num_of_ports = 6
+			is_at_war = no
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_blue_water_fleet duration = 3650 }
+			add_navy_tradition = 5
+			jxp_b_91_subtract_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_continental_horizon = {
+		icon = mission_settlers_north_america
+		position = 6
+		required_missions = { jxp_b_94_mission_coastal_defense_circuit jxp_b_94_mission_frontier_citizenship }
+		trigger = {
+			num_of_cities = 20
+			total_development = 250
+			jxp_b_91_colonial_identity_at_least_75_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_settler_horizon duration = 7300 }
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			country_event = { id = jxp_new_yamato.3 }
+		}
+	}
+}
+
+jxp_b_94_nya_civic_compact_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { OR = { tag = NYA tag = TPF } }
+	has_country_shield = yes
+
+	jxp_b_94_mission_first_local_compact = {
+		icon = mission_diplomatic_relation
+		position = 1
+		required_missions = { }
+		trigger = {
+			jxp_b_91_local_compact_at_least_60_trigger = yes
+			stability = 0
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_township_rolls duration = 3650 }
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_township_rolls = {
+		icon = mission_censorate
+		position = 2
+		required_missions = { jxp_b_94_mission_first_local_compact }
+		trigger = {
+			num_of_cities = 12
+			adm_tech = 12
+			NOT = { corruption = 0.05 }
+		}
+		effect = {
+			add_adm_power = -40
+			add_country_modifier = { name = jxp_b_94_township_rolls duration = 7300 }
+			country_event = { id = jxp_new_yamato.2 }
+		}
+	}
+
+	jxp_b_94_mission_assembly_halls = {
+		icon = mission_plc_governance_act
+		position = 3
+		required_missions = { jxp_b_94_mission_township_rolls jxp_b_94_mission_foundation_convention }
+		trigger = {
+			jxp_b_94_has_constitution_trigger = yes
+			adm_tech = 14
+			dip_tech = 14
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_civic_halls duration = 3650 }
+			change_government_reform_progress = 25
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_religious_concord = {
+		icon = mission_religious
+		position = 4
+		required_missions = { jxp_b_94_mission_assembly_halls }
+		trigger = {
+			religious_unity = 0.90
+			stability = 1
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.5 }
+			add_prestige = 5
+		}
+	}
+
+	jxp_b_94_mission_frontier_citizenship = {
+		icon = mission_assemble_an_army
+		position = 5
+		required_missions = { jxp_b_94_mission_religious_concord }
+		trigger = {
+			num_of_cities = 18
+			army_size_percentage = 0.70
+			check_variable = { which = jxp_b_local_compact value = 70 }
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_frontier_citizenship duration = 7300 }
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_union_fulfilled = {
+		icon = mission_cornerstone_empire
+		position = 7
+		required_missions = { jxp_b_94_mission_frontier_citizenship jxp_b_94_mission_continental_horizon }
+		trigger = {
+			check_variable = { which = jxp_b_colonial_identity value = 85 }
+			check_variable = { which = jxp_b_local_compact value = 75 }
+			stability = 2
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_enduring_constitution duration = 7300 }
+			change_government_reform_progress = 40
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_94_nya_transpacific_economy_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { OR = { tag = NYA tag = TPF } }
+	has_country_shield = yes
+
+	jxp_b_94_mission_red_seal_inheritance = {
+		icon = mission_trade_with_japan
+		position = 1
+		required_missions = { }
+		trigger = {
+			num_of_ports = 5
+			monthly_income = 20
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_red_seal_exchange duration = 3650 }
+			add_dip_power = 30
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_harbor_warehouses = {
+		icon = mission_market_place_with_asian_traders
+		position = 2
+		required_missions = { jxp_b_94_mission_red_seal_inheritance }
+		trigger = {
+			treasury = 200
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				has_port = yes
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		effect = {
+			add_treasury = -75
+			add_country_modifier = { name = jxp_b_94_harbor_warehouses duration = 3650 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_oceanic_shipyards = {
+		icon = mission_polynesian_navy_build
+		position = 3
+		required_missions = { jxp_b_94_mission_harbor_warehouses }
+		trigger = {
+			dip_tech = 12
+			navy_size_percentage = 0.70
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				has_port = yes
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_oceanic_shipyards duration = 7300 }
+			add_navy_tradition = 5
+			add_dip_power = -40
+		}
+	}
+
+	jxp_b_94_mission_oceanic_public_credit = {
+		icon = mission_high_income
+		position = 4
+		required_missions = { jxp_b_94_mission_oceanic_shipyards }
+		trigger = {
+			jxp_b_94_stable_public_credit_trigger = yes
+		}
+		effect = {
+			add_treasury = -100
+			add_country_modifier = { name = jxp_b_94_public_credit duration = 7300 }
+			country_event = { id = jxp_new_yamato.4 }
+		}
+	}
+
+	jxp_b_94_mission_two_ocean_exchange = {
+		icon = mission_asian_trader
+		position = 6
+		required_missions = { jxp_b_94_mission_oceanic_public_credit jxp_b_94_mission_pacific_embassy }
+		trigger = {
+			num_of_merchants = 3
+			num_of_ports = 8
+			jxp_b_91_has_any_charter_trigger = yes
+			jxp_b_94_has_east_asian_contact_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_pacific_embassy duration = 3650 }
+			add_mercantilism = 1
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_pacific_common_market = {
+		icon = dominant_economy
+		position = 8
+		required_missions = { jxp_b_94_mission_two_ocean_exchange jxp_b_94_mission_union_fulfilled }
+		trigger = {
+			monthly_income = 40
+			num_of_ports = 10
+			treasury = 1000
+		}
+		effect = {
+			add_treasury = -200
+			add_country_modifier = { name = jxp_b_94_pacific_common_market duration = 7300 }
+			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+}
+
+jxp_b_94_nya_republican_state_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { OR = { tag = NYA tag = TPF } }
+	has_country_shield = yes
+
+	jxp_b_94_mission_foundation_convention = {
+		icon = mission_plc_governance_act
+		position = 1
+		required_missions = { }
+		trigger = {
+			jxp_b_94_has_constitution_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_civic_halls duration = 3650 }
+			change_government_reform_progress = 20
+		}
+	}
+
+	jxp_b_94_mission_elected_offices = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = { jxp_b_94_mission_foundation_convention }
+		trigger = {
+			jxp_b_94_public_legitimacy_trigger = yes
+			stability = 1
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_civil_offices duration = 3650 }
+			jxp_b_91_add_compact_5_effect = yes
+			add_prestige = 5
+		}
+	}
+
+	jxp_b_94_mission_separated_ledgers = {
+		icon = mission_censorate
+		position = 4
+		required_missions = { jxp_b_94_mission_elected_offices }
+		trigger = {
+			adm_tech = 15
+			dip_tech = 15
+			mil_tech = 15
+			NOT = { corruption = 0.02 }
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_civil_offices duration = 7300 }
+			change_government_reform_progress = 30
+			add_adm_power = -50
+		}
+	}
+
+	jxp_b_94_mission_civilian_command = {
+		icon = mission_japanese_samurai
+		position = 6
+		required_missions = { jxp_b_94_mission_separated_ledgers }
+		trigger = {
+			army_professionalism = 0.20
+			army_size_percentage = 0.80
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.6 }
+			add_country_modifier = { name = jxp_b_94_civilian_command duration = 3650 }
+		}
+	}
+
+	jxp_b_94_mission_harbor_petitions = {
+		icon = mission_diplomatic_relation
+		position = 7
+		required_missions = { jxp_b_94_mission_civilian_command jxp_b_94_mission_religious_concord }
+		trigger = {
+			check_variable = { which = jxp_b_local_compact value = 75 }
+			stability = 2
+			is_at_war = no
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.7 }
+			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_enduring_constitution = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_94_mission_harbor_petitions jxp_b_94_mission_pacific_common_market }
+		trigger = {
+			government_rank = 2
+			total_development = 300
+			jxp_b_94_public_legitimacy_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_enduring_constitution duration = 7300 }
+			change_government_reform_progress = 50
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+}
+
+jxp_b_94_nya_independence_return_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { OR = { tag = NYA tag = TPF } }
+	has_country_shield = yes
+
+	jxp_b_94_mission_self_rule_proclaimed = {
+		icon = mission_cornerstone_empire
+		position = 1
+		required_missions = { }
+		trigger = {
+			has_country_flag = jxp_iface_colonial_self_rule
+			jxp_b_91_colonial_identity_at_least_65_trigger = yes
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_foundation_strain duration = 1825 }
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_severed_governor_seals = {
+		icon = mission_cornerstone_empire
+		position = 2
+		required_missions = { jxp_b_94_mission_self_rule_proclaimed }
+		trigger = {
+			OR = {
+				is_subject = no
+				has_country_flag = jxp_iface_colonial_independence
+			}
+			jxp_b_91_colonial_identity_at_least_75_trigger = yes
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.9 }
+			add_prestige = 10
+		}
+	}
+
+	jxp_b_94_mission_pacific_embassy = {
+		icon = mission_to_japan
+		position = 4
+		required_missions = { jxp_b_94_mission_severed_governor_seals }
+		trigger = {
+			dip_tech = 14
+			jxp_b_94_has_east_asian_contact_trigger = yes
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.8 }
+			add_country_modifier = { name = jxp_b_94_pacific_embassy duration = 3650 }
+		}
+	}
+
+	jxp_b_94_mission_blue_water_guard = {
+		icon = mission_sea_battles
+		position = 6
+		required_missions = { jxp_b_94_mission_pacific_embassy }
+		trigger = {
+			navy_size_percentage = 0.90
+			num_of_ports = 8
+			navy_tradition = 30
+		}
+		effect = {
+			add_country_modifier = { name = jxp_b_94_blue_water_fleet duration = 7300 }
+			add_navy_tradition = 8
+			add_dip_power = -50
+		}
+	}
+
+	jxp_b_94_mission_eastward_delegation = {
+		icon = mission_sail_to_the_east_indies
+		position = 8
+		required_missions = { jxp_b_94_mission_blue_water_guard jxp_b_94_mission_two_ocean_exchange }
+		trigger = {
+			dip_tech = 16
+			monthly_income = 50
+			jxp_b_94_has_east_asian_contact_trigger = yes
+		}
+		effect = {
+			set_country_flag = jxp_iface_b_nya_eastward_contact
+			add_country_modifier = { name = jxp_b_94_pacific_embassy duration = 7300 }
+			jxp_b_91_add_identity_5_effect = yes
+			add_dip_power = -75
+		}
+	}
+
+	jxp_b_94_mission_commonwealth_of_two_shores = {
+		icon = mission_empire
+		position = 10
+		required_missions = {
+			jxp_b_94_mission_eastward_delegation
+			jxp_b_94_mission_continental_horizon
+			jxp_b_94_mission_union_fulfilled
+			jxp_b_94_mission_pacific_common_market
+			jxp_b_94_mission_enduring_constitution
+		}
+		trigger = {
+			is_subject = no
+			is_at_war = no
+			total_development = 350
+			num_of_ports = 10
+			check_variable = { which = jxp_b_colonial_identity value = 90 }
+			check_variable = { which = jxp_b_local_compact value = 80 }
+		}
+		effect = {
+			country_event = { id = jxp_new_yamato.10 }
+			jxp_b_94_mark_agent_a_refresh_interfaces_effect = yes
+		}
+	}
+}

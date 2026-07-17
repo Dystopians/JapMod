@@ -1,0 +1,47 @@
+# A targeted, ordinary claim is the coring-cost safety valve. It never grants
+# permanent claims and can only select a neighboring province in Japan.
+jxp_a_press_border_arbitration = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		jxp_a_internal_war_actor_trigger = yes
+		FROM = {
+			jxp_a_internal_war_target_trigger = yes
+			is_neighbor_of = ROOT
+		}
+	}
+	is_allowed = {
+		dip_power = 25
+		prestige = 10
+		is_at_war = no
+		NOT = { has_country_modifier = jxp_a_border_arbitration_cooldown }
+		FROM = {
+			is_at_war = no
+			any_owned_province = {
+				region = japan_region
+				NOT = { is_claim = ROOT }
+				any_neighbor_province = { owned_by = ROOT }
+			}
+		}
+	}
+	on_accept = {
+		add_dip_power = -25
+		add_prestige = -10
+		add_country_modifier = {
+			name = jxp_a_border_arbitration_cooldown
+			duration = 1825
+		}
+		FROM = {
+			random_owned_province = {
+				limit = {
+					region = japan_region
+					NOT = { is_claim = ROOT }
+					any_neighbor_province = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	ai_will_do = { always = no }
+}

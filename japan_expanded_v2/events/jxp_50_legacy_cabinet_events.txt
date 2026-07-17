@@ -1,0 +1,38 @@
+namespace = jxp_legacy_cabinet
+
+country_event = {
+	id = jxp_legacy_cabinet.1
+	title = "jxp_legacy_cabinet.1.t"
+	desc = "jxp_legacy_cabinet.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_legacy_cabinet.1.a"
+		trigger = { jxp_50_founder_legacy_allowed_trigger = yes }
+		jxp_50_execute_founder_legacy_effect = yes
+	}
+	option = {
+		name = "jxp_legacy_cabinet.1.b"
+		trigger = { jxp_50_founder_idea_allowed_trigger = yes }
+		jxp_50_execute_founder_idea_effect = yes
+	}
+	option = {
+		name = "jxp_legacy_cabinet.1.c"
+		trigger = { jxp_50_preunification_memory_allowed_trigger = yes }
+		jxp_50_execute_preunification_memory_effect = yes
+	}
+	option = {
+		name = "jxp_legacy_cabinet.1.d_option"
+		trigger = { jxp_50_house_diet_legacy_allowed_trigger = yes }
+		jxp_50_execute_house_diet_legacy_effect = yes
+	}
+	option = {
+		name = "jxp_legacy_cabinet.1.e"
+		trigger = { jxp_50_route_house_compromise_allowed_trigger = yes }
+		jxp_50_execute_route_house_compromise_effect = yes
+	}
+	option = {
+		name = "jxp_legacy_cabinet.1.f"
+	}
+}

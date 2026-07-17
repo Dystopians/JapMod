@@ -1,0 +1,366 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+centralize_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = less_than_15_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 15
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = less_than_25_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 25
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = less_than_35_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 35
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = less_than_50_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	trigger = {
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = less_than_15_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 15
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = less_than_25_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 25
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = less_than_35_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 35
+					}
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = less_than_50_provinces_on_same_continent
+				NOT = {
+					num_of_owned_provinces_with = {
+						same_continent = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	modifiers = {
+		development_cost_modifier = -0.05
+		global_prosperity_growth = 0.5
+		all_estate_loyalty_equilibrium = -0.05
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		custom_attributes = {
+			centralize_state_half_refund = yes
+			#centralize_state_no_reform_cost = yes
+			#centralize_state_development = yes
+		}
+	}
+}
+
+centralize_empire_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = at_least_15_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 15
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = at_least_25_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 25
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = at_least_35_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 35
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = at_least_50_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 50
+				}
+			}
+		}
+	}
+	trigger = {
+		if = {
+			limit = { current_age = age_of_discovery }
+			custom_trigger_tooltip = {
+				tooltip = at_least_15_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 15
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_reformation }
+			custom_trigger_tooltip = {
+				tooltip = at_least_25_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 25
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_absolutism }
+			custom_trigger_tooltip = {
+				tooltip = at_least_35_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 35
+				}
+			}
+		}
+		if = {
+			limit = { current_age = age_of_revolutions }
+			custom_trigger_tooltip = {
+				tooltip = at_least_50_provinces_on_same_continent
+				num_of_owned_provinces_with = {
+					same_continent = ROOT
+					value = 50
+				}
+			}
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.05
+		autonomy_change_time = -0.25
+		culture_conversion_cost = -0.1
+		all_estate_loyalty_equilibrium = -0.05
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		custom_attributes = {
+			centralize_state_half_refund = yes
+			#centralize_state_no_reform_cost = yes
+			#centralize_state_development = yes
+		}
+	}
+}
+
+decentralize_reform = {
+	icon = "map"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		num_accepted_cultures = 2
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+expand_imperial_court_reform = {
+	icon = "royal_court"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		all_estate_influence_modifier = 0.05
+		reform_progress_growth = 0.2
+		advisor_pool = 1
+	}
+}
+
+limit_imperial_court_reform = {
+	icon = "politician"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		same_culture_advisor_cost = -0.1
+		meritocracy = 0.25
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+		seizing_land_loyalty = yes
+	}
+}
+
+regional_council_reform = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.33
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			unlock_special_state_edicts = yes
+		}
+	}
+}
+
+representation_of_the_crown_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		diplomatic_upkeep = 1
+		vassal_forcelimit_bonus = 0.25
+		monarch_power_tribute = 1
+	}
+	custom_attributes = {
+		subject_tax_modifier_25 = yes
+	}
+}
+
+penal_colonies_reform = {
+	icon = "colonial_companies"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Golden Century"
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = new_world
+					continent = oceania
+				}
+			}
+		}
+	}
+	trigger = {
+		has_idea_group = exploration_ideas
+	}
+	modifiers = {
+		expel_minorities_cost = -1
+		colonist_placement_chance = 0.05
+	}
+	ai = {
+		factor = 0.1
+	}
+}

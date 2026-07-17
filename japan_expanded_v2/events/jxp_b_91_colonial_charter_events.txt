@@ -1,0 +1,127 @@
+namespace = jxp_colonial_charter
+
+country_event = {
+	id = jxp_colonial_charter.1
+	title = "jxp_colonial_charter.1.t"
+	desc = "jxp_colonial_charter.1.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_b_91_colonial_society_active_trigger = yes
+		NOT = { jxp_b_91_has_any_charter_trigger = yes }
+	}
+
+	option = {
+		name = "jxp_colonial_charter.1.a"
+		jxp_b_91_apply_red_seal_charter_effect = yes
+		custom_tooltip = jxp_b_91_red_seal_charter_tt
+		ai_chance = {
+			factor = 3
+			modifier = { factor = 2 jxp_b_91_local_compact_at_least_40_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_charter.1.b"
+		trigger = { jxp_b_91_can_choose_military_charter_trigger = yes }
+		jxp_b_91_apply_military_charter_effect = yes
+		custom_tooltip = jxp_b_91_military_charter_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_imperial }
+			modifier = { factor = 0.25 war_exhaustion = 5 }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_charter.1.c"
+		trigger = { jxp_b_91_can_choose_faith_charter_trigger = yes }
+		jxp_b_91_apply_faith_charter_effect = yes
+		custom_tooltip = jxp_b_91_faith_charter_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 3 has_country_flag = jxp_iface_house_religious_ready }
+			modifier = { factor = 2 has_country_flag = jxp_path_kirishitan }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_charter.1.free_port"
+		trigger = { jxp_b_91_can_choose_free_port_charter_trigger = yes }
+		jxp_b_91_apply_free_port_charter_effect = yes
+		custom_tooltip = jxp_b_91_free_port_charter_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 3 tag = WAK }
+			modifier = { factor = 2 has_country_flag = jxp_path_reformed }
+		}
+	}
+
+	option = {
+		name = "jxp_colonial_charter.1.e"
+		trigger = { jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		jxp_b_91_apply_naval_station_charter_effect = yes
+		custom_tooltip = jxp_b_91_naval_station_charter_tt
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+			modifier = { factor = 2 tag = TOY }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_colonial_charter.2
+	title = "jxp_colonial_charter.2.t"
+	desc = "jxp_colonial_charter.2.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_b_91_colonial_society_active_trigger = yes
+		jxp_b_91_has_any_charter_trigger = yes
+		NOT = { has_country_modifier = jxp_b_91_charter_reform_cooldown }
+	}
+
+	option = {
+		name = "jxp_colonial_charter.2.a"
+		trigger = { NOT = { has_country_flag = jxp_b_charter_red_seal_town } }
+		jxp_b_91_apply_red_seal_charter_effect = yes
+		jxp_b_91_finish_charter_reform_effect = yes
+		ai_chance = { factor = 3 modifier = { factor = 2 jxp_b_91_local_compact_at_least_40_trigger = yes } }
+	}
+	option = {
+		name = "jxp_colonial_charter.2.b"
+		trigger = { NOT = { has_country_flag = jxp_b_charter_military_settlement } jxp_b_91_can_choose_military_charter_trigger = yes }
+		jxp_b_91_apply_military_charter_effect = yes
+		jxp_b_91_finish_charter_reform_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 has_country_flag = jxp_path_imperial } }
+	}
+	option = {
+		name = "jxp_colonial_charter.2.c"
+		trigger = { NOT = { has_country_flag = jxp_b_charter_faith_community } jxp_b_91_can_choose_faith_charter_trigger = yes }
+		jxp_b_91_apply_faith_charter_effect = yes
+		jxp_b_91_finish_charter_reform_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 has_country_flag = jxp_iface_house_religious_ready } }
+	}
+	option = {
+		name = "jxp_colonial_charter.2.free_port"
+		trigger = { NOT = { has_country_flag = jxp_b_charter_free_port } jxp_b_91_can_choose_free_port_charter_trigger = yes }
+		jxp_b_91_apply_free_port_charter_effect = yes
+		jxp_b_91_finish_charter_reform_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 tag = WAK } }
+	}
+	option = {
+		name = "jxp_colonial_charter.2.e"
+		trigger = { NOT = { has_country_flag = jxp_b_charter_naval_station } jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		jxp_b_91_apply_naval_station_charter_effect = yes
+		jxp_b_91_finish_charter_reform_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 tag = TOY } }
+	}
+	option = {
+		name = "jxp_colonial_charter.2.f"
+		custom_tooltip = jxp_b_91_keep_current_charter_tt
+		ai_chance = { factor = 1 modifier = { factor = 2 stability = 2 } }
+	}
+}

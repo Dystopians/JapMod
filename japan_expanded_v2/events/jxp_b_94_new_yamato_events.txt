@@ -1,0 +1,221 @@
+namespace = jxp_new_yamato
+
+country_event = {
+	id = jxp_new_yamato.1
+	title = jxp_new_yamato.1.t
+	desc = jxp_new_yamato.1.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_new_yamato.1.a
+		jxp_b_94_apply_federal_assembly_effect = yes
+		add_country_modifier = { name = jxp_b_94_civic_halls duration = 3650 }
+		add_stability = -1
+		ai_chance = { factor = 2 modifier = { factor = 3 has_country_flag = jxp_b_charter_red_seal_town } }
+	}
+	option = {
+		name = jxp_new_yamato.1.b
+		jxp_b_94_apply_frontier_military_republic_effect = yes
+		add_country_modifier = { name = jxp_b_94_frontier_muster_strain duration = 3650 }
+		add_mil_power = -50
+		ai_chance = { factor = 1 modifier = { factor = 4 has_country_flag = jxp_b_charter_military_settlement } }
+	}
+	option = {
+		name = jxp_new_yamato.1.c
+		jxp_b_94_apply_merchant_commonwealth_effect = yes
+		add_country_modifier = { name = jxp_b_94_merchant_concessions duration = 3650 }
+		add_dip_power = -50
+		ai_chance = { factor = 1 modifier = { factor = 4 has_country_flag = jxp_b_charter_free_port } }
+	}
+	option = {
+		name = jxp_new_yamato.1.e
+		jxp_b_94_apply_oceanic_monarchy_effect = yes
+		add_country_modifier = { name = jxp_b_94_constitutional_deadlock duration = 1825 }
+		add_adm_power = -50
+		ai_chance = { factor = 1 modifier = { factor = 3 has_country_flag = jxp_b_charter_faith_community } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.2
+	title = jxp_new_yamato.2.t
+	desc = jxp_new_yamato.2.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.2.a
+		jxp_b_94_reward_local_compact_effect = yes
+		add_country_modifier = { name = jxp_b_94_township_rolls duration = 3650 }
+		add_adm_power = -40
+	}
+	option = {
+		name = jxp_new_yamato.2.b
+		jxp_b_94_reward_metropole_continuity_effect = yes
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.3
+	title = jxp_new_yamato.3.t
+	desc = jxp_new_yamato.3.d
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.3.a
+		jxp_b_94_reward_local_compact_effect = yes
+		add_country_modifier = { name = jxp_b_94_settler_horizon duration = 3650 }
+		add_treasury = -75
+	}
+	option = {
+		name = jxp_new_yamato.3.b
+		jxp_b_94_reward_frontier_mobilization_effect = yes
+		add_mil_power = -40
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.4
+	title = jxp_new_yamato.4.t
+	desc = jxp_new_yamato.4.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.4.a
+		jxp_b_94_reward_commercial_autonomy_effect = yes
+		add_country_modifier = { name = jxp_b_94_red_seal_exchange duration = 3650 }
+		add_mercantilism = -1
+	}
+	option = {
+		name = jxp_new_yamato.4.b
+		jxp_b_94_reward_metropole_continuity_effect = yes
+		add_country_modifier = { name = jxp_b_94_harbor_warehouses duration = 3650 }
+		add_dip_power = -40
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.5
+	title = jxp_new_yamato.5.t
+	desc = jxp_new_yamato.5.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.5.a
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		add_country_modifier = { name = jxp_b_94_religious_concord duration = 7300 }
+		add_adm_power = -50
+	}
+	option = {
+		name = jxp_new_yamato.5.b
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		add_stability = 1
+		add_country_modifier = { name = jxp_b_94_constitutional_deadlock duration = 1825 }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.6
+	title = jxp_new_yamato.6.t
+	desc = jxp_new_yamato.6.d
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.6.a
+		jxp_b_94_reward_frontier_mobilization_effect = yes
+		add_army_professionalism = 0.02
+		add_treasury = -100
+	}
+	option = {
+		name = jxp_new_yamato.6.b
+		jxp_b_94_reward_local_compact_effect = yes
+		add_country_modifier = { name = jxp_b_94_civilian_command duration = 3650 }
+		add_mil_power = -50
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.7
+	title = jxp_new_yamato.7.t
+	desc = jxp_new_yamato.7.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.7.a
+		jxp_b_91_add_compact_5_effect = yes
+		add_country_modifier = { name = jxp_b_94_enduring_constitution duration = 7300 }
+		change_government_reform_progress = -25
+	}
+	option = {
+		name = jxp_new_yamato.7.b
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		add_country_modifier = { name = jxp_b_94_constitutional_deadlock duration = 3650 }
+		add_stability = 1
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.8
+	title = jxp_new_yamato.8.t
+	desc = jxp_new_yamato.8.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.8.a
+		set_country_flag = jxp_iface_b_nya_eastward_contact
+		jxp_b_91_add_identity_5_effect = yes
+		add_country_modifier = { name = jxp_b_94_pacific_embassy duration = 3650 }
+		add_dip_power = -50
+	}
+	option = {
+		name = jxp_new_yamato.8.b
+		jxp_b_91_add_compact_5_effect = yes
+		add_prestige = 10
+		add_country_modifier = { name = jxp_b_94_constitutional_deadlock duration = 1825 }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.9
+	title = jxp_new_yamato.9.t
+	desc = jxp_new_yamato.9.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.9.a
+		set_country_flag = jxp_iface_colonial_independence
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_subtract_control_10_effect = yes
+		add_country_modifier = { name = jxp_b_94_foundation_strain duration = 3650 }
+	}
+	option = {
+		name = jxp_new_yamato.9.b
+		jxp_b_91_add_compact_5_effect = yes
+		add_country_modifier = { name = jxp_b_94_enduring_constitution duration = 3650 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.10
+	title = jxp_new_yamato.10.t
+	desc = jxp_new_yamato.10.d
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_new_yamato.10.a
+		add_country_modifier = { name = jxp_b_94_two_shores_program duration = 7300 }
+		jxp_b_91_add_identity_5_effect = yes
+		add_treasury = -200
+	}
+	option = {
+		name = jxp_new_yamato.10.b
+		add_country_modifier = { name = jxp_b_94_enduring_constitution duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		add_dip_power = -75
+	}
+}

@@ -1,0 +1,280 @@
+jxp_b_99_daimyo_stage_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		has_reform = daimyo
+		has_reform = indep_daimyo
+	}
+	NOT = { has_reform = shogunate }
+	NOT = { tag = JAP }
+	NOT = { tag = TOY }
+	NOT = { tag = KJP }
+	NOT = { tag = CJP }
+	NOT = { tag = EJP }
+	NOT = { tag = RFJ }
+	NOT = { tag = SJP }
+	NOT = { tag = IJP }
+	NOT = { tag = WAK }
+	NOT = { jxp_has_any_route_trigger = yes }
+}
+
+jxp_b_99_shogunate_stage_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	has_reform = shogunate
+	NOT = { tag = JAP }
+	NOT = { tag = TOY }
+	NOT = { tag = KJP }
+	NOT = { tag = CJP }
+	NOT = { tag = EJP }
+	NOT = { tag = RFJ }
+	NOT = { tag = SJP }
+	NOT = { tag = IJP }
+	NOT = { tag = WAK }
+}
+
+jxp_b_99_unified_stage_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = JAP
+		tag = TOY
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		jxp_has_any_route_trigger = yes
+		jxp_has_final_state_political_profile_trigger = yes
+	}
+}
+
+jxp_b_99_can_convene_strategy_trigger = {
+	OR = {
+		is_subject = no
+		jxp_b_99_daimyo_stage_trigger = yes
+	}
+	is_at_war = no
+	has_any_disaster = no
+	stability = 0
+	num_of_ports = 2
+	dip_tech = 5
+	navy_size = 5
+	OR = {
+		jxp_b_99_daimyo_stage_trigger = yes
+		jxp_b_99_shogunate_stage_trigger = yes
+		jxp_b_99_unified_stage_trigger = yes
+	}
+	NOT = { has_country_modifier = jxp_b_99_strategy_council_recent }
+}
+
+jxp_b_99_daimyo_limited_expedition_trigger = {
+	jxp_b_99_daimyo_stage_trigger = yes
+	has_reform = indep_daimyo
+	num_of_cities = 18
+	num_of_ports = 7
+	dip_tech = 10
+	adm_tech = 9
+	army_size = 25
+	navy_size = 25
+	jxp_tenka_order_at_least_50 = yes
+}
+
+jxp_b_99_can_choose_trade_trigger = {
+	dip_power = 75
+	treasury = 100
+}
+
+jxp_b_99_can_choose_protection_trigger = {
+	dip_power = 100
+	mil_power = 75
+	treasury = 250
+	OR = {
+		jxp_b_99_shogunate_stage_trigger = yes
+		jxp_b_99_unified_stage_trigger = yes
+		AND = {
+			jxp_b_99_daimyo_limited_expedition_trigger = yes
+			NOT = { has_country_flag = jxp_b_99_active_korea }
+			NOT = { has_country_flag = jxp_b_99_active_china }
+		}
+	}
+}
+
+jxp_b_99_can_choose_treaty_port_trigger = {
+	adm_power = 100
+	dip_power = 100
+	treasury = 400
+	num_of_ports = 5
+	navy_size = 20
+	OR = {
+		jxp_b_99_shogunate_stage_trigger = yes
+		jxp_b_99_unified_stage_trigger = yes
+		AND = {
+			jxp_b_99_daimyo_limited_expedition_trigger = yes
+			NOT = { has_country_flag = jxp_b_99_active_china }
+		}
+	}
+}
+
+jxp_b_99_can_choose_direct_campaign_trigger = {
+	adm_power = 150
+	mil_power = 150
+	treasury = 500
+	manpower = 10
+	sailors = 1000
+	stability = 1
+	num_of_ports = 8
+	army_size = 35
+	navy_size = 30
+	adm_tech = 10
+	dip_tech = 10
+	OR = {
+		AND = {
+			jxp_b_99_shogunate_stage_trigger = yes
+			total_development = 300
+			jxp_tenka_order_at_least_50 = yes
+		}
+		AND = {
+			jxp_b_99_unified_stage_trigger = yes
+			total_development = 400
+		}
+		AND = {
+			jxp_b_99_daimyo_limited_expedition_trigger = yes
+			total_development = 250
+			NOT = { has_country_flag = jxp_b_99_active_korea }
+			NOT = { has_country_flag = jxp_b_99_active_china }
+		}
+	}
+}
+
+jxp_b_99_valid_foreign_target_trigger = {
+	exists = yes
+	OR = {
+		is_subject = no
+		is_subject_of_type = tributary_state
+	}
+	NOT = { tag = ROOT }
+}
+
+jxp_b_99_ryukyu_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	owns = 1015
+}
+
+jxp_b_99_korea_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	any_owned_province = { region = korea_region }
+}
+
+jxp_b_99_northern_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	any_owned_province = {
+		OR = {
+			region = manchuria_region
+			region = east_siberia_region
+			area = sakhalin_area
+		}
+	}
+}
+
+jxp_b_99_taiwan_fujian_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	any_owned_province = {
+		OR = {
+			area = taiwan_area
+			area = fujian_area
+		}
+	}
+}
+
+jxp_b_99_china_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	any_owned_province = {
+		is_port = yes
+		OR = {
+			region = north_china_region
+			region = south_china_region
+		}
+	}
+}
+
+jxp_b_99_southeast_asia_target_trigger = {
+	jxp_b_99_valid_foreign_target_trigger = yes
+	any_owned_province = {
+		is_port = yes
+		OR = {
+			region = indo_china_region
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+}
+
+jxp_b_99_port_in_active_theater_trigger = {
+	is_port = yes
+	OR = {
+		AND = { FROM = { has_country_flag = jxp_b_99_active_ryukyu } province_id = 1015 }
+		AND = { FROM = { has_country_flag = jxp_b_99_active_korea } region = korea_region }
+		AND = {
+			FROM = { has_country_flag = jxp_b_99_active_north }
+			OR = { region = manchuria_region region = east_siberia_region area = sakhalin_area }
+		}
+		AND = {
+			FROM = { has_country_flag = jxp_b_99_active_taiwan_fujian }
+			OR = { area = taiwan_area area = fujian_area }
+		}
+		AND = {
+			FROM = { has_country_flag = jxp_b_99_active_china }
+			OR = { region = north_china_region region = south_china_region }
+		}
+		AND = {
+			FROM = { has_country_flag = jxp_b_99_active_southeast_asia }
+			OR = {
+				region = indo_china_region
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+	}
+}
+
+jxp_b_99_province_in_pending_theater_trigger = {
+	OR = {
+		AND = { ROOT = { has_country_flag = jxp_b_99_campaign_ryukyu } province_id = 1015 }
+		AND = { ROOT = { has_country_flag = jxp_b_99_campaign_korea } region = korea_region }
+		AND = {
+			ROOT = { has_country_flag = jxp_b_99_campaign_north }
+			OR = { region = manchuria_region region = east_siberia_region area = sakhalin_area }
+		}
+		AND = {
+			ROOT = { has_country_flag = jxp_b_99_campaign_taiwan_fujian }
+			OR = { area = taiwan_area area = fujian_area }
+		}
+		AND = {
+			ROOT = { has_country_flag = jxp_b_99_campaign_china }
+			OR = { region = north_china_region region = south_china_region }
+		}
+		AND = {
+			ROOT = { has_country_flag = jxp_b_99_campaign_southeast_asia }
+			OR = {
+				region = indo_china_region
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+	}
+}
+
+jxp_b_99_has_pending_governance_trigger = {
+	OR = {
+		has_country_flag = jxp_b_99_campaign_ryukyu
+		has_country_flag = jxp_b_99_campaign_korea
+		has_country_flag = jxp_b_99_campaign_north
+		has_country_flag = jxp_b_99_campaign_taiwan_fujian
+		has_country_flag = jxp_b_99_campaign_china
+		has_country_flag = jxp_b_99_campaign_southeast_asia
+	}
+	any_owned_province = { jxp_b_99_province_in_pending_theater_trigger = yes }
+}

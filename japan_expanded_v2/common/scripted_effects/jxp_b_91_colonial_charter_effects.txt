@@ -1,0 +1,82 @@
+jxp_b_91_clear_colonial_charter_effect = {
+	clr_country_flag = jxp_b_charter_red_seal_town
+	clr_country_flag = jxp_b_charter_military_settlement
+	clr_country_flag = jxp_b_charter_faith_community
+	clr_country_flag = jxp_b_charter_free_port
+	clr_country_flag = jxp_b_charter_naval_station
+	remove_country_modifier = jxp_b_91_charter_red_seal_town
+	remove_country_modifier = jxp_b_91_charter_military_settlement
+	remove_country_modifier = jxp_b_91_charter_faith_community
+	remove_country_modifier = jxp_b_91_charter_free_port
+	remove_country_modifier = jxp_b_91_charter_naval_station
+}
+
+jxp_b_91_apply_red_seal_charter_effect = {
+	jxp_b_91_clear_colonial_charter_effect = yes
+	set_country_flag = jxp_b_charter_red_seal_town
+	add_country_modifier = { name = jxp_b_91_charter_red_seal_town duration = -1 }
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_charter_history_red_seal_town } }
+		set_country_flag = jxp_b_charter_history_red_seal_town
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+	}
+}
+
+jxp_b_91_apply_military_charter_effect = {
+	jxp_b_91_clear_colonial_charter_effect = yes
+	set_country_flag = jxp_b_charter_military_settlement
+	add_country_modifier = { name = jxp_b_91_charter_military_settlement duration = -1 }
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_charter_history_military_settlement } }
+		set_country_flag = jxp_b_charter_history_military_settlement
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_control_10_effect = yes
+		jxp_b_91_subtract_compact_10_effect = yes
+	}
+}
+
+jxp_b_91_apply_faith_charter_effect = {
+	jxp_b_91_clear_colonial_charter_effect = yes
+	set_country_flag = jxp_b_charter_faith_community
+	add_country_modifier = { name = jxp_b_91_charter_faith_community duration = -1 }
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_charter_history_faith_community } }
+		set_country_flag = jxp_b_charter_history_faith_community
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+	}
+}
+
+jxp_b_91_apply_free_port_charter_effect = {
+	jxp_b_91_clear_colonial_charter_effect = yes
+	set_country_flag = jxp_b_charter_free_port
+	add_country_modifier = { name = jxp_b_91_charter_free_port duration = -1 }
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_charter_history_free_port } }
+		set_country_flag = jxp_b_charter_history_free_port
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_15_effect = yes
+	}
+}
+
+jxp_b_91_apply_naval_station_charter_effect = {
+	jxp_b_91_clear_colonial_charter_effect = yes
+	set_country_flag = jxp_b_charter_naval_station
+	add_country_modifier = { name = jxp_b_91_charter_naval_station duration = -1 }
+	if = {
+		limit = { NOT = { has_country_flag = jxp_b_charter_history_naval_station } }
+		set_country_flag = jxp_b_charter_history_naval_station
+		jxp_b_91_add_control_10_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+	}
+}
+
+jxp_b_91_finish_charter_reform_effect = {
+	add_country_modifier = { name = jxp_b_91_charter_reform_cooldown duration = 7300 }
+	add_country_modifier = { name = jxp_b_91_charter_reform_strain duration = 1825 }
+	jxp_b_91_sync_colonial_stage_effect = yes
+}

@@ -1,0 +1,368 @@
+namespace = jxp_eastasia
+
+country_event = {
+	id = jxp_eastasia.1
+	title = "jxp_eastasia.1.t"
+	desc = "jxp_eastasia.1.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_year = 1500
+		NOT = { has_country_flag = jxp_korean_embassy_seen }
+		jxp_oceanic_opening_at_least_20 = yes
+		num_of_ports = 3
+		OR = {
+			korea_region = { has_discovered = ROOT }
+			any_known_country = {
+				capital_scope = { region = korea_region }
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				region = korea_region
+				is_city = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	option = {
+		name = "jxp_eastasia.1.a"
+		set_country_flag = jxp_korean_embassy_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+		add_country_modifier = {
+			name = jxp_celestial_diplomacy
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.1.b"
+		set_country_flag = jxp_korean_embassy_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+		add_country_modifier = {
+			name = jxp_manchu_korean_route
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.2
+	title = "jxp_eastasia.2.t"
+	desc = "jxp_eastasia.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_b_100_can_choose_china_endgame_trigger = yes
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		NOT = { has_country_flag = jxp_mandate_question_seen }
+		adm_power = 100
+		dip_power = 150
+		mil_power = 100
+		treasury = 400
+		OR = {
+			jxp_imperial_sanction_at_least_50 = yes
+			has_country_flag = jxp_eastasia_tribute_registry_seen
+			has_country_modifier = jxp_eastasia_tribute_registry
+		}
+		OR = {
+			any_country = { is_emperor_of_china = yes }
+			any_known_country = {
+				OR = {
+					capital_scope = { region = north_china_region }
+					capital_scope = { region = south_china_region }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 220
+	}
+
+	option = {
+		name = "jxp_eastasia.2.a"
+		trigger = {
+			NOT = { jxp_b_100_has_any_china_endgame_path_trigger = yes }
+			OR = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+				religion_group = pagan
+				religion_group = eastern
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = jxp_path_confucian
+					has_country_flag = jxp_path_imperial
+					tag = CJP
+					tag = EJP
+				}
+			}
+		}
+		set_country_flag = jxp_mandate_question_seen
+		add_adm_power = -100
+		add_dip_power = -150
+		add_treasury = -400
+		jxp_apply_mandate_claim_reward_effect = yes
+		add_prestige = 10
+	}
+
+	option = {
+		name = "jxp_eastasia.2.b"
+		trigger = { NOT = { jxp_b_100_has_any_china_endgame_path_trigger = yes } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = jxp_path_wokou
+					tag = WAK
+					tag = TOY
+				}
+			}
+		}
+		set_country_flag = jxp_mandate_question_seen
+		add_mil_power = -100
+		add_dip_power = -150
+		add_treasury = -400
+		jxp_apply_mandate_break_reward_effect = yes
+		add_prestige = 10
+	}
+
+	option = {
+		name = "jxp_eastasia.2.c"
+		trigger = { NOT = { jxp_b_100_has_any_china_endgame_path_trigger = yes } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_reformed
+					has_country_flag = jxp_path_kaikyo
+				}
+			}
+		}
+		set_country_flag = jxp_mandate_question_seen
+		add_adm_power = -50
+		add_dip_power = -150
+		add_treasury = -400
+		jxp_b_100_choose_rites_path_effect = yes
+		add_prestige = 10
+	}
+
+	option = {
+		name = "jxp_eastasia.2.e"
+		trigger = { jxp_b_100_has_any_china_endgame_path_trigger = yes }
+		set_country_flag = jxp_mandate_question_seen
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.3
+	title = "jxp_eastasia.3.t"
+	desc = "jxp_eastasia.3.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		is_year = 1550
+		NOT = { has_country_flag = jxp_manchu_korean_route_seen }
+		jxp_oceanic_opening_at_least_35 = yes
+		num_of_ports = 5
+		OR = {
+			any_known_country = {
+				OR = {
+					capital_scope = { region = korea_region }
+					capital_scope = { region = north_china_region }
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = korea_region
+					region = north_china_region
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = {
+		name = "jxp_eastasia.3.a"
+		set_country_flag = jxp_manchu_korean_route_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_manchu_korean_route
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.3.b"
+		set_country_flag = jxp_manchu_korean_route_seen
+		jxp_add_tenka_order_5_effect = yes
+		add_mil_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.4
+	title = "jxp_eastasia.4.t"
+	desc = "jxp_eastasia.4.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		jxp_allows_controlled_foreign_channel_trigger = yes
+		has_country_flag = jxp_polity_initialized
+		NOT = { has_country_flag = jxp_eastasia_tribute_registry_seen }
+		jxp_has_confucian_contact_trigger = yes
+		OR = {
+			owns_or_non_sovereign_subject_of = 4182
+			num_of_ports = 6
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 140
+	}
+
+	option = {
+		name = "jxp_eastasia.4.a"
+		set_country_flag = jxp_eastasia_tribute_registry_seen
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+		add_country_modifier = {
+			name = jxp_eastasia_tribute_registry
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.4.b"
+		set_country_flag = jxp_eastasia_tribute_registry_seen
+		jxp_add_oceanic_opening_5_effect = yes
+		add_mercantilism = 1
+		add_country_modifier = {
+			name = jxp_celestial_diplomacy
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.5
+	title = "jxp_eastasia.5.t"
+	desc = "jxp_eastasia.5.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_eastasia.5.a"
+		set_country_flag = jxp_tsushima_channel_office_done
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_tsushima_channel_office
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.5.b"
+		set_country_flag = jxp_tsushima_channel_office_done
+		jxp_add_oceanic_opening_5_effect = yes
+		add_navy_tradition = 5
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.6
+	title = "jxp_eastasia.6.t"
+	desc = "jxp_eastasia.6.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_eastasia.6.a"
+		set_country_flag = jxp_ryukyu_tribute_port_done
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_ryukyu_tribute_port
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.6.b"
+		set_country_flag = jxp_ryukyu_tribute_port_done
+		jxp_add_imperial_sanction_5_effect = yes
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.7
+	title = "jxp_eastasia.7.t"
+	desc = "jxp_eastasia.7.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_eastasia.7.a"
+		jxp_grant_china_littoral_claims_effect = yes
+		add_country_modifier = {
+			name = jxp_china_coast_entrepots
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "jxp_eastasia.7.b"
+		jxp_add_oceanic_opening_5_effect = yes
+		add_mercantilism = 1
+	}
+}
+
+country_event = {
+	id = jxp_eastasia.8
+	title = "jxp_eastasia.8.t"
+	desc = "jxp_eastasia.8.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_eastasia.8.a"
+		jxp_establish_east_asian_rite_sphere_effect = yes
+	}
+
+	option = {
+		name = "jxp_eastasia.8.b"
+		set_country_flag = jxp_east_asian_rite_sphere_done
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_celestial_diplomacy
+			duration = -1
+		}
+	}
+}

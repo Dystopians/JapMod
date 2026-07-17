@@ -1,0 +1,20 @@
+jxp_a_nested_client_status = {
+	land_forcelimit_modifier = -0.05
+	national_tax_modifier = -0.05
+	diplomatic_reputation = -1
+}
+
+jxp_a_nested_patron_status = {
+	land_forcelimit_modifier = 0.05
+	manpower_recovery_speed = 0.05
+}
+
+jxp_a_nested_lord_defiance = {
+	global_unrest = 1
+	prestige = -0.5
+}
+
+jxp_a_nested_military_service = {
+	manpower_recovery_speed = 0.10
+	land_forcelimit_modifier = 0.05
+}

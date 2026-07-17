@@ -1,0 +1,209 @@
+# Government-reform candidate evaluation may change the current scope; keep
+# Japanese identity checks anchored to the country that opened the reform UI.
+jxp_uses_japanese_government_reform_track_trigger = {
+	ROOT = {
+		OR = {
+			culture_group = japanese_g
+			has_reform = daimyo
+			has_reform = indep_daimyo
+			has_reform = shogunate
+			tag = JAP
+			tag = TOY
+			tag = KJP
+			tag = CJP
+			tag = EJP
+			tag = RFJ
+			tag = SJP
+			tag = IJP
+			tag = WAK
+			jxp_has_any_route_trigger = yes
+		}
+	}
+}
+
+jxp_has_final_state_political_profile_trigger = {
+	OR = {
+		jxp_final_state_uncommitted_trigger = yes
+		jxp_final_state_sakoku_trigger = yes
+		jxp_final_state_open_trigger = yes
+		jxp_final_state_kirishitan_trigger = yes
+		jxp_final_state_confucian_trigger = yes
+		jxp_final_state_imperial_trigger = yes
+		jxp_final_state_reformed_trigger = yes
+		jxp_final_state_kaikyo_trigger = yes
+		jxp_final_state_ikko_trigger = yes
+		jxp_final_state_wokou_trigger = yes
+		jxp_a_96_buddhist_exact_route_trigger = yes
+	}
+}
+
+jxp_has_japanese_government_track_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_daimyo_kokujin_oaths
+		has_reform = jxp_reform_daimyo_bunkoku_law
+		has_reform = jxp_reform_daimyo_kachu_hyojoshu
+		has_reform = jxp_reform_japanese_fudai_service_rolls
+		has_reform = jxp_reform_japanese_direct_investiture
+		has_reform = jxp_reform_japanese_gundai_daikan_partition
+		has_reform = jxp_reform_japanese_branch_castle_cadasters
+		has_reform = jxp_reform_japanese_religious_arbitration
+		has_reform = jxp_reform_japanese_temple_land_settlement
+		has_reform = jxp_reform_japanese_ashigaru_muster_rolls
+		has_reform = jxp_reform_japanese_kyuba_hatamoto
+		has_reform = jxp_reform_japanese_castle_artillery_office
+		has_reform = jxp_reform_japanese_funade_ura_service
+		has_reform = jxp_reform_japanese_lordly_arbitration
+		has_reform = jxp_reform_japanese_elder_countersignature
+		has_reform = jxp_reform_japanese_domain_assembly
+		has_reform = jxp_reform_japanese_court_temple_service
+		has_reform = jxp_reform_japanese_yuhitsu_accountants
+		has_reform = jxp_reform_japanese_fudai_magistracy
+		has_reform = jxp_reform_japanese_public_authority
+		has_reform = jxp_reform_japanese_townsmen_guild_charters
+		has_reform = jxp_reform_japanese_checkpoint_red_seals
+		has_reform = jxp_reform_japanese_rakuichi_rakuza
+		has_reform = jxp_reform_japanese_war_provisioning
+		has_reform = jxp_reform_japanese_coinage_edicts
+		has_reform = jxp_reform_japanese_new_field_works
+		has_reform = jxp_reform_japanese_overseas_settlement_office
+		has_reform = jxp_reform_japanese_rule_by_arms
+		has_reform = jxp_reform_japanese_general_peace
+		has_reform = jxp_reform_japanese_service_compact
+		has_reform = jxp_reform_japanese_quarrel_suppression
+		has_reform = jxp_reform_japanese_common_security
+		has_reform = jxp_reform_japanese_unitary_investiture
+		has_reform = jxp_reform_japanese_domain_federation
+		has_reform = jxp_reform_japanese_benevolent_government
+		has_reform = jxp_reform_japanese_divine_law
+		has_reform = jxp_reform_japanese_buke_laws_inspectors
+		has_reform = jxp_reform_japanese_hyojosho_collegial_offices
+		has_reform = jxp_reform_japanese_petition_direct_appeal
+	}
+}
+
+jxp_is_daimyo_stage_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		has_reform = daimyo
+		has_reform = indep_daimyo
+		has_reform = shogunate
+	}
+	NOT = { tag = JAP }
+	NOT = { tag = KJP }
+	NOT = { tag = CJP }
+	NOT = { tag = EJP }
+	NOT = { tag = RFJ }
+	NOT = { tag = SJP }
+	NOT = { tag = IJP }
+	NOT = { tag = WAK }
+	NOT = { tag = TOY }
+	NOT = { jxp_has_any_route_trigger = yes }
+}
+
+jxp_daimyo_has_working_port_trigger = {
+	jxp_is_daimyo_stage_trigger = yes
+	num_of_ports = 1
+}
+
+	jxp_is_major_daimyo_tag_trigger = {
+	OR = {
+		tag = ODA
+		tag = TOY
+		tag = TKG
+		tag = TKD
+		tag = UES
+		tag = HJO
+		tag = MRI
+		tag = SMZ
+		tag = OTM
+		tag = DTE
+		tag = ASK
+		tag = CSK
+		tag = OUC
+		tag = IMG
+		tag = SOO
+		tag = AMA
+		tag = ASA
+		tag = HSK
+		tag = HTK
+		tag = IKE
+		tag = MAE
+		tag = SBA
+		tag = YMN
+		tag = RFR
+		tag = KTB
+		tag = AKM
+		tag = AKT
+		tag = CBA
+		tag = ISK
+		tag = ITO
+		tag = KKC
+		tag = KNO
+		tag = OGS
+		tag = SHN
+		tag = STK
+		tag = TKI
+		tag = UTN
+		tag = TTI
+	}
+}
+
+jxp_has_major_daimyo_origin_trigger = {
+	OR = {
+		has_country_flag = jxp_origin_oda
+		has_country_flag = jxp_origin_tkg
+		has_country_flag = jxp_origin_tkd
+		has_country_flag = jxp_origin_ues
+		has_country_flag = jxp_origin_hjo
+		has_country_flag = jxp_origin_mri
+		has_country_flag = jxp_origin_smz
+		has_country_flag = jxp_origin_otm
+		has_country_flag = jxp_origin_dte
+		has_country_flag = jxp_origin_ask
+		has_country_flag = jxp_origin_csk
+		has_country_flag = jxp_origin_ouc
+		has_country_flag = jxp_origin_img
+		has_country_flag = jxp_origin_soo
+		has_country_flag = jxp_origin_ama
+		has_country_flag = jxp_origin_asa
+		has_country_flag = jxp_origin_hsk
+		has_country_flag = jxp_origin_htk
+		has_country_flag = jxp_origin_ike
+		has_country_flag = jxp_origin_mae
+		has_country_flag = jxp_origin_sba
+		has_country_flag = jxp_origin_ymn
+		has_country_flag = jxp_origin_rfr
+		has_country_flag = jxp_origin_ktb
+		has_country_flag = jxp_origin_akm
+		has_country_flag = jxp_origin_akt
+		has_country_flag = jxp_origin_cba
+		has_country_flag = jxp_origin_isk
+		has_country_flag = jxp_origin_ito
+		has_country_flag = jxp_origin_kkc
+		has_country_flag = jxp_origin_kno
+		has_country_flag = jxp_origin_ogs
+		has_country_flag = jxp_origin_shn
+		has_country_flag = jxp_origin_stk
+		has_country_flag = jxp_origin_tki
+		has_country_flag = jxp_origin_utn
+		has_country_flag = jxp_origin_tti
+	}
+}
+
+jxp_is_unified_japan_state_trigger = {
+	OR = {
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		tag = TOY
+	}
+}
+
+jxp_oceanic_opening_at_least_25 = {
+	check_variable = { which = jxp_oceanic_opening value = 25 }
+}

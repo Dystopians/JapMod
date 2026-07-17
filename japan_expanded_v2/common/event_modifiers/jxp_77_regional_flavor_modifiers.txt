@@ -1,0 +1,33 @@
+jxp_77_regional_council_recent = {
+	global_trade_power = -0.01
+}
+
+jxp_77_tsushima_interpreter_office = {
+	envoy_travel_time = -0.10
+	improve_relation_modifier = 0.10
+}
+
+jxp_77_tsushima_coastal_watch = {
+	naval_morale = 0.05
+	global_sailors_modifier = 0.08
+}
+
+jxp_77_setouchi_pilot_charters = {
+	galley_power = 0.10
+	trade_efficiency = 0.05
+}
+
+jxp_77_setouchi_toll_compromise = {
+	global_unrest = -0.5
+	global_ship_trade_power = 0.08
+}
+
+jxp_77_ryukyu_tribute_bureau = {
+	improve_relation_modifier = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_77_ryukyu_free_port = {
+	global_institution_spread = 0.10
+	trade_steering = 0.10
+}

@@ -1,0 +1,216 @@
+namespace = jxp_disasters
+
+country_event = {
+	id = jxp_disasters.1
+	title = "jxp_disasters.1.t"
+	desc = "jxp_disasters.1.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_keian_ronin_crisis_active
+	}
+
+	option = {
+		name = "jxp_disasters.1.a"
+		add_adm_power = -50
+		add_country_modifier = {
+			name = jxp_keian_ronin_reemployment
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_disasters.1.b"
+		add_mil_power = -50
+		add_country_modifier = {
+			name = jxp_keian_ronin_patrols
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_disasters.2
+	title = "jxp_disasters.2.t"
+	desc = "jxp_disasters.2.d"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_tenmei_famine_active
+	}
+
+	option = {
+		name = "jxp_disasters.2.a"
+		add_adm_power = -75
+		add_treasury = -100
+		add_country_modifier = {
+			name = jxp_tenmei_relief_granaries
+			duration = 3650
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+	option = {
+		name = "jxp_disasters.2.b"
+		add_dip_power = -50
+		add_country_modifier = {
+			name = jxp_tenmei_rationing
+			duration = 3650
+		}
+		jxp_add_tenka_order_5_effect = yes
+	}
+}
+
+# Scripted effects load before custom disaster IDs are safe to validate in
+# EU4 1.37.5. Debug controls dispatch here so the engine resolves the target
+# disaster from the event layer, matching the vanilla add-progress pattern.
+country_event = {
+	id = jxp_disasters.80
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_disaster_progress = {
+			disaster = jxp_shimabara_fire
+			value = 100
+		}
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.81
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_disaster_progress = {
+			disaster = jxp_ikko_rising
+			value = 100
+		}
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.82
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_disaster_progress = {
+			disaster = jxp_keian_ronin_crisis
+			value = 100
+		}
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.83
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_disaster_progress = {
+			disaster = jxp_tenmei_famine
+			value = 100
+		}
+	}
+
+	option = { name = "OK" }
+}
+
+# Disaster hooks accept an event ID, not an inline effect block. Keep all
+# teardown state in hidden triggered-only events so every disaster registers.
+country_event = {
+	id = jxp_disasters.90
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_shimabara_resolved
+		clr_country_flag = jxp_shimabara_crisis_active
+		clr_country_flag = jxp_shimabara_mitigated
+		remove_country_modifier = jxp_shimabara_mediation
+		remove_country_modifier = jxp_shimabara_suppressed
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.91
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_ikko_rising_resolved
+		clr_country_flag = jxp_ikko_rising_active
+		remove_country_modifier = jxp_ikko_reconciled
+		remove_country_modifier = jxp_ikko_suppressed
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.92
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_keian_ronin_crisis_resolved
+		clr_country_flag = jxp_keian_ronin_crisis_active
+		remove_country_modifier = jxp_keian_ronin_reemployment
+		remove_country_modifier = jxp_keian_ronin_patrols
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_disasters.93
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_tenmei_famine_resolved
+		clr_country_flag = jxp_tenmei_famine_active
+		remove_country_modifier = jxp_tenmei_relief_granaries
+		remove_country_modifier = jxp_tenmei_rationing
+	}
+
+	option = { name = "OK" }
+}

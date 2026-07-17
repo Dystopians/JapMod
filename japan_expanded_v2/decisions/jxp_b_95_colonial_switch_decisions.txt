@@ -1,0 +1,16 @@
+country_decisions = {
+	jxp_b_decision_review_colonial_leadership = {
+		major = yes
+
+		potential = { jxp_b_95_player_switch_review_ready_trigger = yes }
+
+		allow = {
+			is_at_war = no
+			stability = 0
+		}
+
+		effect = { country_event = { id = jxp_colonial_switch.1 days = 1 } }
+
+		ai_will_do = { factor = 0 }
+	}
+}

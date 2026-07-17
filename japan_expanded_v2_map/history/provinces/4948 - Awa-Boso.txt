@@ -1,0 +1,35 @@
+#4948 - Awa-Boso
+
+owner = CBA
+controller = CBA
+culture = togoku
+religion = shinto
+capital = "Tateyama"
+trade_goods = fish
+hre = no
+base_tax = 2
+base_manpower = 2
+base_production = 1
+is_city = yes
+add_core = CBA
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1 = { discovered_by = POR }
+
+1456.1.1 = {
+	owner = STM
+	controller = STM
+	add_core = STM
+	remove_core = CBA
+}
+1614.1.1 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = STM
+}

@@ -1,0 +1,579 @@
+jxp_oda_toyotomi_house_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ODA
+	}
+	has_country_shield = yes
+
+	jxp_mission_oda_rakuichi_network = {
+		icon = mission_market_place_with_asian_traders
+		position = 1
+		required_missions = { }
+		trigger = {
+			mission_completed = jxp_mission_daimyo_domain_accounts
+			num_of_cities = 3
+			adm_power = 50
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_adm_power = 35
+			add_country_modifier = {
+				name = jxp_70_toyotomi_market_charters
+				duration = 5475
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_oda_tenka_fubu_mainline = {
+		icon = mission_japanese_samurai
+		position = 3
+		required_missions = { jxp_mission_oda_rakuichi_network jxp_a_mission_oda_kiyosu_judgment }
+		trigger = {
+			army_size_percentage = 0.75
+			army_tradition = 15
+			prestige = 10
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_mil_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_tenka_command
+				duration = 7300
+			}
+			set_country_flag = jxp_43_selected_oda_tenka_fubu
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_oda_azuchi_statutes_mainline = {
+		icon = mission_japanese_fort
+		position = 5
+		required_missions = { jxp_mission_oda_tenka_fubu_mainline }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1835
+			stability = 1
+			legitimacy = 60
+		}
+		effect = {
+			jxp_ensure_daimyo_polity_effect = yes
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_azuchi_offices
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_name_and_osaka = {
+		icon = mission_monarch_in_throne_room
+		position = 7
+		required_missions = { jxp_mission_oda_azuchi_statutes_mainline }
+		trigger = {
+			has_country_flag = jxp_a_oda_succession_toyotomi
+			is_year = 1586
+			owns_or_non_sovereign_subject_of = 1020
+			owns_or_non_sovereign_subject_of = 1021
+			legitimacy = 70
+		}
+		effect = {
+			jxp_establish_toyotomi_identity_effect = yes
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_70_toyotomi_osaka_works
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_taiko_cadaster = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { jxp_mission_toyotomi_name_and_osaka }
+		trigger = {
+			tag = TOY
+			total_development = 300
+			adm_tech = 8
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_cadaster_office
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_realm_settlement = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { jxp_mission_toyotomi_taiko_cadaster }
+		trigger = {
+			tag = TOY
+			jxp_tenka_order_at_least_50 = yes
+			total_development = 450
+			owns_or_non_sovereign_subject_of = 1020
+			owns_or_non_sovereign_subject_of = 1028
+		}
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_realm_settlement
+				duration = 9125
+			}
+			set_country_flag = jxp_24_house_path_completed
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+}
+
+# The historical Toyotomi polity is a unified realm, not another daimyo.  Its
+# three interlocking columns combine with the shared state/court columns and
+# form a complete, non-generic five-column tree from the first loaded day.
+jxp_toyotomi_realm_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TOY
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_toyotomi_yamazaki_settlement = {
+		icon = mission_japanese_samurai
+		position = 1
+		required_missions = { }
+		trigger = {
+			has_country_flag = jxp_toyotomi_identity_established
+			owns_or_non_sovereign_subject_of = 1020
+			legitimacy = 50
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = jxp_70_toyotomi_yamazaki_settlement
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_kampaku_appointment = {
+		icon = mission_monarch_in_throne_room
+		position = 3
+		required_missions = { jxp_mission_toyotomi_osaka_castle_town }
+		trigger = {
+			legitimacy = 75
+			prestige = 20
+			owns_or_non_sovereign_subject_of = 1020
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_kampaku_audiences
+				duration = 7300
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_cadaster_realm = {
+		icon = mission_rice_field
+		position = 5
+		required_missions = { jxp_mission_toyotomi_jurakudai_audiences }
+		trigger = {
+			total_development = 300
+			adm_tech = 10
+			stability = 1
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_cadaster_office
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_sword_hunt_realm = {
+		icon = mission_japanese_samurai
+		position = 7
+		required_missions = { jxp_mission_toyotomi_sakai_magistrates }
+		trigger = {
+			jxp_tenka_order_at_least_50 = yes
+			stability = 1
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = {
+			add_mil_power = 60
+			add_country_modifier = {
+				name = jxp_70_toyotomi_sword_hunt_order
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_sobuji_order = {
+		icon = mission_unite_home_region
+		position = 9
+		required_missions = { jxp_mission_toyotomi_kuraire_ledgers }
+		trigger = {
+			jxp_has_main_island_strategic_control_trigger = yes
+			stability = 2
+			war_exhaustion = 2
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_70_toyotomi_sobuji_peace
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_five_commissions = {
+		icon = mission_assemble_an_army
+		position = 11
+		required_missions = { jxp_mission_toyotomi_gold_silver_offices }
+		trigger = {
+			has_country_flag = jxp_toyotomi_identity_established
+			legitimacy = 85
+			stability = 2
+			adm_tech = 12
+		}
+		effect = {
+			change_government_reform_progress = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_five_regents_policy
+				duration = 9125
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+			regenerate_government_mechanics = yes
+		}
+	}
+
+	jxp_mission_toyotomi_settle_succession = {
+		icon = mission_monarch_in_throne_room
+		position = 13
+		required_missions = { jxp_mission_toyotomi_momoyama_patronage }
+		trigger = {
+			has_heir = yes
+			legitimacy = 90
+			stability = 2
+			has_any_disaster = no
+		}
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 50
+			set_country_flag = jxp_24_house_path_completed
+			add_country_modifier = {
+				name = jxp_70_toyotomi_taiko_testament
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_toyotomi_court_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TOY
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_toyotomi_osaka_castle_town = {
+		icon = mission_japanese_fort
+		position = 2
+		required_missions = { jxp_mission_toyotomi_yamazaki_settlement jxp_mission_toyotomi_kyushu_settlement }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1021
+			treasury = 300
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_osaka_works
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_jurakudai_audiences = {
+		icon = mission_monarch_in_throne_room
+		position = 4
+		required_missions = { jxp_mission_toyotomi_kampaku_appointment jxp_mission_toyotomi_oshu_pacification }
+		trigger = {
+			prestige = 35
+			legitimacy = 80
+			jxp_imperial_sanction_at_least_50 = yes
+		}
+		effect = {
+			add_dip_power = 60
+			add_country_modifier = {
+				name = jxp_70_toyotomi_kampaku_audiences
+				duration = 9125
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_sakai_magistrates = {
+		icon = mission_market_place_with_asian_traders
+		position = 6
+		required_missions = { jxp_mission_toyotomi_cadaster_realm jxp_mission_toyotomi_ryukyu_letters }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1021
+			num_of_ports = 5
+			treasury = 500
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = jxp_70_toyotomi_osaka_granaries
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_kuraire_ledgers = {
+		icon = mission_rice_field
+		position = 8
+		required_missions = { jxp_mission_toyotomi_sword_hunt_realm jxp_mission_toyotomi_tsushima_channel }
+		trigger = {
+			total_development = 400
+			treasury = 750
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_kuraire_domain
+				duration = 9125
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_gold_silver_offices = {
+		icon = mission_high_income
+		position = 10
+		required_missions = { jxp_mission_toyotomi_sobuji_order jxp_mission_toyotomi_continental_preparations }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 4183
+			total_development = 500
+			treasury = 1000
+		}
+		effect = {
+			add_treasury = 250
+			add_country_modifier = {
+				name = jxp_70_toyotomi_gold_silver_offices
+				duration = 9125
+			}
+		}
+	}
+
+	jxp_mission_toyotomi_momoyama_patronage = {
+		icon = mission_early_modern_university
+		position = 12
+		required_missions = { jxp_mission_toyotomi_five_commissions jxp_mission_toyotomi_east_asian_negotiations }
+		trigger = {
+			prestige = 50
+			adm_tech = 12
+			treasury = 1000
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = jxp_70_toyotomi_momoyama_court
+				duration = 9125
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_taiko_testament = {
+		icon = mission_monarch_in_throne_room
+		position = 14
+		required_missions = { jxp_mission_toyotomi_settle_succession jxp_mission_toyotomi_peace_beneath_heaven }
+		trigger = {
+			adm_tech = 15
+			government_rank = 2
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = {
+			add_prestige = 25
+			change_government_reform_progress = 100
+			add_country_modifier = {
+				name = jxp_70_toyotomi_taiko_testament
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_toyotomi_horizon_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TOY
+		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_toyotomi_kyushu_settlement = {
+		icon = mission_unite_home_region
+		position = 1
+		required_missions = { }
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				region = japan_region
+			}
+			army_size_percentage = 0.75
+		}
+		effect = {
+			add_mil_power = 50
+			add_army_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_oshu_pacification = {
+		icon = mission_to_japan
+		position = 3
+		required_missions = { jxp_mission_toyotomi_osaka_castle_town }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1028
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 24
+				region = japan_region
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = jxp_70_toyotomi_realm_settlement
+				duration = 7300
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_ryukyu_letters = {
+		icon = mission_trade_with_japan
+		position = 5
+		required_missions = { jxp_mission_toyotomi_jurakudai_audiences }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1015
+			diplomatic_reputation = 1
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_70_toyotomi_channel_embassies
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_tsushima_channel = {
+		icon = mission_trade_with_japan
+		position = 7
+		required_missions = { jxp_mission_toyotomi_sakai_magistrates }
+		trigger = {
+			owns_or_non_sovereign_subject_of = 4651
+			num_of_ports = 6
+			navy_tradition = 15
+		}
+		effect = {
+			add_dip_power = 50
+			add_navy_tradition = 5
+			add_country_modifier = {
+				name = jxp_70_toyotomi_channel_embassies
+				duration = 9125
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_continental_preparations = {
+		icon = mission_cannons_firing
+		position = 9
+		required_missions = { jxp_mission_toyotomi_kuraire_ledgers }
+		trigger = {
+			army_size_percentage = 0.8
+			navy_size_percentage = 0.8
+			num_of_ports = 8
+			mil_tech = 12
+		}
+		effect = {
+			add_mil_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_continental_staff
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_toyotomi_east_asian_negotiations = {
+		icon = mission_diplomatic_relation
+		position = 11
+		required_missions = { jxp_mission_toyotomi_gold_silver_offices }
+		trigger = {
+			dip_tech = 13
+			navy_tradition = 30
+			num_of_ports = 10
+		}
+		effect = {
+			add_dip_power = 75
+			add_country_modifier = {
+				name = jxp_70_toyotomi_channel_embassies
+				duration = 9125
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_toyotomi_peace_beneath_heaven = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { jxp_mission_toyotomi_momoyama_patronage }
+		trigger = {
+			jxp_has_main_island_strategic_control_trigger = yes
+			is_at_war = no
+			prestige = 75
+			stability = 2
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_70_toyotomi_sobuji_peace
+				duration = -1
+			}
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+}

@@ -1,0 +1,39 @@
+jxp_b_97_release_filtered_overseas_subjects_effect = {
+	every_subject_country = {
+		limit = { jxp_b_97_is_overseas_colonial_subject_trigger = yes }
+		grant_independence = yes
+		set_country_flag = jxp_iface_colonial_self_rule
+		set_country_flag = jxp_iface_colonial_independence
+		jxp_b_96_clear_independence_crisis_effect = yes
+	}
+}
+
+jxp_b_97_remove_metropole_overseas_claims_effect = {
+	every_province = {
+		limit = {
+			OR = {
+				continent = new_world
+				region = oceanea_region
+			}
+			OR = {
+				is_claim = ROOT
+				is_permanent_claim = ROOT
+			}
+		}
+		remove_claim = ROOT
+	}
+}
+
+jxp_b_97_break_metropole_new_world_rule_effect = {
+	set_country_flag = jxp_iface_metropole_new_world_rule_broken
+	add_country_modifier = { name = jxp_b_97_overseas_rights_revoked duration = 14600 }
+	jxp_b_97_release_filtered_overseas_subjects_effect = yes
+	jxp_b_97_remove_metropole_overseas_claims_effect = yes
+	jxp_b_92_regional_colonial_cleanup_effect = yes
+	jxp_b_91_clear_colonial_charter_effect = yes
+	jxp_b_91_colonial_society_cleanup_effect = yes
+	if = {
+		limit = { has_country_flag = jxp_76_pacific_network_active }
+		jxp_76_pacific_network_cleanup_effect = yes
+	}
+}

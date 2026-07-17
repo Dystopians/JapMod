@@ -1,0 +1,192 @@
+# Secondary colonial constitutions. Exact-tag potentials prevent these reforms
+# from leaking into Japanese home polities or unrelated colonial countries.
+
+jxp_b_95_hkk_company_republic_reform = {
+	icon = "colonial_companies"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = HKK }
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.10
+		global_manpower_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 2 has_country_flag = jxp_b_charter_free_port }
+		modifier = { factor = 2 has_country_flag = jxp_b_92_north_model_free_harbor }
+	}
+}
+
+jxp_b_95_hkk_frontier_bakufu_reform = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	maintain_dynasty = yes
+	valid_for_nation_designer = no
+	potential = { tag = HKK }
+	modifiers = {
+		global_manpower_modifier = 0.10
+		defensiveness = 0.10
+		stability_cost_modifier = 0.10
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_military_settlement }
+		modifier = { factor = 2 army_tradition = 40 }
+	}
+}
+
+jxp_b_95_hkk_northern_peoples_assembly_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = HKK }
+	modifiers = {
+		tolerance_heathen = 1
+		reform_progress_growth = 0.10
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_92_north_model_ainu_brokers }
+		modifier = { factor = 2 check_variable = { which = jxp_b_local_compact value = 70 } }
+	}
+}
+
+jxp_b_95_njf_japan_town_league_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NJF }
+	modifiers = {
+		diplomatic_reputation = 1
+		global_trade_power = 0.05
+		governing_capacity_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 2 has_country_flag = jxp_b_92_south_seas_model_authorized }
+		modifier = { factor = 2 check_variable = { which = jxp_b_local_compact value = 65 } }
+	}
+}
+
+jxp_b_95_njf_red_seal_company_state_reform = {
+	icon = "asian_scripture"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NJF }
+	modifiers = {
+		merchants = 1
+		trade_steering = 0.10
+		yearly_corruption = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_red_seal_town }
+		modifier = { factor = 2 has_country_flag = jxp_b_92_south_seas_model_merchant }
+	}
+}
+
+jxp_b_95_njf_southern_military_diaspora_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	maintain_dynasty = yes
+	valid_for_nation_designer = no
+	potential = { tag = NJF }
+	modifiers = {
+		mercenary_cost = -0.10
+		mercenary_discipline = 0.025
+		global_unrest = 1
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_military_settlement }
+		modifier = { factor = 2 army_tradition = 40 }
+	}
+}
+
+jxp_b_95_njf_plural_port_federation_reform = {
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NJF }
+	modifiers = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_faith_community }
+		modifier = { factor = 2 religious_unity = 0.80 }
+	}
+}
+
+jxp_b_95_oia_island_kingdom_reform = {
+	icon = "crown"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	maintain_dynasty = yes
+	valid_for_nation_designer = no
+	potential = { tag = OIA }
+	modifiers = {
+		legitimacy = 1
+		diplomatic_reputation = 1
+		naval_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_92_island_model_faith }
+		modifier = { factor = 2 check_variable = { which = jxp_b_metropole_control value = 40 } }
+	}
+}
+
+jxp_b_95_oia_harbor_assembly_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = OIA }
+	modifiers = {
+		reform_progress_growth = 0.10
+		global_trade_power = 0.05
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_92_island_model_council }
+		modifier = { factor = 2 check_variable = { which = jxp_b_local_compact value = 70 } }
+	}
+}
+
+jxp_b_95_oia_oceanic_naval_league_reform = {
+	icon = "admiralty_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = OIA }
+	modifiers = {
+		ship_durability = 0.05
+		naval_forcelimit_modifier = 0.10
+		global_ship_cost = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_naval_station }
+		modifier = { factor = 2 navy_tradition = 35 }
+	}
+}

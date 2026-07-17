@@ -1,0 +1,29 @@
+jxp_a_img_three_power_network_trigger = {
+	OR = {
+		AND = {
+			TKD = { exists = yes }
+			HJO = { exists = yes }
+			alliance_with = TKD
+			alliance_with = HJO
+		}
+		AND = {
+			NOT = {
+				AND = {
+					TKD = { exists = yes }
+					HJO = { exists = yes }
+				}
+			}
+			num_of_allies = 2
+			any_ally = {
+				culture_group = japanese_g
+				is_neighbor_of = ROOT
+			}
+		}
+	}
+}
+
+jxp_a_oda_government_branch_unlocked_trigger = {
+	tag = ODA
+	jxp_is_daimyo_stage_trigger = yes
+	has_country_flag = jxp_a_oda_government_terminal_unlocked
+}

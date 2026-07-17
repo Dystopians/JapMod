@@ -1,0 +1,112 @@
+jxp_b_101_korea_campaign_actor_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	is_subject = no
+	OR = {
+		jxp_is_unified_japan_state_trigger = yes
+		AND = {
+			has_reform = shogunate
+			num_of_cities = 20
+		}
+	}
+}
+
+jxp_b_101_korea_exists_trigger = {
+	exists = KOR
+	KOR = {
+		exists = yes
+		capital_scope = { region = korea_region }
+	}
+}
+
+jxp_b_101_can_begin_korea_preparations_trigger = {
+	jxp_b_101_korea_campaign_actor_trigger = yes
+	jxp_b_101_korea_exists_trigger = yes
+	is_at_war = no
+	is_year = 1550
+	stability = 1
+	num_of_cities = 20
+	num_of_ports = 5
+	naval_forcelimit = 20
+	num_of_transport = 8
+	manpower_percentage = 0.60
+	treasury = 200
+	NOT = { is_bankrupt = yes }
+	NOT = { has_country_flag = jxp_b_101_korea_campaign_active }
+	NOT = { has_country_flag = jxp_b_101_korea_campaign_completed }
+}
+
+jxp_b_101_korea_preparations_active_trigger = {
+	jxp_b_101_korea_campaign_actor_trigger = yes
+	has_country_flag = jxp_b_101_korea_campaign_active
+	NOT = { has_country_flag = jxp_b_101_korea_stage_10_done }
+	jxp_b_101_korea_exists_trigger = yes
+	is_at_war = no
+	NOT = { is_bankrupt = yes }
+}
+
+jxp_b_101_korea_expedition_ready_trigger = {
+	jxp_b_101_korea_campaign_actor_trigger = yes
+	has_country_flag = jxp_b_101_korea_stage_10_done
+	has_country_modifier = jxp_b_101_korea_expedition_ready
+	jxp_b_101_korea_exists_trigger = yes
+}
+
+jxp_b_101_korea_war_active_trigger = {
+	has_country_flag = jxp_b_101_korea_war_started
+	war_with = KOR
+}
+
+jxp_b_101_transport_at_least_40_trigger = {
+	check_variable = { which = jxp_b_korea_transport_capacity value = 40 }
+}
+
+jxp_b_101_grain_at_least_40_trigger = {
+	check_variable = { which = jxp_b_korea_grain_reserve value = 40 }
+}
+
+jxp_b_101_support_at_least_40_trigger = {
+	check_variable = { which = jxp_b_korea_expedition_support value = 40 }
+}
+
+jxp_b_101_compliance_at_least_40_trigger = {
+	check_variable = { which = jxp_b_korea_daimyo_compliance value = 40 }
+}
+
+jxp_b_101_sea_control_at_least_40_trigger = {
+	check_variable = { which = jxp_b_korea_sea_control value = 40 }
+}
+
+jxp_b_101_owns_korean_province_trigger = {
+	num_of_owned_provinces_with = {
+		value = 1
+		region = korea_region
+	}
+}
+
+jxp_b_101_owns_southern_korean_foothold_trigger = {
+	num_of_owned_provinces_with = {
+		value = 1
+		OR = {
+			area = south_korea_area
+			area = eastern_korea_area
+		}
+	}
+}
+
+jxp_b_101_owns_direct_rule_base_trigger = {
+	num_of_owned_provinces_with = {
+		value = 8
+		region = korea_region
+	}
+}
+
+jxp_b_101_korea_is_subject_trigger = {
+	exists = KOR
+	KOR = { is_subject_of = ROOT }
+}
+
+jxp_b_101_can_use_korean_expedition_cb_trigger = {
+	jxp_b_101_korea_expedition_ready_trigger = yes
+	is_at_war = no
+	NOT = { truce_with = KOR }
+}

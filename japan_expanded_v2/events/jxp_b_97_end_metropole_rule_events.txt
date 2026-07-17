@@ -1,0 +1,27 @@
+namespace = jxp_end_metropole_rule
+
+country_event = {
+	id = jxp_end_metropole_rule.1
+	title = "jxp_end_metropole_rule.1.t"
+	desc = "jxp_end_metropole_rule.1.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_end_metropole_rule.1.a"
+		add_prestige = 20
+		custom_tooltip = jxp_b_97_release_only_safety_tt
+	}
+}
+
+country_event = {
+	id = jxp_end_metropole_rule.2
+	title = "jxp_end_metropole_rule.2.t"
+	desc = "jxp_end_metropole_rule.2.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_end_metropole_rule.2.a"
+		add_prestige = -25
+		add_stability = -1
+	}
+}

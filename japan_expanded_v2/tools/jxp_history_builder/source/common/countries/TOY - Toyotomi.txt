@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 72 43 91 }
+revolutionary_colors = { 7 4 9 }
+
+random_nation_chance = 0
+historical_score = 450
+
+historical_idea_groups = {
+	administrative_ideas
+	economic_ideas
+	diplomatic_ideas
+	quality_ideas
+	offensive_ideas
+	trade_ideas
+	expansion_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"秀吉 #0" = 100
+	"秀次 #0" = 40
+	"秀赖 #0" = 80
+	"秀长 #0" = 30
+	"秀胜 #0" = 20
+	"宁宁 #0" = -20
+	"淀 #0" = -20
+}
+
+leader_names = {
+	丰臣 羽柴 石田 大谷 加藤 福岛 浅野 蜂须贺 前田 宇喜多 小西 增田 长束
+}
+
+ship_names = {
+	"大坂丸" "伏见丸" "聚乐丸" "淀丸" "濑户丸" "朱印丸"
+	"日本丸" "堺丸" "长崎丸" "博多丸" "安宅丸" "御座船"
+	"高丽丸" "桃山丸" "太阁丸" "浪速丸"
+}
+
+army_names = {
+	"太阁军" "$PROVINCE$军" "$PROVINCE$众" "$PROVINCE$备"
+}
+
+fleet_names = {
+	"大坂水军" "$PROVINCE$水军" "$PROVINCE$船团"
+}

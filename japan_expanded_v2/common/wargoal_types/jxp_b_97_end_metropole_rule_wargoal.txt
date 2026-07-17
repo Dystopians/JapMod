@@ -1,0 +1,19 @@
+jxp_b_end_metropole_colonial_rule_wargoal = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 1
+		peace_options = { po_jxp_b_end_metropole_colonial_rule }
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = { po_concede_defeat }
+	}
+
+	war_name = JXP_B_END_METROPOLE_RULE_WAR_NAME
+}

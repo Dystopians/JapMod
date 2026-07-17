@@ -1,0 +1,684 @@
+jxp_japan_eastasia_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = jxp_path_open_trade
+		jxp_can_use_overseas_expansion_trigger = yes
+	}
+	has_country_shield = yes
+
+	jxp_mission_eastasia_ryukyu_gateway = {
+		icon = mission_trade_with_japan
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_open_nagasaki
+			num_of_ports = 5
+			dip_tech = 7
+			any_owned_province = {
+				region = japan_region
+				has_port = yes
+			}
+		}
+		effect = {
+			add_dip_power = 25
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_eastasia_korea_embassy = {
+		icon = mission_to_japan
+		position = 2
+		required_missions = { jxp_mission_eastasia_ryukyu_gateway }
+		trigger = {
+			mission_completed = jxp_mission_nanban_factory
+			OR = {
+				korea_region = { has_discovered = ROOT }
+				any_known_country = { capital_scope = { region = korea_region } }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					region = korea_region
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.1 }
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_eastasia_ming_trade = {
+		icon = mission_trade_with_japan
+		position = 3
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_ryukyu_gateway
+			mission_completed = jxp_mission_nanban_factory
+			OR = {
+				jxp_has_confucian_contact_trigger = yes
+				any_known_country = {
+					OR = {
+						capital_scope = { region = north_china_region }
+						capital_scope = { region = south_china_region }
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jxp_celestial_diplomacy
+				duration = 3650
+			}
+			jxp_add_imperial_sanction_5_effect = yes
+		}
+	}
+
+	jxp_mission_eastasia_ryukyu_registry = {
+		icon = mission_market_place_with_asian_traders
+		position = 4
+		required_missions = { jxp_mission_eastasia_ming_trade }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_ryukyu_gateway
+			dip_tech = 8
+			OR = {
+				owns_or_non_sovereign_subject_of = 1015
+				num_of_ports = 8
+				has_country_modifier = jxp_eastasia_tribute_registry
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.6 }
+		}
+	}
+
+	jxp_mission_eastasia_liaodong_route = {
+		icon = mission_establish_high_seas_navy
+		position = 5
+		required_missions = { jxp_mission_eastasia_ryukyu_registry }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_korea_embassy
+			mission_completed = jxp_mission_red_seal_ships
+			jxp_oceanic_opening_at_least_35 = yes
+			OR = {
+				any_known_country = {
+					OR = {
+						capital_scope = { region = korea_region }
+						capital_scope = { region = north_china_region }
+					}
+				}
+				any_owned_province = {
+					OR = {
+						region = korea_region
+						region = north_china_region
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.3 }
+			add_country_modifier = {
+				name = jxp_manchu_korean_route
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_eastasia_tribute_registry = {
+		icon = mission_high_income
+		position = 6
+		required_missions = { jxp_mission_eastasia_liaodong_route }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_ming_trade
+			mission_completed = jxp_mission_red_seal_ships
+			jxp_oceanic_opening_at_least_50 = yes
+			OR = {
+				owns_or_non_sovereign_subject_of = 4182
+				num_of_ports = 8
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.4 }
+			add_mercantilism = 1
+		}
+	}
+
+	jxp_mission_eastasia_tsushima_office = {
+		icon = mission_asian_trader
+		position = 7
+		required_missions = { jxp_mission_eastasia_tribute_registry }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_korea_embassy
+			num_of_ports = 6
+			OR = {
+				owns_or_non_sovereign_subject_of = 4651
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					region = korea_region
+					is_city = yes
+				}
+				has_country_modifier = jxp_manchu_korean_route
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.5 }
+		}
+	}
+
+	jxp_mission_eastasia_manchu_watch = {
+		icon = mission_japanese_fort
+		position = 8
+		required_missions = { jxp_mission_eastasia_tsushima_office }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_liaodong_route
+			mission_completed = jxp_mission_translation_bureau
+			mil_tech = 10
+			num_of_ports = 6
+		}
+		effect = {
+			add_mil_power = 50
+			add_navy_tradition = 5
+			jxp_add_tenka_order_5_effect = yes
+		}
+	}
+
+	jxp_mission_eastasia_nagasaki_interpreters = {
+		icon = mission_have_manufactories
+		position = 9
+		required_missions = { jxp_mission_eastasia_manchu_watch jxp_mission_translation_bureau }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_tribute_registry
+			mission_completed = jxp_mission_translation_bureau
+			adm_tech = 10
+			OR = {
+				owns_or_non_sovereign_subject_of = 4182
+				has_country_modifier = jxp_eastasia_tribute_registry
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_eastasia_tribute_registry
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_eastasia_taiwan_lanes = {
+		icon = mission_junk_boat
+		position = 10
+		required_missions = { jxp_mission_eastasia_nagasaki_interpreters }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_ryukyu_registry
+			jxp_oceanic_opening_at_least_50 = yes
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					area = taiwan_area
+					is_city = yes
+				}
+				owns_or_non_sovereign_subject_of = 656
+				has_country_modifier = jxp_manila_nagasaki_route
+			}
+		}
+		effect = {
+			jxp_grant_taiwan_philippines_claims_effect = yes
+			add_country_modifier = {
+				name = jxp_taiwan_sea_lanes
+				duration = 7300
+			}
+			jxp_add_oceanic_opening_5_effect = yes
+		}
+	}
+
+	jxp_mission_eastasia_balance_mandate = {
+		icon = mission_monarch_in_throne_room
+		position = 11
+		required_missions = { jxp_mission_eastasia_taiwan_lanes jxp_mission_oceanic_shipyards }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_manchu_watch
+			mission_completed = jxp_mission_eastasia_nagasaki_interpreters
+			mission_completed = jxp_mission_oceanic_shipyards
+			jxp_imperial_sanction_at_least_50 = yes
+			OR = {
+				any_known_country = { is_emperor_of_china = yes }
+				any_known_country = {
+					OR = {
+						capital_scope = { region = north_china_region }
+						capital_scope = { region = south_china_region }
+					}
+				}
+				any_owned_province = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.2 }
+		}
+	}
+
+	jxp_mission_eastasia_hegemon_of_the_seas = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		required_missions = { jxp_mission_eastasia_balance_mandate }
+		trigger = {
+			mission_completed = jxp_mission_equal_treaties
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 10
+			OR = {
+				has_country_flag = jxp_mandate_claimed
+				has_country_flag = jxp_mandate_broken
+				has_country_flag = jxp_b_100_china_path_rites
+			}
+		}
+		effect = {
+			jxp_grant_china_littoral_claims_effect = yes
+			jxp_establish_oceanic_sun_state_effect = yes
+			add_country_modifier = {
+				name = jxp_oceanic_sun_state
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_eastasia_celestial_diplomacy = {
+		icon = mission_to_japan
+		position = 13
+		required_missions = { jxp_mission_eastasia_hegemon_of_the_seas }
+		trigger = {
+			dip_tech = 16
+			prestige = 50
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = jxp_celestial_diplomacy
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_eastasia_littoral_entrepots = {
+		icon = mission_trade_company_region_abroad
+		position = 14
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_hegemon_of_the_seas
+			mission_completed = jxp_mission_pacific_new_world_towns
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				has_port = yes
+				OR = {
+					region = korea_region
+					region = north_china_region
+					region = south_china_region
+				}
+				is_city = yes
+			}
+		}
+		effect = {
+			country_event = { id = jxp_eastasia.7 }
+		}
+	}
+
+	jxp_mission_eastasia_rite_sphere = {
+		icon = mission_empire
+		position = 15
+		required_missions = { jxp_mission_eastasia_littoral_entrepots }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_celestial_diplomacy
+			mission_completed = jxp_mission_pacific_oceanic_sun
+			dip_tech = 18
+			num_of_ports = 12
+			OR = {
+				has_country_flag = jxp_b_100_china_endgame_mandate_complete
+				has_country_flag = jxp_b_100_china_endgame_rites_complete
+				has_country_flag = jxp_b_100_china_endgame_break_complete
+			}
+		}
+		effect = {
+			jxp_b_100_consolidate_china_endgame_effect = yes
+		}
+	}
+}
+
+jxp_japan_pacific_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = jxp_path_open_trade
+		jxp_can_use_overseas_expansion_trigger = yes
+	}
+	has_country_shield = yes
+
+	jxp_mission_pacific_charter = {
+		icon = mission_trade_with_japan
+		position = 1
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_ryukyu_gateway
+			mission_completed = jxp_mission_open_nagasaki
+			OR = {
+				has_country_flag = jxp_pacific_charter_enacted
+				AND = {
+					num_of_ports = 8
+					jxp_oceanic_opening_at_least_60 = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_pacific_charter_enacted } }
+				country_event = { id = jxp_colonial.1 }
+			}
+			if = {
+				limit = { has_country_flag = jxp_pacific_charter_enacted }
+				add_country_modifier = {
+					name = jxp_pacific_charter
+					duration = 7300
+				}
+			}
+			custom_tooltip = jxp_pacific_stage_gateway_tt
+		}
+	}
+
+	jxp_mission_pacific_ogasawara_anchor = {
+		icon = mission_establish_high_seas_navy
+		position = 2
+		required_missions = { jxp_mission_pacific_charter }
+		trigger = {
+			mission_completed = jxp_mission_nanban_factory
+			num_of_ports = 8
+			dip_tech = 10
+		}
+		effect = {
+			add_navy_tradition = 5
+			add_country_modifier = {
+				name = jxp_pacific_waystations
+				duration = 3650
+			}
+		}
+	}
+
+	jxp_mission_pacific_guam_waystation = {
+		icon = mission_establish_high_seas_navy
+		position = 3
+		required_missions = { jxp_mission_pacific_ogasawara_anchor }
+		trigger = {
+			mission_completed = jxp_mission_red_seal_ships
+			num_of_ports = 10
+			dip_tech = 12
+			OR = {
+				num_of_colonists = 1
+				jxp_oceanic_opening_at_least_60 = yes
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = jxp_pacific_waystations
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_pacific_manila_link = {
+		icon = mission_trade_with_japan
+		position = 4
+		required_missions = { jxp_mission_pacific_guam_waystation }
+		trigger = {
+			mission_completed = jxp_mission_translation_bureau
+			owns_or_non_sovereign_subject_of = 4182
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				OR = {
+					area = luzon_area
+					area = southern_luzon_area
+				}
+				is_city = yes
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.2 }
+			add_country_modifier = {
+				name = jxp_manila_nagasaki_route
+				duration = 7300
+			}
+			custom_tooltip = jxp_pacific_stage_manila_tt
+		}
+	}
+
+	jxp_mission_pacific_admiralty = {
+		icon = mission_sea_battles
+		position = 5
+		required_missions = { jxp_mission_pacific_manila_link }
+		trigger = {
+			mission_completed = jxp_mission_oceanic_shipyards
+			mission_completed = jxp_mission_pacific_charter
+			has_country_flag = jxp_pacific_charter_enacted
+			OR = {
+				navy_tradition = 40
+				num_of_light_ship = 10
+				num_of_heavy_ship = 5
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.5 }
+			custom_tooltip = jxp_pacific_stage_admiralty_tt
+		}
+	}
+
+	jxp_mission_pacific_hawaii_soundings = {
+		icon = mission_establish_high_seas_navy
+		position = 6
+		required_missions = { jxp_mission_pacific_admiralty }
+		trigger = {
+			mission_completed = jxp_mission_oceanic_shipyards
+			mission_completed = jxp_mission_pacific_guam_waystation
+			dip_tech = 14
+			num_of_ports = 10
+			jxp_oceanic_opening_at_least_60 = yes
+		}
+		effect = {
+			add_navy_tradition = 10
+			add_country_modifier = {
+				name = jxp_pacific_waystations
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_pacific_north_charts = {
+		icon = mission_polynesian_navy_build
+		position = 7
+		required_missions = { jxp_mission_pacific_hawaii_soundings }
+		trigger = {
+			mission_completed = jxp_mission_pacific_admiralty
+			dip_tech = 14
+			OR = {
+				owns_or_non_sovereign_subject_of = 1235
+				owns_or_non_sovereign_subject_of = 1240
+				has_country_modifier = jxp_pacific_waystations
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.6 }
+			custom_tooltip = jxp_pacific_stage_north_charts_tt
+		}
+	}
+
+	jxp_mission_pacific_silver_current = {
+		icon = mission_high_income
+		position = 8
+		required_missions = { jxp_mission_pacific_north_charts }
+		trigger = {
+			mission_completed = jxp_mission_pacific_admiralty
+			mission_completed = jxp_mission_pacific_manila_link
+			has_country_modifier = jxp_manila_nagasaki_route
+			OR = {
+				has_country_modifier = jxp_alaska_california_route
+				has_country_modifier = jxp_north_pacific_charts
+				mercantilism = 40
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.7 }
+		}
+	}
+
+	jxp_mission_pacific_alaska_posts = {
+		icon = mission_colonize_alaska
+		position = 9
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_pacific_hawaii_soundings
+			mission_completed = jxp_mission_pacific_north_charts
+			is_random_new_world = no
+			OR = {
+				colonial_alaska = { has_discovered = ROOT }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					colonial_region = colonial_alaska
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.3 }
+			add_country_modifier = {
+				name = jxp_pacific_waystations
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_pacific_california_harbors = {
+		icon = mission_establish_high_seas_navy
+		position = 10
+		required_missions = { jxp_mission_pacific_alaska_posts }
+		trigger = {
+			mission_completed = jxp_mission_pacific_hawaii_soundings
+			mission_completed = jxp_mission_pacific_north_charts
+			is_random_new_world = no
+			OR = {
+				colonial_california = { has_discovered = ROOT }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					colonial_region = colonial_california
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.4 }
+			add_country_modifier = {
+				name = jxp_alaska_california_route
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_pacific_new_world_towns = {
+		icon = mission_settlers_north_america
+		position = 11
+		required_missions = { jxp_mission_pacific_california_harbors }
+		trigger = {
+			mission_completed = jxp_mission_pacific_alaska_posts
+			is_random_new_world = no
+			OR = {
+				AND = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 1
+						colonial_region = colonial_alaska
+						is_city = yes
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 1
+						colonial_region = colonial_california
+						is_city = yes
+					}
+				}
+				AND = {
+					has_country_flag = jxp_alaska_survey_seen
+					has_country_flag = jxp_california_anchorages_seen
+				}
+			}
+		}
+		effect = {
+			country_event = { id = jxp_colonial.8 }
+			custom_tooltip = jxp_pacific_stage_new_world_tt
+		}
+	}
+
+	jxp_mission_pacific_oceanic_sun = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_mission_pacific_new_world_towns }
+		trigger = {
+			mission_completed = jxp_mission_equal_treaties
+			mission_completed = jxp_mission_pacific_admiralty
+			mission_completed = jxp_mission_pacific_silver_current
+			jxp_oceanic_opening_at_least_75 = yes
+			OR = {
+				has_country_modifier = jxp_pacific_silver_flow
+				has_country_modifier = jxp_new_world_japan_towns
+				has_country_flag = jxp_pacific_silver_flow_done
+				has_country_flag = jxp_new_world_japan_towns_done
+			}
+		}
+		effect = {
+			jxp_establish_oceanic_sun_state_effect = yes
+			add_prestige = 20
+		}
+	}
+
+	jxp_mission_eastasia_claim_mandate = {
+		icon = mission_to_japan
+		position = 13
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_balance_mandate
+			mission_completed = jxp_mission_manila_route
+			has_country_flag = jxp_mandate_claimed
+			OR = {
+				is_emperor_of_china = yes
+				has_country_flag = jxp_mandate_claim_fallback
+				has_country_modifier = jxp_solar_court_recognition
+			}
+		}
+		effect = {
+			jxp_apply_mandate_claim_reward_effect = yes
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				jxp_unlock_hakko_ichiu_reform_effect = yes
+			}
+			add_prestige = 10
+		}
+	}
+
+	jxp_mission_eastasia_break_mandate = {
+		icon = mission_japanese_samurai
+		position = 14
+		required_missions = {  }
+		trigger = {
+			mission_completed = jxp_mission_eastasia_balance_mandate
+			mission_completed = jxp_mission_manila_route
+			has_country_flag = jxp_mandate_broken
+		}
+		effect = {
+			jxp_apply_mandate_break_reward_effect = yes
+			add_prestige = 10
+		}
+	}
+}

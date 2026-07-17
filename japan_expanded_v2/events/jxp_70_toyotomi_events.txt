@@ -1,0 +1,57 @@
+namespace = jxp_toyotomi
+
+country_event = {
+	id = jxp_toyotomi.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		tag = TOY
+		NOT = { has_country_flag = jxp_toyotomi_identity_migrated_v0270 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_establish_toyotomi_identity_effect = yes
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_toyotomi.2
+	title = "jxp_toyotomi.2.t"
+	desc = "jxp_toyotomi.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		has_country_flag = jxp_toyotomi_identity_established
+		has_reform = jxp_reform_founder_toyotomi_five_regents
+		NOT = { has_country_flag = jxp_70_toyotomi_policy_seen }
+	}
+
+	mean_time_to_happen = { months = 300 }
+
+	option = {
+		name = "jxp_toyotomi.2.a"
+		hidden_effect = { set_country_flag = jxp_70_toyotomi_policy_seen }
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_70_toyotomi_cadaster_policy
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jxp_toyotomi.2.b"
+		hidden_effect = { set_country_flag = jxp_70_toyotomi_policy_seen }
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_70_toyotomi_five_regents_policy
+			duration = 3650
+		}
+	}
+}

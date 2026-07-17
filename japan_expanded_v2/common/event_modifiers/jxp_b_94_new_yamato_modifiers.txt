@@ -1,0 +1,119 @@
+jxp_b_94_foundation_strain = {
+	global_tax_modifier = -0.05
+	stability_cost_modifier = 0.10
+}
+
+jxp_b_94_coastal_survey_office = {
+	colonial_range = 0.10
+	naval_attrition = -0.10
+}
+
+jxp_b_94_harbor_works = {
+	naval_maintenance_modifier = -0.05
+	development_cost = -0.05
+}
+
+jxp_b_94_frontier_roads = {
+	movement_speed = 0.10
+	state_maintenance_modifier = -0.05
+}
+
+jxp_b_94_coastal_watch = {
+	defensiveness = 0.15
+	hostile_fleet_attrition = 1
+}
+
+jxp_b_94_settler_horizon = {
+	global_colonial_growth = 10
+	global_unrest = 1
+}
+
+jxp_b_94_township_rolls = {
+	governing_capacity_modifier = 0.05
+	global_tax_modifier = 0.05
+}
+
+jxp_b_94_civic_halls = {
+	reform_progress_growth = 0.10
+	advisor_cost = -0.05
+}
+
+jxp_b_94_religious_concord = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+jxp_b_94_frontier_citizenship = {
+	manpower_recovery_speed = 0.10
+	global_unrest = -1
+}
+
+jxp_b_94_red_seal_exchange = {
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_b_94_harbor_warehouses = {
+	global_trade_goods_size_modifier = 0.05
+	global_trade_power = 0.05
+}
+
+jxp_b_94_oceanic_shipyards = {
+	ship_durability = 0.05
+	global_ship_recruit_speed = -0.10
+}
+
+jxp_b_94_public_credit = {
+	interest = -0.5
+	build_cost = -0.05
+}
+
+jxp_b_94_pacific_common_market = {
+	merchants = 1
+	trade_steering = 0.10
+}
+
+jxp_b_94_civil_offices = {
+	yearly_corruption = -0.05
+	advisor_cost = -0.05
+}
+
+jxp_b_94_civilian_command = {
+	yearly_army_professionalism = 0.0025
+	land_maintenance_modifier = -0.05
+}
+
+jxp_b_94_enduring_constitution = {
+	global_unrest = -1
+	governing_capacity_modifier = 0.10
+}
+
+jxp_b_94_pacific_embassy = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_94_blue_water_fleet = {
+	naval_morale = 0.10
+	global_sailors_modifier = 0.10
+}
+
+jxp_b_94_two_shores_program = {
+	technology_cost = -0.03
+	global_trade_power = 0.10
+}
+
+jxp_b_94_frontier_muster_strain = {
+	global_manpower_modifier = 0.10
+	global_tax_modifier = -0.05
+}
+
+jxp_b_94_merchant_concessions = {
+	trade_efficiency = 0.10
+	global_tax_modifier = -0.05
+}
+
+jxp_b_94_constitutional_deadlock = {
+	reform_progress_growth = -0.10
+	global_unrest = 1
+}

@@ -1,0 +1,44 @@
+#1024 - Echigo
+owner = UES
+controller = UES
+
+
+
+culture = togoku
+religion = shinto
+capital = "Naoetsu"
+trade_goods = grain
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 4
+is_city = yes
+add_core = UES
+
+
+
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+
+1507.7.1 = { fort_15th = yes } # Kasugayama Castle, the capital of the Nagao(Uesugi) clan
+1542.1.1 = { discovered_by = POR }
+1598.1.10 = {    remove_core = UES } # Uesugi Kagekatsu moved from Echigo to Aizu-Yonezawa
+1600.9.13 = {     }
+
+# JXP 88-province continuous ownership overlay
+1598.1.10 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

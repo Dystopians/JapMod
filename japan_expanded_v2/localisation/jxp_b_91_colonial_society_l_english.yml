@@ -1,0 +1,31 @@
+﻿l_english:
+ jxp_b_decision_open_colonial_society_register_title:0 "V¾‹wmYZwK„I`M|"
+ jxp_b_decision_open_colonial_society_register_desc:0 "Üwm„vFU†™0Êl0WNåe,gHuòTNQêS=f–cRÎ˜Zwce„vÅeESw0ýV¶RïSåNìSÆ–9‚IN0‹N0çP±O0ûyl¶R•NSV0WãNhˆÿ‰v°‹W0W¦ušR0zyVŒT=nÄ‰ÿOwmY>yOÛeQNagïS«ˆý*Ž0OSFUmNïSýw1»y,gW„vSï0"
+
+ jxp_colonial_society.1.t:0 "wmYZwK„I`M|"
+ jxp_colonial_society.1.d:0 "egêT=n„v‡efN|VdkÛwþvÿIYLˆðyÖNìN=f‚fESãlÿFUºNêðy×SUe¸‹„vTNÿSV0W†˜INRZWcNRW0WN^Æ–ÍNnŽNÌS¹e¦ušR0°e„vI`M|STöe°‹UVwmYqQT«ŽýN0,gWûN‹TN0W¹eßv¦uÿwN=fGPšRwm±N¹ÍNïSgqçe»lt0"
+ jxp_colonial_society.1.a:0 "©‹ÏkNýNCg)RNIN¡Rý	gncïSåg0"
+ jxp_colonial_society.3.t:0 "wmYø‹Hu„všRgÄ‹®‹"
+ jxp_colonial_society.3.d:0 "Ü*‚RVeg„vI`¡r&^ÞV	NWY|VdkÞz‰N„v&ŒQÿåe,gHu	c¶R­^ŒTLˆO‰v°‹ESlÿ,gWIYLˆ	czyVŒTûN‹T‰v°‹ã^SÿSV0WßvËSR	cag¦u0ZZûYNqQT2–¡V‰v°‹Cg)R0	ébUOwHNHQÿS„`6q9eØSwmY>yO„vRV^S0"
+ jxp_colonial_society.3.a:0 "b²‹åe,gHuNSV0WONbqQT‚u„vTM|0"
+ jxp_colonial_society.3.b:0 "1u,gWIYLˆßuNY8hûN‹TNzyV0"
+ jxp_colonial_society.3.c:0 "©‹=nHu®‹-^qQTÁˆšR	NÍy&ŒQ0"
+
+ jxp_b_colonial_identity:0 "wmYqQT«ŽýN"
+ jxp_b_metropole_control:0 ",gWµc6R"
+ jxp_b_local_compact:0 "0W¹eßv¦u"
+ jxp_b_91_stage_anchorage:0 "Êl0WNåe,gHu"
+ jxp_b_91_stage_anchorage_desc:0 "9‚XT0‹N0FUºNŒTSpe¶R^SôVÕuÓN“^N¸‹ïSbVbcR‚‚'`ZwK„ÿS*gµNuìrËzŽN,gW„vlQqQuIm0"
+ jxp_b_91_stage_chartered_settlement:0 "Ue¸‹–kl0W"
+ jxp_b_91_stage_chartered_settlement_desc:0 "ckVàzz0=nãSÕl­^0¶R^SûylN8^‰šI`¡rŠbÊl0WØSbïScíuÏu%„„v–kl0W0"
+ jxp_b_91_stage_autonomous_society:0 "ê»l–kl>yO"
+ jxp_b_91_stage_autonomous_society_desc:0 "wmYúQu„vNãN00W¹e0Me0luQŒT®‹-^òTÏubVbÿ,gW‹TäNÅV‰˜ÇSV0W6R¦^MbýwK„žR0"
+ jxp_b_91_stage_colonial_state:0 "–klýV¶RMe»l"
+ jxp_b_91_stage_colonial_state_desc:0 "wmYqQTSOVËYåNêñT„výV¶R)RÊvã‰Ê‘*Ys^m8f0W0WCg)RNùRåe,g„vsQû|0"
+ jxp_b_91_recent_colonial_review:0 "ZwK„TM|Y8h"
+ jxp_b_91_recent_colonial_review_desc:0 "=nHu0,gWŒTSV0WßvËSRR8hùRÇzyV0«ŽýNNag¦uÿNNn'Y‰Nº‹S—öeåe0"
+
+ jxp_b_91_society_initialized_tt:0 "wmYZwK„SOncâe	gUe¸‹0*‚ïN°e'YF–nc¹pú^ËzRËY>yO¶r`ÿ	Ny˜chGWÝOc(W§Y0—100§!KNô•0"
+ jxp_b_91_local_registers_tt:0 "qQTTM|OžXHV§YwmYqQT«ŽýN§!N§Y0W¹eßv¦u§!ÿTöeeu®V>eŒg§Y,gWµc6R§!0"
+ jxp_b_91_metropole_registers_tt:0 "ßuNûN‹TO>fW„ RHV§Y,gWµc6R§!ÿFOïSýw2OÊS§Y0W¹eßv¦u§!0"
+ jxp_b_91_town_councils_tt:0 "qQT®‹-^OžXHV§YwmYqQT«ŽýN§!N§Y0W¹eßv¦u§!ÿv^O§Y,gWµc6R§!NM–0"

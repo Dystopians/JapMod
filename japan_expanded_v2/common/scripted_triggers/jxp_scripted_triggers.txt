@@ -1,0 +1,284 @@
+jxp_is_colonial_successor_tag_trigger = {
+	OR = {
+		tag = NYA
+		tag = HKK
+		tag = NJF
+		tag = OIA
+		tag = TPF
+	}
+}
+
+jxp_is_japanese_polity_trigger = {
+	NOT = { jxp_is_colonial_successor_tag_trigger = yes }
+	OR = {
+		culture_group = japanese_g
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		tag = TOY
+		capital_scope = { region = japan_region }
+	}
+}
+
+jxp_use_custom_missions_trigger = {
+	NOT = { jxp_is_colonial_successor_tag_trigger = yes }
+	OR = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		tag = TOY
+		jxp_has_any_route_trigger = yes
+	}
+}
+
+jxp_has_any_route_trigger = {
+	NOT = { jxp_is_colonial_successor_tag_trigger = yes }
+	OR = {
+		has_country_flag = jxp_path_sakoku
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_confucian
+		has_country_flag = jxp_path_imperial
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_kaikyo
+		has_country_flag = jxp_path_ikko
+		has_country_flag = jxp_path_wokou
+		has_country_flag = jxp_path_buddhist
+	}
+}
+
+jxp_tenka_order_at_least_25 = {
+	check_variable = { which = jxp_tenka_order value = 25 }
+}
+
+jxp_tenka_order_at_least_35 = {
+	check_variable = { which = jxp_tenka_order value = 35 }
+}
+
+jxp_tenka_order_at_least_50 = {
+	check_variable = { which = jxp_tenka_order value = 50 }
+}
+
+jxp_tenka_order_at_least_75 = {
+	check_variable = { which = jxp_tenka_order value = 75 }
+}
+
+jxp_imperial_sanction_at_least_30 = {
+	check_variable = { which = jxp_imperial_sanction value = 30 }
+}
+
+jxp_imperial_sanction_at_least_50 = {
+	check_variable = { which = jxp_imperial_sanction value = 50 }
+}
+
+jxp_imperial_sanction_at_least_70 = {
+	check_variable = { which = jxp_imperial_sanction value = 70 }
+}
+
+jxp_oceanic_opening_at_least_20 = {
+	check_variable = { which = jxp_oceanic_opening value = 20 }
+}
+
+jxp_oceanic_opening_at_least_35 = {
+	check_variable = { which = jxp_oceanic_opening value = 35 }
+}
+
+jxp_oceanic_opening_at_least_50 = {
+	check_variable = { which = jxp_oceanic_opening value = 50 }
+}
+
+jxp_oceanic_opening_at_least_60 = {
+	check_variable = { which = jxp_oceanic_opening value = 60 }
+}
+
+jxp_oceanic_opening_at_least_75 = {
+	check_variable = { which = jxp_oceanic_opening value = 75 }
+}
+
+jxp_controls_japan_heartland_trigger = {
+	owns_core_province = 1020
+	owns_core_province = 1028
+	is_at_war = no
+}
+
+jxp_has_christian_opening_trigger = {
+	OR = {
+		religion = catholic
+		religion = protestant
+		religion = reformed
+		any_owned_province = {
+			region = japan_region
+			OR = {
+				religion = catholic
+				religion = protestant
+				religion = reformed
+			}
+		}
+		has_country_flag = jxp_kirishitan_contact
+		jxp_oceanic_opening_at_least_50 = yes
+	}
+}
+
+jxp_has_reformed_opening_trigger = {
+	OR = {
+		religion = protestant
+		religion = reformed
+		any_owned_province = {
+			region = japan_region
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+		has_country_flag = jxp_reformed_contact
+		AND = {
+			jxp_oceanic_opening_at_least_50 = yes
+			dip_tech = 10
+			any_known_country = {
+				OR = {
+					religion = protestant
+					religion = reformed
+				}
+			}
+		}
+		tag = RFJ
+	}
+}
+
+jxp_has_kaikyo_opening_trigger = {
+	OR = {
+		tag = SJP
+		religion_group = muslim
+		any_owned_province = {
+			region = japan_region
+			religion_group = muslim
+		}
+		has_country_flag = jxp_kaikyo_contact
+		AND = {
+			jxp_oceanic_opening_at_least_50 = yes
+			num_of_ports = 5
+			any_known_country = {
+				religion_group = muslim
+			}
+		}
+		any_owned_province = {
+			OR = {
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+	}
+}
+
+jxp_ikko_historical_heartland_trigger = {
+	OR = {
+		owns = 1021
+		owns = 1023
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_ikko_formable_heartland
+		}
+	}
+}
+
+jxp_can_form_ikko_commonwealth_trigger = {
+	culture_group = japanese_g
+	jxp_is_daimyo_stage_trigger = yes
+	NOT = { has_reform = shogunate }
+	is_year = 1470
+	NOT = { is_year = 1603 }
+	NOT = { jxp_has_any_route_trigger = yes }
+	OR = {
+		religion = shinto
+		religion = mahayana
+		religion = jodo_shinshu
+	}
+	OR = {
+		has_disaster = jxp_ikko_rising
+		has_country_flag = jxp_ikko_rising_active
+	}
+	jxp_a_shinshu_militancy_at_least_50_trigger = yes
+	jxp_ikko_historical_heartland_trigger = yes
+	num_of_cities = 8
+	NOT = { jxp_tenka_order_at_least_50 = yes }
+}
+
+jxp_has_ikko_opening_trigger = {
+	OR = {
+		tag = IJP
+		has_country_flag = jxp_path_ikko
+		has_country_modifier = jxp_route_ikko
+		jxp_can_form_ikko_commonwealth_trigger = yes
+	}
+}
+
+jxp_wokou_historical_waters_trigger = {
+	OR = {
+		owns = 4651
+		owns = 4182
+		owns = 1015
+		any_owned_province = {
+			has_province_flag = jxp_map_compat_wokou_waters
+		}
+	}
+}
+
+jxp_can_form_wokou_confederacy_trigger = {
+	culture_group = japanese_g
+	jxp_is_daimyo_stage_trigger = yes
+	NOT = { has_reform = shogunate }
+	is_year = 1500
+	NOT = { is_year = 1650 }
+	NOT = { jxp_has_any_route_trigger = yes }
+	jxp_wokou_historical_waters_trigger = yes
+	num_of_ports = 5
+	dip_tech = 7
+	jxp_oceanic_opening_at_least_50 = yes
+	OR = {
+		has_country_flag = jxp_wokou_brokers_funded
+		has_country_modifier = jxp_wokou_letters_of_mark
+	}
+}
+
+jxp_has_wokou_opening_trigger = {
+	OR = {
+		tag = WAK
+		has_country_flag = jxp_path_wokou
+		has_country_modifier = jxp_route_wokou
+		jxp_can_form_wokou_confederacy_trigger = yes
+	}
+}
+
+jxp_has_confucian_contact_trigger = {
+	OR = {
+		religion = confucianism
+		any_owned_province = {
+			OR = {
+				religion = confucianism
+				region = korea_region
+				region = north_china_region
+				region = south_china_region
+			}
+		}
+		any_known_country = {
+			OR = {
+				religion = confucianism
+				capital_scope = { region = korea_region }
+				capital_scope = { region = north_china_region }
+				capital_scope = { region = south_china_region }
+			}
+		}
+		adm_tech = 10
+	}
+}

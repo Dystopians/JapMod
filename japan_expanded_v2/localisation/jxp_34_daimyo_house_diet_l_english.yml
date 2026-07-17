@@ -1,0 +1,36 @@
+﻿l_english:
+ jxp_decision_convene_house_diet_title:0 "ìSV¶RÕlÄ‹šR"
+ jxp_decision_convene_house_diet_desc:0 "¶R-N1ŒãN0ýVºN0IYLˆ0>yúRNHuµ^PŸÆ–ÎWNÿ÷‹INTåN1gpSšRN,g¶R„v9h,gÕl¦^0dkT,g¶R„vTR0›QyV0=n^b¹ƒXKN»lÿýS1uÙHWÄ‹šRYuN•ENÕuù0"
+ jxp_house_diet.1.t:0 "¶RÕlÄ‹šR"
+ jxp_house_diet.1.d:0 "ÎW-NÊ^Nopkpf0t^w„v¿RS	cRwPWÿIYLˆUSVçe&ÿúR>yOwNOðXõ‹õVHQ‹OÿÜfmNƒXîv„vÖS!kOmN&^eg†NTê„v÷‹Ma0NbŒ¶RÕlÿv^^—N¸uzz‡eÿƒROJTÉ‹¶RãUOåNIYlQÿJTÉ‹ŒvÓYUOåN³uyVÿmNJTÉ‹»ýV,g¶Rvzßz‰pTUOY0"
+ jxp_house_diet.1.warrior_a:0 "åN›QyV^Í‘RåwLˆNjuyV0"
+ jxp_house_diet.1.warrior_b:0 "ÆQ×e4YåN“Š¸ußu¡VvQO0"
+ jxp_house_diet.1.court_a:0 "åN˜Rçe1ŒÍ‘f¶RT0"
+ jxp_house_diet.1.court_b:0 "HQËz,gýVãN˜RNÎWNÕl¦^0"
+ jxp_house_diet.1.maritime_a:0 "Ùufm¹eFU^ÑSÙu*‚&r0"
+ jxp_house_diet.1.maritime_b:0 "HQ4l›Q9‚M|Nwmju0"
+ jxp_house_diet.1.frontier_a:0 "äNsQ˜–juNbIYLˆ›QÕl0"
+ jxp_house_diet.1.frontier_b:0 "åN^ãSÖS!k‰RšbƒXîvø‹Ïe0"
+ jxp_house_diet.1.temple_market_a:0 "‰R5X>yúRçe‹ONè•MRHu0"
+ jxp_house_diet.1.temple_market_b:0 "Í‘™QHuµ^0lQLuNúR>y&ŒQ0"
+ jxp_house_diet.1.fallback:0 "HQäNIYLˆtetÎWNçe‹O0"
+ jxp_34_warrior_muster_law:0 "¶RÕl›QyV^"
+ jxp_34_warrior_muster_law_desc:0 "åwLˆ0juyVNúQ5–!k,r«ˆ™QeQ¶RÕl0ø‹SÍNT†˜vQOÿtS‰HQ(WTNŒQ&-N,TÁ‰INT„v1gpS0"
+ jxp_34_warrior_captain_privileges:0 "×e4YHg­e‰R5X"
+ jxp_34_warrior_captain_privileges_desc:0 "×e4YåN“Š¸uÅbÝOàVäRÿINTRb²‹ÖNìN(WbHWN4NHgÁˆ­e„vçeCg0›Q¿RNKSRVŽN¸uNÿmNNQêS=fÁy—eKNÇR0"
+ jxp_34_court_rank_law:0 "˜R¶RTÕl"
+ jxp_34_court_rank_law_desc:0 "çe1Œ0IYfNNg÷^˜R«ˆtetHN,g¶RTR„vNèR0ÎWNOwŽVÔ¬Nýÿ¶RT(W<yÕlKN-NÍ‘°eÑSðX0"
+ jxp_34_court_domain_law:0 ",gýVãN˜RÕl"
+ jxp_34_court_domain_law_desc:0 "ýV-NãN˜R0ÓNweIYLˆNÎWNt^ÄR«ˆ³ueQôfnZi„vÕl¦^0¬N-NTgúV6qïS5ÿ0utuNs|ÓNT7h‰	g9húW0"
+ jxp_34_maritime_port_law:0 "fm¹eÕl¦^"
+ jxp_34_maritime_port_law_desc:0 "=n^09‚INNFU^åN*‚&r³ueQ,g¶RÆ‰Î‘0no4l&^eg'irÿmN&^egïSåN«ˆ°‹eQ&ŒQ„vÜ¹eˆmo`0"
+ jxp_34_maritime_admiral_rolls:0 "9‚M|wmju^"
+ jxp_34_maritime_admiral_rolls_desc:0 "4l›Q0FU9‚Nfm¹eºN+Y«ˆeQ9‚M|wmju0úQwmNQêSíQÆwÏ‘ÿRV=nmNNQêSwÎ˜T0"
+ jxp_34_frontier_barrier_law:0 "ƒXîvjuNbÕl"
+ jxp_34_frontier_barrier_law_desc:0 "qSãS0!nãSN¹ÎWnjuNbÿOýVºNO0lšFUNÅeçP†våw,g¶R„v¹ƒXÄ‰éw0"
+ jxp_34_frontier_market_charter:0 "ƒXîv^ãSªR"
+ jxp_34_frontier_market_charter_desc:0 "¹0W^HW1uÖS!kOŒjPÿs7b0lšFU0úR>yOwNWjŒ(W^ðX-NRVeQ,g¶Réy^0"
+ jxp_34_temple_privilege_law:0 ">yúRçe‹O‰R5X¶r"
+ jxp_34_temple_privilege_law_desc:0 ">yúR™™kp0my<yNè•MRHuçe‹O—VåNb²‹0Ÿ”ðXNÅVN1gpSøv‰NÿwïSbHN,g¶R‰Rl„væSNÍyí‹Š0"
+ jxp_34_temple_accounting_law:0 "Huµ^lQ&Õl"
+ jxp_34_temple_accounting_law_desc:0 "µ^yV0ÓNwe0my<y=eúQNúR>y0W«ˆÍ‘™QHNlQ&0^ðXÍN6qµUù•ÿêS=fIYLˆ„v¨XùòTK„(W¸uN0"

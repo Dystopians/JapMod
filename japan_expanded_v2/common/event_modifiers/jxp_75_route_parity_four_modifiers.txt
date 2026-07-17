@@ -1,0 +1,63 @@
+jxp_75_route_policy_recent = {
+	advisor_cost = -0.01
+}
+
+jxp_75_kirishitan_seminary_visitation = {
+	technology_cost = -0.02
+	global_missionary_strength = 0.005
+}
+
+jxp_75_kirishitan_mercy_accounts = {
+	global_unrest = -1
+	manpower_recovery_speed = 0.03
+}
+
+jxp_75_kirishitan_harbor_chaplains = {
+	naval_morale = 0.05
+	trade_range_modifier = 0.10
+}
+
+jxp_75_confucian_examination_rosters = {
+	advisor_cost = -0.05
+	monthly_reform_progress_modifier = 0.05
+}
+
+jxp_75_confucian_code_commission = {
+	core_creation = -0.03
+	num_accepted_cultures = 1
+}
+
+jxp_75_confucian_three_teachings_concordance = {
+	harmonization_speed = 0.10
+	tolerance_heathen = 1
+}
+
+jxp_75_reformed_printing_consistory = {
+	global_institution_spread = 0.10
+	embracement_cost = -0.05
+}
+
+jxp_75_reformed_civic_auditors = {
+	global_unrest = -1
+	global_tax_modifier = 0.03
+}
+
+jxp_75_reformed_fleet_articles = {
+	trade_steering = 0.10
+	naval_maintenance_modifier = -0.05
+}
+
+jxp_75_kaikyo_monsoon_accounts = {
+	trade_efficiency = 0.05
+	trade_range_modifier = 0.10
+}
+
+jxp_75_kaikyo_endowment_granaries = {
+	global_tax_modifier = 0.03
+	stability_cost_modifier = -0.05
+}
+
+jxp_75_kaikyo_convoy_muster = {
+	naval_morale = 0.05
+	ship_durability = 0.02
+}

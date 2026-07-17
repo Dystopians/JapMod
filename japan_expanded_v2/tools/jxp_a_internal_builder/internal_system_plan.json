@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "implementation_path": "B",
+  "native_nested_subject_type": false,
+  "relationship_authority": {
+    "client_flag": "jxp_a_nested_client",
+    "client_to_patron_opinion": "jxp_a_opinion_kokujin_patron",
+    "patron_to_client_opinion": "jxp_a_opinion_protected_kokujin",
+    "cache_variable": "jxp_a_nested_client_count"
+  },
+  "capacity": {
+    "base": 1,
+    "development_step": 100,
+    "hard_cap": 3,
+    "ai_cap": 2
+  },
+  "cta_contract": "No automatic or scripted CTA. Military service transfers manpower only; join_all_* is forbidden because it cannot target one war.",
+  "vanilla_pins": {
+    "common/wargoal_types/00_wargoal_types.txt": "ec45a5a221b762a326fab4f29099e39b6461665072d53fa398ac466f38617600",
+    "common/subject_types/00_subject_types.txt": "81706ed7cd5f707c6b5ff94bd7fb9a5be8487335c0076879bfe02d4bc3eadfce"
+  },
+  "internal_wargoals": {
+    "jxp_a_daimyo_border_dispute": {"badboy_factor": 0.70, "peace_cost_factor": 0.85},
+    "jxp_a_kokujin_subjugation": {"badboy_factor": 0.70, "peace_cost_factor": 0.90},
+    "jxp_a_shogunal_censure": {"badboy_factor": 0.75, "peace_cost_factor": 0.90}
+  }
+}

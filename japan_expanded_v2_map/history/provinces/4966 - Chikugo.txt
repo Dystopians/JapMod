@@ -1,0 +1,40 @@
+#4966 - Chikugo
+
+owner = OTM
+controller = OTM
+culture = kyushuan
+religion = shinto
+capital = "Kurume"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_manpower = 2
+base_production = 1
+is_city = yes
+add_core = OTM
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1542.1.1 = { discovered_by = POR }
+
+1584.3.1 = {
+	owner = SMZ
+	controller = SMZ
+	add_core = SMZ
+	remove_core = OTM
+}
+1587.5.15 = {
+	owner = MRI
+	controller = MRI
+	add_core = MRI
+	remove_core = SMZ
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = MRI
+}

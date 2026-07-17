@@ -1,0 +1,114 @@
+jxp_b_102_restore_colonial_successor_identity_effect = {
+	if = {
+		limit = { jxp_b_102_is_colonial_successor_trigger = yes }
+		set_country_flag = jxp_b_colonial_origin_japanese
+		set_country_flag = jxp_iface_colonial_self_rule
+		set_country_flag = jxp_b_colonial_society_active
+		clr_country_flag = jxp_b_colonial_society_retired
+	}
+	if = {
+		limit = { tag = NYA }
+		set_country_flag = jxp_iface_b_nya_needs_mission_refresh
+		set_country_flag = jxp_iface_b_nya_needs_idea_refresh
+		set_country_flag = jxp_iface_b_nya_needs_government_registry
+	}
+	if = {
+		limit = { tag = HKK }
+		set_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_government_registry
+	}
+	if = {
+		limit = { tag = NJF }
+		set_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_government_registry
+	}
+	if = {
+		limit = { tag = OIA }
+		set_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+		set_country_flag = jxp_iface_b_secondary_needs_government_registry
+	}
+	if = {
+		limit = { tag = TPF }
+		set_country_flag = jxp_iface_transpacific_state_created
+		set_country_flag = jxp_iface_colonial_independence
+		set_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+		set_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+		set_country_flag = jxp_iface_b_tpf_needs_government_registry
+	}
+}
+
+jxp_b_102_overseas_program_startup_migration_effect = {
+	if = {
+		limit = { jxp_b_102_needs_startup_migration_trigger = yes }
+		set_country_flag = jxp_b_102_overseas_program_migrated
+		jxp_b_102_restore_colonial_successor_identity_effect = yes
+		if = {
+			limit = {
+				NOT = { has_country_flag = jxp_b_colonial_society_initialized }
+				OR = {
+					jxp_b_102_is_colonial_successor_trigger = yes
+					jxp_b_102_has_legacy_overseas_milestone_trigger = yes
+				}
+			}
+			jxp_b_91_colonial_society_initialize_effect = yes
+		}
+		if = {
+			limit = { has_country_flag = jxp_iface_b99_china_campaign_requested }
+			jxp_b_100_accept_b99_china_campaign_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_b_97_overseas_rights_revoked
+			NOT = { jxp_b_102_is_colonial_successor_trigger = yes }
+		}
+		jxp_b_92_regional_colonial_cleanup_effect = yes
+		jxp_b_91_clear_colonial_charter_effect = yes
+		jxp_b_91_colonial_society_cleanup_effect = yes
+	}
+	else_if = {
+		limit = { jxp_b_91_colonial_society_active_trigger = yes }
+		jxp_b_91_sync_colonial_stage_effect = yes
+		jxp_b_91_schedule_colonial_pulse_effect = yes
+	}
+	if = {
+		limit = {
+			tag = TPF
+			has_country_flag = jxp_iface_transpacific_state_created
+		}
+		jxp_b_98_schedule_federal_council_effect = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = jxp_b_101_korea_war_started
+			war_with = KOR
+			NOT = { has_country_flag = jxp_b_101_korea_monitor_scheduled }
+		}
+		set_country_flag = jxp_b_101_korea_monitor_scheduled
+		country_event = { id = jxp_korea_campaign.941 days = 30 }
+	}
+}
+
+jxp_b_102_metropole_overseas_program_cleanup_effect = {
+	jxp_b_92_regional_colonial_cleanup_effect = yes
+	jxp_b_91_clear_colonial_charter_effect = yes
+	jxp_b_91_colonial_society_cleanup_effect = yes
+	jxp_b_99_clear_active_theater_effect = yes
+	jxp_b_99_clear_campaign_theater_effect = yes
+	jxp_b_99_clear_route_doctrine_modifiers_effect = yes
+	if = {
+		limit = { has_country_flag = jxp_b_101_korea_campaign_active }
+		jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	}
+	if = {
+		limit = { has_country_flag = jxp_76_pacific_network_active }
+		jxp_76_pacific_network_cleanup_effect = yes
+	}
+	clr_country_flag = jxp_b_100_b99_direct_campaign_authorized
+	clr_country_flag = jxp_iface_b99_china_campaign_requested
+	clr_country_flag = jxp_iface_b99_korea_campaign_requested
+	clr_country_flag = jxp_iface_b99_shogunate_mobilization_requested
+}

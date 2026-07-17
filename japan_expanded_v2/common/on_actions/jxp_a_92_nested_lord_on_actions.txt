@@ -1,0 +1,31 @@
+# Low-frequency, idempotent reconciliation. The yearly event also gives AI
+# daimyo a tightly gated path into the system; custom diplomatic actions are
+# not initiated by the EU4 AI.
+on_startup = {
+	if = {
+		limit = {
+			OR = {
+				jxp_is_japanese_polity_trigger = yes
+				has_country_flag = jxp_a_nested_client
+				has_country_modifier = jxp_a_nested_patron_status
+			}
+		}
+		jxp_a_reconcile_nested_relations_effect = yes
+	}
+}
+
+on_yearly_pulse = {
+	if = {
+		limit = {
+			OR = {
+				jxp_is_japanese_polity_trigger = yes
+				has_country_flag = jxp_a_nested_client
+				has_country_modifier = jxp_a_nested_patron_status
+			}
+		}
+		jxp_a_reconcile_nested_relations_effect = yes
+	}
+	events = {
+		jxp_nested_lords.1
+	}
+}

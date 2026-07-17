@@ -1,0 +1,91 @@
+jxp_a_nested_member_eligible_trigger = {
+	num_of_cities = 1
+	culture_group = japanese_g
+	has_reform = daimyo
+	jxp_is_daimyo_stage_trigger = yes
+	capital_scope = { region = japan_region }
+	any_country = {
+		num_of_cities = 1
+		has_reform = shogunate
+	}
+}
+
+jxp_a_nested_patron_eligible_trigger = {
+	jxp_a_nested_member_eligible_trigger = yes
+	NOT = { has_country_flag = jxp_a_nested_client }
+	NOT = { has_reform = shogunate }
+}
+
+jxp_a_nested_client_eligible_trigger = {
+	jxp_a_nested_member_eligible_trigger = yes
+	NOT = { has_reform = shogunate }
+	NOT = { owns = 1020 }
+	NOT = { total_development = 41 }
+	NOT = { has_country_flag = jxp_a_nested_client }
+	NOT = {
+		check_variable = {
+			which = jxp_a_nested_client_count
+			value = 1
+		}
+	}
+}
+
+# Base capacity 1; +1 at 100 development; +1 at 200 development; hard cap 3.
+# AI is held to two clients even after reaching 200 development.
+jxp_a_nested_has_capacity_trigger = {
+	jxp_a_nested_patron_eligible_trigger = yes
+	NOT = {
+		check_variable = {
+			which = jxp_a_nested_client_count
+			value = 3
+		}
+	}
+	OR = {
+		ai = no
+		NOT = {
+			check_variable = {
+				which = jxp_a_nested_client_count
+				value = 2
+			}
+		}
+	}
+	OR = {
+		NOT = {
+			check_variable = {
+				which = jxp_a_nested_client_count
+				value = 1
+			}
+		}
+		AND = {
+			total_development = 100
+			NOT = {
+				check_variable = {
+					which = jxp_a_nested_client_count
+					value = 2
+				}
+			}
+		}
+		AND = {
+			total_development = 200
+			NOT = {
+				check_variable = {
+					which = jxp_a_nested_client_count
+					value = 3
+				}
+			}
+		}
+	}
+}
+
+jxp_a_internal_war_actor_trigger = {
+	culture_group = japanese_g
+	jxp_is_daimyo_stage_trigger = yes
+	NOT = { has_reform = shogunate }
+	capital_scope = { region = japan_region }
+}
+
+jxp_a_internal_war_target_trigger = {
+	culture_group = japanese_g
+	jxp_is_daimyo_stage_trigger = yes
+	capital_scope = { region = japan_region }
+}

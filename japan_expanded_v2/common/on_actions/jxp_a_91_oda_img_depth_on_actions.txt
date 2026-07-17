@@ -1,0 +1,21 @@
+on_startup = {
+	events = { jxp_daimyo_depth.190 }
+}
+
+on_government_change = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = jxp_a_oda_government_terminal_unlocked
+				has_reform = jxp_a_oda_azuchi_magistracy_reform
+				has_reform = jxp_a_oda_legion_domains_reform
+				has_reform = jxp_a_oda_ashikaga_protectorate_reform
+			}
+		}
+		jxp_a_reconcile_oda_government_effect = yes
+	}
+}
+
+on_yearly_pulse = {
+	events = { jxp_daimyo_depth.190 }
+}

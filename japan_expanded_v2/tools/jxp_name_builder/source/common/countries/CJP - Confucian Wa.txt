@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 55 85 150 }
+revolutionary_colors = { 5 5 12 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	administrative_ideas
+	quality_ideas
+	economic_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+	trade_ideas
+	defensive_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"家康 #0" = 20
+	"秀忠 #0" = 20
+	"家光 #0" = 20
+	"吉宗 #0" = 20
+	"罗山斋 #0" = 10
+	"惺窝 #0" = 10
+	"山鹿 #0" = 10
+	"智子 #0" = -10
+}
+
+leader_names = {
+	德川 林 藤原 山鹿 新井 荻生 松平 井伊 本多 榊原
+}
+
+ship_names = {
+	Edo Kyoto Osaka Nagasaki Tsushima Choson Seito Reigaku Meirin Shushigaku
+}
+
+army_names = {
+	"Rites Army" "$PROVINCE$ Gun" "$PROVINCE$ Gakuto Tai"
+}
+
+fleet_names = {
+	"Ritual Navy" "$PROVINCE$ Sendan" "$PROVINCE$ Envoy Fleet"
+}

@@ -1,0 +1,45 @@
+country_decisions = {
+	jxp_b_94_form_new_yamato = {
+		major = yes
+		potential = {
+			NOT = { tag = NYA }
+			NOT = { exists = NYA }
+			NOT = { has_country_flag = jxp_b_94_new_yamato_formed }
+			jxp_b_91_colonial_society_active_trigger = yes
+			OR = {
+				is_colonial_nation = yes
+				has_country_flag = jxp_iface_colonial_self_rule
+				has_country_flag = jxp_iface_colonial_independence
+				is_subject = no
+			}
+			jxp_b_94_west_coast_capital_trigger = yes
+			jxp_b_94_west_coast_heartland_trigger = yes
+		}
+		allow = {
+			jxp_b_94_can_form_new_yamato_trigger = yes
+		}
+		effect = {
+			jxp_b_94_form_new_yamato_effect = yes
+		}
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				NOT = { check_variable = { which = jxp_b_colonial_identity value = 75 } }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { which = jxp_b_metropole_control value = 40 }
+				is_subject = yes
+			}
+			modifier = {
+				factor = 4
+				is_subject = no
+			}
+			modifier = {
+				factor = 2
+				check_variable = { which = jxp_b_local_compact value = 70 }
+			}
+		}
+	}
+}

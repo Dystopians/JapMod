@@ -1,0 +1,33 @@
+# Zero-value entries are durable, bilateral identity markers. Gameplay value is
+# supplied by explicit country modifiers and actions, not hidden opinion.
+jxp_a_opinion_kokujin_patron = {
+	opinion = 0
+}
+
+jxp_a_opinion_protected_kokujin = {
+	opinion = 0
+}
+
+jxp_a_opinion_nested_lord_released = {
+	opinion = 20
+	months = 120
+	max = 20
+}
+
+jxp_a_opinion_nested_lord_betrayal = {
+	opinion = -75
+	months = 240
+	min = -75
+}
+
+jxp_a_opinion_illegal_nested_transfer = {
+	opinion = -25
+	months = 120
+	min = -25
+}
+
+jxp_a_opinion_shogunal_adjudication = {
+	opinion = -20
+	months = 120
+	min = -20
+}

@@ -1,0 +1,91 @@
+country_decisions = {
+	jxp_a_95_decision_hoshu_state = {
+		major = yes
+		potential = {
+			jxp_74_ijp_route_trigger = yes
+			NOT = { jxp_a_ijp_has_terminal_settlement_trigger = yes }
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_power = 100
+			mil_power = 100
+			jxp_a_shinshu_militancy_at_least_70_trigger = yes
+			OR = {
+				mission_completed = jxp_mission_peasant_commonwealth
+				has_country_modifier = jxp_peasant_commonwealth
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_mil_power = -100
+			custom_tooltip = jxp_a_shinshu_terminal_exclusive_tt
+			hidden_effect = { jxp_a_ijp_choose_hoshu_state_effect = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 jxp_a_shinshu_militancy_at_least_85_trigger = yes }
+		}
+	}
+
+	jxp_a_95_decision_somon_council = {
+		major = yes
+		potential = {
+			jxp_74_ijp_route_trigger = yes
+			NOT = { jxp_a_ijp_has_terminal_settlement_trigger = yes }
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_power = 100
+			dip_power = 100
+			jxp_a_shinshu_militancy_middle_trigger = yes
+			jxp_74_ijp_commons_ready_trigger = yes
+			OR = {
+				mission_completed = jxp_mission_peasant_commonwealth
+				has_country_modifier = jxp_peasant_commonwealth
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			custom_tooltip = jxp_a_shinshu_terminal_exclusive_tt
+			hidden_effect = { jxp_a_ijp_choose_somon_council_effect = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 jxp_a_shinshu_militancy_at_least_50_trigger = yes }
+		}
+	}
+
+	jxp_a_95_decision_secular_commonwealth = {
+		major = yes
+		potential = {
+			jxp_74_ijp_route_trigger = yes
+			NOT = { jxp_a_ijp_has_terminal_settlement_trigger = yes }
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_tech = 10
+			adm_power = 100
+			dip_power = 100
+			religious_unity = 0.90
+			jxp_a_shinshu_militancy_below_30_trigger = yes
+			OR = {
+				mission_completed = jxp_mission_peasant_commonwealth
+				has_country_modifier = jxp_peasant_commonwealth
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			custom_tooltip = jxp_a_shinshu_terminal_exclusive_tt
+			hidden_effect = { jxp_a_ijp_choose_secular_commonwealth_effect = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 jxp_a_shinshu_militancy_below_30_trigger = yes }
+		}
+	}
+}

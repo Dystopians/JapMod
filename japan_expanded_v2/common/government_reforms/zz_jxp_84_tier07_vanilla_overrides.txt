@@ -1,0 +1,267 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+clergy_in_administration_reform = {
+	icon = "religious_leader"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		free_adm_policy = 1
+
+		brahmins_hindu_influence_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.05
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					religion = hinduism
+					estate_influence = {
+						estate = estate_brahmins
+						influence = 90
+					}
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 90
+				}
+			}
+		}
+	}
+}
+
+of_noble_bearing_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			AND = {
+				has_estate = estate_maratha
+				technology_group = indian
+				NOT = { has_estate = estate_nobles }
+			}
+		}
+		NOT = {
+			AND = {
+				has_estate = estate_rajput
+				technology_group = indian
+				NOT = { has_estate = estate_nobles }
+			}
+		}
+	}
+	modifiers = {
+		leader_cost = -0.1
+		nobles_influence_modifier = 0.1
+		maratha_exclusive_influence_modifier = 0.1
+		rajput_exclusive_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.05
+		maratha_exclusive_loyalty_modifier = 0.05
+		rajput_exclusive_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					NOT = { has_estate = estate_nobles }
+					OR = {
+						estate_influence = {
+							estate = estate_rajput
+							influence = 90
+						}
+						estate_influence = {
+							estate = estate_maratha
+							influence = 90
+						}
+					}
+				}
+				estate_influence = {
+					estate = estate_nobles
+					influence = 90
+				}
+			}
+		}
+	}
+}
+
+meritocratic_focus_reform = {
+	icon = "politician"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		yearly_corruption = -0.1
+		advisor_cost = -0.1
+		maratha_muslim_influence_modifier = 0.1
+		rajput_muslim_influence_modifier = 0.1
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+		vaisyas_non_muslim_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					religion_group = muslim
+					OR = {
+						estate_influence = {
+							estate = estate_rajput
+							influence = 90
+						}
+						estate_influence = {
+							estate = estate_maratha
+							influence = 90
+						}
+					}
+				}
+				AND = {
+					NOT = { religion_group = muslim }
+					estate_influence = {
+						estate = estate_vaisyas
+						influence = 90
+					}
+				}
+				estate_influence = {
+					estate = estate_burghers
+					influence = 90
+				}
+			}
+		}
+	}
+}
+
+dyanstic_administration_reform = {
+	icon = "royal_favoritism"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		yearly_corruption = 0.15
+		all_estate_influence_modifier = -0.1
+		monarch_admin_power = 1
+		advisor_pool = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+superiority_of_the_state_reform = {
+	icon = russian_queen
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_unlocked_government_reform = { government_reform = divided_aristocracy_reform } }
+	}
+	trigger = {
+		full_idea_group = court_ideas
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.1
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		can_sell_crownland_to_single_estates = yes
+		can_seize_crownland_of_single_estates = yes
+		seizing_land_no_rebels = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+administration_of_the_parliament_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		has_unlocked_government_reform = { government_reform = administration_of_the_parliament_reform }
+	}
+	trigger = {
+		has_parliament = yes
+	}
+	modifiers = {
+		improve_relation_modifier = 0.2
+		monthly_favor_modifier = 0.33
+	}
+	custom_attributes = {
+		parliament_seat_bonus = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_seat_in_parliament = yes
+				}
+				add_province_modifier = {
+					name = gov_buffed_parliament_seat
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_buffed_parliament_seat
+				}
+				remove_province_modifier = gov_buffed_parliament_seat
+			}
+		}
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+strengthened_parliament_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		has_parliament = yes
+	}
+	trigger = {
+		has_parliament = yes
+	}
+	modifiers = {
+		max_absolutism = -20
+		development_cost_in_primary_culture = -0.1
+		parliament_backing_chance = 0.05
+	}
+	ai = {
+		factor = 10
+	}
+}

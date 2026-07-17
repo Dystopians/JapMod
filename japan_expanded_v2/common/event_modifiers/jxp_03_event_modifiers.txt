@@ -1,0 +1,111 @@
+jxp_oceanic_sun_state = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.10
+	naval_forcelimit_modifier = 0.20
+	global_colonial_growth = 10
+}
+
+jxp_pacific_charter = {
+	trade_range_modifier = 0.15
+	range = 0.15
+	global_trade_power = 0.10
+	global_tariffs = 0.10
+}
+
+jxp_mandate_fallback_hegemony = {
+	diplomatic_reputation = 1
+	governing_capacity_modifier = 0.10
+	global_unrest = -1
+}
+
+jxp_solar_court_recognition = {
+	diplomatic_reputation = 1
+	legitimacy = 0.5
+	prestige_decay = -0.01
+}
+
+jxp_manchu_korean_route = {
+	diplomatic_reputation = 1
+	naval_morale = 0.05
+}
+
+jxp_tsushima_channel_office = {
+	envoy_travel_time = -0.10
+	naval_morale = 0.05
+	global_ship_trade_power = 0.05
+}
+
+jxp_ryukyu_tribute_port = {
+	trade_steering = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_taiwan_sea_lanes = {
+	trade_range_modifier = 0.10
+	range = 0.10
+	global_trade_power = 0.05
+}
+
+jxp_china_coast_entrepots = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.10
+}
+
+jxp_east_asian_rite_sphere = {
+	diplomatic_reputation = 1
+	num_accepted_cultures = 1
+	governing_capacity_modifier = 0.10
+}
+
+jxp_manila_nagasaki_route = {
+	trade_efficiency = 0.08
+	global_trade_power = 0.05
+	ship_power_propagation = 0.10
+}
+
+jxp_alaska_california_route = {
+	global_colonial_growth = 10
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_eastasia_tribute_registry = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.05
+}
+
+jxp_celestial_diplomacy = {
+	diplomatic_reputation = 1
+	advisor_cost = -0.05
+}
+
+jxp_pacific_waystations = {
+	trade_range_modifier = 0.10
+	range = 0.10
+	global_colonial_growth = 10
+}
+
+jxp_colonial_sun_banner = {
+	global_tariffs = 0.10
+	global_colonial_growth = 10
+}
+
+jxp_oceanic_admiralty = {
+	naval_forcelimit_modifier = 0.15
+	navy_tradition = 0.5
+}
+
+jxp_north_pacific_charts = {
+	trade_range_modifier = 0.15
+	range = 0.15
+	global_colonial_growth = 10
+}
+
+jxp_pacific_silver_flow = {
+	trade_efficiency = 0.10
+	global_tariffs = 0.10
+}
+
+jxp_new_world_japan_towns = {
+	global_colonial_growth = 15
+	production_efficiency = 0.05
+}

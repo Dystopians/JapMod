@@ -1,0 +1,61 @@
+﻿l_english:
+ jxp_mission_house_warrior_muster_title:0 "¹pÀh×e,g›QyV"
+ jxp_mission_house_warrior_muster_desc:0 "qNNNHÇRTÿH„v=fýw	cTM|w«Ž0	c›QäNR5–„v×e,gNÎZQ0¶R-Nø‹S‰˜åwÿbŸRËYŽN“Š¸uÿmNÈuŽN›QyV0"
+ jxp_mission_house_warrior_castle_roads_title:0 "îOteÎWS.Olš"
+ jxp_mission_house_warrior_castle_roads_desc:0 "qSï0³l!nNÎWN.Olšøv¥cÿ›Q¿RMbýw(W%`¥bµb¾öeHQŽNAmŠ¨R«Ž0NbŒHVuQÿ8^Ï…(Wï0ÓNNšKN-N0"
+ jxp_mission_house_warrior_banner_legacy_title:0 "ËzšRfkè•¶RÕl"
+ jxp_mission_house_warrior_banner_legacy_desc:0 "ÜwNåeÿ¶RÕlŒvt^0SVlš0Á”®p0OZŒTçuãU™QeQ¶RÕlÿfkè•KNTMbNó–NHW%éuwce0"
+ jxp_mission_house_court_genealogies_title:0 "!h¢‹¶R1Œçe‡e"
+ jxp_mission_house_court_genealogies_desc:0 "Tè•NbkíQRÿmNíQïS«ˆ¬Nýb²‹„v1ŒRrNfN-g0çe¸uÏukpr‚wÄžÿtSÍNýw©‹ø‹ýVwÁ‰,g¶R„veg†S0"
+ jxp_mission_house_court_petitions_title:0 "IYHT¡VNb÷‹‡e"
+ jxp_mission_house_court_petitions_desc:0 "uQbKNYS	g‡efN0T¡VNbIYHT÷‹‡e0<yirNŒjPKNžÿïSåN©‹pˆ®V„vlQêNQHN,g¶RÑSúQNðXÞVÍT0"
+ jxp_mission_house_court_kanrei_memory_title:0 "Í‘3u¡r†˜YOêu"
+ jxp_mission_house_court_kanrei_memory_desc:0 "¡r†˜0ˆR²bNlQ¹eçeLwbòT‹k4xÿvQYOêuÍNïSSHNŒjP¶R-N0¦umgø‹S„v<yÕl0çeTRå‚ýwIm(uÿ¿O^—’V6q0"
+ jxp_mission_house_sea_port_registers_title:0 "UVfm¹e9‚M|"
+ jxp_mission_house_sea_port_registers_desc:0 "=nfmKNlnowESÿ9‚IN0QCQN‹NT	gçe‹O0S9‚M|0þ‹yVNúQeQ'irUVbŒQÿwmýVMb	gïS(uKN00"
+ jxp_mission_house_sea_shipwrights_title:0 "ìSÆ–9‚.S4lIN"
+ jxp_mission_house_sea_shipwrights_desc:0 "‹Y9‚N=f4NbMb	gÿ4lINmNN=f4NöeïSßR09‚.S0yjKbŒT=n-NFUºNå‚×S¶RÕl¦umgÿwmï¿OObHN,g¶R„v•Kb0"
+ jxp_mission_house_sea_strait_laws_title:0 "šRËzwmáSÕl¦^"
+ jxp_mission_house_sea_strait_laws_desc:0 "Ño7b0„sLu0åeTénNYwmø‹ïÿT	gÎ˜áOŒT—fy0åNÕl¦^¦umgLˆNjPÊlÿwmN„v)RÊvMbNêS^SŽNjmºN0"
+ jxp_mission_house_frontier_passes_title:0 "úVˆRqS˜–¹ãS"
+ jxp_mission_house_frontier_passes_desc:0 "¹0W„véy^8^(Wê–ï0àSãS0lš^NýpkpKNô•0ˆROOqS˜–ÿNêS=fÒbLeÿmN=f©‹ˆmo`N!³uNôce1Y0"
+ jxp_mission_house_frontier_markets_title:0 "¾‹Ëz¹^ãN˜R"
+ jxp_mission_house_frontier_markets_desc:0 "lš0|œ0®vi—0(gPgNÐv'¿l¹ïAm¨RÿNî•¬NýÕl¦^=f&ThThQ0ûN‹TãN˜RÿO¹^eQ&ÿ¹0WMbObHNýV›R0"
+ jxp_mission_house_frontier_border_oaths_title:0 "¦umgƒXîvø‹O"
+ jxp_mission_house_frontier_border_oaths_desc:0 "ƒXîvø‹OgŸq‰`RVD–NÌw»y„vÝ»y0åN“Š¸u0OZŒTºN(Í‘°e¦umgÖNìNÿ¹ƒX¿Oýw1uÂˆØSHNOSœ–0"
+ jxp_mission_house_temple_ledgers_title:0 "teUV>yúRÓNM|"
+ jxp_mission_house_temple_ledgers_desc:0 ">yúR0ÓNKSNFUºN&M|8^ÔkÎW-N›Q®‹ôfwEN0Sçe†˜0ÄRÛŒT!³uÍ‘ Rtetÿ¶RMe¿Oýw(W<yÕl-N3zOO9húW0"
+ jxp_mission_house_temple_market_towns_title:0 "îOQrè•MRHu^"
+ jxp_mission_house_temple_market_towns_desc:0 "è•MRHu0^µ^NåTMbNêS›O‰Q™™kpÿmN›O‰QuQ®|0å‚ýwäNFUÅe‰RÃVeQ^ÿúR>yNÎWN¿OOTbNSO0"
+ jxp_mission_house_temple_public_law_title:0 "lQ^úR>y¶RÕl"
+ jxp_mission_house_temple_public_law_desc:0 "çe‹Oå‚êSÏ…(WúR>y‡e±rÌ‘ÿ¿O¾–åN¦umgýVºN0S>yúR0HuONãN˜R„vCg1fHyŽN¶RÕlÿïSåN©‹S†˜ýVåb	gnZi„véy^0"
+ jxp_21_warrior_muster_rolls:0 "×e,g›QyVTM|"
+ jxp_21_warrior_muster_rolls_desc:0 "×e,gNÎZQOTM|úQ5–ÿ¶R-N›QyVôf¹Rf(W't%`öeZwT0"
+ jxp_21_warrior_castle_roads:0 "ÎWS.Olš"
+ jxp_21_warrior_castle_roads_desc:0 "ÎWS0šŒTÓNKSÞbN¿uÿO2–¡RŒTVÑSôfHNïS`—0"
+ jxp_21_warrior_banner_legacy:0 "fkè•¶RÕl"
+ jxp_21_warrior_banner_legacy_desc:0 ",g¶R„vVlš0Á”®pŒTOZ«ˆ™QeQb‡e¶RÕlÿfkTàVwôfýw.Oíu0"
+ jxp_21_court_genealogies:0 "¶R1Œçe‡e"
+ jxp_21_court_genealogies_desc:0 "Ïu1u1ŒRrŒTçe‡efNÍ‘3ueg†Sÿ,g¶R(W<yÕlNôfwQRÏ‘0"
+ jxp_21_court_petitions:0 "¡VNb÷‹‡e"
+ jxp_21_court_petitions_desc:0 "T¡VNbIYHT„v÷‹‡eŒT<yir©‹pˆ®VlQêNÍNýwHN,g¶RÐc›OTR0"
+ jxp_21_court_kanrei_memory:0 "¡r†˜YOêu"
+ jxp_21_court_kanrei_memory_desc:0 "çeU^œ^LwT«ˆÍ‘°eã‰Ê‘HN¶R-NŒjPŒT<yÕléy^„våTwQ0"
+ jxp_21_sea_port_registers:0 "fm¹e9‚M|"
+ jxp_21_sea_port_registers_desc:0 "=nfm9‚M|0þ‹yVN'irúQeQ«ˆeQ¶R-N&ŒQ0"
+ jxp_21_sea_shipwrights:0 "9‚.S4lIN"
+ jxp_21_sea_shipwrights_desc:0 "9‚.S04lINŒT=nFU×S¶RÕl¦umgÿwmN¨RXTôfHNz˜Eu0"
+ jxp_21_sea_strait_laws:0 "wmáSÕl¦^"
+ jxp_21_sea_strait_laws_desc:0 "Lˆ0jPÊlŒTwmN‰Nïz	g†NïSªVÕl¦^ÿwmýVéy^1udkbbV0"
+ jxp_21_frontier_passes:0 "qS˜–¹ãS"
+ jxp_21_frontier_passes_desc:0 "àSãS0ýpkpŒT¹ïÓNKS«ˆ³ueQˆRYÿ¹0Wéy^ôf R3zúV0"
+ jxp_21_frontier_markets:0 "¹^ãN˜R"
+ jxp_21_frontier_markets_desc:0 "¹0Wlš^0|œ'ŒT(gPg²Nf1uãN˜R°‹UVÿ¹ƒX6eÊvNQce80"
+ jxp_21_frontier_border_oaths:0 "ƒXîv“Š¸u"
+ jxp_21_frontier_border_oaths_desc:0 "ƒXîvø‹OåN“Š¸u0OZŒTºN(ôuû|àVÚ‹ÿ¹ƒX2–¿uôfbSOû|0"
+ jxp_21_temple_ledgers:0 ">yúRÓNM|"
+ jxp_21_temple_ledgers_desc:0 ">yúRçe†˜0ÄRÛŒTÓNKS&M|ÏuÍ‘teTbHN¶RMe„vNèR0"
+ jxp_21_temple_market_towns:0 "è•MRHu^"
+ jxp_21_temple_market_towns_desc:0 "úR>yè•MR„v^µ^ŒTåTMbtQÛvwegÿHNÎWNÐc›O0'NºNKb0"
+ jxp_21_temple_public_law:0 "úR>y¶RÕl"
+ jxp_21_temple_public_law_desc:0 ">yúR0HuONãN˜RCg1«ˆ™Qb¶RÕlÿS†˜ýVéy^ôfHNnZi0"

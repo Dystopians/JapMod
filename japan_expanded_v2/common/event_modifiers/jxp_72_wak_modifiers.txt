@@ -1,0 +1,63 @@
+jxp_72_wak_sea_league_charter = {
+	privateer_efficiency = 0.10
+	naval_forcelimit_modifier = 0.10
+	global_ship_trade_power = 0.05
+}
+
+jxp_72_wak_rotating_letters = {
+	privateer_efficiency = 0.15
+	capture_ship_chance = 0.05
+	diplomatic_reputation = -1
+}
+
+jxp_72_wak_free_port_endowment = {
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.10
+	global_tax_modifier = -0.05
+}
+
+jxp_72_wak_convoy_courts = {
+	ship_durability = 0.05
+	naval_morale = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_72_wak_unlicensed_dividend = {
+	privateer_efficiency = 0.10
+	trade_efficiency = 0.05
+	global_unrest = 1
+}
+
+jxp_72_wak_federation_hearing = {
+	diplomatic_reputation = 1
+	trade_efficiency = 0.05
+	global_unrest = -1
+}
+
+jxp_72_wak_repression_aftershock = {
+	privateer_efficiency = -0.10
+	global_unrest = 1
+}
+
+jxp_72_wak_black_current_overreach = {
+	trade_efficiency = -0.10
+	diplomatic_reputation = -1
+	global_unrest = 2
+}
+
+jxp_72_wak_crisis_recess = {
+	global_unrest = 1
+}
+
+jxp_72_wak_chartered_maritime_state = {
+	trade_efficiency = 0.15
+	global_ship_trade_power = 0.10
+	privateer_efficiency = -0.15
+	diplomatic_reputation = 1
+}
+
+jxp_72_wak_flotillas_disarmed = {
+	naval_forcelimit_modifier = -0.10
+	global_unrest = -1
+	diplomatic_reputation = 1
+}

@@ -1,0 +1,44 @@
+jxp_b_96_independence_crisis_cooldown = {
+	global_unrest = -1
+}
+
+jxp_b_96_tax_refusal_modifier = {
+	global_tax_modifier = -0.10
+	global_unrest = 1
+}
+
+jxp_b_96_port_boycott_modifier = {
+	trade_efficiency = -0.10
+	global_unrest = 1
+}
+
+jxp_b_96_colonial_militia_modifier = {
+	global_manpower_modifier = 0.10
+	land_maintenance_modifier = 0.05
+}
+
+jxp_b_96_foreign_support_search = {
+	diplomatic_reputation = 1
+	global_unrest = 1
+}
+
+jxp_b_96_loyalist_independent_split = {
+	global_unrest = 2
+	stability_cost_modifier = 0.10
+}
+
+jxp_b_96_autonomous_colonial_compact = {
+	global_unrest = -1
+	diplomatic_reputation = 1
+	global_tariffs = -0.15
+}
+
+jxp_b_96_trade_independence_compact = {
+	trade_efficiency = 0.10
+	global_tariffs = -0.25
+}
+
+jxp_b_96_restored_metropole_control = {
+	global_tax_modifier = 0.10
+	global_unrest = 2
+}

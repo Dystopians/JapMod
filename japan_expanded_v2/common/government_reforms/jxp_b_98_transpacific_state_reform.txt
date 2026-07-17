@@ -1,0 +1,17 @@
+jxp_b_two_ocean_federation_reform = {
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	republic = yes
+
+	potential = { tag = TPF }
+	trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
+
+	modifiers = {
+		governing_capacity_modifier = -0.10
+		diplomatic_reputation = 1
+		naval_forcelimit_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}

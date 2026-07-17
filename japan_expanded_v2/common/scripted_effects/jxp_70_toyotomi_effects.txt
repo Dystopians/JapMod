@@ -1,0 +1,37 @@
+jxp_set_toyotomi_government_effect = {
+	if = {
+		limit = {
+			tag = TOY
+			NOT = { has_reform = jxp_toyotomi_kampaku_taiko_reform }
+		}
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		if = { limit = { has_reform = shogunate } remove_government_reform = shogunate }
+		if = { limit = { has_reform = daimyo } remove_government_reform = daimyo }
+		if = { limit = { has_reform = indep_daimyo } remove_government_reform = indep_daimyo }
+		add_government_reform = jxp_toyotomi_kampaku_taiko_reform
+		regenerate_government_mechanics = yes
+	}
+}
+
+jxp_establish_toyotomi_identity_effect = {
+	custom_tooltip = jxp_establish_toyotomi_identity_tt
+	hidden_effect = {
+		jxp_record_daimyo_origin_effect = yes
+		set_country_flag = jxp_toyotomi_identity_established
+		if = {
+			limit = { tag = ODA }
+			change_tag = TOY
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			jxp_a_reconcile_oda_government_effect = yes
+		}
+		jxp_set_toyotomi_government_effect = yes
+		jxp_sync_route_national_ideas_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		regenerate_government_mechanics = yes
+		set_country_flag = jxp_toyotomi_identity_migrated_v0270
+	}
+}

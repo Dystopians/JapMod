@@ -1,0 +1,12 @@
+# Preserve existing EU4 encodings, BOMs, and byte-locked compatibility files.
+* -text
+
+# Visualizer pages are deterministic CRLF artifacts; CR is not trailing whitespace.
+japan_expanded_v2/tools/jxp_visualizer/*.html -text whitespace=cr-at-eol
+japan_expanded_v2_map/tools/jxp_visualizer/*.html -text whitespace=cr-at-eol
+
+# Deterministic exact-path mirrors retain the pinned vanilla files' whitespace bytes.
+japan_expanded_v2/common/cultures/00_cultures.txt -text whitespace=-trailing-space,-space-before-tab
+japan_expanded_v2/common/subject_types/00_subject_types.txt -text whitespace=-trailing-space,-space-before-tab
+japan_expanded_v2/common/wargoal_types/00_wargoal_types.txt -text whitespace=-trailing-space,-space-before-tab
+japan_expanded_v2/common/rebel_types/jxp_a_95_jodo_shinshu.txt -text whitespace=-trailing-space,-space-before-tab

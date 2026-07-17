@@ -1,0 +1,9 @@
+# Immediate MTTH handles new formations. These callbacks are bounded retries
+# for interrupted startup queues and long-running campaigns.
+on_startup = {
+	events = { jxp_a_colonial_registry.1 }
+}
+
+on_yearly_pulse = {
+	events = { jxp_a_colonial_registry.1 }
+}

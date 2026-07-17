@@ -1,0 +1,165 @@
+# Retired 0.23.2 hidden route carriers.
+# Keep the IDs as inert tombstones so serialized old saves can remove them.
+# Their effects are represented by the registered jxp_18 route reforms.
+
+jxp_reform_sakoku_buke_laws = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_sakoku_terauke_registers = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_sakoku_dejima_inspectors = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_open_red_seal_council = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_open_rangaku_bureaucracy = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_open_chartered_harbors = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kirishitan_church_court = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kirishitan_port_congregations = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kirishitan_cross_sun_guard = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_confucian_shushi_academies = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_confucian_ritual_census = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_confucian_kami_rites = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_imperial_daijokan = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_imperial_kinri_guard = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_imperial_court_rites = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_reformed_consistory_ports = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_reformed_oranda_schools = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_reformed_elder_militias = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kaikyo_qadi_harbormasters = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kaikyo_hajj_sea_lanes = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_kaikyo_halal_granaries = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_ikko_monto_covenant = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_ikko_terauchi_markets = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_ikko_village_militias = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_wokou_letters_of_mark = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_wokou_setouchi_pilotage = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}
+
+jxp_reform_wokou_free_harbor_codes = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = { always = no }
+}

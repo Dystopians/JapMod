@@ -1,0 +1,46 @@
+#4943 - Izumi
+
+owner = HSK
+controller = HSK
+culture = japanese
+religion = shinto
+capital = "Sakai"
+trade_goods = chinaware
+hre = no
+base_tax = 4
+base_manpower = 2
+base_production = 3
+is_city = yes
+add_core = HSK
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1542.1.1 = { discovered_by = POR }
+
+1549.5.9 = {
+	owner = MYO
+	controller = MYO
+	add_core = MYO
+	remove_core = HSK
+}
+1573.7.3 = {
+	owner = ODA
+	controller = ODA
+	add_core = ODA
+	remove_core = MYO
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

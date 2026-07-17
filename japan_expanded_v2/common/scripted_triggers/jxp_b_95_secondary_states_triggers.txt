@@ -1,0 +1,211 @@
+# Formation gates for the three secondary colonial successor states.
+# Country/tag registration and central mission/idea refresh remain Agent A interfaces.
+
+jxp_b_95_secondary_colonial_origin_trigger = {
+	jxp_b_91_colonial_society_active_trigger = yes
+	OR = {
+		is_colonial_nation = yes
+		has_country_flag = jxp_iface_colonial_self_rule
+		has_country_flag = jxp_iface_colonial_independence
+		has_country_flag = jxp_b_92_south_seas_japan_town_established
+		has_country_flag = jxp_b_92_pacific_island_compact_established
+		has_country_flag = jxp_b_92_north_pacific_exchange_established
+	}
+	NOT = {
+		OR = {
+			tag = NYA
+			tag = HKK
+			tag = NJF
+			tag = OIA
+		}
+	}
+	NOT = { has_country_flag = jxp_b_95_secondary_state_formed }
+}
+
+jxp_b_95_foundation_age_trigger = {
+	OR = {
+		current_age = age_of_reformation
+		current_age = age_of_absolutism
+		current_age = age_of_revolutions
+		adm_tech = 10
+	}
+}
+
+jxp_b_95_hkk_normal_heartland_trigger = {
+	is_random_new_world = no
+	capital_scope = {
+		OR = {
+			colonial_region = colonial_alaska
+			area = kamchatka_area
+			area = sakhalin_area
+			area = hokkaido_area
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		is_city = yes
+		OR = {
+			colonial_region = colonial_alaska
+			area = kamchatka_area
+			area = sakhalin_area
+			area = hokkaido_area
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		is_city = yes
+		has_port = yes
+		OR = {
+			colonial_region = colonial_alaska
+			area = kamchatka_area
+			area = sakhalin_area
+			area = hokkaido_area
+		}
+	}
+}
+
+jxp_b_95_hkk_rnw_heartland_trigger = {
+	is_random_new_world = yes
+	capital_scope = { continent = new_world }
+	OR = {
+		has_country_flag = jxp_alaska_survey_seen
+		has_country_flag = jxp_b_92_north_pacific_exchange_established
+		has_country_modifier = jxp_north_pacific_charts
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		continent = new_world
+		is_city = yes
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		continent = new_world
+		is_city = yes
+		has_port = yes
+	}
+}
+
+jxp_b_95_hkk_heartland_trigger = {
+	OR = {
+		jxp_b_95_hkk_normal_heartland_trigger = yes
+		jxp_b_95_hkk_rnw_heartland_trigger = yes
+	}
+}
+
+jxp_b_95_can_form_hkk_trigger = {
+	jxp_b_95_secondary_colonial_origin_trigger = yes
+	jxp_b_95_hkk_heartland_trigger = yes
+	jxp_b_95_foundation_age_trigger = yes
+	num_of_cities = 8
+	total_development = 90
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+	check_variable = { which = jxp_b_local_compact value = 50 }
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 60 } }
+	is_at_war = no
+}
+
+jxp_b_95_njf_heartland_trigger = {
+	capital_scope = {
+		OR = {
+			region = indo_china_region
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		is_city = yes
+		OR = {
+			region = indo_china_region
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 4
+		is_city = yes
+		has_port = yes
+		OR = {
+			region = indo_china_region
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+}
+
+jxp_b_95_can_form_njf_trigger = {
+	jxp_b_95_secondary_colonial_origin_trigger = yes
+	jxp_b_95_njf_heartland_trigger = yes
+	jxp_b_95_foundation_age_trigger = yes
+	num_of_cities = 8
+	total_development = 100
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+	check_variable = { which = jxp_b_local_compact value = 55 }
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 60 } }
+	is_at_war = no
+}
+
+jxp_b_95_oia_heartland_trigger = {
+	capital_scope = { region = oceanea_region }
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 6
+		region = oceanea_region
+		is_city = yes
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 5
+		region = oceanea_region
+		is_city = yes
+		has_port = yes
+	}
+}
+
+jxp_b_95_can_form_oia_trigger = {
+	jxp_b_95_secondary_colonial_origin_trigger = yes
+	jxp_b_95_oia_heartland_trigger = yes
+	jxp_b_95_foundation_age_trigger = yes
+	num_of_cities = 8
+	total_development = 80
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+	jxp_b_91_local_compact_at_least_60_trigger = yes
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 60 } }
+	is_at_war = no
+}
+
+jxp_b_95_hkk_mature_ai_trigger = {
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	jxp_b_91_local_compact_at_least_60_trigger = yes
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 40 } }
+}
+
+jxp_b_95_njf_mature_ai_trigger = {
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	jxp_b_91_local_compact_at_least_60_trigger = yes
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 40 } }
+	trade_efficiency = 0.10
+}
+
+jxp_b_95_oia_mature_ai_trigger = {
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	check_variable = { which = jxp_b_local_compact value = 70 }
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 40 } }
+	num_of_heavy_ship = 3
+}
+
+jxp_b_95_has_secondary_constitution_trigger = {
+	OR = {
+		has_reform = jxp_b_95_hkk_company_republic_reform
+		has_reform = jxp_b_95_hkk_frontier_bakufu_reform
+		has_reform = jxp_b_95_hkk_northern_peoples_assembly_reform
+		has_reform = jxp_b_95_njf_japan_town_league_reform
+		has_reform = jxp_b_95_njf_red_seal_company_state_reform
+		has_reform = jxp_b_95_njf_southern_military_diaspora_reform
+		has_reform = jxp_b_95_njf_plural_port_federation_reform
+		has_reform = jxp_b_95_oia_island_kingdom_reform
+		has_reform = jxp_b_95_oia_harbor_assembly_reform
+		has_reform = jxp_b_95_oia_oceanic_naval_league_reform
+	}
+}

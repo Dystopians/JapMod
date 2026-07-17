@@ -1,0 +1,189 @@
+jxp_b_95_hkk_foundation_strain = {
+	global_tax_modifier = -0.05
+	global_ship_cost = 0.05
+}
+
+jxp_b_95_njf_foundation_strain = {
+	global_trade_power = -0.05
+	stability_cost_modifier = 0.05
+}
+
+jxp_b_95_oia_foundation_strain = {
+	global_sailors_modifier = -0.05
+	state_maintenance_modifier = 0.05
+}
+
+jxp_b_95_hkk_cold_harbor_network = {
+	global_ship_recruit_speed = -0.10
+	sailors_recovery_speed = 0.10
+}
+
+jxp_b_95_hkk_northern_citizenship = {
+	tolerance_heathen = 1
+	global_unrest = -0.5
+}
+
+jxp_b_95_hkk_convoy_season = {
+	trade_efficiency = 0.05
+	navy_tradition = 0.25
+}
+
+jxp_b_95_njf_port_federation = {
+	global_trade_power = 0.05
+	governing_capacity_modifier = 0.05
+}
+
+jxp_b_95_njf_interpreter_service = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_95_njf_monsoon_exchange = {
+	trade_steering = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_b_95_oia_wayfinding_houses = {
+	range = 0.10
+	navy_tradition = 0.25
+}
+
+jxp_b_95_oia_reef_compact = {
+	global_unrest = -0.5
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_95_oia_ocean_defense = {
+	naval_forcelimit_modifier = 0.10
+	ship_durability = 0.05
+}
+
+jxp_b_95_hkk_ainu_broker_council = {
+	trade_efficiency = 0.05
+	tolerance_heathen = 1
+}
+
+jxp_b_95_hkk_winter_storehouses = {
+	land_attrition = -0.05
+	manpower_recovery_speed = 0.05
+}
+
+jxp_b_95_hkk_russian_trade_truce = {
+	improve_relation_modifier = 0.10
+	global_trade_power = 0.05
+}
+
+jxp_b_95_hkk_mixed_crews = {
+	sailors_recovery_speed = 0.10
+	global_unrest = -0.5
+}
+
+jxp_b_95_hkk_fur_monopoly = {
+	production_efficiency = 0.10
+	yearly_corruption = 0.05
+}
+
+jxp_b_95_hkk_open_fur_auction = {
+	trade_efficiency = 0.05
+	yearly_corruption = -0.05
+}
+
+jxp_b_95_hkk_storm_rescue_code = {
+	prestige_decay = -0.01
+	global_ship_recruit_speed = -0.05
+}
+
+jxp_b_95_hkk_japan_compact = {
+	diplomatic_reputation = 1
+	global_tariffs = -0.05
+}
+
+jxp_b_95_hkk_northern_autonomy = {
+	reform_progress_growth = 0.10
+	global_unrest = -0.5
+}
+
+jxp_b_95_njf_interpreter_guild = {
+	diplomatic_reputation = 1
+	spy_offence = 0.10
+}
+
+jxp_b_95_njf_royal_patents = {
+	improve_relation_modifier = 0.10
+	global_tariffs = 0.05
+}
+
+jxp_b_95_njf_plural_wards = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+jxp_b_95_njf_red_seal_credit = {
+	interest = -0.5
+	trade_steering = 0.05
+}
+
+jxp_b_95_njf_ronin_contracts = {
+	mercenary_cost = -0.10
+	mercenary_discipline = 0.025
+}
+
+jxp_b_95_njf_monsoon_relief = {
+	global_trade_goods_size_modifier = 0.05
+	global_ship_cost = -0.05
+}
+
+jxp_b_95_njf_japan_terms = {
+	diplomatic_reputation = 1
+	global_tariffs = -0.05
+}
+
+jxp_b_95_njf_free_port_charter = {
+	trade_efficiency = 0.05
+	global_unrest = -0.5
+}
+
+jxp_b_95_oia_chiefly_compact = {
+	legitimacy = 1
+	tolerance_heathen = 1
+}
+
+jxp_b_95_oia_common_council = {
+	reform_progress_growth = 0.10
+	global_unrest = -0.5
+}
+
+jxp_b_95_oia_wayfinder_schools = {
+	range = 0.05
+	navy_tradition = 0.25
+}
+
+jxp_b_95_oia_reef_customs = {
+	global_trade_goods_size_modifier = 0.05
+	production_efficiency = 0.05
+}
+
+jxp_b_95_oia_mixed_fleet = {
+	ship_durability = 0.05
+	global_sailors_modifier = 0.10
+}
+
+jxp_b_95_oia_harbor_dues = {
+	global_trade_power = 0.05
+	state_maintenance_modifier = -0.05
+}
+
+jxp_b_95_oia_storm_covenant = {
+	naval_attrition = -0.10
+	global_ship_recruit_speed = -0.05
+}
+
+jxp_b_95_oia_japan_compact = {
+	diplomatic_reputation = 1
+	global_tariffs = -0.05
+}
+
+jxp_b_95_oia_equal_seas = {
+	improve_relation_modifier = 0.10
+	global_unrest = -0.5
+}

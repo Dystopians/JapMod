@@ -1,0 +1,27 @@
+jxp_b_91_stage_anchorage = {
+	global_trade_power = 0.02
+	global_colonial_growth = 5
+}
+
+jxp_b_91_stage_chartered_settlement = {
+	global_trade_power = 0.03
+	global_tariffs = 0.05
+	global_sailors_modifier = 0.05
+}
+
+jxp_b_91_stage_autonomous_society = {
+	trade_efficiency = 0.05
+	global_unrest = -0.5
+	global_tariffs = -0.05
+}
+
+jxp_b_91_stage_colonial_state = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.05
+	global_tariffs = -0.10
+}
+
+jxp_b_91_recent_colonial_review = {
+	diplomatic_reputation = 1
+	global_trade_power = -0.02
+}

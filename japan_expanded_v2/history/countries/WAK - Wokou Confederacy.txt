@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 4651
+
+1444.11.11 = {
+	monarch = {
+		name = "fk	T"
+		dynasty = "QgN"
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}

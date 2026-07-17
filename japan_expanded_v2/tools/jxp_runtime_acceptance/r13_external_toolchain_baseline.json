@@ -1,0 +1,97 @@
+{
+  "schema": "jxp_r13_external_toolchain_baseline/v1",
+  "platform": {
+    "os_name": "nt",
+    "machine": "AMD64",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "cache_tag": "cpython-312",
+    "pointer_bits": 64,
+    "base_prefix": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python"
+  },
+  "records": [
+    {
+      "kind": "file",
+      "path": "C:\\Program Files\\Git\\mingw64\\bin\\git.exe",
+      "bytes": 4344192,
+      "sha256": "c39b1b4f7a57935bbeadf246dc2466316619453a6a9da77c4a9c6bd6d8fb21d3"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python",
+      "file_count": 1520,
+      "bytes": 16465972,
+      "sha256": "a1fab97c5810a55243a1d0b58dea2055a8679a272957ce18764693854318f870"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs",
+      "file_count": 37,
+      "bytes": 17907200,
+      "sha256": "1caaa101ad23e6a06a1dd6a50f172a6aadc0005ddf047af775d324c72ad06bb4"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib",
+      "file_count": 737,
+      "bytes": 14200319,
+      "sha256": "075094cf8bc587f1cf005dc6cce36a54f6685b10153b0def25fdd58b2b829f14"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages::numpy",
+      "distribution": "numpy",
+      "version": "2.3.5",
+      "file_count": 1330,
+      "bytes": 54520844,
+      "sha256": "b6ba5756b80c5e4e7ad94a73b3e8b9524cdfb45cedeb05b7db1f3fef5e4ce5f1"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages::pillow",
+      "distribution": "pillow",
+      "version": "12.2.0",
+      "file_count": 219,
+      "bytes": 16062570,
+      "sha256": "acbcf4e022b0c7f0a88c52b52ce4a228b86ccc6ccc5f35814dbb85ca75a98854"
+    },
+    {
+      "kind": "distribution",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages::PyYAML",
+      "distribution": "PyYAML",
+      "version": "6.0.3",
+      "file_count": 44,
+      "bytes": 730951,
+      "sha256": "5441a065405b77d09fe16cb870fe64da14756ce777402458acb8a6f3408aa796"
+    },
+    {
+      "kind": "absent",
+      "path": "C:\\Users\\Fiber Memory\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Users\\Fiber Memory\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+      "bytes": 3394,
+      "sha256": "5347a0a09cfb546bba1c0d1a30dae0a233d9a05f57bd4e7877155c588bcdabf7"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "bytes": 348160,
+      "sha256": "75320a519959cc6d089ea3eba33c38caccb7f138a025ea439bc9686cdb79ded4"
+    },
+    {
+      "kind": "tree",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules",
+      "file_count": 666,
+      "bytes": 14628875,
+      "sha256": "64568dfe9f5edd06ca901f32e2332282b9f5d5dd3dd51ab446c003b6dcf04d60"
+    },
+    {
+      "kind": "file",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "bytes": 454656,
+      "sha256": "0ff6f2c94bc7e2833a5f7e16de1622e5dba70396f31c7d5f56381870317e8c46"
+    }
+  ]
+}

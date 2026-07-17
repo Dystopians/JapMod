@@ -1,0 +1,23 @@
+jxp_74_ijp_debug_reset_effect = yes
+change_religion = shinto
+add_stability = 3
+add_adm_power = 999
+add_treasury = 1000
+if = {
+	limit = { has_estate = estate_church }
+	add_estate_loyalty = {
+		estate = estate_church
+		loyalty = 100
+	}
+}
+if = {
+	limit = { has_estate = estate_burghers }
+	add_estate_loyalty = {
+		estate = estate_burghers
+		loyalty = 100
+	}
+}
+set_country_flag = jxp_ikko_terauchi_seen
+every_owned_province = {
+	remove_province_modifier = jxp_ikko_terauchi_town
+}

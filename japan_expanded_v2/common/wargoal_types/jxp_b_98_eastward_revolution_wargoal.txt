@@ -1,0 +1,24 @@
+jxp_b_eastward_revolution_wargoal = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 1
+		peace_options = {
+			po_jxp_b_liberate_overseas
+			po_jxp_b_old_world_member
+			po_jxp_b_two_ocean_federation
+			po_jxp_b_eastward_capital
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = { po_concede_defeat }
+	}
+
+	war_name = JXP_B_EASTWARD_REVOLUTION_WAR_NAME
+}

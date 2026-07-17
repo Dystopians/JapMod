@@ -1,0 +1,84 @@
+﻿l_english:
+ jxp_76_decision_open_pacific_network_title:0 "V¾‹*Ys^mø‹*‚ïQ"
+ jxp_76_decision_open_pacific_network_desc:0 "âe	g„vÜwmUe¸‹ÍNêS=fceK„(W&ŒQN„vCg)R0å‚Šb•T0T‹R0S*Ys^mN°e'YF–=nàWbnl*‚ïÿýV¶R¿OýwcíuÏu%„wmN)RÊvÿmNÅV‰˜bÅbFU>y0ûylNÜm›QYqQTïy=t„v‹S›R0"
+ jxp_76_decision_fund_manila_nagasaki_convoys_title:0 "D©Rlš<SÉb—•T9‚âV"
+ jxp_76_decision_fund_manila_nagasaki_convoys_desc:0 "åNšRg9‚âVÞ¥cT‹R‹vö”0•TONbNåe,gFU=nÿïSåN3zšRcRÎ˜8f0*‚!kŠÆRÿFU>yùR²b*‚0P7N=n¡RyrCg„v‰BlmNŠØš0"
+ jxp_76_decision_build_alaska_survey_stations_title:0 "ú^¾‹M–Éb¯e RKmPNb"
+ jxp_76_decision_build_alaska_survey_stations_desc:0 "(WS¹ewmþ–N²›Sô•¾‹neˆÙu0KmPŒTîO9‚ÙzÿïSåNö^8O¸œHWN–kl*‚¿uÿtSOŠbôfY9‚XTŒT0K•(W+o•„vS*Ys^m*‚cR0"
+ jxp_76_decision_charter_california_settlements_title:0 "Ue¸‹ R)Ry<SšNZwK„"
+ jxp_76_decision_charter_california_settlements_desc:0 "©‹FUºN0jmºN0åT.SNYeâVqQTbÅb°e'YF–ZwK„ÿïSåNÅú^Ëz=n^QÜu0|V¸SqQTSOmNS‰Blê»l0W0WN3zšR„vèm›OÙu0"
+ jxp_76_decision_convene_pacific_court_council_title:0 "ìSV*Ys^mg®‹"
+ jxp_76_decision_convene_pacific_court_council_desc:0 "åNg÷^TŒQ0<y6RO‚‚NIYLˆÄ‹®‹ßuyrwmY*‚ïÿïSåNŠbÁyºNUe¸‹³ueQýV¶Réy^ÿv^åNcíu„vLˆMeb,gM–NO*‚ï1Yµc„v‹S›R0"
+ jxp_76_decision_proclaim_pacific_compact_title:0 "˜^*Ys^mÏueu¦uàz"
+ jxp_76_decision_proclaim_pacific_compact_desc:0 "*‚ï0ZwK„0YeâVNg®‹òTÏubVbqQT6R¦^0åNb‡e¦uàzfnxT=nCg)RNýV¶R1ûNÿïSåNÓumgÙNnib.V‹S›Rÿv^YuN•gFO	gP–„vwmmýV¶RWµN0"
+ jxp_76_decision_stand_down_pacific_network_title:0 "6emg*Ys^m*‚ïQ"
+ jxp_76_decision_stand_down_pacific_network_desc:0 "²d•ØšÎ˜i–Ue¸‹0)ÏQ²b*‚v^ÓunwmY&îvÿïSåNIN¨RÓumg*‚ïªV¯s08fO‚föenoÿýV¶RRÍ‘°eÖS—VŒ¦^YO0W0"
+
+ jxp_debug_76_start_pacific_network_title:0 "ŒÕ‹ÿ=T¨R*Ys^m*‚ïªV¯s"
+ jxp_debug_76_start_pacific_network_desc:0 "ËzsS=T¨R*‚ïªV¯sv^¾‹nRËY‹S›R0"
+ jxp_debug_76_add_pacific_pressure_title:0 "ŒÕ‹ÿžX R*Ys^m*‚ï‹S›R"
+ jxp_debug_76_add_pacific_pressure_desc:0 "ËzsSžX R‹S›Rv^gbLˆNNP–!hck0"
+ jxp_debug_76_fire_pacific_review_title:0 "ŒÕ‹ÿæ‰ÑS*‚ïÄ‹®‹"
+ jxp_debug_76_fire_pacific_review_desc:0 "ËzsSæ‰ÑSN!k	cï¿uRS„vwmYÄ‹®‹‹NöN0"
+ jxp_debug_76_fire_pacific_crisis_title:0 "ŒÕ‹ÿæ‰ÑS*Ys^mqSHg"
+ jxp_debug_76_fire_pacific_crisis_desc:0 "Šb‹S›RÐcGSóqSHg–<Pv^ËzsSæ‰ÑSgÈuÖS‚0"
+ jxp_debug_76_reset_pacific_network_title:0 "ŒÕ‹ÿÍ‘n*Ys^m*‚ïªV¯s"
+ jxp_debug_76_reset_pacific_network_desc:0 "nd–*‚ï×eh0‹S›RNhQèN^SîOck0"
+
+ jxp_overseas_loop.1.t:0 "ÛVwm&ŒQ„vt^¦^Ä‹®‹"
+ jxp_overseas_loop.1.d:0 "ÎN•TONb0T‹R9‚âV0S¹eKmPNbN°e'YF–ZwK„eg„v&ŒQXánÄ‹®‹-^0FUºN‰Blib'YR¢uÿYeâVIN.VÝO²bTSÿgãRZWcHQ8hšR<yêNNCg10"
+ jxp_overseas_loop.1.a:0 "©‹=nFU	c*‚!kRÖS¢u)R0"
+ jxp_overseas_loop.1.b:0 "1uwmYYeâVôuc¿lQeNmNTwÜu0"
+ jxp_overseas_loop.1.c:0 "Šb*‚ï‰v°‹³ueQg÷^TŒQ0"
+ jxp_overseas_loop.1.d:0 "lQV8hùRUe¸‹N.k&0"
+ jxp_overseas_loop.2.t:0 "èmUe¸‹„v‰N¼‹"
+ jxp_overseas_loop.2.d:0 "9‚IN0ZwK„ãNhˆNIYLˆ’Nøvc1ùR¹e–MS'US0Öb.k²b*‚9bÅd9eW0WQY¦u0å‚NÍ‘¢‹1ûNÿ‰N®‹SÎNONb…ö^0RÏkNag*‚¿u0"
+ jxp_overseas_loop.2.a:0 "¾‹ËzTwTòNÁˆ-^ÿy˜Óun‰N®‹0"
+ jxp_overseas_loop.2.b:0 "¹R¸‹FU>yåN°eR¢ukXeˆçe&0"
+ jxp_overseas_loop.2.c:0 ">m4l›Q¹pŒš9‚M|N²b*‚RJd0"
+ jxp_overseas_loop.3.t:0 "*Ys^mÏueu„vgP–"
+ jxp_overseas_loop.3.d:0 "wmY*‚ïòTÏuž^'Y0RàeÕlçuíuO`—4NöeUe¸‹0ýV¶RÅV‰˜ŠbFU>y0ZwK„N=n¡R³ueQ3zšR¦uàzÿIN¨R6emgQÜuÿbåNôf%N‰S„v›Q9N¡r6RbcÖS˜Uo`0"
+ jxp_overseas_loop.3.a:0 "Šbø‹*‚ïeQb‡eÏueu¦uàz0"
+ jxp_overseas_loop.3.b:0 "²d•ØšÎ˜i–Ue¸‹ÿ‚föeÞVÑwm0"
+ jxp_overseas_loop.3.c:0 " R>m4l›QNö”2NÿHVäNQÜuOte0"
+
+ jxp_76_pacific_network_charter:0 "*Ys^mø‹*‚ïUe¸‹"
+ jxp_76_pacific_network_charter_desc:0 "Rce„vwmY*‚¿u«ˆeQnl9‚gÿ8fN0‚–¹RÏ‘–KNžX•0"
+ jxp_76_manila_nagasaki_convoys:0 "lš<SÉb—•TšRg9‚âV"
+ jxp_76_manila_nagasaki_convoys_desc:0 "T‹R‹vö”0•TONbNåe,g=nFUÇ×S²b*‚„vcRÎ˜9‚gøvÞ0"
+ jxp_76_alaska_survey_stations:0 "M–Éb¯e RKmPNb"
+ jxp_76_alaska_survey_stations_desc:0 "S*Ys^meˆÙuNKmPÙz=e‘d–kl*‚zv^ùW‰QÜm4lKb0"
+ jxp_76_california_settlement_compacts:0 " R)Ry<SšNZwK„QY¦u"
+ jxp_76_california_settlement_compacts_desc:0 "°e'YF–=n^åNW0W0›OÙuNê»lQY¦u8TVcíuûyl0"
+ jxp_76_pacific_court_council:0 "*Ys^mg®‹"
+ jxp_76_pacific_court_council_desc:0 "g÷^NIYLˆqQT‰v°‹*‚ïÿOwmYUe¸‹gÎNôf3zšR„výV¶Réy^0"
+ jxp_76_brokerage_dividend:0 "=nFU*‚!k¢u)R"
+ jxp_76_brokerage_dividend_desc:0 "ëVR¢uHRÀo8fÿmNŸ±RFU>ybÅbôfØšÎ˜i–0"
+ jxp_76_mission_house_network:0 "wmYYeâVTwÜuQ"
+ jxp_76_mission_house_network_desc:0 "YeâV0ISb–NONbHNèmºNXTÐc›OQeNmŒTY²NTwÜu0"
+ jxp_76_court_route_register:0 "g÷^*‚ïTŒQ"
+ jxp_76_court_route_register_desc:0 "<y6RTŒQfnxwmYO‚‚09‚INNIYLˆ„v«ŽýNŒT1ûN0"
+ jxp_76_public_network_hearing:0 "*‚ïlQV,T®‹"
+ jxp_76_public_network_hearing_desc:0 "lQVÄ‹®‹9e„UT¹eáO(uÿtS‚föeÖbbaFUï³QVr0"
+ jxp_76_speculative_overreach:0 "èm•bHgÇ¦^"
+ jxp_76_speculative_overreach_desc:0 "*gÏu¦umg„vP7NUe¸‹&^egíwg6eÊvÿmNïy=t0MeN>yOÎ˜i–0"
+ jxp_76_arbitration_recent:0 "*‚ïòNÁˆYOâl"
+ jxp_76_arbitration_recent_desc:0 "‰N¼‹ck(Wy˜ÓunÿwmYFU¡R‚föeb×S˜Y¡Råg0"
+ jxp_76_crisis_recess:0 "*Ys^mqSHgOte"
+ jxp_76_crisis_recess_desc:0 "HV6R)ÏQ*‚!kbceg˜Uo`ÿ*gã‰³Q„vÛwþvÍNYu(WT=n0"
+ jxp_76_pacific_compact:0 "*Ys^mÏueu¦uàz"
+ jxp_76_pacific_compact_desc:0 "FU>y0ZwK„0YeâVNýV¶RIYLˆ«ˆ³ueQqQTw	gP–g„vwmm6R¦^0"
+ jxp_76_pacific_retrenchment:0 "Üwm6emgg"
+ jxp_76_pacific_retrenchment_desc:0 "ýV¶R‚föeúQØšÎ˜i–ÜmUe¸‹ÿåNƒNO8fIm›RbcÖSéy^b`Y0"
+
+ jxp_76_pacific_pressure_starts_10_tt:0 "*Ys^m*‚ï‹S›RSÎN§Y10§!VËY0"
+ jxp_76_pacific_network_scope_tt:0 "Ù=f*Ys^mUe¸‹T„v•gÏu%„ÿlš<SÉb9‚âV0M–Éb¯e RKmPNb0 R)Ry<SšNZwK„N*Ys^mg®‹OOï¿uŒTžRE–nc¹pR+RV>e0"
+ jxp_76_pacific_pressure_rises_10_tt:0 "*Ys^m*‚ï‹S›RSžX R§R10§!0"
+ jxp_76_pacific_pressure_rises_15_tt:0 "*Ys^m*‚ï‹S›RSžX R§R15§!0"
+ jxp_76_pacific_pressure_rises_20_tt:0 "*Ys^m*‚ï‹S›RSžX R§R20§!0"
+ jxp_76_pacific_pressure_falls_10_tt:0 "*Ys^m*‚ï‹S›RSM–NO§G10§!0"
+ jxp_76_pacific_pressure_falls_15_tt:0 "*Ys^m*‚ï‹S›RSM–NO§G15§!0"
+ jxp_76_pacific_pressure_falls_20_tt:0 "*Ys^m*‚ï‹S›RSM–NO§G20§!0"
+ jxp_76_pacific_pressure_falls_40_tt:0 "*Ys^m*‚ï‹S›RSM–NO§G40§!0"
+ jxp_76_pacific_compact_tt:0 "Óumg,gn‹S›RªV¯sÿv^(WŒNASt^…QžRLˆ*Ys^mÏueu¦uàz0"
+ jxp_76_pacific_stand_down_tt:0 "Óumg,gn‹S›RªV¯sÿv^(WASt^…QbÅbÜwm6emg„vãN÷N0"

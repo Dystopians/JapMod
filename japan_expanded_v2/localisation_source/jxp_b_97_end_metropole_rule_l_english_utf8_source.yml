@@ -1,0 +1,21 @@
+l_english:
+ cb_jxp_b_end_metropole_colonial_rule:0 "终结日本新世界统治"
+ cb_jxp_b_end_metropole_colonial_rule_desc:0 "一个已经独立而成熟的日本殖民国家可以迫使旧宗主放弃对美洲与太平洋殖民社会的统治。战争不会授予日本本土核心，也不能索取无关领土。"
+ jxp_b_end_metropole_colonial_rule_wargoal:0 "占领旧宗主首都"
+ jxp_b_end_metropole_colonial_rule_wargoal_desc:0 "占领旧宗主的政治中心，迫使其承认远洋殖民权已经失去。"
+ JXP_B_END_METROPOLE_RULE_WAR_NAME:0 "$ORDER$$FIRST$太平洋诸邦解放战争"
+ po_jxp_b_end_metropole_colonial_rule:0 "终结日本新世界统治"
+ po_jxp_b_end_metropole_colonial_rule_desc:0 "严格筛选首都位于新大陆或大洋洲、且拥有日本殖民起源的直接属国并使其独立；清理旧宗主在这些区域的宣称与殖民章程，并剥夺其四十年的远洋敕许权。朝鲜、琉球及其他非殖民属国不受影响。"
+
+ jxp_end_metropole_rule.1.t:0 "太平洋诸邦获得自由"
+ jxp_end_metropole_rule.1.d:0 "和约没有把旧宗主的海外国家当作战利品转交给另一个主人。符合殖民起源与地理条件的诸邦各自获得独立，未来可以自愿结盟、进入联邦，或保持互不隶属。"
+ jxp_end_metropole_rule.1.a:0 "自由不能只是换一位宗主。"
+ jxp_end_metropole_rule.2.t:0 "远洋权利被剥夺"
+ jxp_end_metropole_rule.2.d:0 "船印、商馆特许与跨洋属国关系在和约中被逐项注销。四十年内，我们不能重新发行同一套殖民章程；若要重返远海，只能在限制结束后重新投入国力。"
+ jxp_end_metropole_rule.2.a:0 "海那一边已不再服从。"
+
+ jxp_b_97_overseas_rights_revoked:0 "远洋权利被剥夺"
+ jxp_b_97_overseas_rights_revoked_desc:0 "败战和约注销了海外敕许、殖民宗主权与相关宣称。四十年内国家无法重新建立同类殖民章程，远海贸易信誉也严重受损。"
+ jxp_b_97_liberator_of_pacific_states:0 "太平洋诸邦的解放者"
+ jxp_b_97_liberator_of_pacific_states_desc:0 "胜利者拒绝把获得自由的殖民诸邦当作新的战利品，其外交信用因此增长。"
+ jxp_b_97_release_only_safety_tt:0 "本和约采用安全的§Y逐国独立§!模式；不会把原版动态殖民国强行改挂给胜利者，也不会影响日本在亚洲的非殖民属国。"

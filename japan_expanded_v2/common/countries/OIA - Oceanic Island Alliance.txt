@@ -1,0 +1,32 @@
+graphical_culture = asiangfx
+
+color = { 35 146 139 }
+revolutionary_colors = { 10 49 47 }
+
+random_nation_chance = 0
+historical_score = 0
+
+historical_idea_groups = {
+	expansion_ideas
+	trade_ideas
+	maritime_ideas
+	quality_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"gàV #0" = 10
+	"Sn #0" = 10
+	"w	NÎ #0" = 10
+	"ck·V #0" = 10
+	"g‰R #0" = 10
+	"Ûv²N #0" = 10
+	"o‚ËR #0" = 10
+}
+
+leader_names = {
+	Ôk	V Ñ‘ÎW 'YÎW «RÎW °e±W ‰sÎW NŸS ›S‹ˆ s^o‚ åwõV òNQg !nEN0W KSo‚
+}

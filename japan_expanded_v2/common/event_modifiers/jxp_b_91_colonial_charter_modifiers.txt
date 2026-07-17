@@ -1,0 +1,34 @@
+jxp_b_91_charter_red_seal_town = {
+	trade_efficiency = 0.08
+	diplomatic_reputation = 1
+}
+
+jxp_b_91_charter_military_settlement = {
+	defensiveness = 0.15
+	global_manpower_modifier = 0.10
+}
+
+jxp_b_91_charter_faith_community = {
+	global_unrest = -1
+	missionaries = 1
+}
+
+jxp_b_91_charter_free_port = {
+	global_trade_power = 0.10
+	privateer_efficiency = 0.15
+}
+
+jxp_b_91_charter_naval_station = {
+	naval_forcelimit_modifier = 0.10
+	global_sailors_modifier = 0.10
+	heavy_ship_cost = -0.05
+}
+
+jxp_b_91_charter_reform_cooldown = {
+	reform_progress_growth = -0.05
+}
+
+jxp_b_91_charter_reform_strain = {
+	global_unrest = 1
+	global_tax_modifier = -0.05
+}

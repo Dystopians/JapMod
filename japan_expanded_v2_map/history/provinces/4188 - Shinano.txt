@@ -1,0 +1,50 @@
+#2017 - Shinano
+owner = OGS
+controller = OGS
+
+
+
+culture = togoku
+religion = shinto
+capital = "Nagano"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_manpower = 1
+base_production = 2
+is_city = yes
+add_core = OGS
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1   = { discovered_by = POR }
+1542.6.1 = { add_core = TKD } # Takeda Shingen expands into Shinano
+1550.7.1 = {   } # Fall of the Ogasawara Clan
+1582.4.3 = { add_core = ODA   remove_core = TKD }
+1600.9.13 = {     }
+
+# JXP 88-province continuous ownership overlay
+1550.7.1 = {
+	owner = TKD
+	controller = TKD
+}
+1582.4.3 = {
+	owner = ODA
+	controller = ODA
+}
+1586.1.1 = {
+	owner = TOY
+	controller = TOY
+	add_core = TOY
+	remove_core = ODA
+}
+1600.10.21 = {
+	owner = TKG
+	controller = TKG
+	add_core = TKG
+	remove_core = TOY
+}

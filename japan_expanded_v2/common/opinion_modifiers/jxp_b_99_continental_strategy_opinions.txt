@@ -1,0 +1,24 @@
+jxp_b_99_opinion_trade_mission = {
+	opinion = 35
+	years = 15
+}
+
+jxp_b_99_opinion_protection_compact = {
+	opinion = 50
+	years = 20
+}
+
+jxp_b_99_opinion_treaty_port = {
+	opinion = 25
+	years = 20
+}
+
+jxp_b_99_opinion_rejected_mission = {
+	opinion = -25
+	years = 10
+}
+
+jxp_b_99_opinion_continental_threat = {
+	opinion = -100
+	years = 20
+}

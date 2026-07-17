@@ -1,0 +1,542 @@
+namespace = jxp_major_daimyo
+
+country_event = {
+	id = jxp_major_daimyo.1
+	title = "jxp_major_daimyo.1.t"
+	desc = "jxp_major_daimyo.1.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = ODA
+		is_year = 1460
+		NOT = { has_country_flag = jxp_major_daimyo_oda_seen }
+	}
+
+	mean_time_to_happen = { months = 140 }
+
+	option = {
+		name = "jxp_major_daimyo.1.a"
+		set_country_flag = jxp_major_daimyo_oda_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_oda_teppo_muster
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.1.b"
+		set_country_flag = jxp_major_daimyo_oda_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_oda_court_notice
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.2
+	title = "jxp_major_daimyo.2.t"
+	desc = "jxp_major_daimyo.2.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = TKG
+		NOT = { has_country_flag = jxp_major_daimyo_tkg_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.2.a"
+		set_country_flag = jxp_major_daimyo_tkg_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_tkg_fudai_oaths
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.2.b"
+		set_country_flag = jxp_major_daimyo_tkg_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_tkg_prudent_petitions
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.3
+	title = "jxp_major_daimyo.3.t"
+	desc = "jxp_major_daimyo.3.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = TKD
+		NOT = { has_country_flag = jxp_major_daimyo_tkd_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.3.a"
+		set_country_flag = jxp_major_daimyo_tkd_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_10_effect = yes
+		add_country_modifier = {
+			name = jxp_42_tkd_cavalry_registers
+			duration = 3650
+		}
+		add_army_tradition = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.3.b"
+		set_country_flag = jxp_major_daimyo_tkd_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_tkd_mountain_accounts
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.4
+	title = "jxp_major_daimyo.4.t"
+	desc = "jxp_major_daimyo.4.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = UES
+		NOT = { has_country_flag = jxp_major_daimyo_ues_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.4.a"
+		set_country_flag = jxp_major_daimyo_ues_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ues_echigo_muster
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.4.b"
+		set_country_flag = jxp_major_daimyo_ues_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ues_justice_petition
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.5
+	title = "jxp_major_daimyo.5.t"
+	desc = "jxp_major_daimyo.5.d"
+	picture = SIEGE_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = HJO
+		NOT = { has_country_flag = jxp_major_daimyo_hjo_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.5.a"
+		set_country_flag = jxp_major_daimyo_hjo_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_hjo_castle_net
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.5.b"
+		set_country_flag = jxp_major_daimyo_hjo_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_hjo_cadastral_review
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.6
+	title = "jxp_major_daimyo.6.t"
+	desc = "jxp_major_daimyo.6.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = MRI
+		NOT = { has_country_flag = jxp_major_daimyo_mri_seen }
+	}
+
+	mean_time_to_happen = { months = 140 }
+
+	option = {
+		name = "jxp_major_daimyo.6.a"
+		set_country_flag = jxp_major_daimyo_mri_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_mri_setouchi_tides
+			duration = 3650
+		}
+		add_navy_tradition = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.6.b"
+		set_country_flag = jxp_major_daimyo_mri_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_mri_kokujin_oaths
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.7
+	title = "jxp_major_daimyo.7.t"
+	desc = "jxp_major_daimyo.7.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = SMZ
+		is_year = 1500
+		NOT = { has_country_flag = jxp_major_daimyo_smz_seen }
+	}
+
+	mean_time_to_happen = { months = 140 }
+
+	option = {
+		name = "jxp_major_daimyo.7.a"
+		set_country_flag = jxp_major_daimyo_smz_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_smz_tanegashima_trials
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.7.b"
+		set_country_flag = jxp_major_daimyo_smz_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_smz_ichimon_fire
+			duration = 3650
+		}
+		add_army_tradition = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.8
+	title = "jxp_major_daimyo.8.t"
+	desc = "jxp_major_daimyo.8.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = OTM
+		is_year = 1500
+		NOT = { has_country_flag = jxp_major_daimyo_otm_seen }
+	}
+
+	mean_time_to_happen = { months = 140 }
+
+	option = {
+		name = "jxp_major_daimyo.8.a"
+		set_country_flag = jxp_major_daimyo_otm_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_otm_funai_quarter
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.8.b"
+		set_country_flag = jxp_major_daimyo_otm_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_otm_ritual_boundary
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.9
+	title = "jxp_major_daimyo.9.t"
+	desc = "jxp_major_daimyo.9.d"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = DTE
+		NOT = { has_country_flag = jxp_major_daimyo_dte_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.9.a"
+		set_country_flag = jxp_major_daimyo_dte_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_dte_oshu_warband
+			duration = 3650
+		}
+		add_army_tradition = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.9.b"
+		set_country_flag = jxp_major_daimyo_dte_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_dte_distant_letters
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.10
+	title = "jxp_major_daimyo.10.t"
+	desc = "jxp_major_daimyo.10.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		tag = ASK
+		NOT = { jxp_has_any_route_trigger = yes }
+		OR = {
+			has_reform = shogunate
+			has_reform = daimyo
+			has_reform = indep_daimyo
+		}
+		NOT = { has_country_flag = jxp_major_daimyo_ask_seen }
+	}
+
+	mean_time_to_happen = { months = 180 }
+
+	option = {
+		name = "jxp_major_daimyo.10.a"
+		set_country_flag = jxp_major_daimyo_ask_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_10_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ask_kuban_restoration
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+	option = {
+		name = "jxp_major_daimyo.10.b"
+		set_country_flag = jxp_major_daimyo_ask_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ask_bakufu_ledgers
+			duration = 3650
+		}
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.11
+	title = "jxp_major_daimyo.11.t"
+	desc = "jxp_major_daimyo.11.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = CSK
+		NOT = { has_country_flag = jxp_major_daimyo_csk_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.11.a"
+		set_country_flag = jxp_major_daimyo_csk_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_csk_ichiryo_muster
+			duration = 3650
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.11.b"
+		set_country_flag = jxp_major_daimyo_csk_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_csk_urado_sails
+			duration = 3650
+		}
+		add_navy_tradition = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.12
+	title = "jxp_major_daimyo.12.t"
+	desc = "jxp_major_daimyo.12.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = OUC
+		NOT = { has_country_flag = jxp_major_daimyo_ouc_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.12.a"
+		set_country_flag = jxp_major_daimyo_ouc_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ouc_yamaguchi_rites
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.12.b"
+		set_country_flag = jxp_major_daimyo_ouc_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_ouc_tang_goods
+			duration = 3650
+		}
+		add_mercantilism = 1
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.13
+	title = "jxp_major_daimyo.13.t"
+	desc = "jxp_major_daimyo.13.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = IMG
+		NOT = { has_country_flag = jxp_major_daimyo_img_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.13.a"
+		set_country_flag = jxp_major_daimyo_img_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_img_kana_code
+			duration = 3650
+		}
+		add_adm_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.13.b"
+		set_country_flag = jxp_major_daimyo_img_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_img_tokaido_prestige
+			duration = 3650
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = {
+	id = jxp_major_daimyo.14
+	title = "jxp_major_daimyo.14.t"
+	desc = "jxp_major_daimyo.14.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_daimyo_has_working_port_trigger = yes
+		tag = SOO
+		NOT = { has_country_flag = jxp_major_daimyo_soo_seen }
+	}
+
+	mean_time_to_happen = { months = 150 }
+
+	option = {
+		name = "jxp_major_daimyo.14.a"
+		set_country_flag = jxp_major_daimyo_soo_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_soo_wakan_books
+			duration = 3650
+		}
+		add_dip_power = 25
+	}
+	option = {
+		name = "jxp_major_daimyo.14.b"
+		set_country_flag = jxp_major_daimyo_soo_seen
+		jxp_ensure_daimyo_polity_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		add_country_modifier = {
+			name = jxp_42_soo_channel_protocols
+			duration = 3650
+		}
+		add_prestige = 5
+	}
+}

@@ -1,0 +1,86 @@
+﻿l_english:
+ jxp_japanese_reform_track_requirement_tt:0 "^SŽNåe,gfk¶RMeSO0åe,g‡eSqQTSObòTÏunxËz„våe,gßuNï¿u"
+ jxp_japanese_overseas_reform_requirement_tt:0 "*gIYLˆ•ýVÿv^òTwQYÏu%„!nwm¦W–kNÜmFU†™„výVVr"
+ jxp_japanese_tier_ten_fallback_requirement_tt:0 "S*gnxËzï¿uN^S„vÈuNSýV6RÿÍNïSÎNåe,glQêN„v(uÓu„g-NébNËeLˆ"
+
+ jxp_reform_japanese_fudai_service_rolls:0 "1ŒãNIYlQ^"
+ jxp_reform_japanese_fudai_service_rolls_desc:0 "S=tNIYlQ„v¶Rã0lšÞVN×e,geQšRgØR8h„vIYlQ^ÿOåwLˆØšNOfšRúQ5–0¿RkSŒTOjuKNyV0"
+ jxp_reform_japanese_direct_investiture:0 "SVINôvÁˆNåwLˆ9e"
+ jxp_reform_japanese_direct_investiture_desc:0 "Í‘ØRçe	gåwLˆv^6eÞVTžRNoRKN0WÿO›QyVNt^!ôv¥cû|ŽNSVINÁˆ¸‹ÿ‘b6RýVºNPçe=PW'Y0"
+
+ jxp_reform_japanese_gundai_daikan_partition:0 "áãN·ãN˜RR»l"
+ jxp_reform_japanese_gundai_daikan_partition_desc:0 "åNáãNßu–^ßW›QMeÿåNãN˜RÏužRt^!0É‹¼‹NQgK„‹N¡RÿOÜÑø‹áT	gïSý1„vIYlQºN0"
+ jxp_reform_japanese_branch_castle_cadasters:0 "=eÎWIYLˆNÀh0W^"
+ jxp_reform_japanese_branch_castle_cadasters_desc:0 "(W‰²Q=eÎW¾‹nIYLˆÿv^åNÀh0W^8hšR0u`u0KSweN›QyVÿOÎW&xQÜuTöebHN†˜ýVLˆMe„v¨š¶g0"
+
+ jxp_reform_japanese_religious_arbitration:0 "—Rè•IYLˆN—Rº‹Áˆ¸‹"
+ jxp_reform_japanese_religious_arbitration_desc:0 "1uIYLˆ×StúR>y0—R>mNè•’VKNô•„v‰Nº‹ÿnx²‹,g+g!k,rŒTƒX…QÕl¦^ÿåNÁˆ¸‹ãNÿfàeObk„v—Rº‹NÁy—e0"
+ jxp_reform_japanese_temple_land_settlement:0 "úR>y†˜YRNuQçP9e6R"
+ jxp_reform_japanese_temple_land_settlement_desc:0 "Í‘3uúR>y†˜„v1gpS¹LuÿyÝuÅd¾‹sQ%mNÁyZwuQOÿMaˆRÕl¦^wÍN×S²bcÿ—bÒbwR6evQW0WNfkY0"
+
+ jxp_reform_japanese_ashigaru_muster_rolls:0 "³‰›QyV^"
+ jxp_reform_japanese_ashigaru_muster_rolls_desc:0 "	cQgaN0åwLˆNÎWNHu6R³‰›QyV^ÿßuN•ªg0VÁ”®pNuQ®|ÅbÿO4NöeVÑSnbHNïScíu„v8^Y›QyV0"
+ jxp_reform_japanese_kyuba_hatamoto:0 "VlšEežRN×e,gY"
+ jxp_reform_japanese_kyuba_hatamoto_desc:0 "åNVlšEežRtel™ÑOfkëX„v<yÕl0–RN4N5–Lw1ÿv^ÎN¶R-N¾|•b²bkSSVIN0ôuû|›QÃV„v×e,gY0"
+ jxp_reform_japanese_castle_artillery_office:0 "ÎWrRnf÷‹NýV)TIYLˆ"
+ jxp_reform_japanese_castle_artillery_office_desc:0 "äNnf÷‹IYLˆØRšRów±W0XRN4xÎWKNÕlÿÈS¾‹ýV)TIYLˆßuyr'YRr0kpoƒŒTø”.ÿSIeˆRÎW=g³ueQTN›QäN0"
+ jxp_reform_japanese_funade_ura_service:0 "9‚KbONfmyV"
+ jxp_reform_japanese_funade_ura_service_desc:0 "S¿lwmfm¹e04lINN9‚KbOeQfmyVÿs^öe²b®|9‚0áTåg=nŒnÿböeR1!nwm0‰vF–ŒTwmNTwÜu0"
+
+ jxp_reform_japanese_lordly_arbitration:0 "SVINôvÁˆ"
+ jxp_reform_japanese_lordly_arbitration_desc:0 "'Y‹N1uSVIN²N­eÿIYLˆêSncÕl¦^H–ðbHhÿÙNSO6R³Q­eÅÿtSmN‰BlSVINbÅb¶R-Nb%„vhQèðXg0"
+ jxp_reform_japanese_elder_countersignature:0 "¿RwÞrNOYwju"
+ jxp_reform_japanese_elder_countersignature_desc:0 "›QýV‰¡R1u¿RwÞrnx²‹ÿOYwju1.O¾‹TäN0¥c…VOwN8hùRÞV¥bÿOÍ‘ãT®‹NôSHN|Vdk¨cÿ‹0"
+ jxp_reform_japanese_domain_assembly:0 "ýVºN·úR>y·HuOã`®‹"
+ jxp_reform_japanese_domain_assembly_desc:0 "(WKyV0(u4l0SïŒTÎWNÕl¦^Ir'Y‹NNìSÆ–ýVºN0úR>yNHuOãNhˆã`®‹ÿåNlQVw÷‹bcÖST«ŽRqQTbÅb0"
+
+ jxp_reform_japanese_court_temple_service:0 "úR>y·lQ¶RúQÕN"
+ jxp_reform_japanese_court_temple_service_desc:0 "ö^ýcŸq‰`‡efN0<yêNŒTäSxQ„v>y¶R0çP±ONlQ¶RúQÕNÿOfk¶RMe¡R|Q—VgêN0úR>yQÜuNYeSKN©R0"
+ jxp_reform_japanese_yuhitsu_accountants:0 "óSrON—r(uw‰v(u"
+ jxp_reform_japanese_yuhitsu_accountants_desc:0 "NØbè•,r	(u„UfN—rwÿäNóSrŒc‡eHh0—r(uw8h±”®|ÿ¶R-NIYLˆ1udkýwíQ&îvŒTbHhžR‹N0"
+ jxp_reform_japanese_fudai_magistracy:0 "1ŒãNIYLˆ6R"
+ jxp_reform_japanese_fudai_magistracy_desc:0 "ÎNENÏuwŒš„v1ŒãN¶Rã-NûN‹TIYLˆÿåN¶Rè•àVÚ‹‹SNOø‹yV±c˜wÿvQãN÷N=fMe¡RôfOVSVINÆ‹ºNŒTÑãê‹V0"
+ jxp_reform_japanese_public_authority:0 "lQêNØšŽNø‹yV"
+ jxp_reform_japanese_public_authority_desc:0 "±R^›QyV0+YyV0úR>yyVNHuyV†v×SlQêNÕl¦^‚‚6RÿûNUO«ŽRN—VíQçe‹OÒbÝuqQTbÅb†˜ýVKN¡R0"
+
+ jxp_reform_japanese_townsmen_guild_charters:0 "HuONµ^Oyr¸‹"
+ jxp_reform_japanese_townsmen_guild_charters_desc:0 "T	g›RHuOŒTµ^O˜Ùu%„N0ÓN¨PNê»lyr¸‹ÿåN3zšRFUïŒTznÿv^OÎWNHuMaaHN†˜ýVAucƒúQD0"
+ jxp_reform_japanese_checkpoint_red_seals:0 "sQ%môv–N1gpS¶r"
+ jxp_reform_japanese_checkpoint_red_seals_desc:0 "6eÞVÁy¾‹sQ%mÿßuN1uIYLˆ8hŒš1gpS¶rŒTFU9‚ŽVegÿFUºNS×SBSBSØveRÿlQêNRŒcác'AmNVz0"
+ jxp_reform_japanese_rakuichi_rakuza:0 "PN^PNµ^"
+ jxp_reform_japanese_rakuichi_rakuza_desc:0 "(W×Syr¸‹„vÎWNHuNè•MRHu²dd–èRµ^yVŒT^HWyP–ÿÛb•VFUåTšRES0dkäNv^^—hQýV>eûN8fÿw=fåN*N+R^HW%„.†˜ýV-NÃV0"
+ jxp_reform_japanese_war_provisioning:0 "uQ®|IYLˆN›QyVµk±”"
+ jxp_reform_japanese_war_provisioning_desc:0 "1uuQ®|IYLˆßuyrs|0Ðv0lš9SN9‚fÿv^	cW0WŒT›QyV4NöeV6eµk±”ÿO•gúQ5–NQhQ`—¿l cÖS0"
+ jxp_reform_japanese_coinage_edicts:0 "°d±”äNNÑ‘ö”9eyV"
+ jxp_reform_japanese_coinage_edicts_desc:0 "åN°d±”äN¦umgv`±”Òb6eŒTûNa˜b÷NÿTöete˜Ñ‘ö”qS09TKSNQQbcKNyVÿôuct^!˜b³uŒT^HWáO(u0"
+ jxp_reform_japanese_new_field_works:0 "°e0uÀh0WN4l)Rnf÷‹"
+ jxp_reform_japanese_new_field_works_desc:0 "åNÀh0Wnx²‹°e0u6eÊvÿÄuÇu2X2–0•N0XN³lSnf÷‹ÿ×SÊvQgK„RÅbåTyVÿlQêNRÝOœ–4l)RNwjOéy^0"
+ jxp_reform_japanese_overseas_settlement_office:0 "!nwm¦W–kNFU†™IYLˆ"
+ jxp_reform_japanese_overseas_settlement_office_desc:0 "HN·ƒÆQÜ*‚„v9‚–¾‹nFU†™IYLˆÿßuyrûyl0eˆÙu08fNSV0W²N‰mÿO!nwmnc¹pNô¦lHNàeºN¦umg„vÁy%„âTtz0"
+
+ jxp_reform_japanese_rule_by_arms:0 "åNfkZšR)YN"
+ jxp_reform_japanese_rule_by_arms_desc:0 ")YN»yqNKNE–ÿÕl¦^å‚àefkZ¿O¾–åNËeLˆ0lQêNåNÅúQuQŒT%Nf›QäN‹SgÝ‹TwÿmN‰˜b×Sø‹ýVùRHV¿RVO„vbç`0"
+ jxp_reform_japanese_general_peace:0 ")YNã`àe‹NKNlQêN"
+ jxp_reform_japanese_general_peace_desc:0 "lQêNÞíu˜NjPbäN0Áˆ­efNNybkÁybKN‹TÿS†˜INô•‰Nïz³ueQßuNÁˆ¸‹ÿÙ=fNWYekbVb„vŒTs^ŸSRÿw^—N¸uZ†„g„vÕlxQ0"
+ jxp_reform_japanese_service_compact:0 "çe=‰R5XN¡Vi`IYlQ"
+ jxp_reform_japanese_service_compact_desc:0 "b²‹MaaIYlQw„vçe=ŒTNb†˜ÿåN‰R5X¶rbcÖS›QyV0nf÷‹NgÐ‰0lQêN1udkŠbY7h0WßW³ueQïS»ltwNÅVKSpe9ef„véy^0"
+ jxp_reform_japanese_quarrel_suppression:0 "µU×TjPbkNHV6RÁˆ­e"
+ jxp_reform_japanese_quarrel_suppression_desc:0 "ybk¶Rã0QgK„ŒTúR>yåNÁy—eã‰³Q‰NïzÿÝwNî•HQT†v×SYRÿÍ‘'Y u·u1ulQêNîTcOwHV6RÁˆ­e0"
+ jxp_reform_japanese_common_security:0 "Nl‰R5XN—Rè•ËR¥R"
+ jxp_reform_japanese_common_security_desc:0 "êS‰uˆRlQêNÕl¦^v^	c˜³uyVÿT—Rè•0HuQgNegOOKNl†vïS·ƒ—V‰R5XÿOáOðNîTVNQê¨RbHNVOŒTššqN„vt1u0"
+
+ jxp_reform_japanese_unitary_investiture:0 "NWåwLˆNlQêNôv–"
+ jxp_reform_japanese_unitary_investiture_desc:0 "SRceCg)R6emgHNNWåwLˆÿib'Yôv–Ï…eQ0WNIYLˆ=eM‘ÿOhQýV0KŒTÁˆ2RnRVŽNTNlQêN0"
+ jxp_reform_japanese_domain_federation:0 "ýVáãNNø‹é…R»l"
+ jxp_reform_japanese_domain_federation_desc:0 "-N.YŒcácY²N0›QäNNI`Õl¦^ÿýVáãNŒTø‹é…RO0WßWçe=»ltlMeÿR»lv^^—rRncÿw=f×SÑvcw„vBSµuéy^0"
+ jxp_reform_japanese_benevolent_government:0 "Nl‰R5XKNMe"
+ jxp_reform_japanese_benevolent_government_desc:0 "åNÏQ‰ånyV0HNme™‘™ŒTÝOœ–É‹¼‹HNlQêNckSV'`„v9h,gÿOßuNT„výV¶RNêSíQbŸRÿmNíQŒvÓY—VNbw•EN0"
+ jxp_reform_japanese_divine_law:0 "^yýV²bcN‹sÕliOÕl"
+ jxp_reform_japanese_divine_law_desc:0 "lQêNIY²bg÷^N^y«Rÿv^ŒŒT‹sÕl0iOÕlŒTø‹>y,gêNÿåNqQTmyNyŒT—RYeéy^–fßuN)YN„v)Y‹T0"
+
+ jxp_reform_japanese_buke_laws_inspectors:0 "fk¶Rø‹Õl¦^NÑvßRO"
+ jxp_reform_japanese_buke_laws_inspectors_desc:0 "åNfk¶Rø‹Õl¦^¦umgÎWí0ZZûY0›QYŒT²NŽVÿ>mcîvØNNáTÁ‰O8hßRø‹¶RÿObŸqlQêNýwY(WqN‹NÑSuKNMR uckÝ1Y0"
+ jxp_reform_japanese_hyojosho_collegial_offices:0 "Ä‹šRNbNIYLˆÞr"
+ jxp_reform_japanese_hyojosho_collegial_offices_desc:0 "¾‹Ä‹šRNbO¡R'YHhÿúR>y0Hu0ØRšRIrIYLˆORŒcÞrÁˆ¸‹ÿMe¡RàVLwŒcnZiwNQêSû|ŽNNMOCgã0"
+ jxp_reform_japanese_petition_direct_appeal:0 "îv‰RNôvÉ‹KN6R"
+ jxp_reform_japanese_petition_direct_appeal_desc:0 "ÆQ¸‹ŒvÓYŒT¶Rã²Nîv‰Rÿ0W¹eÁˆ­e1YSVöeïSŠµuôvÉ‹ÿlQêNPdkßRåwïyVÿmNåN%N<hzV2–bkì‹JTpbMe0"

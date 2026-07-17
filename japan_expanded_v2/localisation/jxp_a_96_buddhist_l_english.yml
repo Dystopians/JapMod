@@ -1,0 +1,211 @@
+﻿l_english:
+ jxp_a_buddhist_nanto_garan_title:0 "WSýKOÝ„"
+ jxp_a_buddhist_nanto_garan_desc:0 "åNg÷^TINÝO²bWSýúRb–ÿv^ŠbîOY1ûN™QeQýV¶RM|ŒQ0"
+ jxp_a_buddhist_hieizan_guarantee_title:0 "ÔkáSqS‰R5X"
+ jxp_a_buddhist_hieizan_guarantee_desc:0 "nx²‹qSè•†˜0WN²bcIN¡RÿO'YúRb–„vCg)RTöe×S0RýV¶R¦umg0"
+ jxp_a_buddhist_koyasan_pilgrimage_title:0 "ØšÎ‘qSÂSã‹"
+ jxp_a_buddhist_koyasan_pilgrimage_desc:0 "ŠbÂSã‹0¿RJWNSïÝO²b³ueQlQêNÿO1W0WNQOV4NöeËe‚0"
+ jxp_a_buddhist_kyoto_temple_restoration_title:0 "¬Nýø‹úRîOY"
+ jxp_a_buddhist_kyoto_temple_restoration_desc:0 "åNßuNT„v0KîOY¬Nýø‹úRÿTöešRåTzNúR†˜„v1ûN¹Lu0"
+ jxp_a_buddhist_gozan_register_title:0 "”NqSTM|"
+ jxp_a_buddhist_gozan_register_desc:0 "Í‘¢‹”NqSTM|NOOceS†Sÿ©‹fRî•0Y²NŒTûN˜RýïS×SýV¶RKz8h0"
+ jxp_a_buddhist_shinbutsu_compact_title:0 "^yiO`NTKN®‹"
+ jxp_a_buddhist_shinbutsu_compact_desc:0 "åNb‡eýV6RRšR^yGy<yêNNiOYeúRb–„vqQTzzô•ÿw^—HVëhQýVNY9e—R0"
+ jxp_a_buddhist_temple_magistrate_title:0 "úR>yIYLˆ"
+ jxp_a_buddhist_temple_magistrate_desc:0 "¾‹nN1IYLˆÿ¡RtúR>yÉ‹¼‹0OOcûN‹TNlQêN‹TäN0"
+ jxp_a_buddhist_temple_land_survey_title:0 "úR†˜Àh0W"
+ jxp_a_buddhist_temple_land_survey_desc:0 "ŠbúR†˜0u`u0JW‚NCO7b³ueQßuNÀh0WÿTöeb²‹nx	gíQnc„vçeCg)R0"
+ jxp_a_buddhist_tax_exempt_register_title:0 "MQz0WTM|"
+ jxp_a_buddhist_tax_exempt_register_desc:0 "RšRMQz0WTM|ÿI–bkúRb–Nfk¶RP—RYeTIN–MS°e0u0"
+ jxp_a_buddhist_warrior_monk_service_title:0 "çPuQ›QyV"
+ jxp_a_buddhist_warrior_monk_service_desc:0 "ŠbçPuQ²bb–IN¡R9eHN×SP–›QyVÿN©‹úRb–fk›RbHNàeIN„vÁyuQ0"
+ jxp_a_buddhist_kanjin_public_works_title:0 "çRÛNnf÷‹"
+ jxp_a_buddhist_kanjin_public_works_desc:0 "ŠbçRÛÎN4NöeßRlHNïS8h•„vehh02X2–NúRb–nf÷‹6R¦^0"
+ jxp_a_buddhist_royal_buddhist_law_title:0 "‹sÕlNiOÕl"
+ jxp_a_buddhist_royal_buddhist_law_desc:0 "åN‹sÕlßu–0Me0›QyVŒTÁˆ2RÿåNiOÕlHN²býVNËeNmÐc›OTÕl'`0"
+ jxp_a_buddhist_convene_sect_council_title:0 "ìSVø‹—RÄ‹®‹"
+ jxp_a_buddhist_convene_sect_council_desc:0 "ìSÆ–”N‰|—R>mãNhˆÿHQ®‹Lw1NãN÷NÿQ³QšRckV-^MO0"
+ jxp_a_buddhist_tendai_shingon_seat_title:0 ")YðSwŠ-^"
+ jxp_a_buddhist_tendai_shingon_seat_desc:0 "¡R®‹)YðS0wŠ„v²býVêN<yN'YúRb–W0W‰Bl0"
+ jxp_a_buddhist_zen_gozan_seat_title:0 "…y—g”NqS-^"
+ jxp_a_buddhist_zen_gozan_seat_desc:0 "¡R®‹…y—g”NqS„v‡efN0Œ˜î•NwmYçP±OQÜuÿåNÊSvQ¾|ñ‚SãN÷N0"
+ jxp_a_buddhist_jodo_shinshu_seat_title:0 "ÀQWw—R-^"
+ jxp_a_buddhist_jodo_shinshu_seat_desc:0 "¡R®‹ÀQW0ÀQWw—R„v²‹OËeNmNaNQg¨RXTÿTöeYtê»lŒTfkÅˆSÎ˜i–0"
+ jxp_a_buddhist_lotus_seat_title:0 "ÕlNS—R-^"
+ jxp_a_buddhist_lotus_seat_desc:0 "¡R®‹ÕlNS—R„vHuO0FUNŒTluQQÜuÿv^¦umg’cÖN'`²Qz0"
+ jxp_a_buddhist_nanto_old_seat_title:0 "WSýçe—R-^"
+ jxp_a_buddhist_nanto_old_seat_desc:0 "¡R®‹WSýçe—R„vg÷^<yêN0fRî•NHYo‚ÏuNmÿåNÊSçeúR†˜yrCg0"
+ jxp_a_buddhist_sectarian_accord_title:0 "ø‹—RŒT®‹"
+ jxp_a_buddhist_sectarian_accord_desc:0 "	N-^âešRTÿåNlQVag>k‰R’cvQYO—R>m„vËR¹R0P–6RN3uÉ‹.nS0"
+ jxp_a_buddhist_woodblocks_scriptures_title:0 "Hr(gNÏuwS"
+ jxp_a_buddhist_woodblocks_scriptures_desc:0 "ÄuÇuHr(g0!hØRNÏuwSAmÿOúRb–fRî•NQ×SUSNqSè•„W­e0"
+ jxp_a_buddhist_monastic_schools_title:0 "fRîRNúRPRYe²w"
+ jxp_a_buddhist_monastic_schools_desc:0 "åNfRîRùW‰QçP±O‡efN˜Rÿv^©‹úRPRYe²wÛeQÎWG•NQgK„0"
+ jxp_a_buddhist_medicine_halls_title:0 "Ëeoƒb–"
+ jxp_a_buddhist_medicine_halls_desc:0 "ŠbËeoƒb–0oƒPg›OÙuNLˆÅeQe²b³ueQúR>yIYLˆ„v&ŒQ0"
+ jxp_a_buddhist_charity_granaries_title:0 "INÓNNe™‘™QeNm"
+ jxp_a_buddhist_charity_granaries_desc:0 "1uýV¶R0úRb–ŒTHuOqQTEQžRINÓNÿ(We™‘™öe	cM|ŒQ>e®|0"
+ jxp_a_buddhist_pilgrimage_roads_title:0 "ÂSã‹Sï"
+ jxp_a_buddhist_pilgrimage_roads_desc:0 "îOYŽVø‹qS„vÂSã‹Sïÿv^åN¿RÙzÝO²bçP±O0FUÅeŒTnfáOO0"
+ jxp_a_buddhist_clerical_scribes_title:0 "çP±O‡efN˜R"
+ jxp_a_buddhist_clerical_scribes_desc:0 "åN×S­‹çP±ObÅbY²N‡efN00W¹echHhNÏuwSûÑ‹ÿTöe¥c×SlQêNwb0"
+ jxp_a_buddhist_town_temple_credit_title:0 "HuONúRb–áO(u"
+ jxp_a_buddhist_town_temple_credit_desc:0 "te˜úRb–P7NHuOáO(uÿP–6RP—RYeCgZÄ‰HP¡R„vLˆHN0"
+ jxp_a_buddhist_korean_scriptures_title:0 "gœœÏuwS"
+ jxp_a_buddhist_korean_scriptures_desc:0 "ÇgœœúRb–NO‚‚ÖS—VÏuwS0pS7RÕlŒT!hØR.Oßu0"
+ jxp_a_buddhist_chinese_monks_title:0 "-NNSçP±OŽVeg"
+ jxp_a_buddhist_chinese_monks_desc:0 "b`YN-NýVúRb–ŒTçP±O„v‡efNŽVegÿåNfRî•²NAmÖSãNUS¯ug!!jÿN0"
+ jxp_a_buddhist_ryukyu_dharma_lamp_title:0 "	ttÕlop"
+ jxp_a_buddhist_ryukyu_dharma_lamp_desc:0 "åN	ttHNwmï‚‚¹pÿ©‹Õlop0ÏuwSŒTISoƒåwÆ‹èŠ›Sþ”0"
+ jxp_a_buddhist_south_seas_temples_title:0 "WSwmiOúRQÜu"
+ jxp_a_buddhist_south_seas_temples_desc:0 "HNWSwm*‚ïN„viOúR0FUºNŒTÑ‹çPú^Ëz’NÝO‡efN0"
+ jxp_a_buddhist_four_seas_dharma_title:0 "ÛVwmÕlop"
+ jxp_a_buddhist_four_seas_dharma_desc:0 "Ogœœ0-NýV0	ttNWSwm„viOYe²NŽVbVb3zšRw^—Vg'`„vY²NQÜu0"
+ jxp_a_buddhist_buddhist_constitution_title:0 "iOýVKNªR"
+ jxp_a_buddhist_buddhist_constitution_desc:0 "(W	N-^ŒT®‹0‹sÕliOÕl0ËeNmYe²wNÛVwmÕlopKNô•	ébýV¶R„vgÈu6R¦^0"
+ jxp_a_decision_prepare_shinbutsu_constitution_title:0 "®‹šR^yiO`NTýV6R"
+ jxp_a_decision_prepare_shinbutsu_constitution_desc:0 "(WßuNT„våe,g8hšR^y>y0úRb–ŒTg÷^<yêN„vqQT¹LuÿHNNagN‰BlhQýV¬wô•9e—R„viOYeýV6RZPÆQY0"
+ jxp_a_decision_establish_buddhist_japan_title:0 "ú^ËziOYeåe,gýV6R"
+ jxp_a_decision_establish_buddhist_japan_desc:0 "ÝOcåe,gýV÷SÿåNø‹—R-^MO0úR>yIYLˆ0ËeNmYe²wŒTiOÕlY²NÍ‘ÄußuNýV¶R0å‹ï¿uNâe	gåe,gÈuNSï¿u’N¥e0"
+ JXP_BUDDHIST_JAPAN_STRING:0 "iOYeåe,g"
+ jxp_path_buddhist:0 "iOYeåe,gï¿u"
+ jxp_iface_buddhist_diplomacy_ready:0 "iOÕlY²NÆQYŒRb"
+ jxp_buddhist_state.1.t:0 "²býVNlQ®‹"
+ jxp_buddhist_state.1.d:0 "ßuNåe,g‚YÊNÅV‰˜³QšRÿýV¶R=fHQåNIYLˆŒTÕläNte˜úRb–ÿØ=fHQ©‹ø‹qSãNhˆqQT®‹šR1ûN02Nwýb²‹iOYe6R¦^„vMe»l›RÏ‘ÿmNý‰BlýV¶RbÅbãN÷N0"
+ jxp_buddhist_state.1.a:0 "HQnxËzlQêN²bc"
+ jxp_buddhist_state.1.b:0 "HQìSVø‹qSlQ®‹"
+ jxp_buddhist_state.2.t:0 "ÀQWw—R(Wø‹—R-N„vMOn"
+ jxp_buddhist_state.2.d:0 "ÀQWw—RòT=fýVYeÿFOiOYeåe,gv^^—NTè•’VýV¶R0bìNÅV‰˜³QšRÿ,gMaúRN²‹O=fÞz‰NckV-^MO0jOHNàe-^—R>m×SËR¹RÿØ=fHQ×SP–6R0"
+ jxp_buddhist_state.2.a:0 "AQ¸‹vQÞz‰NckV-^MO"
+ jxp_buddhist_state.2.b:0 "ËR¹R²‹OÿFO‚fNˆc-^"
+ jxp_buddhist_state.2.c:0 "HQP–6RúR…QHuê»l"
+ jxp_buddhist_state.100.t:0 ")YðSÿwŠ-^"
+ jxp_buddhist_state.100.d:0 "b²‹dk-^ïS·ƒ—V²býVêN<y01W0WQÜuN.OYeýw›RÿãN÷N=f'YúRb–W0W‰Bl‹SNOýV¶Rz6e0ckV-^MOI`peN—V…Ç	N-^0"
+ jxp_buddhist_state.100.a:0 "ckVb²‹)YðSÿwŠ-^"
+ jxp_buddhist_state.100.b:0 "ËR¹RvQIm¨RÿFONˆc-^"
+ jxp_buddhist_state.100.c:0 "P–6RvQMe»lNúR†˜‰Bl"
+ jxp_buddhist_state.101.t:0 "…y—gÿ”NqS-^"
+ jxp_buddhist_state.101.d:0 "b²‹dk-^ïS·ƒ—VŒ˜î•0‡efN0fR=gNNšNY²NÿãN÷N=f¾|ñ‚SOaNQgºN›R¨RXTÏQ1V0ckV-^MOI`peN—V…Ç	N-^0"
+ jxp_buddhist_state.101.a:0 "ckVb²‹…y—gÿ”NqS-^"
+ jxp_buddhist_state.101.b:0 "ËR¹RvQIm¨RÿFONˆc-^"
+ jxp_buddhist_state.101.c:0 "P–6RvQMe»lNúR†˜‰Bl"
+ jxp_buddhist_state.102.t:0 "ÀQWÿÀQWw—R-^"
+ jxp_buddhist_state.102.d:0 "b²‹dk-^ïS·ƒ—VlO¨RXT0ËeNmNaNQg3zšRÿãN÷N=f²‹Oê»lJR1V-N.Yz6e0ckV-^MOI`peN—V…Ç	N-^0"
+ jxp_buddhist_state.102.a:0 "ckVb²‹ÀQWÿÀQWw—R-^"
+ jxp_buddhist_state.102.b:0 "ËR¹RvQIm¨RÿFONˆc-^"
+ jxp_buddhist_state.102.c:0 "P–6RvQMe»lNúR†˜‰Bl"
+ jxp_buddhist_state.103.t:0 "ÕlNS—R-^"
+ jxp_buddhist_state.103.d:0 "b²‹dk-^ïS·ƒ—VHuOFUN0ípñVNluQÄuÇuÿãN÷N=f’cÖN'`M–NOùRVïz—R>m„vËR¹R0ckV-^MOI`peN—V…Ç	N-^0"
+ jxp_buddhist_state.103.a:0 "ckVb²‹ÕlNS—R-^"
+ jxp_buddhist_state.103.b:0 "ËR¹RvQIm¨RÿFONˆc-^"
+ jxp_buddhist_state.103.c:0 "P–6RvQMe»lNúR†˜‰Bl"
+ jxp_buddhist_state.104.t:0 "WSýçe—R-^"
+ jxp_buddhist_state.104.d:0 "b²‹dk-^ïS·ƒ—Vg÷^<yêN0Õlßu0fRî•Nu…QÏuNmÿãN÷N=fÝOˆRúR†˜ÐcØšú^¾‹b,g0ckV-^MOI`peN—V…Ç	N-^0"
+ jxp_buddhist_state.104.a:0 "ckVb²‹WSýçe—R-^"
+ jxp_buddhist_state.104.b:0 "ËR¹RvQIm¨RÿFONˆc-^"
+ jxp_buddhist_state.104.c:0 "P–6RvQMe»lNúR†˜‰Bl"
+ jxp_buddhist_state.10.t:0 "úR†˜Àh0WqSHg"
+ jxp_buddhist_state.10.d:0 "Àh0WyVºN‰BlNÏ‘úR†˜ÿø‹qSRôcVçe1gpSNËeIN‡efN0"
+ jxp_buddhist_state.10.a:0 "ZWcrÀh0W"
+ jxp_buddhist_state.10.b:0 "b²‹íQncv^®‹šR˜bwˆ"
+ jxp_buddhist_state.11.t:0 "çPuQÒbÝuã‰ce"
+ jxp_buddhist_state.11.d:0 "èRçPuQÒbÝu²N°hÿðXðy²bb–KN1Nýw²NÙuÜ¹eIYLˆ0"
+ jxp_buddhist_state.11.a:0 "eQ×SP–²bb–›QyV"
+ jxp_buddhist_state.11.b:0 "åNúR†˜ÅbbcÖSÁˆ›Q"
+ jxp_buddhist_state.12.t:0 "ÕlNSNÀQW²Qz"
+ jxp_buddhist_state.12.d:0 "HuO²‹-^NaNQg²‹O‰NHY^Ye0QeNmŒT^HWzzô•0"
+ jxp_buddhist_state.12.a:0 "1uø‹—RÄ‹®‹ŒjP"
+ jxp_buddhist_state.12.b:0 "RšRTê²‹-^ƒôV"
+ jxp_buddhist_state.13.t:0 "'YúRb–N0W¹eJW‚Þz‰N"
+ jxp_buddhist_state.13.d:0 "TqS,gúR‰Blßu–0W¹eJW‚ÿ0W¹eçPâVR‰BlÝOYuËeNmNO¡‹êIN0"
+ jxp_buddhist_state.13.a:0 "ÝO²b0W¹eJW‚3uÉ‹Cg"
+ jxp_buddhist_state.13.b:0 "nx²‹,gúRBSµu1ûN"
+ jxp_buddhist_state.14.t:0 "ýV¶RûN‹TOOc"
+ jxp_buddhist_state.14.d:0 "úR>yIYLˆÐcúQ¡R8hOOcûN‹Tÿø‹qSÅbÃVÕl	«ˆMe»li`OÖSãN0"
+ jxp_buddhist_state.14.a:0 "ÝOYu¨c>N0ýV¶R8hÆQ"
+ jxp_buddhist_state.14.b:0 "1uýV¶Rôv¥cûN‹T"
+ jxp_buddhist_state.15.t:0 "ÏuwSHr,g‰N®‹"
+ jxp_buddhist_state.15.d:0 "TúRHr(g(WàzåSŒT!hØRN’NNøv©‹ÿfRîR‰Blú^ËzqQT•^,g0"
+ jxp_buddhist_state.15.a:0 "D©Rø‹,gùR!h"
+ jxp_buddhist_state.15.b:0 "˜LˆlQêN!h,g"
+ jxp_buddhist_state.16.t:0 "^yiO`NTN’ciO>PT"
+ jxp_buddhist_state.16.d:0 "èRfk¶R‰BlR­e^y>yNúRb–çe	gTwû|ÿæSN›NºNIN.Vôuc`NTéy^0"
+ jxp_buddhist_state.16.a:0 "ôu²bb‡e`NTýV6R"
+ jxp_buddhist_state.16.b:0 "ßuNlQêN<y!k"
+ jxp_buddhist_state.17.t:0 "ÀQWw—Rê»lqSHg"
+ jxp_buddhist_state.17.d:0 "²‹O‰BlêLˆ¡rtINÓNNúR…QHuÿIYLˆÅbÃVbVbN×SÁˆ2R„vCg›R0"
+ jxp_buddhist_state.17.a:0 "åNàzzb²‹	gP–ê»l"
+ jxp_buddhist_state.17.b:0 "ŠbINÓN³ueQIYLˆ&ŒQ"
+ jxp_buddhist_state.18.t:0 "HuO=ecÐg—R>m"
+ jxp_buddhist_state.18.d:0 "ÎWG•ONblQVD©RN—R²‹-^ÿVÑSvQÖNúRb–ùR^HWOP’ˆ„vµcÉ‹0"
+ jxp_buddhist_state.18.a:0 "lQVO¡‹v^AQ¸‹Y—RPc©R"
+ jxp_buddhist_state.18.b:0 "ybk—R>mµc6RHuO"
+ jxp_buddhist_state.19.t:0 "úRb–HP¡RŒT·VMe"
+ jxp_buddhist_state.19.d:0 "úRb–HP8R0HuOP>kNe™t^.kßy²NÇuÿHP¡RºN‰BlËeLˆ·VMe0"
+ jxp_buddhist_state.19.a:0 "1uINÓNRÅbv^ÏQ°‹HP¡R"
+ jxp_buddhist_state.19.b:0 "ôu²bQY¦uv^RgnP"
+ jxp_buddhist_state.200.t:0 "iOýVKNªR"
+ jxp_buddhist_state.200.d:0 "ø‹—R-^MO0úR>yIYLˆ0ËeNmYe²wNiOÕlY²NòTÏubbV0°s(WÅV‰˜(WýV¶R²bc0ø‹qSlQ®‹NçP×OR»lKNô•jOúQ’N¥e„vgÈu6R¦^	éb0"
+ jxp_buddhist_state.200.a:0 "˜Lˆ‹sÕliOÕløvOSO6R"
+ jxp_buddhist_state.200.b:0 "˜Lˆø‹qSlQ®‹ýV6R"
+ jxp_buddhist_state.200.c:0 "˜LˆçP×OR»lÕl¦^"
+ jxp_buddhist_state.900.t:0 "ø‹—R®‹‹NŒ¦^"
+ jxp_buddhist_state.900.d:0 "ø‹—Rt^¦^®‹‹Nck(WŒ¦^0"
+ jxp_buddhist_state.901.t:0 "iOYeåe,gýV6R!hŒš"
+ jxp_buddhist_state.901.d:0 "iOYeåe,g„v’N¥eï¿uNûN¡R¶r`ck(W!hŒš0"
+ jxp_a_buddhist_shinbutsu_preparation:0 "^yiO`NTýV6RÆQY"
+ jxp_a_buddhist_shinbutsu_preparation_desc:0 "g÷^0^y>yNúRb–ck(W8hšR<yêNŒT0K¹Lu0"
+ jxp_a_buddhist_route_constitution:0 "iOYeåe,gýV6R"
+ jxp_a_buddhist_route_constitution_desc:0 "ýV¶RVËY6R¦^Sø‹—R0úRb–0Ye²w0ËeNmNiOYeY²N0"
+ jxp_a_buddhist_sanctuary_guarantees:0 "ø‹qS‰R5X¶r"
+ jxp_a_buddhist_sanctuary_guarantees_desc:0 "'YúRb–·ƒ—Vb‡eÝO²bÿmNbÅbýV¶RÄ‰šR„v1ûN0"
+ jxp_a_buddhist_capital_temples:0 "¬Nýø‹úRnf÷‹"
+ jxp_a_buddhist_capital_temples_desc:0 "¬NýúRb–„vîOYbHN–™ýú^¾‹„vNèR0"
+ jxp_a_buddhist_gozan_register:0 "”NqSTM|"
+ jxp_a_buddhist_gozan_register_desc:0 "OOceS†S0‡efNýw›RNwmYŽVegGW×STM|¡rt0"
+ jxp_a_buddhist_shinbutsu_compact:0 "^yiO`NTKN®‹"
+ jxp_a_buddhist_shinbutsu_compact_desc:0 "^yGy<yêNNiOYe6R¦^(Wb‡e¹Lu…QqQXR0"
+ jxp_a_buddhist_temple_magistracy:0 "úR>yIYLˆ6R"
+ jxp_a_buddhist_temple_magistracy_desc:0 "úR>yÉ‹¼‹0úR†˜NûN˜RRVeQN1IYLˆ0"
+ jxp_a_buddhist_exemption_ledger:0 "MQz0WTM|"
+ jxp_a_buddhist_exemption_ledger_desc:0 "MQzCg·ƒ—V8hšRÿFOÀh0WmNVw0W¹eÍS9V0"
+ jxp_a_buddhist_public_works:0 "çRÛnf÷‹&"
+ jxp_a_buddhist_public_works_desc:0 "çRÛ>ky˜«ˆ(uŽNïS8h•„vlQqQåTz0"
+ jxp_a_buddhist_royal_law:0 "‹sÕlNiOÕl"
+ jxp_a_buddhist_royal_law_desc:0 "‹sÕlßu–Me¡RÿiOÕlHN²býVNËeNmÐc›OTÕl'`0"
+ jxp_a_buddhist_three_seat_accord:0 "	N-^ø‹—RŒT®‹"
+ jxp_a_buddhist_three_seat_accord_desc:0 "	N—RckVeQ-^ÿvQYO—R>m·ƒ—Vfnx„vËR¹RbP–6R0WMO0"
+ jxp_a_buddhist_printing_houses:0 "úRb–Hr(gNb"
+ jxp_a_buddhist_printing_houses_desc:0 "!hØRŒTpS7RQÜu RëVÏuwSNfRî•.O­d0"
+ jxp_a_buddhist_school_network:0 "fRîRúRPRQÜu"
+ jxp_a_buddhist_school_network_desc:0 "úRb–Ye²wùW‰Q‡efN˜Rv^TÎWG•aNQgibUS0"
+ jxp_a_buddhist_relief_network:0 "ËeoƒINÓNQÜu"
+ jxp_a_buddhist_relief_network_desc:0 "Ëeoƒb–NINÓNqQTŒTe™‘™ŒT¾uÅu0"
+ jxp_a_buddhist_pilgrimage_circuit:0 "ÂSã‹SïQ"
+ jxp_a_buddhist_pilgrimage_circuit_desc:0 "ÂSã‹SïTöeg¡RáOO0FUÅeNýV¶R²N0"
+ jxp_a_buddhist_temple_credit:0 "úRb–HuOáO(u"
+ jxp_a_buddhist_temple_credit_desc:0 "úRb–P7NHuOáO(u×S0RlQV&ŒQ¦umg0"
+ jxp_a_buddhist_diplomatic_cloisters:0 "iOÕlY²NçPb–"
+ jxp_a_buddhist_diplomatic_cloisters_desc:0 "Ñ‹çPŒTúRb–‡efNôuû|NåNVgHNîv„v„vwmYsQû|0"
+ jxp_a_buddhist_state_directive:0 "lQêNôvÁˆ"
+ jxp_a_buddhist_state_directive_desc:0 "ýV¶RåNb‡e‹TäN¨c¨RúRb–9ei—ÿHe‡sÐcØšFOÍS9V RgR0"
+ jxp_a_buddhist_negotiated_compact:0 "ø‹qS®‹šR"
+ jxp_a_buddhist_negotiated_compact_desc:0 "ýV¶RåN©‹ekbcÖS—R>mTjOÿ3zšRÐcØšFO0K×Smc0"
+ jxp_a_buddhist_crisis_recent:0 "ø‹—RYOâl"
+ jxp_a_buddhist_crisis_recent_desc:0 "gÑ„v—R>m‰N®‹ÍN(WqVÍTýV¶R0"
+ jxp_a_buddhist_seat_tendai_shingon:0 "ckV-^MOÿ)YðSÿwŠ-^"
+ jxp_a_buddhist_seat_tendai_shingon_desc:0 "6eÊvÿ²býVêN<y01W0WQÜuN.OYeýw›R0ãN÷Nÿ'YúRb–W0W‰Bl‹SNOýV¶Rz6e0"
+ jxp_a_buddhist_seat_zen_gozan:0 "ckV-^MOÿ…y—gÿ”NqS-^"
+ jxp_a_buddhist_seat_zen_gozan_desc:0 "6eÊvÿŒ˜î•0‡efN0fR=gNNšNY²N0ãN÷Nÿ¾|ñ‚SOaNQgºN›R¨RXTÏQ1V0"
+ jxp_a_buddhist_seat_jodo_shinshu:0 "ckV-^MOÿÀQWÿÀQWw—R-^"
+ jxp_a_buddhist_seat_jodo_shinshu_desc:0 "6eÊvÿlO¨RXT0ËeNmNaNQg3zšR0ãN÷Nÿ²‹Oê»lJR1V-N.Yz6e0"
+ jxp_a_buddhist_seat_lotus:0 "ckV-^MOÿÕlNS—R-^"
+ jxp_a_buddhist_seat_lotus_desc:0 "6eÊvÿHuOFUN0ípñVNluQÄuÇu0ãN÷Nÿ’cÖN'`M–NOùRVïz—R>m„vËR¹R0"
+ jxp_a_buddhist_seat_nanto_old:0 "ckV-^MOÿWSýçe—R-^"
+ jxp_a_buddhist_seat_nanto_old_desc:0 "6eÊvÿg÷^<yêN0Õlßu0fRî•Nu…QÏuNm0ãN÷NÿÝOˆRúR†˜ÐcØšú^¾‹b,g0"
+ jxp_a_96_buddhist_mutual_law_reform:0 "‹sÕliOÕløvOSO6R"
+ jxp_a_96_buddhist_mutual_law_reform_desc:0 "ýV¶Rôv¥cÄuÇu²býVúRb–ÿbcÖSHV'YßuT›RÿmNbÅbúR>yÍS9V0"
+ jxp_a_96_buddhist_mountain_council_reform:0 "ø‹qSlQ®‹ýV6R"
+ jxp_a_96_buddhist_mountain_council_reform_desc:0 "Y—R>mO®‹INüRYe²wNY²NÿãN÷N=f-N.Y0K©‹ek0"
+ jxp_a_96_buddhist_clerical_temporal_reform:0 "çP×OR»lÕl¦^"
+ jxp_a_96_buddhist_clerical_temporal_reform_desc:0 "ýV¶RŒc0Me›QøSÕlÿ—R>mÝO	gP–ê»lÿ6R¦^3zšRFOôv¥c.OYeƒ1V0"

@@ -1,0 +1,32 @@
+graphical_culture = asiangfx
+
+color = { 95 71 151 }
+revolutionary_colors = { 31 20 52 }
+
+random_nation_chance = 0
+historical_score = 0
+
+historical_idea_groups = {
+	expansion_ideas
+	trade_ideas
+	maritime_ideas
+	quality_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"正弘 #0" = 10
+	"清正 #0" = 10
+	"昌信 #0" = 10
+	"久兵卫 #0" = 10
+	"新太郎 #0" = 10
+	"庄左卫门 #0" = 10
+	"源右卫门 #0" = 10
+}
+
+leader_names = {
+	山本 中村 高桥 田中 渡边 伊藤 小林 加藤 吉田 山田 松本 井上 木村
+}

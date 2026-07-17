@@ -1,0 +1,19 @@
+jxp_clear_founder_reform_pulse_effect = {
+	hidden_effect = {
+		clr_country_flag = jxp_38_warrior_founder_reform_seen
+		clr_country_flag = jxp_38_court_founder_reform_seen
+		clr_country_flag = jxp_38_maritime_founder_reform_seen
+		clr_country_flag = jxp_38_frontier_founder_reform_seen
+		clr_country_flag = jxp_38_temple_market_founder_reform_seen
+	}
+	remove_country_modifier = jxp_38_warrior_founder_military_codes
+	remove_country_modifier = jxp_38_warrior_founder_retainer_privileges
+	remove_country_modifier = jxp_38_court_founder_office_precedents
+	remove_country_modifier = jxp_38_court_founder_domain_petitions
+	remove_country_modifier = jxp_38_maritime_founder_port_compacts
+	remove_country_modifier = jxp_38_maritime_founder_admiralty_rolls
+	remove_country_modifier = jxp_38_frontier_founder_barrier_offices
+	remove_country_modifier = jxp_38_frontier_founder_open_passes
+	remove_country_modifier = jxp_38_temple_founder_shrine_compact
+	remove_country_modifier = jxp_38_temple_founder_market_accounting
+}

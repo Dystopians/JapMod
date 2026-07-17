@@ -1,0 +1,108 @@
+jxp_a_shinshu_country_trigger = {
+	OR = {
+		religion = jodo_shinshu
+		tag = IJP
+		has_country_flag = jxp_path_ikko
+		has_country_flag = jxp_map_origin_hng
+	}
+}
+
+jxp_a_shinshu_heartland_trigger = {
+	OR = {
+		owns = 1021 # Settsu / Ishiyama fallback
+		owns = 1023 # Echizen fallback
+		owns = 1835 # Omi fallback
+		owns = 4359 # Ise fallback
+		owns = 4360 # Mikawa fallback
+		any_owned_province = {
+			OR = {
+				has_province_flag = jxp_map_compat_ikko_heartland
+				has_province_flag = jxp_map_compat_ikko_formable_heartland
+				has_province_modifier = jxp_ikko_terauchi_town
+			}
+		}
+	}
+}
+
+jxp_a_shinshu_militancy_at_least_10_trigger = {
+	check_variable = { which = jxp_a_shinshu_militancy value = 10 }
+}
+
+jxp_a_shinshu_militancy_at_least_30_trigger = {
+	check_variable = { which = jxp_a_shinshu_militancy value = 30 }
+}
+
+jxp_a_shinshu_militancy_at_least_50_trigger = {
+	check_variable = { which = jxp_a_shinshu_militancy value = 50 }
+}
+
+jxp_a_shinshu_militancy_at_least_70_trigger = {
+	check_variable = { which = jxp_a_shinshu_militancy value = 70 }
+}
+
+jxp_a_shinshu_militancy_at_least_85_trigger = {
+	check_variable = { which = jxp_a_shinshu_militancy value = 85 }
+}
+
+jxp_a_shinshu_militancy_below_30_trigger = {
+	NOT = { jxp_a_shinshu_militancy_at_least_30_trigger = yes }
+}
+
+jxp_a_shinshu_militancy_middle_trigger = {
+	jxp_a_shinshu_militancy_at_least_30_trigger = yes
+	NOT = { jxp_a_shinshu_militancy_at_least_70_trigger = yes }
+}
+
+jxp_a_shinshu_militancy_high_trigger = {
+	jxp_a_shinshu_militancy_at_least_70_trigger = yes
+}
+
+jxp_a_shinshu_crisis_scope_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	culture_group = japanese_g
+	OR = {
+		jxp_is_daimyo_stage_trigger = yes
+		tag = IJP
+		has_country_flag = jxp_path_ikko
+	}
+	NOT = { has_reform = shogunate }
+	jxp_a_shinshu_heartland_trigger = yes
+}
+
+jxp_a_ijp_has_terminal_settlement_trigger = {
+	OR = {
+		has_country_flag = jxp_a_ijp_final_hoshu_state
+		has_country_flag = jxp_a_ijp_final_somon_council
+		has_country_flag = jxp_a_ijp_final_secular_commonwealth
+	}
+}
+
+jxp_a_shinshu_migration_postcondition_trigger = {
+	OR = {
+		NOT = { jxp_a_shinshu_country_trigger = yes }
+		AND = {
+			has_country_flag = jxp_a_shinshu_initialized
+			OR = {
+				NOT = { tag = IJP }
+				AND = {
+					has_country_flag = jxp_path_ikko
+					has_country_modifier = jxp_route_ikko
+				}
+			}
+			OR = {
+				NOT = {
+					OR = {
+						tag = IJP
+						has_country_flag = jxp_path_ikko
+						has_country_flag = jxp_map_origin_hng
+					}
+				}
+				AND = {
+					religion = jodo_shinshu
+					ruler = { religion = jodo_shinshu }
+					capital_scope = { religion = jodo_shinshu }
+				}
+			}
+		}
+	}
+}

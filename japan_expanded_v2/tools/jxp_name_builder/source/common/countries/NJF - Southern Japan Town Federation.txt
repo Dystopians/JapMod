@@ -1,0 +1,32 @@
+graphical_culture = asiangfx
+
+color = { 166 76 67 }
+revolutionary_colors = { 61 22 19 }
+
+random_nation_chance = 0
+historical_score = 0
+
+historical_idea_groups = {
+	expansion_ideas
+	trade_ideas
+	maritime_ideas
+	quality_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"善右卫门 #0" = 10
+	"源兵卫 #0" = 10
+	"清兵卫 #0" = 10
+	"弥兵卫 #0" = 10
+	"新左卫门 #0" = 10
+	"庄右卫门 #0" = 10
+	"长兵卫 #0" = 10
+}
+
+leader_names = {
+	山田 林 森 池田 桥本 石井 前田 藤田 后藤 冈田 长谷川 村上 近藤
+}

@@ -1,0 +1,301 @@
+namespace = jxp_wak_loop
+
+country_event = {
+	id = jxp_wak_loop.1
+	title = "jxp_wak_loop.1.t"
+	desc = "jxp_wak_loop.1.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		jxp_72_wak_cycle_active_trigger = yes
+	}
+
+	mean_time_to_happen = {
+		days = 900
+		modifier = {
+			factor = 0.75
+			jxp_72_wak_pressure_at_least_50_trigger = yes
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.1.a"
+		add_treasury = 75
+		add_country_modifier = {
+			name = jxp_72_wak_unlicensed_dividend
+			duration = 1825
+		}
+		jxp_add_oceanic_opening_5_effect = yes
+		jxp_subtract_imperial_sanction_5_effect = yes
+		custom_tooltip = jxp_72_wak_pressure_rises_15_tt
+		hidden_effect = {
+			jxp_72_wak_add_pressure_15_effect = yes
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.20
+				jxp_72_wak_pressure_at_least_50_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				jxp_72_wak_pressure_at_least_85_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.1.b"
+		add_treasury = -75
+		add_country_modifier = {
+			name = jxp_72_wak_free_port_endowment
+			duration = 1825
+		}
+		jxp_add_tenka_order_5_effect = yes
+		custom_tooltip = jxp_72_wak_pressure_falls_10_tt
+		hidden_effect = {
+			jxp_72_wak_subtract_pressure_10_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_72_wak_pressure_at_least_50_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.1.c"
+		add_navy_tradition = -5
+		add_country_modifier = {
+			name = jxp_72_wak_repression_aftershock
+			duration = 1825
+		}
+		jxp_add_imperial_sanction_5_effect = yes
+		custom_tooltip = jxp_72_wak_pressure_falls_20_tt
+		hidden_effect = {
+			jxp_72_wak_subtract_pressure_20_effect = yes
+		}
+		ai_chance = {
+			factor = 0.50
+			modifier = {
+				factor = 4
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_wak_loop.2
+	title = "jxp_wak_loop.2.t"
+	desc = "jxp_wak_loop.2.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_72_wak_cycle_active_trigger = yes
+		jxp_72_wak_pressure_at_least_50_trigger = yes
+		NOT = { has_country_modifier = jxp_72_wak_federation_hearing }
+	}
+
+	mean_time_to_happen = {
+		days = 540
+	}
+
+	option = {
+		name = "jxp_wak_loop.2.a"
+		add_dip_power = -50
+		add_treasury = -100
+		add_country_modifier = {
+			name = jxp_72_wak_federation_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_72_wak_pressure_falls_20_tt
+		hidden_effect = {
+			jxp_72_wak_subtract_pressure_20_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.2.b"
+		add_mil_power = -50
+		add_navy_tradition = 5
+		add_country_modifier = {
+			name = jxp_72_wak_federation_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_72_wak_pressure_falls_10_tt
+		hidden_effect = {
+			jxp_72_wak_subtract_pressure_10_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				war_exhaustion = 3
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.2.c"
+		add_treasury = 50
+		add_country_modifier = {
+			name = jxp_72_wak_federation_hearing
+			duration = 1095
+		}
+		custom_tooltip = jxp_72_wak_pressure_rises_10_tt
+		hidden_effect = {
+			jxp_72_wak_add_pressure_10_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.10
+				jxp_72_wak_pressure_at_least_70_trigger = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_wak_loop.3
+	title = "jxp_wak_loop.3.t"
+	desc = "jxp_wak_loop.3.d"
+	picture = TRADEGOODS_eventPicture
+
+	trigger = {
+		jxp_72_wak_cycle_active_trigger = yes
+		jxp_72_wak_pressure_at_least_85_trigger = yes
+		NOT = { has_country_modifier = jxp_72_wak_crisis_recess }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = "jxp_wak_loop.3.a"
+		trigger = {
+			adm_power = 100
+			dip_power = 100
+			treasury = 200
+			adm_tech = 10
+		}
+		add_adm_power = -100
+		add_dip_power = -100
+		add_treasury = -200
+		custom_tooltip = jxp_72_wak_transform_tt
+		hidden_effect = {
+			jxp_72_wak_transform_to_maritime_state_effect = yes
+		}
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 2
+				stability = 2
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.3.b"
+		add_treasury = -200
+		add_mil_power = -100
+		add_stability = -1
+		add_country_modifier = {
+			name = jxp_72_wak_repression_aftershock
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_72_wak_crisis_recess
+			duration = 1825
+		}
+		custom_tooltip = jxp_72_wak_pressure_falls_40_tt
+		hidden_effect = {
+			jxp_72_wak_subtract_pressure_40_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				treasury = 300
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_wak_loop.3.c"
+		add_treasury = 150
+		add_country_modifier = {
+			name = jxp_72_wak_black_current_overreach
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = jxp_72_wak_crisis_recess
+			duration = 1825
+		}
+		jxp_subtract_imperial_sanction_5_effect = yes
+		custom_tooltip = jxp_72_wak_pressure_rises_20_tt
+		hidden_effect = {
+			jxp_72_wak_add_pressure_20_effect = yes
+		}
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 0.10
+				war_exhaustion = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jxp_wak_loop.4
+	title = none
+	desc = none
+	picture = NAVAL_MILITARY_eventPicture
+	hidden = yes
+
+	trigger = {
+		has_country_flag = jxp_72_wak_cycle_active
+		NOT = { jxp_72_wak_cycle_active_trigger = yes }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_72_wak_cleanup_effect = yes
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_wak_loop.5
+	title = none
+	desc = none
+	picture = NAVAL_MILITARY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = jxp_72_wak_cycle_active
+				NOT = { has_country_modifier = jxp_72_wak_sea_league_charter }
+			}
+			jxp_72_wak_cleanup_effect = yes
+		}
+	}
+
+	option = { name = "OK" }
+}

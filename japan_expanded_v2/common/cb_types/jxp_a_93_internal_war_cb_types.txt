@@ -1,0 +1,69 @@
+cb_jxp_a_daimyo_border_dispute = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		jxp_a_internal_war_actor_trigger = yes
+		is_revolutionary = no
+	}
+	prerequisites = {
+		jxp_a_internal_war_target_trigger = yes
+		is_neighbor_of = FROM
+		NOT = { war_with = FROM }
+	}
+
+	war_goal = jxp_a_daimyo_border_dispute
+}
+
+cb_jxp_a_kokujin_subjugation = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		jxp_a_internal_war_actor_trigger = yes
+		is_revolutionary = no
+	}
+	prerequisites = {
+		jxp_a_internal_war_target_trigger = yes
+		has_country_flag = jxp_a_nested_client
+		has_country_modifier = jxp_a_nested_lord_defiance
+		OR = {
+			AND = {
+				has_opinion_modifier = {
+					who = FROM
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+				FROM = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = jxp_a_opinion_protected_kokujin
+					}
+				}
+			}
+			FROM = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = jxp_a_opinion_nested_lord_betrayal
+				}
+			}
+		}
+	}
+
+	war_goal = jxp_a_kokujin_subjugation
+}
+
+cb_jxp_a_shogunal_censure = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		culture_group = japanese_g
+		has_reform = shogunate
+		jxp_is_daimyo_stage_trigger = yes
+		is_revolutionary = no
+		capital_scope = { region = japan_region }
+	}
+	prerequisites = {
+		jxp_a_internal_war_target_trigger = yes
+		has_country_modifier = jxp_a_nested_lord_defiance
+	}
+
+	war_goal = jxp_a_shogunal_censure
+}

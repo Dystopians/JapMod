@@ -1,0 +1,186 @@
+jxp_b_92_regional_colonial_actor_trigger = {
+	NOT = { has_country_modifier = jxp_b_97_overseas_rights_revoked }
+	OR = {
+		AND = {
+			has_country_flag = jxp_polity_initialized
+			jxp_can_use_overseas_expansion_trigger = yes
+		}
+		AND = {
+			jxp_b_91_colonial_society_active_trigger = yes
+			OR = {
+				is_colonial_nation = yes
+				has_country_flag = jxp_iface_colonial_self_rule
+				has_country_flag = jxp_iface_colonial_independence
+			}
+		}
+	}
+}
+
+# A closed Japan may maintain one tightly supervised northern exchange, but
+# only after it already possesses a controlled foreign channel.
+jxp_b_92_northern_colonial_actor_trigger = {
+	NOT = { has_country_modifier = jxp_b_97_overseas_rights_revoked }
+	OR = {
+		jxp_b_92_regional_colonial_actor_trigger = yes
+		AND = {
+			has_country_flag = jxp_polity_initialized
+			jxp_is_japanese_polity_trigger = yes
+			jxp_allows_controlled_foreign_channel_trigger = yes
+		}
+	}
+}
+
+jxp_b_92_southeast_asian_port_province_trigger = {
+	has_port = yes
+	is_city = yes
+	OR = {
+		region = indo_china_region
+		region = malaya_region
+		region = indonesia_region
+		region = moluccas_region
+	}
+}
+
+# Evaluated in the prospective host-country scope; ROOT is the Japanese party.
+jxp_b_92_south_seas_host_candidate_trigger = {
+	NOT = { jxp_is_japanese_polity_trigger = yes }
+	is_subject = no
+	is_at_war = no
+	capital_scope = {
+		OR = {
+			region = indo_china_region
+			region = malaya_region
+			region = indonesia_region
+			region = moluccas_region
+		}
+	}
+	has_opinion = { who = ROOT value = 75 }
+	reverse_has_opinion = { who = ROOT value = 25 }
+	any_owned_province = {
+		jxp_b_92_southeast_asian_port_province_trigger = yes
+		NOT = { has_province_modifier = jxp_b_92_authorized_japan_town_port }
+	}
+}
+
+jxp_b_92_south_seas_treaty_available_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	NOT = { has_country_flag = jxp_b_92_south_seas_japan_town_established }
+	NOT = { has_country_flag = jxp_b_92_south_seas_negotiation_pending }
+	NOT = { has_country_modifier = jxp_b_92_south_seas_negotiation_rebuffed }
+	NOT = {
+		any_owned_province = {
+			jxp_b_92_southeast_asian_port_province_trigger = yes
+		}
+	}
+	any_known_country = {
+		jxp_b_92_south_seas_host_candidate_trigger = yes
+	}
+}
+
+jxp_b_92_owned_south_seas_port_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	any_owned_province = {
+		jxp_b_92_southeast_asian_port_province_trigger = yes
+	}
+}
+
+jxp_b_92_owned_pacific_island_port_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	any_owned_province = {
+		region = oceanea_region
+		has_port = yes
+		is_city = yes
+	}
+}
+
+jxp_b_92_north_pacific_anchor_trigger = {
+	jxp_b_92_northern_colonial_actor_trigger = yes
+	OR = {
+		has_country_flag = jxp_alaska_survey_seen
+		has_country_modifier = jxp_north_pacific_charts
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			has_port = yes
+			is_city = yes
+			OR = {
+				area = hokkaido_area
+				area = sakhalin_area
+				area = kamchatka_area
+				colonial_region = colonial_alaska
+			}
+		}
+	}
+}
+
+jxp_b_92_northern_frontier_profile_trigger = {
+	OR = {
+		tag = AKT
+		tag = DTE
+		has_country_flag = jxp_iface_house_frontier_ready
+		has_country_flag = jxp_24_frontier_agenda_wardens
+		has_country_flag = jxp_24_frontier_agenda_brokers
+	}
+}
+
+jxp_b_92_normal_west_coast_anchor_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	is_random_new_world = no
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 1
+		has_port = yes
+		is_city = yes
+		OR = {
+			colonial_region = colonial_california
+			colonial_region = colonial_alaska
+			region = california_region
+			region = cascadia_region
+		}
+	}
+}
+
+jxp_b_92_normal_transpacific_arc_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	is_random_new_world = no
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 1
+		has_port = yes
+		is_city = yes
+		OR = {
+			colonial_region = colonial_alaska
+			region = cascadia_region
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 1
+		has_port = yes
+		is_city = yes
+		OR = {
+			colonial_region = colonial_california
+			region = california_region
+		}
+	}
+}
+
+# Random New World has no stable California/Cascadia geometry. A coastal
+# presence on the generated new-world continent is therefore the safe fallback.
+jxp_b_92_rnw_western_anchor_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	is_random_new_world = yes
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 1
+		continent = new_world
+		has_port = yes
+		is_city = yes
+	}
+}
+
+jxp_b_92_rnw_transpacific_arc_trigger = {
+	jxp_b_92_regional_colonial_actor_trigger = yes
+	is_random_new_world = yes
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		continent = new_world
+		has_port = yes
+		is_city = yes
+	}
+}

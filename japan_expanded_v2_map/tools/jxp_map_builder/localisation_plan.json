@@ -1,0 +1,28 @@
+{
+  "provinces": {
+    "4942":"河内","4943":"和泉","4944":"伊贺","4945":"志摩","4946":"远江",
+    "4947":"伊豆","4948":"安房","4949":"上总","4950":"近江","4951":"飞驒",
+    "4952":"若狭","4953":"加贺","4954":"能登","4955":"佐渡","4956":"丹波",
+    "4957":"因幡","4958":"伯耆","4959":"隐岐","4960":"美作","4961":"备中",
+    "4962":"备后","4963":"长门","4964":"淡路","4965":"赞岐","4966":"筑后",
+    "4967":"丰前","4968":"大隅","4969":"壹岐","4970":"湖北","4971":"会津",
+    "4972":"津轻","4973":"山形","4974":"大崎","4975":"磐城","4976":"人吉",
+    "4977":"佐贺","4978":"岛原","4979":"善光寺","4980":"奄美","4981":"先岛"
+  },
+  "areas": {
+    "jxp_dewa_area":"出羽","jxp_southern_mutsu_area":"南奥州","jxp_tokai_area":"东海道",
+    "jxp_western_hokuriku_area":"西北陆","jxp_ise_kii_area":"伊势纪伊",
+    "jxp_western_sanindo_area":"西山阴","jxp_western_saigoku_area":"西山阳",
+    "jxp_western_kyushu_area":"西九州","jxp_ryukyu_area":"琉球诸岛"
+  },
+  "ideas": {
+    "group":"新编大名理念","start":"分国法度","bonus":"一国一城",
+    "jxp_map_castle_network":"山城连环","jxp_map_castle_network_desc":"依山据险的支城与狼烟台，使小国也能迟滞强敌。",
+    "jxp_map_land_survey":"检地丈量","jxp_map_land_survey_desc":"丈量田亩、厘清名田，令兵粮与年贡不再只见于旧账。",
+    "jxp_map_kokujin_compacts":"国人一揆","jxp_map_kokujin_compacts_desc":"以誓纸约束国人众，在共同利害下暂息家中争端。",
+    "jxp_map_market_towns":"城下町","jxp_map_market_towns_desc":"将寺社、市与武家町集中于城下，催生稳定的手工业与流通。",
+    "jxp_map_coastal_routes":"沿岸航路","jxp_map_coastal_routes_desc":"整顿浦、津与关所，让兵粮和商货沿日本海与濑户内海转运。",
+    "jxp_map_house_codes":"家法与奉行","jxp_map_house_codes_desc":"以家法划分军役，以奉行裁断诉讼，使当主的命令可以贯彻领内。",
+    "jxp_map_provincial_identity":"旧国之名","jxp_map_provincial_identity_desc":"旧国山川与社寺塑造共同归属，也为扩张提供了有力名分。"
+  }
+}

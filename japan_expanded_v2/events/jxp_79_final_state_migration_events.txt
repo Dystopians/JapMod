@@ -1,0 +1,52 @@
+namespace = jxp_migration_v028
+
+# Reconcile 0.27.x saves with the unified-state power structure and the ten
+# political capstones. The mission refresh schedules its next-day pass after
+# all serialized tag, route, and reform state has settled.
+country_event = {
+	id = jxp_migration_v028.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_final_state_power_migration_v0280 }
+	}
+
+	immediate = {
+		clr_country_flag = jxp_mission_refresh_pending
+		jxp_sanitize_route_state_effect = yes
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_refresh_route_missions_effect = yes
+		set_country_flag = jxp_final_state_power_migration_v0280
+	}
+
+	option = { name = "OK" }
+}
+
+# Existing 0.28 saves already carry the mission migration flag. Refresh the
+# newly selectable tier-10 political reform candidates exactly once without
+# swapping or otherwise touching their serialized mission tree.
+country_event = {
+	id = jxp_migration_v028.2
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_final_state_political_reform_migration_v0283 }
+	}
+
+	immediate = {
+		jxp_sync_final_state_power_structure_effect = yes
+		set_country_flag = jxp_final_state_political_reform_migration_v0283
+	}
+
+	option = { name = "OK" }
+}

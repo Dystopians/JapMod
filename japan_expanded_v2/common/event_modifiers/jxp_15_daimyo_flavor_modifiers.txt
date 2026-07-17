@@ -1,0 +1,71 @@
+jxp_15_oda_tenka_fubu_edicts = {
+	infantry_power = 0.05
+	discipline = 0.025
+}
+
+jxp_15_tkg_mikawa_fudai_registers = {
+	global_manpower_modifier = 0.10
+	legitimacy = 0.5
+}
+
+jxp_15_tkd_koshu_hatagashira = {
+	cavalry_power = 0.10
+	leader_land_shock = 1
+}
+
+jxp_15_ues_kanto_kanrei_petition = {
+	land_morale = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_15_hjo_odawara_sogamae = {
+	defensiveness = 0.15
+	fort_maintenance_modifier = -0.10
+}
+
+jxp_15_mri_setouchi_suigun = {
+	naval_morale = 0.05
+	global_ship_trade_power = 0.10
+}
+
+jxp_15_smz_satsuma_gunnery = {
+	infantry_power = 0.05
+	fire_damage = 0.05
+}
+
+jxp_15_otm_funai_foreign_quarter = {
+	global_trade_power = 0.05
+	technology_cost = -0.03
+	advisor_cost = -0.05
+}
+
+jxp_15_dte_oshu_kibamusha = {
+	cavalry_power = 0.05
+	global_manpower_modifier = 0.10
+}
+
+jxp_15_ask_reform_hokoshu = {
+	diplomatic_reputation = 1
+	prestige = 0.5
+	legitimacy = 0.5
+}
+
+jxp_15_csk_tosa_ichiryo_gusoku = {
+	manpower_recovery_speed = 0.10
+	infantry_power = 0.05
+}
+
+jxp_15_ouc_yamaguchi_kanhe_trade = {
+	global_trade_power = 0.08
+	diplomatic_reputation = 1
+}
+
+jxp_15_img_tokaido_lawbooks = {
+	global_tax_modifier = 0.08
+	production_efficiency = 0.05
+}
+
+jxp_15_soo_tsushima_brokers = {
+	global_ship_trade_power = 0.10
+	diplomatic_reputation = 1
+}

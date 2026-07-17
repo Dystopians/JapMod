@@ -1,0 +1,40 @@
+jxp_toyotomi_kampaku_government = {
+	rank = {
+		1 = JXP_TOYOTOMI_KAMPAKU_GOVERNMENT
+		2 = JXP_TOYOTOMI_KAMPAKU_GOVERNMENT
+		3 = JXP_TOYOTOMI_KAMPAKU_GOVERNMENT
+	}
+	ruler_male = {
+		1 = JXP_TOYOTOMI_RULER
+		2 = JXP_TOYOTOMI_RULER
+		3 = JXP_TOYOTOMI_RULER
+	}
+	ruler_female = {
+		1 = JXP_TOYOTOMI_RULER
+		2 = JXP_TOYOTOMI_RULER
+		3 = JXP_TOYOTOMI_RULER
+	}
+	consort_male = {
+		1 = JXP_TOYOTOMI_CONSORT
+		2 = JXP_TOYOTOMI_CONSORT
+		3 = JXP_TOYOTOMI_CONSORT
+	}
+	consort_female = {
+		1 = JXP_TOYOTOMI_CONSORT
+		2 = JXP_TOYOTOMI_CONSORT
+		3 = JXP_TOYOTOMI_CONSORT
+	}
+	heir_male = {
+		1 = JXP_TOYOTOMI_HEIR
+		2 = JXP_TOYOTOMI_HEIR
+		3 = JXP_TOYOTOMI_HEIR
+	}
+	heir_female = {
+		1 = JXP_TOYOTOMI_HEIR
+		2 = JXP_TOYOTOMI_HEIR
+		3 = JXP_TOYOTOMI_HEIR
+	}
+	trigger = {
+		has_reform = jxp_toyotomi_kampaku_taiko_reform
+	}
+}

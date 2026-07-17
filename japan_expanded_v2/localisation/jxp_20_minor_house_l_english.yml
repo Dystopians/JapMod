@@ -1,0 +1,125 @@
+﻿l_english:
+ jxp_decision_ama_gassan_toda_registers_title:0 "teîOgqSÌR0uÎW&"
+ jxp_decision_ama_gassan_toda_registers_desc:0 "úQ‘NqSô•„v=eÎW0ö”qSNýVºNOý—™QeQTNWY&ŒQ0<SPR¶Rå‚ýwOgqSÌR0ubHNqS4–éy^„vÃVÿ¿OïS(WHV»KNô•3zOO9húW0"
+ jxp_decision_hsk_sakai_kanrei_council_title:0 "ìSÆ–HXHu¡r†˜Ä‹®‹"
+ jxp_decision_hsk_sakai_kanrei_council_desc:0 "ÆuÝT¶R(WHXHuN¬NmKNô•åb	gçeLw0FUïNºN	0ŠbHuºN&îvŒT¡r†˜TRTHN®‹-^ÿ¿OýwOçeCgZÍ‘°e	g†N0'KNðX0"
+ jxp_decision_shn_dazaifu_brokers_title:0 "ûN‹T'Y°Rœ^‹N"
+ jxp_decision_shn_dazaifu_brokers_desc:0 "S0¶R9Y(WQrMR0¥wMRNùRlšŽVegKNô•0‹N0çP±ON9‚INå‚ýwTˆR,gRÿkNÞTSè•¿ONOêS,TwmÎ˜Fd^0"
+ jxp_decision_ogs_suwa_horse_masters_title:0 "UVù‹¿‹lšIYLˆ"
+ jxp_decision_ogs_suwa_horse_masters_desc:0 "áOSmqSS0(gþflšNVlš<yÕl=fS.rŸS¶RS	g„vZWžRíQP0SlšIYLˆ³ueQ¶RÕlÿïSåNOqSýV›QyVNQce+o0"
+ jxp_decision_ktb_ise_court_petition_title:0 "IYHTO¿R‹sßu÷‹‡e"
+ jxp_decision_ktb_ise_court_petition_desc:0 "S`u¶RˆR(WO¿R^y«RNWSgçeû•KNô•0÷‹‡eå‚ýwÞw^yýV<yÕlNlQ¶R°‹ÆVÿ,g¶R¿ONêS=fO¿RN…–„vfkè•0"
+ jxp_decision_akt_ezochi_trade_brokers_title:0 "¾‹ËzŒ†7Y0W’N^ãN˜R"
+ jxp_decision_akt_ezochi_trade_brokers_desc:0 "‰RN¶Rb—TSwm0F–eYNŒ†7Y²Nf0’N^ãN˜Râe‰Æ‹—V9‚'ÿmN‰åwS¹0WUOöe”^åN<yirøv²NÿUOöeÅV‰˜HyZ0"
+ jxp_decision_cba_katori_muster_title:0 "™™ÖS^yMR›QyV"
+ jxp_decision_cba_katori_muster_desc:0 "CSöS¶RåNsQNçeTŒT™™ÖS^y«Rôuû|fk¶RðXg0^yMR¹puQO0W¹efkëX°‹—VÿRªgmN—qQTÁ‰Á‹0"
+ jxp_decision_isk_tango_port_wardens_title:0 "ûN‹T9NT=nIYLˆ"
+ jxp_decision_isk_tango_port_wardens_desc:0 "Nr‚¶RˆRNw9NTwm¸SN)YehËzTÜw0=nIYLˆýwŠb9‚Kb0ÓNKSNqSï‡efNÞwegÿO„zSwmýV	gôfupIm„v3wîv0"
+ jxp_decision_ito_hyuga_fort_network_title:0 "tel™åeTÛVASkQÎW"
+ jxp_decision_ito_hyuga_fort_network_desc:0 "ON¶RO`—qSÎW0=e&xN0W¹ejŒÏeˆR²båeT0ÎWQå‚ýw|Vdk|T”^ÿOPÜWSýVmNýw©‹LeºNøRek¾–Lˆ0"
+ jxp_decision_kno_inland_sea_pilots_title:0 "ÛbßRÑo7b…Q4lHQO"
+ jxp_decision_kno_inland_sea_pilots_desc:0 "³lÎ‘¶R»yNVOˆN=n%m0›SSNŸq‰`noPl„v9‚Kb04lHQOýwOÑo7b…Q„vírwmbHN¶R-NŸq‰`„vbHW0"
+ jxp_decision_tti_yamato_temple_compact_title:0 "¢‹Ëz'YŒTúR>y¦u"
+ jxp_decision_tti_yamato_temple_compact_desc:0 "Rr•N¶R«ŽYtQyúR0%fåe>yNHYo‚HuKNô•0úR>y¦uÕlv^^—©‹ÿw=f©‹'YŒTø‹¿R(WTN.V¸uNb²‹éy^0"
+ jxp_decision_rfr_mutsu_nine_gates_title:0 "îOQrF–eYkN7bsQè•"
+ jxp_decision_rfr_mutsu_nine_gates_desc:0 "WSè¶RS0W+o•ÿsQè•0grHWNqSï=e‘dNweYÞT¹2–0å‚ýwîOtekN7bø‹sQÿê–ýVSïmNObHNïS(u„výVMe0"
+
+ jxp_20_ama_gassan_toda_registers:0 "gqSÌR0uÎW&"
+ jxp_20_hsk_sakai_kanrei_council:0 "HXHu¡r†˜Ä‹®‹"
+ jxp_20_shn_dazaifu_brokers:0 "'Y°Rœ^‹N"
+ jxp_20_ogs_suwa_horse_masters:0 "ù‹¿‹lšIYLˆ"
+ jxp_20_ktb_ise_court_petition:0 "O¿R‹sßu÷‹‡e"
+ jxp_20_akt_ezochi_trade_brokers:0 "Œ†7Y0W’N^ãN˜R"
+ jxp_20_cba_katori_muster:0 "™™ÖS^yMR›QyV"
+ jxp_20_isk_tango_port_wardens:0 "9NT=nIYLˆ"
+ jxp_20_ito_hyuga_fort_network:0 "åeTÛVASkQÎW"
+ jxp_20_kno_inland_sea_pilots:0 "Ño7b…Q4lHQO"
+ jxp_20_tti_yamato_temple_compact:0 "'YŒTúR>y¦u"
+ jxp_20_rfr_mutsu_nine_gates:0 "F–eYkN7bsQè•"
+ jxp_20_legacy_ama:0 "<SPRgqSKN6R"
+ jxp_20_legacy_hsk:0 "ÆuÝTHXHu®‹Me"
+ jxp_20_legacy_shn:0 "S0'Y°Rœ^²N"
+ jxp_20_legacy_ogs:0 "S.rŸSVlšqSï"
+ jxp_20_legacy_ktb:0 "S`uO¿R‹sßu"
+ jxp_20_legacy_akt:0 "‰RNSwm’N^"
+ jxp_20_legacy_cba:0 "CSöS™™ÖSfkè•"
+ jxp_20_legacy_isk:0 "Nr‚9NTwmS"
+ jxp_20_legacy_ito:0 "ONåeTÎWQ"
+ jxp_20_legacy_kno:0 "³lÎ‘Ño7b…Q4l›Q"
+ jxp_20_legacy_tti:0 "Rr•N'YŒTúR>yÕl"
+ jxp_20_legacy_rfr:0 "WSèF–eYsQè•"
+
+ jxp_minor_house.1.t:0 "gqS4–qV"
+ jxp_minor_house.1.d:0 "gqSÌR0uÎWïOÆ‰úQ‘NqSïÿö”qS0>yúRNýVºNOý(WƒR„v4–qV-N®‹÷N0<SPR¶RÅV‰˜³QšRÿ=fHQŠbÎW&x&M|6emgHNqS4–›QÕlÿØ=fŠbwm¸SFUï³ueQôfËR–„vÆ‰Î‘0"
+ jxp_minor_house.1.a:0 "©‹gqSø‹ÎW,T‹T0"
+ jxp_minor_house.1.b:0 "©‹qS4–wmïeQ&0"
+ jxp_minor_house.2.t:0 "HXHuÄ‹®‹"
+ jxp_minor_house.2.d:0 "ÆuÝT¶RçeHN¡r†˜ÿHXHutSÐc’‘¶RãÿTRå‚àe0'=e‘dÿ¿OêS=fzz‡e0HuºN‰BlFUï‰RhQÿçeã‰Blb`Y-^!kÿ2Nw*gÅVNýwTPWNY0"
+ jxp_minor_house.2.a:0 "OHXHu&îvÛeQÄ‹®‹0"
+ jxp_minor_house.2.b:0 "HQåNçeLwDdgø‹¶R0"
+ jxp_minor_house.3.t:0 "'Y°Rœ^egfN"
+ jxp_minor_house.3.d:0 "S0¶RçeTÞNw'Y°Rœ^ÿ°sžRtSÞNw=nãS0‹NNgœœwmï0fN-gµb¾öe&^NwÐvsTÿÐc’‘bìNkNÞTSè•ÎNNêSb—ùRF–NLeºN0"
+ jxp_minor_house.3.a:0 "ûN‹NŒjPø‹ï0"
+ jxp_minor_house.3.b:0 "O=n9‚HQ¢cÎ˜T0"
+ jxp_minor_house.4.t:0 "ù‹¿‹lšðX"
+ jxp_minor_house.4.d:0 "áOSmqSï.OeglšÃ”ÿù‹¿‹>y„vmy<yNS.rŸSVlš<yÕl²NÇu(WNw0qSýVuQ›RNYÿtSýwàVªu‹VŒTŸqïwÜwÇ‰baKNLe0"
+ jxp_minor_house.4.a:0 "ŠblšIYLˆ™QeQ¶RÕl0"
+ jxp_minor_house.4.b:0 "åN^y>y<yÕl3zOOqSýV0"
+ jxp_minor_house.5.t:0 "O¿R÷‹‡e"
+ jxp_minor_house.5.d:0 "^y«RÑ(WO¿RÿWSgçeû•ÍN(W¶R-N«ˆSÃVÝOXR0S`u¶RâeïSP<yÕlHNêñTN•N‹sßur‚iVÿmNïSHQŠb^yá&ŒQ6eHNïS(uMe¡R0"
+ jxp_minor_house.5.a:0 "IYHT‹sßu÷‹‡e0"
+ jxp_minor_house.5.b:0 "HQte^yá,g†˜0"
+ jxp_minor_house.6.t:0 "Swm’N^"
+ jxp_minor_house.6.d:0 "‰RN¶R„v9‚êSTSûR—V|œ'0Ûk®vNVÏeˆmo`0¹ƒX8fâe	g)RÿmN	gqSi–ÿãN˜Rå‚*YoR«ˆ‰Æ‰ÿ*YlxÈSO­eÝuSï0"
+ jxp_minor_house.6.a:0 "åNãN˜R¦umg’N^0"
+ jxp_minor_house.6.b:0 "åN²NÏefkZˆRS0W0"
+ jxp_minor_house.7.t:0 "™™ÖS“ŠR"
+ jxp_minor_house.7.d:0 "CSöS¶RfkëX(W™™ÖS^yMRH–RRªgÿsQNçeTNfkz‚.OßuNT«ˆ2U’‘0å‚ýwO“ŠRbHN›QyVKNÕlÿNI`ø‹á¿ONOTêHN5–0"
+ jxp_minor_house.7.a:0 "åN^yMR›QyVìSÆ–ø‹ëX0"
+ jxp_minor_house.7.b:0 "TsQNçe¶RîOfN0"
+ jxp_minor_house.8.t:0 "9NTwmþ–"
+ jxp_minor_house.8.d:0 "9NTwm¸Sþ–lñmÍ‘ÿ=nHu0)YehËzNqSïsQNbøv’NOXR0Nr‚¶Rå‚ýwûN(u=nIYLˆÿ¿OïSŠbSwmýV„vˆmo`ÇubÆuQ0"
+ jxp_minor_house.8.a:0 "äN=nIYLˆáTågÊl0W0"
+ jxp_minor_house.8.b:0 "HQte9NTS-N&ŒQ0"
+ jxp_minor_house.9.t:0 "åeTÛVASkQ&x"
+ jxp_minor_house.9.d:0 "åeTqS³lµu*jÿON¶R„v=eÎW‚Y•þ”,‚*j(WLeïKNMR00W¹ejŒÏeMaˆRÎWÿtSmN‰Bl,g¶RSÍ‘çe¦uNmy<y0"
+ jxp_minor_house.9.a:0 "©‹=eÎW|Vdk|T”^0"
+ jxp_minor_house.9.b:0 "åN<yÕl‰RšbqS-Nø‹O0"
+ jxp_minor_house.10.t:0 "Ño7b…Qnoï"
+ jxp_minor_house.10.d:0 "³lÎ‘¶R„v9‚KbŸq‰`OˆNwm¸SN›SqVnoPl0Ño7b…QKNwmw<OírSÿtS³åN¹R³u8f0²b*‚Nz­ˆ	NÍy‹TÐ0"
+ jxp_minor_house.10.a:0 "ÛbßR4lHQO0"
+ jxp_minor_house.10.b:0 "HQ3zOO›SSø‹Ïe0"
+ jxp_minor_house.11.t:0 "HYo‚úRŸ”"
+ jxp_minor_house.11.d:0 "Rr•N¶R(W'YŒTLˆ‹NÿÕuNVtQyúR0%fåe>yNHYo‚Hu0úRŸ”ÍTwöeÿfkëX0çPONHuºNý(WIr…V,g¶RÙuúQïSuªV„v¦uÕl0"
+ jxp_minor_house.11.a:0 "¢‹ËzúR>y¦uÕl0"
+ jxp_minor_house.11.b:0 "Šbø‹úR&ŒQ³ueQ,g†˜0"
+ jxp_minor_house.12.t:0 "F–eYkN7b"
+ jxp_minor_house.12.d:0 "WSè¶RS0WË–ÿkN7bø‹sQ0grHWNê–-NqSï©‹›QäN.O<hYp‚¾–0å‚ýwîOQrsQè•ÿ¹0W1SNQêS=feÜ„vÅb0"
+ jxp_minor_house.12.a:0 "îOtekN7bsQè•0"
+ jxp_minor_house.12.b:0 "©‹SwmFUfNLˆ0"
+
+ jxp_minor_house.101.t:0 "<SPRgqS)YN"
+ jxp_minor_house.101.d:0 "1u<SPR¶Rwb„våe,g°‹—VgqSÌR0uKN6R0qSÎW0ö”qSNýVºN“Š¸u«ˆ³ueQ)YNMe¡RÿqS4–çeÕlbHNˆRýVKN=g0"
+ jxp_minor_house.102.t:0 "ÆuÝTHXHueQMe"
+ jxp_minor_house.102.d:0 "ÆuÝT¶RßuNåe,gTÿHXHuFU&N¡r†˜çeLwTeQýVMe0°egfRO©‹8fðXN<yÕlðX(WTNô•Ä‹®‹NbÌ‘øv’N‚‚6R0"
+ jxp_minor_house.103.t:0 "S0'Y°Rœ^²N"
+ jxp_minor_house.103.d:0 "S0¶RŠb'Y°Rœ^çeT0ùRlšwmïNkNÞT=nãS™QeQ)YNéy^0Sè•²NÎN0W¹eŽbz‚ØSbýV¶R6R¦^0"
+ jxp_minor_house.104.t:0 "S.rŸSqSïVlš"
+ jxp_minor_house.104.d:0 "S.rŸS¶RßuNåe,gTÿáOSmqSïNVlš<yÕlbHN°eg­‹ÃufkëX0¾sQï„vƒV0"
+ jxp_minor_house.105.t:0 "S`uO¿R‹sßu"
+ jxp_minor_house.105.d:0 "S`u¶R„vO¿RÏuŒšO°eåe,g<hYÍ‘Æ‰^y«R0çeêNN‹sßuÙS‹N0<yÕlNQêS=fÅˆp™ÿw=fýV¶RTÕl'`„v¨š¶g0"
+ jxp_minor_house.106.t:0 "‰RNSwm’N^"
+ jxp_minor_house.106.d:0 "‰RN¶RßuNåe,gTÿSwm’N^«ˆ³ueQýV¶RÆ‰Î‘0¹0WNQ=fKS4Yÿw=fŽVÛk®v0|œ'NÜ¹eˆmo`„vè•7b0"
+ jxp_minor_house.107.t:0 "CSöS™™ÖSfkè•"
+ jxp_minor_house.107.d:0 "CSöS¶RŠb™™ÖS^yMR„v“ŠR¨c^0R)YNfkëX0sQNçeTN›QyV6R¦^(W°eg-NTHNNSO0"
+ jxp_minor_house.108.t:0 "Nr‚9NTwmS"
+ jxp_minor_house.108.d:0 "Nr‚¶RßuNåe,gTÿ9NT=nIYLˆ„vÏuŒš«ˆ(uŽNtetø‹wm¸S0S=n0sQNbNqSï‡efN†vbHNýV¶R3wîv0"
+ jxp_minor_house.109.t:0 "ONåeTÎWQ"
+ jxp_minor_house.109.d:0 "ON¶R„våeTÎWQbHN°eåe,gqS0W2–¡R„v7h,g0=eÎWNQêS=f0W¹eÁX’Wÿw=fýV¶Rµuñm„vNèR0"
+ jxp_minor_house.110.t:0 "³lÎ‘Ño7b…Q4l›Q"
+ jxp_minor_house.110.d:0 "³lÎ‘¶RßuNåe,gTÿÑo7b…Q„vnoPlåwÆ‹«ˆGS<hHNýV¶R4l›Q6R¦^0›SqVNírwmÎNdk†vïSeQþV0"
+ jxp_minor_house.111.t:0 "Rr•N'YŒTúR>yÕl"
+ jxp_minor_house.111.d:0 "Rr•N¶R1u'YŒTúR>yô•fReg„vŒjP=gÿbHN°egYtúRè•0HuºNŒTfk¶RsQû|„vÆuÆRÕl¦^0"
+ jxp_minor_house.112.t:0 "WSèF–eYsQè•"
+ jxp_minor_house.112.d:0 "WSè¶RŠbF–eYkN7b0grHWŒTê–ïÏuŒš&^eQ)YNMe¡R0S¹esQè•ÎN¹0W2–¿uØSbýV¶R„v•Ü<wLu0"
+ jxp_minor_house.legacy.a:0 "©‹S¶RçeÕleQ)YN0"

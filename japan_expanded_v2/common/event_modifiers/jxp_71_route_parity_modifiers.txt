@@ -1,0 +1,48 @@
+jxp_71_route_council_recent = {
+	advisor_cost = -0.01
+}
+
+jxp_71_sakoku_post_road_registers = {
+	state_maintenance_modifier = -0.05
+	global_tax_modifier = 0.03
+}
+
+jxp_71_sakoku_coastal_musters = {
+	defensiveness = 0.05
+	global_spy_defence = 0.05
+}
+
+jxp_71_sakoku_sealed_translation_room = {
+	technology_cost = -0.02
+	advisor_cost = -0.03
+}
+
+jxp_71_open_silver_assay_board = {
+	trade_efficiency = 0.05
+	inflation_reduction = 0.03
+}
+
+jxp_71_open_artillery_inspectors = {
+	artillery_cost = -0.05
+	fire_damage = 0.02
+}
+
+jxp_71_open_charter_auditors = {
+	global_trade_power = 0.05
+	trade_range_modifier = 0.10
+}
+
+jxp_71_imperial_rite_register = {
+	prestige = 0.50
+	legitimacy = 0.50
+}
+
+jxp_71_imperial_kokushi_circuit = {
+	global_autonomy = -0.02
+	governing_capacity_modifier = 0.03
+}
+
+jxp_71_imperial_guard_muster = {
+	land_forcelimit_modifier = 0.05
+	army_tradition = 0.25
+}

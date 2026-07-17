@@ -1,0 +1,15 @@
+{
+  "a12_custom_icon_status": "PENDING_RUNTIME_MILESTONE",
+  "eu4_version": "1.37.5.0",
+  "outputs": {
+    "common/rebel_types/jxp_a_95_jodo_shinshu.txt": "f3550735654ba7619916e22d6a38c3a204b2739c57303a20c1909be26ec3ed2d",
+    "common/religions/00_religion.txt": "38face5be1b2b0261adb3fbaf16672ab50ac09316f9654a383f00a05f3f4fb6c"
+  },
+  "religion": "jodo_shinshu",
+  "religion_group": "eastern",
+  "schema_version": 1,
+  "temporary_icon_frame": 23,
+  "uses_karma": true,
+  "vanilla_mahayana_rebel_sha256": "6069db79fd15ecdb7ac69495a3b99d8566a647534ffdf2e4c0838088f666b343",
+  "vanilla_religion_sha256": "609e2d235f3441c64b895d9faf3927bbf1399149cffa955137ab2d070b9645a6"
+}

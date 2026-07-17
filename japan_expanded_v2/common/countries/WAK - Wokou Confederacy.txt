@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 39 39 42 }
+revolutionary_colors = { 18 18 20 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	maritime_ideas
+	trade_ideas
+	quality_ideas
+	expansion_ideas
+	spy_ideas
+	naval_ideas
+	diplomatic_ideas
+	economic_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"—R7Œ #0" = 12
+	"Œgfm #0" = 12
+	"QgN #0" = 12
+	"—R #0" = 10
+	"fk	T #0" = 10
+	"INÍ‘ #0" = 8
+	"†–ck #0" = 8
+	"™Ÿ #0" = 6
+}
+
+leader_names = {
+	QgN Œgfm —R —R7Œ fk	T INÍ‘ ýw›S àV›S eg›S ùRlš s^7b 	tt
+}
+
+ship_names = {
+	Tsushima Setouchi Noshima Kurushima Innoshima Hirado Sakai Ryukyu Ningbo Hakata Kuroshio Red-Seal
+}
+
+army_names = {
+	"Sea League Host" "$PROVINCE$ Shore Guard" "$PROVINCE$ Kaizoku Tai"
+}
+
+fleet_names = {
+	"Black Tide Fleet" "$PROVINCE$ Wokou Sendan" "$PROVINCE$ Setouchi Squadron"
+}

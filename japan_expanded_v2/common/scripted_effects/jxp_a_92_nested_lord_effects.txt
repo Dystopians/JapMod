@@ -1,0 +1,193 @@
+# Rebuild the non-authoritative capacity cache from the bilateral relation
+# markers. The two opinion markers plus the client flag are the authority.
+jxp_a_rebuild_nested_client_cache_effect = {
+	set_variable = {
+		which = jxp_a_nested_client_count
+		value = 0
+	}
+	save_event_target_as = jxp_a_nested_cache_patron
+	every_country = {
+		limit = {
+			has_country_flag = jxp_a_nested_client
+			jxp_a_nested_member_eligible_trigger = yes
+			has_opinion_modifier = {
+				who = event_target:jxp_a_nested_cache_patron
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+			event_target:jxp_a_nested_cache_patron = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+			}
+		}
+		event_target:jxp_a_nested_cache_patron = {
+			change_variable = {
+				which = jxp_a_nested_client_count
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = jxp_a_nested_client_count
+				value = 1
+			}
+			jxp_a_nested_patron_eligible_trigger = yes
+		}
+		add_country_modifier = {
+			name = jxp_a_nested_patron_status
+			duration = -1
+		}
+	}
+	else = {
+		remove_country_modifier = jxp_a_nested_patron_status
+	}
+}
+
+# Remove every relation in which the current country appears on either side.
+# This is deliberately idempotent so startup and yearly reconciliation can
+# safely repeat it after tag changes, shogunate collapse, or country death.
+jxp_a_clear_nested_relations_effect = {
+	save_event_target_as = jxp_a_nested_cleanup_focus
+	every_country = {
+		limit = {
+			event_target:jxp_a_nested_cleanup_focus = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = jxp_a_opinion_protected_kokujin
+				}
+			}
+		}
+		event_target:jxp_a_nested_cleanup_focus = {
+			remove_opinion = {
+				who = PREV
+				modifier = jxp_a_opinion_protected_kokujin
+			}
+		}
+		if = {
+			limit = {
+				has_opinion_modifier = {
+					who = event_target:jxp_a_nested_cleanup_focus
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+			remove_opinion = {
+				who = event_target:jxp_a_nested_cleanup_focus
+				modifier = jxp_a_opinion_kokujin_patron
+			}
+		}
+		clr_country_flag = jxp_a_nested_client
+		remove_country_modifier = jxp_a_nested_client_status
+	}
+	every_country = {
+		limit = {
+			has_opinion_modifier = {
+				who = event_target:jxp_a_nested_cleanup_focus
+				modifier = jxp_a_opinion_protected_kokujin
+			}
+		}
+		remove_opinion = {
+			who = event_target:jxp_a_nested_cleanup_focus
+			modifier = jxp_a_opinion_protected_kokujin
+		}
+		event_target:jxp_a_nested_cleanup_focus = {
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						who = PREV
+						modifier = jxp_a_opinion_kokujin_patron
+					}
+				}
+				remove_opinion = {
+					who = PREV
+					modifier = jxp_a_opinion_kokujin_patron
+				}
+			}
+		}
+	}
+	clr_country_flag = jxp_a_nested_client
+	remove_country_modifier = jxp_a_nested_client_status
+	remove_country_modifier = jxp_a_nested_patron_status
+	set_variable = {
+		which = jxp_a_nested_client_count
+		value = 0
+	}
+}
+
+jxp_a_reconcile_nested_relations_effect = {
+	if = {
+		limit = {
+			NOT = { jxp_a_nested_member_eligible_trigger = yes }
+			OR = {
+				has_country_flag = jxp_a_nested_client
+				has_country_modifier = jxp_a_nested_patron_status
+				check_variable = {
+					which = jxp_a_nested_client_count
+					value = 1
+				}
+			}
+		}
+		jxp_a_clear_nested_relations_effect = yes
+	}
+	else = {
+		if = {
+			limit = { has_country_flag = jxp_a_nested_client }
+			save_event_target_as = jxp_a_nested_reconcile_client
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							jxp_a_nested_patron_eligible_trigger = yes
+							has_opinion_modifier = {
+								who = event_target:jxp_a_nested_reconcile_client
+								modifier = jxp_a_opinion_protected_kokujin
+							}
+							event_target:jxp_a_nested_reconcile_client = {
+								has_opinion_modifier = {
+									who = PREV
+									modifier = jxp_a_opinion_kokujin_patron
+								}
+							}
+						}
+					}
+				}
+				jxp_a_clear_nested_relations_effect = yes
+			}
+		}
+		jxp_a_rebuild_nested_client_cache_effect = yes
+		if = {
+			limit = {
+				OR = {
+					check_variable = {
+						which = jxp_a_nested_client_count
+						value = 4
+					}
+					AND = {
+						ai = yes
+						check_variable = {
+							which = jxp_a_nested_client_count
+							value = 3
+						}
+					}
+					AND = {
+						NOT = { total_development = 100 }
+						check_variable = {
+							which = jxp_a_nested_client_count
+							value = 2
+						}
+					}
+					AND = {
+						NOT = { total_development = 200 }
+						check_variable = {
+							which = jxp_a_nested_client_count
+							value = 3
+						}
+					}
+				}
+			}
+			jxp_a_clear_nested_relations_effect = yes
+		}
+	}
+}

@@ -1,0 +1,31 @@
+jxp_b_97_is_overseas_colonial_subject_trigger = {
+	jxp_b_96_colonial_origin_trigger = yes
+	capital_scope = {
+		OR = {
+			continent = new_world
+			region = oceanea_region
+		}
+	}
+}
+
+jxp_b_97_has_overseas_colonial_rule_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		any_subject_country = { jxp_b_97_is_overseas_colonial_subject_trigger = yes }
+		has_country_flag = jxp_b_92_west_coast_machiya_established
+		has_country_flag = jxp_b_92_rnw_machiya_established
+		has_country_flag = jxp_b_92_pacific_island_compact_established
+		has_country_flag = jxp_b_92_transpacific_settlement_arc_completed
+		has_country_flag = jxp_pacific_charter_enacted
+	}
+}
+
+jxp_b_97_can_end_metropole_rule_trigger = {
+	jxp_b_96_colonial_origin_trigger = yes
+	is_subject = no
+	has_country_flag = jxp_iface_colonial_independence
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	total_development = 250
+	num_of_ports = 8
+	navy_size = 20
+}

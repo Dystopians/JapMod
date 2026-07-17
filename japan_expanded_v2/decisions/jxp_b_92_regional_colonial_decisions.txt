@@ -1,0 +1,245 @@
+country_decisions = {
+	jxp_b_92_decision_negotiate_south_seas_japan_town = {
+		major = no
+		potential = {
+			jxp_b_92_south_seas_treaty_available_trigger = yes
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			stability = 0
+			dip_power = 75
+			treasury = 150
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -150
+			set_country_flag = jxp_b_92_south_seas_negotiation_pending
+			custom_tooltip = jxp_b_92_south_seas_treaty_request_tt
+			hidden_effect = {
+				random_known_country = {
+					limit = { jxp_b_92_south_seas_host_candidate_trigger = yes }
+					country_event = { id = jxp_b_regional_colonial.1 days = 1 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.35
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kaikyo
+					has_country_flag = jxp_path_kirishitan
+				}
+			}
+			modifier = { factor = 1.5 treasury = 400 }
+			modifier = { factor = 0.10 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 has_country_flag = jxp_path_sakoku }
+		}
+	}
+
+	jxp_b_92_decision_establish_administered_japan_town = {
+		major = no
+		potential = {
+			jxp_b_92_owned_south_seas_port_trigger = yes
+			NOT = { has_country_flag = jxp_b_92_south_seas_japan_town_established }
+			NOT = { has_country_flag = jxp_b_92_south_seas_negotiation_pending }
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			adm_power = 50
+			dip_power = 50
+			treasury = 200
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_treasury = -200
+			custom_tooltip = jxp_b_92_administered_japan_town_tt
+			hidden_effect = {
+				jxp_b_92_begin_owned_south_seas_japan_town_effect = yes
+				country_event = { id = jxp_b_regional_colonial.2 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.50
+			modifier = {
+				factor = 1.75
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_wokou
+					has_country_flag = jxp_path_kaikyo
+				}
+			}
+			modifier = { factor = 0.15 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+		}
+	}
+
+	jxp_b_92_decision_convene_pacific_island_compact = {
+		major = no
+		potential = {
+			jxp_b_92_owned_pacific_island_port_trigger = yes
+			NOT = { has_country_flag = jxp_b_92_pacific_island_compact_established }
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			dip_power = 75
+			treasury = 150
+			navy_tradition = 10
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -150
+			custom_tooltip = jxp_b_92_pacific_island_compact_tt
+			hidden_effect = {
+				jxp_b_92_begin_pacific_island_compact_effect = yes
+				country_event = { id = jxp_b_regional_colonial.3 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.40
+			modifier = { factor = 1.75 jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+			modifier = { factor = 1.50 jxp_b_91_can_choose_free_port_charter_trigger = yes }
+			modifier = { factor = 1.25 jxp_b_91_can_choose_faith_charter_trigger = yes }
+			modifier = { factor = 0.15 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+		}
+	}
+
+	jxp_b_92_decision_organize_north_pacific_exchange = {
+		major = no
+		potential = {
+			jxp_b_92_north_pacific_anchor_trigger = yes
+			NOT = { has_country_flag = jxp_b_92_north_pacific_exchange_established }
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			dip_power = 60
+			treasury = 125
+			num_of_ports = 2
+		}
+		effect = {
+			add_dip_power = -60
+			add_treasury = -125
+			custom_tooltip = jxp_b_92_north_pacific_exchange_tt
+			hidden_effect = {
+				jxp_b_92_begin_north_pacific_exchange_effect = yes
+				country_event = { id = jxp_b_regional_colonial.4 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.55
+			modifier = { factor = 2 jxp_b_92_northern_frontier_profile_trigger = yes }
+			modifier = { factor = 1.50 jxp_b_91_can_choose_free_port_charter_trigger = yes }
+			modifier = { factor = 1.25 jxp_b_91_can_choose_faith_charter_trigger = yes }
+			modifier = { factor = 0.35 has_country_flag = jxp_path_sakoku }
+			modifier = { factor = 0.10 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+		}
+	}
+
+	jxp_b_92_decision_found_western_shore_machiya = {
+		major = no
+		potential = {
+			OR = {
+				jxp_b_92_normal_west_coast_anchor_trigger = yes
+				jxp_b_92_rnw_western_anchor_trigger = yes
+			}
+			NOT = { has_country_flag = jxp_b_92_west_coast_machiya_established }
+			NOT = { has_country_flag = jxp_b_92_rnw_machiya_established }
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			adm_power = 75
+			dip_power = 50
+			treasury = 250
+		}
+		effect = {
+			add_adm_power = -75
+			add_dip_power = -50
+			add_treasury = -250
+			custom_tooltip = jxp_b_92_western_shore_machiya_tt
+			hidden_effect = {
+				if = {
+					limit = { is_random_new_world = no }
+					jxp_b_92_begin_normal_west_coast_machiya_effect = yes
+					country_event = { id = jxp_b_regional_colonial.5 }
+				}
+				else = {
+					jxp_b_92_begin_rnw_machiya_effect = yes
+					country_event = { id = jxp_b_regional_colonial.6 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.35
+			modifier = { factor = 2 num_of_colonists = 1 }
+			modifier = {
+				factor = 1.50
+				OR = {
+					has_country_flag = jxp_path_open_trade
+					has_country_flag = jxp_path_kirishitan
+					has_country_flag = jxp_path_reformed
+				}
+			}
+			modifier = { factor = 0.10 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+		}
+	}
+
+	jxp_b_92_decision_bind_transpacific_settlement_arc = {
+		major = no
+		potential = {
+			NOT = { has_country_flag = jxp_b_92_transpacific_settlement_arc_completed }
+			OR = {
+				AND = {
+					has_country_flag = jxp_b_92_west_coast_machiya_established
+					jxp_b_92_normal_transpacific_arc_trigger = yes
+				}
+				AND = {
+					has_country_flag = jxp_b_92_rnw_machiya_established
+					jxp_b_92_rnw_transpacific_arc_trigger = yes
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			has_any_disaster = no
+			adm_power = 50
+			dip_power = 100
+			treasury = 300
+			num_of_ports = 6
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -100
+			add_treasury = -300
+			custom_tooltip = jxp_b_92_transpacific_settlement_arc_tt
+			hidden_effect = {
+				if = {
+					limit = { is_random_new_world = no }
+					jxp_b_92_complete_normal_transpacific_arc_effect = yes
+					country_event = { id = jxp_b_regional_colonial.7 }
+				}
+				else = {
+					jxp_b_92_complete_rnw_transpacific_arc_effect = yes
+					country_event = { id = jxp_b_regional_colonial.8 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.50
+			modifier = { factor = 1.75 has_country_flag = jxp_path_open_trade }
+			modifier = { factor = 1.50 treasury = 750 }
+			modifier = { factor = 0.10 num_of_loans = 3 }
+			modifier = { factor = 0 is_bankrupt = yes }
+		}
+	}
+}

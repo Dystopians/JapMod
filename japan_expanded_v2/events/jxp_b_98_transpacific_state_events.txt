@@ -1,0 +1,75 @@
+namespace = jxp_transpacific_state
+
+country_event = {
+	id = jxp_transpacific_state.1
+	title = "jxp_transpacific_state.1.t"
+	desc = "jxp_transpacific_state.1.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = "jxp_transpacific_state.1.a" add_prestige = 20 }
+}
+
+country_event = {
+	id = jxp_transpacific_state.2
+	title = "jxp_transpacific_state.2.t"
+	desc = "jxp_transpacific_state.2.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = { name = "jxp_transpacific_state.2.a" add_prestige = 15 add_dip_power = -50 }
+}
+
+country_event = {
+	id = jxp_transpacific_state.3
+	title = "jxp_transpacific_state.3.t"
+	desc = "jxp_transpacific_state.3.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = { name = "jxp_transpacific_state.3.a" add_stability = -1 add_prestige = 25 jxp_b_98_schedule_federal_council_effect = yes }
+}
+
+country_event = {
+	id = jxp_transpacific_state.4
+	title = "jxp_transpacific_state.4.t"
+	desc = "jxp_transpacific_state.4.d"
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	option = { name = "jxp_transpacific_state.4.a" add_stability = -1 add_prestige = -20 }
+}
+
+country_event = {
+	id = jxp_transpacific_state.10
+	title = "jxp_transpacific_state.10.t"
+	desc = "jxp_transpacific_state.10.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
+	immediate = { clr_country_flag = jxp_b_98_federal_council_scheduled }
+	option = {
+		name = "jxp_transpacific_state.10.a"
+		add_adm_power = -75
+		add_treasury = -150
+		add_country_modifier = { name = jxp_b_98_old_world_appropriation duration = 1095 }
+		any_subject_country = { limit = { has_country_flag = jxp_b_98_old_world_member } add_liberty_desire = -10 }
+		jxp_b_98_schedule_federal_council_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 any_subject_country = { has_country_flag = jxp_b_98_old_world_member liberty_desire = 60 } } }
+	}
+	option = {
+		name = "jxp_transpacific_state.10.b"
+		add_dip_power = -75
+		add_treasury = -150
+		add_country_modifier = { name = jxp_b_98_overseas_appropriation duration = 1095 }
+		any_subject_country = { limit = { has_country_flag = jxp_b_98_old_world_member } add_liberty_desire = 10 }
+		jxp_b_98_schedule_federal_council_effect = yes
+		ai_chance = { factor = 1 modifier = { factor = 2 jxp_b_91_local_compact_at_least_60_trigger = yes } }
+	}
+	option = {
+		name = "jxp_transpacific_state.10.c"
+		add_adm_power = -50
+		add_dip_power = -50
+		add_treasury = -250
+		add_country_modifier = { name = jxp_b_98_federal_compromise duration = 1095 }
+		any_subject_country = { limit = { has_country_flag = jxp_b_98_old_world_member } add_liberty_desire = -5 }
+		jxp_b_98_schedule_federal_council_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 5 } }
+	}
+}

@@ -1,0 +1,520 @@
+jxp_kirishitan_deep_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KJP
+			has_country_flag = jxp_path_kirishitan
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_kirishitan_settlement = {
+		icon = mission_religious
+		position = 3
+		required_missions = { jxp_mission_welcome_missionaries }
+		trigger = {
+			mission_completed = jxp_mission_port_congregation_registers
+			religion = catholic
+			OR = {
+				has_country_flag = jxp_kirishitan_centers_established
+				religious_unity = 0.75
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_kirishitan_centers_established } }
+				country_event = { id = jxp_kirishitan.5 days = 1 }
+			}
+			add_country_modifier = {
+				name = jxp_kirishitan_state_church
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_church_and_court = {
+		icon = mission_monarch_in_throne_room
+		position = 5
+		required_missions = { jxp_mission_kirishitan_settlement jxp_mission_baptized_daimyo }
+		trigger = {
+			mission_completed = jxp_mission_kana_doctrine
+			religion = catholic
+			stability = 1
+			jxp_imperial_sanction_at_least_50 = yes
+		}
+		effect = {
+			add_prestige = 10
+			jxp_add_imperial_sanction_5_effect = yes
+			add_country_modifier = {
+				name = jxp_kirishitan_state_church
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_nagasaki_bishopric = {
+		icon = mission_trade_with_japan
+		position = 7
+		required_missions = { jxp_mission_church_and_court jxp_mission_nagasaki_church_port }
+		trigger = {
+			mission_completed = jxp_mission_church_court_compact
+			mission_completed = jxp_mission_kirishitan_settlement
+			religion = catholic
+			owns = 4182
+			4182 = { religion = catholic }
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_nagasaki_bishopric_seen } }
+				country_event = { id = jxp_kirishitan.8 days = 1 }
+			}
+			add_country_modifier = {
+				name = jxp_nagasaki_bishopric
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_roman_kyoto_embassy = {
+		icon = mission_to_japan
+		position = 9
+		required_missions = { jxp_mission_nagasaki_bishopric }
+		trigger = {
+			mission_completed = jxp_mission_church_and_court
+			mission_completed = jxp_mission_cross_sun_commonwealth
+			mission_completed = jxp_mission_tensho_embassy
+			religion = catholic
+			OR = {
+				jxp_oceanic_opening_at_least_60 = yes
+				any_known_country = { religion = catholic }
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_roman_kyoto_embassy_seen } }
+				country_event = { id = jxp_kirishitan.9 days = 1 }
+			}
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_shimabara_healed = {
+		icon = mission_japanese_fort
+		position = 11
+		required_missions = { jxp_mission_roman_kyoto_embassy }
+		trigger = {
+			mission_completed = jxp_mission_christian_sun
+			mission_completed = jxp_mission_nagasaki_bishopric
+			religion = catholic
+			OR = {
+				has_country_flag = jxp_shimabara_resolved
+				has_country_modifier = jxp_shimabara_mediation
+				religious_unity = 0.85
+			}
+		}
+		effect = {
+			set_country_flag = jxp_shimabara_resolved
+			add_country_modifier = {
+				name = jxp_kirishitan_shimabara_compact
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_oceanic_church_state = {
+		icon = mission_establish_high_seas_navy
+		position = 13
+		required_missions = { jxp_mission_shimabara_healed }
+		trigger = {
+			mission_completed = jxp_mission_roman_kyoto_embassy
+			mission_completed = jxp_mission_shimabara_reconciliation
+			religion = catholic
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 10
+			mil_tech = 14
+		}
+		effect = {
+			set_country_flag = jxp_kirishitan_oceanic_orders_seen
+			add_country_modifier = {
+				name = jxp_kirishitan_oceanic_orders
+				duration = -1
+			}
+			add_country_modifier = {
+				name = jxp_route_kirishitan
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_kjp_estates_concordat = {
+		icon = mission_monarch_in_throne_room
+		position = 15
+		required_missions = { jxp_mission_oceanic_church_state }
+		trigger = {
+			jxp_final_state_kirishitan_power_active_trigger = yes
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_kirishitan_estates_concordat
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_reformed_deep_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = RFJ
+			has_country_flag = jxp_path_reformed
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_reformed_settlement = {
+		icon = mission_religious
+		position = 3
+		required_missions = { jxp_mission_hirado_synod }
+		trigger = {
+			mission_completed = jxp_mission_port_congregation_registers
+			religion = reformed
+			OR = {
+				has_country_flag = jxp_reformed_centers_established
+				religious_unity = 0.75
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_reformed_centers_established } }
+				country_event = { id = jxp_reformed.4 days = 1 }
+			}
+			add_country_modifier = {
+				name = jxp_reformed_consistory
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_consistory_registers = {
+		icon = mission_monarch_in_throne_room
+		position = 5
+		required_missions = { jxp_mission_reformed_settlement jxp_mission_oranda_scriptures }
+		trigger = {
+			mission_completed = jxp_mission_kana_doctrine
+			religion = reformed
+			stability = 1
+			adm_tech = 12
+			religious_unity = 0.8
+		}
+		effect = {
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_reformed_consistory
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_oranda_colleges = {
+		icon = mission_early_modern_university
+		position = 7
+		required_missions = { jxp_mission_consistory_registers jxp_mission_court_covenant }
+		trigger = {
+			mission_completed = jxp_mission_church_court_compact
+			mission_completed = jxp_mission_reformed_settlement
+			religion = reformed
+			OR = {
+				has_country_flag = jxp_reformed_oranda_schools_seen
+				has_institution = global_trade
+				adm_tech = 12
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_reformed_oranda_schools_seen } }
+				country_event = { id = jxp_reformed.7 days = 1 }
+			}
+			add_adm_power = 50
+		}
+	}
+
+	jxp_mission_batavia_compacts = {
+		icon = mission_trade_with_japan
+		position = 9
+		required_missions = { jxp_mission_oranda_colleges jxp_mission_oranda_ports }
+		trigger = {
+			mission_completed = jxp_mission_martyrs_and_merchants
+			religion = reformed
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_ports = 8
+			OR = {
+				any_known_country = {
+					OR = {
+						religion = reformed
+						religion = protestant
+					}
+				}
+				any_owned_province = {
+					OR = {
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_reformed_elder_ports_seen } }
+				country_event = { id = jxp_reformed.8 days = 1 }
+			}
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_reformed_volley = {
+		icon = mission_cannons_firing
+		position = 11
+		required_missions = { jxp_mission_batavia_compacts jxp_mission_reformed_sun }
+		trigger = {
+			mission_completed = jxp_mission_consistory_registers
+			mission_completed = jxp_mission_cross_sun_commonwealth
+			religion = reformed
+			mil_tech = 14
+			army_tradition = 35
+		}
+		effect = {
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = jxp_reformed_gunnery_bureau
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_covenant_commonwealth = {
+		icon = mission_japanese_samurai
+		position = 13
+		required_missions = { jxp_mission_reformed_volley }
+		trigger = {
+			mission_completed = jxp_mission_batavia_compacts
+			mission_completed = jxp_mission_reformed_sun
+			tag = RFJ
+			religion = reformed
+			jxp_tenka_order_at_least_75 = yes
+			religious_unity = 0.85
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_reformed_commonwealth
+				duration = -1
+			}
+			add_country_modifier = {
+				name = jxp_route_reformed
+				duration = -1
+			}
+		}
+	}
+}
+
+jxp_kaikyo_deep_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SJP
+			has_country_flag = jxp_path_kaikyo
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	jxp_mission_kaikyo_settlement = {
+		icon = mission_religious
+		position = 4
+		required_missions = { jxp_mission_harbor_mosque_registers }
+		trigger = {
+			mission_completed = jxp_mission_malay_factory
+			religion = sunni
+			OR = {
+				has_country_flag = jxp_kaikyo_centers_established
+				religious_unity = 0.75
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_kaikyo_centers_established } }
+				country_event = { id = jxp_kaikyo.4 days = 1 }
+			}
+			add_country_modifier = {
+				name = jxp_kaikyo_qadi_courts
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_qadi_courts = {
+		icon = mission_muslim_administrators
+		position = 6
+		required_missions = { jxp_mission_kaikyo_settlement jxp_mission_qadi_port_courts }
+		trigger = {
+			mission_completed = jxp_mission_halal_port_law
+			religion = sunni
+			stability = 1
+			adm_tech = 12
+		}
+		effect = {
+			set_country_flag = jxp_kaikyo_qadi_courts_seen
+			jxp_add_tenka_order_5_effect = yes
+			add_country_modifier = {
+				name = jxp_kaikyo_qadi_courts
+				duration = 10950
+			}
+		}
+	}
+
+	jxp_mission_sakai_malay_brokers = {
+		icon = mission_trade_with_japan
+		position = 8
+		required_missions = { jxp_mission_qadi_courts jxp_mission_south_sea_brokers }
+		trigger = {
+			mission_completed = jxp_mission_hajj_fleet
+			mission_completed = jxp_mission_kaikyo_settlement
+			religion = sunni
+			num_of_ports = 8
+			dip_tech = 12
+			OR = {
+				accepted_culture = malayan
+				any_known_country = { religion_group = muslim }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { accepted_culture = malayan }
+					NOT = { primary_culture = malayan }
+				}
+				add_accepted_culture = malayan
+			}
+			add_country_modifier = {
+				name = jxp_sakai_malay_brokers
+				duration = 7300
+			}
+		}
+	}
+
+	jxp_mission_hajj_registry = {
+		icon = mission_to_japan
+		position = 10
+		required_missions = { jxp_mission_sakai_malay_brokers jxp_mission_halal_granary_law }
+		trigger = {
+			mission_completed = jxp_mission_qadi_courts
+			religion = sunni
+			OR = {
+				has_country_flag = jxp_hajj_fleet_done
+				AND = {
+					num_of_ports = 10
+					dip_tech = 14
+					jxp_oceanic_opening_at_least_60 = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = jxp_hajj_fleet_done
+			add_country_modifier = {
+				name = jxp_kaikyo_hajj_registry
+				duration = 7300
+			}
+			add_navy_tradition = 10
+		}
+	}
+
+	jxp_mission_south_sea_compact = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		required_missions = { jxp_mission_hajj_registry jxp_mission_south_sea_maritime_law }
+		trigger = {
+			mission_completed = jxp_mission_sakai_malay_brokers
+			mission_completed = jxp_mission_sultanate_of_wa
+			religion = sunni
+			jxp_oceanic_opening_at_least_60 = yes
+			OR = {
+				any_known_country = { religion_group = muslim }
+				any_owned_province = {
+					OR = {
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = jxp_kaikyo_south_sea_compact_seen } }
+				country_event = { id = jxp_kaikyo.8 days = 1 }
+			}
+			add_dip_power = 50
+		}
+	}
+
+	jxp_mission_sultanate_sea_law = {
+		icon = mission_japanese_samurai
+		position = 14
+		required_missions = { jxp_mission_south_sea_compact }
+		trigger = {
+			mission_completed = jxp_mission_hajj_registry
+			mission_completed = jxp_mission_sultanate_of_wa
+			tag = SJP
+			religion = sunni
+			jxp_tenka_order_at_least_75 = yes
+			jxp_oceanic_opening_at_least_60 = yes
+			religious_unity = 0.85
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = jxp_kaikyo_sea_law
+				duration = -1
+			}
+			add_country_modifier = {
+				name = jxp_route_kaikyo
+				duration = -1
+			}
+		}
+	}
+
+	jxp_mission_sjp_diwan_constitution = {
+		icon = mission_monarch_in_throne_room
+		position = 15
+		required_missions = { jxp_mission_sultanate_sea_law }
+		trigger = {
+			jxp_final_state_kaikyo_power_active_trigger = yes
+			adm_tech = 14
+			stability = 2
+			religious_unity = 0.9
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = jxp_79_kaikyo_diwan_constitution
+				duration = -1
+			}
+		}
+	}
+}

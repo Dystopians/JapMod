@@ -1,0 +1,241 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+empower_the_burghers_reform = {
+	icon = "prussian_monarchy_2"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		trade_efficiency = 0.05
+		burghers_loyalty_modifier = 0.05
+		burghers_influence_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_influence_modifier = 0.1
+		jains_loyalty_modifier = 0.05
+		jains_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+curtail_the_burghers_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		trade_company_governing_cost = -0.1
+		trade_steering = 0.15
+		burghers_influence_modifier = -0.1
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_burghers = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+mercantilistic_approach_reform = {
+	icon = "paper_with_seal"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	trigger = {
+		if = {
+			limit = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		mercantilism_cost = -0.1
+		global_own_trade_power = 0.15
+		placed_merchant_power = 5
+	}
+	custom_attributes = {
+		no_mercantilism_loss_from_privilege = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+free_trade_reform = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	trigger = {
+		if = {
+			limit = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		global_institution_spread = 0.25
+		global_foreign_trade_power = 0.2
+	}
+	custom_attributes = {
+		monarch_power_on_institutions = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		custom_attributes = {
+			free_improve_inland_routes = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+embrace_the_economic_theory_reform = {
+	icon = "dutch_flag"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	trigger = {
+		if = {
+			limit = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		interest = -0.5
+		inflation_reduction = 0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+war_economy_reform = {
+	icon = "war_economy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	trigger = {
+	}
+	modifiers = {
+		war_taxes_cost_modifier = -0.5
+		global_regiment_cost = -0.1
+		global_ship_cost = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+new_world_exploitation_reform = {
+	icon = "compass"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		capital_scope = {
+			NOT = { continent = north_america }
+			NOT = { continent = south_america }
+			NOT = { continent = new_world }
+			NOT = { colonial_region = colonial_australia }
+		}
+	}
+	trigger = {
+		OR = {
+			full_idea_group = expansion_ideas
+			full_idea_group = exploration_ideas
+		}
+		if = {
+			limit = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		colonists = 1
+	}
+	custom_attributes = {
+		extra_trade_goods_for_colonial_subjects = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+lockean_proviso_reform = {
+	icon = "paper_money_map"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	trigger = {
+		OR = {
+			full_idea_group = economic_ideas
+			full_idea_group = infrastructure_ideas
+		}
+		if = {
+			limit = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		development_cost = -0.05
+		global_trade_goods_size_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}

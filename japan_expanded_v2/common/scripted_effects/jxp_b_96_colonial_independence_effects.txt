@@ -1,0 +1,56 @@
+jxp_b_96_clear_independence_crisis_effect = {
+	clr_country_flag = jxp_b_96_independence_crisis_active
+	clr_country_flag = jxp_b_96_independence_petitioned
+	clr_country_flag = jxp_b_96_colonial_assembly_called
+	clr_country_flag = jxp_b_96_tax_refusal
+	clr_country_flag = jxp_b_96_port_boycott
+	clr_country_flag = jxp_b_96_colonial_militia
+	clr_country_flag = jxp_b_96_metropole_hardline
+	clr_country_flag = jxp_b_96_independence_declared
+	remove_country_modifier = jxp_b_96_tax_refusal_modifier
+	remove_country_modifier = jxp_b_96_port_boycott_modifier
+	remove_country_modifier = jxp_b_96_colonial_militia_modifier
+	remove_country_modifier = jxp_b_96_loyalist_independent_split
+}
+
+jxp_b_96_resolve_with_loyalty_effect = {
+	jxp_b_96_clear_independence_crisis_effect = yes
+	set_country_flag = jxp_b_96_independence_crisis_resolved
+	add_country_modifier = { name = jxp_b_96_independence_crisis_cooldown duration = 7300 }
+	jxp_b_91_add_control_10_effect = yes
+	jxp_b_91_subtract_identity_5_effect = yes
+}
+
+jxp_b_96_resolve_with_autonomous_compact_effect = {
+	jxp_b_96_clear_independence_crisis_effect = yes
+	set_country_flag = jxp_b_96_independence_crisis_resolved
+	set_country_flag = jxp_iface_colonial_self_rule
+	add_country_modifier = { name = jxp_b_96_autonomous_colonial_compact duration = -1 }
+	jxp_b_91_subtract_control_15_effect = yes
+	jxp_b_91_add_compact_10_effect = yes
+}
+
+jxp_b_96_resolve_with_trade_independence_effect = {
+	jxp_b_96_clear_independence_crisis_effect = yes
+	set_country_flag = jxp_b_96_independence_crisis_resolved
+	set_country_flag = jxp_iface_colonial_self_rule
+	add_country_modifier = { name = jxp_b_96_trade_independence_compact duration = -1 }
+	jxp_b_91_subtract_control_10_effect = yes
+	jxp_b_91_add_compact_5_effect = yes
+}
+
+jxp_b_96_mark_full_independence_effect = {
+	jxp_b_96_clear_independence_crisis_effect = yes
+	set_country_flag = jxp_b_96_independence_crisis_resolved
+	set_country_flag = jxp_iface_colonial_self_rule
+	set_country_flag = jxp_iface_colonial_independence
+	jxp_b_91_add_identity_10_effect = yes
+}
+
+jxp_b_96_restore_metropole_control_effect = {
+	jxp_b_96_clear_independence_crisis_effect = yes
+	set_country_flag = jxp_b_96_independence_crisis_resolved
+	add_country_modifier = { name = jxp_b_96_restored_metropole_control duration = 7300 }
+	jxp_b_91_add_control_15_effect = yes
+	jxp_b_91_subtract_compact_10_effect = yes
+}

@@ -1,0 +1,85 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_jxp_gov_conduct_land_survey"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_conduct_land_survey.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_issue_sword_hunt"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_issue_sword_hunt.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_relax_domains"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_relax_domains.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_restore_imperial_palace"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_restore_imperial_palace.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_request_imperial_edict"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_request_imperial_edict.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_kobu_gattai_rite"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_kobu_gattai_rite.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_open_foreign_factory"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_open_foreign_factory.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_expel_padres"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_expel_padres.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_dejima_window"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_dejima_window.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_gov_review_translations"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_review_translations.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_japanese_polity_badge"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_japanese_polity_badge.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jxp_route_seal"
+		texturefile = "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_route_seal.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

@@ -1,0 +1,67 @@
+﻿l_english:
+ jxp_b_100_decision_choose_rites_sphere_title:0 "®‹šRwmN<yêNW"
+ jxp_b_100_decision_choose_rites_sphere_desc:0 "åe,gâeïSî•Ÿ-NŸSÿmNïSæSËzwmNTR0å‚åN	tt0gœœ0ðSŒnø‹=nÊSŽVegO‚‚HNÏu¬uÿŒQfN0’N^N²b*‚¿OýwÓubNWYNåN`Snc«R–HNMRÐc„vNšNéy^0"
+ jxp_b_100_decision_complete_mandate_endgame_title:0 "IY×SNšN)Y‹T"
+ jxp_b_100_decision_complete_mandate_endgame_desc:0 "ÖS—V)Y‹TêS=fVïz0g÷^ÅV‰˜=eØNte˜<y6R0‰Ršb!ýVNôucÜ¹ešï„vãN÷Nÿ¹eýwOåe,g„vTRNbkjPYu(WN¸uÏ‹fNKNN0¡l	g0)Y‹T0…Q¹Röeÿdk>NêSú^Ëz×Sø‹ýVb²‹„våengêNÿNO*Oðyåe,gòTbHN)Yg‡v^0"
+ jxp_b_100_decision_complete_rites_endgame_title:0 "šRwmýV²NKNêN"
+ jxp_b_100_decision_complete_rites_endgame_desc:0 "S=nÄ‰0’N^0O‚‚-^!kNqQT²b*‚™QeQb‹OÿOÑwmø‹ýVsSONIYTNMO)YPRÿmNýw(WåenNbINc„v<yêN-NTˆRvQMO0ôucÙNQÜu—‰8^t^„v9‚90Ñ‹˜RN¿l¸S˜Rr0"
+ jxp_b_100_decision_complete_break_endgame_title:0 "±RJTwm¦NIYçe‹T"
+ jxp_b_100_decision_complete_break_endgame_desc:0 "åe,gSlQV&T²‹NýVìr`S)YNTRÿåN0‚–0FU8TwßvŒTùR¿lwmSýV„vÝO²bú^ËzæSNWYéy^0dk>NOÛbô•gY²NLeaÿv^Šbž^'Y„vwm›QN=n¡RV=eYuÙuTN0"
+
+ jxp_b_china_endgames.10.t:0 "åenb‹T"
+ jxp_b_china_endgames.10.d:0 "×S‹TKN<y(W¬NýN-NŸSO‚‚KNô•ŽVÔpe¦^ÿ!S0š.ONÁˆ2RàzzÈuŽNb0ø‹ãÐc’‘bìNÿ)Y‹Tv^^—N!kÜw×N„vVYÁTÿw=fåeåePØN„vMe»l1ûN0"
+ jxp_b_china_endgames.10.a:0 "IYvQTÿ¦NûNvQÍ‘0"
+ jxp_b_china_endgames.11.t:0 "wmNø‹<ybxQ"
+ jxp_b_china_endgames.11.d:0 "egê	tt0gœœ0ðSŒnNNS¸Sø‹=n„v‡efN«ˆ6eeQTNWYM|ŒQ0FUºNNÅVHQb²‹TNMO)YNKNINÿ¿OïSíQqQT„v=nÄ‰0²b*‚NO‚‚<yêNŽVeg0"
+ jxp_b_china_endgames.11.a:0 "OnoïbHNø‹ýVqQˆRKNêN0"
+ jxp_b_china_endgames.12.t:0 "wm¦KNYæS	g)YN"
+ jxp_b_china_endgames.12.d:0 "Ï‹fN&TšR†N-NŸS‹sg„W­e)YNTR„vIN.VÿmNŠbåe,g¨c0Rôu²b°eéy^„vgMRR0ÏkN*N×SÝO²b„vSýV0ÏkNYV>e„v=nãSÿýS‰BlbìN„v0‚–QQ°sÊNåeKNŠ0"
+ jxp_b_china_endgames.12.a:0 "NES«R–ÿêˆRwm)Y0"
+
+ jxp_b_100_china_path_mandate:0 "òTébšRî•Ÿ)Y‹TKNVr"
+ jxp_b_100_china_path_rites:0 "òTébšRwmN<yêNWKNVr"
+ jxp_b_100_china_path_break:0 "òTébšR4xd–çe‹TKNVr"
+ jxp_b_100_b99_direct_campaign_authorized:0 "'YF–ÜVòTleQ4xd–)Y‹Tb²u"
+ jxp_b_100_china_endgame_mandate_complete:0 "NšN)Y‹TKN6RòTÏunxËz"
+ jxp_b_100_china_endgame_rites_complete:0 "wmN<yêNWòTÏunxËz"
+ jxp_b_100_china_endgame_break_complete:0 "wm¦°eéy^òTÏunxËz"
+ jxp_b_100_mandate_endgame_fallback:0 "åengêN·ƒ—Vø‹ýVb²‹"
+
+ jxp_b_100_mandate_proclamation:0 "î•ŸKN®‹"
+ jxp_b_100_mandate_proclamation_desc:0 "g÷^òTTø‹ýVÐcúQbçuNšNTR„vIN.VÿO‚‚ŽVegàVdkôf×SÍ‘Æ‰ÿýV…QùR<y6RNckßu„v‰Nº‹mNôfHNS•0"
+ jxp_b_100_rites_commitment:0 "wmN<yêN®‹šR"
+ jxp_b_100_rites_commitment_desc:0 "Ñ‹˜R0=nTNFUºNck(WHNNWYèýV<yêNTYpÿ°e„vY²NðXgÅV‰˜1ucíu„v*‚ÐÏu9eg=e‘d0"
+ jxp_b_100_break_commitment:0 "4xçe‹TKN®‹"
+ jxp_b_100_break_commitment_desc:0 "wmCg>mIN.VåN0‚–ŒT=nãSSb4xçe	g)YNÂ‰ÿdkô‹=cKY4l^ÿmNOhT¹‹sgùRåe,gaÑSbç`0"
+ jxp_b_100_mandate_endgame:0 "åen)Yg„vÍ‘Åb"
+ jxp_b_100_mandate_endgame_desc:0 "!S0Áˆ2RNÜ¹ešïOåe,g—V«N)YgTRÿmNcíu`S(u,gïS(uŽN,gW»lt„v˜RXTN0K0"
+ jxp_b_100_mandate_fallback_endgame:0 "åengêNKNW"
+ jxp_b_100_mandate_fallback_endgame_desc:0 "(W¡l	g)Yg6R¦^ïSªV„vNSb—Nÿåe,gåNY²Nb²‹ôuû|ê«ŽgêNÿƒRÐc›OðXgÿtSNˆcˆN)Y‹Tb)Yg‡v^«ŽýN0"
+ jxp_b_100_rites_endgame:0 "wmN<yêNW"
+ jxp_b_100_rites_endgame_desc:0 "qQT=nÄ‰NO‚‚<yêNibUS†Nåe,g„v8fŒTY²NqVÍTÿmN‰BlýV¶R8^t^bÅb²b*‚0Ñ‹†™ŒTÜ¹e˜Rr„vV=e0"
+ jxp_b_100_break_endgame:0 "wm¦°eéy^"
+ jxp_b_100_break_endgame_desc:0 "åe,gåNwm›QNFU8TßvÝO²b¿lwmSýVÿbc—VïSÂ‰wmCgÿùRçeéy^„vlQV&TšRR•gmc³RŒTã‰ÿv^ RÍ‘ýV¶R0Me0"
+ jxp_b_100_hakko_unintegrated_littoral:0 "ÜßW*gD–"
+ jxp_b_100_hakko_unintegrated_littoral_desc:0 "kQ®uN‡R„vÏ‹èeàeÕlÿfãN0W¹e²‹T0NšNV×OKN0WS*g·ƒb²‹N‰R5Xÿ‰š›Q0lÐŒT0W¹eµb—bck(WˆmwýV›R0"
+
+ cb_jxp_b_100_claim_mandate:0 "IYhˆî•Ÿ"
+ cb_jxp_b_100_claim_mandate_desc:0 "T°sûN)Yg‡v^ÐcúQTRKN‰N0dkb‰NPãSêSýwÇckVŒT¦uÖS—V)Y‹Tb‰BlÊ‘>e0RVØçe0WÿNýwPHg0tÖS'YGr†˜W0"
+ jxp_b_100_take_mandate_wargoal:0 "eQý×S‹T"
+ jxp_b_100_take_mandate_wargoal_desc:0 "b‰Nîvh=fIeÖS)YgýÎW0Üw)R¹eïSåNOckVŒT¦uÖS—V)Y‹TÿFONýwíQdkb‰NPãS‰Bl†˜W0"
+ JXP_B_100_MANDATE_COUNTRY_DESC:0 "°sûN)Yg‡v^"
+ JXP_B_100_MANDATE_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$î•Ÿ)Y‹TKNb"
+
+ cb_jxp_b_100_rites_sphere:0 "3ufwmN<yêN"
+ cb_jxp_b_100_rites_sphere_desc:0 "ëOÒbÝuqQT=nÄ‰„v¿lwmýV¶RV>e8f0RVØçe0Wbb²‹	gP–FUàW0êS	gòT	gnf±Rðy„vNšN=nãSýw·ƒ—V	gP–µOeuib.VOà`ÿ'YÄ‰!jTv^ÍN	c8^ãN÷N¡‹—r0"
+ jxp_b_100_rites_sphere_wargoal:0 "S•Ý¦uø‹=n"
+ jxp_b_100_rites_sphere_wargoal_desc:0 "b‰Nîvh=fS•LeýV=nãS08f0Ê‘>eýV¶RŒTRVØ8hÃV=fIN‰ŒT¦uÿ†˜W‰BlêSùRSpeòT	gnf±Rðy„v=nãS·ƒ—V	gP–Oà`ÿb‰NRpe9(uNM–NO0"
+ JXP_B_100_RITES_COUNTRY_DESC:0 "ÒbÝuwmNàzz„vNšN¿lwmýV¶R"
+ JXP_B_100_LIMITED_PORT_DESC:0 "òT	gnf±Rðy„vNšN=nãS"
+ JXP_B_100_RITES_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$wmN<yêNKNb"
+
+ cb_jxp_b_100_break_mandate:0 "4xd–)Y‹Twmy"
+ cb_jxp_b_100_break_mandate_desc:0 "åNwm›QO¿RëO)Ygb¿lwmHVCgÊ‘>e×S‹S6R„výV¶R0RVØçe0Wv^V>e8f0å‹b‰NPãSNýwHYÖS)Y‹TÿmNNÐc›O^ßWNOãN÷NVg0"
+ jxp_b_100_break_mandate_wargoal:0 "ûQ4x)YgwmCg"
+ jxp_b_100_break_mandate_wargoal_desc:0 "b‰Nîvh=f(Wwmb-NÖS—VO¿R0Ê‘>eýV¶R0RVØ8hÃVN8fŒT¦uOHQÿêS	gSpeòT	gnf±Rðy„v=nãS«N	g	gP–µOeuib.VOà`ÿb‰NRpe9(uÝOc8^4ls^0"
+ JXP_B_100_BREAK_COUNTRY_DESC:0 ")YgN-NýV¿lwmHVCg"
+ JXP_B_100_BREAK_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$4xd–çe‹TKNb"

@@ -1,0 +1,188 @@
+# B6 colonial-society event modifiers.
+# Every application in jxp_b_93_colonial_society_events.txt has a finite duration.
+# Cleanup code may enumerate the complete jxp_b_93_* set in this file without
+# touching the B1 variable or B2 charter lifecycle.
+
+jxp_b_93_society_event_recess = {
+	global_unrest = -0.25
+}
+
+jxp_b_93_identity_school = {
+	advisor_cost = -0.05
+	idea_cost = -0.02
+}
+
+jxp_b_93_return_passage = {
+	global_colonial_growth = 5
+	global_sailors_modifier = 0.05
+}
+
+jxp_b_93_equal_households = {
+	global_unrest = -1
+	tolerance_heathen = 0.5
+}
+
+jxp_b_93_bilingual_offices = {
+	advisor_pool = 1
+	stability_cost_modifier = -0.03
+}
+
+jxp_b_93_shared_festivals = {
+	yearly_prestige = 0.25
+	global_unrest = -0.5
+}
+
+jxp_b_93_settlers_guild = {
+	production_efficiency = 0.05
+	development_cost = -0.02
+}
+
+jxp_b_93_colonial_gazette = {
+	institution_spread = 0.10
+	yearly_prestige = 0.25
+}
+
+jxp_b_93_land_treaty = {
+	global_unrest = -1
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_93_surveyed_boundaries = {
+	global_tax_modifier = 0.03
+	build_cost = -0.05
+}
+
+jxp_b_93_common_market = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.03
+}
+
+jxp_b_93_joint_defense = {
+	defensiveness = 0.10
+	global_manpower_modifier = 0.05
+}
+
+jxp_b_93_restitution_commission = {
+	global_tax_modifier = -0.03
+	global_unrest = -1
+}
+
+jxp_b_93_labor_compact = {
+	production_efficiency = 0.05
+	global_unrest = -0.5
+}
+
+jxp_b_93_representative_council = {
+	global_unrest = -1
+	governing_capacity_modifier = 0.03
+}
+
+jxp_b_93_exchanged_husbandry = {
+	global_trade_goods_size_modifier = 0.03
+	development_cost = -0.03
+}
+
+jxp_b_93_joint_sanctuaries = {
+	tolerance_heretic = 0.5
+	tolerance_heathen = 0.5
+}
+
+jxp_b_93_protected_rites = {
+	tolerance_heathen = 1
+	global_unrest = -0.5
+}
+
+jxp_b_93_clerical_concordat = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.03
+}
+
+jxp_b_93_mixed_liturgy = {
+	tolerance_heretic = 1
+	missionary_strength = -0.01
+}
+
+jxp_b_93_relief_granaries = {
+	global_unrest = -1
+	global_tax_modifier = -0.03
+}
+
+jxp_b_93_confessional_campaign = {
+	missionary_strength = 0.01
+	global_unrest = 1
+}
+
+jxp_b_93_common_calendar = {
+	yearly_prestige = 0.25
+	religious_unity = 0.03
+}
+
+jxp_b_93_charter_monopoly = {
+	trade_efficiency = 0.08
+	global_unrest = 0.5
+}
+
+jxp_b_93_customs_watch = {
+	global_trade_power = 0.05
+	spy_offence = 0.10
+}
+
+jxp_b_93_port_ledger = {
+	global_tax_modifier = 0.05
+	trade_efficiency = 0.03
+}
+
+jxp_b_93_silver_credit = {
+	interest = -0.25
+	inflation_reduction = 0.05
+}
+
+jxp_b_93_company_restructuring = {
+	global_trade_power = -0.03
+	global_unrest = -1
+}
+
+jxp_b_93_clean_governorship = {
+	yearly_corruption = -0.05
+	global_tax_modifier = 0.03
+}
+
+jxp_b_93_quarantine_board = {
+	global_colonial_growth = -5
+	production_efficiency = 0.05
+}
+
+jxp_b_93_assembly_session = {
+	global_unrest = -1
+	stability_cost_modifier = -0.03
+}
+
+jxp_b_93_governor_commission = {
+	global_tax_modifier = 0.05
+	yearly_corruption = -0.03
+}
+
+jxp_b_93_represented_revenue = {
+	global_tax_modifier = 0.03
+	global_unrest = -0.5
+}
+
+jxp_b_93_local_militia = {
+	global_manpower_modifier = 0.08
+	land_morale = 0.03
+}
+
+jxp_b_93_petition_press = {
+	improve_relation_modifier = 0.10
+	global_unrest = -0.5
+}
+
+jxp_b_93_merchant_council = {
+	global_trade_power = 0.05
+	governing_capacity_modifier = -0.03
+}
+
+jxp_b_93_written_charter = {
+	stability_cost_modifier = -0.05
+	governing_capacity_modifier = 0.05
+}

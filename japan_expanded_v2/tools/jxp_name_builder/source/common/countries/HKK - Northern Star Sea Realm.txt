@@ -1,0 +1,32 @@
+graphical_culture = asiangfx
+
+color = { 58 91 128 }
+revolutionary_colors = { 17 29 43 }
+
+random_nation_chance = 0
+historical_score = 0
+
+historical_idea_groups = {
+	expansion_ideas
+	trade_ideas
+	maritime_ideas
+	quality_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	naval_ideas
+}
+
+monarch_names = {
+	"忠信 #0" = 10
+	"广季 #0" = 10
+	"景广 #0" = 10
+	"政广 #0" = 10
+	"庆广 #0" = 10
+	"公广 #0" = 10
+	"氏广 #0" = 10
+}
+
+leader_names = {
+	松前 蠣崎 工藤 安东 佐竹 南部 津轻 相马 伊达 最上 小野寺 户泽 浪冈
+}

@@ -1,0 +1,574 @@
+namespace = jxp_secondary_colonies
+
+# ---------------------------------------------------------------------------
+# 北辰海国 / 北洋共和国 (1-8)
+# ---------------------------------------------------------------------------
+
+country_event = {
+	id = jxp_secondary_colonies.1
+	title = jxp_secondary_colonies.1.t
+	desc = jxp_secondary_colonies.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.1.a
+		jxp_b_95_apply_hkk_company_republic_effect = yes
+		ai_chance = { factor = 35 modifier = { factor = 2 has_country_flag = jxp_b_charter_free_port } }
+	}
+	option = {
+		name = jxp_secondary_colonies.1.b
+		jxp_b_95_apply_hkk_frontier_bakufu_effect = yes
+		ai_chance = { factor = 30 modifier = { factor = 2 has_country_flag = jxp_b_charter_military_settlement } }
+	}
+	option = {
+		name = jxp_secondary_colonies.1.c
+		jxp_b_95_apply_hkk_northern_assembly_effect = yes
+		ai_chance = { factor = 35 modifier = { factor = 2 check_variable = { which = jxp_b_local_compact value = 65 } } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.2
+	title = jxp_secondary_colonies.2.t
+	desc = jxp_secondary_colonies.2.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.2.a
+		add_country_modifier = { name = jxp_b_95_hkk_ainu_broker_council duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		add_dip_power = -25
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.2.b
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		add_treasury = 75
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.3
+	title = jxp_secondary_colonies.3.t
+	desc = jxp_secondary_colonies.3.d
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.3.a
+		add_treasury = -75
+		add_country_modifier = { name = jxp_b_95_hkk_winter_storehouses duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = jxp_secondary_colonies.3.b
+		add_treasury = 50
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_identity_5_effect = yes
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.4
+	title = jxp_secondary_colonies.4.t
+	desc = jxp_secondary_colonies.4.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.4.a
+		add_country_modifier = { name = jxp_b_95_hkk_russian_trade_truce duration = 3650 }
+		add_dip_power = 25
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 55 }
+	}
+	option = {
+		name = jxp_secondary_colonies.4.b
+		add_army_tradition = 3
+		add_mil_power = 25
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.5
+	title = jxp_secondary_colonies.5.t
+	desc = jxp_secondary_colonies.5.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.5.a
+		add_country_modifier = { name = jxp_b_95_hkk_mixed_crews duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		add_navy_tradition = 2
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.5.b
+		jxp_b_91_add_control_5_effect = yes
+		add_sailors = 750
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.6
+	title = jxp_secondary_colonies.6.t
+	desc = jxp_secondary_colonies.6.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.6.a
+		add_country_modifier = { name = jxp_b_95_hkk_fur_monopoly duration = 7300 }
+		add_treasury = 100
+		jxp_b_91_add_control_5_effect = yes
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = jxp_secondary_colonies.6.b
+		add_country_modifier = { name = jxp_b_95_hkk_open_fur_auction duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.7
+	title = jxp_secondary_colonies.7.t
+	desc = jxp_secondary_colonies.7.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.7.a
+		add_treasury = -50
+		add_country_modifier = { name = jxp_b_95_hkk_storm_rescue_code duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = jxp_secondary_colonies.7.b
+		add_treasury = 75
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.8
+	title = jxp_secondary_colonies.8.t
+	desc = jxp_secondary_colonies.8.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.8.a
+		add_country_modifier = { name = jxp_b_95_hkk_japan_compact duration = -1 }
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_add_control_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = jxp_secondary_colonies.8.b
+		add_country_modifier = { name = jxp_b_95_hkk_northern_autonomy duration = -1 }
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_subtract_control_10_effect = yes
+		ai_chance = { factor = 55 }
+	}
+}
+
+# ---------------------------------------------------------------------------
+# 南洋日本町联邦 (101-108)
+# ---------------------------------------------------------------------------
+
+country_event = {
+	id = jxp_secondary_colonies.101
+	title = jxp_secondary_colonies.101.t
+	desc = jxp_secondary_colonies.101.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.101.a
+		jxp_b_95_apply_njf_japan_town_league_effect = yes
+		ai_chance = { factor = 30 modifier = { factor = 2 has_country_flag = jxp_b_92_south_seas_model_authorized } }
+	}
+	option = {
+		name = jxp_secondary_colonies.101.b
+		jxp_b_95_apply_njf_red_seal_company_effect = yes
+		ai_chance = { factor = 25 modifier = { factor = 2 has_country_flag = jxp_b_charter_red_seal_town } }
+	}
+	option = {
+		name = jxp_secondary_colonies.101.c
+		jxp_b_95_apply_njf_military_diaspora_effect = yes
+		ai_chance = { factor = 20 modifier = { factor = 2 has_country_flag = jxp_b_charter_military_settlement } }
+	}
+	option = {
+		name = jxp_secondary_colonies.101.e
+		jxp_b_95_apply_njf_plural_port_federation_effect = yes
+		ai_chance = { factor = 25 modifier = { factor = 2 has_country_flag = jxp_b_charter_faith_community } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.102
+	title = jxp_secondary_colonies.102.t
+	desc = jxp_secondary_colonies.102.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.102.a
+		add_country_modifier = { name = jxp_b_95_njf_interpreter_guild duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		add_dip_power = 25
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.102.b
+		add_dip_power = 50
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_identity_5_effect = yes
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.103
+	title = jxp_secondary_colonies.103.t
+	desc = jxp_secondary_colonies.103.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.103.a
+		add_country_modifier = { name = jxp_b_95_njf_royal_patents duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		add_dip_power = -25
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.103.b
+		add_treasury = -75
+		add_prestige = 5
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.104
+	title = jxp_secondary_colonies.104.t
+	desc = jxp_secondary_colonies.104.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.104.a
+		add_country_modifier = { name = jxp_b_95_njf_plural_wards duration = -1 }
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = jxp_secondary_colonies.104.b
+		add_stability_or_adm_power = yes
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.105
+	title = jxp_secondary_colonies.105.t
+	desc = jxp_secondary_colonies.105.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.105.a
+		add_country_modifier = { name = jxp_b_95_njf_red_seal_credit duration = 7300 }
+		add_treasury = 75
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 55 }
+	}
+	option = {
+		name = jxp_secondary_colonies.105.b
+		add_mercantilism = -1
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.106
+	title = jxp_secondary_colonies.106.t
+	desc = jxp_secondary_colonies.106.d
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.106.a
+		add_country_modifier = { name = jxp_b_95_njf_ronin_contracts duration = 3650 }
+		add_army_tradition = 3
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = jxp_secondary_colonies.106.b
+		add_mil_power = -35
+		jxp_b_91_add_compact_5_effect = yes
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 55 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.107
+	title = jxp_secondary_colonies.107.t
+	desc = jxp_secondary_colonies.107.d
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.107.a
+		add_treasury = -75
+		add_country_modifier = { name = jxp_b_95_njf_monsoon_relief duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.107.b
+		add_treasury = 75
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_identity_5_effect = yes
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.108
+	title = jxp_secondary_colonies.108.t
+	desc = jxp_secondary_colonies.108.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.108.a
+		add_country_modifier = { name = jxp_b_95_njf_japan_terms duration = -1 }
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = jxp_secondary_colonies.108.b
+		add_country_modifier = { name = jxp_b_95_njf_free_port_charter duration = -1 }
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_subtract_control_10_effect = yes
+		ai_chance = { factor = 55 }
+	}
+}
+
+# ---------------------------------------------------------------------------
+# 大洋诸岛盟 (201-208)
+# ---------------------------------------------------------------------------
+
+country_event = {
+	id = jxp_secondary_colonies.201
+	title = jxp_secondary_colonies.201.t
+	desc = jxp_secondary_colonies.201.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.201.a
+		jxp_b_95_apply_oia_island_kingdom_effect = yes
+		ai_chance = { factor = 30 modifier = { factor = 2 has_country_flag = jxp_b_92_island_model_faith } }
+	}
+	option = {
+		name = jxp_secondary_colonies.201.b
+		jxp_b_95_apply_oia_harbor_assembly_effect = yes
+		ai_chance = { factor = 40 modifier = { factor = 2 has_country_flag = jxp_b_92_island_model_council } }
+	}
+	option = {
+		name = jxp_secondary_colonies.201.c
+		jxp_b_95_apply_oia_naval_league_effect = yes
+		ai_chance = { factor = 30 modifier = { factor = 2 has_country_flag = jxp_b_charter_naval_station } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.202
+	title = jxp_secondary_colonies.202.t
+	desc = jxp_secondary_colonies.202.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.202.a
+		add_country_modifier = { name = jxp_b_95_oia_chiefly_compact duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_add_control_5_effect = yes
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = jxp_secondary_colonies.202.b
+		add_country_modifier = { name = jxp_b_95_oia_common_council duration = 7300 }
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.203
+	title = jxp_secondary_colonies.203.t
+	desc = jxp_secondary_colonies.203.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.203.a
+		add_country_modifier = { name = jxp_b_95_oia_wayfinder_schools duration = 7300 }
+		add_dip_power = -25
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.203.b
+		add_navy_tradition = 4
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.204
+	title = jxp_secondary_colonies.204.t
+	desc = jxp_secondary_colonies.204.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.204.a
+		add_country_modifier = { name = jxp_b_95_oia_reef_customs duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		add_adm_power = -25
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = jxp_secondary_colonies.204.b
+		add_treasury = 75
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_identity_5_effect = yes
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.205
+	title = jxp_secondary_colonies.205.t
+	desc = jxp_secondary_colonies.205.d
+	picture = NAVAL_MILITARY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.205.a
+		add_country_modifier = { name = jxp_b_95_oia_mixed_fleet duration = 7300 }
+		jxp_b_91_add_compact_5_effect = yes
+		add_sailors = 750
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = jxp_secondary_colonies.205.b
+		add_mil_power = 35
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.206
+	title = jxp_secondary_colonies.206.t
+	desc = jxp_secondary_colonies.206.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.206.a
+		add_country_modifier = { name = jxp_b_95_oia_harbor_dues duration = 7300 }
+		add_treasury = 75
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = jxp_secondary_colonies.206.b
+		add_mercantilism = -1
+		jxp_b_91_add_compact_10_effect = yes
+		jxp_b_91_subtract_control_5_effect = yes
+		ai_chance = { factor = 50 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.207
+	title = jxp_secondary_colonies.207.t
+	desc = jxp_secondary_colonies.207.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.207.a
+		add_treasury = -75
+		add_country_modifier = { name = jxp_b_95_oia_storm_covenant duration = 7300 }
+		jxp_b_91_add_compact_10_effect = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = jxp_secondary_colonies.207.b
+		add_treasury = 75
+		jxp_b_91_add_identity_5_effect = yes
+		jxp_b_91_subtract_compact_5_effect = yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.208
+	title = jxp_secondary_colonies.208.t
+	desc = jxp_secondary_colonies.208.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = jxp_secondary_colonies.208.a
+		add_country_modifier = { name = jxp_b_95_oia_japan_compact duration = -1 }
+		jxp_b_91_add_control_5_effect = yes
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = jxp_secondary_colonies.208.b
+		add_country_modifier = { name = jxp_b_95_oia_equal_seas duration = -1 }
+		jxp_b_91_add_identity_10_effect = yes
+		jxp_b_91_subtract_control_10_effect = yes
+		ai_chance = { factor = 55 }
+	}
+}

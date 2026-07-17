@@ -1,0 +1,123 @@
+[sakoku]
+jxp_sakoku_hostage_roads: cell=0,0,627,627; crop=23,24,595,595
+jxp_sakoku_coastal_watch: cell=627,0,627,627; crop=636,24,595,595
+jxp_sakoku_hidden_books: cell=0,627,627,627; crop=23,636,595,595
+[open]
+jxp_open_silver_scales: cell=0,0,627,627; crop=14,12,601,601
+jxp_open_artillery_contract: cell=627,0,627,627; crop=641,12,601,601
+jxp_open_chartered_factory: cell=0,627,627,627; crop=14,639,601,601
+[kirishitan]
+jxp_kirishitan_seminary_book: cell=0,0,627,627; crop=9,9,607,607
+jxp_kirishitan_hospital_bell: cell=627,0,627,627; crop=637,9,607,607
+jxp_kirishitan_nagasaki_admiralty: cell=0,627,627,627; crop=9,638,607,607
+[confucian]
+jxp_confucian_exam_tablet: cell=0,0,627,627; crop=31,31,576,576
+jxp_confucian_law_codex: cell=627,0,627,627; crop=646,31,577,577
+jxp_confucian_three_teachings: cell=0,627,627,627; crop=31,647,577,577
+[imperial]
+jxp_imperial_kokugaku_scroll: cell=0,0,627,627; crop=31,32,579,579
+jxp_imperial_governor_seal: cell=627,0,627,627; crop=642,31,580,580
+jxp_imperial_guard_banner: cell=0,627,627,627; crop=31,638,579,579
+[reformed]
+jxp_reformed_printing_press: cell=0,0,627,627; crop=18,12,598,598
+jxp_reformed_civic_oath: cell=627,0,627,627; crop=637,13,597,597
+jxp_reformed_contract_ship: cell=0,627,627,627; crop=18,629,598,598
+[kaikyo]
+jxp_kaikyo_monsoon_diwan: cell=0,0,627,627; crop=8,9,613,613
+jxp_kaikyo_waqf_granary: cell=627,0,627,627; crop=634,9,613,613
+jxp_kaikyo_spice_guard: cell=0,627,627,627; crop=8,635,612,612
+[ikko]
+jxp_ikko_somon_bell: cell=0,0,627,627; crop=13,12,602,602
+jxp_ikko_granary: cell=627,0,627,627; crop=640,12,602,602
+jxp_ikko_ashigaru_oath: cell=0,627,627,627; crop=13,639,602,602
+[wokou]
+jxp_wokou_black_tide_law: cell=0,0,627,627; crop=9,8,608,608
+jxp_wokou_freeport: cell=627,0,627,627; crop=636,8,608,608
+jxp_wokou_boarding_hooks: cell=0,627,627,627; crop=9,638,608,608
+[founders]
+jxp_founder_house_code: cell=0,0,418,418; crop=14,13,400,400
+jxp_founder_martial_roll: cell=418,0,418,418; crop=432,13,400,400
+jxp_founder_cadaster_office: cell=836,0,418,418; crop=846,13,400,400
+jxp_founder_admiralty: cell=0,418,418,418; crop=6,424,412,412
+jxp_founder_court_council: cell=418,418,418,418; crop=424,424,412,412
+jxp_founder_trade_brokerage: cell=836,418,418,418; crop=846,418,400,400
+jxp_founder_rite_compact: cell=0,836,418,418; crop=14,836,400,400
+jxp_founder_renovated_state: cell=418,836,418,418; crop=432,836,400,400
+[jxp_daimyo_kokujin_oaths]
+jxp_daimyo_kokujin_oaths: cell=0,0,640,640; crop=0,0,640,640
+[jxp_daimyo_bunkoku_law]
+jxp_daimyo_bunkoku_law: cell=0,0,640,640; crop=0,0,640,640
+[jxp_daimyo_kachu_hyojoshu]
+jxp_daimyo_kachu_hyojoshu: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_fudai_service_rolls]
+jxp_japanese_fudai_service_rolls: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_direct_investiture]
+jxp_japanese_direct_investiture: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_gundai_daikan_partition]
+jxp_japanese_gundai_daikan_partition: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_branch_castle_cadasters]
+jxp_japanese_branch_castle_cadasters: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_religious_arbitration]
+jxp_japanese_religious_arbitration: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_temple_land_settlement]
+jxp_japanese_temple_land_settlement: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_ashigaru_muster_rolls]
+jxp_japanese_ashigaru_muster_rolls: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_kyuba_hatamoto]
+jxp_japanese_kyuba_hatamoto: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_castle_artillery_office]
+jxp_japanese_castle_artillery_office: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_funade_ura_service]
+jxp_japanese_funade_ura_service: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_lordly_arbitration]
+jxp_japanese_lordly_arbitration: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_elder_countersignature]
+jxp_japanese_elder_countersignature: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_domain_assembly]
+jxp_japanese_domain_assembly: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_court_temple_service]
+jxp_japanese_court_temple_service: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_yuhitsu_accountants]
+jxp_japanese_yuhitsu_accountants: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_fudai_magistracy]
+jxp_japanese_fudai_magistracy: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_public_authority]
+jxp_japanese_public_authority: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_townsmen_guild_charters]
+jxp_japanese_townsmen_guild_charters: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_checkpoint_red_seals]
+jxp_japanese_checkpoint_red_seals: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_rakuichi_rakuza]
+jxp_japanese_rakuichi_rakuza: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_war_provisioning]
+jxp_japanese_war_provisioning: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_coinage_edicts]
+jxp_japanese_coinage_edicts: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_new_field_works]
+jxp_japanese_new_field_works: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_overseas_settlement_office]
+jxp_japanese_overseas_settlement_office: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_rule_by_arms]
+jxp_japanese_rule_by_arms: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_general_peace]
+jxp_japanese_general_peace: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_service_compact]
+jxp_japanese_service_compact: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_quarrel_suppression]
+jxp_japanese_quarrel_suppression: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_common_security]
+jxp_japanese_common_security: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_unitary_investiture]
+jxp_japanese_unitary_investiture: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_domain_federation]
+jxp_japanese_domain_federation: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_benevolent_government]
+jxp_japanese_benevolent_government: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_divine_law]
+jxp_japanese_divine_law: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_buke_laws_inspectors]
+jxp_japanese_buke_laws_inspectors: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_hyojosho_collegial_offices]
+jxp_japanese_hyojosho_collegial_offices: cell=0,0,640,640; crop=0,0,640,640
+[jxp_japanese_petition_direct_appeal]
+jxp_japanese_petition_direct_appeal: cell=0,0,640,640; crop=0,0,640,640

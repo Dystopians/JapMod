@@ -1,0 +1,323 @@
+{
+  "plan_version": 1,
+  "thumbnail": {
+    "source": "tools\\jxp_asset_builder\\source\\thumbnail_imagegen.png",
+    "file": "thumbnail.png",
+    "sha256": "e5d1454f9463f7b68c2f04052a96d44d54b6453898db831e8b2a051ed5e91573"
+  },
+  "flags": {
+    "RKK": {
+      "source": "gfx\\flags\\source\\RKK_source.png",
+      "file": "gfx\\flags\\RKK.tga",
+      "sha256": "b73f20089d8b2771563b88881b9bb5890402497b57d2ee1edc1977f32a111ef0"
+    },
+    "KYO": {
+      "source": "gfx\\flags\\source\\KYO_source.png",
+      "file": "gfx\\flags\\KYO.tga",
+      "sha256": "fcf2d88b3ffd9cd55f0e7ec75e5ab4a88505ccd2ce8782f62fb542c58871f3dc"
+    },
+    "WKT": {
+      "source": "gfx\\flags\\source\\WKT_source.png",
+      "file": "gfx\\flags\\WKT.tga",
+      "sha256": "dbb592849da5d6068e48be1ccd7475d4438ed8d6de034b6ddbc8847316dcf3cf"
+    },
+    "TGS": {
+      "source": "gfx\\flags\\source\\TGS_source.png",
+      "file": "gfx\\flags\\TGS.tga",
+      "sha256": "532d4b7832d6a6f55030801af3bebf0b3e2722392827b501ef5cc302df2cb188"
+    },
+    "NHT": {
+      "source": "gfx\\flags\\source\\NHT_source.png",
+      "file": "gfx\\flags\\NHT.tga",
+      "sha256": "6c9c80c7a628fb4b2328fd39b6e061982bd3c68f892edcfff6815e6ac76b3930"
+    },
+    "ANK": {
+      "source": "gfx\\flags\\source\\ANK_source.png",
+      "file": "gfx\\flags\\ANK.tga",
+      "sha256": "bad1447aa3094b03bf44d552714804a0892eb3761f67237888aca35751834a78"
+    },
+    "HNM": {
+      "source": "gfx\\flags\\source\\HNM_source.png",
+      "file": "gfx\\flags\\HNM.tga",
+      "sha256": "f873e92eec3726eb7b559390d3bad9f4c0fbc4f88c8828e9f9605c1071572bb8"
+    },
+    "MOG": {
+      "source": "gfx\\flags\\source\\MOG_source.png",
+      "file": "gfx\\flags\\MOG.tga",
+      "sha256": "195af7077f2b9c450451db24118ea175373f1968b99e73ceb81d60d277fede35"
+    },
+    "ASN": {
+      "source": "gfx\\flags\\source\\ASN_source.png",
+      "file": "gfx\\flags\\ASN.tga",
+      "sha256": "2ee3c24644aa8e0c7e4e23942d67ed91c27738678020392b175e09fc1b89b895"
+    },
+    "OSK": {
+      "source": "gfx\\flags\\source\\OSK_source.png",
+      "file": "gfx\\flags\\OSK.tga",
+      "sha256": "ba631eaf0c26d20dad4f9a8fc35db966bd85012c9cc0266ade02d979382f1a87"
+    },
+    "SMA": {
+      "source": "gfx\\flags\\source\\SMA_source.png",
+      "file": "gfx\\flags\\SMA.tga",
+      "sha256": "484a034ff7ad730a6ca90ab36b81bf0dc53e1ad64b81f590258823d456f393b8"
+    },
+    "DHO": {
+      "source": "gfx\\flags\\source\\DHO_source.png",
+      "file": "gfx\\flags\\DHO.tga",
+      "sha256": "a72fa97a0380944bb9ebf7c777fb383dfc2be8b6be848b09f2cc2663e59de8f4"
+    },
+    "MKM": {
+      "source": "gfx\\flags\\source\\MKM_source.png",
+      "file": "gfx\\flags\\MKM.tga",
+      "sha256": "4b75b5be035aeec80566338a540c76c9037c390b4ff1f50e65172aec6e78a337"
+    },
+    "SGR": {
+      "source": "gfx\\flags\\source\\SGR_source.png",
+      "file": "gfx\\flags\\SGR.tga",
+      "sha256": "817cba2e268b947e217bc1024b14457e8427759002c9c61dc8c089beda53aeda"
+    },
+    "KMP": {
+      "source": "gfx\\flags\\source\\KMP_source.png",
+      "file": "gfx\\flags\\KMP.tga",
+      "sha256": "09f722f7b302676a86d98b7a32011df1a818b0f4961d60200613640fa9928668"
+    },
+    "ARI": {
+      "source": "gfx\\flags\\source\\ARI_source.png",
+      "file": "gfx\\flags\\ARI.tga",
+      "sha256": "0fdb412a198889b63192f63b403e59c5ef6779dd46de04357d2629b2d7fc68fc"
+    },
+    "MTU": {
+      "source": "gfx\\flags\\source\\MTU_source.png",
+      "file": "gfx\\flags\\MTU.tga",
+      "sha256": "0ad72fb50588919a5e5fe86660f8312f3212314222a29b6ab2c394ef43ed2687"
+    },
+    "STM": {
+      "source": "gfx\\flags\\source\\STM_source.png",
+      "file": "gfx\\flags\\STM.tga",
+      "sha256": "32bcca47faccf55967446eaeb7a23a598abf22700019eda0156d50c311e4e4dc"
+    },
+    "HNG": {
+      "source": "gfx\\flags\\source\\HNG_source.png",
+      "file": "gfx\\flags\\HNG.tga",
+      "sha256": "c7058507f636336275dda13a96cf00e2519e1dd902e7a5b2d40b15abbf3e2f1a"
+    },
+    "AZI": {
+      "source": "gfx\\flags\\source\\AZI_source.png",
+      "file": "gfx\\flags\\AZI.tga",
+      "sha256": "b671c3caf1ac021ec0daeba4b9185371296d9e4e87b2ec97b6b79cceceb721dc"
+    },
+    "MYO": {
+      "source": "gfx\\flags\\source\\MYO_source.png",
+      "file": "gfx\\flags\\MYO.tga",
+      "sha256": "bcb24abf071ea61e85fc017cf8cf8efd6e48192f4949b1e7e0029c92ced4b8c0"
+    },
+    "STO": {
+      "source": "gfx\\flags\\source\\STO_source.png",
+      "file": "gfx\\flags\\STO.tga",
+      "sha256": "4281d035a36177d7e1b8189619c8b6e6627ed7a156fb29b3beee015b210bc235"
+    },
+    "RZJ": {
+      "source": "gfx\\flags\\source\\RZJ_source.png",
+      "file": "gfx\\flags\\RZJ.tga",
+      "sha256": "0e834e2a5a0285c866c669c49ad012c0828f5e6ba80beb1cdfa41ab93b425ef3"
+    },
+    "UKT": {
+      "source": "gfx\\flags\\source\\UKT_source.png",
+      "file": "gfx\\flags\\UKT.tga",
+      "sha256": "b5d76e841f2fec215bfb20864f5e9363a0c5f5df9d1fbeff7c59dfaac764d592"
+    },
+    "TGR": {
+      "source": "gfx\\flags\\source\\TGR_source.png",
+      "file": "gfx\\flags\\TGR.tga",
+      "sha256": "27f2ebcf657cd1f512eb2d5ba7fa110f7d544d29ee5b8e40b8e3e5940003cadb"
+    },
+    "HCS": {
+      "source": "gfx\\flags\\source\\HCS_source.png",
+      "file": "gfx\\flags\\HCS.tga",
+      "sha256": "22cdea2b719993cca25cb693b99d058e22bdab649da447f3d74c8c18789dc0b7"
+    },
+    "MTS": {
+      "source": "gfx\\flags\\source\\MTS_source.png",
+      "file": "gfx\\flags\\MTS.tga",
+      "sha256": "efe5fb44ac5f93d543694ad7d1bd44ab0d50a35e18a043ac3bc4e82f0147b905"
+    },
+    "KRD": {
+      "source": "gfx\\flags\\source\\KRD_source.png",
+      "file": "gfx\\flags\\KRD.tga",
+      "sha256": "556ffaf949f6c7cf17fd33232debb12d81d02776c8cb4f212f76f7f7bb251e05"
+    },
+    "YMC": {
+      "source": "gfx\\flags\\source\\YMC_source.png",
+      "file": "gfx\\flags\\YMC.tga",
+      "sha256": "9c2f5e95efc8c3ed1a45d23f9ef89212e76c2977b41602aab40f4de4d091a53a"
+    },
+    "NBS": {
+      "source": "gfx\\flags\\source\\NBS_source.png",
+      "file": "gfx\\flags\\NBS.tga",
+      "sha256": "7dae987bed276bdb6fb72297d31e20b1a7de13362f27f9a917a0948dc900e0b7"
+    }
+  },
+  "missions": {
+    "jxp_map_mission_warrior_muster": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_warrior_muster_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_warrior_muster.dds",
+      "sha256": "694ed775a9d9d7d5886886355cf9f57bb94ccd3927707509dee4a39dab1aa76c"
+    },
+    "jxp_map_mission_warrior_castle_roads": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_warrior_castle_roads_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_warrior_castle_roads.dds",
+      "sha256": "9322804f9d141eb2445058458e3642274a25762d66b21b4ccdb63caaf56aa4db"
+    },
+    "jxp_map_mission_warrior_provincial_banner": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_warrior_provincial_banner_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_warrior_provincial_banner.dds",
+      "sha256": "b937a8991a03daff2607de7d37016a4369d8f8a4cf5adc6bd15a933c90178863"
+    },
+    "jxp_map_mission_court_genealogies": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_court_genealogies_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_court_genealogies.dds",
+      "sha256": "5ff5bb29cae9706131174f4c0b4af72d8802cdcda9c855816c1087e1acaf30fe"
+    },
+    "jxp_map_mission_court_capital_petitions": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_court_capital_petitions_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_court_capital_petitions.dds",
+      "sha256": "69163de843e73ec50bec5cf26571be11cb9761973df687259af87bdb6b0a4dd8"
+    },
+    "jxp_map_mission_court_old_province_claim": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_court_old_province_claim_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_court_old_province_claim.dds",
+      "sha256": "d318f1aedee680f9bb0fb06cfcef77e3ab6efac316d43ecbccb0f651c67fe54c"
+    },
+    "jxp_map_mission_sea_port_registers": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_sea_port_registers_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_sea_port_registers.dds",
+      "sha256": "73821015c75c569abdcb4b427b6abd49b8cfde33136f1aaa1cf4be72351aa200"
+    },
+    "jxp_map_mission_sea_shipwright_leagues": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_sea_shipwright_leagues_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_sea_shipwright_leagues.dds",
+      "sha256": "6c8630539ece2d26fd7c1ee0b97f65d2fa3648baf1eda1a88f5b4f6a63ea9b2c"
+    },
+    "jxp_map_mission_sea_inner_routes": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_sea_inner_routes_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_sea_inner_routes.dds",
+      "sha256": "8c79b05657ab8644f78874e271cdc3bfc4b94354f7ad8bb52ec269beb1014b01"
+    },
+    "jxp_map_mission_frontier_passes": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_frontier_passes_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_frontier_passes.dds",
+      "sha256": "fa7f1d8823f9e8717d0ad31b9bdb07f0e5d4f2b64dea3fe6edeb4bfef1464946"
+    },
+    "jxp_map_mission_frontier_new_fields": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_frontier_new_fields_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_frontier_new_fields.dds",
+      "sha256": "6f2cbcd95061d342278ae2afaa27aeb57eb7df3407d1d935d87c7a481b261c57"
+    },
+    "jxp_map_mission_frontier_border_oaths": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_frontier_border_oaths_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_frontier_border_oaths.dds",
+      "sha256": "9d2264136c58ff2456ab1133883f37a6c2e4cd3e1e7735a726e32c7f06748261"
+    },
+    "jxp_map_mission_temple_ledgers": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_temple_ledgers_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_temple_ledgers.dds",
+      "sha256": "f15eddbb8c60cd8f74284b9de13d8f2eeadcbf4b3d5f8e5ec4c343c7b33e8361"
+    },
+    "jxp_map_mission_temple_market_towns": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_temple_market_towns_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_temple_market_towns.dds",
+      "sha256": "66a0fe73f11fc1440030f5e3b3744e3be95de395e3573eed992ff5a3b5f0244f"
+    },
+    "jxp_map_mission_temple_public_law": {
+      "source": "gfx\\interface\\missions\\source\\jxp_map_mission_temple_public_law_imagegen.png",
+      "file": "gfx\\interface\\missions\\jxp_map_mission_temple_public_law.dds",
+      "sha256": "239f88497467f05026c3fd1ffe25b999948cbfba82ea80233b830ad89c108a88"
+    }
+  },
+  "events": {
+    "jxp_map.1": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_kannonji_ledgers_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_kannonji_ledgers.dds",
+      "sha256": "72c966d82867850af2c12700889958f70fcb7d527888f9132d4d084fe1acb68a"
+    },
+    "jxp_map.2": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_kaga_common_granary_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_kaga_common_granary.dds",
+      "sha256": "88957c411d64b9acfc2764fa87182b36f115fa6e4dc72277cfbf6f7cac8f3609"
+    },
+    "jxp_map.3": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_yamagata_water_dispute_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_yamagata_water_dispute.dds",
+      "sha256": "1c320ceae9633f29e39fe948895af7f8a08f377467bcd4223f98ed41c43bfeca"
+    },
+    "jxp_map.4": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_tsugaru_land_survey_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_tsugaru_land_survey.dds",
+      "sha256": "befe9e7e038f4dc4e478805ffef32757ba09eb9c6f4d47ed10a6e0701f366916"
+    },
+    "jxp_map.5": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_hirado_iki_pass_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_hirado_iki_pass.dds",
+      "sha256": "006bc89808df27a0fc9d94c95e4464f0bb55729a4d1152645ba4a17049c9a627"
+    },
+    "jxp_map.6": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_shimabara_foreign_ship_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_shimabara_foreign_ship.dds",
+      "sha256": "202f0fac7e1996122459e4ff44de0469632eecfcc539f7412bb38490c2c50c6b"
+    },
+    "jxp_map.7": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_sagara_law_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_sagara_law.dds",
+      "sha256": "a7138e2a2fb29a004b87a1f9350f808cbdd9b3771a0c9d4a167668c8ab04e342"
+    },
+    "jxp_map.8": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_kimotsuki_horse_pasture_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_kimotsuki_horse_pasture.dds",
+      "sha256": "0a80d3a40e0c07ee853e4497720c3997472364fbebb90547a9d442f1c3eb508a"
+    },
+    "jxp_map.9": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_satomi_coastal_defense_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_satomi_coastal_defense.dds",
+      "sha256": "f2b06aedb96f467fa2f02ffe648172b45d1a957a289214949e38b9c1d105db3a"
+    },
+    "jxp_map.10": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_odani_biwa_route_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_odani_biwa_route.dds",
+      "sha256": "2f604618653d995633abc2c7753a94b0ce846f938ee89ee697a7330ab1e1558f"
+    },
+    "jxp_map.20": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_muster_ordinance_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_muster_ordinance.dds",
+      "sha256": "45331e2774656112c3256073257c30b8f98519f5bf74b12c1ae8e37245d2a206"
+    },
+    "jxp_map.21": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_genealogy_and_merit_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_genealogy_and_merit.dds",
+      "sha256": "426a85c5bb92d4ecc30755f49a77444197d4e3d1d49517f2de03a9cc79980302"
+    },
+    "jxp_map.22": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_ship_league_rights_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_ship_league_rights.dds",
+      "sha256": "8b3e0e6041ae52eda99bd94c8c76c3238146efa4b5fe6c2f9666a97bd0c65884"
+    },
+    "jxp_map.23": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_beyond_boundary_stones_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_beyond_boundary_stones.dds",
+      "sha256": "18222b25e17cba14dd423d0e73cada92add9a01b135191a078f487fc63db5815"
+    },
+    "jxp_map.24": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_temple_market_law_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_temple_market_law.dds",
+      "sha256": "2f774a23df0e13f8fa8eaec615961343db167018414f15a2b10dd1ca30bf2700"
+    },
+    "jxp_map.900": {
+      "source": "gfx\\event_pictures\\jxp_map\\source\\jxp_map_verification_ledger_imagegen.png",
+      "file": "gfx\\event_pictures\\jxp_map\\jxp_map_verification_ledger.dds",
+      "sha256": "763810fe31365e32102c56b186697b589eaf6595b5c8c74f8a74e7fcd44671a6"
+    }
+  },
+  "gfx": {
+    "file": "interface\\jxp_map_assets.gfx",
+    "sha256": "c45fad2b2746cb574076767debc5b73dd076d139f40d06f5ca5a836d4c94b924"
+  }
+}

@@ -1,0 +1,12 @@
+name="日轮诸道：日本八十八国地图"
+supported_version="v1.37.5.0"
+version="0.1.4-alpha"
+picture="thumbnail.png"
+dependencies={
+	"日轮诸道：日本扩展风味包"
+}
+tags={
+	"Map"
+	"Historical"
+	"Gameplay"
+}

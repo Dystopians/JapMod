@@ -1,0 +1,30 @@
+country_decisions = {
+	jxp_debug_80_refresh_final_state_reforms = {
+		major = no
+		potential = {
+			ai = no
+			has_country_flag = jxp_debug_enabled
+			jxp_is_japanese_polity_trigger = yes
+		}
+		allow = {
+			OR = {
+				jxp_final_state_uncommitted_trigger = yes
+				jxp_final_state_sakoku_trigger = yes
+				jxp_final_state_open_trigger = yes
+				jxp_final_state_kirishitan_trigger = yes
+				jxp_final_state_confucian_trigger = yes
+				jxp_final_state_imperial_trigger = yes
+				jxp_final_state_reformed_trigger = yes
+				jxp_final_state_kaikyo_trigger = yes
+				jxp_final_state_ikko_trigger = yes
+				jxp_final_state_wokou_trigger = yes
+			}
+		}
+		effect = {
+			change_government_reform_progress = 5000
+			jxp_sanitize_final_state_political_reforms_effect = yes
+			jxp_sync_final_state_power_structure_effect = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

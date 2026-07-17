@@ -1,0 +1,50 @@
+po_jxp_b_colonial_compact = {
+	category = 6
+	power_cost_base = 0.5
+	prestige_base = 0.5
+	ae_base = 0
+	warscore_cost = { no_provinces = 55.0 }
+	warscore_cap = 55
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = { THIS = { has_country_flag = jxp_b_96_independence_declared } }
+	is_allowed = { THIS = { is_subject_of = FROM } }
+	effect = { THIS = { jxp_b_96_resolve_with_autonomous_compact_effect = yes } }
+	ai_weight = {
+		export_to_variable = { variable_name = ai_value value = 65 }
+		if = { limit = { THIS = { jxp_b_91_local_compact_at_least_60_trigger = yes } } change_variable = { which = ai_value value = 20 } }
+	}
+}
+
+po_jxp_b_trade_independence = {
+	category = 6
+	power_cost_base = 0.5
+	prestige_base = 0.4
+	ae_base = 0
+	warscore_cost = { no_provinces = 45.0 }
+	warscore_cap = 45
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = { THIS = { has_country_flag = jxp_b_96_independence_declared } }
+	is_allowed = { THIS = { is_subject_of = FROM } }
+	effect = { THIS = { jxp_b_96_resolve_with_trade_independence_effect = yes } }
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 50 } }
+}
+
+po_jxp_b_restore_metropole_control = {
+	category = 6
+	power_cost_base = 0.5
+	prestige_base = 0.5
+	ae_base = 0
+	warscore_cost = { no_provinces = 50.0 }
+	warscore_cap = 50
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = yes
+	is_visible = { FROM = { has_country_flag = jxp_b_96_independence_declared } }
+	is_allowed = { FROM = { is_subject_of = THIS } }
+	effect = { FROM = { jxp_b_96_restore_metropole_control_effect = yes } }
+	ai_weight = { export_to_variable = { variable_name = ai_value value = 60 } }
+}

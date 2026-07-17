@@ -1,0 +1,19 @@
+cb_jxp_b_101_korean_expedition = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 120
+
+	prerequisites_self = {
+		jxp_b_101_can_use_korean_expedition_cb_trigger = yes
+	}
+
+	prerequisites = {
+		FROM = {
+			tag = KOR
+			capital_scope = { region = korea_region }
+			NOT = { is_subject_of = ROOT }
+		}
+	}
+
+	war_goal = jxp_b_101_korean_expedition_wargoal
+}

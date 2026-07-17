@@ -1,0 +1,82 @@
+jxp_b_94_federal_assembly_reform = {
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NYA }
+	modifiers = {
+		governing_capacity_modifier = 0.10
+		reform_progress_growth = 0.10
+		global_unrest = -1
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 2 has_country_flag = jxp_b_charter_red_seal_town }
+		modifier = { factor = 2 check_variable = { which = jxp_b_local_compact value = 70 } }
+	}
+}
+
+jxp_b_94_frontier_military_republic_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NYA }
+	modifiers = {
+		global_manpower_modifier = 0.10
+		discipline = 0.025
+		stability_cost_modifier = 0.10
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_military_settlement }
+		modifier = { factor = 2 army_tradition = 40 }
+	}
+}
+
+jxp_b_94_merchant_commonwealth_reform = {
+	icon = "asian_scripture"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = { tag = NYA }
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.10
+		governing_capacity_modifier = -0.05
+	}
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_free_port }
+		modifier = { factor = 2 has_country_flag = jxp_b_charter_naval_station }
+	}
+}
+
+jxp_b_94_oceanic_monarchy_reform = {
+	icon = "crown"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	maintain_dynasty = yes
+	valid_for_nation_designer = no
+	potential = { tag = NYA }
+	modifiers = {
+		legitimacy = 1
+		diplomatic_reputation = 1
+		max_absolutism = 10
+		reform_progress_growth = -0.05
+	}
+	ai = {
+		factor = 1
+		modifier = { factor = 3 has_country_flag = jxp_b_charter_faith_community }
+		modifier = { factor = 2 check_variable = { which = jxp_b_metropole_control value = 40 } }
+	}
+}

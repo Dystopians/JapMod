@@ -1,0 +1,333 @@
+namespace = jxp_migration_v023
+
+country_event = {
+	id = jxp_migration_v023.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_mission_topology_migration_v023 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_mission_topology_migration_v023
+		jxp_sanitize_route_state_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_migration_v023.2
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_mission_renderer_migration_v0231 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_mission_renderer_migration_v0231
+		jxp_sanitize_route_state_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_migration_v023.3
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_mission_renderer_migration_v0233 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_mission_renderer_migration_v0233
+		jxp_sanitize_route_state_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_migration_v023.4
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_unified_japan_state_trigger = yes
+		NOT = { has_country_flag = jxp_founder_reform_reclassified_v0234 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_reclassify_founder_house_reforms_v0234_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+country_event = {
+	id = jxp_migration_v023.5
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_mission_expansion_migration_v024 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_mission_expansion_migration_v024
+		jxp_sanitize_route_state_effect = yes
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				NOT = { has_country_flag = jxp_24_house_path_completed }
+				OR = {
+					mission_completed = jxp_mission_house_warrior_banner_legacy
+					mission_completed = jxp_mission_house_court_kanrei_memory
+					mission_completed = jxp_mission_house_sea_strait_laws
+					mission_completed = jxp_mission_house_frontier_border_oaths
+					mission_completed = jxp_mission_house_temple_public_law
+				}
+			}
+			set_country_flag = jxp_24_house_path_completed
+		}
+
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_warrior_house_origin_trigger = yes
+				has_country_flag = jxp_25_warrior_agenda_seen
+				NOT = {
+					OR = {
+						has_country_flag = jxp_24_warrior_agenda_rolls
+						has_country_flag = jxp_24_warrior_agenda_captains
+					}
+				}
+			}
+			set_country_flag = jxp_24_warrior_agenda_rolls
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_court_house_origin_trigger = yes
+				has_country_flag = jxp_25_court_agenda_seen
+				NOT = {
+					OR = {
+						has_country_flag = jxp_24_court_agenda_ranks
+						has_country_flag = jxp_24_court_agenda_stewards
+					}
+				}
+			}
+			set_country_flag = jxp_24_court_agenda_ranks
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_maritime_house_origin_trigger = yes
+				has_country_flag = jxp_25_maritime_agenda_seen
+				NOT = {
+					OR = {
+						has_country_flag = jxp_24_maritime_agenda_merchants
+						has_country_flag = jxp_24_maritime_agenda_ship_rolls
+					}
+				}
+			}
+			set_country_flag = jxp_24_maritime_agenda_merchants
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_frontier_house_origin_trigger = yes
+				has_country_flag = jxp_25_frontier_agenda_seen
+				NOT = {
+					OR = {
+						has_country_flag = jxp_24_frontier_agenda_wardens
+						has_country_flag = jxp_24_frontier_agenda_brokers
+					}
+				}
+			}
+			set_country_flag = jxp_24_frontier_agenda_wardens
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_temple_market_house_origin_trigger = yes
+				has_country_flag = jxp_25_temple_market_agenda_seen
+				NOT = {
+					OR = {
+						has_country_flag = jxp_24_temple_agenda_privileges
+						has_country_flag = jxp_24_temple_agenda_ledgers
+					}
+				}
+			}
+			set_country_flag = jxp_24_temple_agenda_privileges
+		}
+
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_warrior_house_origin_trigger = yes
+				NOT = { has_country_flag = jxp_25_warrior_agenda_seen }
+			}
+			country_event = { id = jxp_daimyo_agenda.1 days = 2 }
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_court_house_origin_trigger = yes
+				NOT = { has_country_flag = jxp_25_court_agenda_seen }
+			}
+			country_event = { id = jxp_daimyo_agenda.2 days = 2 }
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_maritime_house_origin_trigger = yes
+				NOT = { has_country_flag = jxp_25_maritime_agenda_seen }
+			}
+			country_event = { id = jxp_daimyo_agenda.3 days = 2 }
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_frontier_house_origin_trigger = yes
+				NOT = { has_country_flag = jxp_25_frontier_agenda_seen }
+			}
+			country_event = { id = jxp_daimyo_agenda.4 days = 2 }
+		}
+		if = {
+			limit = {
+				jxp_is_daimyo_stage_trigger = yes
+				jxp_has_temple_market_house_origin_trigger = yes
+				NOT = { has_country_flag = jxp_25_temple_market_agenda_seen }
+			}
+			country_event = { id = jxp_daimyo_agenda.5 days = 2 }
+		}
+
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+# 0.24.1 repairs old saves that retained a vanilla Japanese mission series or
+# accumulated more than one free national-idea group across route tag changes.
+country_event = {
+	id = jxp_migration_v023.6
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_runtime_state_repair_v0241 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_runtime_state_repair_v0241
+		clr_country_flag = jxp_mission_refresh_pending
+		jxp_force_sync_route_national_ideas_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+# 0.28.1 separates idempotent day-to-day synchronization from the one-time
+# forced swap needed to collapse free-idea stacks serialized by older builds.
+country_event = {
+	id = jxp_migration_v023.8
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		has_custom_ideas = no
+		jxp_uses_route_national_ideas_trigger = yes
+		NOT = { has_country_flag = jxp_national_idea_identity_repair_v0281 }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = jxp_national_idea_identity_repair_v0281
+		jxp_force_sync_route_national_ideas_effect = yes
+	}
+
+	option = { name = "OK" }
+}
+
+# 0.24.2 retains the exact vanilla mission-series keys as inactive tombstones,
+# performs an immediate/next-day refresh, and reapplies the compact source order.
+country_event = {
+	id = jxp_migration_v023.7
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_is_japanese_polity_trigger = yes
+		NOT = { has_country_flag = jxp_mission_runtime_repair_v0242 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_mission_runtime_repair_v0242
+		clr_country_flag = jxp_mission_refresh_pending
+		jxp_sanitize_route_state_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}

@@ -1,0 +1,11 @@
+jxp_b_97_overseas_rights_revoked = {
+	global_colonial_growth = -25
+	range = -0.25
+	global_tariffs = -0.15
+	diplomatic_reputation = -1
+}
+
+jxp_b_97_liberator_of_pacific_states = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.05
+}

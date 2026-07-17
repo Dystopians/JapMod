@@ -1,0 +1,464 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+organized_military_staff_reform = {
+	icon = "organized_military_staff"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = organized_military_staff_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		reinforce_cost_modifier = -0.2
+		reinforce_speed = 0.25
+		global_supply_limit_modifier = 0.2
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+military_engineering_reform = {
+	icon = "military_engineers"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = military_engineering_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		artillery_barrage_cost = -0.25
+		artillery_cost = -0.1
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+defensive_stance_reform = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			NOT = { culture_group = caucasian }
+			NOT = { primary_culture = georgian_new }
+		}
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = defensive_stance_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+		NOT = { is_subject_of_type = march }
+		NOT = { is_subject_of_type = client_march }
+	}
+	modifiers = {
+		defensiveness = 0.15
+		garrison_size = 0.2
+		max_hostile_attrition = 1
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+sustained_discipline_reform = {
+	icon = "line_infantry"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = sustained_discipline_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		land_attrition = -0.15
+		drill_decay_modifier = -0.33
+		drill_gain_modifier = 0.33
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+cavalry_warfare_reform = {
+	icon = "cavalry"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = { has_unlocked_government_reform = { government_reform = legacy_of_the_seljuk_reform } }
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = cavalry_warfare_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		cav_to_inf_ratio = 0.1
+		cavalry_cost = -0.1
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+mercenary_leadership_reform = {
+	icon = "war_economy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			NOT = { full_idea_group = mercenary_ideas }
+			NOT = { primary_culture = swiss }
+		}
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = mercenary_leadership_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		mercenary_cost = -0.1
+		possible_condottieri = 0.5
+	}
+
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				has_global_modifier_value = {
+					which = mercenary_discipline
+					value = 0.05
+				}
+			}
+		}
+	}
+}
+
+amphibious_specialization_reform = {
+	icon = "marine"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			AND = {
+				NOT = { primary_culture = english }
+				NOT = { primary_culture = anglois }
+			}
+		}
+	}
+	trigger = {
+		num_of_ports = 1
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = amphibious_specialization_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		regiment_disembark_speed = 0.25
+		transport_attrition = -0.25
+		allowed_marine_fraction = 0.1
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = amphibious_specialization_reform_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			remove_country_modifier = amphibious_specialization_reform_modifier
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
+		custom_attributes = {
+			marine_buff = yes	#Marines -20% Manpower Usage
+		}
+	}
+
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { max_sailors = 50000 }
+		}
+	}
+}
+
+royal_marines_reform = {
+	icon = "infantry"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		OR = {
+			primary_culture = english
+			primary_culture = anglois
+			tag = GBR
+			tag = AVE
+		}
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = royal_marines_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		regiment_disembark_speed = 0.25
+		transport_attrition = -0.25
+		allowed_marine_fraction = 0.1
+		sailor_maintenance_modifer = -0.1
+		global_sailors_modifier = 0.25
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = amphibious_specialization_reform_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			remove_country_modifier = amphibious_specialization_reform_modifier
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
+		custom_attributes = {
+			marine_buff = yes	#Marines -20% Manpower Usage
+		}
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+maritime_military_reform = {
+	icon = "war_ship"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		NOT = {
+			has_unlocked_government_reform = { government_reform = professional_navy_reform }
+		}
+	}
+	trigger = {
+		num_of_ports = 1
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = maritime_military_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		navy_tradition_decay = -0.01
+		naval_morale = 0.1
+		global_ship_cost = -0.05
+	}
+
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			capital_scope = {
+				is_island = no
+			}
+		}
+	}
+}
+
+professional_navy_reform = {
+	icon = "war_ship"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		has_unlocked_government_reform = { government_reform = professional_navy_reform }
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = professional_navy_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		navy_tradition_decay = -0.01
+		max_flagships = 2
+		siege_blockade_progress = 2
+		naval_morale = 0.1
+		sailor_maintenance_modifer = -0.1
+		global_sailors_modifier = 0.25
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+doppelsoldner_reform = {
+	icon = "mercenaries"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		NOT = { primary_culture = swiss }
+	}
+	trigger = {
+		full_idea_group = mercenary_ideas
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = doppelsoldner_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		mercenary_cost = -0.15
+		possible_condottieri = 0.5
+		merc_leader_army_tradition = 0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			hessian_militarization_mechanic
+		}
+	}
+	custom_attributes = {
+		mercs_do_not_cost_army_professionalism = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+ashigaru_reform = {
+	icon = "ashigaru"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		culture_group = japanese_g
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = ashigaru_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		army_tradition_from_battle = 0.5
+		infantry_cost = -0.1
+	}
+
+	ai = {
+		factor = 500
+	}
+}
+
+early_bushido_code_reform = {
+	icon = "samurai"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+		has_dlc = "Domination"
+		culture_group = japanese_g
+	}
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
+			OR = {
+				has_reform = early_bushido_code_reform
+				has_not_modifier_locking_military_tier = yes
+			}
+		}
+	}
+	modifiers = {
+		allowed_samurai_fraction = 0.1
+		army_tradition_decay = -0.01
+	}
+
+	ai = {
+		factor = 1000
+	}
+}

@@ -1,0 +1,995 @@
+# Japanese institutional alternatives for the vanilla monarchy tiers.
+# These remain selectable choices; route and founder reforms continue to compete
+# with them in the same historical tier instead of being auto-granted.
+
+jxp_reform_japanese_fudai_service_rolls = {
+	icon = "jxp_japanese_fudai_service_rolls"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_fudai_service_rolls
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		army_tradition = 0.25
+		cavalry_cost = -0.10
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		recruiting_generals_increases_nobles_loyalty = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_direct_investiture = {
+	icon = "jxp_japanese_direct_investiture"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_direct_investiture
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.15
+		nobles_influence_modifier = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_gundai_daikan_partition = {
+	icon = "jxp_japanese_gundai_daikan_partition"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_gundai_daikan_partition
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		num_accepted_cultures = 2
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_branch_castle_cadasters = {
+	icon = "jxp_japanese_branch_castle_cadasters"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_branch_castle_cadasters
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = { state_maintenance_modifier = -0.33 }
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = { unlock_special_state_edicts = yes }
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_religious_arbitration = {
+	icon = "jxp_japanese_religious_arbitration"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_religious_arbitration
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.05
+		diplomats = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_temple_land_settlement = {
+	icon = "jxp_japanese_temple_land_settlement"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_temple_land_settlement
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		adm_tech_cost_modifier = -0.10
+		religious_unity = 0.10
+		church_influence_modifier = -0.10
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_church = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_ashigaru_muster_rolls = {
+	icon = "jxp_japanese_ashigaru_muster_rolls"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_ashigaru_muster_rolls
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		army_tradition_from_battle = 0.50
+		infantry_cost = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_kyuba_hatamoto = {
+	icon = "jxp_japanese_kyuba_hatamoto"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_kyuba_hatamoto
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		allowed_samurai_fraction = 0.10
+		army_tradition_decay = -0.01
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_castle_artillery_office = {
+	icon = "jxp_japanese_castle_artillery_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_castle_artillery_office
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		artillery_barrage_cost = -0.25
+		artillery_cost = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_funade_ura_service = {
+	icon = "jxp_japanese_funade_ura_service"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_funade_ura_service
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+		num_of_ports = 1
+	}
+	modifiers = {
+		regiment_disembark_speed = 0.25
+		transport_attrition = -0.25
+		allowed_marine_fraction = 0.10
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = amphibious_specialization_reform_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = { remove_country_modifier = amphibious_specialization_reform_modifier }
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
+		custom_attributes = { marine_buff = yes }
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_lordly_arbitration = {
+	icon = "jxp_japanese_lordly_arbitration"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_lordly_arbitration
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		max_absolutism = 5
+		yearly_absolutism = 0.50
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_elder_countersignature = {
+	icon = "jxp_japanese_elder_countersignature"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_elder_countersignature
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		monthly_favor_modifier = 0.25
+		improve_relation_modifier = 0.15
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_domain_assembly = {
+	icon = "jxp_japanese_domain_assembly"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_domain_assembly
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		monthly_reform_progress_modifier = 0.10
+		all_estate_influence_modifier = 0.05
+		all_estate_loyalty_equilibrium = 0.10
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_court_temple_service = {
+	icon = "jxp_japanese_court_temple_service"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_court_temple_service
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		free_adm_policy = 1
+		church_influence_modifier = 0.10
+		church_loyalty_modifier = 0.05
+		tolerance_own = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_yuhitsu_accountants = {
+	icon = "jxp_japanese_yuhitsu_accountants"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_yuhitsu_accountants
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		yearly_corruption = -0.10
+		advisor_cost = -0.10
+		burghers_influence_modifier = 0.10
+		burghers_loyalty_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_fudai_magistracy = {
+	icon = "jxp_japanese_fudai_magistracy"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_fudai_magistracy
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		yearly_corruption = 0.15
+		all_estate_influence_modifier = -0.10
+		monarch_admin_power = 1
+		advisor_pool = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_public_authority = {
+	icon = "jxp_japanese_public_authority"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_public_authority
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+		full_idea_group = court_ideas
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.10
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		can_sell_crownland_to_single_estates = yes
+		can_seize_crownland_of_single_estates = yes
+		seizing_land_no_rebels = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_townsmen_guild_charters = {
+	icon = "jxp_japanese_townsmen_guild_charters"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_townsmen_guild_charters
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = {
+					OR = {
+						full_idea_group = economic_ideas
+						full_idea_group = infrastructure_ideas
+					}
+				}
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		trade_efficiency = 0.05
+		burghers_loyalty_modifier = 0.05
+		burghers_influence_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_checkpoint_red_seals = {
+	icon = "jxp_japanese_checkpoint_red_seals"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_checkpoint_red_seals
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = {
+					OR = {
+						full_idea_group = economic_ideas
+						full_idea_group = infrastructure_ideas
+					}
+				}
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		trade_company_governing_cost = -0.10
+		trade_steering = 0.15
+		burghers_influence_modifier = -0.10
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_burghers = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_rakuichi_rakuza = {
+	icon = "jxp_japanese_rakuichi_rakuza"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_rakuichi_rakuza
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		global_institution_spread = 0.25
+		global_foreign_trade_power = 0.20
+	}
+	custom_attributes = {
+		monarch_power_on_institutions = yes
+		cannot_become_dictatorship = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		custom_attributes = { free_improve_inland_routes = yes }
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_war_provisioning = {
+	icon = "jxp_japanese_war_provisioning"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_war_provisioning
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = {
+					OR = {
+						full_idea_group = expansion_ideas
+						full_idea_group = exploration_ideas
+					}
+				}
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		war_taxes_cost_modifier = -0.50
+		global_regiment_cost = -0.10
+		global_ship_cost = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_coinage_edicts = {
+	icon = "jxp_japanese_coinage_edicts"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_coinage_edicts
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				full_idea_group = economic_ideas
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+		full_idea_group = economic_ideas
+	}
+	modifiers = {
+		interest = -0.50
+		inflation_reduction = 0.20
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_new_field_works = {
+	icon = "jxp_japanese_new_field_works"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_new_field_works
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				full_idea_group = infrastructure_ideas
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+		full_idea_group = infrastructure_ideas
+	}
+	modifiers = {
+		development_cost = -0.05
+		global_trade_goods_size_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_overseas_settlement_office = {
+	icon = "jxp_japanese_overseas_settlement_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_overseas_settlement_office
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				jxp_can_use_overseas_expansion_trigger = yes
+				OR = {
+					full_idea_group = expansion_ideas
+					full_idea_group = exploration_ideas
+				}
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_overseas_reform_requirement_tt
+			jxp_can_use_overseas_expansion_trigger = yes
+			OR = {
+				full_idea_group = expansion_ideas
+				full_idea_group = exploration_ideas
+			}
+		}
+	}
+	modifiers = { colonists = 1 }
+	custom_attributes = {
+		extra_trade_goods_for_colonial_subjects = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_rule_by_arms = {
+	icon = "jxp_japanese_rule_by_arms"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_rule_by_arms
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		stability_cost_to_declare_war = -1
+		ae_impact = 0.15
+		max_absolutism = 10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_general_peace = {
+	icon = "jxp_japanese_general_peace"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_general_peace
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		years_of_nationalism = -5
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_service_compact = {
+	icon = "jxp_japanese_service_compact"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_service_compact
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		expand_administration_cost = -1
+		num_accepted_cultures = 1
+		governing_capacity_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_quarrel_suppression = {
+	icon = "jxp_japanese_quarrel_suppression"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_quarrel_suppression
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		harsh_treatment_cost = -0.33
+		global_rebel_suppression_efficiency = 0.50
+		reduced_liberty_desire = 10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_common_security = {
+	icon = "jxp_japanese_common_security"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_common_security
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		no_religion_penalty = yes
+		global_unrest = -1
+	}
+	custom_attributes = {
+		enforced_interfaith_dialogue_buff = yes
+		cannot_become_dictatorship = yes
+	}
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_unitary_investiture = {
+	icon = "jxp_japanese_unitary_investiture"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_unitary_investiture
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = { jxp_has_final_state_political_profile_trigger = yes }
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_tier_ten_fallback_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			NOT = { jxp_has_final_state_political_profile_trigger = yes }
+		}
+	}
+	modifiers = { governing_capacity = 250 }
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_domain_federation = {
+	icon = "jxp_japanese_domain_federation"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_domain_federation
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = { jxp_has_final_state_political_profile_trigger = yes }
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_tier_ten_fallback_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			NOT = { jxp_has_final_state_political_profile_trigger = yes }
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		core_creation = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_benevolent_government = {
+	icon = "jxp_japanese_benevolent_government"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_benevolent_government
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = { jxp_has_final_state_political_profile_trigger = yes }
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_tier_ten_fallback_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			NOT = { jxp_has_final_state_political_profile_trigger = yes }
+		}
+	}
+	modifiers = { possible_policy = 1 }
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_divine_law = {
+	icon = "jxp_japanese_divine_law"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_japanese_divine_law
+			AND = {
+				jxp_uses_japanese_government_reform_track_trigger = yes
+				NOT = { jxp_has_final_state_political_profile_trigger = yes }
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_tier_ten_fallback_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			NOT = { jxp_has_final_state_political_profile_trigger = yes }
+		}
+	}
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.05
+		tolerance_own = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_buke_laws_inspectors = {
+	icon = "jxp_japanese_buke_laws_inspectors"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_buke_laws_inspectors
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		administrative_efficiency = 0.025
+		max_absolutism = 10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_hyojosho_collegial_offices = {
+	icon = "jxp_japanese_hyojosho_collegial_offices"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_hyojosho_collegial_offices
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = { free_policy = 1 }
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}
+
+jxp_reform_japanese_petition_direct_appeal = {
+	icon = "jxp_japanese_petition_direct_appeal"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			jxp_uses_japanese_government_reform_track_trigger = yes
+			has_reform = jxp_reform_japanese_petition_direct_appeal
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = jxp_japanese_reform_track_requirement_tt
+			jxp_uses_japanese_government_reform_track_trigger = yes
+		}
+	}
+	modifiers = {
+		national_focus_years = -5
+		no_stability_loss_on_monarch_death = yes
+		monarch_diplomatic_power = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+	ai = { factor = 1 }
+}

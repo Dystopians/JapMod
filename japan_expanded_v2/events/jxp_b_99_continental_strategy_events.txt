@@ -1,0 +1,431 @@
+namespace = jxp_b_continental_strategy
+
+country_event = {
+	id = jxp_b_continental_strategy.1
+	title = jxp_b_continental_strategy.1.t
+	desc = jxp_b_continental_strategy.1.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		jxp_b_99_clear_active_theater_effect = yes
+		jxp_b_99_select_ryukyu_target_effect = yes
+		set_country_flag = jxp_b_99_active_ryukyu
+	}
+
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 55 modifier = { factor = 1.5 has_country_flag = jxp_path_open_trade } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 30 modifier = { factor = 1.5 has_country_flag = jxp_path_sakoku } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 12 modifier = { factor = 2 has_country_flag = jxp_path_open_trade } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = {
+			event_target:jxp_b_99_theater_target = { exists = yes }
+			jxp_b_99_can_choose_direct_campaign_trigger = yes
+		}
+		ai_chance = { factor = 3 modifier = { factor = 3 OR = { tag = TOY tag = WAK } } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.no_target
+		trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } }
+		remove_country_modifier = jxp_b_99_ryukyu_council_recent
+		jxp_b_99_clear_active_theater_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.2
+	title = jxp_b_continental_strategy.2.t
+	desc = jxp_b_continental_strategy.2.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes jxp_b_99_select_korea_target_effect = yes set_country_flag = jxp_b_99_active_korea }
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 65 modifier = { factor = 2 OR = { tag = SOO tag = CJP has_country_flag = jxp_path_confucian } } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 24 modifier = { factor = 1.5 tag = CJP } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 10 modifier = { factor = 2 has_country_flag = jxp_path_open_trade } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = {
+			event_target:jxp_b_99_theater_target = { exists = yes }
+			jxp_b_99_can_choose_direct_campaign_trigger = yes
+			NOT = { jxp_b_99_daimyo_stage_trigger = yes }
+		}
+		ai_chance = { factor = 1 modifier = { factor = 8 tag = TOY } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = { name = jxp_b_continental_strategy.no_target trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } } remove_country_modifier = jxp_b_99_korea_council_recent jxp_b_99_clear_active_theater_effect = yes }
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.3
+	title = jxp_b_continental_strategy.3.t
+	desc = jxp_b_continental_strategy.3.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes jxp_b_99_select_northern_target_effect = yes set_country_flag = jxp_b_99_active_north }
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 55 modifier = { factor = 1.5 OR = { tag = AKT tag = DTE } } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 32 modifier = { factor = 2 has_country_flag = jxp_path_sakoku } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 10 modifier = { factor = 2 tag = RFJ } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_direct_campaign_trigger = yes }
+		ai_chance = { factor = 3 modifier = { factor = 2 tag = TOY } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = { name = jxp_b_continental_strategy.no_target trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } } remove_country_modifier = jxp_b_99_northern_council_recent jxp_b_99_clear_active_theater_effect = yes }
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.4
+	title = jxp_b_continental_strategy.4.t
+	desc = jxp_b_continental_strategy.4.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes jxp_b_99_select_taiwan_fujian_target_effect = yes set_country_flag = jxp_b_99_active_taiwan_fujian }
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 50 modifier = { factor = 2 OR = { tag = WAK tag = RFJ } } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 20 modifier = { factor = 2 tag = CJP } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 25 modifier = { factor = 2 has_country_flag = jxp_path_open_trade } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_direct_campaign_trigger = yes }
+		ai_chance = { factor = 5 modifier = { factor = 3 tag = WAK } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = { name = jxp_b_continental_strategy.no_target trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } } remove_country_modifier = jxp_b_99_taiwan_fujian_council_recent jxp_b_99_clear_active_theater_effect = yes }
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.5
+	title = jxp_b_continental_strategy.5.t
+	desc = jxp_b_continental_strategy.5.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes jxp_b_99_select_china_target_effect = yes set_country_flag = jxp_b_99_active_china }
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 65 modifier = { factor = 2 tag = CJP } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 18 modifier = { factor = 2 OR = { tag = CJP tag = EJP } } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 15 modifier = { factor = 2 OR = { tag = RFJ has_country_flag = jxp_path_open_trade } } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = {
+			event_target:jxp_b_99_theater_target = { exists = yes }
+			jxp_b_99_can_choose_direct_campaign_trigger = yes
+			NOT = { jxp_b_99_daimyo_stage_trigger = yes }
+			adm_tech = 17
+			num_of_cities = 50
+		}
+		ai_chance = { factor = 2 modifier = { factor = 5 tag = TOY } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = { name = jxp_b_continental_strategy.no_target trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } } remove_country_modifier = jxp_b_99_china_council_recent jxp_b_99_clear_active_theater_effect = yes }
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.6
+	title = jxp_b_continental_strategy.6.t
+	desc = jxp_b_continental_strategy.6.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes jxp_b_99_select_southeast_asia_target_effect = yes set_country_flag = jxp_b_99_active_southeast_asia }
+	option = {
+		name = jxp_b_continental_strategy.mode_trade
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_trade_trigger = yes }
+		ai_chance = { factor = 48 modifier = { factor = 2 OR = { tag = SJP tag = KJP tag = RFJ } } }
+		jxp_b_99_pay_trade_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.101 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_protection
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_protection_trigger = yes }
+		ai_chance = { factor = 27 modifier = { factor = 2 OR = { tag = KJP tag = SJP } } }
+		jxp_b_99_pay_protection_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.102 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_treaty_port
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_treaty_port_trigger = yes }
+		ai_chance = { factor = 22 modifier = { factor = 2 tag = RFJ } }
+		jxp_b_99_pay_treaty_port_mission_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.103 days = 1 } }
+	}
+	option = {
+		name = jxp_b_continental_strategy.mode_conquest
+		trigger = { event_target:jxp_b_99_theater_target = { exists = yes } jxp_b_99_can_choose_direct_campaign_trigger = yes }
+		ai_chance = { factor = 3 modifier = { factor = 3 OR = { tag = TOY tag = WAK } } }
+		jxp_b_99_pay_direct_campaign_effect = yes
+		jxp_b_99_mark_direct_campaign_effect = yes
+		event_target:jxp_b_99_theater_target = { country_event = { id = jxp_b_continental_strategy.104 days = 1 } }
+	}
+	option = { name = jxp_b_continental_strategy.no_target trigger = { NOT = { event_target:jxp_b_99_theater_target = { exists = yes } } } remove_country_modifier = jxp_b_99_southeast_asia_council_recent jxp_b_99_clear_active_theater_effect = yes }
+}
+
+# A foreign court receives this after Japan selects the diplomatic/trade mode.
+country_event = {
+	id = jxp_b_continental_strategy.101
+	title = jxp_b_continental_strategy.101.t
+	desc = jxp_b_continental_strategy.101.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_continental_strategy.101.a
+		ai_chance = { factor = 70 modifier = { factor = 1.5 has_opinion = { who = FROM value = 50 } } modifier = { factor = 0.5 is_at_war = yes } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_trade_mission }
+		reverse_add_opinion = { who = FROM modifier = jxp_b_99_opinion_trade_mission }
+		add_country_modifier = { name = jxp_b_99_foreign_merchant_quarter duration = 5475 }
+		FROM = { jxp_b_99_apply_trade_outcome_effect = yes }
+	}
+	option = {
+		name = jxp_b_continental_strategy.101.b
+		ai_chance = { factor = 30 modifier = { factor = 2 NOT = { has_opinion = { who = FROM value = 0 } } } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_rejected_mission }
+		FROM = { add_country_modifier = { name = jxp_b_99_diplomatic_rebuff duration = 1825 } jxp_b_99_clear_active_theater_effect = yes }
+	}
+}
+
+# A guarantee and mutual trust are created only after the foreign court accepts.
+country_event = {
+	id = jxp_b_continental_strategy.102
+	title = jxp_b_continental_strategy.102.t
+	desc = jxp_b_continental_strategy.102.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_continental_strategy.102.a
+		ai_chance = { factor = 45 modifier = { factor = 1.5 has_opinion = { who = FROM value = 75 } } modifier = { factor = 1.5 is_at_war = yes } modifier = { factor = 0.5 num_of_cities = 20 } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_protection_compact }
+		reverse_add_opinion = { who = FROM modifier = jxp_b_99_opinion_protection_compact }
+		add_country_modifier = { name = jxp_b_99_protected_partner duration = 7300 }
+		FROM = {
+			create_guarantee = ROOT
+			add_trust = { who = ROOT value = 10 mutual = yes }
+			jxp_b_99_apply_protection_outcome_effect = yes
+		}
+	}
+	option = {
+		name = jxp_b_continental_strategy.102.b
+		ai_chance = { factor = 55 modifier = { factor = 2 total_development = 250 } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_rejected_mission }
+		FROM = { add_country_modifier = { name = jxp_b_99_diplomatic_rebuff duration = 1825 } jxp_b_99_clear_active_theater_effect = yes }
+	}
+}
+
+# The port remains under its owner's sovereignty; the concession is a timed lease.
+country_event = {
+	id = jxp_b_continental_strategy.103
+	title = jxp_b_continental_strategy.103.t
+	desc = jxp_b_continental_strategy.103.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_continental_strategy.103.a
+		ai_chance = { factor = 35 modifier = { factor = 1.5 has_opinion = { who = FROM value = 75 } } modifier = { factor = 1.5 num_of_loans = 3 } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_treaty_port }
+		reverse_add_opinion = { who = FROM modifier = jxp_b_99_opinion_treaty_port }
+		add_country_modifier = { name = jxp_b_99_treaty_port_host duration = 7300 }
+		random_owned_province = {
+			limit = { jxp_b_99_port_in_active_theater_trigger = yes }
+			add_province_modifier = { name = jxp_b_99_treaty_port_concession duration = 7300 }
+		}
+		FROM = { jxp_b_99_apply_treaty_port_outcome_effect = yes }
+	}
+	option = {
+		name = jxp_b_continental_strategy.103.b
+		ai_chance = { factor = 65 modifier = { factor = 1.5 num_of_cities = 20 } }
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_rejected_mission }
+		FROM = { add_country_modifier = { name = jxp_b_99_port_negotiations_failed duration = 1825 } jxp_b_99_clear_active_theater_effect = yes }
+	}
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.104
+	title = jxp_b_continental_strategy.104.t
+	desc = jxp_b_continental_strategy.104.d
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_continental_strategy.104.a
+		add_opinion = { who = FROM modifier = jxp_b_99_opinion_continental_threat }
+		add_country_modifier = { name = jxp_b_99_continental_alarm duration = 3650 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = jxp_b_continental_strategy.20
+	title = jxp_b_continental_strategy.20.t
+	desc = jxp_b_continental_strategy.20.d
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_continental_strategy.20.a
+		trigger = { mil_power = 100 treasury = 300 }
+		ai_chance = { factor = 30 modifier = { factor = 2 OR = { tag = TOY tag = WAK } } }
+		add_mil_power = -100
+		add_treasury = -300
+		jxp_b_99_apply_military_commission_governance_effect = yes
+	}
+	option = {
+		name = jxp_b_continental_strategy.20.b
+		trigger = { dip_power = 150 treasury = 200 }
+		ai_chance = { factor = 30 modifier = { factor = 2 OR = { tag = CJP has_country_flag = jxp_path_sakoku } } }
+		add_dip_power = -150
+		add_treasury = -200
+		jxp_b_99_apply_local_dynasty_governance_effect = yes
+	}
+	option = {
+		name = jxp_b_continental_strategy.20.c
+		trigger = { dip_power = 100 treasury = 250 }
+		ai_chance = { factor = 30 modifier = { factor = 2 OR = { tag = RFJ tag = SJP has_country_flag = jxp_path_open_trade } } }
+		add_dip_power = -100
+		add_treasury = -250
+		jxp_b_99_apply_tribute_trade_governance_effect = yes
+	}
+	option = {
+		name = jxp_b_continental_strategy.20.direct_governor
+		trigger = { adm_power = 200 treasury = 500 stability = 1 }
+		ai_chance = { factor = 10 modifier = { factor = 2 OR = { tag = EJP tag = TOY } } modifier = { factor = 0.5 overextension_percentage = 0.25 } }
+		add_adm_power = -200
+		add_treasury = -500
+		add_stability = -1
+		jxp_b_99_apply_direct_governor_governance_effect = yes
+	}
+	option = {
+		name = jxp_b_continental_strategy.20.e
+		ai_chance = { factor = 1 modifier = { factor = 0.1 treasury = 500 } }
+		add_country_modifier = { name = jxp_b_99_governance_deliberations duration = 365 }
+	}
+}
+
+# Finite cleanup for an accepted, rejected, or interrupted diplomatic offer.
+country_event = {
+	id = jxp_b_continental_strategy.198
+	title = none
+	desc = none
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { jxp_b_99_clear_active_theater_effect = yes }
+	option = { name = "OK" }
+}
+
+# Finite cleanup: it waits for an ongoing campaign, then either opens governance
+# deliberations or clears an expedition that obtained no foothold.
+country_event = {
+	id = jxp_b_continental_strategy.199
+	title = none
+	desc = none
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { is_at_war = yes }
+			country_event = { id = jxp_b_continental_strategy.199 days = 365 }
+		}
+		else_if = {
+			limit = { jxp_b_99_has_pending_governance_trigger = yes }
+			add_country_modifier = { name = jxp_b_99_governance_deliberations duration = 1825 }
+		}
+		else = { jxp_b_99_clear_campaign_theater_effect = yes }
+	}
+	option = { name = "OK" }
+}

@@ -1,0 +1,319 @@
+jxp_clear_final_state_power_structures_effect = {
+	if = { limit = { has_reform = jxp_uncommitted_realm_council_reform } remove_government_reform = jxp_uncommitted_realm_council_reform }
+	if = { limit = { has_reform = jxp_sakoku_bakuhan_council_reform } remove_government_reform = jxp_sakoku_bakuhan_council_reform }
+	if = { limit = { has_reform = jxp_open_maritime_cabinet_reform } remove_government_reform = jxp_open_maritime_cabinet_reform }
+	if = { limit = { has_reform = jxp_kirishitan_estates_general_reform } remove_government_reform = jxp_kirishitan_estates_general_reform }
+	if = { limit = { has_reform = jxp_confucian_censorate_reform } remove_government_reform = jxp_confucian_censorate_reform }
+	if = { limit = { has_reform = jxp_imperial_daijokan_reform } remove_government_reform = jxp_imperial_daijokan_reform }
+	if = { limit = { has_reform = jxp_reformed_japan_reform } remove_government_reform = jxp_reformed_japan_reform }
+	if = { limit = { has_reform = jxp_kaikyo_japan_reform } remove_government_reform = jxp_kaikyo_japan_reform }
+	if = { limit = { has_reform = jxp_ikko_commonwealth_reform } remove_government_reform = jxp_ikko_commonwealth_reform }
+	if = { limit = { has_reform = jxp_wokou_admiralty_reform } remove_government_reform = jxp_wokou_admiralty_reform }
+}
+
+jxp_sanitize_final_state_political_reforms_effect = {
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_uncommitted_consensus
+			NOT = { jxp_final_state_uncommitted_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_uncommitted_consensus
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_sakoku_constitution
+			NOT = { jxp_final_state_sakoku_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_sakoku_constitution
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_open_cabinet
+			NOT = { jxp_final_state_open_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_open_cabinet
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_kirishitan_estates
+			NOT = { jxp_final_state_kirishitan_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_kirishitan_estates
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_confucian_censorate
+			NOT = { jxp_final_state_confucian_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_confucian_censorate
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_imperial_daijokan
+			NOT = { jxp_final_state_imperial_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_imperial_daijokan
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_reformed_synod
+			NOT = { jxp_final_state_reformed_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_reformed_synod
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_kaikyo_diwan
+			NOT = { jxp_final_state_kaikyo_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_kaikyo_diwan
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_ikko_somon
+			NOT = { jxp_final_state_ikko_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_ikko_somon
+	}
+	if = {
+		limit = {
+			has_reform = jxp_reform_final_wokou_admiralty
+			NOT = { jxp_final_state_wokou_trigger = yes }
+		}
+		remove_government_reform = jxp_reform_final_wokou_admiralty
+	}
+}
+
+jxp_clear_final_state_capstone_modifiers_effect = {
+	remove_country_modifier = jxp_79_uncommitted_realm_program
+	remove_country_modifier = jxp_79_sakoku_bakuhan_constitution
+	remove_country_modifier = jxp_79_open_maritime_cabinet
+	remove_country_modifier = jxp_79_kirishitan_estates_concordat
+	remove_country_modifier = jxp_79_confucian_censorate_charter
+	remove_country_modifier = jxp_79_imperial_daijokan_charter
+	remove_country_modifier = jxp_79_reformed_synodic_constitution
+	remove_country_modifier = jxp_79_kaikyo_diwan_constitution
+	remove_country_modifier = jxp_79_ikko_somon_constitution
+	remove_country_modifier = jxp_79_wokou_admiralty_articles
+}
+
+jxp_sanitize_final_state_capstone_modifiers_effect = {
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_uncommitted_realm_program
+			NOT = { jxp_final_state_uncommitted_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_uncommitted_realm_program
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+			NOT = { jxp_final_state_sakoku_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_sakoku_bakuhan_constitution
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_open_maritime_cabinet
+			NOT = { jxp_final_state_open_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_open_maritime_cabinet
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_kirishitan_estates_concordat
+			NOT = { jxp_final_state_kirishitan_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_kirishitan_estates_concordat
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_confucian_censorate_charter
+			NOT = { jxp_final_state_confucian_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_confucian_censorate_charter
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_imperial_daijokan_charter
+			NOT = { jxp_final_state_imperial_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_imperial_daijokan_charter
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_reformed_synodic_constitution
+			NOT = { jxp_final_state_reformed_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_reformed_synodic_constitution
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_kaikyo_diwan_constitution
+			NOT = { jxp_final_state_kaikyo_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_kaikyo_diwan_constitution
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_ikko_somon_constitution
+			NOT = { jxp_final_state_ikko_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_ikko_somon_constitution
+	}
+	if = {
+		limit = {
+			has_country_modifier = jxp_79_wokou_admiralty_articles
+			NOT = { jxp_final_state_wokou_trigger = yes }
+		}
+		remove_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_sync_non_celestial_final_state_power_structure_effect = {
+	if = {
+		limit = { has_reform = celestial_empire }
+		remove_government_reform = celestial_empire
+	}
+	if = {
+		limit = { jxp_final_state_uncommitted_trigger = yes }
+		if = {
+			limit = { jxp_final_state_uncommitted_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_uncommitted_realm_council_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_sakoku_trigger = yes }
+		if = {
+			limit = { jxp_final_state_sakoku_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_sakoku_bakuhan_council_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_open_trigger = yes }
+		if = {
+			limit = { jxp_final_state_open_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_open_maritime_cabinet_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_kirishitan_trigger = yes }
+		if = {
+			limit = { jxp_final_state_kirishitan_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_kirishitan_estates_general_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_confucian_trigger = yes }
+		if = {
+			limit = { jxp_final_state_confucian_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_confucian_censorate_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_imperial_trigger = yes }
+		if = {
+			limit = { jxp_final_state_imperial_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_imperial_daijokan_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_reformed_trigger = yes }
+		if = {
+			limit = { jxp_final_state_reformed_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_reformed_japan_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_kaikyo_trigger = yes }
+		if = {
+			limit = { jxp_final_state_kaikyo_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_kaikyo_japan_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_ikko_trigger = yes }
+		if = {
+			limit = { jxp_final_state_ikko_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_ikko_commonwealth_reform
+		}
+	}
+	else_if = {
+		limit = { jxp_final_state_wokou_trigger = yes }
+		if = {
+			limit = { jxp_final_state_wokou_power_mismatch_trigger = yes }
+			jxp_clear_final_state_power_structures_effect = yes
+			add_government_reform = jxp_wokou_admiralty_reform
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				OR = {
+					has_reform = jxp_uncommitted_realm_council_reform
+					has_reform = jxp_sakoku_bakuhan_council_reform
+					has_reform = jxp_open_maritime_cabinet_reform
+					has_reform = jxp_kirishitan_estates_general_reform
+					has_reform = jxp_confucian_censorate_reform
+					has_reform = jxp_imperial_daijokan_reform
+					has_reform = jxp_reformed_japan_reform
+					has_reform = jxp_kaikyo_japan_reform
+					has_reform = jxp_ikko_commonwealth_reform
+					has_reform = jxp_wokou_admiralty_reform
+					has_country_modifier = jxp_79_uncommitted_realm_program
+					has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+					has_country_modifier = jxp_79_open_maritime_cabinet
+					has_country_modifier = jxp_79_kirishitan_estates_concordat
+					has_country_modifier = jxp_79_confucian_censorate_charter
+					has_country_modifier = jxp_79_imperial_daijokan_charter
+					has_country_modifier = jxp_79_reformed_synodic_constitution
+					has_country_modifier = jxp_79_kaikyo_diwan_constitution
+					has_country_modifier = jxp_79_ikko_somon_constitution
+					has_country_modifier = jxp_79_wokou_admiralty_articles
+				}
+			}
+			jxp_clear_final_state_power_structures_effect = yes
+			jxp_clear_final_state_capstone_modifiers_effect = yes
+		}
+	}
+}
+
+jxp_sync_celestial_final_state_power_structure_effect = {
+	jxp_clear_final_state_power_structures_effect = yes
+	if = {
+		limit = { NOT = { has_reform = celestial_empire } }
+		add_government_reform = celestial_empire
+	}
+}
+
+jxp_sync_final_state_power_structure_effect = {
+	hidden_effect = {
+		jxp_sanitize_final_state_political_reforms_effect = yes
+		jxp_sanitize_final_state_capstone_modifiers_effect = yes
+		if = {
+			limit = { is_emperor_of_china = yes }
+			jxp_sync_celestial_final_state_power_structure_effect = yes
+		}
+		else = {
+			jxp_sync_non_celestial_final_state_power_structure_effect = yes
+		}
+		regenerate_government_mechanics = yes
+		if = {
+			limit = { has_government_mechanic = jxp_japanese_polity_mechanic }
+			set_country_flag = jxp_polity_mechanic_registered
+			jxp_sync_polity_mechanic_from_variables_effect = yes
+		}
+		else = {
+			clr_country_flag = jxp_polity_mechanic_registered
+		}
+	}
+}

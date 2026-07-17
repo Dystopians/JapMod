@@ -1,0 +1,67 @@
+country_decisions = {
+	jxp_map_debug_show_panel = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled NOT = { has_country_flag = jxp_map_debug_panel } }
+		allow = { always = yes }
+		effect = { set_country_flag = jxp_map_debug_panel }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_hide_panel = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel }
+		allow = { always = yes }
+		effect = { clr_country_flag = jxp_map_debug_panel }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_open_ledger = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel }
+		allow = { always = yes }
+		effect = { country_event = { id = jxp_map.900 } }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_initialize_origin = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel jxp_map_is_new_daimyo_tag_trigger = yes }
+		allow = { always = yes }
+		effect = { jxp_map_initialize_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_unify_88 = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel jxp_is_japanese_polity_trigger = yes }
+		allow = { always = yes }
+		effect = { jxp_debug_unify_japan_effect = yes country_event = { id = jxp_map.900 } }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_clear_state = {
+		major = no
+		potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel }
+		allow = { always = yes }
+		effect = { jxp_map_debug_full_reset_effect = yes }
+		ai_will_do = { factor = 0 }
+	}
+
+	jxp_map_debug_event_rkk = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.1 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_hng = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.2 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_mog = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.3 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_tgr = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.4 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_mtu = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.5 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_ari = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.6 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_sgr = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.7 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_kmp = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.8 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_stm = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.9 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_event_azi = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.10 } } ai_will_do = { factor = 0 } }
+
+	jxp_map_debug_policy_warrior = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.20 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_policy_court = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.21 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_policy_sea = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.22 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_policy_frontier = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.23 } } ai_will_do = { factor = 0 } }
+	jxp_map_debug_policy_temple = { major = no potential = { ai = no has_country_flag = jxp_debug_enabled has_country_flag = jxp_map_debug_panel } allow = { always = yes } effect = { country_event = { id = jxp_map.24 } } ai_will_do = { factor = 0 } }
+}
+

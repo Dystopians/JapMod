@@ -1,0 +1,145 @@
+jxp_uses_route_national_ideas_trigger = {
+	OR = {
+		tag = JAP
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		tag = TOY
+	}
+}
+
+jxp_has_expected_route_national_ideas_trigger = {
+	OR = {
+		AND = { tag = JAP has_idea_group = JAP_ideas }
+		AND = { tag = KJP has_idea_group = KJP_ideas }
+		AND = { tag = CJP has_idea_group = CJP_ideas }
+		AND = { tag = EJP has_idea_group = EJP_ideas }
+		AND = { tag = RFJ has_idea_group = RFJ_ideas }
+		AND = { tag = SJP has_idea_group = SJP_ideas }
+		AND = { tag = IJP has_idea_group = IJP_ideas }
+		AND = { tag = WAK has_idea_group = WAK_ideas }
+		AND = { tag = TOY has_idea_group = TOY_ideas }
+	}
+}
+
+# Exact postcondition for first in-game assignment and later tag changes.  A
+# managed country is synchronized only while this tag/group pair is absent, so
+# the repair cannot stack a daimyo group beneath a route or final-state group.
+jxp_has_expected_managed_national_ideas_trigger = {
+	OR = {
+		AND = { tag = ODA has_idea_group = ODA_ideas }
+		AND = { tag = TKG has_idea_group = TKG_ideas }
+		AND = { tag = TKD has_idea_group = TKD_ideas }
+		AND = { tag = UES has_idea_group = UES_ideas }
+		AND = { tag = HJO has_idea_group = HJO_ideas }
+		AND = { tag = MRI has_idea_group = MRI_ideas }
+		AND = { tag = SMZ has_idea_group = SMZ_ideas }
+		AND = { tag = OTM has_idea_group = OTM_ideas }
+		AND = { tag = DTE has_idea_group = DTE_ideas }
+		AND = { tag = ASK has_idea_group = ASK_ideas }
+		AND = { tag = CSK has_idea_group = CSK_ideas }
+		AND = { tag = OUC has_idea_group = OUC_ideas }
+		AND = { tag = IMG has_idea_group = IMG_ideas }
+		AND = { tag = SOO has_idea_group = SOO_ideas }
+		AND = { tag = AMA has_idea_group = AMA_ideas }
+		AND = { tag = HSK has_idea_group = HSK_ideas }
+		AND = { tag = SHN has_idea_group = SHN_ideas }
+		AND = { tag = OGS has_idea_group = OGS_ideas }
+		AND = { tag = KTB has_idea_group = KTB_ideas }
+		AND = { tag = AKT has_idea_group = AKT_ideas }
+		AND = { tag = CBA has_idea_group = CBA_ideas }
+		AND = { tag = ISK has_idea_group = ISK_ideas }
+		AND = { tag = ITO has_idea_group = ITO_ideas }
+		AND = { tag = KNO has_idea_group = KNO_ideas }
+		AND = { tag = TTI has_idea_group = TTI_ideas }
+		AND = { tag = RFR has_idea_group = RFR_ideas }
+		AND = { tag = ASA has_idea_group = ASA_ideas }
+		AND = { tag = HTK has_idea_group = HTK_ideas }
+		AND = { tag = IKE has_idea_group = IKE_ideas }
+		AND = { tag = MAE has_idea_group = MAE_ideas }
+		AND = { tag = SBA has_idea_group = SBA_ideas }
+		AND = { tag = YMN has_idea_group = YMN_ideas }
+		AND = { tag = AKM has_idea_group = AKM_ideas }
+		AND = { tag = KKC has_idea_group = KKC_ideas }
+		AND = { tag = STK has_idea_group = STK_ideas }
+		AND = { tag = TKI has_idea_group = TKI_ideas }
+		AND = { tag = UTN has_idea_group = UTN_ideas }
+		AND = { tag = JAP has_idea_group = JAP_ideas }
+		AND = { tag = TOY has_idea_group = TOY_ideas }
+		AND = { tag = KJP has_idea_group = KJP_ideas }
+		AND = { tag = CJP has_idea_group = CJP_ideas }
+		AND = { tag = EJP has_idea_group = EJP_ideas }
+		AND = { tag = RFJ has_idea_group = RFJ_ideas }
+		AND = { tag = SJP has_idea_group = SJP_ideas }
+		AND = { tag = IJP has_idea_group = IJP_ideas }
+		AND = { tag = WAK has_idea_group = WAK_ideas }
+		AND = { tag = NYA has_idea_group = NYA_ideas }
+		AND = { tag = HKK has_idea_group = HKK_ideas }
+		AND = { tag = NJF has_idea_group = NJF_ideas }
+		AND = { tag = OIA has_idea_group = OIA_ideas }
+		AND = { tag = TPF has_idea_group = TPF_ideas }
+	}
+}
+
+# Every centrally registered tag whose national ideas are selected from a free
+# idea group. Companion-map-only daimyo retain their separate migration
+# contract in japan_expanded_v2_map; the five colonial successors live here.
+jxp_uses_managed_national_ideas_trigger = {
+	OR = {
+		tag = ODA
+		tag = TKG
+		tag = TKD
+		tag = UES
+		tag = HJO
+		tag = MRI
+		tag = SMZ
+		tag = OTM
+		tag = DTE
+		tag = ASK
+		tag = CSK
+		tag = OUC
+		tag = IMG
+		tag = SOO
+		tag = AMA
+		tag = HSK
+		tag = SHN
+		tag = OGS
+		tag = KTB
+		tag = AKT
+		tag = CBA
+		tag = ISK
+		tag = ITO
+		tag = KNO
+		tag = TTI
+		tag = RFR
+		tag = ASA
+		tag = HTK
+		tag = IKE
+		tag = MAE
+		tag = SBA
+		tag = YMN
+		tag = AKM
+		tag = KKC
+		tag = STK
+		tag = TKI
+		tag = UTN
+		tag = JAP
+		tag = TOY
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+		tag = NYA
+		tag = HKK
+		tag = NJF
+		tag = OIA
+		tag = TPF
+	}
+}

@@ -1,0 +1,100 @@
+# Agent A owns the central registries. Agent B brackets the vanilla tag callback
+# differently across its formation effects, so these flags converge here after
+# the full formation transaction. Each handshake clears only after its
+# corresponding registry operation has reached its postcondition.
+jxp_a_consume_colonial_registry_interfaces_effect = {
+	hidden_effect = {
+		if = {
+			limit = { jxp_is_colonial_successor_tag_trigger = yes }
+			# A Japanese-culture successor is an overseas identity, never a
+			# continuation of the ten home-island political routes.
+			jxp_clear_all_route_flags_effect = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = jxp_iface_b_nya_needs_mission_refresh
+					has_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+					has_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+				}
+			}
+			jxp_refresh_route_missions_effect = yes
+			clr_country_flag = jxp_iface_b_nya_needs_mission_refresh
+			clr_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+			clr_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = jxp_iface_b_nya_needs_idea_refresh
+					has_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+					has_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+				}
+				jxp_is_colonial_successor_tag_trigger = yes
+			}
+			# Reuse the single canonical swap path; the hidden registry event
+			# evaluates the exact tag/group postcondition before doing any work.
+			country_event = { id = jxp_idea_registry.1 }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_custom_ideas = yes
+					jxp_has_expected_managed_national_ideas_trigger = yes
+					NOT = { jxp_is_colonial_successor_tag_trigger = yes }
+				}
+			}
+			clr_country_flag = jxp_iface_b_nya_needs_idea_refresh
+			clr_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+			clr_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = jxp_iface_b_nya_needs_government_registry
+					has_country_flag = jxp_iface_b_secondary_needs_government_registry
+				}
+			}
+			regenerate_government_mechanics = yes
+			clr_country_flag = jxp_iface_b_nya_needs_government_registry
+			clr_country_flag = jxp_iface_b_secondary_needs_government_registry
+		}
+
+		if = {
+			limit = {
+				has_country_flag = jxp_iface_b_tpf_needs_government_registry
+				tag = TPF
+			}
+			# TPF can descend from a vanilla colony, NYA, or any secondary
+			# successor. Retire the source tier-one constitution before adding
+			# the federation's sole foundational reform.
+			jxp_b_94_clear_foundational_reforms_effect = yes
+			jxp_b_95_clear_secondary_reforms_effect = yes
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government = republic
+			}
+			if = {
+				limit = { NOT = { has_reform = jxp_b_two_ocean_federation_reform } }
+				add_government_reform = jxp_b_two_ocean_federation_reform
+			}
+			regenerate_government_mechanics = yes
+		}
+		if = {
+			limit = {
+				has_country_flag = jxp_iface_b_tpf_needs_government_registry
+				OR = {
+					NOT = { tag = TPF }
+					AND = {
+						government = republic
+						has_reform = jxp_b_two_ocean_federation_reform
+					}
+				}
+			}
+			clr_country_flag = jxp_iface_b_tpf_needs_government_registry
+		}
+	}
+}

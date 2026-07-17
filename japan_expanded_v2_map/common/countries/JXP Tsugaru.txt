@@ -1,0 +1,56 @@
+# Generated historical daimyo country definition.
+graphical_culture = asiangfx
+color = { 113 39 100 }
+revolutionary_colors = { 8 1 8 }
+
+historical_idea_groups = {
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	quality_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"HNáO #0" = 80
+	"INEN #0" = 40
+	"tfáO #0" = 40
+	"†–ck #0" = 40
+	"ckáO #0" = 40
+	"·V #0" = -5
+	"ëu #0" = -5
+}
+
+leader_names = { %m‰ ‹eä… !n¹ îh Ñä… gè R‘•N M–è Oä… …Qä… 'YENİO ,gY ES }
+ship_names = {
+	"TsugaruAkebonoMaru" "TsugaruAsahiMaru" "TsugaruAkatsukiMaru" "TsugaruHachimanMaru"
+	"TsugaruSumiyoshiMaru" "TsugaruKasugaMaru" "TsugaruMatsukazeMaru" "TsugaruWakabaMaru"
+	"TsugaruShiranuiMaru" "TsugaruChihayaMaru" "TsugaruHayabusaMaru" "TsugaruKongoMaru"
+	"TsugaruFusoMaru" "TsugaruYamashiroMaru" "TsugaruMusashiMaru" "TsugaruNagatoMaru"
+	"TsugaruMutsuMaru" "TsugaruAkiMaru" "TsugaruSettsuMaru" "TsugaruKawachiMaru"
+	"TsugaruHizenMaru" "TsugaruSatsumaMaru" "TsugaruSuwoMaru" "TsugaruSagamiMaru"
+	"TsugaruTangoMaru" "TsugaruHarunaMaru" "TsugaruKirishimaMaru" "TsugaruTakaoMaru"
+	"TsugaruAtagoMaru" "TsugaruChokaiMaru" "TsugaruMayaMaru" "TsugaruAobaMaru"
+}
+army_names = {
+	"%m‰ Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Ichi no Te" "Ni no Te" "San no Te" "Hata Bugyo Shu" "Kiba Shu" "Teppo Shu"
+}
+fleet_names = {
+	"%m‰ Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
+	"Ni no Fune" "San no Fune" "Ura Shu" "Oki Shu" "Hayafune Shu" "Sekibune Shu"
+}

@@ -1,0 +1,41 @@
+jxp_ensure_polity_for_shogunate_policy_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_polity_initialized } }
+		jxp_init_polity_values_effect = yes
+	}
+	if = {
+		limit = { has_country_flag = jxp_polity_initialized }
+		jxp_ensure_polity_mechanic_effect = yes
+	}
+}
+
+jxp_apply_shogunate_expel_ronin_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+}
+
+jxp_apply_shogunate_sankin_kotai_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+	jxp_add_imperial_sanction_5_effect = yes
+}
+
+jxp_apply_shogunate_sword_hunt_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_tenka_order_10_effect = yes
+}
+
+jxp_apply_daimyo_expel_ronin_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+}
+
+jxp_apply_daimyo_sankin_kotai_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_imperial_sanction_5_effect = yes
+}
+
+jxp_apply_daimyo_sword_hunt_effect = {
+	jxp_ensure_polity_for_shogunate_policy_effect = yes
+	jxp_add_tenka_order_5_effect = yes
+}

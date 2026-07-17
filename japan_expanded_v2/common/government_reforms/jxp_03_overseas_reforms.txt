@@ -1,0 +1,7 @@
+jxp_oceanic_sun_reform = {
+	icon = "shogunate"
+	valid_for_nation_designer = no
+	potential = {
+		always = no
+	}
+}

@@ -1,0 +1,132 @@
+jxp_50_founder_legacy_available_trigger = {
+	jxp_is_unified_japan_state_trigger = yes
+	jxp_has_founder_legacy_council_origin_trigger = yes
+	NOT = { has_country_flag = jxp_26_founder_legacy_council_taken }
+}
+
+jxp_50_founder_legacy_allowed_trigger = {
+	jxp_50_founder_legacy_available_trigger = yes
+	is_at_war = no
+	stability = 0
+	adm_power = 50
+}
+
+jxp_50_founder_idea_available_trigger = {
+	jxp_is_unified_japan_state_trigger = yes
+	jxp_has_founder_legacy_council_origin_trigger = yes
+	NOT = { has_country_flag = jxp_39_founder_idea_legacy_compiled }
+}
+
+jxp_50_founder_idea_allowed_trigger = {
+	jxp_50_founder_idea_available_trigger = yes
+	stability = 1
+	adm_power = 75
+}
+
+jxp_50_preunification_memory_available_trigger = {
+	jxp_is_unified_japan_state_trigger = yes
+	NOT = { has_country_flag = jxp_43_preunification_memory_integrated }
+	OR = {
+		has_country_flag = jxp_43_selected_oda_tenka_fubu
+		has_country_flag = jxp_43_selected_tkg_fudai_registers
+		has_country_flag = jxp_43_selected_tkd_hatagashira
+		has_country_flag = jxp_43_selected_ues_kanrei_petition
+		has_country_flag = jxp_43_selected_hjo_sogamae
+		has_country_flag = jxp_43_selected_mri_suigun
+		has_country_flag = jxp_43_selected_smz_gunnery
+		has_country_flag = jxp_43_selected_otm_foreign_quarter
+		has_country_flag = jxp_43_selected_dte_kibamusha
+		has_country_flag = jxp_43_selected_ask_hokoshu
+		has_country_flag = jxp_43_selected_csk_ichiryo_gusoku
+		has_country_flag = jxp_43_selected_ouc_kanhe_trade
+		has_country_flag = jxp_43_selected_img_lawbooks
+		has_country_flag = jxp_43_selected_soo_brokers
+		has_country_flag = jxp_43_selected_asa_ichijodani_council
+		has_country_flag = jxp_43_selected_ama_gassan_toda
+		has_country_flag = jxp_43_selected_hsk_sakai_council
+		has_country_flag = jxp_43_selected_ktb_ise_petition
+		has_country_flag = jxp_43_selected_akt_ezochi_brokers
+		has_country_flag = jxp_43_selected_rfr_mutsu_gates
+		has_country_flag = jxp_43_selected_htk_wakae_oaths
+		has_country_flag = jxp_43_selected_ike_himeji_accounts
+		has_country_flag = jxp_43_selected_mae_kanazawa_patronage
+		has_country_flag = jxp_43_selected_sba_buei_restoration
+		has_country_flag = jxp_43_selected_ymn_sixth_share
+		has_country_flag = jxp_43_selected_akm_banshu_castles
+		has_country_flag = jxp_43_selected_kkc_aso_rites
+		has_country_flag = jxp_43_selected_stk_kashima_muster
+		has_country_flag = jxp_43_selected_tki_mino_riverworks
+		has_country_flag = jxp_43_selected_utn_nikko_barrier
+		has_country_flag = jxp_43_selected_shn_dazaifu_brokers
+		has_country_flag = jxp_43_selected_ogs_suwa_horse
+		has_country_flag = jxp_43_selected_cba_katori_muster
+		has_country_flag = jxp_43_selected_isk_tango_ports
+		has_country_flag = jxp_43_selected_ito_hyuga_forts
+		has_country_flag = jxp_43_selected_kno_inland_pilots
+		has_country_flag = jxp_43_selected_tti_yamato_temple
+	}
+}
+
+jxp_50_preunification_memory_allowed_trigger = {
+	jxp_50_preunification_memory_available_trigger = yes
+	stability = 1
+	adm_power = 50
+	dip_power = 50
+}
+
+jxp_50_house_diet_legacy_available_trigger = {
+	jxp_is_unified_japan_state_trigger = yes
+	has_country_flag = jxp_34_house_diet_convened
+	NOT = { has_country_flag = jxp_35_house_diet_law_integrated }
+}
+
+jxp_50_house_diet_legacy_allowed_trigger = {
+	jxp_50_house_diet_legacy_available_trigger = yes
+	stability = 0
+	adm_power = 50
+	dip_power = 50
+}
+
+jxp_50_route_house_compromise_available_trigger = {
+	jxp_is_unified_japan_state_trigger = yes
+	jxp_has_founder_legacy_council_origin_trigger = yes
+	OR = {
+		jxp_has_any_route_trigger = yes
+		tag = KJP
+		tag = CJP
+		tag = EJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		tag = WAK
+	}
+	NOT = { has_country_flag = jxp_29_route_house_compromise_taken }
+}
+
+jxp_50_route_house_compromise_allowed_trigger = {
+	jxp_50_route_house_compromise_available_trigger = yes
+	is_at_war = no
+	stability = 0
+	adm_power = 25
+	dip_power = 25
+}
+
+jxp_50_any_legacy_cabinet_available_trigger = {
+	OR = {
+		jxp_50_founder_legacy_available_trigger = yes
+		jxp_50_founder_idea_available_trigger = yes
+		jxp_50_preunification_memory_available_trigger = yes
+		jxp_50_house_diet_legacy_available_trigger = yes
+		jxp_50_route_house_compromise_available_trigger = yes
+	}
+}
+
+jxp_50_any_legacy_cabinet_allowed_trigger = {
+	OR = {
+		jxp_50_founder_legacy_allowed_trigger = yes
+		jxp_50_founder_idea_allowed_trigger = yes
+		jxp_50_preunification_memory_allowed_trigger = yes
+		jxp_50_house_diet_legacy_allowed_trigger = yes
+		jxp_50_route_house_compromise_allowed_trigger = yes
+	}
+}

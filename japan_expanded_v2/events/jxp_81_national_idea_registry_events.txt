@@ -1,0 +1,40 @@
+namespace = jxp_idea_registry
+
+# First in-game initialization converges every managed tag on its exact
+# registered free idea group.  The expected-group postcondition, rather than a
+# version marker, guards the swap and keeps route/final tags from retaining an
+# old daimyo group underneath their current national ideas.
+country_event = {
+	id = jxp_idea_registry.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_custom_ideas = no
+		jxp_uses_managed_national_ideas_trigger = yes
+		NOT = { jxp_has_expected_managed_national_ideas_trigger = yes }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = jxp_national_idea_registry_repair_v0282
+			}
+			clr_country_flag = jxp_national_idea_registry_repair_v0282
+		}
+		jxp_sync_managed_national_ideas_effect = yes
+		if = {
+			limit = { jxp_has_expected_managed_national_ideas_trigger = yes }
+			set_country_flag = jxp_national_idea_registry_repair_v0282
+		}
+		if = {
+			limit = { jxp_uses_route_national_ideas_trigger = yes }
+			set_country_flag = jxp_national_idea_identity_repair_v0281
+		}
+	}
+
+	option = { name = "OK" }
+}

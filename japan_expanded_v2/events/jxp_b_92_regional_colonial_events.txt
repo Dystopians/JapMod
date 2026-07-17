@@ -1,0 +1,528 @@
+namespace = jxp_b_regional_colonial
+
+# A Southeast Asian ruler, not Japan, decides whether a foreign quarter exists.
+country_event = {
+	id = jxp_b_regional_colonial.1
+	title = "jxp_b_regional_colonial.1.t"
+	desc = "jxp_b_regional_colonial.1.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.1.a"
+		add_treasury = 100
+		add_country_modifier = {
+			name = jxp_b_92_south_seas_host_charter_rents
+			duration = 3650
+		}
+		random_owned_province = {
+			limit = {
+				jxp_b_92_southeast_asian_port_province_trigger = yes
+				NOT = { has_province_modifier = jxp_b_92_authorized_japan_town_port }
+			}
+			add_province_modifier = {
+				name = jxp_b_92_authorized_japan_town_port
+				duration = -1
+			}
+		}
+		custom_tooltip = jxp_b_92_host_grant_charter_tt
+		hidden_effect = {
+			FROM = {
+				jxp_b_92_accept_authorized_japan_town_effect = yes
+				country_event = { id = jxp_b_regional_colonial.9 days = 1 }
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 2 has_opinion = { who = FROM value = 125 } }
+			modifier = { factor = 1.5 reverse_has_opinion = { who = FROM value = 75 } }
+			modifier = { factor = 0.5 war_exhaustion = 5 }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.1.b"
+		add_prestige = 5
+		custom_tooltip = jxp_b_92_host_refuse_charter_tt
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = jxp_b_92_south_seas_negotiation_pending
+				add_dip_power = 25
+				add_prestige = -5
+				add_country_modifier = {
+					name = jxp_b_92_south_seas_negotiation_rebuffed
+					duration = 1825
+				}
+				country_event = { id = jxp_b_regional_colonial.10 days = 1 }
+			}
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = { factor = 3 NOT = { stability = 0 } }
+			modifier = { factor = 2 war_exhaustion = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.2
+	title = "jxp_b_regional_colonial.2.t"
+	desc = "jxp_b_regional_colonial.2.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.2.a"
+		add_country_modifier = { name = jxp_b_92_south_seas_merchant_council duration = -1 }
+		custom_tooltip = jxp_b_92_south_seas_merchant_model_tt
+		hidden_effect = {
+			set_country_flag = jxp_b_92_south_seas_model_merchant
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+			modifier = { factor = 1.5 has_country_flag = jxp_path_wokou }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.2.b"
+		add_country_modifier = { name = jxp_b_92_south_seas_port_magistracy duration = -1 }
+		custom_tooltip = jxp_b_92_south_seas_magistrate_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.2.c"
+		trigger = { jxp_b_91_can_choose_faith_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_south_seas_faith_quarter duration = -1 }
+		custom_tooltip = jxp_b_92_south_seas_faith_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_can_choose_faith_charter_trigger = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.3
+	title = "jxp_b_regional_colonial.3.t"
+	desc = "jxp_b_regional_colonial.3.d"
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.3.a"
+		add_country_modifier = { name = jxp_b_92_island_council_compact duration = -1 }
+		custom_tooltip = jxp_b_92_island_council_model_tt
+		hidden_effect = {
+			set_country_flag = jxp_b_92_island_model_council
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.3.b"
+		add_country_modifier = { name = jxp_b_92_island_navigation_houses duration = -1 }
+		custom_tooltip = jxp_b_92_island_navigation_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 navy_tradition = 30 }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.3.c"
+		trigger = { jxp_b_91_can_choose_faith_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_island_faith_houses duration = -1 }
+		custom_tooltip = jxp_b_92_island_faith_model_tt
+		hidden_effect = {
+			set_country_flag = jxp_b_92_island_model_faith
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = { factor = 1.25 }
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.3.e"
+		trigger = { jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_island_naval_garrison duration = -1 }
+		custom_tooltip = jxp_b_92_island_garrison_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.4
+	title = "jxp_b_regional_colonial.4.t"
+	desc = "jxp_b_regional_colonial.4.d"
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.4.a"
+		add_country_modifier = { name = jxp_b_92_ainu_brokerage_compact duration = -1 }
+		custom_tooltip = jxp_b_92_north_ainu_model_tt
+		hidden_effect = {
+			set_country_flag = jxp_b_92_north_model_ainu_brokers
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 2 has_country_flag = jxp_24_frontier_agenda_brokers }
+			modifier = { factor = 1.5 has_country_flag = jxp_path_sakoku }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.4.b"
+		trigger = { jxp_b_92_northern_frontier_profile_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_northern_frontier_garrison duration = -1 }
+		custom_tooltip = jxp_b_92_north_frontier_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 3 jxp_b_92_northern_frontier_profile_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.4.c"
+		trigger = { jxp_b_91_can_choose_free_port_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_northern_free_harbor duration = -1 }
+		custom_tooltip = jxp_b_92_north_free_harbor_model_tt
+		hidden_effect = {
+			set_country_flag = jxp_b_92_north_model_free_harbor
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_subtract_control_10_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 3 tag = WAK }
+			modifier = { factor = 2 has_country_flag = jxp_path_wokou }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.4.g"
+		trigger = {
+			any_known_country = {
+				OR = {
+					tag = RUS
+					primary_culture = russian
+					primary_culture = novgorodian
+					any_owned_province = { region = east_siberia_region }
+				}
+			}
+		}
+		add_country_modifier = { name = jxp_b_92_northern_competition_office duration = -1 }
+		custom_tooltip = jxp_b_92_north_competition_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_5_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 tag = JAP }
+			modifier = { factor = 2 tag = EJP }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.4.e"
+		trigger = { jxp_b_91_can_choose_faith_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_northern_relief_network duration = -1 }
+		custom_tooltip = jxp_b_92_north_relief_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = { tag = IJP religion_group = buddhist }
+			}
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.4.f"
+		trigger = { jxp_b_91_can_choose_naval_station_charter_trigger = yes }
+		add_country_modifier = { name = jxp_b_92_state_cold_harbors duration = -1 }
+		custom_tooltip = jxp_b_92_north_state_harbor_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 tag = EJP }
+			modifier = { factor = 2 tag = TOY }
+			modifier = { factor = 1.5 tag = JAP }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.5
+	title = "jxp_b_regional_colonial.5.t"
+	desc = "jxp_b_regional_colonial.5.d"
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.5.a"
+		add_country_modifier = { name = jxp_b_92_western_land_compact duration = -1 }
+		custom_tooltip = jxp_b_92_west_land_compact_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.5.b"
+		add_country_modifier = { name = jxp_b_92_western_military_allotments duration = -1 }
+		custom_tooltip = jxp_b_92_west_military_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_can_choose_military_charter_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.5.c"
+		add_country_modifier = { name = jxp_b_92_western_silver_current duration = -1 }
+		custom_tooltip = jxp_b_92_west_silver_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_add_control_5_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.6
+	title = "jxp_b_regional_colonial.6.t"
+	desc = "jxp_b_regional_colonial.6.d"
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.6.a"
+		add_country_modifier = { name = jxp_b_92_western_land_compact duration = -1 }
+		custom_tooltip = jxp_b_92_rnw_land_compact_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = { factor = 2 }
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.6.b"
+		add_country_modifier = { name = jxp_b_92_western_military_allotments duration = -1 }
+		custom_tooltip = jxp_b_92_rnw_military_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_add_control_10_effect = yes
+			jxp_b_91_subtract_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_can_choose_military_charter_trigger = yes }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.6.c"
+		add_country_modifier = { name = jxp_b_92_western_silver_current duration = -1 }
+		custom_tooltip = jxp_b_92_rnw_trade_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_add_control_5_effect = yes
+			jxp_b_91_subtract_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.7
+	title = "jxp_b_regional_colonial.7.t"
+	desc = "jxp_b_regional_colonial.7.d"
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.7.a"
+		add_prestige = 5
+		custom_tooltip = jxp_b_92_arc_convoy_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_add_control_5_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
+		}
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.7.b"
+		add_prestige = 5
+		custom_tooltip = jxp_b_92_arc_delegate_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_local_compact_at_least_40_trigger = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.8
+	title = "jxp_b_regional_colonial.8.t"
+	desc = "jxp_b_regional_colonial.8.d"
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.8.a"
+		add_prestige = 5
+		custom_tooltip = jxp_b_92_rnw_arc_convoy_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_10_effect = yes
+			jxp_b_91_add_control_5_effect = yes
+			jxp_b_91_add_compact_5_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "jxp_b_regional_colonial.8.b"
+		add_prestige = 5
+		custom_tooltip = jxp_b_92_rnw_arc_delegate_model_tt
+		hidden_effect = {
+			jxp_b_91_add_identity_5_effect = yes
+			jxp_b_91_subtract_control_5_effect = yes
+			jxp_b_91_add_compact_10_effect = yes
+			jxp_b_91_sync_colonial_stage_effect = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 2 jxp_b_91_local_compact_at_least_40_trigger = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.9
+	title = "jxp_b_regional_colonial.9.t"
+	desc = "jxp_b_regional_colonial.9.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.9.a"
+	}
+}
+
+country_event = {
+	id = jxp_b_regional_colonial.10
+	title = "jxp_b_regional_colonial.10.t"
+	desc = "jxp_b_regional_colonial.10.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_regional_colonial.10.a"
+	}
+}

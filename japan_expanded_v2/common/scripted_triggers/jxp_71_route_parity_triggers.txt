@@ -1,0 +1,82 @@
+# Defensive route gates for the recurring route-council loop.  The negative
+# clauses keep a corrupted or manually stacked route state from receiving
+# more than one council family before canonical route sanitization runs.
+jxp_71_is_sakoku_route_trigger = {
+	tag = JAP
+	jxp_is_japanese_polity_trigger = yes
+	has_country_flag = jxp_path_sakoku
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_71_is_open_trade_route_trigger = {
+	tag = JAP
+	jxp_is_japanese_polity_trigger = yes
+	has_country_flag = jxp_path_open_trade
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_imperial
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_71_is_imperial_route_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	OR = {
+		tag = EJP
+		has_country_flag = jxp_path_imperial
+	}
+	NOT = {
+		OR = {
+			has_country_flag = jxp_path_sakoku
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_path_kirishitan
+			has_country_flag = jxp_path_confucian
+			has_country_flag = jxp_path_reformed
+			has_country_flag = jxp_path_kaikyo
+			has_country_flag = jxp_path_ikko
+			has_country_flag = jxp_path_wokou
+		}
+	}
+}
+
+jxp_71_has_sakoku_council_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_sakoku_sankin_kotai_roads
+		has_reform = jxp_reform_sakoku_coastal_barriers
+		has_reform = jxp_reform_sakoku_hidden_learning
+	}
+}
+
+jxp_71_has_open_trade_council_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_open_silver_exchange
+		has_reform = jxp_reform_open_foreign_artillery_contracts
+		has_reform = jxp_reform_open_chartered_factories
+	}
+}
+
+jxp_71_has_imperial_council_reform_trigger = {
+	OR = {
+		has_reform = jxp_reform_imperial_kokugaku_office
+		has_reform = jxp_reform_imperial_kokushi_governors
+		has_reform = jxp_reform_imperial_restoration_army
+	}
+}

@@ -1,0 +1,298 @@
+jxp_b_101_clamp_korea_preparation_variables_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_korea_transport_capacity value = 0 } } }
+			set_variable = { which = jxp_b_korea_transport_capacity value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_korea_transport_capacity value = 100 } }
+			set_variable = { which = jxp_b_korea_transport_capacity value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_korea_grain_reserve value = 0 } } }
+			set_variable = { which = jxp_b_korea_grain_reserve value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_korea_grain_reserve value = 100 } }
+			set_variable = { which = jxp_b_korea_grain_reserve value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_korea_expedition_support value = 0 } } }
+			set_variable = { which = jxp_b_korea_expedition_support value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_korea_expedition_support value = 100 } }
+			set_variable = { which = jxp_b_korea_expedition_support value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_korea_daimyo_compliance value = 0 } } }
+			set_variable = { which = jxp_b_korea_daimyo_compliance value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_korea_daimyo_compliance value = 100 } }
+			set_variable = { which = jxp_b_korea_daimyo_compliance value = 100 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { which = jxp_b_korea_sea_control value = 0 } } }
+			set_variable = { which = jxp_b_korea_sea_control value = 0 }
+		}
+		if = {
+			limit = { check_variable = { which = jxp_b_korea_sea_control value = 100 } }
+			set_variable = { which = jxp_b_korea_sea_control value = 100 }
+		}
+	}
+}
+
+jxp_b_101_clear_korea_outcome_flags_effect = {
+	clr_country_flag = jxp_b_101_korea_outcome_trade
+	clr_country_flag = jxp_b_101_korea_outcome_southern_protectorate
+	clr_country_flag = jxp_b_101_korea_outcome_puppet
+	clr_country_flag = jxp_b_101_korea_outcome_direct_rule
+	clr_country_flag = jxp_b_101_korea_outcome_strategic_retreat
+	clr_country_flag = jxp_b_101_korea_outcome_disaster
+}
+
+jxp_b_101_initialize_korea_preparations_effect = {
+	set_country_flag = jxp_b_101_korea_campaign_active
+	set_country_flag = jxp_b_101_korea_stage_01_done
+	set_variable = { which = jxp_b_korea_transport_capacity value = 5 }
+	set_variable = { which = jxp_b_korea_grain_reserve value = 0 }
+	set_variable = { which = jxp_b_korea_expedition_support value = 10 }
+	set_variable = { which = jxp_b_korea_daimyo_compliance value = 0 }
+	set_variable = { which = jxp_b_korea_sea_control value = 0 }
+	if = {
+		limit = { has_country_flag = jxp_iface_b99_korea_campaign_requested }
+		change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+		change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+		clr_country_flag = jxp_iface_b99_korea_campaign_requested
+	}
+	if = {
+		limit = { has_country_flag = jxp_iface_house_diplomacy_ready }
+		change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+	}
+	if = {
+		limit = { has_country_flag = jxp_iface_house_logistics_ready }
+		change_variable = { which = jxp_b_korea_transport_capacity value = 10 }
+		change_variable = { which = jxp_b_korea_grain_reserve value = 10 }
+	}
+	if = {
+		limit = { has_country_flag = jxp_iface_house_maritime_ready }
+		change_variable = { which = jxp_b_korea_sea_control value = 10 }
+	}
+	if = {
+		limit = { has_country_flag = jxp_iface_house_mass_mobilization_ready }
+		change_variable = { which = jxp_b_korea_daimyo_compliance value = 10 }
+	}
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+	add_country_modifier = { name = jxp_b_101_korea_preparation_burden duration = -1 }
+}
+
+jxp_b_101_complete_korea_stage_02_effect = {
+	set_country_flag = jxp_b_101_korea_stage_02_done
+	change_variable = { which = jxp_b_korea_expedition_support value = 15 }
+	change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_03_effect = {
+	set_country_flag = jxp_b_101_korea_stage_03_done
+	change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+	change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_04_effect = {
+	set_country_flag = jxp_b_101_korea_stage_04_done
+	change_variable = { which = jxp_b_korea_transport_capacity value = 15 }
+	change_variable = { which = jxp_b_korea_grain_reserve value = 10 }
+	change_variable = { which = jxp_b_korea_daimyo_compliance value = 10 }
+	if = {
+		limit = { owns = 4182 }
+		4182 = { add_province_modifier = { name = jxp_b_101_nagoya_logistics_depot duration = 7300 } }
+	}
+	else = {
+		random_owned_province = {
+			limit = { has_port = yes }
+			add_province_modifier = { name = jxp_b_101_nagoya_logistics_depot duration = 7300 }
+		}
+	}
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_05_effect = {
+	set_country_flag = jxp_b_101_korea_stage_05_done
+	change_variable = { which = jxp_b_korea_transport_capacity value = 30 }
+	change_variable = { which = jxp_b_korea_sea_control value = 10 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_06_effect = {
+	set_country_flag = jxp_b_101_korea_stage_06_done
+	change_variable = { which = jxp_b_korea_grain_reserve value = 40 }
+	change_variable = { which = jxp_b_korea_expedition_support value = 5 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_07_effect = {
+	set_country_flag = jxp_b_101_korea_stage_07_done
+	change_variable = { which = jxp_b_korea_expedition_support value = 5 }
+	change_variable = { which = jxp_b_korea_transport_capacity value = 5 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_08_effect = {
+	set_country_flag = jxp_b_101_korea_stage_08_done
+	change_variable = { which = jxp_b_korea_daimyo_compliance value = 30 }
+	change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_09_effect = {
+	set_country_flag = jxp_b_101_korea_stage_09_done
+	change_variable = { which = jxp_b_korea_sea_control value = 35 }
+	change_variable = { which = jxp_b_korea_transport_capacity value = 10 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+}
+
+jxp_b_101_complete_korea_stage_10_effect = {
+	set_country_flag = jxp_b_101_korea_stage_10_done
+	change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+	change_variable = { which = jxp_b_korea_sea_control value = 5 }
+	jxp_b_101_clamp_korea_preparation_variables_effect = yes
+	remove_country_modifier = jxp_b_101_korea_preparation_burden
+	add_country_modifier = { name = jxp_b_101_korea_expedition_ready duration = 3650 }
+	set_country_flag = jxp_b_101_korea_monitor_scheduled
+	add_casus_belli = {
+		target = KOR
+		type = cb_jxp_b_101_korean_expedition
+		months = 120
+	}
+	country_event = { id = jxp_korea_campaign.940 days = 30 }
+}
+
+jxp_b_101_korea_campaign_active_cleanup_effect = {
+	clr_country_flag = jxp_b_101_korea_campaign_active
+	clr_country_flag = jxp_b_101_korea_war_started
+	clr_country_flag = jxp_b_101_korea_monitor_scheduled
+	clr_country_flag = jxp_b_101_korea_withdrawal_preferred
+	clr_country_flag = jxp_b_101_korea_atrocity_committed
+	clr_country_flag = jxp_b_101_korea_old_ruler_died
+	clr_country_flag = jxp_b_101_korea_stage_01_done
+	clr_country_flag = jxp_b_101_korea_stage_02_done
+	clr_country_flag = jxp_b_101_korea_stage_03_done
+	clr_country_flag = jxp_b_101_korea_stage_04_done
+	clr_country_flag = jxp_b_101_korea_stage_05_done
+	clr_country_flag = jxp_b_101_korea_stage_06_done
+	clr_country_flag = jxp_b_101_korea_stage_07_done
+	clr_country_flag = jxp_b_101_korea_stage_08_done
+	clr_country_flag = jxp_b_101_korea_stage_09_done
+	clr_country_flag = jxp_b_101_korea_stage_10_done
+	clr_country_flag = jxp_b_101_korea_event_100_seen
+	clr_country_flag = jxp_b_101_korea_event_101_seen
+	clr_country_flag = jxp_b_101_korea_event_102_seen
+	clr_country_flag = jxp_b_101_korea_event_103_seen
+	clr_country_flag = jxp_b_101_korea_event_104_seen
+	clr_country_flag = jxp_b_101_korea_event_105_seen
+	clr_country_flag = jxp_b_101_korea_event_106_seen
+	clr_country_flag = jxp_b_101_korea_event_107_seen
+	clr_country_flag = jxp_b_101_korea_event_108_seen
+	clr_country_flag = jxp_b_101_korea_event_109_seen
+	clr_country_flag = jxp_b_101_korea_event_110_seen
+	clr_country_flag = jxp_b_101_korea_event_111_seen
+	clr_country_flag = jxp_b_101_korea_event_112_seen
+	clr_country_flag = jxp_b_101_korea_event_113_seen
+	clr_country_flag = jxp_b_101_korea_event_114_seen
+	clr_country_flag = jxp_b_101_korea_event_115_seen
+	clr_country_flag = jxp_b_101_korea_event_116_seen
+	clr_country_flag = jxp_b_101_korea_event_117_seen
+	set_variable = { which = jxp_b_korea_transport_capacity value = 0 }
+	set_variable = { which = jxp_b_korea_grain_reserve value = 0 }
+	set_variable = { which = jxp_b_korea_expedition_support value = 0 }
+	set_variable = { which = jxp_b_korea_daimyo_compliance value = 0 }
+	set_variable = { which = jxp_b_korea_sea_control value = 0 }
+	remove_country_modifier = jxp_b_101_korea_preparation_burden
+	remove_country_modifier = jxp_b_101_korea_expedition_ready
+	remove_country_modifier = jxp_b_101_secure_landing
+	remove_country_modifier = jxp_b_101_stretched_supply
+	remove_country_modifier = jxp_b_101_korean_naval_pressure
+	remove_country_modifier = jxp_b_101_winter_quarters
+	remove_country_modifier = jxp_b_101_epidemic_camps
+	remove_country_modifier = jxp_b_101_daimyo_rivalry
+	remove_country_modifier = jxp_b_101_second_expedition
+	if = {
+		limit = {
+			exists = KOR
+			has_casus_belli = { type = cb_jxp_b_101_korean_expedition target = KOR }
+		}
+		remove_casus_belli = { type = cb_jxp_b_101_korean_expedition target = KOR }
+	}
+}
+
+jxp_b_101_korea_outcome_trade_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_trade_settlement duration = 5475 }
+	add_prestige = 10
+	add_war_exhaustion = -2
+}
+
+jxp_b_101_korea_outcome_southern_protectorate_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_southern_protectorate_burden duration = 7300 }
+	every_owned_province = {
+		limit = {
+			OR = { area = south_korea_area area = eastern_korea_area }
+		}
+		add_local_autonomy = 15
+		add_province_modifier = { name = jxp_b_101_korea_protected_south duration = 7300 }
+	}
+	if = {
+		limit = { jxp_b_101_korea_is_subject_trigger = yes }
+		KOR = { add_country_modifier = { name = jxp_b_101_korea_protectorate_reconstruction duration = 3650 } }
+	}
+}
+
+jxp_b_101_korea_outcome_puppet_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_puppet_support_cost duration = 7300 }
+	KOR = { add_country_modifier = { name = jxp_b_101_korea_puppet_reconstruction duration = 7300 } }
+}
+
+jxp_b_101_korea_outcome_direct_rule_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_direct_rule_burden duration = 7300 }
+	every_owned_province = {
+		limit = { region = korea_region }
+		add_local_autonomy = 25
+		add_province_modifier = { name = jxp_b_101_korea_direct_rule_resistance duration = 7300 }
+	}
+	add_war_exhaustion = 2
+}
+
+jxp_b_101_korea_outcome_strategic_retreat_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_strategic_lessons duration = 5475 }
+	add_treasury = -150
+	add_prestige = -10
+	add_war_exhaustion = -2
+}
+
+jxp_b_101_korea_outcome_disaster_effect = {
+	jxp_b_101_korea_campaign_active_cleanup_effect = yes
+	jxp_b_101_clear_korea_outcome_flags_effect = yes
+	set_country_flag = jxp_b_101_korea_campaign_completed
+	add_country_modifier = { name = jxp_b_101_korea_expedition_disaster duration = 7300 }
+	add_treasury = -300
+	add_stability = -2
+	add_war_exhaustion = 3
+	add_corruption = 3
+}

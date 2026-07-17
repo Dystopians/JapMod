@@ -1,0 +1,411 @@
+# These predicates are also evaluated from government-reform candidates, where
+# the current scope is not guaranteed to remain the country scope.
+jxp_final_state_uncommitted_trigger = {
+	ROOT = {
+		tag = JAP
+		NOT = {
+			OR = {
+				has_country_flag = jxp_path_sakoku
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_ikko
+				has_country_flag = jxp_path_wokou
+				has_country_flag = jxp_path_buddhist
+			}
+		}
+	}
+}
+
+jxp_final_state_sakoku_trigger = {
+	ROOT = {
+		tag = JAP
+		has_country_flag = jxp_path_sakoku
+		NOT = {
+			OR = {
+				has_country_flag = jxp_path_open_trade
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_ikko
+				has_country_flag = jxp_path_wokou
+				has_country_flag = jxp_path_buddhist
+			}
+		}
+	}
+}
+
+jxp_final_state_open_trigger = {
+	ROOT = {
+		tag = JAP
+		has_country_flag = jxp_path_open_trade
+		NOT = {
+			OR = {
+				has_country_flag = jxp_path_sakoku
+				has_country_flag = jxp_path_kirishitan
+				has_country_flag = jxp_path_confucian
+				has_country_flag = jxp_path_imperial
+				has_country_flag = jxp_path_reformed
+				has_country_flag = jxp_path_kaikyo
+				has_country_flag = jxp_path_ikko
+				has_country_flag = jxp_path_wokou
+				has_country_flag = jxp_path_buddhist
+			}
+		}
+	}
+}
+
+jxp_final_state_kirishitan_trigger = {
+	ROOT = { tag = KJP }
+}
+
+jxp_final_state_confucian_trigger = {
+	ROOT = { tag = CJP }
+}
+
+jxp_final_state_imperial_trigger = {
+	ROOT = { tag = EJP }
+}
+
+jxp_final_state_reformed_trigger = {
+	ROOT = { tag = RFJ }
+}
+
+jxp_final_state_kaikyo_trigger = {
+	ROOT = { tag = SJP }
+}
+
+jxp_final_state_ikko_trigger = {
+	ROOT = { tag = IJP }
+}
+
+jxp_final_state_wokou_trigger = {
+	ROOT = { tag = WAK }
+}
+
+jxp_final_state_uncommitted_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_uncommitted_realm_council_reform }
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_sakoku_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_sakoku_bakuhan_council_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_open_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_open_maritime_cabinet_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_kirishitan_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_kirishitan_estates_general_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_confucian_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_confucian_censorate_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_imperial_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_imperial_daijokan_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_reformed_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_reformed_japan_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_kaikyo_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_kaikyo_japan_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_ikko_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_ikko_commonwealth_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_wokou_admiralty_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_wokou_admiralty_articles
+	}
+}
+
+jxp_final_state_wokou_power_mismatch_trigger = {
+	OR = {
+		NOT = { has_reform = jxp_wokou_admiralty_reform }
+		has_reform = jxp_uncommitted_realm_council_reform
+		has_reform = jxp_sakoku_bakuhan_council_reform
+		has_reform = jxp_open_maritime_cabinet_reform
+		has_reform = jxp_kirishitan_estates_general_reform
+		has_reform = jxp_confucian_censorate_reform
+		has_reform = jxp_imperial_daijokan_reform
+		has_reform = jxp_reformed_japan_reform
+		has_reform = jxp_kaikyo_japan_reform
+		has_reform = jxp_ikko_commonwealth_reform
+		has_country_modifier = jxp_79_uncommitted_realm_program
+		has_country_modifier = jxp_79_sakoku_bakuhan_constitution
+		has_country_modifier = jxp_79_open_maritime_cabinet
+		has_country_modifier = jxp_79_kirishitan_estates_concordat
+		has_country_modifier = jxp_79_confucian_censorate_charter
+		has_country_modifier = jxp_79_imperial_daijokan_charter
+		has_country_modifier = jxp_79_reformed_synodic_constitution
+		has_country_modifier = jxp_79_kaikyo_diwan_constitution
+		has_country_modifier = jxp_79_ikko_somon_constitution
+	}
+}
+
+# A capstone remains reachable after a Japanese final state takes the Mandate.
+# The exact final-state gate prevents a stale reform from satisfying another route.
+jxp_final_state_uncommitted_power_active_trigger = {
+	jxp_final_state_uncommitted_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_uncommitted_realm_council_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_sakoku_power_active_trigger = {
+	jxp_final_state_sakoku_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_sakoku_bakuhan_council_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_open_power_active_trigger = {
+	jxp_final_state_open_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_open_maritime_cabinet_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_kirishitan_power_active_trigger = {
+	jxp_final_state_kirishitan_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_kirishitan_estates_general_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_confucian_power_active_trigger = {
+	jxp_final_state_confucian_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_confucian_censorate_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_imperial_power_active_trigger = {
+	jxp_final_state_imperial_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_imperial_daijokan_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_reformed_power_active_trigger = {
+	jxp_final_state_reformed_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_reformed_japan_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_kaikyo_power_active_trigger = {
+	jxp_final_state_kaikyo_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_kaikyo_japan_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_ikko_power_active_trigger = {
+	jxp_final_state_ikko_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_ikko_commonwealth_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}
+
+jxp_final_state_wokou_power_active_trigger = {
+	jxp_final_state_wokou_trigger = yes
+	OR = {
+		AND = { is_emperor_of_china = no has_reform = jxp_wokou_admiralty_reform }
+		AND = { is_emperor_of_china = yes has_reform = celestial_empire }
+	}
+}

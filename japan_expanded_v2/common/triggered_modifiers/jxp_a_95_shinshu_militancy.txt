@@ -1,0 +1,32 @@
+jxp_a_shinshu_peaceful_congregations = {
+	trigger = {
+		religion = jodo_shinshu
+		jxp_a_shinshu_militancy_below_30_trigger = yes
+	}
+	global_unrest = -1
+	production_efficiency = 0.05
+	global_manpower_modifier = -0.05
+}
+
+jxp_a_shinshu_temple_town_community = {
+	trigger = {
+		religion = jodo_shinshu
+		jxp_a_shinshu_militancy_middle_trigger = yes
+	}
+	trade_efficiency = 0.05
+	defensiveness = 0.10
+	global_manpower_modifier = 0.05
+}
+
+jxp_a_shinshu_armed_followers = {
+	trigger = {
+		religion = jodo_shinshu
+		jxp_a_shinshu_militancy_high_trigger = yes
+	}
+	land_morale = 0.05
+	global_manpower_modifier = 0.10
+	defensiveness = 0.15
+	diplomatic_reputation = -1
+	global_tax_modifier = -0.10
+	global_unrest = 1
+}

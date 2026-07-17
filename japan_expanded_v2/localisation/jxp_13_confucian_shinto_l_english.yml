@@ -1,0 +1,51 @@
+﻿l_english:
+ jxp_confucian_bridge_shrine_registers:0 "^yGyTM|"
+ jxp_confucian_bridge_shrine_registers_desc:0 "^yIN0>y¶RN²‹˜RqQT¢‹>y<h0my!kNaN¦u0ø‹^yNQ«ˆnŽNýVYeKNYÿw=fT‰RvQMOÿReQ<yfN0"
+ jxp_confucian_bridge_city_registers:0 "ÎWNTM|"
+ jxp_confucian_bridge_city_registers_desc:0 "HuºN0µ^FU0úR>yNfk¶RKSwe«ˆ³ueQôfnZi„vTM|ŒTHuæ‰0^ðXNo`ÿwÕl¦^nb0"
+ jxp_confucian_bridge_nanban_edicts:0 "WSî†agÄ‰"
+ jxp_confucian_bridge_nanban_edicts_desc:0 "FU†™0Ñ‹˜RN<yè˜RrqQT¡RšRYegfN'0wmè•âeVÿÍN‰˜åNagÄ‰¦umgvQAm0"
+ jxp_confucian_bridge_restricted_ports:0 "P–šRø‹=n"
+ jxp_confucian_bridge_restricted_ports_desc:0 "VýV9‚êSêSýw(WcšR=nHu×SŒš0Í‹°‹vQ'ÿIYLˆßRvQfNÿ>y¶RYuavQYe0"
+
+ jxp_confucian_shinto.1.t:0 "^yQO"
+ jxp_confucian_shinto.1.d:0 "1gPRKNfRâeHNýVYeÿO¿RNø‹>ytSÍNESNl°‹ÆVKN-N0²‹˜RNŠÿ<ywÿlewòTãwÿå‚åNÏuINšRmy!kÿåNaN¦uckl×OÿR^yfNÅVN1W2øv‰N0>y¶R¦NMaeQ¬NH–ðçeêNÿBl(W°e6R-NÝOvQMOR0"
+ jxp_confucian_shinto.1.a:0 "ø‹>yTM|ÿO^yGyT‰RvQMO0"
+ jxp_confucian_shinto.1.b:0 "HQìS²‹˜ReQgÿåNÏuINšRýV,g0"
+ jxp_confucian_shinto.2.t:0 ">y¶RN²‹˜R"
+ jxp_confucian_shinto.2.d:0 ">y¶RHdçeRrwóÿ²‹˜Rc<yfNøv!h0	gºNIN.VåN^yGyKNmyôuû|‡vßuÿ	gºNRåNé…!hKNYe¦umgfkëX0opkpN„v‰Nº‹N(WN>yNúRÿw(W)YNTR0"
+ jxp_confucian_shinto.2.a:0 "O>ymyeQ<yÿ<yNŸ^^y0"
+ jxp_confucian_shinto.2.b:0 "^¾‹fR!hÿHQckºNÃV0"
+ jxp_confucian_shinto.3.t:0 "ø‹^yRŽN<yfN"
+ jxp_confucian_shinto.3.d:0 "°e„v<yfN„b,g.Oóø‹ýV0aNQgÍN(WžESNHyt^ÿfkëXÍN(W²‹-^MRû‹ÏuÿNT„v=fÿmy<y0fRÄ‰N˜RäNòTýw(WTNWYTR-N|Vdkgq”^0äS‹NNŸ^ÿ°e6RËYb0"
+ jxp_confucian_shinto.3.a:0 "^ySN¡NÿQ<y	gRV0"
+
+ jxp_confucian_shinto.10.t:0 "ÎWNHuKN®‹"
+ jxp_confucian_shinto.10.d:0 "ÎWNHuåeÊvAuÛvÿs|0^0Á”hVNfNM|(WWˆ^-NŽVeg0HuºNBlibWˆ÷TÿúR>yçVçe‹OnOWÿfk¶RRMaåN7bM|NHuæ‰ŒcvQúQeQ0AuNSâe=fýV›RÿmN=féy^„vwŒš0"
+ jxp_confucian_shinto.10.a:0 "ÆQvQibú^ÿåNTM|¦umg0"
+ jxp_confucian_shinto.10.b:0 "6emgûyOOÿOø‹7b	gšR0"
+ jxp_confucian_shinto.11.t:0 "HuºNÁ™V"
+ jxp_confucian_shinto.11.d:0 "œQò•KNl0AmÓR.SºNŒT=nHuFU>N­eŒmeQÎWN0çeQgÌ‘±b(`ºNNce»SÿHut^ÄRtSô‹^•Nå‚àe°elÿÓNê^¦N¾–EQžR0IYLˆHhNXán†N÷‹MaNyäN0"
+ jxp_confucian_shinto.11.a:0 "V^wËzM|ÿOvQ	gNbRV0"
+ jxp_confucian_shinto.11.b:0 "åNHuæ‰Í‘¢‹µ^NLˆO0"
+ jxp_confucian_shinto.12.t:0 "^ðXeQ<y"
+ jxp_confucian_shinto.12.d:0 "ÎWN„vŸ”ðX0(gPSðXN—rØvðXnn	g†NšRÄ‰0	gºNô‹Ù=f<yÕlošg†N^•NÿmN	gºNô‹=f^•NëO<yÕlfRO‡0àeº‹‚YUOÿÎWNHuòTbHN°eýV¶RNïSÞV„v9h	0"
+ jxp_confucian_shinto.12.a:0 "©‹HuºN&^egôfÜ„vwmÎ˜0"
+ jxp_confucian_shinto.12.b:0 "©‹AuNSgÎNTR0"
+
+ jxp_confucian_shinto.20.t:0 "WSî†9‚N<yè¨T‡e"
+ jxp_confucian_shinto.20.d:0 "WSî†9‚eQ=nÿ'-N	gö”0»sƒt0kphV0Ÿ”hˆN1WÏP0Í‹÷‹V²Nfÿ>y¶RçVvQVïzÿ²‹˜RR÷‹¾‹agÄ‰ÿ'ïSeQ&ÿfNïSûÀhÿYeINN—VŠÇIYLˆNfR!h0"
+ jxp_confucian_shinto.20.a:0 "ÆQvQ8fÿËzFU†™NÍ‹0"
+ jxp_confucian_shinto.20.b:0 "P–šRø‹=nÿHQŒšvQfN'0"
+ jxp_confucian_shinto.21.t:0 "Ñ‹fNNVïz"
+ jxp_confucian_shinto.21.d:0 "Ñ‹˜RHTNVýVIS¹e0®p=g0)Y‡eNYetXd‰0ø‹u‰Nº‹NOÿŽbz‚ïS(uÿINtïS‘uÿå‚hQÒbKNÿwmè•í•^Xÿå‚hQ³uKNÿlÃV¨RGd0"
+ jxp_confucian_shinto.21.a:0 "¾‹Ñ‹fNNSÿÖSvQhV=g0"
+ jxp_confucian_shinto.21.b:0 "åN<yfNybvQINt0"
+ jxp_confucian_shinto.22.t:0 "FU†™Ä‰6R"
+ jxp_confucian_shinto.22.d:0 "FU†™âeËzÿ9‚IN0tBlôfËR„vjPÊl0ÓN¨PN.OYeYO0W0=nHuFUºNMaåN‹vö”jOÝOÿ>y¶RŒTIYLˆtS‰Blôf%N„vTM|0Í‹NESYuäN0"
+ jxp_confucian_shinto.22.a:0 "¸‹vQ'AmÿyvQŠ6R0"
+ jxp_confucian_shinto.22.b:0 "RvQ)RÿNqNvQ<y0"
+ jxp_confucian_shinto.23.t:0 "wmè•	g¦^"
+ jxp_confucian_shinto.23.d:0 "àQt^ŽVegKNTÿFU†™0Ñ‹fNNSN=nHuIYLˆòTbVbï`‹O0wmÎ˜ÍN&^egGYŽbNVû•ÿFONQëkàeTM|0WŒmeQýV-N0VÓbNÌ‘âl›mÿ¦N‰˜HQšRN=nKNÄ‰0"
+ jxp_confucian_shinto.23.a:0 "åNwm)R‰QýV0"
+ jxp_confucian_shinto.23.b:0 "åNÕl¦^mšwm0"

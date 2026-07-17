@@ -1,0 +1,298 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_jxp_sakoku_hostage_roads"
+		texturefile = "gfx//interface//government_reform_icons//jxp_sakoku_hostage_roads.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_sakoku_coastal_watch"
+		texturefile = "gfx//interface//government_reform_icons//jxp_sakoku_coastal_watch.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_sakoku_hidden_books"
+		texturefile = "gfx//interface//government_reform_icons//jxp_sakoku_hidden_books.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_open_silver_scales"
+		texturefile = "gfx//interface//government_reform_icons//jxp_open_silver_scales.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_open_artillery_contract"
+		texturefile = "gfx//interface//government_reform_icons//jxp_open_artillery_contract.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_open_chartered_factory"
+		texturefile = "gfx//interface//government_reform_icons//jxp_open_chartered_factory.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kirishitan_seminary_book"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kirishitan_seminary_book.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kirishitan_hospital_bell"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kirishitan_hospital_bell.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kirishitan_nagasaki_admiralty"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kirishitan_nagasaki_admiralty.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_confucian_exam_tablet"
+		texturefile = "gfx//interface//government_reform_icons//jxp_confucian_exam_tablet.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_confucian_law_codex"
+		texturefile = "gfx//interface//government_reform_icons//jxp_confucian_law_codex.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_confucian_three_teachings"
+		texturefile = "gfx//interface//government_reform_icons//jxp_confucian_three_teachings.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_imperial_kokugaku_scroll"
+		texturefile = "gfx//interface//government_reform_icons//jxp_imperial_kokugaku_scroll.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_imperial_governor_seal"
+		texturefile = "gfx//interface//government_reform_icons//jxp_imperial_governor_seal.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_imperial_guard_banner"
+		texturefile = "gfx//interface//government_reform_icons//jxp_imperial_guard_banner.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_reformed_printing_press"
+		texturefile = "gfx//interface//government_reform_icons//jxp_reformed_printing_press.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_reformed_civic_oath"
+		texturefile = "gfx//interface//government_reform_icons//jxp_reformed_civic_oath.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_reformed_contract_ship"
+		texturefile = "gfx//interface//government_reform_icons//jxp_reformed_contract_ship.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kaikyo_monsoon_diwan"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kaikyo_monsoon_diwan.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kaikyo_waqf_granary"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kaikyo_waqf_granary.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_kaikyo_spice_guard"
+		texturefile = "gfx//interface//government_reform_icons//jxp_kaikyo_spice_guard.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_ikko_somon_bell"
+		texturefile = "gfx//interface//government_reform_icons//jxp_ikko_somon_bell.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_ikko_granary"
+		texturefile = "gfx//interface//government_reform_icons//jxp_ikko_granary.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_ikko_ashigaru_oath"
+		texturefile = "gfx//interface//government_reform_icons//jxp_ikko_ashigaru_oath.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_wokou_black_tide_law"
+		texturefile = "gfx//interface//government_reform_icons//jxp_wokou_black_tide_law.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_wokou_freeport"
+		texturefile = "gfx//interface//government_reform_icons//jxp_wokou_freeport.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_wokou_boarding_hooks"
+		texturefile = "gfx//interface//government_reform_icons//jxp_wokou_boarding_hooks.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_house_code"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_house_code.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_martial_roll"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_martial_roll.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_cadaster_office"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_cadaster_office.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_admiralty"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_admiralty.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_court_council"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_court_council.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_trade_brokerage"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_trade_brokerage.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_rite_compact"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_rite_compact.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_founder_renovated_state"
+		texturefile = "gfx//interface//government_reform_icons//jxp_founder_renovated_state.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_daimyo_kokujin_oaths"
+		texturefile = "gfx//interface//government_reform_icons//jxp_daimyo_kokujin_oaths.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_daimyo_bunkoku_law"
+		texturefile = "gfx//interface//government_reform_icons//jxp_daimyo_bunkoku_law.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_daimyo_kachu_hyojoshu"
+		texturefile = "gfx//interface//government_reform_icons//jxp_daimyo_kachu_hyojoshu.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_fudai_service_rolls"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_fudai_service_rolls.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_direct_investiture"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_direct_investiture.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_gundai_daikan_partition"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_gundai_daikan_partition.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_branch_castle_cadasters"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_branch_castle_cadasters.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_religious_arbitration"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_religious_arbitration.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_temple_land_settlement"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_temple_land_settlement.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_ashigaru_muster_rolls"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_ashigaru_muster_rolls.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_kyuba_hatamoto"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_kyuba_hatamoto.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_castle_artillery_office"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_castle_artillery_office.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_funade_ura_service"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_funade_ura_service.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_lordly_arbitration"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_lordly_arbitration.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_elder_countersignature"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_elder_countersignature.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_domain_assembly"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_domain_assembly.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_court_temple_service"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_court_temple_service.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_yuhitsu_accountants"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_yuhitsu_accountants.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_fudai_magistracy"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_fudai_magistracy.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_public_authority"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_public_authority.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_townsmen_guild_charters"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_townsmen_guild_charters.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_checkpoint_red_seals"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_checkpoint_red_seals.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_rakuichi_rakuza"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_rakuichi_rakuza.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_war_provisioning"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_war_provisioning.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_coinage_edicts"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_coinage_edicts.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_new_field_works"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_new_field_works.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_overseas_settlement_office"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_overseas_settlement_office.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_rule_by_arms"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_rule_by_arms.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_general_peace"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_general_peace.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_service_compact"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_service_compact.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_quarrel_suppression"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_quarrel_suppression.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_common_security"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_common_security.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_unitary_investiture"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_unitary_investiture.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_domain_federation"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_domain_federation.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_benevolent_government"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_benevolent_government.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_divine_law"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_divine_law.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_buke_laws_inspectors"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_buke_laws_inspectors.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_hyojosho_collegial_offices"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_hyojosho_collegial_offices.dds"
+	}
+	spriteType = {
+		name = "government_reform_jxp_japanese_petition_direct_appeal"
+		texturefile = "gfx//interface//government_reform_icons//jxp_japanese_petition_direct_appeal.dds"
+	}
+}

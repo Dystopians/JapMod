@@ -1,0 +1,62 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+letat_cest_moi_reform = {
+	icon = "letat_cest_moi"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	modifiers = {
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+
+regional_representation_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		core_creation = -0.05
+	}
+}
+
+peoples_kingdom_reform = {
+	icon = "peasant_republic"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	modifiers = {
+		possible_policy = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+deified_monarchy_reform = {
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.05
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 1
+	}
+}

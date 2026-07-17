@@ -1,0 +1,74 @@
+jxp_a_oda_azuchi_magistracy_reform = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_a_oda_azuchi_magistracy_reform
+			AND = {
+				jxp_a_oda_government_branch_unlocked_trigger = yes
+				has_country_flag = jxp_a_oda_government_azuchi
+			}
+		}
+	}
+	trigger = {
+		jxp_a_oda_government_branch_unlocked_trigger = yes
+		has_country_flag = jxp_a_oda_government_azuchi
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.10
+		monthly_reform_progress_modifier = 0.10
+		state_maintenance_modifier = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_a_oda_legion_domains_reform = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_a_oda_legion_domains_reform
+			AND = {
+				jxp_a_oda_government_branch_unlocked_trigger = yes
+				has_country_flag = jxp_a_oda_government_legion_domains
+			}
+		}
+	}
+	trigger = {
+		jxp_a_oda_government_branch_unlocked_trigger = yes
+		has_country_flag = jxp_a_oda_government_legion_domains
+	}
+	modifiers = {
+		land_forcelimit_modifier = 0.10
+		manpower_recovery_speed = 0.10
+		global_unrest = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_a_oda_ashikaga_protectorate_reform = {
+	icon = "jxp_founder_court_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_a_oda_ashikaga_protectorate_reform
+			AND = {
+				jxp_a_oda_government_branch_unlocked_trigger = yes
+				has_country_flag = jxp_a_oda_government_ashikaga_protectorate
+			}
+		}
+	}
+	trigger = {
+		jxp_a_oda_government_branch_unlocked_trigger = yes
+		has_country_flag = jxp_a_oda_government_ashikaga_protectorate
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.15
+		nobles_loyalty_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}

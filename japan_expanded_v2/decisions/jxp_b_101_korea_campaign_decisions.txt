@@ -1,0 +1,217 @@
+country_decisions = {
+	jxp_b_101_prepare_tsushima_interpreters_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_campaign_actor_trigger = yes
+			jxp_b_101_korea_exists_trigger = yes
+			is_year = 1550
+			NOT = { has_country_flag = jxp_b_101_korea_campaign_completed }
+			NOT = { has_country_flag = jxp_b_101_korea_campaign_active }
+		}
+		allow = { jxp_b_101_can_begin_korea_preparations_trigger = yes }
+		effect = {
+			add_dip_power = -50
+			add_treasury = -75
+			custom_tooltip = jxp_b_101_prepare_tsushima_interpreters_effect_tt
+			hidden_effect = { jxp_b_101_initialize_korea_preparations_effect = yes }
+		}
+		ai_will_do = {
+			factor = 0.10
+			modifier = { factor = 3 tag = TOY }
+			modifier = { factor = 3 has_country_flag = jxp_iface_b99_korea_campaign_requested }
+			modifier = { factor = 2 has_country_flag = jxp_iface_house_logistics_ready }
+			modifier = { factor = 2 has_country_flag = jxp_iface_house_mass_mobilization_ready }
+			modifier = { factor = 0.10 num_of_loans = 3 }
+		}
+	}
+
+	jxp_b_101_dispatch_korean_envoys_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_01_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_02_done }
+		}
+		allow = { treasury = 100 dip_power = 60 prestige = 5 }
+		effect = {
+			add_dip_power = -60
+			add_treasury = -100
+			add_prestige = -5
+			custom_tooltip = jxp_b_101_dispatch_korean_envoys_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_02_effect = yes }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_b_101_demand_passage_or_tribute_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_02_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_03_done }
+		}
+		allow = { dip_power = 75 prestige = 10 }
+		effect = {
+			add_dip_power = -75
+			add_prestige = -10
+			custom_tooltip = jxp_b_101_demand_passage_or_tribute_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_03_effect = yes }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_b_101_build_nagoya_logistics_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_03_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_04_done }
+		}
+		allow = {
+			treasury = 200
+			adm_power = 25
+			OR = {
+				owns = 4182
+				num_of_ports = 8
+				has_country_flag = jxp_iface_house_logistics_ready
+			}
+		}
+		effect = {
+			add_treasury = -200
+			add_adm_power = -25
+			custom_tooltip = jxp_b_101_build_nagoya_logistics_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_04_effect = yes }
+		}
+		ai_will_do = { factor = 1 modifier = { factor = 1.5 tag = TOY } }
+	}
+
+	jxp_b_101_register_transport_fleet_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_04_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_05_done }
+		}
+		allow = { treasury = 100 sailors = 1000 num_of_transport = 12 }
+		effect = {
+			add_treasury = -100
+			add_sailors = -1000
+			custom_tooltip = jxp_b_101_register_transport_fleet_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_05_effect = yes }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_b_101_stockpile_campaign_grain_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_05_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_06_done }
+		}
+		allow = { treasury = 250 adm_power = 25 }
+		effect = {
+			add_treasury = -250
+			add_adm_power = -25
+			custom_tooltip = jxp_b_101_stockpile_campaign_grain_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_06_effect = yes }
+		}
+		ai_will_do = { factor = 1 modifier = { factor = 0.25 num_of_loans = 3 } }
+	}
+
+	jxp_b_101_assemble_siege_train_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_06_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_07_done }
+		}
+		allow = { mil_tech = 9 num_of_artillery = 3 mil_power = 75 treasury = 150 }
+		effect = {
+			add_mil_power = -75
+			add_treasury = -150
+			custom_tooltip = jxp_b_101_assemble_siege_train_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_07_effect = yes }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	jxp_b_101_muster_daimyo_levies_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_07_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_08_done }
+		}
+		allow = {
+			manpower = 10
+			mil_power = 50
+			prestige = 10
+			OR = {
+				army_size = 40
+				has_country_flag = jxp_iface_house_mass_mobilization_ready
+			}
+		}
+		effect = {
+			add_manpower = -10
+			add_mil_power = -50
+			add_prestige = -10
+			custom_tooltip = jxp_b_101_muster_daimyo_levies_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_08_effect = yes }
+		}
+		ai_will_do = { factor = 1 modifier = { factor = 1.5 has_country_flag = jxp_iface_house_mass_mobilization_ready } }
+	}
+
+	jxp_b_101_organize_naval_escort_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_08_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_09_done }
+		}
+		allow = {
+			treasury = 125
+			sailors = 1000
+			dip_power = 25
+			num_of_transport = 12
+			OR = { num_of_galley = 8 num_of_heavy_ship = 3 }
+		}
+		effect = {
+			add_treasury = -125
+			add_sailors = -1000
+			add_dip_power = -25
+			custom_tooltip = jxp_b_101_organize_naval_escort_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_09_effect = yes }
+		}
+		ai_will_do = { factor = 1 modifier = { factor = 1.5 has_country_flag = jxp_iface_house_maritime_ready } }
+	}
+
+	jxp_b_101_assess_ming_response_decision = {
+		major = yes
+		potential = {
+			jxp_b_101_korea_preparations_active_trigger = yes
+			has_country_flag = jxp_b_101_korea_stage_09_done
+			NOT = { has_country_flag = jxp_b_101_korea_stage_10_done }
+		}
+		allow = {
+			dip_tech = 9
+			NOT = { truce_with = KOR }
+			dip_power = 75
+			treasury = 100
+			prestige = 10
+			OR = { exists = MNG exists = QNG is_year = 1644 }
+		}
+		effect = {
+			add_dip_power = -75
+			add_treasury = -100
+			add_prestige = -10
+			custom_tooltip = jxp_b_101_assess_ming_response_effect_tt
+			hidden_effect = { jxp_b_101_complete_korea_stage_10_effect = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.25 num_of_loans = 3 }
+			modifier = { factor = 1.5 tag = TOY }
+		}
+	}
+}

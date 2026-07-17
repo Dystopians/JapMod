@@ -1,0 +1,232 @@
+jxp_b_99_strategy_council_recent = {
+	diplomatic_reputation = -1
+}
+
+jxp_b_99_ryukyu_council_recent = { improve_relation_modifier = -0.05 }
+jxp_b_99_korea_council_recent = { improve_relation_modifier = -0.05 }
+jxp_b_99_northern_council_recent = { improve_relation_modifier = -0.05 }
+jxp_b_99_taiwan_fujian_council_recent = { improve_relation_modifier = -0.05 }
+jxp_b_99_china_council_recent = { improve_relation_modifier = -0.05 }
+jxp_b_99_southeast_asia_council_recent = { improve_relation_modifier = -0.05 }
+
+jxp_b_99_shogunate_mobilization_burden = {
+	global_tax_modifier = -0.10
+	land_maintenance_modifier = 0.10
+	naval_maintenance_modifier = 0.10
+}
+
+jxp_b_99_diplomatic_trade_network = {
+	trade_efficiency = 0.05
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_99_protection_network = {
+	diplomatic_reputation = 1
+	global_manpower_modifier = -0.05
+	land_forcelimit_modifier = 0.05
+}
+
+jxp_b_99_treaty_port_network = {
+	trade_steering = 0.10
+	global_ship_trade_power = 0.15
+	naval_maintenance_modifier = 0.05
+}
+
+jxp_b_99_campaign_preparations = {
+	manpower_recovery_speed = 0.10
+	global_regiment_recruit_speed = -0.10
+	naval_maintenance_modifier = 0.10
+	land_maintenance_modifier = 0.10
+}
+
+jxp_b_99_governance_deliberations = {
+	global_unrest = 1
+	state_maintenance_modifier = 0.10
+}
+
+jxp_b_99_diplomatic_rebuff = {
+	diplomatic_reputation = -1
+	prestige_decay = 0.01
+}
+
+jxp_b_99_foreign_merchant_quarter = {
+	trade_efficiency = 0.05
+	global_unrest = 0.5
+}
+
+jxp_b_99_protected_partner = {
+	defensiveness = 0.10
+	diplomatic_reputation = 1
+	global_tax_modifier = -0.05
+}
+
+jxp_b_99_treaty_port_host = {
+	trade_efficiency = 0.05
+	global_trade_power = -0.05
+}
+
+jxp_b_99_treaty_port_concession = {
+	province_trade_power_modifier = -0.25
+	local_tax_modifier = 0.10
+	local_unrest = 1
+}
+
+jxp_b_99_port_negotiations_failed = {
+	trade_steering = -0.05
+	diplomatic_reputation = -1
+}
+
+jxp_b_99_continental_alarm = {
+	defensiveness = 0.10
+	global_manpower_modifier = 0.10
+	global_tax_modifier = -0.05
+}
+
+jxp_b_99_alarm_ryukyu = { defensiveness = 0.15 }
+jxp_b_99_alarm_korea = { defensiveness = 0.15 global_manpower_modifier = 0.05 }
+jxp_b_99_alarm_north = { land_attrition = -0.10 defensiveness = 0.10 }
+jxp_b_99_alarm_taiwan_fujian = { naval_forcelimit_modifier = 0.10 defensiveness = 0.10 }
+jxp_b_99_alarm_china = { global_manpower_modifier = 0.10 defensiveness = 0.10 }
+jxp_b_99_alarm_southeast_asia = { naval_forcelimit_modifier = 0.10 defensiveness = 0.10 }
+
+jxp_b_99_ryukyu_trade_protocol = {
+	trade_efficiency = 0.05
+	diplomatic_reputation = 1
+}
+
+jxp_b_99_korean_envoy_protocol = {
+	improve_relation_modifier = 0.15
+	institution_spread_from_true_faith = 0.05
+}
+
+jxp_b_99_northern_exchange_protocol = {
+	global_colonial_growth = 10
+	land_attrition = -0.05
+}
+
+jxp_b_99_fujian_sea_protocol = {
+	trade_steering = 0.10
+	privateer_efficiency = 0.10
+}
+
+jxp_b_99_china_ritual_trade_protocol = {
+	prestige = 0.5
+	caravan_power = 0.10
+}
+
+jxp_b_99_south_seas_compact = {
+	global_trade_power = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_b_99_doctrine_uncommitted = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.05
+}
+
+jxp_b_99_doctrine_sakoku = {
+	defensiveness = 0.10
+	spy_offence = 0.10
+}
+
+jxp_b_99_doctrine_open_trade = {
+	trade_steering = 0.10
+	global_ship_trade_power = 0.10
+}
+
+jxp_b_99_doctrine_kirishitan = {
+	tolerance_own = 1
+	missionary_maintenance_cost = -0.10
+}
+
+jxp_b_99_doctrine_confucian = {
+	diplomatic_reputation = 1
+	global_unrest = -0.5
+}
+
+jxp_b_99_doctrine_imperial = {
+	legitimacy = 0.5
+	governing_capacity_modifier = 0.05
+}
+
+jxp_b_99_doctrine_reformed = {
+	trade_efficiency = 0.05
+	mercenary_cost = -0.05
+}
+
+jxp_b_99_doctrine_kaikyo = {
+	trade_range_modifier = 0.10
+	naval_attrition = -0.05
+}
+
+jxp_b_99_doctrine_ikko = {
+	tolerance_own = 1
+	manpower_recovery_speed = 0.05
+}
+
+jxp_b_99_doctrine_wokou = {
+	privateer_efficiency = 0.15
+	naval_forcelimit_modifier = 0.10
+}
+
+jxp_b_99_doctrine_buddhist = {
+	tolerance_own = 1
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_99_doctrine_toyotomi = {
+	land_forcelimit_modifier = 0.10
+	siege_ability = 0.05
+	land_maintenance_modifier = 0.05
+}
+
+jxp_b_99_military_commission_province = {
+	local_defensiveness = 0.25
+	local_manpower_modifier = 0.15
+	local_unrest = 3
+	local_state_maintenance_modifier = 0.25
+}
+
+jxp_b_99_military_commission_government = {
+	land_forcelimit_modifier = 0.10
+	land_maintenance_modifier = 0.15
+	global_unrest = 1
+}
+
+jxp_b_99_local_dynasty_province = {
+	local_unrest = -2
+	local_tax_modifier = -0.25
+	local_manpower_modifier = -0.20
+}
+
+jxp_b_99_local_dynasty_government = {
+	diplomatic_reputation = 1
+	global_tax_modifier = -0.05
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_99_tribute_trade_province = {
+	province_trade_power_modifier = 0.25
+	local_production_efficiency = 0.10
+	local_manpower_modifier = -0.25
+	local_unrest = 1
+}
+
+jxp_b_99_tribute_trade_government = {
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.10
+	land_forcelimit_modifier = -0.05
+}
+
+jxp_b_99_direct_governor_province = {
+	local_tax_modifier = 0.15
+	local_production_efficiency = 0.10
+	local_governing_cost = 0.25
+	local_unrest = 4
+}
+
+jxp_b_99_direct_governor_government = {
+	global_tax_modifier = 0.10
+	state_maintenance_modifier = 0.20
+	global_unrest = 1
+}

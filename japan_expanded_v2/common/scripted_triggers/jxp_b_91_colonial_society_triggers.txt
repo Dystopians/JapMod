@@ -1,0 +1,124 @@
+jxp_b_91_colonial_society_active_trigger = {
+	has_country_flag = jxp_b_colonial_society_active
+	NOT = { has_country_flag = jxp_b_colonial_society_retired }
+}
+
+jxp_b_91_colonial_society_entry_trigger = {
+	jxp_can_use_overseas_expansion_trigger = yes
+	NOT = { has_country_modifier = jxp_b_97_overseas_rights_revoked }
+	OR = {
+		has_country_flag = jxp_pacific_charter_enacted
+		has_country_flag = jxp_new_world_japan_towns_done
+		has_country_flag = jxp_manila_nagasaki_route_seen
+		has_country_flag = jxp_alaska_survey_seen
+		has_country_flag = jxp_california_anchorages_seen
+		has_country_flag = jxp_76_pacific_network_active
+		has_country_flag = jxp_iface_overseas_charter_ready
+		num_of_colonists = 1
+		any_owned_province = { continent = new_world }
+	}
+}
+
+jxp_b_91_colonial_identity_at_least_25_trigger = {
+	check_variable = { which = jxp_b_colonial_identity value = 25 }
+}
+
+jxp_b_91_colonial_identity_at_least_50_trigger = {
+	check_variable = { which = jxp_b_colonial_identity value = 50 }
+}
+
+jxp_b_91_colonial_identity_at_least_65_trigger = {
+	check_variable = { which = jxp_b_colonial_identity value = 65 }
+}
+
+jxp_b_91_colonial_identity_at_least_75_trigger = {
+	check_variable = { which = jxp_b_colonial_identity value = 75 }
+}
+
+jxp_b_91_metropole_control_at_least_40_trigger = {
+	check_variable = { which = jxp_b_metropole_control value = 40 }
+}
+
+jxp_b_91_metropole_control_at_least_60_trigger = {
+	check_variable = { which = jxp_b_metropole_control value = 60 }
+}
+
+jxp_b_91_metropole_control_below_40_trigger = {
+	NOT = { check_variable = { which = jxp_b_metropole_control value = 40 } }
+}
+
+jxp_b_91_local_compact_at_least_40_trigger = {
+	check_variable = { which = jxp_b_local_compact value = 40 }
+}
+
+jxp_b_91_local_compact_at_least_60_trigger = {
+	check_variable = { which = jxp_b_local_compact value = 60 }
+}
+
+jxp_b_91_has_any_charter_trigger = {
+	OR = {
+		has_country_flag = jxp_b_charter_red_seal_town
+		has_country_flag = jxp_b_charter_military_settlement
+		has_country_flag = jxp_b_charter_faith_community
+		has_country_flag = jxp_b_charter_free_port
+		has_country_flag = jxp_b_charter_naval_station
+	}
+}
+
+jxp_b_91_can_choose_military_charter_trigger = {
+	OR = {
+		has_country_flag = jxp_iface_house_frontier_ready
+		has_country_flag = jxp_iface_house_mass_mobilization_ready
+		has_country_flag = jxp_path_imperial
+		tag = EJP
+		tag = TOY
+		AND = {
+			mil_tech = 8
+			manpower_percentage = 0.25
+		}
+	}
+}
+
+jxp_b_91_can_choose_faith_charter_trigger = {
+	OR = {
+		has_country_flag = jxp_iface_house_religious_ready
+		has_country_flag = jxp_iface_buddhist_diplomacy_ready
+		has_country_flag = jxp_path_kirishitan
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_kaikyo
+		has_country_flag = jxp_path_ikko
+		tag = KJP
+		tag = RFJ
+		tag = SJP
+		tag = IJP
+		religion_group = buddhist
+	}
+}
+
+jxp_b_91_can_choose_free_port_charter_trigger = {
+	jxp_allows_private_overseas_trade_trigger = yes
+	OR = {
+		has_country_flag = jxp_iface_house_maritime_ready
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_reformed
+		has_country_flag = jxp_path_wokou
+		tag = RFJ
+		tag = WAK
+		num_of_ports = 8
+	}
+}
+
+jxp_b_91_can_choose_naval_station_charter_trigger = {
+	OR = {
+		has_country_flag = jxp_iface_house_maritime_ready
+		has_country_flag = jxp_iface_house_logistics_ready
+		has_country_flag = jxp_path_open_trade
+		has_country_flag = jxp_path_imperial
+		tag = EJP
+		tag = TOY
+		AND = {
+			num_of_ports = 8
+			navy_tradition = 15
+		}
+	}
+}

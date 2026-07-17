@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 24 42 86 }
+revolutionary_colors = { 11 19 39 }
+
+random_nation_chance = 0
+
+historical_score = 500
+
+historical_idea_groups = {
+	religious_ideas
+	quantity_ideas
+	economic_ideas
+	defensive_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	influence_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"显如 #0" = 15
+	"莲如 #0" = 15
+	"准如 #0" = 12
+	"证如 #0" = 12
+	"光佐 #0" = 10
+	"光佐御门 #0" = 2
+	"赖长 #0" = 8
+	"长重 #0" = 8
+}
+
+leader_names = {
+	显如 莲如 证如 准如 杂贺 铃木 下间 下妻 根来 光佐 石山 加贺
+}
+
+ship_names = {
+	Ishiyama Kaga Saika Negoro Osaka Sakai Kinai Monto Honganji Terauchi Jodo
+}
+
+army_names = {
+	"Monto Host" "$PROVINCE$ Ikki" "$PROVINCE$ Terauchi Shu"
+}
+
+fleet_names = {
+	"Temple Fleet" "$PROVINCE$ Monto Sendan" "$PROVINCE$ Saika Squadron"
+}

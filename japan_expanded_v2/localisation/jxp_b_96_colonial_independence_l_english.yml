@@ -1,0 +1,80 @@
+﻿l_english:
+ cb_jxp_b_colonial_independence:0 "–klê»lb‰N"
+ cb_jxp_b_colonial_independence_desc:0 "wmY®‹O(W÷‹Ma0µb6RN,gWHV6RKNô•p0R³QÂˆ¹0ÙHWb‰NåN–kl0W–™œ^„vXRíuHNîvhÿÜw)R¹eïS	ébŒRteìrËz0ê»l¦uàzb8fêINÿwN=fPHgTv^àesQ†˜W0"
+ jxp_b_colonial_independence_wargoal:0 "ÝOkS–kl–™œ^"
+ jxp_b_colonial_independence_wargoal_desc:0 "I–bk—RIN`S†˜–kl–™œ^ÿv^ôuc³Y•„vê»lb‰N0"
+ JXP_B_COLONIAL_INDEPENDENCE_WAR_NAME:0 "$ORDER$$FIRST$–klê»lb‰N"
+ po_jxp_b_colonial_compact:0 "b²‹ê»l–kl¦uàz"
+ po_jxp_b_colonial_compact_desc:0 "–kl0WÍNôuc—RINsQû|ÿFOåb	g0W¹e®‹O0ûN‹TNzyVê»lÿ—RINsQzŒTôv¥cµc6R>fW„NM–0"
+ po_jxp_b_trade_independence:0 "ÖSˆm,gW8f„W­e"
+ po_jxp_b_trade_independence_desc:0 "–kl0WêLˆÓu8fv^¡rt=nzÿÍNÝOYuƒŒgce„v—RINsQû|0"
+ po_jxp_b_restore_metropole_control:0 "b`Y,gWµc6R"
+ po_jxp_b_restore_metropole_control_desc:0 "ã‰cefkÅˆÄuÇuv^b`YûN‹TNzyVÿFOŒNASt^„vHV6R»ltScíuÀowNán0"
+
+ jxp_colonial_independence.1.t:0 "÷‹MafNŠÇ*Ys^m"
+ jxp_colonial_independence.1.d:0 "=nHuãNhˆ¡l	g&T²‹Nåe,g„vçeÿtS‰BlzyV0W0WŒT^yLwûN‹TÅV‰˜—V0RwmYESlTa0å‚Šb÷‹Ma‹SÞV&±rÿî•˜˜êSOåN+R„vbVVúQ°s0"
+ jxp_colonial_independence.1.a:0 "(W÷‹MaNrTÿ‰BlckVTrY0"
+ jxp_colonial_independence.1.b:0 "ÍNåN,gWéy^HNÍ‘ÿ‚fo`®‹º‹0"
+ jxp_colonial_independence.2.t:0 "–kl®‹-^"
+ jxp_colonial_independence.2.d:0 "FUºN0›QoS0YeâV0SV0WßvËSNwmYúQuw‰Nº‹Œ	gD<hãNhˆÙGr>yO0àeº‹®‹-^‚YUOÄubÿƒRýSbHN,gWI`¡råNY„v°eCg›R-NÃV0"
+ jxp_colonial_independence.2.a:0 "©‹T=nŒT0W¹eßv¦u¨c>NãNhˆ0"
+ jxp_colonial_independence.2.b:0 "®‹-^ÅV‰˜1uI`¡r8hÆQ0"
+ jxp_colonial_independence.3.t:0 "¡l	gãNhˆ„vzyV"
+ jxp_colonial_independence.3.d:0 ",gWHN'YF–b‰Ný R9‚zN›QyVÿ–kl®‹-^tS¡l	gÂSN³QšR0ÓN“^INºNMaaúQ±”qQT2–¡VÿtSÒbÝuHNwm±N¹„vb‰NàeP–=eÖS0"
+ jxp_colonial_independence.3.a:0 "‚fjP4³u*g·ƒ®‹-^Ta„vz0"
+ jxp_colonial_independence.3.b:0 "HQ«WØNNcRÿbcÖSckVŒ2R0"
+ jxp_colonial_independence.4.t:0 "=nãSµb6R"
+ jxp_colonial_independence.4.d:0 ",gWNVSFU9‚µb=nöeÿ+Y0‹NŒT9‚.SÒbÝuxS'0SV0W^HWMaaôucuIm8fÿtSNQ¥c×S1uÜ¹e„W­e÷N<h0"
+ jxp_colonial_independence.4.a:0 "ôuc	gªu‹V„v=nãSµb6R0"
+ jxp_colonial_independence.4.b:0 "1uÌS¹òNÁˆ-^V>eqQT^HW0"
+ jxp_colonial_independence.5.t:0 "ŒegˆRkSZwK„"
+ jxp_colonial_independence.5.d:0 "I`¡r‰Bl,gW4l›Q¥c¡rÎWè•ÿ0W¹e®‹-^RIN.VESlluQMb†Nã‰Sï0®|ÓNŒTßv¦u¹Lu0fkÅˆRV^SòTbHNMe»lî•˜˜0"
+ jxp_colonial_independence.5.a:0 "‰v°‹–klluQÿFO1u®‹-^¦umg0"
+ jxp_colonial_independence.5.b:0 "ÄuÇuNSV0WßvËS„vqQT2–¡V–0"
+ jxp_colonial_independence.6.t:0 "ÝO‡v>mNìrËz>m"
+ jxp_colonial_independence.6.d:0 "N¹eÍNŠbåe,gÆ‰HN‹sßu0áOðNb¶RÏe„vEeaNÿæSN¹e²‹HNwmYESlòTNýw1u*gþf!nwmwãNŠ0çuíu‰lØžSOWˆ÷THQŽN®‹-^jOúQ³QšR0"
+ jxp_colonial_independence.6.a:0 "ŠbgT„vŒTã‰¹eHh²N—RIN0"
+ jxp_colonial_independence.6.b:0 "¥c×S,gWOHQ„vàVÚ‹¹eHh0"
+ jxp_colonial_independence.7.t:0 "ã‰ceäNµb¾"
+ jxp_colonial_independence.7.d:0 "—RIN‹TäN®‹-^²NúQpSºs0zŒQNluQTM|0gÎNïSåNMQ<wMRb‰Nÿµb—bRasTNw,g0W6R¦^ÅV‰˜`—êñTXRíu0"
+ jxp_colonial_independence.7.a:0 "²NØpSºsÿÝOXRSýwÝOXR„véy^0"
+ jxp_colonial_independence.7.b:0 "®‹-^egêESlÿNýw1uwmN‡efNã‰ce0"
+ jxp_colonial_independence.8.t:0 "ÓNè•MR„v,rNHW²Qz"
+ jxp_colonial_independence.8.d:0 "IYLˆkS–Õ‹þV¥c¡r=nzÓNÿluQSOOWˆãS0ÌS¹eÍNïSTÿFOòT	g2OwP(WqQT^HW„vów6–N0"
+ jxp_colonial_independence.8.a:0 "HN®‹-^ˆROOÓNè•0"
+ jxp_colonial_independence.8.b:0 "ÐcúQgTNýNê»ljPkp¦uàz0"
+ jxp_colonial_independence.9.t:0 "ìrËz±RŠ"
+ jxp_colonial_independence.9.d:0 "ãNhˆìNŠbYt^‰N®‹™QbNýNlQV±RŠÿçe	g²NNIrŽNàeP–Vzÿ*‚ï°‹ÆVmNNIrŽN8lENgÎN0‚YÊNÅV‰˜³QšR±RŠ=f&TêS=fŒ2RfkhV0"
+ jxp_colonial_independence.9.a:0 "©‹±RŠbHN°e„vMe»l‹NžR0"
+ jxp_colonial_independence.9.b:0 "åN8fêINbcÖSgT„vŒTs^0"
+ jxp_colonial_independence.10.t:0 "±RŠKNT"
+ jxp_colonial_independence.10.d:0 "—RINÒbÝub²‹±RŠ0–kl0WïSåNËzsSÝOkS–™œ^ÿIr…VYýV=ecNôf	g)R„vöeHgÿb(WhQb—b‰NMR²dÞVIN.V0"
+ jxp_colonial_independence.10.a:0 "HN–klê»lwb0"
+ jxp_colonial_independence.10.b:0 "HQûRŒbYýV=ecÿb‰Nt1uNOˆm1Y0"
+ jxp_colonial_independence.10.c:0 "²dÞV±RŠÿ¥c×S,gWéy^0"
+ jxp_colonial_independence.20.t:0 "–kl0W„vgT÷‹Ma"
+ jxp_colonial_independence.20.d:0 "wmY®‹-^ŠbzyV0I`¡r08fŒTluQ‰N®‹GlbNýNgT÷‹Ma0bìNïSåNb²‹ê»l¦uàz0ÖSˆm8f„W­e0HVLˆã‰ce®‹-^ÿb©‹ƒRŒTs^»yV0"
+ jxp_colonial_independence.20.a:0 "b²‹ê»l–kl¦uàzN0W¹e®‹-^0"
+ jxp_colonial_independence.20.b:0 "ÖSˆmNVSÿ©‹8fôuû|çe0"
+ jxp_colonial_independence.20.c:0 "ã‰ce®‹-^ÿ>m›Qb`YûN‹TNzyV0"
+ jxp_colonial_independence.20.independence:0 "b²‹ƒRòTbHNìrËzýV¶R0"
+
+ jxp_b_96_independence_crisis_cooldown:0 "àVÚ‹¹eHh„v˜Uo`"
+ jxp_b_96_independence_crisis_cooldown_desc:0 "–kl®‹-^‚föe¥c×S†N,gWéy^ÿŒNASt^…QTNHW‰Nº‹NOËzsSÍ‘o0"
+ jxp_b_96_tax_refusal_modifier:0 "–klz6eÒbÝu"
+ jxp_b_96_tax_refusal_modifier_desc:0 "*g·ƒ0W¹e®‹-^Ta„vzyVm0R‚fÿ0MeŒTéy^Töeb‹S0"
+ jxp_b_96_port_boycott_modifier:0 "=nãSµb6R"
+ jxp_b_96_port_boycott_modifier_desc:0 "x4YÒbÝuHN„W­eFU9‚g¡Rÿ8f×Smcwê»lÄuÇužX•0"
+ jxp_b_96_colonial_militia_modifier:0 "–klluQTM|"
+ jxp_b_96_colonial_militia_modifier_desc:0 "ESlHNqQT2–¡V‰v°‹gyVÿFO•g¨RXTžX R0MeÅb0"
+ jxp_b_96_foreign_support_search:0 "ûRBlYýV=ec"
+ jxp_b_96_foreign_support_search_desc:0 "–kl®‹-^TvQÖNwmCg>mcO‚‚ÿY²NyrxžX Rÿ—RINmNôf Rf‹É‰0"
+ jxp_b_96_loyalist_independent_split:0 "ÝO‡v>mNìrËz>mùRËz"
+ jxp_b_96_loyalist_independent_split_desc:0 "2NÍy*geg(WWˆ÷T0ONbN›Q%„-N‰NHYºNÃV0"
+ jxp_b_96_autonomous_colonial_compact:0 "ê»l–kl¦uàz"
+ jxp_b_96_autonomous_colonial_compact_desc:0 "0W¹e®‹-^Œcác…QèzyVŒTûN‹Tÿ—RINsQû|IN‰ôucqQTY²NNwm2–0"
+ jxp_b_96_trade_independence_compact:0 "8fêIN¦uàz"
+ jxp_b_96_trade_independence_compact_desc:0 "–kl0WêLˆ¡rt8f0=nzNFU¦uÿ,gWNQ«N	g„W­esQz0"
+ jxp_b_96_restored_metropole_control:0 "b`Y,gWµc6R"
+ jxp_b_96_restored_metropole_control_desc:0 "I`¡rÍ‘°eŒcáczŒQŒTûN‹TÿtSÅV‰˜•gb—ùR«ˆã‰ce®‹-^„vµb—b0"
+ jxp_b_96_independence_cb_waits_tt:0 "§Y–klê»lb‰N§!t1uçuíu	gHeÿ,g	y˜NOê¨RVbbMQ9·ƒ—VYýVTßv0"

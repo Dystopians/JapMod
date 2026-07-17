@@ -1,0 +1,121 @@
+# Targeted late-loading overrides for EU4 1.37.5 monarchy reforms.
+# Each copied block keeps its foreign-country behavior and adds only the
+# Japanese-track potential exclusion implemented below.
+
+machiavellianistic_rule_reform = {
+	icon = "machiavellianism"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		stability_cost_to_declare_war = -1
+		ae_impact = 0.15
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+six_livres_reform = {
+	icon = "six_livres"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		years_of_nationalism = -5
+		global_unrest = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+two_treatises_reform = {
+	icon = "two_treaties"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		expand_administration_cost = -1
+		can_revoke_parliament_seats = yes
+		num_accepted_cultures = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+the_leviathan_reform = {
+	icon = "leviathan"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		harsh_treatment_cost = -0.33
+		global_rebel_suppression_efficiency = 0.5
+		reduced_liberty_desire = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+the_social_contract_reform = {
+	icon = "the_social_contract"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { jxp_uses_japanese_government_reform_track_trigger = yes }
+	}
+	#potential = {
+	#	OR = {
+	#		is_revolutionary = no
+	#		NOT = { has_dlc = "Emperor" }
+	#	}
+	#}
+	modifiers = {
+		no_religion_penalty = yes
+		global_unrest = -1
+	}
+	custom_attributes = {
+		enforced_interfaith_dialogue_buff = yes
+	}
+	ai = {
+		factor = 1
+	}
+}

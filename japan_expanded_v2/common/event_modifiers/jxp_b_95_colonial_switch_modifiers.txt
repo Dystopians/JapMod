@@ -1,0 +1,3 @@
+jxp_b_95_colonial_switch_deferred = {
+	diplomatic_reputation = 1
+}

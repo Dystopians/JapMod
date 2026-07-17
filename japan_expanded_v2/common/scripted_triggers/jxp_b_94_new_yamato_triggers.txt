@@ -1,0 +1,164 @@
+jxp_b_94_normal_west_coast_heartland_trigger = {
+	is_random_new_world = no
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 8
+		is_city = yes
+		OR = {
+			colonial_region = colonial_california
+			colonial_region = colonial_alaska
+			region = california_region
+			region = cascadia_region
+		}
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		is_city = yes
+		has_port = yes
+		OR = {
+			colonial_region = colonial_california
+			colonial_region = colonial_alaska
+			region = california_region
+			region = cascadia_region
+		}
+	}
+}
+
+jxp_b_94_rnw_west_coast_heartland_trigger = {
+	is_random_new_world = yes
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 8
+		continent = new_world
+		is_city = yes
+	}
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 3
+		continent = new_world
+		is_city = yes
+		has_port = yes
+	}
+}
+
+jxp_b_94_west_coast_heartland_trigger = {
+	OR = {
+		jxp_b_94_normal_west_coast_heartland_trigger = yes
+		jxp_b_94_rnw_west_coast_heartland_trigger = yes
+	}
+}
+
+jxp_b_94_west_coast_capital_trigger = {
+	OR = {
+		AND = {
+			is_random_new_world = no
+			capital_scope = {
+				OR = {
+					colonial_region = colonial_california
+					colonial_region = colonial_alaska
+					region = california_region
+					region = cascadia_region
+				}
+			}
+		}
+		AND = {
+			is_random_new_world = yes
+			capital_scope = { continent = new_world }
+		}
+	}
+}
+
+jxp_b_94_northern_reach_trigger = {
+	OR = {
+		AND = {
+			is_random_new_world = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				is_city = yes
+				has_port = yes
+				OR = {
+					colonial_region = colonial_alaska
+					region = cascadia_region
+				}
+			}
+		}
+		AND = {
+			is_random_new_world = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				continent = new_world
+				is_city = yes
+				has_port = yes
+			}
+		}
+	}
+}
+
+jxp_b_94_foundation_age_trigger = {
+	OR = {
+		current_age = age_of_reformation
+		current_age = age_of_absolutism
+		current_age = age_of_revolutions
+	}
+}
+
+jxp_b_94_can_form_new_yamato_trigger = {
+	NOT = { tag = NYA }
+	NOT = { exists = NYA }
+	NOT = { has_country_flag = jxp_b_94_new_yamato_formed }
+	jxp_b_91_colonial_society_active_trigger = yes
+	jxp_b_94_west_coast_capital_trigger = yes
+	jxp_b_94_west_coast_heartland_trigger = yes
+	total_development = 120
+	jxp_b_91_colonial_identity_at_least_65_trigger = yes
+	OR = {
+		jxp_b_91_metropole_control_below_40_trigger = yes
+		is_subject = no
+	}
+	is_at_war = no
+	jxp_b_94_foundation_age_trigger = yes
+}
+
+jxp_b_94_has_constitution_trigger = {
+	OR = {
+		has_reform = jxp_b_94_federal_assembly_reform
+		has_reform = jxp_b_94_frontier_military_republic_reform
+		has_reform = jxp_b_94_merchant_commonwealth_reform
+		has_reform = jxp_b_94_oceanic_monarchy_reform
+		has_country_flag = jxp_b_94_constitution_chosen
+	}
+}
+
+jxp_b_94_stable_public_credit_trigger = {
+	NOT = { inflation = 5 }
+	NOT = { corruption = 0.05 }
+	treasury = 500
+}
+
+jxp_b_94_public_legitimacy_trigger = {
+	OR = {
+		AND = {
+			government = republic
+			republican_tradition = 70
+		}
+		AND = {
+			government = monarchy
+			legitimacy = 70
+		}
+	}
+}
+
+jxp_b_94_has_east_asian_contact_trigger = {
+	OR = {
+		has_country_flag = jxp_iface_b_nya_eastward_contact
+		any_known_country = {
+			jxp_is_japanese_polity_trigger = yes
+		}
+		any_owned_province = {
+			has_port = yes
+			OR = {
+				continent = asia
+				region = oceanea_region
+				region = indonesia_region
+				region = malaya_region
+			}
+		}
+	}
+}

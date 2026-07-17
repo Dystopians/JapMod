@@ -1,0 +1,7 @@
+# Dormant identity shell. Formation inherits the founding country's land,
+# ruler, culture, religion, and capital; this file grants no province or core.
+government = republic
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese

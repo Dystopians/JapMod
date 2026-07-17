@@ -1,0 +1,56 @@
+# Generated historical daimyo country definition.
+graphical_culture = asiangfx
+color = { 27 125 61 }
+revolutionary_colors = { 8 1 8 }
+
+historical_idea_groups = {
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	quality_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"ïÜ^ #0" = 80
+	"INEN #0" = 40
+	"tf·O #0" = 40
+	"Üñck #0" = 40
+	"ck·O #0" = 40
+	"∑V #0" = -5
+	"Îu #0" = -5
+}
+
+leader_names = { 	NãY ãe‰Ö !nπè Óh —è‰Ö gËê RëïN MñËê O‰Ö ÖQ‰Ö 'YEN›O ,gY ûES }
+ship_names = {
+	"MiyoshiAkebonoMaru" "MiyoshiAsahiMaru" "MiyoshiAkatsukiMaru" "MiyoshiHachimanMaru"
+	"MiyoshiSumiyoshiMaru" "MiyoshiKasugaMaru" "MiyoshiMatsukazeMaru" "MiyoshiWakabaMaru"
+	"MiyoshiShiranuiMaru" "MiyoshiChihayaMaru" "MiyoshiHayabusaMaru" "MiyoshiKongoMaru"
+	"MiyoshiFusoMaru" "MiyoshiYamashiroMaru" "MiyoshiMusashiMaru" "MiyoshiNagatoMaru"
+	"MiyoshiMutsuMaru" "MiyoshiAkiMaru" "MiyoshiSettsuMaru" "MiyoshiKawachiMaru"
+	"MiyoshiHizenMaru" "MiyoshiSatsumaMaru" "MiyoshiSuwoMaru" "MiyoshiSagamiMaru"
+	"MiyoshiTangoMaru" "MiyoshiHarunaMaru" "MiyoshiKirishimaMaru" "MiyoshiTakaoMaru"
+	"MiyoshiAtagoMaru" "MiyoshiChokaiMaru" "MiyoshiMayaMaru" "MiyoshiAobaMaru"
+}
+army_names = {
+	"	NãY Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Ichi no Te" "Ni no Te" "San no Te" "Hata Bugyo Shu" "Kiba Shu" "Teppo Shu"
+}
+fleet_names = {
+	"	NãY Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "Ichi no Fune"
+	"Ni no Fune" "San no Fune" "Ura Shu" "Oki Shu" "Hayafune Shu" "Sekibune Shu"
+}

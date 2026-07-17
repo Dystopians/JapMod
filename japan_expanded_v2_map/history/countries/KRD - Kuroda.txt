@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = kyushuan
+religion = shinto
+technology_group = chinese
+capital = 1818
+
+1600.10.21 = {
+	set_country_flag = jxp_map_origin_krd
+}
+
+1600.10.21 = {
+	monarch = {
+		name = "•Me"
+		dynasty = "Ñž0u"
+		birth_date = 1570.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+}

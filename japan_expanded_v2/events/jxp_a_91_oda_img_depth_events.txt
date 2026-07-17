@@ -1,0 +1,608 @@
+namespace = jxp_daimyo_depth
+
+# Oda depth events: 1-8.
+country_event = {
+	id = jxp_daimyo_depth.1
+	title = "jxp_daimyo_depth.1.t"
+	desc = "jxp_daimyo_depth.1.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.1.a"
+		add_legitimacy = 5
+		add_country_modifier = {
+			name = jxp_a_oda_kiyosu_conciliation
+			duration = 3650
+		}
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.1.b"
+		add_adm_power = 50
+		add_prestige = -5
+		add_country_modifier = {
+			name = jxp_a_oda_kiyosu_central_bureau
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 1.5 stability = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.2
+	title = "jxp_daimyo_depth.2.t"
+	desc = "jxp_daimyo_depth.2.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.2.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_oda_kokujin_compact
+			duration = 5475
+		}
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.2.b"
+		add_mil_power = 40
+		add_legitimacy = -5
+		add_country_modifier = {
+			name = jxp_a_oda_forced_roster
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 35
+			modifier = { factor = 1.5 is_at_war = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.3
+	title = "jxp_daimyo_depth.3.t"
+	desc = "jxp_daimyo_depth.3.d"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = jxp_a_oda_legion_autonomy
+		clr_country_flag = jxp_a_oda_direct_magistrates
+	}
+	option = {
+		name = "jxp_daimyo_depth.3.a"
+		set_country_flag = jxp_a_oda_legion_autonomy
+		jxp_a_mark_house_mass_mobilization_ready_effect = yes
+		add_mil_power = 50
+		add_country_modifier = {
+			name = jxp_a_oda_legion_autonomy
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 45
+			modifier = { factor = 1.5 army_tradition = 35 }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.3.b"
+		set_country_flag = jxp_a_oda_direct_magistrates
+		jxp_a_mark_house_logistics_ready_effect = yes
+		add_adm_power = 50
+		add_country_modifier = {
+			name = jxp_a_oda_direct_magistrates
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 55
+			modifier = { factor = 1.5 stability = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.4
+	title = "jxp_daimyo_depth.4.t"
+	desc = "jxp_daimyo_depth.4.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.4.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_oda_surrendered_assurance
+			duration = 5475
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.4.b"
+		add_treasury = 100
+		add_country_modifier = {
+			name = jxp_a_oda_confiscated_fiefs
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 0.5 legitimacy = 70 }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.4.c"
+		add_adm_power = -25
+		change_government_reform_progress = 25
+		add_country_modifier = {
+			name = jxp_a_oda_reassigned_fiefs
+			duration = 5475
+		}
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.5
+	title = "jxp_daimyo_depth.5.t"
+	desc = "jxp_daimyo_depth.5.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		jxp_a_clear_oda_government_choice_effect = yes
+		set_country_flag = jxp_a_oda_government_terminal_unlocked
+	}
+	option = {
+		name = "jxp_daimyo_depth.5.a"
+		set_country_flag = jxp_a_oda_government_azuchi
+		jxp_a_mark_house_government_ready_effect = yes
+		add_adm_power = 50
+		regenerate_government_mechanics = yes
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 1.5 has_country_flag = jxp_a_oda_direct_magistrates }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.5.b"
+		set_country_flag = jxp_a_oda_government_legion_domains
+		jxp_a_mark_house_government_ready_effect = yes
+		jxp_a_mark_house_mass_mobilization_ready_effect = yes
+		add_mil_power = 50
+		regenerate_government_mechanics = yes
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2 has_country_flag = jxp_a_oda_legion_autonomy }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.5.c"
+		set_country_flag = jxp_a_oda_government_ashikaga_protectorate
+		jxp_a_mark_house_government_ready_effect = yes
+		add_dip_power = 50
+		jxp_add_imperial_sanction_5_effect = yes
+		regenerate_government_mechanics = yes
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 1.5 diplomatic_reputation = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.6
+	title = "jxp_daimyo_depth.6.t"
+	desc = "jxp_daimyo_depth.6.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.6.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_oda_sect_concord
+			duration = 5475
+		}
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.6.b"
+		add_adm_power = -25
+		add_country_modifier = {
+			name = jxp_a_oda_sect_regulation
+			duration = 5475
+		}
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.6.c"
+		add_mil_power = 35
+		add_country_modifier = {
+			name = jxp_a_oda_sect_suppression
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 15
+			modifier = { factor = 2 religious_unity = 0.70 }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.7
+	title = "jxp_daimyo_depth.7.t"
+	desc = "jxp_daimyo_depth.7.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_at_war = yes
+					NOT = { legitimacy = 60 }
+					has_country_flag = jxp_a_oda_legion_autonomy
+					AND = { is_year = 1582 NOT = { is_year = 1584 } }
+				}
+			}
+			set_country_flag = jxp_a_oda_honnoji_high_risk
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.7.a"
+		trigger = {
+			OR = {
+				NOT = { has_country_flag = jxp_a_oda_honnoji_high_risk }
+				AND = { stability = 1 legitimacy = 70 }
+			}
+		}
+		add_dip_power = -50
+		add_country_modifier = {
+			name = jxp_a_oda_honnoji_managed
+			duration = 7300
+		}
+		clr_country_flag = jxp_a_oda_honnoji_high_risk
+		ai_chance = { factor = 55 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.7.b"
+		add_treasury = -200
+		add_mil_power = -50
+		add_stability = 1
+		add_country_modifier = {
+			name = jxp_a_oda_honnoji_averted
+			duration = 9125
+		}
+		clr_country_flag = jxp_a_oda_honnoji_high_risk
+		ai_chance = {
+			factor = 45
+			modifier = { factor = 2 has_country_flag = jxp_a_oda_honnoji_high_risk }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.8
+	title = "jxp_daimyo_depth.8.t"
+	desc = "jxp_daimyo_depth.8.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	immediate = { jxp_a_clear_oda_succession_choice_effect = yes }
+	option = {
+		name = "jxp_daimyo_depth.8.a"
+		jxp_a_mark_house_government_ready_effect = yes
+		add_legitimacy = 10
+		add_country_modifier = {
+			name = jxp_a_oda_succession_direct
+			duration = -1
+		}
+		ai_chance = {
+			factor = 35
+			modifier = { factor = 1.5 has_heir = yes }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.8.b"
+		jxp_a_mark_house_government_ready_effect = yes
+		change_government_reform_progress = 50
+		add_country_modifier = {
+			name = jxp_a_oda_succession_council
+			duration = -1
+		}
+		ai_chance = { factor = 30 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.8.c"
+		set_country_flag = jxp_a_oda_succession_toyotomi
+		jxp_a_mark_house_government_ready_effect = yes
+		add_adm_power = 75
+		add_prestige = -10
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 is_year = 1586 }
+		}
+	}
+	option = {
+		name = "jxp_daimyo_depth.8.d"
+		jxp_a_mark_house_government_ready_effect = yes
+		jxp_a_mark_house_mass_mobilization_ready_effect = yes
+		add_country_modifier = {
+			name = jxp_a_oda_succession_federation
+			duration = -1
+		}
+		ai_chance = {
+			factor = 15
+			modifier = { factor = 2 has_country_flag = jxp_a_oda_legion_autonomy }
+		}
+	}
+}
+
+# Imagawa depth events: 101-108.
+country_event = {
+	id = jxp_daimyo_depth.101
+	title = "jxp_daimyo_depth.101.t"
+	desc = "jxp_daimyo_depth.101.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.101.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_img_jukeini_consensus
+			duration = 5475
+		}
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.101.b"
+		add_adm_power = 40
+		add_legitimacy = -5
+		add_country_modifier = {
+			name = jxp_a_img_jukeini_seal_rule
+			duration = 5475
+		}
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.102
+	title = "jxp_daimyo_depth.102.t"
+	desc = "jxp_daimyo_depth.102.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.102.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_img_sessai_envoys
+			duration = 7300
+		}
+		jxp_a_mark_house_diplomacy_ready_effect = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.102.b"
+		add_mil_power = 40
+		add_prestige = -5
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 1.5 is_at_war = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.103
+	title = "jxp_daimyo_depth.103.t"
+	desc = "jxp_daimyo_depth.103.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.103.a"
+		add_dip_power = -30
+		add_prestige = 10
+		add_country_modifier = {
+			name = jxp_a_img_eastern_arbitration
+			duration = 7300
+		}
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.103.b"
+		add_mil_power = 45
+		add_legitimacy = -5
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.104
+	title = "jxp_daimyo_depth.104.t"
+	desc = "jxp_daimyo_depth.104.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.104.a"
+		add_dip_power = -25
+		add_country_modifier = {
+			name = jxp_a_img_matsudaira_assurance
+			duration = 7300
+		}
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.104.b"
+		add_mil_power = 40
+		add_prestige = -5
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.105
+	title = "jxp_daimyo_depth.105.t"
+	desc = "jxp_daimyo_depth.105.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.105.a"
+		add_dip_power = -35
+		add_country_modifier = {
+			name = jxp_a_img_hostage_network
+			duration = 9125
+		}
+		jxp_a_mark_house_diplomacy_ready_effect = yes
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.105.b"
+		add_mil_power = 50
+		add_legitimacy = -5
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.106
+	title = "jxp_daimyo_depth.106.t"
+	desc = "jxp_daimyo_depth.106.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.106.a"
+		add_adm_power = -25
+		add_country_modifier = {
+			name = jxp_a_img_adoption_registers
+			duration = 9125
+		}
+		jxp_a_mark_house_diplomacy_ready_effect = yes
+		ai_chance = { factor = 65 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.106.b"
+		add_legitimacy = 10
+		add_prestige = -5
+		ai_chance = { factor = 35 }
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.107
+	title = "jxp_daimyo_depth.107.t"
+	desc = "jxp_daimyo_depth.107.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.107.a"
+		add_dip_power = -35
+		add_country_modifier = {
+			name = jxp_a_img_alliance_readiness
+			duration = 7300
+		}
+		jxp_a_mark_house_diplomacy_ready_effect = yes
+		ai_chance = { factor = 70 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.107.b"
+		add_mil_power = 50
+		add_prestige = -5
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 1.5 is_at_war = yes }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_daimyo_depth.108
+	title = "jxp_daimyo_depth.108.t"
+	desc = "jxp_daimyo_depth.108.d"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_daimyo_depth.108.a"
+		trigger = {
+			OR = {
+				prestige = 30
+				army_tradition = 30
+			}
+		}
+		add_mil_power = 75
+		add_country_modifier = {
+			name = jxp_a_img_okehazama_victory
+			duration = 9125
+		}
+		ai_chance = { factor = 25 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.108.b"
+		add_prestige = -10
+		add_country_modifier = {
+			name = jxp_a_img_ordered_retreat
+			duration = 5475
+		}
+		jxp_a_mark_house_logistics_ready_effect = yes
+		ai_chance = { factor = 35 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.108.c"
+		trigger = {
+			OR = {
+				NOT = { legitimacy = 60 }
+				has_heir = no
+			}
+		}
+		add_adm_power = 50
+		add_country_modifier = {
+			name = jxp_a_img_ujizane_reconstruction
+			duration = -1
+		}
+		jxp_a_mark_house_logistics_ready_effect = yes
+		ai_chance = { factor = 25 }
+	}
+	option = {
+		name = "jxp_daimyo_depth.108.d"
+		add_dip_power = 50
+		add_prestige = -10
+		add_country_modifier = {
+			name = jxp_a_img_tokaido_league
+			duration = -1
+		}
+		jxp_a_mark_house_diplomacy_ready_effect = yes
+		jxp_a_mark_house_logistics_ready_effect = yes
+		ai_chance = { factor = 15 }
+	}
+}
+
+# Lifecycle repair for campaigns loaded after a tag/government transition.
+country_event = {
+	id = jxp_daimyo_depth.190
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = jxp_a_oda_government_terminal_unlocked
+			has_reform = jxp_a_oda_azuchi_magistracy_reform
+			has_reform = jxp_a_oda_legion_domains_reform
+			has_reform = jxp_a_oda_ashikaga_protectorate_reform
+		}
+	}
+	immediate = { jxp_a_reconcile_oda_government_effect = yes }
+	option = { name = "OK" }
+}

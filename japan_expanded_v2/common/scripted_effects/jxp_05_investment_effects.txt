@@ -1,0 +1,150 @@
+jxp_start_tenka_investment_effect = {
+	add_adm_power = -75
+	add_treasury = -75
+	add_country_modifier = {
+		name = jxp_invest_domain_registers
+		duration = 1095
+	}
+	hidden_effect = {
+		jxp_ensure_polity_mechanic_effect = yes
+		set_country_flag = jxp_investment_active
+		set_country_flag = jxp_invest_tenka_active
+		set_variable = { which = jxp_invest_tenka_years value = 0 }
+		country_event = { id = jxp_investment.1 days = 365 }
+	}
+}
+
+jxp_start_court_investment_effect = {
+	add_dip_power = -75
+	add_treasury = -75
+	add_country_modifier = {
+		name = jxp_invest_court_patronage
+		duration = 1095
+	}
+	hidden_effect = {
+		jxp_ensure_polity_mechanic_effect = yes
+		set_country_flag = jxp_investment_active
+		set_country_flag = jxp_invest_court_active
+		set_variable = { which = jxp_invest_court_years value = 0 }
+		country_event = { id = jxp_investment.1 days = 365 }
+	}
+}
+
+jxp_start_oceanic_investment_effect = {
+	add_dip_power = -75
+	add_treasury = -75
+	add_country_modifier = {
+		name = jxp_invest_translation_house
+		duration = 1095
+	}
+	hidden_effect = {
+		jxp_ensure_polity_mechanic_effect = yes
+		set_country_flag = jxp_investment_active
+		set_country_flag = jxp_invest_oceanic_active
+		set_variable = { which = jxp_invest_oceanic_years value = 0 }
+		country_event = { id = jxp_investment.1 days = 365 }
+	}
+}
+
+jxp_cancel_all_investments_effect = {
+	clr_country_flag = jxp_investment_active
+	clr_country_flag = jxp_invest_tenka_active
+	clr_country_flag = jxp_invest_court_active
+	clr_country_flag = jxp_invest_oceanic_active
+	set_variable = { which = jxp_invest_tenka_years value = 0 }
+	set_variable = { which = jxp_invest_court_years value = 0 }
+	set_variable = { which = jxp_invest_oceanic_years value = 0 }
+	remove_country_modifier = jxp_invest_domain_registers
+	remove_country_modifier = jxp_invest_court_patronage
+	remove_country_modifier = jxp_invest_translation_house
+}
+
+jxp_finish_tenka_investment_effect = {
+	clr_country_flag = jxp_investment_active
+	clr_country_flag = jxp_invest_tenka_active
+	set_variable = { which = jxp_invest_tenka_years value = 0 }
+	remove_country_modifier = jxp_invest_domain_registers
+	country_event = { id = jxp_investment.10 days = 1 }
+}
+
+jxp_finish_court_investment_effect = {
+	clr_country_flag = jxp_investment_active
+	clr_country_flag = jxp_invest_court_active
+	set_variable = { which = jxp_invest_court_years value = 0 }
+	remove_country_modifier = jxp_invest_court_patronage
+	country_event = { id = jxp_investment.11 days = 1 }
+}
+
+jxp_finish_oceanic_investment_effect = {
+	clr_country_flag = jxp_investment_active
+	clr_country_flag = jxp_invest_oceanic_active
+	set_variable = { which = jxp_invest_oceanic_years value = 0 }
+	remove_country_modifier = jxp_invest_translation_house
+	country_event = { id = jxp_investment.12 days = 1 }
+}
+
+jxp_progress_tenka_investment_effect = {
+	if = {
+		limit = {
+			jxp_is_japanese_polity_trigger = yes
+			has_country_flag = jxp_invest_tenka_active
+		}
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_tenka_order_5_effect = yes
+		change_variable = { which = jxp_invest_tenka_years value = 1 }
+		if = {
+			limit = { check_variable = { which = jxp_invest_tenka_years value = 3 } }
+			jxp_finish_tenka_investment_effect = yes
+		}
+		else = {
+			country_event = { id = jxp_investment.1 days = 365 }
+		}
+	}
+	else = {
+		jxp_cancel_all_investments_effect = yes
+	}
+}
+
+jxp_progress_court_investment_effect = {
+	if = {
+		limit = {
+			jxp_is_japanese_polity_trigger = yes
+			has_country_flag = jxp_invest_court_active
+		}
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		change_variable = { which = jxp_invest_court_years value = 1 }
+		if = {
+			limit = { check_variable = { which = jxp_invest_court_years value = 3 } }
+			jxp_finish_court_investment_effect = yes
+		}
+		else = {
+			country_event = { id = jxp_investment.1 days = 365 }
+		}
+	}
+	else = {
+		jxp_cancel_all_investments_effect = yes
+	}
+}
+
+jxp_progress_oceanic_investment_effect = {
+	if = {
+		limit = {
+			jxp_is_japanese_polity_trigger = yes
+			has_country_flag = jxp_invest_oceanic_active
+		}
+		jxp_ensure_polity_mechanic_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		change_variable = { which = jxp_invest_oceanic_years value = 1 }
+		if = {
+			limit = { check_variable = { which = jxp_invest_oceanic_years value = 3 } }
+			jxp_finish_oceanic_investment_effect = yes
+		}
+		else = {
+			country_event = { id = jxp_investment.1 days = 365 }
+		}
+	}
+	else = {
+		jxp_cancel_all_investments_effect = yes
+	}
+}

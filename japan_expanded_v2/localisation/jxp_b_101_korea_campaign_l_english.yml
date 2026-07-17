@@ -1,0 +1,203 @@
+﻿l_english:
+ cb_jxp_b_101_korean_expedition:0 "!nwmyV"
+ cb_jxp_b_101_korean_expedition_desc:0 "(W‹N0®|S0Ð“9‚Nø‹¶R›QyVGWòTšRKNTÿåe,gïSùRgœœÑS¨RN!kãN÷NØšf„v!nwmÜV0dkb‰Nv^NÏQMQTv^W0W„vv`TNŒT¦uãN÷NÿFU0ÝO²b0ã^Sbôv¥cßu»lÿGW‰˜åNžRE–bœgbcÖS0"
+ jxp_b_101_korean_expedition_wargoal:0 "IeÖSgœœ‹s¬N"
+ jxp_b_101_korean_expedition_wargoal_desc:0 "åNgœœ‹s¬NHN›Q‹Nîvh0HY0WNãgÍN	cck8^ŒT¦u¡‹—rÿN'YÄ‰!jTv^SbÅbôfØšv`TNbR0"
+ JXP_B_101_KOREAN_EXPEDITION_WAR_NAME:0 "$ORDER$$FIRST$!nwmyV"
+
+ jxp_b_101_prepare_tsushima_interpreters_decision_title:0 "nùRlš‹N"
+ jxp_b_101_prepare_tsushima_interpreters_decision_desc:0 "ÜVå‚ÞwmáS|V¸S„vfN-gýû‹Nf‹vÿuQ9‚QYmNêSOvšeQ÷þ–0HQÎNùRlš0ZSYN-P†™ìSÆ–‹Nÿtetgœœ˜Rðy0Sï0=nŒnŒT<yêN0"
+ jxp_b_101_dispatch_korean_envoys_decision_title:0 "cgœœáOO"
+ jxp_b_101_dispatch_korean_envoys_decision_desc:0 "(WÔbRåNMRÿHQåNýVfNÕ‹¢c‹s¬N0O‚‚âe‰.O¾‰BlÿmN‰&^ÞVgœœg÷^00W¹e˜RN¹SùRåe,gaþV„v2R­e0"
+ jxp_b_101_demand_passage_or_tribute_decision_title:0 "0tÖSGPSNg!"
+ jxp_b_101_demand_passage_or_tribute_decision_desc:0 "TgœœÐcúQŽV'YF–„vGPS0›Q®|N<yêNb²‹0àeº‹ùR¹eTr”^Ø=fÒbÝuÿÙSýVfNýOOwmáSY²NŠÇ¾–åNÞV4Y„vLu¿u0"
+ jxp_b_101_build_nagoya_logistics_decision_title:0 "QrT²bKSuQÙz"
+ jxp_b_101_build_nagoya_logistics_decision_desc:0 "(W¥wMRT²bKSb³åNÿfãNƒR„v‰ýV=n%mîOQrÓNê^09‚^W0%„0WN›Q®‹Nb0ÜV'Y›QÅV‰˜HQ(Wåe,gNµOfRO‚YUOTm™0"
+ jxp_b_101_register_transport_fleet_decision_title:0 ".Ð“9‚TM|"
+ jxp_b_101_register_transport_fleet_decision_desc:0 "VÑS9‚IN05‚KbŒT4l+YÿŠb›Q9‚0®|9‚Nlš9‚N‰v°‹0!nwmyV„vÄ‰!jÿgÈu×S6RŽNýw(WÎ˜jm-NŽVÔYS!k0"
+ jxp_b_101_stockpile_campaign_grain_decision_title:0 "ïy.!nwm›Q®|"
+ jxp_b_101_stockpile_campaign_grain_decision_desc:0 "ÎNø‹ýVpNÆ–s|0Ðv0r^|œ0oƒPgŒTóu0tÿQ	c9‚–N›Q¿RRÓN0ÓNê^-N„vÏkNóws|ÿý=f,gWŒvÓYŒTýV“^HQLˆbÅb„vb‰N0"
+ jxp_b_101_assemble_siege_train_decision_title:0 "teYIeÎWhV°h"
+ jxp_b_101_assemble_siege_train_decision_desc:0 "kp®p0Á”®p0åT.SŒT˜c+YÅV‰˜–9‚!nwm0gœœqSÎWNOàVN¸u„j‡eVè•ÿIeÎW–mNNýw`—4N5–d.RíQzzúQ°s0"
+ jxp_b_101_muster_daimyo_levies_decision_title:0 "¹pÆ–ø‹'YT›QyV"
+ jxp_b_101_muster_daimyo_levies_decision_desc:0 "Šbø‹¶R”^úQ„vuQ˜09‚êS0›Q®|NnbcgP–™QeQ›QyV^0ÏkN=e›Q¿Rý&^Nw,g¶R„vcƒ‰ŠÿmN&^Nw‰NŸR0Öbö^ŒTÝOXRžR›R„v—rØv0"
+ jxp_b_101_organize_naval_escort_decision_title:0 "bwmáS²b*‚"
+ jxp_b_101_organize_naval_escort_decision_desc:0 "Ð“9‚å‚àeb9‚²bÿÜ‘qSåNS„vÏkN‹ˆs|ýïSýw‰leQwm-N04l›Q‰˜áTˆRùRlšwmáSÿv^„˜Yb—ùRgœœ4l^„vÍSûQ0"
+ jxp_b_101_assess_ming_response_decision_title:0 "Ä‹0OfgÍS”^"
+ jxp_b_101_assess_ming_response_decision_desc:0 "gœœv^^—dR¬`wmY„vSýV0S¬NbÛv¬N‚YUOw…VJS›SbkpÿïSýw³QšRÜVb—ùR„v=fNýVÿØ=fte*N'YF–„vôc›QNY²N‹S›R0"
+
+ jxp_b_101_prepare_tsushima_interpreters_effect_tt:0 "‹NSŠbwmáSí‹Š0SïNY²N<yêNtetbÜVNb—„v,rNybÅ`¥b0"
+ jxp_b_101_dispatch_korean_envoys_effect_tt:0 "O‚‚SÐcØšÜV„vY²NÆQYÿv^ÃOOø‹¶R²‹ww…VýVfNŽVÔ0"
+ jxp_b_101_demand_passage_or_tribute_effect_tt:0 "ùRgœœ„vckV‰BlSnxšRVbÙS‹NÿTöeO©‹ØS—VôfHNðV¾–0"
+ jxp_b_101_build_nagoya_logistics_effect_tt:0 "‰ýVuQÙzS9e„UÐ“N®|ãyÄuÇuÿv^(W	šR=n%mYuN•g›Q—Åb0"
+ jxp_b_101_register_transport_fleet_effect_tt:0 "Ð“9‚04l+YN9‚INS«ˆ³ueQßuNTM|ÿ!nwmýw›R>fW„žXHV0"
+ jxp_b_101_stockpile_campaign_grain_effect_tt:0 "ýV“^-eQ„v›Q®|S=ecÜVµuñmÿFO,gW0MeòTÏuHNdkØNúQØšfãN÷N0"
+ jxp_b_101_assemble_siege_train_effect_tt:0 "kp®p0åT.SŒTIeÎWhVwQS–›Q!nwmÿãN÷N1u›Q9NÐ“qQTbÅb0"
+ jxp_b_101_muster_daimyo_levies_effect_tt:0 "ø‹¶R›Q¿RSO›QyV^Æ–ÓuÿuQ›RžX R„vTöeÿßu^ÅV‰˜ôuc'YTgÎN0"
+ jxp_b_101_organize_naval_escort_effect_tt:0 "4l›Q²b*‚S RHVwmáSµc6RÿmNOˆmw'YÏ‘4lKbN9‚90"
+ jxp_b_101_assess_ming_response_effect_tt:0 "ŒRb'YF–ÍS”^Ä‹0OTÿASt^…QïSÑS¨R!nwmyVÿå‚ßßNVbÿuQÙzN›QyVSêLˆã‰ce0"
+
+ jxp_korea_campaign.940.t:0 "!nwmyVÑvt"
+ jxp_korea_campaign.940.d:0 "uQÙzIYLˆçuíu8hùRwmáSbµQ0"
+ jxp_korea_campaign.940.a:0 "gqâešR›QäNžRt0"
+ jxp_korea_campaign.941.t:0 "jPbÑvt"
+ jxp_korea_campaign.941.d:0 "IYLˆOIr…Vgœœb‹N„vgÈuŒT¦u0"
+ jxp_korea_campaign.941.a:0 "…VbkpjPo`Q®‹„UT0"
+
+ jxp_korea_campaign.100.t:0 "gœœ„vTrY"
+ jxp_korea_campaign.100.d:0 "‹s¬NÒbÝuåNåe,gNb‰Bl„v¹eVV>eSïNg!0gœœ˜RXTc1b¹eýVfNíPŠ<y6Rÿ¹SS•=n%mÿlô•RVËYlûy®|ß˜0Y²N4xÂˆòTÏuSjObkpÿFO›Q-NÍN(W‰Nº‹ÿbìNvzßz‰ëOùR¹eÍ‘V²NÿØ=fåNuQ•9e™QJS›Séy^ÿ"
+ jxp_korea_campaign.100.a:0 "Í‘3u	gP–‰Blÿ%Ny›QëXpbl0"
+ jxp_korea_campaign.100.b:0 "âeòT!nwmÿ¿O©‹uQ•jOTr0"
+ jxp_korea_campaign.101.t:0 "Ü‘qS‰vF–"
+ jxp_korea_campaign.101.d:0 "HQ4Y9‚–(WÜ‘qSYwm>eNS‚ÿÁ”®p³‰0lš9SŒT®|‹ˆ2cánén4Y0(ŒNaxS‹ïSåNÝOhQ›QDÿtSOÙuˆR›QôfYöeô•ÿ%`Ie=nÎWRïSýw¢b—VHQHgÿmNïSýwŠbëXuQŒTŽÍ‘Yu(Wno4lÌ‘0"
+ jxp_korea_campaign.101.a:0 "RybxS‹ÿHQúVén4YNÓNHW0"
+ jxp_korea_campaign.101.b:0 "ˆR›Q*gÆ–ÿËzsSzeQ=nÎW0"
+ jxp_korea_campaign.102.t:0 "®|STSö^8O"
+ jxp_korea_campaign.102.d:0 "›Q¿R»yÜ‘qSŠÜÿÏkNóws|1S‰ÏuÇôfY9‚êS0nšlšNl+Y0Sï«ˆè–4l²QÁkÿÓNHW—‰ˆRuQÿ0W¹eµb—bmNVËY­ˆûQS–Ð“0T²bKS„vánÓNNýwê¨RØSbIlÎWÎWN„vZfm™0"
+ jxp_korea_campaign.102.a:0 "žX¾‹ÓNÙzÿåNýV“^ôuc®|S0"
+ jxp_korea_campaign.102.b:0 "¬P›Q1S0WyrªcÿHQÝO¨cÛ¦^0"
+ jxp_korea_campaign.103.t:0 "gœœ0W¹eµb—b"
+ jxp_korea_campaign.103.d:0 "0W¹e˜R0INuQ0çP±ONaNl(WqSSô•ÄuÇuµb—b0ÖNìNŸq‰`!nãSŒT®|ÓNÿmNåwSUOöeTb›QHy1V0UOöe*bNgK„USëXRS0å‚åNŒ2R06epNŒTªu‹V‰NÖSTjOÿÛ›QOôfbaÿå‚åN¥bY‹SgaNÌ‘ÿÇNh`SÔkûNUOÎW™Xôf•EN0"
+ jxp_korea_campaign.103.a:0 "¦umg›Q–ÿN0W¹e˜Rl¢‹Ëz²blag>k0"
+ jxp_korea_campaign.103.b:0 "åN%Nw‘¥bY—Qa¿lµb—b0"
+ jxp_korea_campaign.104.t:0 "gœœ4l›QÍSûQ"
+ jxp_korea_campaign.104.d:0 "gœœ4l^VF–›Q•’‚ÿlw­ˆûQwmáS®|9‚NceV„v²b*‚–0Ÿq‰`›SS0noPlŒTír4lS„v0‚–³åN©‹NHWF–NÜw)R(We™™-N1Y»SaIN0"
+ jxp_korea_campaign.104.a:0 "Æ–-N²b*‚0‚–ÿNKN‰NHYÑwm0"
+ jxp_korea_campaign.104.b:0 "Rce*‚¿uÿb×S9‚mcåNÝOF–›Q¨cÛ0"
+ jxp_korea_campaign.105.t:0 "'YF–ôc›Q„v4–qV"
+ jxp_korea_campaign.105.d:0 "JS›S%`OòTSb¥bŽV'YF–0àeº‹egôcw¬`f×eØ=fn×eÿN*NHV'Y„v'YF–g÷^ýNO‰f¹RÍVåe,g›Q–•g‰š(Wgœœ0ôc›Q0®|w™ŒT°e„vb‰NPãSck(WS¹eÆ–Óu0"
+ jxp_korea_campaign.105.a:0 "åNO‚‚ŒT<yirRS'YF–Ngœœ0"
+ jxp_korea_campaign.105.b:0 "žX>m›Q¿RÿÆQYÎb'YF–ôc›Q0"
+ jxp_korea_campaign.106.t:0 "gœœKN¬Q"
+ jxp_korea_campaign.106.d:0 "SÎ˜»QÓuSïÿëXRS„vIƒ‹—0^÷rN„…cˆàeÕlµb¡VJS›SÒR¬Q0å‚¨R(u¨P®|ŒTö”±”îOQr¬Q%„ÿIe¿R¿O‰˜‚fÿå‚çuíu¬P›Qÿ»Q2ON¡NSkXán›QyV^0"
+ jxp_korea_campaign.106.a:0 "ÑS>e¨P®|ÿîOQrZWúV¬Q%„0"
+ jxp_korea_campaign.106.b:0 "N¸‹jPekÿmc1Y1uT›Qêt0"
+ jxp_korea_campaign.107.t:0 "%„-N«uÅu"
+ jxp_korea_campaign.107.d:0 "åb2c%„0W0al4l0P%®|ß˜N•Ð“qQTËnu«uÅu0IS^‰Bl”–»yÅu%„v^qÁk×SÓgirDÿø‹StSÅbÃVjP›QO©‹LeºNÍ‘°eÆ–Óu0"
+ jxp_korea_campaign.107.a:0 "èboƒ¾‹%„ÿ%N<h”–»yÅu±`0"
+ jxp_korea_campaign.107.b:0 "ÝOcLˆ›QÿNýwàVÅuVnbHg0"
+ jxp_korea_campaign.108.t:0 "ø‹'YT‰NŸR"
+ jxp_korea_campaign.108.d:0 "T¶R›Q¿R‰NHYHQ•0ÎW`lNbŸRÿtSŠbqSi–îT‹N¨cÙu+R¶R0çe(`(WVýV›Q®‹-NÍ‘°eÃqwÿå‚I`IYLˆNýwlQckRM‘®|ãyN›QäNÿTwTÜVOØSb|Vdkur6R„vÞzi0"
+ jxp_korea_campaign.108.a:0 "O›QyV^ÁˆšRHQTÿN¸‹Áy‰N0"
+ jxp_korea_campaign.108.b:0 "©‹ø‹¶Rê‰NŸRTÿÜwwê	gSt0"
+ jxp_korea_campaign.109.t:0 "›QªuN´fLˆ"
+ jxp_korea_campaign.109.d:0 "	gºNIN.VåN%Nte›QªubcÖS¿lTjOÿmN	gºN‰BlµuuQ³c cÿåNb)RÁTeˆP.kw™0TwýwËzIRkXEQ›Q“^ÿtSOOåe,gKNTNqQg0ØOO†ŒTYÇNøvÞpeASt^0"
+ jxp_korea_campaign.109.a:0 "Í‘3u›QÕlÿÝäNwàeº‹¶R<h†v»lj0"
+ jxp_korea_campaign.109.b:0 "ÆQ¸‹³c cÿåNb)RÁT‰QuQ0"
+ jxp_korea_campaign.110.t:0 "åT.S0fRwNØOO†"
+ jxp_korea_campaign.110.d:0 "›Q-N¼begv–åT0pS7R.S0ISw0fRwŒTnfŒvÓY0	gºNŠbÖNìNÆ‰HNïSåN&^ÞVåe,g„vŽbz‚ÿmN	gºNf‹JTÿHVÁKN)RNýwm»SØOO†N¶RºNR»y„v‹NžR0"
+ jxp_korea_campaign.110.a:0 "‰v°‹v^cÔ^—b—eºNXT0"
+ jxp_korea_campaign.110.b:0 "Šb	g(uKNºNÁŽVåe,gø‹ÎW0"
+ jxp_korea_campaign.111.t:0 "wmáSô•„vŒTŒ"
+ jxp_korea_campaign.111.d:0 "‹N&^egÕ‹¢c'`„vjPbagöNÿb`YáO0V>e	gP–=nãS0²NbcØOO†ÿv^©‹ÌS¹eTê±RðyˆROOSOb—0çuíub‰Nb¸‹ýw0tÖSôfYÿtSmNïSýwêSbcegôfYzzÓNNmW¢Q0"
+ jxp_korea_campaign.111.a:0 "AQ¸‹O‚‚FU®‹	gP–agöN0"
+ jxp_korea_campaign.111.b:0 "°s(WŒŒTÿêSO©‹dkMRzrrr‹v90"
+ jxp_korea_campaign.112.t:0 "Q¦^ÜV"
+ jxp_korea_campaign.112.d:0 "MR¿u‰Bl°e„vëXRS0kpoƒ09‚êSNö”±”0ý RNnÜVïSýwKcÞVbNSÿmNïSýwŠbòTÏu²uë`„våe,gø‹ýVQ!kËbzzÿleQˆR¿RRÝOXRýV›RÿtSO©‹gRîvhn)S0"
+ jxp_korea_campaign.112.a:0 "QVuQ®|ÿôucÜVÄ‰!j0"
+ jxp_korea_campaign.112.b:0 "úVˆR°s	gnc¹pÿNQòvîvñmeQ0"
+ jxp_korea_campaign.113.t:0 "ÜV‹S®WýV…Q0Me"
+ jxp_korea_campaign.113.d:0 "wmáS2N¸S„v›Q9¡l	gKS4Y0IYLˆOÐcúQ RV4Nöeµk±”ÿFUºNRMaab-ýVHPÿtS‰Bl)Ro`ŒTyr¸‹0àeº‹	êTNagïÿb‰NýSÎNgœœ%„0WÞV0Råe,gQgHu0"
+ jxp_korea_campaign.113.a:0 "Tø‹ýVý R›QyVNµk±”0"
+ jxp_korea_campaign.113.b:0 "TFUºN>NHPÿÝOhQ<wMRéy^0"
+ jxp_korea_campaign.114.t:0 "5–-N±‹JT"
+ jxp_korea_campaign.114.d:0 "‰k¯‹ŠÇwmáS.OeQ›Q%„0å‚ÜVÑSwwòTó®ft^ÿÙïSýw1S=fINTKN‰kÿå‚ýVINSîXÿR=fI`'YSbgÍ‘‰„v›QIYLˆPN0àeº‹‰kw=fŒÿø‹¶RýVËYÍ‘°e¡‹—rçuíub‰NùRêñT„vaIN0"
+ jxp_korea_campaign.114.a:0 "ýVINòTÿHQ3zOOçubN›QäN0"
+ jxp_korea_campaign.114.b:0 "I`'YS«ŽEeÿæSébNºNßu›Q0"
+ jxp_korea_campaign.115.t:0 "²d›QKN®‹"
+ jxp_korea_campaign.115.d:0 "4l›Q0IYLˆŒTèRø‹Sú^®‹wmïSÿ6RšRRyb²d›Q¡‹R0HVlx>mRZWcçuíužXuQÿÅbÃVûNUOtSýOgdÁkZáO0²dN=fMQ91«ŽÿçuíumNN=f¡l	gKS4Y„vÇRfk0"
+ jxp_korea_campaign.115.a:0 "HQßb²d›Q!k^ÿÝOhQ9‚–N2OuQ0"
+ jxp_korea_campaign.115.b:0 "ý RuQ®|ÿÒbÝu(WdköeT0"
+ jxp_korea_campaign.116.t:0 "+o•„v`S†˜"
+ jxp_korea_campaign.116.d:0 "b‰NÖbö^Tÿ`S†˜NQêS=fÒc×eN‰š›Q00uK1uŒV6e0É‹¼‹1uŒÁˆ³Q0úRb–ŒTfNb–=f&T×SÝO²bÿý³QšRÎWè•Y„vaNÌ‘OÐc›O®|ß˜Ø=f©c²bµb—bw0"
+ jxp_korea_campaign.116.a:0 "¾‹›QMeHSÿåN‰š›QôucSï0"
+ jxp_korea_campaign.116.b:0 "Yu(u0W¹e˜Rÿb²‹aN¦uNçeÕl0"
+ jxp_korea_campaign.117.t:0 "wmáS9‚–²uke"
+ jxp_korea_campaign.117.d:0 "Yt^ŽVÔO9‚•^PKg04lKb¡N0ÝOi–N®|÷NPŸ¨m0‰ôucÜVÿÅV‰˜Q!kèbö”V+Yÿå‚)ÏQ9‚–ÿMR¿u¿OêSýw6e)îvhv^ÆQY²d»y0"
+ jxp_korea_campaign.117.a:0 "îO9‚ßR4lKbÿôucgTNag®|S0"
+ jxp_korea_campaign.117.b:0 ")ÏQ9‚–ÿHN	gP–²d›QYuúQYO0W0"
+
+ jxp_korea_campaign.180.t:0 "gœœbTKNNS"
+ jxp_korea_campaign.180.d:0 "ŒT¦uòTÏuK„rÿ›Q9‚F–íuÞV=n0¸ub—bœgNýwÿfbìNÞVTr‚YUOYtáO0=nãS0ã^S0`S†˜0WNb‰NHP¡R0°e„véy^êSýwú^Ëz(WžRE–ÖS—V„vW0WŒTsQû|KNNÿ¡l	gûNUONSÏ‹äNýwYíQzzŠbte*NJS›SØSb‰R3zýVW0"
+ jxp_korea_campaign.180.a:0 "åNáO0FUN	gP–=n¡RÓumgb‰N0"
+ jxp_korea_campaign.180.b:0 "ú^ËzWSèÝO²bN›Q=néy^0"
+ jxp_korea_campaign.180.c:0 "vbcã^S‹sgÿv^bÅbvQXRíu0"
+ jxp_korea_campaign.180.direct_rule:0 "ŠbžRE–`S†˜0WeQôv¥cßu»l0"
+ jxp_korea_campaign.180.e:0 "žRLˆbeu²dÿÝOYuÜVYe­‹0"
+ jxp_korea_campaign.180.f:0 "b²‹ÜVòTÏubHNŒp¾–0"
+
+ jxp_b_101_korea_trade_outcome_tt:0 "NlûyW0WÿAS”Nt^…QåNb`YáO0wmáS8fŒTY²NáO‰ŠHNIN‰6eÊv0"
+ jxp_b_101_korea_southern_protectorate_outcome_tt:0 "êSb²‹ŒT¦u-NòTÏuÖS—V„vWSènc¹pbã^SsQû|ÿSV0W·ƒ—VƒØšê»lÿv^1uåe,g•gÅb›Q=nNÝO²b9(u0"
+ jxp_b_101_korea_puppet_outcome_tt:0 "ÅN(WgœœòTÏuÇck8^ŒT¦ubHNbýV^SýVöeïS	ÿNOíQzzú^Ëzã^SsQû|ÿNŒNASt^…QÅV‰˜bÅbÍ‘ú^Nvbc9(u0"
+ jxp_b_101_korea_direct_rule_outcome_tt:0 "ÅNjO(uŽNòTÏu1ubýVžRE–åb	g„vgœœW0WÿNˆcˆN8hÃVÿNb	gøvsQwýNÐcØšê»lv^b×SŒNASt^µb—bN»ltb,g0"
+ jxp_b_101_korea_strategic_retreat_outcome_tt:0 ">eVŠb	gP–bœgSÅˆbhQb—Üw)Rÿ=eØN²d›QN.kw™ÿbcÖSƒNOŒSbŒTAS”Nt^„vwmF–TäRÏuŒš0"
+ jxp_b_101_korea_disaster_outcome_tt:0 "b²‹ÜV1Y%v^bÅb0Me03zšR0P%NýV…QÍSùR„vŒNASt^ãN÷N0"
+
+ jxp_b_101_korea_preparation_burden:0 "!nwmYyV"
+ jxp_b_101_korea_preparation_burden_desc:0 "Ð“9‚0uQÙz0›QyVŒTýVfNck(WTöeÆQYÿ,gWzKN›Q9àVwb×S•g‹S›R0"
+ jxp_b_101_nagoya_logistics_depot:0 "T²bKSuQÙz"
+ jxp_b_101_nagoya_logistics_depot_desc:0 "=n%m«ˆ9e.b!nwm›Q„vÓNê^09‚^WŒT›Q®‹Nbÿ0W¹ez6e©‹MOŽN4lKb0®|ãyN2–¡R0"
+ jxp_b_101_korea_expedition_ready:0 "!nwm›Q…VÑS"
+ jxp_b_101_korea_expedition_ready_desc:0 "wmF–›Q¿RòTÏubÿFOôuc…V‹T,g«Ž¿O=fNrf5V=e0"
+ jxp_b_101_secure_landing:0 "3zúV‰vF–HW"
+ jxp_b_101_secure_landing_desc:0 "ŽÍ‘0kp®pNHQ4Y›QO^N¸SÿOTíuIeÎWŒTeˆXTôfHNz˜Eu0"
+ jxp_b_101_stretched_supply:0 "Ç¦^ö^8O„v®|S"
+ jxp_b_101_stretched_supply_desc:0 "Sï09‚–NÓNÙzàeÕlßNÛ›Q¦^ÿmcwŒTeˆXT9(uN­ežX R0"
+ jxp_b_101_korean_resistance:0 "gœœ0W¹eµb—b"
+ jxp_b_101_korean_resistance_desc:0 "INuQ00W¹e˜RlŒTqS0WQÜuµb6R`S†˜ÿzKNVuQ†v¾–åN¨cLˆ0"
+ jxp_b_101_korean_reprisals:0 "¥bYªV¯s"
+ jxp_b_101_korean_reprisals_desc:0 "³c cN¥bYOµb—bibce0RaNÌ‘ÿíwgP`ç`lSHN•gÇNh`0"
+ jxp_b_101_korean_accommodation:0 "0W¹e‰R5X"
+ jxp_b_101_korean_accommodation_desc:0 "`S†˜›Qb²‹aN¦u0çeÕlN0W¹e˜R„v	gP–LwCgÿåN0Me©‹ekbcÖSSïŒTlu3zšR0"
+ jxp_b_101_korean_naval_pressure:0 "gœœ4l^‹S›R"
+ jxp_b_101_korean_naval_pressure_desc:0 "Ÿq‰`noPlŒT›SS„vLe›Q0‚–N­eZÁwÐ“9‚N4lKb0"
+ jxp_b_101_ming_warning:0 "'YF–g÷^f‹JT"
+ jxp_b_101_ming_warning_desc:0 "'YF–ôc›QNY²NZÁwëObìNRce›Q9ÿv^mc³R(WNšNø‹ýVô•„váO‰Š0"
+ jxp_b_101_ming_intervention_force:0 "ôcg¨RXT"
+ jxp_b_101_ming_intervention_force_desc:0 "'YF–g÷^HNôc©Rgœœ¨RXTuQ®|ÿ›Q‹N›RÏ‘žXHV„vTöemNbÅb‰lÍ‘ýV90"
+ jxp_b_101_korean_ming_relief:0 "'YF–ôcg®|w™"
+ jxp_b_101_korean_ming_relief_desc:0 "ôc›Q0®|ãyNkphVµb¾JS›SÿžXHVgœœˆRYNb`Yýw›R0"
+ jxp_b_101_winter_quarters:0 "gœœ¬Q%„"
+ jxp_b_101_winter_quarters_desc:0 "ZWúV%„‚ŒT˜Y®|w™M–NOÒR¬Qmc1YÿtSÐcØš›Q–ôucb,g0"
+ jxp_b_101_epidemic_camps:0 "%„-N«uÅu"
+ jxp_b_101_epidemic_camps_desc:0 "¾uÅuJR1VuQnb`Yÿ”–»yNP`LamNpbqN›Q%„éy^0"
+ jxp_b_101_daimyo_rivalry:0 "ø‹S‰NŸR"
+ jxp_b_101_daimyo_rivalry_desc:0 "T¶R›Q¿R‰NHYŸRT0®|ãyŒT‰RhQîT‹NÿTwTc%càVdk×Smc0"
+ jxp_b_101_strict_field_code:0 "!nwm›QÕl"
+ jxp_b_101_strict_field_code_desc:0 "›QäNNàV¶R<hwHSòfÿ%Nteªu‹VTöe¦umg³c cŒTÁy—e0"
+ jxp_b_101_atrocity_stain:0 "!nwm´fLˆKNT"
+ jxp_b_101_atrocity_stain_desc:0 "³c c0qÁkN¥bYO»ýV•g`‘uåe,g„vÏkNSýVfNÿýV…Qéy^¦N×Sv``NÍSlV0"
+ jxp_b_101_captive_artisans_stain:0 "HVÁåT.S‰N®‹"
+ jxp_b_101_captive_artisans_stain_desc:0 "«ˆHVLˆÁp„våT.S&^egŽbz‚ÿmNOåe,g„vY²NðX‰ŠÌwØOO†KNT0"
+ jxp_b_101_peace_feelers:0 "wmáSŒTŒ"
+ jxp_b_101_peace_feelers_desc:0 "‹NNO‚‚(WÌS¹eýýwÝOYuSOb—„vMRÐcNÕ‹¢cjPbagöN0"
+ jxp_b_101_second_expedition:0 "Q¦^ÜV"
+ jxp_b_101_second_expedition_desc:0 "°eNnëXRSN›QDeˆEQMR¿uÿmNcíu¨cØš›Q–ôuc9(u0"
+ jxp_b_101_home_finance_strain:0 "!nwmyV0(u"
+ jxp_b_101_home_finance_strain_desc:0 "4Nöeµk±”0ýVHPŒTFUºNyr¸‹ŠbwmáS|V¸S„vb‰N&^ÞVåe,gQgHu0"
+ jxp_b_101_succession_shock:0 "ÜV-N„vçub—aƒ"
+ jxp_b_101_succession_shock_desc:0 "ÜVÑSwwbI`'YS«ŽEeÿOø‹¶RÍ‘°e¡RÆ‰ùRMeCgŒTb‰N„vgÎN0"
+ jxp_b_101_orderly_withdrawal_plan:0 "Ryb²d›Q¡‹R"
+ jxp_b_101_orderly_withdrawal_plan_desc:0 "9‚–OHQÝOhQ2OuQ0ŽÍ‘N4lKbÿF–NÛIeRÅV‰˜HN²d»y©‹ï0"
+ jxp_b_101_long_occupation_burden:0 "JS›S•g‰š›Q"
+ jxp_b_101_long_occupation_burden_desc:0 "`S†˜òTÎNbHWî•˜˜ØSbzK0øSÕl0SïŒT0W¹eµb—b„v»lt¾–˜˜0"
+ jxp_b_101_korea_trade_settlement:0 "wmáSFUŒT¦u"
+ jxp_b_101_korea_trade_settlement_desc:0 "áO0ØOO†²NbcŒT	gP–=n¡Rb`YÿOb‰NåNY²NN8fw^—Tv^6e>S0"
+ jxp_b_101_korea_southern_protectorate_burden:0 "gœœWSèÝO²bÅb"
+ jxp_b_101_korea_southern_protectorate_burden_desc:0 "	gP–nc¹pŒTÝO²bsQû|—‰0‚–0=n¡RN•g0Me=ec0"
+ jxp_b_101_korea_protected_south:0 "WSèÝO²b=nHS"
+ jxp_b_101_korea_protected_south_desc:0 "0W¹eÝOYuƒØšê»lÿåe,g‰š›QˆR²b=nãSŒTSïÿFOzKNVÑS×S0RP–6R0"
+ jxp_b_101_korea_protectorate_reconstruction:0 "ÝO²býVÍ‘ú^"
+ jxp_b_101_korea_protectorate_reconstruction_desc:0 "(WÝOYugœœ˜R6R„vMRÐcNîOYÎW2–ŒTaNÌ‘ÿ3zšROHQŽNËzsS¨iÖSz6e0"
+ jxp_b_101_korea_puppet_support_cost:0 "vbc²Nåe‹sg"
+ jxp_b_101_korea_puppet_support_cost_desc:0 "ã^S‹sg—‰cíuÑ‘ôc0wm2–ŒTY²NÌwfNÿNýwíQN!kŒT¦uêLˆ3zúV0"
+ jxp_b_101_korea_puppet_reconstruction:0 "ã^S‹sgÍ‘ú^"
+ jxp_b_101_korea_puppet_reconstruction_desc:0 "°eMeCgåNÏQz0YXTNb`Y0W¹eéy^‰NÖSXRíu0"
+ jxp_b_101_korea_direct_rule_burden:0 "gœœôv–KNÍ‘"
+ jxp_b_101_korea_direct_rule_burden_desc:0 "èwmÞT¿S—‰'Yyb˜RT0‰š›QNÐ“Ïu9ÿýV¶R»ltýw›R•g×S‹S0"
+ jxp_b_101_korea_direct_rule_resistance:0 "ôv–0Wµb—b"
+ jxp_b_101_korea_direct_rule_resistance_desc:0 "¡l	g0W¹eTÕl'`„vôv¥cßu»lb—ùRØšê»l0NOz6eŒTcíuµb—b0"
+ jxp_b_101_korea_strategic_lessons:0 "!nwmyVKNt’"
+ jxp_b_101_korea_strategic_lessons_desc:0 "²d›QÝOYu†NwmF–OST0IeÎWNÐ“ÏuŒšÿtSàeÕl6eÞVòTÏuwKS„výV“^0"
+ jxp_b_101_korea_expedition_disaster:0 "!nwmyV)Tƒn"
+ jxp_b_101_korea_expedition_disaster_desc:0 "zzÓN0%uQ0HP¡RŒTø‹¶RNánqQT¼d¨RýV…QMeCgÿÜV1Y%„vãN÷NSö^íuNãNºN0"

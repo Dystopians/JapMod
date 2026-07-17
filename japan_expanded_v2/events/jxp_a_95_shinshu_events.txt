@@ -1,0 +1,728 @@
+namespace = jxp_shinshu
+
+country_event = {
+	id = jxp_shinshu.1
+	title = "jxp_shinshu.1.t"
+	desc = "jxp_shinshu.1.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_01_seen }
+	}
+	option = {
+		name = "jxp_shinshu.1.a"
+		set_country_flag = jxp_a_shinshu_event_01_seen
+		add_dip_power = -25
+		add_prestige = 5
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.2 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.1.b"
+		set_country_flag = jxp_a_shinshu_event_01_seen
+		add_prestige = 10
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.2 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.2
+	title = "jxp_shinshu.2.t"
+	desc = "jxp_shinshu.2.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_02_seen }
+	}
+	option = {
+		name = "jxp_shinshu.2.a"
+		set_country_flag = jxp_a_shinshu_event_02_seen
+		add_treasury = -75
+		add_adm_power = 25
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.3 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.2.b"
+		set_country_flag = jxp_a_shinshu_event_02_seen
+		add_treasury = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.3 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.3
+	title = "jxp_shinshu.3.t"
+	desc = "jxp_shinshu.3.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_03_seen }
+	}
+	option = {
+		name = "jxp_shinshu.3.a"
+		set_country_flag = jxp_a_shinshu_event_03_seen
+		add_adm_power = -25
+		add_prestige = 5
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.4 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.3.b"
+		set_country_flag = jxp_a_shinshu_event_03_seen
+		add_mil_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.4 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.4
+	title = "jxp_shinshu.4.t"
+	desc = "jxp_shinshu.4.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_04_seen }
+	}
+	option = {
+		name = "jxp_shinshu.4.a"
+		set_country_flag = jxp_a_shinshu_event_04_seen
+		add_treasury = -50
+		add_country_modifier = { name = jxp_a_shinshu_temple_town_charter duration = 1825 }
+		jxp_a_shinshu_add_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.5 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.4.b"
+		set_country_flag = jxp_a_shinshu_event_04_seen
+		add_treasury = 50
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.5 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.5
+	title = "jxp_shinshu.5.t"
+	desc = "jxp_shinshu.5.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_05_seen }
+	}
+	option = {
+		name = "jxp_shinshu.5.a"
+		set_country_flag = jxp_a_shinshu_event_05_seen
+		add_adm_power = -25
+		add_country_modifier = { name = jxp_a_shinshu_petition_compromise duration = 1825 }
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.6 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.5.b"
+		set_country_flag = jxp_a_shinshu_event_05_seen
+		add_adm_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.6 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.6
+	title = "jxp_shinshu.6.t"
+	desc = "jxp_shinshu.6.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_06_seen }
+	}
+	option = {
+		name = "jxp_shinshu.6.a"
+		set_country_flag = jxp_a_shinshu_event_06_seen
+		add_treasury = -50
+		add_prestige = 5
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.7 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.6.b"
+		set_country_flag = jxp_a_shinshu_event_06_seen
+		add_treasury = 50
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.7 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.7
+	title = "jxp_shinshu.7.t"
+	desc = "jxp_shinshu.7.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_07_seen }
+	}
+	option = {
+		name = "jxp_shinshu.7.a"
+		set_country_flag = jxp_a_shinshu_event_07_seen
+		add_adm_power = -25
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.8 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.7.b"
+		set_country_flag = jxp_a_shinshu_event_07_seen
+		add_dip_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.8 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.8
+	title = "jxp_shinshu.8.t"
+	desc = "jxp_shinshu.8.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_08_seen }
+	}
+	option = {
+		name = "jxp_shinshu.8.a"
+		set_country_flag = jxp_a_shinshu_event_08_seen
+		add_adm_power = -50
+		add_dip_power = -25
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.9 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.8.b"
+		set_country_flag = jxp_a_shinshu_event_08_seen
+		add_prestige = 10
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.9 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.9
+	title = "jxp_shinshu.9.t"
+	desc = "jxp_shinshu.9.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_09_seen }
+	}
+	option = {
+		name = "jxp_shinshu.9.a"
+		set_country_flag = jxp_a_shinshu_event_09_seen
+		add_mil_power = -50
+		add_stability = 1
+		jxp_a_shinshu_subtract_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.10 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.9.b"
+		set_country_flag = jxp_a_shinshu_event_09_seen
+		add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }
+		add_mil_power = 25
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.10 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.10
+	title = "jxp_shinshu.10.t"
+	desc = "jxp_shinshu.10.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_10_seen }
+	}
+	option = {
+		name = "jxp_shinshu.10.a"
+		set_country_flag = jxp_a_shinshu_event_10_seen
+		add_treasury = -75
+		add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.11 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.10.b"
+		set_country_flag = jxp_a_shinshu_event_10_seen
+		add_adm_power = -25
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.11 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.11
+	title = "jxp_shinshu.11.t"
+	desc = "jxp_shinshu.11.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_11_seen }
+	}
+	option = {
+		name = "jxp_shinshu.11.a"
+		set_country_flag = jxp_a_shinshu_event_11_seen
+		add_treasury = -100
+		add_army_tradition = 5
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.12 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.11.b"
+		set_country_flag = jxp_a_shinshu_event_11_seen
+		add_dip_power = -50
+		add_prestige = 10
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.12 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.12
+	title = "jxp_shinshu.12.t"
+	desc = "jxp_shinshu.12.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_12_seen }
+	}
+	option = {
+		name = "jxp_shinshu.12.a"
+		set_country_flag = jxp_a_shinshu_event_12_seen
+		add_mil_power = -50
+		add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.13 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.12.b"
+		set_country_flag = jxp_a_shinshu_event_12_seen
+		add_dip_power = -50
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.13 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.13
+	title = "jxp_shinshu.13.t"
+	desc = "jxp_shinshu.13.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_13_seen }
+	}
+	option = {
+		name = "jxp_shinshu.13.a"
+		set_country_flag = jxp_a_shinshu_event_13_seen
+		add_dip_power = -25
+		add_prestige = 5
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.14 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.13.b"
+		set_country_flag = jxp_a_shinshu_event_13_seen
+		add_treasury = 50
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.14 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.14
+	title = "jxp_shinshu.14.t"
+	desc = "jxp_shinshu.14.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_14_seen }
+	}
+	option = {
+		name = "jxp_shinshu.14.a"
+		set_country_flag = jxp_a_shinshu_event_14_seen
+		add_adm_power = -50
+		add_prestige = 10
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.15 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.14.b"
+		set_country_flag = jxp_a_shinshu_event_14_seen
+		add_dip_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.15 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.15
+	title = "jxp_shinshu.15.t"
+	desc = "jxp_shinshu.15.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_15_seen }
+	}
+	option = {
+		name = "jxp_shinshu.15.a"
+		set_country_flag = jxp_a_shinshu_event_15_seen
+		add_dip_power = -50
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.16 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.15.b"
+		set_country_flag = jxp_a_shinshu_event_15_seen
+		add_prestige = 10
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.16 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.16
+	title = "jxp_shinshu.16.t"
+	desc = "jxp_shinshu.16.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_16_seen }
+	}
+	option = {
+		name = "jxp_shinshu.16.a"
+		set_country_flag = jxp_a_shinshu_event_16_seen
+		add_mil_power = -25
+		jxp_a_shinshu_subtract_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.17 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.16.b"
+		set_country_flag = jxp_a_shinshu_event_16_seen
+		add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.17 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.17
+	title = "jxp_shinshu.17.t"
+	desc = "jxp_shinshu.17.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_17_seen }
+	}
+	option = {
+		name = "jxp_shinshu.17.a"
+		set_country_flag = jxp_a_shinshu_event_17_seen
+		add_treasury = -50
+		add_adm_power = 25
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.18 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.17.b"
+		set_country_flag = jxp_a_shinshu_event_17_seen
+		add_adm_power = 50
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.18 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.18
+	title = "jxp_shinshu.18.t"
+	desc = "jxp_shinshu.18.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_18_seen }
+	}
+	option = {
+		name = "jxp_shinshu.18.a"
+		set_country_flag = jxp_a_shinshu_event_18_seen
+		add_treasury = -75
+		add_country_modifier = { name = jxp_a_shinshu_temple_town_charter duration = 1825 }
+		jxp_a_shinshu_add_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.19 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.18.b"
+		set_country_flag = jxp_a_shinshu_event_18_seen
+		add_dip_power = -25
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.19 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.19
+	title = "jxp_shinshu.19.t"
+	desc = "jxp_shinshu.19.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_19_seen }
+	}
+	option = {
+		name = "jxp_shinshu.19.a"
+		set_country_flag = jxp_a_shinshu_event_19_seen
+		add_mil_power = -25
+		add_prestige = -5
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.20 days = 540 }
+	}
+	option = {
+		name = "jxp_shinshu.19.b"
+		set_country_flag = jxp_a_shinshu_event_19_seen
+		add_mil_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.20 days = 540 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.20
+	title = "jxp_shinshu.20.t"
+	desc = "jxp_shinshu.20.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		jxp_a_shinshu_country_trigger = yes
+		has_country_flag = jxp_a_shinshu_event_chain_active
+		NOT = { has_country_flag = jxp_a_shinshu_event_20_seen }
+	}
+	option = {
+		name = "jxp_shinshu.20.a"
+		set_country_flag = jxp_a_shinshu_event_20_seen
+		add_adm_power = -50
+		add_stability = 1
+		jxp_a_shinshu_subtract_militancy_15_effect = yes
+		clr_country_flag = jxp_a_shinshu_event_chain_active
+	}
+	option = {
+		name = "jxp_shinshu.20.b"
+		set_country_flag = jxp_a_shinshu_event_20_seen
+		add_prestige = 10
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		clr_country_flag = jxp_a_shinshu_event_chain_active
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.90
+	title = none
+	desc = none
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		jxp_a_shinshu_migrate_v029_effect = yes
+		if = {
+			limit = {
+				jxp_a_shinshu_country_trigger = yes
+				NOT = { has_country_flag = jxp_a_shinshu_event_chain_active }
+				NOT = { has_country_flag = jxp_a_shinshu_event_20_seen }
+			}
+			set_country_flag = jxp_a_shinshu_event_chain_active
+			country_event = { id = jxp_shinshu.1 days = 365 }
+		}
+	}
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_shinshu.100
+	title = "jxp_shinshu.100.t"
+	desc = "jxp_shinshu.100.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = jxp_ikko_rising_active
+		jxp_a_shinshu_initialize_effect = yes
+		jxp_a_shinshu_set_stage_1_effect = yes
+	}
+	option = {
+		name = "jxp_shinshu.100.a"
+		add_adm_power = -25
+		jxp_a_shinshu_subtract_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.101 days = 365 }
+	}
+	option = {
+		name = "jxp_shinshu.100.b"
+		jxp_a_shinshu_add_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.101 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.101
+	title = "jxp_shinshu.101.t"
+	desc = "jxp_shinshu.101.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_1_congregations }
+	immediate = { jxp_a_shinshu_set_stage_2_effect = yes }
+	option = {
+		name = "jxp_shinshu.101.a"
+		add_country_modifier = { name = jxp_a_shinshu_petition_compromise duration = 1825 }
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.102 days = 365 }
+	}
+	option = {
+		name = "jxp_shinshu.101.b"
+		add_adm_power = 25
+		jxp_a_shinshu_add_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.102 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.102
+	title = "jxp_shinshu.102.t"
+	desc = "jxp_shinshu.102.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_2_petitions }
+	immediate = { jxp_a_shinshu_set_stage_3_effect = yes }
+	option = {
+		name = "jxp_shinshu.102.a"
+		add_country_modifier = { name = jxp_a_shinshu_temple_town_charter duration = 1825 }
+		jxp_a_shinshu_add_militancy_5_effect = yes
+		country_event = { id = jxp_shinshu.103 days = 365 }
+	}
+	option = {
+		name = "jxp_shinshu.102.b"
+		add_adm_power = -50
+		jxp_a_shinshu_subtract_militancy_10_effect = yes
+		country_event = { id = jxp_shinshu.103 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.103
+	title = "jxp_shinshu.103.t"
+	desc = "jxp_shinshu.103.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_3_temple_town }
+	immediate = { jxp_a_shinshu_set_stage_4_effect = yes }
+	option = {
+		name = "jxp_shinshu.103.a"
+		add_dip_power = -50
+		jxp_a_shinshu_subtract_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.104 days = 365 }
+	}
+	option = {
+		name = "jxp_shinshu.103.b"
+		add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }
+		jxp_a_shinshu_add_militancy_15_effect = yes
+		country_event = { id = jxp_shinshu.104 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.104
+	title = "jxp_shinshu.104.t"
+	desc = "jxp_shinshu.104.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_4_armed_oath }
+	option = {
+		name = "jxp_shinshu.104.a"
+		set_country_flag = jxp_ikko_rising_resolved
+		set_country_flag = jxp_ikko_contact
+		add_country_modifier = { name = jxp_a_shinshu_reconciled_order duration = 7300 }
+		jxp_a_shinshu_subtract_militancy_20_effect = yes
+		end_disaster = jxp_ikko_rising
+	}
+	option = {
+		name = "jxp_shinshu.104.b"
+		set_country_flag = jxp_ikko_rising_resolved
+		add_mil_power = -100
+		add_country_modifier = { name = jxp_a_shinshu_suppression_aftershock duration = 3650 }
+		jxp_a_shinshu_subtract_militancy_40_effect = yes
+		end_disaster = jxp_ikko_rising
+	}
+	option = {
+		name = "jxp_shinshu.104.c"
+		trigger = { jxp_can_form_ikko_commonwealth_trigger = yes }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 100 has_country_flag = jxp_map_origin_hng }
+			modifier = { factor = 0.05 NOT = { has_country_flag = jxp_map_origin_hng } }
+		}
+		set_country_flag = jxp_ikko_rising_resolved
+		end_disaster = jxp_ikko_rising
+		jxp_clear_all_route_flags_effect = yes
+		set_country_flag = jxp_path_ikko
+		set_country_flag = jxp_ikko_contact
+		jxp_change_to_ijp_effect = yes
+		jxp_grant_ikko_heartland_claims_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_shinshu.190
+	title = none
+	desc = none
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = jxp_ikko_rising_resolved
+		clr_country_flag = jxp_ikko_rising_active
+		jxp_a_shinshu_cleanup_crisis_effect = yes
+	}
+	option = { name = "OK" }
+}

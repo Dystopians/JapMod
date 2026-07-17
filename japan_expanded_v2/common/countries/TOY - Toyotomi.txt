@@ -1,0 +1,59 @@
+graphical_culture = asiangfx
+
+color = { 72 43 91 }
+revolutionary_colors = { 7 4 9 }
+
+random_nation_chance = 0
+historical_score = 450
+
+historical_idea_groups = {
+	administrative_ideas
+	economic_ideas
+	diplomatic_ideas
+	quality_ideas
+	offensive_ideas
+	trade_ideas
+	expansion_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"¿y	T #0" = 100
+	"¿y!k #0" = 40
+	"¿yVç #0" = 80
+	"¿yï #0" = 30
+	"¿y‹w #0" = 20
+	"ÅRÅR #0" = -20
+	"¿m #0" = -20
+}
+
+leader_names = {
+	0N„Å ÀÙg Ûw0u 'Y7å †R‰Ö èyõS EmŒë áâòHç MR0u áRúUY Sâ ûX0u ïmg
+}
+
+ship_names = {
+	"'YBW8N" "O¡â8N" "ZwPN8N" "¿m8N" "—o7b8N" "1gpS8N"
+	"Âe,g8N" "HX8N" "ïT8N" "ZSY8N" "âRÖR8N" "°Vµ^9Ç"
+	"ÿöKN8N" "ChqS8N" "*Yñ8N" "jmê8N"
+}
+
+army_names = {
+	"*YñõQ" "$PROVINCE$õQ" "$PROVINCE$O" "$PROVINCE$Y"
+}
+
+fleet_names = {
+	"'YBW4lõQ" "$PROVINCE$4lõQ" "$PROVINCE$9Ç‚V"
+}

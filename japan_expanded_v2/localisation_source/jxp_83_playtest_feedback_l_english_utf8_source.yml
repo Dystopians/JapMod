@@ -1,0 +1,16 @@
+﻿l_english:
+ jodo_shinshu:0 "净土真宗"
+ jodo_shinshu_religion_desc:0 "净土真宗以信愿念佛与本愿寺法脉凝聚门徒、寺内町和惣村。在战国日本，它既是信仰共同体，也能成为挑战武家领国秩序的政治力量。"
+ IKKO:0 "一向宗"
+
+ jxp_reform_daimyo_kokujin_oaths:0 "国人众起请"
+ jxp_reform_daimyo_kokujin_oaths_desc:0 "令谱代、国人和地侍共同署押起请文，以军役、知行与人质维系领国内部的层层忠诚。"
+ jxp_reform_daimyo_bunkoku_law:0 "分国法与家中法度"
+ jxp_reform_daimyo_bunkoku_law_desc:0 "将诉讼、军役、土地与家臣纪律编成分国法，使大名领国不再只依赖当主一人的威势运转。"
+ jxp_reform_daimyo_kachu_hyojoshu:0 "家中评定众"
+ jxp_reform_daimyo_kachu_hyojoshu_desc:0 "由重臣、奉行与文书役组成常设评定众，在出阵之外持续处理裁判、赋役和领国政务。"
+
+ cb_daimyo_annex:0 "上洛"
+ cb_daimyo_annex_desc:1 "以进驻京都、保护天皇并掌握幕府政权为目标发动上洛之战。幕府若要获得诸侯助阵，必须付出人情或关系代价逐一召集，而不能再把全日本的附庸自动拖入战争。"
+ cb_independent_daimyo_annex:0 "上洛"
+ cb_independent_daimyo_annex_desc:1 "以进驻京都、保护天皇并掌握幕府政权为目标发动上洛之战。幕府若要获得诸侯助阵，必须付出人情或关系代价逐一召集，而不能再把全日本的附庸自动拖入战争。"

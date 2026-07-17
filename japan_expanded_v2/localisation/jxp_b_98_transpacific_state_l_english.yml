@@ -1,0 +1,70 @@
+﻿l_english:
+ cb_jxp_b_eastward_revolution:0 "NRVi—‹T"
+ cb_jxp_b_eastward_revolution_desc:0 "N*NbŸq0ìrËzNµc6Rè*Ys^m-Nçu¹p„v–klýV¶RÿïSåN(Wåe,gmG4xµN0…QqNbMe»l)Tã‰öeÑS¨RNRVi—‹T0b‰N‰BlûQ%çe—RIN„vMe»l-NÃVÿtSNAQ¸‹PyrŠkag>kTv^hQåe,g0"
+ jxp_b_eastward_revolution_wargoal:0 "ëOåe,gb²‹èm°eéy^"
+ jxp_b_eastward_revolution_wargoal_desc:0 "`S†˜åe,g„vMe»l-NÃVÿåN³QšRwmYã‰>e0çe'YF–bXTýV02NmTw¦b	gP–Áý0"
+ JXP_B_EASTWARD_REVOLUTION_WAR_NAME:0 "$ORDER$$FIRST$NRVi—‹Tb‰N"
+ po_jxp_b_liberate_overseas:0 "ã‰>ewmYø‹¦"
+ po_jxp_b_liberate_overseas_desc:0 "ëOåe,g>eV°e'YF–N*Ys^m–klßu»lÿ%N<hir	„v–kl^SýVTêìrËzÿÜw)RwNßu»låe,gÿmNNÖS—V,gW8hÃV0"
+ po_jxp_b_old_world_member:0 "¥c³uçe'YF–bXTýV"
+ po_jxp_b_old_world_member_desc:0 "åe,gbHNÜw)RýV¶R„vØš¦^ê»lbXT08nb-NO(uØšê1u>PT„vD–¸^sQû|hˆ°sqQTY²NNwm2–ÿåe,gÝOYu,gWW0W0‡eSŒTMeœ^0"
+ po_jxp_b_two_ocean_federation:0 "bËz2NmTw¦"
+ po_jxp_b_two_ocean_federation_desc:0 "Üw)RýV¶R9eÄuHN2NmTw¦ÿåe,gjOHNØšê»lçe'YF–bXT ReQ0NOMQ9·ƒ—Våe,gwýNb8hÃVÿTw¦b×S•g»lt0wm›Qôu²bŒTèm®‹‹Nb,g0"
+ po_jxp_b_eastward_capital:0 "ÁýNRV"
+ po_jxp_b_eastward_capital_desc:0 "ÅNrR©‹¬NýjOHN–klßu»lÆ–âV„v°e–™ýÿåe,gvQYOýVWÍNìrËz0wmY0WHSÝOYuŸS	g†˜WNê»lÿýV¶Rb×SŒNASt^TÕl'`qSHg0"
+
+ jxp_transpacific_state.1.t:0 "ã‰>ewmYwNßu»låe,g"
+ jxp_transpacific_state.1.d:0 "0‚–&^ÞV„vN=fåe,g‹s Qÿw=fb²‹fN0wmYø‹¦·ƒ—Vê1uÿåe,gÝOYu,gWMeœ^ÿÜw)RwåNÒbÝubcNMO—RIN„v¹eVÓumgb‰N0"
+ jxp_transpacific_state.1.a:0 "©‹*Ys^mø‹ýVêLˆ³QšR|VdksQû|0"
+ jxp_transpacific_state.2.t:0 "çe'YF–bXTýV"
+ jxp_transpacific_state.2.d:0 "åe,g¥c×SqQTY²NNwm2–ÿtSÝOYu,gWMe»l0ƒR(W8nb-NÍN=fØšê1u>PTbXTÿÅV‰˜`—cíuOSFUw^—N!kÜw)Rôuû|0"
+ jxp_transpacific_state.2.a:0 "bXTsQû|ÅV‰˜¹R³uwžRê»l0"
+ jxp_transpacific_state.3.t:0 "2N*Nwm¸SÿNèTw¦"
+ jxp_transpacific_state.3.d:0 "wmY®‹-^Nçe'YF–ãNhˆŒrrTw¦¦uàz0°eýV¶R¡l	g·ƒ—VMQ9„våe,g8hÃVÿåe,gÍNjOHNê»lbXTÿ0‚–„˜—r0sQz0‡eS-^MOŒT–™ýKN‰NSšRgÞV0R®‹-^0"
+ jxp_transpacific_state.3.a:0 "Tw¦ÎNbÅbRgkVËY0"
+ jxp_transpacific_state.4.t:0 "–kli—‹TwÁý¬Ný"
+ jxp_transpacific_state.4.d:0 "–klßu»lÆ–âV¥c¡r¬NýÿtS¡l	gTv^åe,gvQYOýVW0wmYESlÅbçVêñTQ!k«ˆ,gW=eM‘ÿåe,gçe¶RmNÒbÝuŠbÜ*‚Üw)RIrTŽNTÕlßu»l0"
+ jxp_transpacific_state.4.a:0 "Nµ^–™ýNýwê¨Rã‰³Q2NGr>yO0"
+ jxp_transpacific_state.10.t:0 "2NmTw¦„v	Nt^„˜—r"
+ jxp_transpacific_state.10.d:0 "çe'YF–bXT‰BlSï0›QYŒTŒpTÍ‘ú^ÿwmYø‹ÞT‰Bl0‚–0=nzNûylÏu90®‹-^ïSåNOPTN¸SÿmNïSåN(uôfØš0Meb,gôuc˜b-Nÿ¡l	gN*N	y˜ýwMQ9ˆmd–*Ys^mÝ»y0"
+ jxp_transpacific_state.10.a:0 ",ggOHQçe'YF–bXT0"
+ jxp_transpacific_state.10.b:0 ",ggOHQwmYø‹ÞT0"
+ jxp_transpacific_state.10.c:0 "ý R„˜—rÿôuc2N¸S˜b-N0"
+
+ jxp_b_two_ocean_federation_reform:0 "2NmTw¦¦uàz"
+ jxp_b_two_ocean_federation_reform_desc:0 "çe'YF–NwmYø‹ÞTqQ«NY²NŒTwm2–ÿtSR+RÝOYuW0W0‡eSN0W¹eMe»l0Tw¦åNãNhˆ6RÞ¥c2N¸Sÿv^åNƒNO»lt¹RÏ‘bcÖSèmýV¶R„vXRíu0"
+ jxp_b_98_old_world_member_autonomy:0 "çe'YF–ê»lbXT"
+ jxp_b_98_old_world_member_autonomy_desc:0 "åe,gÝOYu,gWMeœ^N>yOéy^ÿêSŠbqQTY²NŒTwm2–²NÙuèmÜw)RwÿØšê1u>PT‰BlcíuOSFU0"
+ jxp_b_98_two_ocean_federal_burdens:0 "2NmTw¦Åb"
+ jxp_b_98_two_ocean_federal_burdens_desc:0 "èm¯‹0ÌSÍ‘„˜—r00‚–ôu²bŒTãNhˆ-^MOOÙ*NýV¶RÜÔkUSN'YF–ýV¶Rf50"
+ jxp_b_98_eastward_legitimacy_crisis:0 "NRVTÕl'`qSHg"
+ jxp_b_98_eastward_legitimacy_crisis_desc:0 "wmYi—‹Tw(W¬Nýú^Ëz–™ýÿtSTöeb—ùRåe,gçe¶RNwmYê»l>m„v(‘u0"
+ jxp_b_98_old_world_appropriation:0 "çe'YF–OHQ„˜—r"
+ jxp_b_98_old_world_appropriation_desc:0 "DÑ‘ŒTuQXTOHQAmTåe,gbXTÿwmYsQzÅbàVdk RÍ‘0"
+ jxp_b_98_overseas_appropriation:0 "wmYOHQ„˜—r"
+ jxp_b_98_overseas_appropriation_desc:0 "0‚–NwmY=n¡R·ƒ—VDÑ‘ÿçe'YF–bXTùRTw¦„v‘uQ†NGS0"
+ jxp_b_98_federal_compromise:0 "2N¸S˜b-N„˜—r"
+ jxp_b_98_federal_compromise_desc:0 "Øš˜qQTèb>kbcÖS‚föe¥YOSÿ0MeNOàVdk‰Œg0"
+ jxp_iface_b_tpf_needs_mission_refresh:0 "2NmTw¦ûN¡R…V7R°e"
+ jxp_iface_b_tpf_needs_idea_refresh:0 "2NmTw¦tõV…VTek"
+ jxp_iface_b_tpf_needs_government_registry:0 "2NmTw¦MeSO…V‰v°‹"
+ TPF:0 "2NmTw¦"
+ TPF_ADJ:0 "2NmTw¦"
+ TPF_ideas:0 "2NmTw¦tõV"
+ TPF_ideas_desc:0 "2NmTw¦âeN=fwmYø‹ÞTÍ‘°eãgŽNåe,gÿmNN=fçe'YF–«ˆ–klÜw)RwTv^0ƒRåNs^IrbXT0qQTwm2–ŒTÍSYOSFUôuc2N¸STwTÿv^•gbÅbèm¯‹NÌSÍ‘0Me„vãN÷N0"
+ TPF_ideas_start:0 "2NmTw¦.Oßu"
+ TPF_ideas_bonus:0 "2NmTw¦Ä–ÃV"
+ tpf_two_shores_compact:0 "2N¸Sßv¦u"
+ tpf_two_shores_compact_desc:0 "çe'YF–NwmYø‹ÞTTêÝOYu0W¹e6R¦^ÿQŠbqQTY²N0wm2–NèmFUÕl™QeQTNßv¦u0"
+ tpf_dual_ocean_budget:0 "ÌSm„˜—r"
+ tpf_dual_ocean_budget_desc:0 "R+R8h—r2N¸SzeQN0‚–V=eÿOTw¦NÅV`—czzN¹eegôucæSN¹e0"
+ tpf_equal_membership:0 "s^IrbXTKN¦u"
+ tpf_equal_membership_desc:0 "Tw¦b²‹bXTN=fb)RÁTÿV®‹‰˜1uãNhˆ0÷‹MaN0W¹eê»lSã‰ÿw^—N¸uVgäN0"
+ tpf_transpacific_relays:0 "èmš=n"
+ tpf_transpacific_relays_desc:0 "ÎNåe,gR›S0R-Nçu›SSQ0RŽ2m‰¸Sÿš=n	ccRÎ˜ŒTmAmqQTôu²b*‚ï0"
+ tpf_federal_admiralty:0 "Tw¦wm›QIYLˆ"
+ tpf_federal_admiralty_desc:0 "TbXTRJd4lKb09‚PgŒT›Q=nÿ0‚–RbÅbˆR²bteagèm¯‹¿u„v1ûN0"
+ tpf_bilingual_chanceries:0 "2N¸S‹Nb–"
+ tpf_bilingual_chanceries_desc:0 "‹NNfNT(WYÍyí‹Š0`Nï`ÕlŒTY²N<yêNKNô•ú^ËzïS›OÌS¹eáOV„vlQ‡eSOû|0"
+ tpf_perpetual_federal_council:0 "8^¾‹Tw¦Ä‹®‹"
+ tpf_perpetual_federal_council_desc:0 "èmýV¶R¡l	gN!k6RªR¿OïS8l8„v‰RšRÿ„˜—r0–™ýŒTãNhˆCgÅV‰˜(W8^¾‹Ä‹®‹-NÍSYŒ2R0"

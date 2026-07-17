@@ -1,0 +1,8 @@
+set_emperor_of_china = ROOT
+add_mandate = 100
+add_meritocracy = 100
+set_country_flag = jxp_unlocked_hakko_ichiu_reform
+clr_country_flag = jxp_hakko_ichiu_reform_passed
+clr_country_flag = jxp_hakko_visibility_reconciled_v0260
+jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+regenerate_government_mechanics = yes

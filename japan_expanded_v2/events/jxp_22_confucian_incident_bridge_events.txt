@@ -1,0 +1,463 @@
+namespace = jxp_confucian_incident
+
+# Confucian Japan cannot use the Shinto isolationism incident interface after
+# conversion. These deliberately sparse chains preserve the historical themes
+# and feed their choices into JXP's persistent polity values instead.
+
+country_event = {
+	id = jxp_confucian_incident.98
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		NOT = { has_country_flag = jxp_confucian_bridge_incident_state_v0231 }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_country_flag = jxp_confucian_bridge_incident_state_v0231
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_neo_done }
+			set_country_flag = end_of_neo_confucianism_chain
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_urban_done }
+			set_country_flag = end_of_urbanisation_chain
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_nanban_done }
+			set_country_flag = end_of_nanban_chain
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = jap_chose_kaikoku_flag
+							has_country_flag = jap_chose_trade_with_west_flag
+							has_country_flag = jap_chose_sakoku_flag
+						}
+					}
+				}
+				set_country_flag = jap_chose_trade_with_west_flag
+			}
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_firearms_done }
+			set_country_flag = end_of_incident_firearms_chain
+			if = {
+				limit = { has_country_modifier = jxp_confucian_standard_calibers }
+				clr_country_flag = proliferation_firearms_flag
+				clr_country_flag = example_of_bushido_flag
+				set_country_flag = perfecting_the_musket_flag
+			}
+			else_if = {
+				limit = { has_country_modifier = jxp_confucian_guarded_arsenals }
+				clr_country_flag = perfecting_the_musket_flag
+				clr_country_flag = proliferation_firearms_flag
+				set_country_flag = example_of_bushido_flag
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = perfecting_the_musket_flag
+							has_country_flag = proliferation_firearms_flag
+							has_country_flag = example_of_bushido_flag
+						}
+					}
+				}
+				set_country_flag = proliferation_firearms_flag
+			}
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_christian_done }
+			set_country_flag = end_of_incident_spread_of_christianity_chain
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = significant_christian_presence_flag
+							has_country_flag = christianity_defeated_flag
+						}
+					}
+				}
+				set_country_flag = significant_christian_presence_flag
+			}
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_authority_done }
+			set_country_flag = end_of_incident_shogunate_authority_chain
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_ikko_done }
+			set_country_flag = end_of_ikko_chain
+		}
+		if = {
+			limit = { has_country_flag = jxp_confucian_bridge_wokou_done }
+			set_country_flag = end_of_wokou_chain
+		}
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_confucian_incident.99
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+	}
+
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_confucian_incident.1
+	title = "jxp_confucian_incident.1.t"
+	desc = "jxp_confucian_incident.1.d"
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		OR = {
+			has_country_flag = jxp_confucian_bridge_forced_dispatch
+			AND = {
+				NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+				jxp_confucian_bridge_firearms_available_trigger = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 108 }
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		add_country_modifier = { name = jxp_confucian_incident_review_recent duration = 1825 }
+	}
+
+	option = {
+		name = "jxp_confucian_incident.1.a"
+		set_country_flag = jxp_confucian_bridge_firearms_started
+		add_country_modifier = { name = jxp_confucian_firearms_registry duration = 3650 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.2 days = 1095 } }
+	}
+	option = {
+		name = "jxp_confucian_incident.1.b"
+		set_country_flag = jxp_confucian_bridge_firearms_started
+		add_army_professionalism = 0.02
+		jxp_subtract_tenka_order_5_effect = yes
+		jxp_add_oceanic_opening_10_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.2 days = 1095 } }
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.2
+	title = "jxp_confucian_incident.2.t"
+	desc = "jxp_confucian_incident.2.d"
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_confucian_shinto_bridge_country_trigger = yes }
+
+	option = {
+		name = "jxp_confucian_incident.2.a"
+		set_country_flag = jxp_confucian_bridge_firearms_done
+		clr_country_flag = proliferation_firearms_flag
+		clr_country_flag = example_of_bushido_flag
+		set_country_flag = perfecting_the_musket_flag
+		set_country_flag = end_of_incident_firearms_chain
+		add_country_modifier = { name = jxp_confucian_standard_calibers duration = 7300 }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian_incident.2.b"
+		set_country_flag = jxp_confucian_bridge_firearms_done
+		clr_country_flag = perfecting_the_musket_flag
+		clr_country_flag = proliferation_firearms_flag
+		set_country_flag = example_of_bushido_flag
+		set_country_flag = end_of_incident_firearms_chain
+		add_country_modifier = { name = jxp_confucian_guarded_arsenals duration = 7300 }
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.10
+	title = "jxp_confucian_incident.10.t"
+	desc = "jxp_confucian_incident.10.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		OR = {
+			has_country_flag = jxp_confucian_bridge_forced_dispatch
+			AND = {
+				NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+				jxp_confucian_bridge_christian_available_trigger = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		add_country_modifier = { name = jxp_confucian_incident_review_recent duration = 1825 }
+	}
+
+	option = {
+		name = "jxp_confucian_incident.10.a"
+		set_country_flag = jxp_confucian_bridge_christian_started
+		add_country_modifier = { name = jxp_confucian_rites_supervision duration = 3650 }
+		add_harmony = 5
+		jxp_add_oceanic_opening_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.11 days = 1095 } }
+	}
+	option = {
+		name = "jxp_confucian_incident.10.b"
+		set_country_flag = jxp_confucian_bridge_christian_started
+		add_prestige = 5
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.11 days = 1095 } }
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.11
+	title = "jxp_confucian_incident.11.t"
+	desc = "jxp_confucian_incident.11.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_confucian_shinto_bridge_country_trigger = yes }
+
+	option = {
+		name = "jxp_confucian_incident.11.a"
+		set_country_flag = jxp_confucian_bridge_christian_done
+		clr_country_flag = christianity_defeated_flag
+		set_country_flag = significant_christian_presence_flag
+		set_country_flag = end_of_incident_spread_of_christianity_chain
+		add_country_modifier = { name = jxp_confucian_registered_churches duration = 7300 }
+		add_harmony = 5
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian_incident.11.b"
+		set_country_flag = jxp_confucian_bridge_christian_done
+		clr_country_flag = significant_christian_presence_flag
+		set_country_flag = christianity_defeated_flag
+		set_country_flag = end_of_incident_spread_of_christianity_chain
+		add_country_modifier = { name = jxp_confucian_proscribed_missions duration = 7300 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.20
+	title = "jxp_confucian_incident.20.t"
+	desc = "jxp_confucian_incident.20.d"
+	picture = COURT_eventPicture
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		OR = {
+			has_country_flag = jxp_confucian_bridge_forced_dispatch
+			AND = {
+				NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+				jxp_confucian_bridge_authority_available_trigger = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 132 }
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		add_country_modifier = { name = jxp_confucian_incident_review_recent duration = 1825 }
+	}
+
+	option = {
+		name = "jxp_confucian_incident.20.a"
+		set_country_flag = jxp_confucian_bridge_authority_started
+		add_country_modifier = { name = jxp_confucian_domain_memorials duration = 3650 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.21 days = 1095 } }
+	}
+	option = {
+		name = "jxp_confucian_incident.20.b"
+		set_country_flag = jxp_confucian_bridge_authority_started
+		add_legitimacy = 10
+		jxp_subtract_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_10_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.21 days = 1095 } }
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.21
+	title = "jxp_confucian_incident.21.t"
+	desc = "jxp_confucian_incident.21.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_confucian_shinto_bridge_country_trigger = yes }
+
+	option = {
+		name = "jxp_confucian_incident.21.a"
+		set_country_flag = jxp_confucian_bridge_authority_done
+		set_country_flag = end_of_incident_shogunate_authority_chain
+		add_country_modifier = { name = jxp_confucian_court_domain_compact duration = 7300 }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian_incident.21.b"
+		set_country_flag = jxp_confucian_bridge_authority_done
+		set_country_flag = end_of_incident_shogunate_authority_chain
+		add_country_modifier = { name = jxp_confucian_royal_rescripts duration = 7300 }
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.30
+	title = "jxp_confucian_incident.30.t"
+	desc = "jxp_confucian_incident.30.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		OR = {
+			has_country_flag = jxp_confucian_bridge_forced_dispatch
+			AND = {
+				NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+				jxp_confucian_bridge_ikko_available_trigger = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 144 }
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		add_country_modifier = { name = jxp_confucian_incident_review_recent duration = 1825 }
+	}
+
+	option = {
+		name = "jxp_confucian_incident.30.a"
+		set_country_flag = jxp_confucian_bridge_ikko_started
+		add_country_modifier = { name = jxp_confucian_temple_land_register duration = 3650 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_imperial_sanction_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.31 days = 1095 } }
+	}
+	option = {
+		name = "jxp_confucian_incident.30.b"
+		set_country_flag = jxp_confucian_bridge_ikko_started
+		add_harmony = 5
+		jxp_subtract_tenka_order_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.31 days = 1095 } }
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.31
+	title = "jxp_confucian_incident.31.t"
+	desc = "jxp_confucian_incident.31.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_confucian_shinto_bridge_country_trigger = yes }
+
+	option = {
+		name = "jxp_confucian_incident.31.a"
+		set_country_flag = jxp_confucian_bridge_ikko_done
+		set_country_flag = end_of_ikko_chain
+		add_country_modifier = { name = jxp_confucian_registered_congregations duration = 7300 }
+		jxp_add_tenka_order_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian_incident.31.b"
+		set_country_flag = jxp_confucian_bridge_ikko_done
+		set_country_flag = end_of_ikko_chain
+		add_country_modifier = { name = jxp_confucian_suppressed_leagues duration = 7300 }
+		add_prestige = 10
+		jxp_add_imperial_sanction_5_effect = yes
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.40
+	title = "jxp_confucian_incident.40.t"
+	desc = "jxp_confucian_incident.40.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		jxp_confucian_shinto_bridge_country_trigger = yes
+		OR = {
+			has_country_flag = jxp_confucian_bridge_forced_dispatch
+			AND = {
+				NOT = { has_country_modifier = jxp_confucian_incident_review_recent }
+				jxp_confucian_bridge_wokou_available_trigger = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 132 }
+
+	immediate = {
+		clr_country_flag = jxp_confucian_bridge_forced_dispatch
+		add_country_modifier = { name = jxp_confucian_incident_review_recent duration = 1825 }
+	}
+
+	option = {
+		name = "jxp_confucian_incident.40.a"
+		set_country_flag = jxp_confucian_bridge_wokou_started
+		add_country_modifier = { name = jxp_confucian_licensed_sea_guard duration = 3650 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_add_oceanic_opening_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.41 days = 1095 } }
+	}
+	option = {
+		name = "jxp_confucian_incident.40.b"
+		set_country_flag = jxp_confucian_bridge_wokou_started
+		add_prestige = 5
+		jxp_add_tenka_order_10_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+		hidden_effect = { country_event = { id = jxp_confucian_incident.41 days = 1095 } }
+	}
+}
+
+country_event = {
+	id = jxp_confucian_incident.41
+	title = "jxp_confucian_incident.41.t"
+	desc = "jxp_confucian_incident.41.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_confucian_shinto_bridge_country_trigger = yes }
+
+	option = {
+		name = "jxp_confucian_incident.41.a"
+		set_country_flag = jxp_confucian_bridge_wokou_done
+		set_country_flag = end_of_wokou_chain
+		add_country_modifier = { name = jxp_confucian_coastal_patrols duration = 7300 }
+		jxp_add_oceanic_opening_5_effect = yes
+	}
+	option = {
+		name = "jxp_confucian_incident.41.b"
+		set_country_flag = jxp_confucian_bridge_wokou_done
+		set_country_flag = end_of_wokou_chain
+		add_country_modifier = { name = jxp_confucian_closed_coast_edict duration = 7300 }
+		jxp_add_tenka_order_5_effect = yes
+		jxp_subtract_oceanic_opening_5_effect = yes
+	}
+}

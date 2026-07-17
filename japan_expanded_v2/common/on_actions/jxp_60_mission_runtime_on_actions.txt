@@ -1,0 +1,64 @@
+# Run old-save migration and fingerprint repair before the player first opens
+# the mission panel after loading a campaign.
+on_startup = {
+	events = {
+		jxp_idea_registry.1
+		jxp_migration_v023.7
+		jxp_migration_v023.8
+		jxp_migration_v025.1
+		jxp_migration_v028.1
+		jxp_migration_v028.2
+		jxp_shinshu.90
+		jxp_celestial_compat.1
+		jxp_toyotomi.1
+		jxp_daimyo_identity.1
+		jxp_mission_refresh.2
+	}
+}
+
+# External conversions and government changes can alter mission potentials
+# without passing through a JXP route effect.
+on_religion_change = {
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+}
+
+on_government_change = {
+	if = {
+		limit = {
+			OR = {
+				jxp_is_japanese_polity_trigger = yes
+				jxp_has_japanese_government_track_reform_trigger = yes
+			}
+		}
+		jxp_reconcile_daimyo_stage_reforms_effect = yes
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_refresh_route_missions_effect = yes
+	}
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+	}
+}
+
+# The vanilla mandate callbacks add/remove celestial_empire before this file is
+# evaluated. Re-enter the canonical split so Japanese emperors keep that exact
+# identity and former emperors recover their route-specific power structure.
+on_mandate_of_heaven_gained = {
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+	}
+}
+
+on_mandate_of_heaven_lost = {
+	if = {
+		limit = { jxp_is_japanese_polity_trigger = yes }
+		jxp_sync_final_state_power_structure_effect = yes
+		jxp_reconcile_hakko_ichiu_reform_visibility_effect = yes
+	}
+}

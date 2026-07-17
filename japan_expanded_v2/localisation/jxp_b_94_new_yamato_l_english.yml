@@ -1,0 +1,186 @@
+﻿l_english:
+ NYA:0 "°e'YŒTTOýV"
+ NYA_ADJ:0 "°e'YŒT"
+
+ jxp_b_94_form_new_yamato_title:0 ".°e'YŒTTOýV"
+ jxp_b_94_form_new_yamato_desc:0 "|V¸Sø‹=nòTNQêS=f,gW˜Rr„v4NöeúQ.VNb0kQµ^ÎW^0	NY=nàWNb‡eßv¦u³åN=e‘dN*NNb9h‰¸S„vqQTýV¶Rÿß`	g(WESl²‹TbŸq0,gWµc6Rpˆb–kl0WòTÏuìrËzKNTÿø‹ÎW¹eïSqQTSXRçeI`cwKNpSÿìSV6RªRO®‹0"
+ jxp_b_94_agent_a_refresh_interface_tt:0 "°eýV¶R„vûN¡R0tõVNNµuMeSO‰v°‹STteTïzÑSúQ7R°e÷‹Blÿ(WteTŒRbMRÿ°s	g…Q¹RÍNïSìrËzÐLˆ0"
+
+ jxp_iface_colonial_self_rule:0 "wmYê»lòTÏunxËz"
+ jxp_iface_colonial_independence:0 "wmYìrËzòTÏu·ƒô"
+ jxp_iface_continental_logistics_ready:0 "èm'YF–TäRòTÏu1Sêu"
+ jxp_iface_b_nya_needs_mission_refresh:0 "°e'YŒTûN¡R…V7R°e"
+ jxp_iface_b_nya_needs_idea_refresh:0 "°e'YŒTtõV…V7R°e"
+ jxp_iface_b_nya_needs_government_registry:0 "°e'YŒTMeSO…V‰v°‹"
+ jxp_iface_b_nya_eastward_contact:0 "°e'YŒTNRVOïòTÏuú^Ëz"
+ jxp_iface_b_nya_eastward_capstone_ready:0 "2N¸SqQTSO®‹zòTÏubŸq"
+
+ jxp_b_94_federal_assembly_reform:0 "ø‹=nTw¦®‹O"
+ jxp_b_94_federal_assembly_reform_desc:0 "T=n0TáN¹†uZwK„	c¦u>múQ®‹XTÿ-N.YêSŒcqQT2–¡R0sQzNùRYO‚‚0dk6RýwY¹R³uË–¹0WÿtS‰BlûNUOÍ‘'YÕläNýÏuÇ+o•„vOSFU0"
+ jxp_b_94_frontier_military_republic_reform:0 "¹†u›Q¡RqQŒTýV"
+ jxp_b_94_frontier_military_republic_reform_desc:0 "wm¸SˆRY–0oS¦WQgN9‚KbOqQT¨c>NgbMe˜R0ýV¶RåNÅ¨RXTbcÖSuXRÿFO›QyVÅbmNON­e2c‹S0W¹eê»l0"
+ jxp_b_94_merchant_commonwealth_reform:0 "wmFUTOýV"
+ jxp_b_94_merchant_commonwealth_reform_desc:0 "1gpSFU0=nHut^ÄRNÜm9‚INåN²‹¡wŒTßv“Šôuû|ýV¶R08fàVdkEu¾ÿ6qw¹ÜÞTáÅV‰˜f‹Õ`lQqQCg›R«ˆ&MbNbT¡l0"
+ jxp_b_94_oceanic_monarchy_reform:0 "'Ym‹sMe"
+ jxp_b_94_oceanic_monarchy_reform_desc:0 "omweg„vfk¶R1Œû|N,g0Wßv¦uÓuTHN°e„v‹sßu0‹s QHNø‹=nÐc›OÞíu„vY²NºN<hÿtS‰˜åNôfØš„v<y6Rb,gŒŒTN­ˆCgZŒTûyl>yO0"
+
+ jxp_b_94_foundation_strain:0 "ú^ýV5–Ûu"
+ jxp_b_94_coastal_survey_office:0 "wm¸SKmØuNb"
+ jxp_b_94_harbor_works:0 "ø‹=nnf÷‹"
+ jxp_b_94_frontier_roads:0 "qSãSšï"
+ jxp_b_94_coastal_watch:0 "wm¸SjuNb"
+ jxp_b_94_settler_horizon:0 "Ób–k0Ws^¿u"
+ jxp_b_94_township_rolls:0 "aNG•TŒQ"
+ jxp_b_94_civic_halls:0 "lQ®‹ONb"
+ jxp_b_94_religious_concord:0 "áOðNŒT¦u"
+ jxp_b_94_frontier_citizenship:0 "¹0WlQlyV"
+ jxp_b_94_red_seal_exchange:0 "1gpS*‚ïWµN"
+ jxp_b_94_harbor_warehouses:0 "=nàWlQÓN"
+ jxp_b_94_oceanic_shipyards:0 "'Ym9‚.n"
+ jxp_b_94_public_credit:0 "lQqQáO(u&"
+ jxp_b_94_pacific_common_market:0 "*Ys^mqQT^HW"
+ jxp_b_94_civil_offices:0 "‡e˜RRr"
+ jxp_b_94_civilian_command:0 "‡e˜R‚‚6R›Q¡R"
+ jxp_b_94_enduring_constitution:0 "•ENýV¦u"
+ jxp_b_94_pacific_embassy:0 "èmO†™"
+ jxp_b_94_blue_water_fleet:0 "Ý„4lˆRY0‚–"
+ jxp_b_94_two_shores_program:0 "2N¸SÏueu²u†˜"
+ jxp_b_94_frontier_muster_strain:0 "¹0W¨RXTÅb"
+ jxp_b_94_merchant_concessions:0 "wmFUyr¸‹Åb"
+ jxp_b_94_constitutional_deadlock:0 "6RªRõPNS"
+
+ jxp_b_94_mission_pacific_shore_foundation_title:0 "Ëz³*Ys^m¸S"
+ jxp_b_94_mission_pacific_shore_foundation_desc:0 "ÎNS¹eYþ–„vwmŒn0RWS¹er^åq„v¬SÒ‰ÿø‹ZwK„ÅV‰˜b²‹|Vdk^SŽNTNagwm¸S0KmØu0ophŒTqQT*‚ïSŠbö–ce=nãSÞbýVW0"
+ jxp_b_94_mission_harbor_survey_office_title:0 "¾‹wm¸SKmØuNb"
+ jxp_b_94_mission_harbor_survey_office_desc:0 "ŸqåwnoPl„v9‚4Y0NÏ‘0uLu„vfNTN,g0WTüR”^(WTN.VþVNåTjO0ýV¶RSbÅb–™ybKmØu9(uÿåNbcÖSïS`—„v=nþV0"
+ jxp_b_94_mission_mountain_pass_roads_title:0 "VqSãSšï"
+ jxp_b_94_mission_mountain_pass_roads_desc:0 "wm¸SÎW^å‚«ˆqS	|Vdk”–­eÿßv¦u¿OêS=f¸ub—‡eàz0îOšïŒTehh‹†w9˜R9ÿtSýw©‹MeäN0luQN'irzŠ…QF–0"
+ jxp_b_94_mission_northern_frontier_watch_title:0 "áTˆRS¹e¹†u"
+ jxp_b_94_mission_northern_frontier_watch_desc:0 "S¹e*‚ïåNwmþ–0ÒRnoŒT+o•eˆÙu¿uwŒšýV¶R0juNbNáTI–ÅV‰˜âeýwÝO²bESlÿmNNŠb¹†uØSbàeKS„v›Q9Ñžm0"
+ jxp_b_94_mission_coastal_defense_circuit_title:0 "ÞÓuwm¸SˆRY"
+ jxp_b_94_mission_coastal_defense_circuit_desc:0 "US*N=nãS„v®pðSµb!cN†N¿l¸SHg¨R„v0‚–0ßuNáO÷S0eˆÙuHS¦^ŒTáT*‚öeIRÿ¹eïS„gbwck„vwm¸S2–¿u0"
+ jxp_b_94_mission_continental_horizon_title:0 "ŠÇ'YF–0Ws^¿u"
+ jxp_b_94_mission_continental_horizon_desc:0 "°e'YŒTòTÎN‰vF–¹pb•HN'YF–ýV¶R0ibUS¹†uÅV‰˜åN°e„v0W¹eßv¦uHN4Oÿ&TRÓb–kêSOŠbçeNLu„v‹TäNY6R0RôfÜKNY0"
+
+ jxp_b_94_mission_first_local_compact_title:0 "¢‹Ëz–™ýN0W¹eßv¦u"
+ jxp_b_94_mission_first_local_compact_desc:0 "nQg0œQ¦W0W0úRXN=nHuÅV‰˜qQT¦ušRzyV0SïŒTˆRY0ßv¦uKˆNESlÑSŠCgÿmNOÜ¹e˜Rr„vôv¥c‹TäNn1Y»SHe›R0"
+ jxp_b_94_mission_township_rolls_title:0 "šRaNG•TŒQ"
+ jxp_b_94_mission_township_rolls_desc:0 "TŒQNêS°‹UV³uz7bÿmN°‹UVŒ	gCgÂS RO®‹0bÅbQeNmŒTg¹0WlQyV0ƒRSûyl>yOÎN4Nöe%„0WØSb	g1ûN„vqQTSO0"
+ jxp_b_94_mission_assembly_halls_title:0 "M¾‹lQ®‹ONb"
+ jxp_b_94_mission_assembly_halls_desc:0 "ýV¶RªR6RNýwêSXR(WŽN–™ý0T0WONb”^	clQVzVÝOXR®‹Hh0&ŒQN÷‹Maÿ©‹0W¹eKNðXÛeQTw¦Me¡R0"
+ jxp_b_94_mission_religious_concord_title:0 "ÓuáOðNŒT¦u"
+ jxp_b_94_mission_religious_concord_desc:0 "^y>y0iOúR0YeON,g0W<y×OTYNµ^=nÎW0NvQ©‹çe'YF–„v—Rè•‰NïzomwegÿN‚YåNlQqQ»l‰RŒTáOðNêˆRRšRqQT•^¿u0"
+ jxp_b_94_mission_frontier_citizenship_title:0 "ˆcˆN¹0WlQlCg"
+ jxp_b_94_mission_frontier_citizenship_desc:0 "ˆRkSqSãS0V¦WW0WŒTôu²bšïwN”^8lÜêS=f4NöeOOl0lQlCgSCg)RNyV¡RøvÞÿmNäN¹†uwckÛeQýV¶R0"
+ jxp_b_94_mission_union_fulfilled_title:0 "bhQTOKN¦u"
+ jxp_b_94_mission_union_fulfilled_desc:0 "SVESl–™HQåN°e'YŒTêðyÿwT0WÍNMaOßv¦uTjOÿTO¿ONQ=fCgœR‰R’c0•ENýV¦uïSåN1udkÏu×Sb‰NNMe‰N0"
+
+ jxp_b_94_mission_red_seal_inheritance_title:0 "bçu1gpS*‚ï"
+ jxp_b_94_mission_red_seal_inheritance_desc:0 "HQˆHdeg„v1gpS¶ròTÏu*‰r‚ÿ*‚wmåwÆ‹NFUºNáO(utSÍNïSO(u0°eýV¶RSŠbÁyºNsQû|9e.b×SlQqQÕl¦umg„vèm8f0"
+ jxp_b_94_mission_harbor_warehouses_title:0 "ú^Ëz=nàWlQÓN"
+ jxp_b_94_mission_harbor_warehouses_desc:0 "èm'irNýwêS`—9‚IN„vÁy“^hTl01uø‹=nqQTúQD„vlQÓNïSs^‘bH®|ŒT9‚gâl¨RÿFOú^¾‹9(uÅV‰˜1u,gãNbÅb0"
+ jxp_b_94_mission_oceanic_shipyards_title:0 "ibú^'Ym9‚.n"
+ jxp_b_94_mission_oceanic_shipyards_desc:0 "”^…Qwm„v9‚êS*gÅVýw*jŠ'Ym09‚.nÅV‰˜‡Tåe,g(gjO0SV0W(gPgŒTÜm^Åˆÿv^ØNúQÍ‘°e­‹Ãu.SºN„vãN÷N0"
+ jxp_b_94_mission_oceanic_public_credit_title:0 "R¾‹lQqQáO(u"
+ jxp_b_94_mission_oceanic_public_credit_desc:0 "•z*‚Ð—‰èŠpecR„váO(u0lQVz&ŒTPØN!k^ýwYM–NOP7b,gÿFOMeœ^ÅV‰˜HQåNwÑ‘‹vö”Á‹fbú‹0"
+ jxp_b_94_mission_two_ocean_exchange_title:0 "=2Nm²Nbc"
+ jxp_b_94_mission_two_ocean_exchange_desc:0 "‰¸S=n^b—T*Ys^mÿmNÇF–ï¥cÑæSNGr'Ym0FUï0O‚‚ŒTàzzå‚ýw|Vdkb²‹ÿ°e'YŒTsSïSbHN2NmKNô•„vÏuªuºN0"
+ jxp_b_94_mission_pacific_common_market_title:0 "*Ys^mqQT^HW"
+ jxp_b_94_mission_pacific_common_market_desc:0 "qQTHS¦^0òNÁˆÄ‰RŒT=nzNP–Sib'Y8fÿtSmN‰Bl-N.Y>eV–aVie0Aucƒ”^egêïS„˜g„v6R¦^ÿw^—N!k'`„vyr¸‹0"
+
+ jxp_b_94_mission_foundation_convention_title:0 "ŒRbú^ýVO®‹"
+ jxp_b_94_mission_foundation_convention_desc:0 "°e'YŒTÅV‰˜(W®‹O0›Q¡R0FU>yN‹sßuKNô•jOúQ9h,g	éb0ûNUOSïý	gôu²bwÿmNý	gÅV‰˜lQVbÅb„vãN÷N0"
+ jxp_b_94_mission_elected_offices_title:0 "˜SšRlQLwûNg"
+ jxp_b_94_mission_elected_offices_desc:0 "Nº‹gbMew1u	>NØ=f‹sßuµNuÿ0W¹e˜Rrý”^	cûNgðLw03zšR„vCgZegêzVŒTáO(uÿw^—N­eôfbc„vÁyi`0"
+ jxp_b_94_mission_separated_ledgers_title:0 "RnMe0&ŒQ"
+ jxp_b_94_mission_separated_ledgers_desc:0 "›Q90=nzN0W¹eåTzå‚÷m(WN,g&-NÿûNUOÑvcwýàeÎNŒw0Rr°‹&OžX R‡efNb,gÿtSýwÏQS*c(uŒTCgã„W­e0"
+ jxp_b_94_mission_civilian_command_title:0 "‡e˜R‚‚6R›Q¡R"
+ jxp_b_94_mission_civilian_command_desc:0 "¹†uýV¶R»yNV›Q–ÿmNNýw©‹ÏkN!kqSHgýbHN›Q4YibCg„vPãS0„˜—r0ûN‹TŒT¨RXTgP–ÅV‰˜¥c×SlQqQHgsQ¡R®‹0"
+ jxp_b_94_mission_harbor_petitions_title:0 ",TÖSø‹=n÷‹Ma"
+ jxp_b_94_mission_harbor_petitions_desc:0 "=nHu&^egz6eÿmNbÅbS•0v«uN9‚¾–0©‹ÖNìNåNb‡e÷‹MaÛeQ-N.Y®‹zÿ=fÀhŒšTO6R¦^=f&TwžR„vHS¦^0"
+ jxp_b_94_mission_enduring_constitution_title:0 "ø”b•ENýV¦u"
+ jxp_b_94_mission_enduring_constitution_desc:0 "ªR6RÅV‰˜Ïu—VOO>mû|nÿfŒT¹†uib.V0å‚lQLw00MeŒT÷‹MaGWòT	g8^Õlÿ°e'YŒT¿OïSŠbú^ýVöe„v¥YOSØSHNýV¶R.Oßu0"
+
+ jxp_b_94_mission_self_rule_proclaimed_title:0 "±RJTwmYê»l"
+ jxp_b_94_mission_self_rule_proclaimed_desc:0 ",gWçepSÍNïS«ˆSÍ‘ÿtSNQýwŠÇ'Ym=eM‘ÏkNy˜0W¹e‹N¡R0ê»l=fESlbÅb1ûN„vVËYÿw^—MQd–IN¡R„vPãS0"
+ jxp_b_94_mission_severed_governor_seals_title:0 "SXRI`cwçepS"
+ jxp_b_94_mission_severed_governor_seals_desc:0 "SVçeI`cwKNpS«ˆ6eÛchHh“^ÿýV¶RMbwckåNêñT„vTINLˆ‹N0dk>NO&^eg†^xQÿmNOYuNY²NN0MeN„v‰lÍ‘YOâl0"
+ jxp_b_94_mission_pacific_embassy_title:0 ">mc*Ys^mOâV"
+ jxp_b_94_mission_pacific_embassy_desc:0 "ìrËzNIrŽNWØVegY0OâV”^åNs^IrýVfNÍ‘¿‹åe,gø‹MeCgÿv^ô‹f°e'YŒTâe^—1YWÿmN^—ÛSqNw„v4Nöe%„èR0"
+ jxp_b_94_mission_blue_water_guard_title:0 "bÝ„4lˆRY0‚–"
+ jxp_b_94_mission_blue_water_guard_desc:0 "èmýV¶RÅV‰˜ÝO²bFU9‚0O‚‚ŒTeˆÙuÿw^—êS(WÑ¸SUSHy×e^0Üm­‹Ãuf5ÿtS=fìrËzY²NNïSÿfãN„vúWNx0"
+ jxp_b_94_mission_eastward_delegation_title:0 "yrYNRVãNhˆâV"
+ jxp_b_94_mission_eastward_delegation_desc:0 "NRVN=fÍ‘×S,gWßu»lÿw=f&^Nw°e6R¦^0°e8fN°e«ŽýNÍ‘Ô*Ys^m‰¸S0ãNhˆâVÅV‰˜åb	g³Y0›RN*‚wmÝOœ–0"
+ jxp_b_94_mission_commonwealth_of_two_shores_title:0 "2N¸SqQTSO"
+ jxp_b_94_mission_commonwealth_of_two_shores_desc:0 "N*NbŸq„v°e'YF–ýV¶R‚YÊNïSåN	ébŠb›RÏ‘•bT*Ys^m|V¸SÿbHQŒRb,g'YF–„vqQŒTýV‹NN02NÍyÄ–ÃVý—=eØNwžRb,gÿmNýN”^åNMQ9VgãNÿfMe»l0"
+
+ jxp_new_yamato.1.t:0 "°e'YŒTú^ýVO®‹"
+ jxp_new_yamato.1.d:0 "ø‹ÎW„vãNhˆ0¹†uˆRY–01gpSFUNçefk¶RPŸZwONb0çeI`cwKNpSòTÏuSXRÿFO°eýV¶Rvzßz1uŒgbMe0‚YUORM‘=nzNuQCgÿÍN‰˜(WÊNY™QeQ9h,gýV¦u0"
+ jxp_new_yamato.1.a:0 "ø‹=nNø‹ÞTqQÄuTw¦®‹O0"
+ jxp_new_yamato.1.b:0 "©‹¹†u›Q¡RqQŒTýVˆROOê1u0"
+ jxp_new_yamato.1.c:0 "åNwmFUTOôuû|'Ym*‚ï0"
+ jxp_new_yamato.1.e:0 "åbËzýwŒŒT2N¸S.Oßu„v'Ym‹sßu0"
+
+ jxp_new_yamato.2.t:0 "2NÍy‡eWR„vaNG•TŒQ"
+ jxp_new_yamato.2.d:0 "fNTÑS°sÿTNag³lAm0qSãSŒTZwK„(WûylãSðN,g0Wí‹Š-NT	gTðy0å‚TŒQêSÇ‘çeýV<hVÿ˜Rr¿O¾–åNtã‰NW0Wÿå‚hQb—9e™QÿÈS	gºNÅbÃVNVyHQ„v°‹ÆV­eÝu0"
+ jxp_new_yamato.2.a:0 "©‹2NGrW0W„vTðyv^ReQŒQ0"
+ jxp_new_yamato.2.b:0 "ÝOc,gWfNVÿåNMQMeäN1Y^0"
+
+ jxp_new_yamato.3.t:0 "¹†uW0Wå‹ˆcˆNŒ"
+ jxp_new_yamato.3.d:0 "°eVSï2NµOúQ°s'YGrïS¦WKN0W0aNG•÷‹BlŠbW0WRÙuêw7bÿˆRY˜RRIN.V¾‹oS0uÿåN›QyVbcÖS0WCg0ûNUO	ébýOQX.peãNºN„v¹†u>yO0"
+ jxp_new_yamato.3.a:0 "=ecbÅblQqQyV¡R„vêw7b0"
+ jxp_new_yamato.3.b:0 "åN›QyVoS¦WnxÝO¹2–0"
+
+ jxp_new_yamato.4.t:0 "=nFU÷‹Bl°e„vyr¸‹"
+ jxp_new_yamato.4.d:0 "wmFUMaaib'YèmáO(uÿtS‰BlMQd–å‚r^0W¹ezv^ê¾‹òNÁˆ00Me˜R²‹HNýV¶R”^ôv¥cÏu%„lQÓNÿåNMQlQqQ*‚ï¦lHNàQ¶RFU÷S„vÁyµN0"
+ jxp_new_yamato.4.a:0 "ÆQ¸‹	gP–ê»lÿFO²d»SNy˜Í‘FUÁX’W0"
+ jxp_new_yamato.4.b:0 "1ulQqQÓN“^ŒT˜RšR&ŒQŒcác*‚ï0"
+
+ jxp_new_yamato.5.t:0 "ø‹áOðNqQˆRNµ^=n"
+ jxp_new_yamato.5.d:0 "my<yï¿uN<yÜböeIR(W=nHSÑSu²Qz0T—Rè•MaaŒrr»l‰RŒT¦uÿFOÝOˆR˜RXT‰Bl1uýV¶RcšR=UNlQqQêNV0"
+ jxp_new_yamato.5.a:0 "åNËR¹RbcÖSqQTˆRÕl0"
+ jxp_new_yamato.5.b:0 "nxËzßuNêNVÿsSO®‹OHNdk‰Ngb0"
+
+ jxp_new_yamato.6.t:0 "ŒegŒcác¹†uluQ"
+ jxp_new_yamato.6.d:0 "¹ƒXf‹¥bOluQÅÆ–Óu0S›Q÷‹Blú^Ëz8^¾‹c%cCgÿ®‹XTRZWc„˜—rŒT¨RXTgP–ÅV‰˜1u‡e˜RHgsQybÆQ0"
+ jxp_new_yamato.6.a:0 "ˆcˆN›Q¡RHgsQôf3zšR„v¨RXTCg0"
+ jxp_new_yamato.6.b:0 "©‹›Q–×SlQ®‹Nt^¦^„˜—r‚‚6R0"
+
+ jxp_new_yamato.7.t:0 "=nãS÷‹MaN6RªRõPNS"
+ jxp_new_yamato.7.d:0 "ø‹=nTwTÍSùRNy˜4NöeD– Rzÿ-N.Y˜RrRðy0‚–%`—Ïu90å‚ÞV®‹OÍ‘®‹ÿ9ei—O«ˆö^ï‹ÿå‚HVLˆôucÿ0W¹eßv¦uSYuNÂˆÕu0"
+ jxp_new_yamato.7.a:0 "²dÞVÕlHhÿOýV¦uÍ‘°e¡R®‹0"
+ jxp_new_yamato.7.b:0 "ôuc't%`V6eÿKSëVÓumg‰Ngb0"
+
+ jxp_new_yamato.8.t:0 "egêåe,g„vO‚‚"
+ jxp_new_yamato.8.d:0 "NX‚¬`cçeV¶R¹u„v9‚všeQ=nŒn0O‚‚&^eg,gWMeCg„výVfNÿtSÍNåNfåe–kl0WãSITðy|TbìN0®‹O‰˜³QšRåNUOÍy«ŽýNÞV”^0"
+ jxp_new_yamato.8.a:0 "åNs^IrýVfNV=TNRVOï0"
+ jxp_new_yamato.8.b:0 "HQéTúV'YF–ÿN¥c×S+T÷m„vçeðy0"
+
+ jxp_new_yamato.9.t:0 "SXRgTNšgI`cwpS"
+ jxp_new_yamato.9.d:0 "çeI`cwœ^„vgTNšgpSàz«ˆ0R®‹O0	gºNIN.VlQV±R^ìrËzŒRbÿåNdkÈuÓuNR‰N®‹ÿmN	gºN²‹HN”^NOŒRVchÿMQ©‹†^xQ‹SÇ6R¦^ú^¾‹0"
+ jxp_new_yamato.9.a:0 "Tø‹=n±RJTìrËzòTÏuŒRb0"
+ jxp_new_yamato.9.b:0 "SƒRRVchÿ©‹ýV¦uw^—êNVô‹Ý‹0"
+
+ jxp_new_yamato.10.t:0 "b—T2N¸S„výV¶R"
+ jxp_new_yamato.10.d:0 "0‚–0áO(uNOïýòTbŸq0®‹Ob—MR	g2NýN²u†˜ÿNýNIN.VåN•g•bDú^Ëzè*Ys^mqQTSOÿæSNýN‰BlHQ(W°e'YF–ŒRbê1uw3zúV„vqQŒTýV0"
+ jxp_new_yamato.10.a:0 "•bDNRV*‚ïÿÆQY2N¸SÏueu0"
+ jxp_new_yamato.10.b:0 "HQŒR„U,g'YF–„vTO‹NN0"
+
+ NYA_ideas:0 "°e'YŒTtõV"
+ NYA_ideas_desc:0 "°e'YŒT1uèm°‹ÆV00W¹eßv¦uŒT¹†uuImqQTQX.0ƒRâeNY6R,gWçe6RÿmNN&T²‹egê*Ys^m|V¸S„ví‹Š0åTz‚NMe»lWµN0"
+ NYA_ideas_start:0 "°e'YŒT.Oßu"
+ NYA_ideas_bonus:0 "°e'YŒTÄ–ÃV"
+ nya_two_shores_memory:0 "2N¸S°‹ÆV"
+ nya_two_shores_memory_desc:0 "fR!hTöe²‹ð!nwmHQlŒTN'YF–„v†SòSÿO°e«ŽýNNÅVOVWØVûNUON¸S0"
+ nya_harbor_compacts:0 "ø‹=nßv¦u"
+ nya_harbor_compacts_desc:0 "=nHuåNqQTzR0Qe¾–1ûNŒTòNÁˆzVôuû|•z8f0"
+ nya_frontier_smallholders:0 "¹†uêw7b"
+ nya_frontier_smallholders_desc:0 "bÅbSï0ˆRYNQeNmIN¡R„vêw7bÿ=f¹†u3zšRw^— cHYVib.V„v9húW0"
+ nya_elected_township_offices:0 "aNG•lQLw"
+ nya_elected_township_offices_desc:0 "šRgðLw„v0W¹e˜RŒTlQV&ŒQÿOË–ýVWÍNýwôucïSî•1„v»lt0"
+ nya_pacific_shipwrights:0 "*Ys^m9‚.S"
+ nya_pacific_shipwrights_desc:0 "åe,g(gjO0,g0W(gPgNÜm^Åˆ(W9‚.n-NÓuTÿ.úQ”^•zÎ˜jm„v0‚9‚0"
+ nya_religious_concord:0 "áOðNŒT¦u"
+ nya_religious_concord_desc:0 "NT—Rè•åNlQqQ»l‰RHNqQT•^¿uÿMQçeNLu„vYe‰NgdÁkûyl>yO0"
+ nya_transpacific_credit:0 "èmáO(u"
+ nya_transpacific_credit_desc:0 "lQV„vPØN!k^ŒTïS`—FUÕlÿ©‹D,gbeŽNzŠ+o•wNnxšR„v*‚cR0"

@@ -1,0 +1,616 @@
+# Runtime precedence: EU4 selects the first matching free national-idea group.
+# Keep exact-tag vanilla overrides before vanilla 00_country_ideas.txt.
+ODA_ideas = {
+	start = {
+		infantry_power = 0.10
+		land_morale = 0.10
+	}
+
+	bonus = {
+		leader_land_fire = 1
+		siege_ability = 0.10
+	}
+
+	trigger = {
+		tag = ODA
+	}
+	free = yes
+
+	jxp_oda_rakuichi_rakuza = {
+		global_trade_goods_size_modifier = 0.10
+		trade_efficiency = 0.10
+	}
+	jxp_oda_tenka_fubu = {
+		province_warscore_cost = -0.10
+		core_creation = -0.10
+	}
+	jxp_oda_kurohoro_generals = {
+		leader_land_shock = 1
+		army_tradition = 0.5
+	}
+	jxp_oda_azuchi_court = {
+		leader_siege = 1
+		legitimacy = 0.5
+	}
+	jxp_oda_sandansei_fire = {
+		fire_damage = 0.10
+		artillery_power = 0.10
+	}
+	jxp_oda_namban_patrons = {
+		technology_cost = -0.05
+		global_institution_spread = 0.10
+	}
+	jxp_oda_kenchi_registers = {
+		global_manpower_modifier = 0.15
+		global_tax_modifier = 0.10
+		state_maintenance_modifier = -0.05
+	}
+}
+
+TKG_ideas = {
+	start = {
+		infantry_power = 0.10
+		global_unrest = -1
+	}
+
+	bonus = {
+		development_cost = -0.10
+		governing_capacity_modifier = 0.10
+	}
+
+	trigger = {
+		tag = TKG
+	}
+	free = yes
+
+	jxp_tkg_mikawa_bushi = {
+		land_morale = 0.10
+		manpower_recovery_speed = 0.05
+	}
+	jxp_tkg_sekisho_network = {
+		spy_offence = 0.20
+		global_spy_defence = 0.10
+	}
+	jxp_tkg_hatamoto_banners = {
+		discipline = 0.05
+	}
+	jxp_tkg_metsuke_records = {
+		stability_cost_modifier = -0.10
+		advisor_cost = -0.05
+	}
+	jxp_tkg_matsudaira_branches = {
+		global_autonomy = -0.05
+		diplomatic_upkeep = 1
+	}
+	jxp_tkg_toshogu_cult = {
+		tolerance_own = 2
+		prestige = 1
+	}
+	jxp_tkg_famine_granaries = {
+		global_unrest = -1
+		production_efficiency = 0.05
+	}
+}
+
+TKD_ideas = {
+	start = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.10
+	}
+
+	bonus = {
+		global_institution_spread = 0.10
+	}
+
+	trigger = {
+		tag = TKD
+	}
+	free = yes
+
+	jxp_tkd_kai_genji = {
+		land_morale = 0.10
+	}
+	jxp_tkd_shingen_dams = {
+		global_trade_goods_size_modifier = 0.10
+		production_efficiency = 0.05
+	}
+	jxp_tkd_nokizaru_network = {
+		spy_offence = 0.10
+		global_spy_defence = 0.10
+	}
+	jxp_tkd_kurokawa_gold = {
+		inflation_reduction = 0.05
+		global_tax_modifier = 0.05
+	}
+	jxp_tkd_koshu_hatto = {
+		idea_cost = -0.10
+		stability_cost_modifier = -0.05
+	}
+	jxp_tkd_twentyfour_generals = {
+		free_leader_pool = 1
+		yearly_army_professionalism = 0.0025
+	}
+	jxp_tkd_koyo_gunkan = {
+		army_tradition = 0.5
+	}
+}
+
+UES_ideas = {
+	start = {
+		army_tradition_decay = -0.01
+		production_efficiency = 0.10
+	}
+
+	bonus = {
+		infantry_power = 0.10
+		land_morale = 0.05
+	}
+
+	trigger = {
+		tag = UES
+	}
+	free = yes
+
+	jxp_ues_kanto_kanrei = {
+		diplomatic_upkeep = 1
+		legitimacy = 0.5
+	}
+	jxp_ues_yamanouchi_branches = {
+		army_tradition = 0.5
+	}
+	jxp_ues_kamakura_office = {
+		reinforce_cost_modifier = -0.25
+		manpower_recovery_speed = 0.05
+	}
+	jxp_ues_dragon_of_echigo = {
+		land_morale = 0.10
+		shock_damage = 0.05
+	}
+	jxp_ues_nokizaru = {
+		spy_offence = 0.20
+	}
+	jxp_ues_agakita_shu = {
+		global_manpower_modifier = 0.10
+		global_unrest = -0.5
+	}
+	jxp_ues_denkoku_no_ji = {
+		idea_cost = -0.10
+		prestige = 0.5
+	}
+}
+
+HJO_ideas = {
+	start = {
+		land_morale = 0.10
+		development_cost = -0.10
+	}
+
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+
+	trigger = {
+		tag = HJO
+	}
+	free = yes
+
+	jxp_hjo_kamakura_legacy = {
+		legitimacy = 0.5
+		diplomatic_reputation = 1
+		prestige_decay = -0.005
+	}
+	jxp_hjo_night_combat = {
+		leader_land_shock = 1
+		shock_damage = 0.05
+	}
+	jxp_hjo_odawara_administration = {
+		state_maintenance_modifier = -0.05
+		governing_capacity_modifier = 0.05
+	}
+	jxp_hjo_tokusei = {
+		global_unrest = -1
+		years_of_nationalism = -3
+	}
+	jxp_hjo_castle_ring = {
+		defensiveness = 0.25
+	}
+	jxp_hjo_kanto_unification = {
+		global_manpower_modifier = 0.15
+		province_warscore_cost = -0.05
+	}
+	jxp_hjo_odawara_council = {
+		same_culture_advisor_cost = -0.15
+		advisor_cost = -0.05
+	}
+}
+
+MRI_ideas = {
+	start = {
+		navy_tradition = 1
+		diplomats = 1
+	}
+
+	bonus = {
+		leader_land_fire = 1
+	}
+
+	trigger = {
+		tag = MRI
+	}
+	free = yes
+
+	jxp_mri_oe_lineage = {
+		diplomatic_reputation = 1
+		advisor_cost = -0.05
+	}
+	jxp_mri_kokujin_ikki = {
+		global_manpower_modifier = 0.10
+		global_unrest = -0.5
+	}
+	jxp_mri_diplomatic_web = {
+		diplomatic_upkeep = 1
+		spy_offence = 0.10
+	}
+	jxp_mri_three_arrows = {
+		global_autonomy = -0.05
+		land_morale = 0.05
+	}
+	jxp_mri_hiroshima_castle = {
+		development_cost = -0.10
+	}
+	jxp_mri_itsukushima_fleet = {
+		ship_durability = 0.05
+		galley_power = 0.10
+	}
+	jxp_mri_hagi_ware = {
+		prestige = 1
+		trade_efficiency = 0.05
+	}
+}
+
+SMZ_ideas = {
+	start = {
+		army_tradition_decay = -0.01
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		global_tax_modifier = 0.10
+		global_manpower_modifier = 0.05
+	}
+
+	trigger = {
+		tag = SMZ
+	}
+	free = yes
+
+	jxp_smz_satsuma_hayato = {
+		land_morale = 0.10
+	}
+	jxp_smz_satsunan_school = {
+		manpower_recovery_speed = 0.15
+	}
+	jxp_smz_three_provinces = {
+		production_efficiency = 0.10
+		global_autonomy = -0.03
+	}
+	jxp_smz_tsurinobuse = {
+		shock_damage = 0.05
+		land_morale = 0.05
+	}
+	jxp_smz_tanegashima_foundries = {
+		fire_damage = 0.10
+	}
+	jxp_smz_ryukyu_trade = {
+		trade_steering = 0.20
+		naval_forcelimit_modifier = 0.10
+	}
+	jxp_smz_early_westernization = {
+		technology_cost = -0.05
+		global_institution_spread = 0.10
+	}
+}
+
+OTM_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		production_efficiency = 0.10
+	}
+
+	bonus = {
+		artillery_power = 0.10
+	}
+
+	trigger = {
+		tag = OTM
+	}
+	free = yes
+
+	jxp_otm_northern_kyushu = {
+		global_manpower_modifier = 0.20
+	}
+	jxp_otm_bungo_ports = {
+		global_trade_goods_size_modifier = 0.10
+		trade_efficiency = 0.05
+	}
+	jxp_otm_brave_retainers = {
+		army_tradition = 0.5
+		land_morale = 0.05
+	}
+	jxp_otm_nanban_trade = {
+		global_own_trade_power = 0.15
+		global_institution_spread = 0.05
+	}
+	jxp_otm_christian_lords = {
+		missionaries = 1
+		papal_influence = 1
+	}
+	jxp_otm_tensho_embassy = {
+		global_institution_spread = 0.10
+		diplomatic_reputation = 1
+	}
+	jxp_otm_kunikuzushi = {
+		siege_ability = 0.10
+	}
+}
+
+DTE_ideas = {
+	start = {
+		infantry_power = 0.10
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		global_trade_power = 0.15
+	}
+
+	trigger = {
+		tag = DTE
+	}
+	free = yes
+
+	jxp_dte_oshu_shugo = {
+		governing_capacity_modifier = 0.05
+		state_maintenance_modifier = -0.05
+	}
+	jxp_dte_marriage_expansion = {
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.10
+	}
+	jxp_dte_renga_circle = {
+		advisor_cost = -0.05
+		prestige = 0.5
+	}
+	jxp_dte_dragon_corps = {
+		fire_damage = 0.10
+	}
+	jxp_dte_red_seal_ships = {
+		heavy_ship_power = 0.10
+		heavy_ship_cost = -0.05
+	}
+	jxp_dte_keicho_embassy = {
+		technology_cost = -0.05
+		diplomatic_reputation = 1
+	}
+	jxp_dte_domain_development = {
+		development_cost = -0.10
+		production_efficiency = 0.05
+	}
+}
+
+ASK_ideas = {
+	start = {
+		heir_chance = 0.50
+		war_exhaustion = -0.02
+	}
+
+	bonus = {
+		army_tradition = 0.5
+	}
+
+	trigger = {
+		tag = ASK
+	}
+	free = yes
+
+	jxp_ask_genji_headship = {
+		prestige_from_land = 1
+	}
+	jxp_ask_court_defenders = {
+		diplomatic_reputation = 1
+		prestige = 0.5
+		global_spy_defence = 0.10
+	}
+	jxp_ask_higashiyama_culture = {
+		prestige = 1
+		advisor_cost = -0.05
+	}
+	jxp_ask_tosen_bugyo = {
+		global_own_trade_power = 0.25
+	}
+	jxp_ask_bugyoshu_hokushu = {
+		advisor_cost = -0.15
+	}
+	jxp_ask_bakufu_domains = {
+		global_tax_modifier = 0.15
+		governing_capacity_modifier = 0.05
+	}
+	jxp_ask_shugo_system = {
+		diplomatic_reputation = 1
+		vassal_income = 0.15
+		improve_relation_modifier = 0.10
+	}
+}
+
+CSK_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		ship_durability = 0.05
+	}
+
+	trigger = {
+		tag = CSK
+	}
+	free = yes
+
+	jxp_csk_ichiryo_gusoku = {
+		land_maintenance_modifier = -0.05
+		global_manpower_modifier = 0.05
+	}
+	jxp_csk_tosa_seven_clans = {
+		global_manpower_modifier = 0.15
+	}
+	jxp_csk_shikoku_unification = {
+		ae_impact = -0.10
+	}
+	jxp_csk_hundred_article_code = {
+		global_unrest = -1
+		state_maintenance_modifier = -0.05
+	}
+	jxp_csk_ura_do_navy = {
+		global_ship_cost = -0.10
+		galley_power = 0.10
+	}
+	jxp_csk_god_of_arts = {
+		prestige = 1
+	}
+	jxp_csk_temple_patronage = {
+		tolerance_own = 2
+	}
+}
+
+OUC_ideas = {
+	start = {
+		global_unrest = -1
+		global_ship_cost = -0.10
+	}
+
+	bonus = {
+		trade_efficiency = 0.10
+	}
+
+	trigger = {
+		tag = OUC
+	}
+	free = yes
+
+	jxp_ouc_baekje_lineage = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.10
+	}
+	jxp_ouc_korea_trade = {
+		global_own_trade_power = 0.20
+		trade_steering = 0.10
+	}
+	jxp_ouc_anti_wokou_fleet = {
+		naval_morale = 0.15
+	}
+	jxp_ouc_hakata_city = {
+		merchants = 1
+		trade_steering = 0.05
+	}
+	jxp_ouc_mercantile_diplomacy = {
+		trade_steering = 0.15
+		improve_relation_modifier = 0.10
+	}
+	jxp_ouc_missionary_harbors = {
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+	}
+	jxp_ouc_retainer_factions = {
+		advisor_cost = -0.10
+		global_autonomy = -0.03
+	}
+}
+
+IMG_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.20
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		governing_capacity_modifier = 0.05
+		prestige = 0.5
+	}
+
+	trigger = {
+		tag = IMG
+	}
+	free = yes
+
+	jxp_img_claim_to_shogunate = {
+		improve_relation_modifier = 0.10
+		fabricate_claims_cost = -0.25
+	}
+	jxp_img_tokaido_mastery = {
+		trade_efficiency = 0.10
+		global_trade_power = 0.05
+	}
+	jxp_img_imagawa_house_law = {
+		idea_cost = -0.10
+	}
+	jxp_img_revised_clan_code = {
+		global_unrest = -1
+		stability_cost_modifier = -0.05
+	}
+	jxp_img_triple_alliance = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+	}
+	jxp_img_mount_fuji = {
+		prestige = 1
+		legitimacy = 0.5
+	}
+	jxp_img_march_to_kyoto = {
+		unjustified_demands = -0.10
+		province_warscore_cost = -0.05
+	}
+}
+
+SOO_ideas = {
+	start = {
+		trade_efficiency = 0.10
+		trade_steering = 0.20
+	}
+
+	bonus = {
+		navy_tradition = 1
+	}
+
+	trigger = {
+		tag = SOO
+	}
+	free = yes
+
+	jxp_soo_wakan_trade = {
+		global_own_trade_power = 0.25
+	}
+	jxp_soo_wakou_tradition = {
+		galley_power = 0.10
+		navy_tradition_decay = -0.01
+	}
+	jxp_soo_tsushima_waters = {
+		naval_morale = 0.20
+	}
+	jxp_soo_bahan_ships = {
+		privateer_efficiency = 0.20
+	}
+	jxp_soo_tough_negotiators = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.10
+	}
+	jxp_soo_port_improvements = {
+		naval_forcelimit_modifier = 0.25
+		sailor_maintenance_modifer = -0.05
+		global_sailors_modifier = 0.10
+	}
+	jxp_soo_elementary_school = {
+		global_institution_spread = 0.05
+		improve_relation_modifier = 0.10
+	}
+}

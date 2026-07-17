@@ -1,0 +1,10 @@
+jxp_sync_managed_national_ideas_effect = {
+	if = {
+		limit = {
+			has_custom_ideas = no
+			jxp_uses_managed_national_ideas_trigger = yes
+			NOT = { jxp_has_expected_managed_national_ideas_trigger = yes }
+		}
+		swap_free_idea_group = yes
+	}
+}

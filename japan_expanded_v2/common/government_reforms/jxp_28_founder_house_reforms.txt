@@ -1,0 +1,822 @@
+jxp_reform_founder_oda_azuchi_statutes = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_oda_azuchi_statutes
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_oda
+			NOT = { has_country_flag = jxp_toyotomi_identity_established }
+			}
+		}
+	}
+	modifiers = {
+		core_creation = -0.05
+		global_trade_goods_size_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_toyotomi_five_regents = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_toyotomi_five_regents
+			AND = {
+				tag = TOY
+				has_country_flag = jxp_toyotomi_identity_established
+			}
+			AND = {
+				jxp_is_unified_japan_state_trigger = yes
+				has_country_flag = jxp_origin_oda
+				has_country_flag = jxp_toyotomi_identity_established
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.10
+		global_tax_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_tkg_mikawa_fudai_code = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_tkg_mikawa_fudai_code
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_tkg
+	
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.08
+		global_unrest = -1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_tkd_koshu_military_law = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_tkd_koshu_military_law
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_tkd
+	
+			}
+		}
+	}
+	modifiers = {
+		cavalry_power = 0.08
+		movement_speed = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ues_kanto_justice = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ues_kanto_justice
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ues
+	
+			}
+		}
+	}
+	modifiers = {
+		land_morale = 0.04
+		prestige_decay = -0.005
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_hjo_odawara_cadasters = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_hjo_odawara_cadasters
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_hjo
+	
+			}
+		}
+	}
+	modifiers = {
+		development_cost = -0.05
+		defensiveness = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_mri_setouchi_admiralty = {
+	icon = "jxp_founder_admiralty"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_mri_setouchi_admiralty
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_mri
+	
+			}
+		}
+	}
+	modifiers = {
+		galley_power = 0.10
+		global_ship_trade_power = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_smz_satsuma_gunnery = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_smz_satsuma_gunnery
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_smz
+	
+			}
+		}
+	}
+	modifiers = {
+		fire_damage = 0.05
+		artillery_power = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_otm_funai_arsenal = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_otm_funai_arsenal
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_otm
+	
+			}
+		}
+	}
+	modifiers = {
+		global_institution_spread = 0.10
+		siege_ability = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_dte_oshu_cavalry_envoys = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_dte_oshu_cavalry_envoys
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_dte
+	
+			}
+		}
+	}
+	modifiers = {
+		cavalry_power = 0.08
+		diplomatic_reputation = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ask_muromachi_office = {
+	icon = "jxp_founder_court_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ask_muromachi_office
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ask
+	
+			}
+		}
+	}
+	modifiers = {
+		vassal_forcelimit_bonus = 0.50
+		legitimacy = 0.5
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_csk_tosa_ichiryo_gusoku = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_csk_tosa_ichiryo_gusoku
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_csk
+	
+			}
+		}
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.05
+		global_manpower_modifier = 0.08
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ouc_yamaguchi_court = {
+	icon = "jxp_founder_trade_brokerage"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ouc_yamaguchi_court
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ouc
+	
+			}
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.05
+		improve_relation_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_img_tokaido_lawbooks = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_img_tokaido_lawbooks
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_img
+	
+			}
+		}
+	}
+	modifiers = {
+		stability_cost_modifier = -0.08
+		ae_impact = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_soo_tsushima_wakan = {
+	icon = "jxp_founder_admiralty"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_soo_tsushima_wakan
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_soo
+	
+			}
+		}
+	}
+	modifiers = {
+		trade_steering = 0.10
+		naval_morale = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ama_gassan_toda_law = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ama_gassan_toda_law
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ama
+	
+			}
+		}
+	}
+	modifiers = {
+		defensiveness = 0.10
+		land_maintenance_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_asa_ichijodani_council = {
+	icon = "jxp_founder_court_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_asa_ichijodani_council
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_asa
+	
+			}
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.05
+		global_institution_spread = 0.07
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_hsk_sakai_kanrei_compact = {
+	icon = "jxp_founder_court_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_hsk_sakai_kanrei_compact
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_hsk
+	
+			}
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		trade_efficiency = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_htk_wakae_retainer_law = {
+	icon = "jxp_founder_house_code"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_htk_wakae_retainer_law
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_htk
+	
+			}
+		}
+	}
+	modifiers = {
+		mercenary_cost = -0.05
+		merc_maintenance_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ike_himeji_stewards = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ike_himeji_stewards
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ike
+	
+			}
+		}
+	}
+	modifiers = {
+		build_cost = -0.05
+		global_tax_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_mae_kaga_million_koku = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_mae_kaga_million_koku
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_mae
+	
+			}
+		}
+	}
+	modifiers = {
+		global_trade_goods_size_modifier = 0.05
+		same_culture_advisor_cost = -0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_sba_buei_offices = {
+	icon = "jxp_founder_court_council"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_sba_buei_offices
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_sba
+	
+			}
+		}
+	}
+	modifiers = {
+		army_tradition_decay = -0.005
+		diplomatic_reputation = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ymn_roku_bun_ichi_domain = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ymn_roku_bun_ichi_domain
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ymn
+	
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.06
+		diplomatic_upkeep = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_rfr_mutsu_nine_gates = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_rfr_mutsu_nine_gates
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_rfr
+	
+			}
+		}
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.05
+		land_forcelimit_modifier = 0.08
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ktb_ise_court_law = {
+	icon = "jxp_founder_rite_compact"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ktb_ise_court_law
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ktb
+	
+			}
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		prestige = 0.5
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_akm_harima_castle_roads = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_akm_harima_castle_roads
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_akm
+	
+			}
+		}
+	}
+	modifiers = {
+		defensiveness = 0.10
+		movement_speed = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_akt_ezochi_brokers = {
+	icon = "jxp_founder_trade_brokerage"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_akt_ezochi_brokers
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_akt
+	
+			}
+		}
+	}
+	modifiers = {
+		global_trade_power = 0.05
+		global_sailors_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_cba_katori_muster = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_cba_katori_muster
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_cba
+	
+			}
+		}
+	}
+	modifiers = {
+		army_tradition_decay = -0.005
+		improve_relation_modifier = 0.10
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_isk_tango_port_wardens = {
+	icon = "jxp_founder_admiralty"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_isk_tango_port_wardens
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_isk
+	
+			}
+		}
+	}
+	modifiers = {
+		naval_forcelimit_modifier = 0.10
+		global_own_trade_power = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ito_hyuga_fort_network = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ito_hyuga_fort_network
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ito
+	
+			}
+		}
+	}
+	modifiers = {
+		defensiveness = 0.10
+		global_manpower_modifier = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_kkc_aso_rite_council = {
+	icon = "jxp_founder_rite_compact"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_kkc_aso_rite_council
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_kkc
+	
+			}
+		}
+	}
+	modifiers = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_kno_setouchi_pilot_law = {
+	icon = "jxp_founder_admiralty"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_kno_setouchi_pilot_law
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_kno
+	
+			}
+		}
+	}
+	modifiers = {
+		galley_power = 0.10
+		naval_morale = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_ogs_suwa_horse_archery = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_ogs_suwa_horse_archery
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_ogs
+	
+			}
+		}
+	}
+	modifiers = {
+		cavalry_cost = -0.05
+		movement_speed = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_shn_dazaifu_brokerage = {
+	icon = "jxp_founder_trade_brokerage"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_shn_dazaifu_brokerage
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_shn
+	
+			}
+		}
+	}
+	modifiers = {
+		diplomatic_upkeep = 1
+		global_foreign_trade_power = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_stk_hitachi_warrior_rolls = {
+	icon = "jxp_founder_martial_roll"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_stk_hitachi_warrior_rolls
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_stk
+	
+			}
+		}
+	}
+	modifiers = {
+		land_forcelimit_modifier = 0.10
+		war_exhaustion = -0.01
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_tki_mino_river_offices = {
+	icon = "jxp_founder_cadaster_office"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_tki_mino_river_offices
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_tki
+	
+			}
+		}
+	}
+	modifiers = {
+		development_cost = -0.05
+		production_efficiency = 0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_utn_nikko_barrier_guard = {
+	icon = "jxp_founder_rite_compact"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_utn_nikko_barrier_guard
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_utn
+	
+			}
+		}
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.05
+		tolerance_own = 1
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_tti_yamato_temple_compact = {
+	icon = "jxp_founder_rite_compact"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_tti_yamato_temple_compact
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			has_country_flag = jxp_origin_tti
+	
+			}
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.05
+		stability_cost_modifier = -0.05
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_reform_founder_generic_renovated_japan = {
+	icon = "jxp_founder_renovated_state"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = jxp_reform_founder_generic_renovated_japan
+			AND = {
+			jxp_is_unified_japan_state_trigger = yes
+			NOT = { jxp_has_major_daimyo_origin_trigger = yes }
+	
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.05
+		prestige_decay = -0.005
+	}
+	custom_attributes = { cannot_become_dictatorship = yes }
+}

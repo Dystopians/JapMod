@@ -1,0 +1,123 @@
+# A Japanese Emperor of China must retain the vanilla celestial_empire reform.
+# These mutually exclusive monthly modifiers mirror the displaced final-state
+# tier-one bonuses without replacing the Celestial Empire government identity.
+
+jxp_82_eoc_uncommitted_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_uncommitted_trigger = yes
+	}
+	trigger = { always = yes }
+	governing_capacity_modifier = 0.10
+	advisor_cost = -0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_82_eoc_sakoku_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_sakoku_trigger = yes
+	}
+	trigger = { always = yes }
+	global_unrest = -1
+	global_spy_defence = 0.10
+	state_maintenance_modifier = -0.10
+}
+
+jxp_82_eoc_open_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_open_trigger = yes
+	}
+	trigger = { always = yes }
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.10
+	diplomatic_reputation = 1
+}
+
+jxp_82_eoc_kirishitan_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_kirishitan_trigger = yes
+	}
+	trigger = { always = yes }
+	papal_influence = 1
+	global_missionary_strength = 0.01
+	tolerance_own = 1
+}
+
+jxp_82_eoc_confucian_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_confucian_trigger = yes
+	}
+	trigger = { always = yes }
+	harmonization_speed = 0.15
+	idea_cost = -0.05
+	advisor_cost = -0.05
+}
+
+jxp_82_eoc_imperial_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_imperial_trigger = yes
+	}
+	trigger = { always = yes }
+	legitimacy = 1
+	global_autonomy = -0.03
+	diplomatic_reputation = 1
+}
+
+jxp_82_eoc_reformed_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_reformed_trigger = yes
+	}
+	trigger = { always = yes }
+	global_trade_power = 0.05
+	tolerance_heretic = 1
+	church_power_modifier = 0.10
+}
+
+jxp_82_eoc_kaikyo_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_kaikyo_trigger = yes
+	}
+	trigger = { always = yes }
+	global_trade_power = 0.05
+	tolerance_heathen = 1
+	global_sailors_modifier = 0.10
+}
+
+jxp_82_eoc_ikko_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_ikko_trigger = yes
+	}
+	trigger = { always = yes }
+	global_manpower_modifier = 0.10
+	production_efficiency = 0.05
+	stability_cost_modifier = -0.05
+}
+
+jxp_82_eoc_wokou_power_structure = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+		jxp_final_state_wokou_trigger = yes
+	}
+	trigger = { always = yes }
+	privateer_efficiency = 0.20
+	naval_forcelimit_modifier = 0.15
+	trade_efficiency = 0.05
+}
