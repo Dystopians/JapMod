@@ -34,6 +34,7 @@ INTEGRATION_PATHS = (
 )
 
 SOURCE_LOC_PATTERNS = (
+    "jxp_85_ui_flag_labels_l_english_utf8_source.yml",
     "jxp_a_10*_l_english_utf8_source.yml",
     "jxp_a_11*_l_english_utf8_source.yml",
     "zzz_jxp_a_105*_l_english_utf8_source.yml",
