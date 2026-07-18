@@ -76,6 +76,16 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
             main_cultures.parent.mkdir(parents=True, exist_ok=True)
             source_cultures.write_bytes(b"source_names = yes\n")
             main_cultures.write_bytes(b"jxp_names = yes\n")
+            source_province_names = (
+                source / "common" / "province_names" / "japanese_g.txt"
+            )
+            main_province_names = (
+                main / "common" / "province_names" / "japanese_g.txt"
+            )
+            source_province_names.parent.mkdir(parents=True, exist_ok=True)
+            main_province_names.parent.mkdir(parents=True, exist_ok=True)
+            source_province_names.write_bytes(b"PROV1 = Source_Name\n")
+            main_province_names.write_bytes(b"PROV1 = JXP_Name\n")
             main_start_screen = main / START_SCREEN_MAIN_LOCALISATION_PATH
             main_start_screen.parent.mkdir(parents=True, exist_ok=True)
             main_start_screen.write_text(
@@ -120,7 +130,7 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
             built = build_compat_clone(
                 source, target, outer, main, map_mod, game, ENCODER
             )
-            self.assertEqual(73, built["patch_count"])
+            self.assertEqual(74, built["patch_count"])
             self.assertEqual(39, built["canonical_history_files"])
             self.assertEqual(39, built["canonical_country_files"])
             for descriptor in (target / "descriptor.mod", outer):
@@ -144,6 +154,10 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
                 b"jxp_names = yes\n",
                 (target / "common/cultures/00_cultures.txt").read_bytes(),
             )
+            self.assertEqual(
+                b"PROV1 = JXP_Name\n",
+                (target / "common/province_names/japanese_g.txt").read_bytes(),
+            )
             self.assertNotEqual(
                 noncanonical,
                 (target / "common/countries/AKM.txt").read_bytes(),
@@ -151,7 +165,7 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
             manifest = json.loads(
                 (target / ".jxp_compat_manifest.json").read_text(encoding="utf-8")
             )
-            self.assertEqual(73, manifest["patch_count"])
+            self.assertEqual(74, manifest["patch_count"])
             hotfix = (target / DYNAMIC_TOKEN_HOTFIX_PATH).read_bytes()
             self.assertTrue(hotfix.startswith(b"\xef\xbb\xbf"))
             self.assertEqual(
