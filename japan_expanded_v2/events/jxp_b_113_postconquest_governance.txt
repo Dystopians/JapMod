@@ -1,0 +1,56 @@
+namespace = jxp_b_governance
+
+country_event = {
+	id = jxp_b_governance.100
+	title = jxp_b_governance.100.t
+	desc = jxp_b_governance.100.d
+	picture = jxp_b_postconquest_governance_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_113_governance_active_trigger = yes NOT = { has_country_flag = jxp_b_113_governance_review_1_done } }
+	immediate = { clr_country_flag = jxp_b_113_governance_review_scheduled }
+	option = { name = jxp_b_governance.100.military trigger = { has_country_flag = jxp_b_113_governance_military_commission } add_mil_power = -50 add_country_modifier = { name = jxp_b_113_governance_hard_discipline duration = 1825 } set_country_flag = jxp_b_113_governance_review_1_done country_event = { id = jxp_b_governance.101 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.100.dynasty trigger = { has_country_flag = jxp_b_113_governance_local_dynasty } add_dip_power = -50 add_country_modifier = { name = jxp_b_113_governance_local_officers duration = 1825 } set_country_flag = jxp_b_113_governance_review_1_done country_event = { id = jxp_b_governance.101 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.100.trade trigger = { has_country_flag = jxp_b_113_governance_tribute_trade } add_dip_power = -50 add_country_modifier = { name = jxp_b_113_governance_open_accounts duration = 1825 } set_country_flag = jxp_b_113_governance_review_1_done country_event = { id = jxp_b_governance.101 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.100.direct trigger = { has_country_flag = jxp_b_113_governance_direct_governor } add_adm_power = -50 add_country_modifier = { name = jxp_b_113_governance_open_accounts duration = 1825 } set_country_flag = jxp_b_113_governance_review_1_done country_event = { id = jxp_b_governance.101 days = 1825 } ai_chance = { factor = 1 } }
+}
+
+country_event = {
+	id = jxp_b_governance.101
+	title = jxp_b_governance.101.t
+	desc = jxp_b_governance.101.d
+	picture = jxp_b_postconquest_governance_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_113_governance_active_trigger = yes has_country_flag = jxp_b_113_governance_review_1_done NOT = { has_country_flag = jxp_b_113_governance_review_2_done } }
+	option = { name = jxp_b_governance.101.military trigger = { has_country_flag = jxp_b_113_governance_military_commission } add_treasury = -200 add_country_modifier = { name = jxp_b_113_governance_local_officers duration = 1825 } set_country_flag = jxp_b_113_governance_review_2_done country_event = { id = jxp_b_governance.102 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.101.dynasty trigger = { has_country_flag = jxp_b_113_governance_local_dynasty } add_prestige = -10 add_country_modifier = { name = jxp_b_113_governance_local_assembly duration = 1825 } set_country_flag = jxp_b_113_governance_review_2_done country_event = { id = jxp_b_governance.102 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.101.trade trigger = { has_country_flag = jxp_b_113_governance_tribute_trade } add_treasury = -150 add_country_modifier = { name = jxp_b_113_governance_local_assembly duration = 1825 } set_country_flag = jxp_b_113_governance_review_2_done country_event = { id = jxp_b_governance.102 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.101.direct trigger = { has_country_flag = jxp_b_113_governance_direct_governor } add_adm_power = -75 add_country_modifier = { name = jxp_b_113_governance_local_officers duration = 1825 } set_country_flag = jxp_b_113_governance_review_2_done country_event = { id = jxp_b_governance.102 days = 1825 } ai_chance = { factor = 1 } }
+}
+
+country_event = {
+	id = jxp_b_governance.102
+	title = jxp_b_governance.102.t
+	desc = jxp_b_governance.102.d
+	picture = jxp_b_postconquest_governance_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_113_governance_active_trigger = yes has_country_flag = jxp_b_113_governance_review_2_done NOT = { has_country_flag = jxp_b_113_governance_review_3_done } }
+	option = { name = jxp_b_governance.102.military trigger = { has_country_flag = jxp_b_113_governance_military_commission } add_mil_power = -75 add_war_exhaustion = 1 add_country_modifier = { name = jxp_b_113_governance_hard_discipline duration = 1825 } set_country_flag = jxp_b_113_governance_review_3_done country_event = { id = jxp_b_governance.103 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.102.dynasty trigger = { has_country_flag = jxp_b_113_governance_local_dynasty } add_dip_power = -75 add_country_modifier = { name = jxp_b_113_governance_local_assembly duration = 1825 } set_country_flag = jxp_b_113_governance_review_3_done country_event = { id = jxp_b_governance.103 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.102.trade trigger = { has_country_flag = jxp_b_113_governance_tribute_trade } add_dip_power = -75 add_country_modifier = { name = jxp_b_113_governance_open_accounts duration = 1825 } set_country_flag = jxp_b_113_governance_review_3_done country_event = { id = jxp_b_governance.103 days = 1825 } ai_chance = { factor = 1 } }
+	option = { name = jxp_b_governance.102.direct trigger = { has_country_flag = jxp_b_113_governance_direct_governor } add_adm_power = -100 add_corruption = 1 add_country_modifier = { name = jxp_b_113_governance_open_accounts duration = 1825 } set_country_flag = jxp_b_113_governance_review_3_done country_event = { id = jxp_b_governance.103 days = 1825 } ai_chance = { factor = 1 } }
+}
+
+country_event = {
+	id = jxp_b_governance.103
+	title = jxp_b_governance.103.t
+	desc = jxp_b_governance.103.d
+	picture = jxp_b_postconquest_governance_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_113_governance_active_trigger = yes has_country_flag = jxp_b_113_governance_review_3_done }
+	option = { name = jxp_b_governance.103.normalize add_country_modifier = { name = jxp_b_113_governance_normalized duration = 7300 } add_prestige = 10 jxp_b_113_end_governance_effect = yes ai_chance = { factor = 45 } }
+	option = { name = jxp_b_governance.103.autonomy add_country_modifier = { name = jxp_b_113_governance_autonomous_settlement duration = 7300 } add_dip_power = -100 jxp_b_113_end_governance_effect = yes ai_chance = { factor = 35 } }
+	option = { name = jxp_b_governance.103.to_military trigger = { mil_power = 150 treasury = 300 NOT = { has_country_flag = jxp_b_113_governance_military_commission } } add_mil_power = -150 add_treasury = -300 jxp_b_113_transition_to_military_commission_effect = yes ai_chance = { factor = 5 modifier = { factor = 3 tag = TOY } } }
+	option = { name = jxp_b_governance.103.to_dynasty trigger = { dip_power = 150 treasury = 250 NOT = { has_country_flag = jxp_b_113_governance_local_dynasty } } add_dip_power = -150 add_treasury = -250 jxp_b_113_transition_to_local_dynasty_effect = yes ai_chance = { factor = 5 modifier = { factor = 3 tag = CJP } } }
+	option = { name = jxp_b_governance.103.to_trade trigger = { dip_power = 150 treasury = 300 NOT = { has_country_flag = jxp_b_113_governance_tribute_trade } } add_dip_power = -150 add_treasury = -300 jxp_b_113_transition_to_tribute_trade_effect = yes ai_chance = { factor = 5 modifier = { factor = 3 OR = { tag = RFJ tag = SJP } } } }
+	option = { name = jxp_b_governance.103.to_direct trigger = { adm_power = 200 treasury = 500 stability = 1 NOT = { has_country_flag = jxp_b_113_governance_direct_governor } } add_adm_power = -200 add_treasury = -500 add_stability = -1 jxp_b_113_transition_to_direct_governor_effect = yes ai_chance = { factor = 5 modifier = { factor = 3 tag = EJP } } }
+}

@@ -185,6 +185,7 @@ MAX_EU4_ZIP_RATIO = 1000
 RUNTIME_DIRECTORIES = {
     "main": (
         "common",
+        "customizable_localization",
         "decisions",
         "events",
         "gfx",

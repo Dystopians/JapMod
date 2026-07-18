@@ -1,0 +1,155 @@
+﻿l_english:
+ jxp_b_112_found_south_seas_company_title:0 "R¾‹WSm1gpSO>y"
+ jxp_b_112_found_south_seas_company_desc:0 "åN1gpS¶rßuTŠWS0T‹R0¹fW0lšegN™™™e²›S„vuN0Ü”ö”0FU†™ŒT²b*‚N¡R0O>yêSýwOSV0W‹sCg„v¸‹ïSÏu%„ÿàzz,g«ŽNˆcˆN†˜WINCg0"
+ jxp_b_112_found_north_sea_company_title:0 "R¾‹Swm’N^O>y"
+ jxp_b_112_found_north_sea_company_desc:0 "ŠbSwmS0CS›S0fh*Y0M–Yu3uNS|V¸S„vÛk®v0‘œ|œ0pžË0wmmsŒTÒR=n8f³ueQNýN×SÑvcw„v’N^àzz0"
+ jxp_b_112_found_taiwan_fujian_company_title:0 "R¾‹ðSŒný•wmO>y"
+ jxp_b_112_found_taiwan_fujian_company_desc:0 "1uý•wmFUºN0‹N09‚INŒTIYLˆqQTÏu%„ðSŒnnc¹pNyú^FUàW0wmy0wm×vN¿lwm‹sg„vôfÿfýïSýwOÙýNàzz1YHe0"
+ jxp_b_112_found_oceanic_company_title:0 "R¾‹'YmVÓbO>y"
+ jxp_b_112_found_oceanic_company_desc:0 "HN²›SÊl0W0ám4l0®|ß˜0ûyl9‚ŒTîO9‚HWyrªcqQTD,g0›SS‹sßuŒT(W0W>y²ÝOYuÒbÝuV0W„vCg)R0"
+ jxp_b_112_found_new_world_company_title:0 "R¾‹°e'YF–O>y"
+ jxp_b_112_found_new_world_company_desc:0 "åN*Ys^m*‚¿uÞ¥cS|V¸S0WS|V¸SNåe,gø‹=nÿÏu%„W0WQY¦u0=nãSŒT,g0W6R.0O>yÅV‰˜bÅbÜ*‚Î˜i–ÿNOíQàzzMQ9·ƒ—V–klwb8lEN±Rðy0"
+ jxp_b_112_review_south_seas_company_title:0 "Ä‹®‹WSmO>yN¡R"
+ jxp_b_112_review_south_seas_company_desc:0 "(W™™™e0uN0²b*‚ŒTåe,gHuKNô•Í‘°eRM‘O>yD,gÿmNïSib'YSV0Wc„‹N-^MOb	g^²dúQ0"
+ jxp_b_112_review_north_sea_company_title:0 "Ä‹®‹SwmO>yN¡R"
+ jxp_b_112_review_north_sea_company_desc:0 "ÒR=n0nHWŒTÛk®v8f—‰cíueˆÙuÿå‚HP¡RNHV6R³RyV1Yµcÿ²d•àzzÔkçuíuib.VôfHN3z¥Y0"
+ jxp_b_112_review_taiwan_fujian_company_title:0 "Ä‹®‹ý•wmO>yN¡R"
+ jxp_b_112_review_taiwan_fujian_company_desc:0 "Àh¨‹wmÐ0FUàW0W0Wßy¦uNwmFUÕl­^ÿv^©‹SV0WFUºNùRO>yI`¡rÐcúQ3uÉ‹0"
+ jxp_b_112_review_oceanic_company_title:0 "Ä‹®‹'YmO>yN¡R"
+ jxp_b_112_review_oceanic_company_desc:0 "ÜmÊl0WNýwêS(WwmþVNXR(W09‚–0ám4l0®|ÓNN›SS‹sCg„v¦ufNý‰˜Í‘°e8hŒš0"
+ jxp_b_112_review_new_world_company_title:0 "Ä‹®‹°e'YF–O>yN¡R"
+ jxp_b_112_review_new_world_company_desc:0 "W0Wag¦u0=nz0,g0W6R.N–kl0WãNhˆCg|VdkurÞÿýV¶RïS•bD0©‹Cgÿbb²‹O>yòTÏuàe›RÏu%„0"
+
+ jxp_b_company.charter_negotiated:0 "åNSV0W‹sCgíu¦uHN9h,g"
+ jxp_b_company.charter_state:0 "1uýV¶RIYLˆ%N RÑvcw"
+ jxp_b_company.charter_local:0 "©‹SV0WFUºNN>y²ÛeQc„‹NO"
+ jxp_b_company.host_accept:0 "ÆQvQ¾‹†™ÿÕlCgÍNRV,gýV"
+ jxp_b_company.host_refuse:0 "dkàzzN—VŠÇbìN„vwm¸S"
+ jxp_b_company.business_invest:0 "•beQ°eD,gN²b*‚Ïu9"
+ jxp_b_company.business_local_board:0 "ib'YSV0Wc„‹NN‹N-^MO"
+ jxp_b_company.business_exit:0 "	g^ÓumgÙ¶RO>y"
+ jxp_b_company.crisis_renew:0 "eˆ³¡w,gÿíuLˆ”Nt^"
+ jxp_b_company.crisis_restructure:0 "b²‹Nmcv^Í‘teHP¡R"
+ jxp_b_company.crisis_dissolve:0 "²d•àzzÿjPbkib'Ymc1Y"
+ jxp_b_company.request_accept:0 "eˆ³D,gÿ²NØNwmYÏueuŒQ8hÆQ"
+ jxp_b_company.request_withdraw:0 "²dÞV÷‹BlÿÓun¥cãSM|"
+
+ jxp_b_company.1.t:0 "WSm1gpSO>yàzz"
+ jxp_b_company.1.d:0 "uN0™™™e0Ü”ö”0åe,gHuN²b*‚9‚–ïS1uN¶RlQøSßuyrÿFOWSmT‹sCgNOŠb=nãSINCg–N¸u1gpS¶rNv^²NúQ0Ä‹®‹ÅV‰˜HQ³QšRO>y‚YUO¥c×SSV0WÕl‹VNÑvcw0"
+ jxp_b_company.2.t:0 "Swm’N^O>yàzz"
+ jxp_b_company.2.d:0 "Ûk®v0‘œ|œ0pžËNwmms8TVFUºNñmeQÒRwmÿmNŠbHV6R³RyV0¬QcRmc1YŒTÄOýVÞz‰N&^0RTN.V&M|N0àzzÅV‰˜Ä‰šRŒýw¦umglQøSI`¡r0"
+ jxp_b_company.3.t:0 "ðSŒný•wmO>yàzz"
+ jxp_b_company.3.d:0 "ðSŒn=nŒn0yú^wmFUN¿lwm9‚INMaaTDÿFOwmyN‹sgôfÿfOûNUO„W­eýASR1V0êS	g«ˆSV0W>yOb²‹„vFUàWMbýw•EN0"
+ jxp_b_company.4.t:0 "'YmVÓbO>yàzz"
+ jxp_b_company.4.d:0 "²›S*‚ï—‰Êl0W0ám4l0®|ÓNŒT9‚‚S0SV0W‹sßuN›Slv^^—wmþVN„vzz‹vÿO>yÅV‰˜åN¦ufNw^—àeIN0W„vGPšRÖS—VO(uCg0"
+ jxp_b_company.5.t:0 "°e'YF–O>yàzz"
+ jxp_b_company.5.d:0 "*j!n*Ys^m„vD,gS•beQ=nãS0W0WQY¦uN,g0W6R.0å‚ýV¶RêS0tÖSz6ewÒbÝu–kl>yOÑSŠÿO>yßéeObHNìrËz‰N®‹„vkpÍy0"
+
+ jxp_b_company.81.t:0 "1gpSwmYFU>y÷‹Bl"
+ jxp_b_company.81.d:0 "ýV…QO>yòTÏu4³u–™gD,gÿwmYÏueuŒQú^®‹Šb1gpS9‚0åe,gHuNWSmFU†™ßuN²NÙuWSm1gpSO>y0eˆ³YO>kTÿÍN‰˜Onfàzz³QšRýV¶R0SV0Wc„‹NNYýV‹sCg„vCgP–0"
+ jxp_b_company.82.t:0 "*Ys^mUe¸‹O>y÷‹Bl"
+ jxp_b_company.82.d:0 "ýV…QO>yòTÏubÅb–™g9‚™e0å‚‰èŠ'YmÏu%„|V¸S=nãS0W0WQY¦uN,g0W6R.ÿØ‰˜eˆ³°e'YF–O>y„vLˆMeD,gNÜ*‚ÆQY0"
+ jxp_b_company.83.t:0 "WSmO>y÷‹Bl"
+ jxp_b_company.83.d:0 "ýV…QFUºN÷‹BlŠbWS¹e²›S„vÊl0W0ám4l0®|ÓNŒT9‚‚S³ueQqQTD,g0wmYÏueuŒQSvQRVeQ'YmVÓbO>yÿv^‰Bleˆ³•*‚¿uNb—DÑ‘0"
+ jxp_b_company.84.t:0 "SmO>y÷‹Bl"
+ jxp_b_company.84.d:0 "ýV…QO>yMaÏu%„SwmS0CS›S0fh*Y0M–Yu3uNS|V¸S„vÒR=n’N^0eˆ³LˆMeÏu9TÿSwm’N^O>yÍN‰˜¥c×SSV0Wag¦uŒT¬QcRQeNmIN¡R0"
+ jxp_b_company.85.t:0 "'YF–ÏueuO>y÷‹Bl"
+ jxp_b_company.85.d:0 "ýV…QO>y^gŠb'YF–¿l¸S„v‹N0wmFUN=n¡ReQNýNàzz0wmYÏueuŒQSvQRVeQðSŒný•wmO>yÿv^‰Bleˆ³FUàWN²b*‚D,g0"
+
+ jxp_b_company.21.t:0 "WSm‹sCg¡R®‹1gpSFU†™"
+ jxp_b_company.21.d:0 "åe,gO>y÷‹Bl¾‹†™0ÓN¨Pv^ÄuÇu²b*‚0ƒRMaa4³ußyzŒT¥c×S,gýVÕl­^ÿFOlQøSÁyuQN—RYe·u‰NÍNOg÷^	gNbbY0"
+ jxp_b_company.22.t:0 "Swmø‹–™†˜¡R®‹’N^àzz"
+ jxp_b_company.22.d:0 "O>yMaåN®|ß˜0Á”hVŒT9‚wQbcÖSÛk®vNwmµN0–™†˜ìN‰Bl™Qf³R¨RgP–0nHW¹LuŒT¬QcRQeNmÿåNMQ’N^¦lHNyVO0"
+ jxp_b_company.23.t:0 "ý•wmFUºNN˜Rœ^¡R®‹FUàW"
+ jxp_b_company.23.d:0 "åe,gO>y÷‹Blßy(uÓN0Wv^¾‹qQT&Mb0¿lwm˜RXTÅbÃVwmyÿFUºNR‰BlêñT(WÕl­^ŒTc„‹NO-Nåb	g-^MO0"
+ jxp_b_company.24.t:0 "›SS‹sßu¡R®‹Êl0W¦ufN"
+ jxp_b_company.24.d:0 "Ü*‚9‚–÷‹Blám4l0®|ß˜ŒTîO9‚0W0›Sl‰BlO>yN—VW`Sw0WÿmNN—VŠb4NöeÊl0Wã‰Ê‘HN8lEN†˜W0"
+ jxp_b_company.25.t:0 "|V¸S>y²¡R®‹O>yW0WQY¦u"
+ jxp_b_company.25.d:0 "O>yMaîOQr=nãSv^-pN®|ß˜ÿFOSV0W>y²‰Bl¹Lu0z˜ŒT6R.Cg™QeQÌS¹eýýwôcV„v¦ufN0"
+
+ jxp_b_company.41.t:0 "WSmO>y”Nt^Ä‹®‹"
+ jxp_b_company.41.d:0 "'k2mlQøSÞz‰N0ÁyuQ0—RYe²QzN‹N¶RÏe„v)RÊvO&îvaÑSYBg0Ä‹®‹ïSibEQ²b*‚0©‹SV0Wc„‹NÑvcwÿbÓumg%„N0"
+ jxp_b_company.42.t:0 "SwmO>y”Nt^Ä‹®‹"
+ jxp_b_company.42.d:0 "¬QcRmc1YŒT•Ý»yeˆÙuck(WTlV)R¦m0lQøSå‚çuíuÏu%„ÿÅV‰˜(WD,g0SV0W-NËNŒT²dKNô•jOúQ	éb0"
+ jxp_b_company.43.t:0 "ý•wmO>y”Nt^Ä‹®‹"
+ jxp_b_company.43.d:0 "wmy0wm×vŒTW0W‰N®‹OlQøSI`¡r÷‹BlôfYuQ9‚ÿSV0WFUºNR‰Blib'Y®‹-^v^P–6R„W­e0"
+ jxp_b_company.44.t:0 "'YmO>y”Nt^Ä‹®‹"
+ jxp_b_company.44.d:0 "*‚ï­eÂˆ0ám4líwHŒT1Y*Ž9‚–Oå‚r^Êl0W¾–åNôuc0çuíuÏu%„ÅV‰˜ØNúQ°e„vD,gbôfY0W¹eê»l0"
+ jxp_b_company.45.t:0 "°e'YF–O>y”Nt^Ä‹®‹"
+ jxp_b_company.45.d:0 "W0Wz‰N0'k2mÞz‰NN,g0W6R.yäNÀoS†N–kl>yO„vNán0lQøSå‚N9eØS»lt¹eVÿçuíu„W­eêSO R»yÃV0"
+
+ jxp_b_company.61.t:0 "WSmO>y„víuDqSHg"
+ jxp_b_company.61.d:0 "²b*‚NFU†™V=e…Ç,gg¡w,g0ýV¶RïSåNeˆ³D,g0b²‹NmcTÍ‘teÿb²d•àzz0"
+ jxp_b_company.62.t:0 "SwmO>yÒo4N4xµN"
+ jxp_b_company.62.d:0 "ÒR=nmc1YNÛk®v÷N<hNÌOO>yàeÕl	cgPHP0çuíuÏu%„ÅV‰˜lQVbÅbãN÷N0"
+ jxp_b_company.63.t:0 "ý•wmO>yHP¡R0Rg"
+ jxp_b_company.63.d:0 "S=n0pÁyŒT²b*‚mc1YO&Mbàe›RQQØN0HVLˆôuc„W­eêSOŠblQøSHP¡RØSbýV¶RHP¡R0"
+ jxp_b_company.64.t:0 "'YmO>y*‚ï­eÂˆ"
+ jxp_b_company.64.d:0 "peYÊl0WòTÏu­e®|ÿ1Y*Ž9‚–mNàeÕl8h•0ýV¶R‰˜³QšR=f&TçuíubÅbÙagÜwm*‚ï0"
+ jxp_b_company.65.t:0 "°e'YF–O>y0Me)TÂˆ"
+ jxp_b_company.65.d:0 "*jè*Ys^m„v9‚90W0W‰N®‹N–kl0Wz6eµb—bNT‹S®W&M|0lQøSNýw`—°e„vàePyrCg©cÖvNmc0"
+
+ jxp_b_112_south_seas_company:0 "WSm1gpSO>y"
+ jxp_b_112_south_seas_company_desc:0 "O>yÏu%„uN0™™™e0Ü”ö”0åe,gHu0FU†™N²b*‚ÿTöebÅbèýVÕlCg²QzŒT9‚–b,g0"
+ jxp_b_112_north_sea_company:0 "Swm’N^O>y"
+ jxp_b_112_north_sea_company_desc:0 "O>yôucÒR=n0nHWŒTÛk®v’N^ÿmNÅV‰˜b—ùR¬QcRmc1Y0HQOOlÏeag¦uNÄOýVÞz‰N0"
+ jxp_b_112_taiwan_fujian_company:0 "ðSŒný•wmO>y"
+ jxp_b_112_taiwan_fujian_company_desc:0 "O>yÏu%„ðSŒnnc¹p0yú^FUàWŒT¿lwmwmÐÿwmyN0W¹e>yOOvQ»ltb,gËYÈuXR(W0"
+ jxp_b_112_oceanic_company:0 "'YmVÓbO>y"
+ jxp_b_112_oceanic_company_desc:0 "O>yôu²b›Sþ”Êl0W0ám4l0ûyl9‚N9‚‚Sÿ*‚ïŠ•ÿeˆÙu1ûNŠÍ‘0"
+ jxp_b_112_new_world_company:0 "°e'YF–O>y"
+ jxp_b_112_new_world_company_desc:0 "O>yÞ¥c|V¸S=nãSNåe,g^HWÿ–klžX•4O–W0W0ê»lŒTÞT¡RV=e0"
+ jxp_b_112_negotiated_charter:0 "OSšRO>yàzz"
+ jxp_b_112_negotiated_charter_desc:0 "FU†™Cg)RegêÌS¹e¦ufNÿÑ‹˜RŒTO‚‚1Yt‰N®‹0"
+ jxp_b_112_state_charter:0 "ýV¶RÑvcwàzz"
+ jxp_b_112_state_charter_desc:0 "IYLˆ%N<hÑvcwO>yÿýV¶RÖS—Vôf'YFUCgÿmNbÅbôfØš»lt‹S›R0"
+ jxp_b_112_local_board_charter:0 "SV0Wc„‹Nàzz"
+ jxp_b_112_local_board_charter_desc:0 "SV0WFUºNŒT>y²ÛeQc„‹NOÿåNƒNOôv¥c6eeQbcÖSôf3zšR„vTjO0"
+ jxp_b_112_company_local_compact:0 "O>ySV0WOS¦u"
+ jxp_b_112_company_local_compact_desc:0 "SV0W‹sCgb>y²òTÏuTaNýN×SÕl‹V¦umg„vFU†™àzz0"
+ jxp_b_112_company_local_conflict:0 "O>ySV0W²Qz"
+ jxp_b_112_company_local_conflict_desc:0 "àzzm0RSV0WÒbÝuÿçuíuÏu%„ck(Wmc³R8fNY²N0"
+ jxp_b_112_company_business_review_recent:0 "O>yN¡RÄ‹®‹¹eÕk"
+ jxp_b_112_company_business_review_recent_desc:0 "&ŒQÍN(Wtetÿíwg…QNœRQ!k9e¨RN¡R0"
+ jxp_b_112_company_business_investment:0 "O>yý R•bD"
+ jxp_b_112_company_business_investment_desc:0 "°eD,g(uŽNÓN¨P0²b*‚ŒT9‚–ÿFO.9‚NÝOi–b,gmN–KNžX R0"
+ jxp_b_112_company_representative_board:0 "O>yãNhˆc„‹NO"
+ jxp_b_112_company_representative_board_desc:0 "SV0Wc„‹N·ƒ—VÑSŠCgÿýV¶R©‹úQèRôv¥c6eÊvåNM–NO²Qz0"
+ jxp_b_112_company_restructuring:0 "O>yHP¡RÍ‘te"
+ jxp_b_112_company_restructuring_desc:0 "NmcòTlQVR&ÿHPCgºNN0W¹e>yOý‰BlýV¶RbÅbTœg0"
+ jxp_b_112_company_orderly_withdrawal:0 "O>y	g^²dúQ"
+ jxp_b_112_company_orderly_withdrawal_desc:0 "FU†™Óun&îvv^RVØßy0Wÿíwgmc1YbcegƒS„vY²N(`h`0"
+ jxp_b_112_company_host_concession:0 "·ƒÆQ„vYýVFU†™"
+ jxp_b_112_company_host_concession_desc:0 "YýVO>y(W,gýVÕl‹VNßy(uÓN0Wv^4³uz90"
+ jxp_b_112_company_host_resistance:0 "µb6RYýVO>y"
+ jxp_b_112_company_host_resistance_desc:0 "FUºNŒT˜RXTµb6R*gÏuEQRTa„vYýV„W­e0"
+ jxp_b_112_opinion_company_compact:0 "O>yOS¦u"
+ jxp_b_112_opinion_company_intrusion:0 "O>yµOpb"
+ jxp_b_112_opinion_orderly_company_exit:0 "	g^²dúQFU†™"
+
+ jxp_iface_b_overseas_company_active:0 "wmY0WHSO>yck(WÐ%„"
+ jxp_b_112_south_seas_company_active:0 "WSm1gpSO>yck(WÐ%„"
+ jxp_b_112_north_sea_company_active:0 "Swm’N^O>yck(WÐ%„"
+ jxp_b_112_taiwan_fujian_company_active:0 "ðSŒný•wmO>yck(WÐ%„"
+ jxp_b_112_oceanic_company_active:0 "'YmVÓbO>yck(WÐ%„"
+ jxp_b_112_new_world_company_active:0 "°e'YF–O>yck(WÐ%„"
+ jxp_b_112_south_seas_review_scheduled:0 "WSmO>y”Nt^åg&òT’cšR"
+ jxp_b_112_north_sea_review_scheduled:0 "SwmO>y”Nt^åg&òT’cšR"
+ jxp_b_112_taiwan_fujian_review_scheduled:0 "ý•wmO>y”Nt^åg&òT’cšR"
+ jxp_b_112_oceanic_review_scheduled:0 "'YmO>y”Nt^åg&òT’cšR"
+ jxp_b_112_new_world_review_scheduled:0 "°e'YF–O>y”Nt^åg&òT’cšR"
+ jxp_b_112_south_seas_charter_negotiated:0 "WSmO>yÿOSšRàzz"
+ jxp_b_112_south_seas_charter_state:0 "WSmO>yÿýV¶RÑvcwàzz"
+ jxp_b_112_south_seas_charter_local:0 "WSmO>yÿSV0Wc„‹Nàzz"
+ jxp_b_112_north_sea_charter_negotiated:0 "SwmO>yÿOSšRàzz"
+ jxp_b_112_north_sea_charter_state:0 "SwmO>yÿýV¶RÑvcwàzz"
+ jxp_b_112_north_sea_charter_local:0 "SwmO>yÿSV0Wc„‹Nàzz"
+ jxp_b_112_taiwan_fujian_charter_negotiated:0 "ý•wmO>yÿOSšRàzz"
+ jxp_b_112_taiwan_fujian_charter_state:0 "ý•wmO>yÿýV¶RÑvcwàzz"
+ jxp_b_112_taiwan_fujian_charter_local:0 "ý•wmO>yÿSV0Wc„‹Nàzz"
+ jxp_b_112_oceanic_charter_negotiated:0 "'YmO>yÿOSšRàzz"
+ jxp_b_112_oceanic_charter_state:0 "'YmO>yÿýV¶RÑvcwàzz"
+ jxp_b_112_oceanic_charter_local:0 "'YmO>yÿSV0Wc„‹Nàzz"
+ jxp_b_112_new_world_charter_negotiated:0 "°e'YF–O>yÿOSšRàzz"
+ jxp_b_112_new_world_charter_state:0 "°e'YF–O>yÿýV¶RÑvcwàzz"
+ jxp_b_112_new_world_charter_local:0 "°e'YF–O>yÿSV0Wc„‹Nàzz"

@@ -42,7 +42,9 @@ ROUTE_FLAGS = {
     "jxp_path_ikko",
     "jxp_path_wokou",
     "jxp_path_buddhist",
+    "jxp_path_commercial_council",
 }
+LEGACY_ROUTE_FLAGS = ROUTE_FLAGS - {"jxp_path_commercial_council"}
 LOCALISATION_KEY_PATTERN = re.compile(r"(?m)^\s*([A-Za-z0-9_.-]+):\d+\s")
 PINNED_OVERRIDE_FILES = {"Japanese_Missions.txt", "DOM_Japanese_Missions.txt"}
 DAIMYO_TAGS = (
@@ -179,6 +181,13 @@ BASE_PROFILES = tuple(
         "shinto",
         "eastern",
         flags=frozenset({"jxp_path_wokou"}),
+    ),
+    Profile(
+        "JAP Commercial Council",
+        "JAP",
+        "shinto",
+        "eastern",
+        flags=frozenset({"jxp_path_commercial_council"}),
     ),
 )
 
@@ -348,6 +357,30 @@ def evaluate_potential(
         depth_b_tags = depth_all_tags - depth_s_tags - depth_a_tags
 
         route_flags = profile.flags & ROUTE_FLAGS
+        profile_key: str | None = None
+        if profile.tag == "TOY":
+            profile_key = "toyotomi"
+        elif profile.tag == "JAP":
+            if route_flags == frozenset():
+                profile_key = "uncommitted"
+            elif route_flags == frozenset({"jxp_path_sakoku"}):
+                profile_key = "sakoku"
+            elif route_flags == frozenset({"jxp_path_open_trade"}):
+                profile_key = "open"
+            elif route_flags == frozenset({"jxp_path_buddhist"}):
+                profile_key = "buddhist"
+            elif route_flags == frozenset({"jxp_path_commercial_council"}):
+                profile_key = "commercial_council"
+        else:
+            profile_key = {
+                "KJP": "kirishitan",
+                "CJP": "confucian",
+                "EJP": "imperial",
+                "RFJ": "reformed",
+                "SJP": "kaikyo",
+                "IJP": "ikko",
+                "WAK": "wokou",
+            }.get(profile.tag)
         exact_final_state = (
             (
                 profile.tag == "JAP"
@@ -357,6 +390,7 @@ def evaluate_potential(
                     frozenset({"jxp_path_sakoku"}),
                     frozenset({"jxp_path_open_trade"}),
                     frozenset({"jxp_path_buddhist"}),
+                    frozenset({"jxp_path_commercial_council"}),
                 )
             )
             or profile.tag in {"KJP", "CJP", "EJP", "RFJ", "SJP", "IJP", "WAK"}
@@ -374,7 +408,11 @@ def evaluate_potential(
                 uses_japanese_reform_track
             ),
             "jxp_has_final_state_political_profile_trigger": exact_final_state,
-            "jxp_has_any_route_trigger": bool(profile.flags & ROUTE_FLAGS),
+            # The Commercial Council deliberately reuses B's frozen Shinto
+            # slot 4 and uncommitted-horizon slot 5.  It is therefore an exact
+            # A profile but not part of the legacy route helper consumed by
+            # that frozen slot-5 potential.
+            "jxp_has_any_route_trigger": bool(profile.flags & LEGACY_ROUTE_FLAGS),
             "jxp_not_sakoku_locked_trigger": "jxp_path_sakoku" not in profile.flags,
             "jxp_is_japan_expanded_core_tag_trigger": profile.tag in CORE_TAGS,
             "jxp_use_custom_missions_trigger": (
@@ -389,7 +427,31 @@ def evaluate_potential(
             "jxp_a_uses_depth_slot_4_trigger": profile.tag in depth_s_tags | depth_a_tags,
             "jxp_a_uses_depth_slot_3_trigger": profile.tag in depth_b_tags,
             "jxp_a_has_depth_identity_trigger": profile.tag in depth_all_tags,
+            "jxp_a_105_standard_domestic_profile_trigger": (
+                profile_key is not None and profile_key != "commercial_council"
+            ),
+            "jxp_a_105_any_domestic_profile_trigger": profile_key is not None,
+            "jxp_a_105_profile_commercial_council_trigger": (
+                profile_key == "commercial_council"
+            ),
         }
+        for key_name in (
+            "uncommitted",
+            "sakoku",
+            "open",
+            "buddhist",
+            "kirishitan",
+            "confucian",
+            "imperial",
+            "reformed",
+            "kaikyo",
+            "ikko",
+            "wokou",
+            "toyotomi",
+        ):
+            scripted_values[f"jxp_a_105_profile_{key_name}_trigger"] = (
+                profile_key == key_name
+            )
         if key in scripted_values:
             interpreted = _apply_yes_no(text, scripted_values[key])
             return interpreted or malformed(entry, f"{key} must be compared with yes or no")
@@ -927,12 +989,21 @@ def check_missions(context: ValidationContext) -> CheckResult:
                     maximum_unified_terminal_spread,
                     spread,
                 )
-                if spread > 5:
+                shared_capital = {
+                    "jxp_a_105_shared_capital_slot_1_missions",
+                    "jxp_a_105_shared_capital_slot_2_missions",
+                }
+                allowed_spread = (
+                    8 if shared_capital <= set(active_series) else 5
+                )
+                if spread > allowed_spread:
                     result.add(
                         "mission.unified_terminal_imbalance",
                         f"profile {profile.name} slot terminals are "
                         f"{[slot_terminals[slot] for slot in range(1, 6)]}; "
-                        "a final tree may differ by at most five rows",
+                        f"this ownership layout may differ by at most {allowed_spread} "
+                        "rows (the 18/17 shared-capital columns must coexist with "
+                        "frozen B slots 4-5)",
                     )
 
             # Record only the full-DLC base profile once. Every final tag/route

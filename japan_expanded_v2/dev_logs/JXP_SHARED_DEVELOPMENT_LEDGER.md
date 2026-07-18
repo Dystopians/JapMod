@@ -30,21 +30,21 @@
 - Host portability: `READY`
 - R5 fixture status: `ADMITTED`
 - Runtime matrix blockers: `NONE`
-- Next executable step: `STATIC_GATES`
-- Main static gate: `28/28 checks; 286/286 Clausewitz files; full validation suite 328/328; Pacific-charter targeted suite 16/16`
+- Next executable step: `PREFLIGHT`
+- Main static gate: `29/29 checks; 434/434 Clausewitz files; full validation suite 448/448`
 - Acceptance-helper source-host proof: `73/73 runtime/oracle unit tests`
 - Current-host acceptance helper: `73/73; candidate pin and rebuilt oracle source are current`
 - Candidate preflight: `PASS on control 42e1bd3...fa4057a7; candidate ancestry, clean worktree, runtime diff and 12/12 pins verified; repeat after the ledger-only successor before any further deploy`
-- Deployed payload manifests: `acceptance current/current-main remains 80637e0: main 411 / 1e4f3540...6594, map 244 / fcd80cd2...4a75; daily runtime is 914129b: main 419 files / 228a1f36...b7f37 including three review artifacts, map 244 files / 64b22f99...516`
-- Combined static gate: `current 914129b slice passes map/history/content/main-compatibility/assets at 0 errors / 0 warnings and all 137382 selectable days; full no-skip completion is pending an intentional runtime-oracle rebuild`
-- Main missions: `413 mission IDs; 57 custom series; 192 effective profiles`
-- Main ideas: `488 unique groups in one exact-path runtime registry; 45 authored main groups plus 31 companion-tail groups`
-- Combined missions: `566 mission IDs; 77 series; 120 companion tag/DLC profiles`
-- Combined content inventory: `515 events; 290 decisions; 416 scripted callables; 957 modifiers`
-- State safety: `560 country flags; 9 province flags; 957 modifiers; 4 disasters; 0 failures`
+- Deployed payload manifests: `acceptance current/current-main remains 80637e0: main 411 / 1e4f3540...6594, map 244 / fcd80cd2...4a75; daily runtime is f687ca1: main 630 runtime files / 27781bed...8b0 plus three review artifacts, map 252 / 1016c2ed...fe6`
+- Combined static gate: `current f687ca1 slice passes the full no-skip map/history/content/main-compatibility/assets/oracle/main/unit gate at 0 errors / 0 warnings and all 137382 selectable days`
+- Main missions: `757 mission IDs; 132 custom series; 196 effective profiles`
+- Main ideas: `493 unique groups in one exact-path runtime registry; 50 primary groups plus 31 companion-tail groups`
+- Combined missions: `1049 mission IDs; 185 series; 120 companion tag/DLC profiles`
+- Combined content inventory: `1126 events; 331 decisions; 829 scripted callables; 1484 modifiers`
+- State safety: `752 country flags; 9 province flags; 1484 modifiers; 4 disasters; 0 failures`
 - Companion geography: `88/88 japan_region provinces; 137382 selectable days; 299 owner intervals; 70 subject intervals`
-- Localisation: `0 missing combined mission localisation keys`
-- Daily compatibility profile: `Chinese base -> local JXP-compatible supplementary -> main -> map`; daily runtime payload `914129bc...1b438` and compatibility payload `9aa739e4...87810` are deployed; 73/73 collisions converge with 0 divergent providers and 0 stale deployed files, but this daily payload is not yet a matrix-bound runtime candidate
+- Localisation: `92 active UTF-8-BOM files; 0 raw CJK; 0 missing combined mission localisation keys`
+- Daily compatibility profile: `Chinese base -> local JXP-compatible supplementary -> main -> map`; daily runtime payload `f687ca1286c88fd5431d0580b9f1e41b819c5363` and compatibility payload `8397ca4b...fcea` are deployed; 73 external providers converge across 74 colliding paths with 0 divergent providers and 0 stale deployed files, but this daily payload is not yet a matrix-bound runtime candidate
 
 ## Live Execution State
 
@@ -66,23 +66,23 @@ This section is the short operational handoff. It never upgrades static evidence
 ### Immediate Execution Queue
 
 1. Immutable payload `80637e0...e8f5da7` and control plane `42e1bd3...fa4057a7` remain the last acceptance-bound candidate; `C:\JXP_Acceptance` still contains those snapshots and they are not enabled.
-2. Daily Documents contains Pacific-charter balance payload `914129bc...1b438` plus the unchanged 73-provider compatibility clone; the isolated acceptance root still contains only candidate `80637e0`.
-3. Before any runtime evidence, rebuild the runtime oracle/control plane around `914129bc...1b438`; the existing acceptance candidate must not be relabelled as containing the daily payload.
+2. Daily Documents contains merged A/B payload `f687ca12...c5363` plus the rebuilt 73-provider compatibility clone; the isolated acceptance root still contains only candidate `80637e0`.
+3. Before any runtime evidence, form a new two-stage candidate/control plane around `f687ca12...c5363`; the existing acceptance candidate must not be relabelled as containing the daily payload.
 4. Stop before runtime after deployment: a new explicit authorization is required before any EU4 process is started. JXP-002/022/023 old-save convergence and all UI/runtime assertions remain `IN_PROGRESS`.
 
-Daily payload `914129bc004ab1ba5a87a94cd423d5061361b438` retains the merged Agent A/B gameplay bytes and pinned descriptor metadata, then removes the diplomatic-technology requirement from both Pacific-charter entry surfaces while retaining route progression, eight ports, oceanic opening, colonial/route readiness and resource costs. It is deployed and statically audited, but it is not yet runtime-proven and does not replace the acceptance matrix candidate until a new two-stage candidate is formed.
+Daily payload `f687ca1286c88fd5431d0580b9f1e41b819c5363` contains the merged Agent A/B internal, religious, colonial and continental systems plus the Japanese start-screen chronicles. The validation closure restores the Shinshu crisis's generated fifth stage, preserves stage-gated progression and terminal cleanup in the authoritative generator, and updates final-state mutation anchors for ROOT-scoped Buddhist-aware triggers. It is deployed and statically audited, but it is not yet runtime-proven and does not replace the acceptance matrix candidate until a new two-stage candidate is formed.
 
 The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains pinned to `80637e0`, and no runtime/UI evidence has been collected for the new balance bytes.
 
 ### Handoff Delta
 
 - The immutable 0.28.1 payload is `80637e065881f0bac4fd424e0c6100c19e8f5da7`; every future runtime session must bind it through a fresh clean control-plane preflight before evidence collection.
-- The daily deployment is now runtime payload `914129bc...1b438`: main `419 files / 59,395,513 bytes / 228a1f36...b7f37` including the three review artifacts, and unchanged map `244 files / 82,631,535 bytes / 64b22f99...516`. The older 7947b15/07fb27a deployments remain historical evidence only.
-- The balance payload changes only `jxp_decision_charter_pacific` and `jxp_mission_pacific_charter`; it therefore invalidates the checked-in runtime oracle until a future candidate/control-plane rebuild, without changing the 73-provider compatibility collision set.
+- The daily deployment is now runtime payload `f687ca12...c5363`: main `630 runtime files / 7,754,132 bytes / fingerprint 27781bed...8b0` plus three review artifacts, and map `252 runtime files / 82,963,384 bytes / fingerprint 1016c2ed...fe6`. The immediately superseded main/map directories are preserved at `mod/_jxp_backups/20260717_171443_f687ca1`.
+- The checked-in runtime oracle remains byte-current for this payload. Runtime acceptance still requires a new matrix-bound two-stage candidate/control plane; the daily deployment alone is not reusable R1-R13 evidence.
 - The isolated acceptance deployment is current for payload 80637e0: main `411 files / fingerprint 1e4f354011129db0a080250f63c194e16873e9aa412f7acfa3b8a7171bac6594`, map `244 files / fcd80cd21a817d158ceb02e388a181dc4fdf275ebab4ed202d568abf1e4f4a75`, plus a distinct current-main snapshot with the same main fingerprint. None is enabled and no launch occurred.
-- The active daily playset remains `Chinese base -> jxp_chinese_sup_compat -> main -> map`; the original Workshop supplementary provider is disabled. Compatibility payload `9aa739e4...87810` converges all 73 providers, including `common/cultures/00_cultures.txt` and `common/ideas/00_country_ideas.txt`.
-- Static evidence for the merged daily payload is current: main content gate `28/28`, Clausewitz `286/286`, merged focused suite `104/104`, five authoritative generators with no drift, corrected reform-classification test `1/1`, compatibility builder test `1/1`, clone `--check` with 0 issues, and active-playset audit `4 layers / 638 runtime files / 73 collisions / 0 divergent / 0 stale / 3 review artifacts`. The full mutation suite, no-skip combined gate, runtime acceptance and oracle were deliberately not rerun for this deployment slice.
-- The sole exact-path idea registry contains `488/488` unique groups, including all 45 authored main groups and a deliberately observable 31-group companion tail. Map groups require exact origin plus daimyo stage, the former second runtime idea file is forbidden, and setup-log evidence must show the stable `#483..#513` tail rather than demand engine-silent `#26..#225` names.
+- The active daily playset remains `Chinese base -> jxp_chinese_sup_compat -> main -> map`; the original Workshop supplementary provider is disabled. Compatibility payload `8397ca4b...fcea` contains 5,768 files, converges all 73 external providers, and preserves five dynamic-token plus nine start-screen wrapper keys.
+- Static evidence for the merged daily payload is current: main content gate `29/29`, Clausewitz `434/434`, full unit suite `448/448`, state safety `0 hard failures`, six relevant generators with no drift, no-skip combined gate `0 errors / 0 warnings`, oracle `--check` current, compatibility clone `--check` with 0 issues, and active-playset audit `4 layers / 858 runtime files / 74 collisions / 0 divergent / 0 stale / 3 review artifacts`.
+- The sole exact-path idea registry contains `493/493` unique groups, including 50 primary groups and a deliberately observable 31-group companion tail. Map groups require exact origin plus daimyo stage, the former second runtime idea file is forbidden, and setup-log evidence must show the stable companion tail rather than demand engine-silent names.
 - Fresh and stale idea assignment now share one postcondition-driven transaction: clear any stale repair marker, converge the exact managed group, then commit the marker only after the expected-group trigger succeeds. Route/final identities still remove prior daimyo groups instead of stacking them.
 - TOY has one dedicated monarchy foundation and dated kanpaku/taiko government names wired through the authoritative history source for 1586, 1598 and later selectable dates; no republican or free tier-one fallback is statically reachable.
 - Route-reform visibility is exact-state scoped, final political reforms have a pinned two-modifier manifest, and the theoretical JXP contribution to any government tier is at most three. Fresh runtime logs must still prove that `countryreformview.cpp:289` no longer appears and that each final state can visibly adopt and retain its unique reform.
@@ -91,7 +91,7 @@ The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains p
 - JXP-019 now also requires R2/R12 evidence that MRI, OTM, RKK and shared-family representatives show their intended columns on a fresh start, preserve old six-stage progress after migration, and reject every generic, shared-family or foreign identity anchor after save/reload.
 - Runtime acceptance is `PENDING_USER_APPROVAL`. No current-candidate EU4 session has been run, and the prior single-launch authorization has been consumed; earlier candidates and failed/aborted sessions are historical journal evidence only and must not be reused.
 - Agent B's eleven-path gameplay slice is frozen inside the payload and independently validated; B must remain read-only unless a newly discovered runtime defect specifically reopens that scope.
-- User runtime review opened four release-blocking defects. Candidate 80637e0 contains static fixes for all four through the merged A/B slices, but every defect remains `OPEN` until the required fresh UI/log/save-reload evidence passes; the currently deployed ecb33c1 bytes do not contain these fixes.
+- User runtime review opened release-blocking defects that remain `OPEN` until the required fresh UI/log/save-reload evidence passes. Daily payload f687ca1 contains the current static fixes, while acceptance candidate 80637e0 remains an older isolated snapshot and must not be used as evidence for the new bytes.
 
 ## Source Of Truth
 
@@ -191,7 +191,7 @@ The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains p
 
 ### Parallel Task Chains A/B
 
-- **A / `CODEX_A` / 本窗口：** `JXP-001`、`002`、`009`、`016`、`017`、`018`、`019`、`020`、`021`、`024`–`030`。独占 `history/**`、`common/countries/**`、`common/country_tags/**`、`common/ideas/**`、本轮全部大名身份任务与任务刷新接线、净土真宗/佛教日本、陪臣、日本内部战争文件、全部 `jxp_70_toyotomi_*` 文件、主/地图生成器与验证工具、`tools/jxp_runtime_acceptance/**`、playset/兼容副本、skill、Documents 部署和本总账。
+- **A / `CODEX_A` / 本窗口：** `JXP-001`、`002`、`009`、`016`、`017`、`018`、`019`、`020`、`021`、`024`–`030`、`037`。独占 `history/**`、`common/countries/**`、`common/country_tags/**`、`common/ideas/**`、本轮全部大名身份任务与任务刷新接线、净土真宗/佛教日本、陪臣、日本内部战争、国内阶层／市场／公司／资本任务文件、全部 `jxp_70_toyotomi_*` 文件、主/地图生成器与验证工具、`tools/jxp_runtime_acceptance/**`、playset/兼容副本、skill、Documents 部署和本总账。
 - **B / `CODEX_B` / 另一 Agent Window：** `JXP-004`、`005`、`008`、`010`、`022`、`023`、`031`–`036`。可编辑其 `jxp_b_*` 殖民社会、殖民国家、独立/东归、海外战争、大陆经略、朝鲜战争和天命平衡专属 missions/events/decisions/CB/wargoal/subject/localisation/tests；不得触碰 A 独占路径、唯一理念注册表、历史文件或本总账。
 - **边界例外：** B 可独占 `events/jxp_79_final_state_migration_events.txt` 及与 B 功能同编号的迁移文件；A 独占 `events/jxp_22_migration_events.txt`、`jxp_23_migration_events.txt`、`jxp_23_mission_refresh_events.txt`、`jxp_25_migration_events.txt` 与 `common/on_actions/jxp_60_mission_runtime_on_actions.txt`。需要跨边界时先提交最小接口说明，由 A 完成共享文件接线。
 - **交付规则：** B 不编辑本总账、Documents、Launcher 数据或 installed skill，只回报精确 changed paths、静态门禁和未决风险；A 负责联合验证、总账写回和部署。两条链不得同时格式化、生成或改写对方目录。
@@ -234,6 +234,7 @@ The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains p
 | JXP-034 | P1 | IN_PROGRESS | CODEX_B | Continental strategy | 按大名、幕府、终局日本三阶段重做六大战区与征服后治理 | B13 的琉球、朝鲜、满洲/北方、台湾/福建、中国沿海、菲律宾/东南亚任务和四类治理按身份/后勤接口分流 |
 | JXP-035 | P1 | IN_PROGRESS | CODEX_B | Korea war | 建立朝鲜战争前置、战时事件、补给和六种结局的完整链 | B14 不篡改 A 所有的 TOY 历史字节；任务/事件读取后勤接口，交战、撤退、傀儡/保护/通商结果与 AI/重载闭合 |
 | JXP-036 | P0 | IN_PROGRESS | CODEX_B | China/Mandate | 重构中国、天命、八纮一宇三终局并完成 B 系统 AI、平衡、迁移和联合测试 | B15–B16 的夺取/海上礼仪圈/破除天命互斥，八纮一宇与既有 JXP-010/023 合同兼容，无 DLC fallback、AE/和约/AI/迁移闭合 |
+| JXP-037 | P0 | IN_PROGRESS | CODEX_A | Estates/Markets/Companies | 建立日本四阶层、四阶段商业化、共享资本任务、国内公司与十二统一状态的差异化国内终局 | 四阶层及特权/议程/互动/危机、35 项资本任务、40+ 经济事件、公司生命周期、商议日本、迁移/AI/清理/汉化全部静态闭合；获准后以主/地图、DLC 开关、保存重载和观察局证明运行行为 |
 
 ## Active TODO Runtime Closure Map
 
@@ -251,7 +252,7 @@ The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains p
 | JXP-016 | schema-2 总账、外部登记、运行协议和报告索引均受门禁保护 | `R13` | 12 个运行场景 READY 后完成非游戏 release closure 与最终总账写回 |
 | JXP-017 | 88 省地图、137,382 日期、港口/海峡/历史 oracle 静态通过；东海陆地区域已更正为“东海道”并受生成源合同保护 | `R1 + R2 + R9 + R12` | 隔离 VFS、六个大名画像、丰臣日期边界和完整地图渲染共同通过 |
 | JXP-018 | 1586 ODA/TOY 唯一交接、专属理念/任务/关白太阁政体、属国与双地图逐日合同通过；四场战史、九场战斗、十八省 owner/controller 与十九段占领区间通过精确边界校验；TOY 理念已在权威源与唯一运行注册表中强化检地、刀狩、朝廷名分、奉行/大老治理容量及朱印贸易；日常 73-provider 兼容副本已重建并静态审计通过 | `R4 + R9` | 旧档迁移及正式/补录丰臣转换、日期边界、万历朝鲜战争交战方与占领地显示、保存重载均通过 |
-| JXP-019 | 67 个主/地图可选大名、268 个 DLC 画像均有唯一五槽任务归属；13 个主 Tier-A 与 15 个地图 Tier-A 大名拥有精确 tag 的八章历史分支；A1 权威矩阵已逐家固定 Tier S/A/B、政治处境、净新增与目标数量、危机、失败重建、统一遗产、接口、史料和重复风险；ODA 理念已强化快速征服、攻城、火器、乐市乐座及南蛮技术；A2-A5 运行内容仍待按矩阵生成 | `R2 + R12` | 完成 A2-A5 后，MRI/OTM/RKK 等重点与普通家系代表的新战役 UI、旧档进度迁移、保存重载和 fresh log 均无通用回退、消失、断线或跨家残留 |
+| JXP-019 | 67 个主/地图可选大名、268 个 DLC 画像均有唯一五槽任务归属；13 个主 Tier-A 与 15 个地图 Tier-A 大名拥有精确 tag 的八章历史分支；A1 权威矩阵已逐家固定 Tier S/A/B、政治处境、净新增与目标数量、危机、失败重建、统一遗产、接口、史料和重复风险；A98 已从同一矩阵生成 67 家及 TOY 专属开局家史/策论，并按发现、宗教改革、专制、革命四时代和幕府/大名/统一政权三身份组合显示，非日本国家回退原版总览；ODA 理念已强化快速征服、攻城、火器、乐市乐座及南蛮技术；A2-A5 其余运行内容仍待按矩阵生成 | `R2 + R12` | 完成 A2-A5 后，MRI/OTM/RKK 等重点与普通家系代表的新战役 UI、开局总览、旧档进度迁移、保存重载和 fresh log 均无通用回退、消失、断线或跨家残留 |
 | JXP-020 | 45/45 自编理念组结构闭合；单一生成 `00_country_ideas.txt` 含 488 个唯一组、34/34 同名替换、31 个 companion-tail 组与全部关键哨兵；任何第二个 runtime 理念文件或生成漂移均 hard fail；普通/强制同步分离 | `R2 + R3` | 六个大名画像（含 MRI/OTM/RKK）与 TOY、十终局理念 UI 均无默认回退、重叠、溢出或混组，fresh setup/error log 精确显示 `1..25 + 226..513` 且无旧签名 |
 | JXP-021 | 14 主路线文件、60 地图大名文件与丰臣文件通过 canonical EU4SpecialEscape/source-active 校验；39+39 兼容副本须随新候选部署重建 | `R2 + R3 + R9` | 六个大名、十种终局状态及丰臣日期边界的统治者/王朝名称均无乱码并能保存重载 |
 | JXP-022 | 十种统一状态的新局权力结构、capstone、互斥及 EoC 双态静态闭合；旧 `v0280/v0283` 标记存档的 markerless startup convergence 仍是 P0 | `R3 + R4` | 十状态 UI/生命周期及真实旧档迁移均通过，旧标记错位状态也能幂等自愈 |
@@ -269,6 +270,7 @@ The daily deployment is present only in Documents; `C:\JXP_Acceptance` remains p
 | JXP-034 | B13 大名/幕府/终局三阶段、六大战区、四类征服后治理及 B99→B100 接口已静态实施 | — | 后续登记三阶段身份分流、六战区、四治理与海外接口运行证据 |
 | JXP-035 | B14 朝鲜战争前置、补给、战时事件、监视循环与六类结局已静态实施；TOY 历史运行边界尚未验证 | — | 后续登记战前、补给、战时事件、六结局、AI 与保存重载，并复核 TOY 历史不漂移 |
 | JXP-036 | B15–B16 中国/天命三终局、八纮一宇限港合同、AI 平衡及海外程序集成迁移已静态实施；现有 R10/R11 仍不足以关闭 | — | 后续扩展 matrix，验证三终局、DLC 开关、CB/AE/和约、AI、迁移与既有 JXP-010/023 兼容 |
+| JXP-037 | payload `1ad79d161081d067c76e6eb46d8df9f0128f906d` 已静态实现四阶层、四阶段市场、五公司、152 项 A 任务、十二国内路线、商议终局、事务迁移、退出清理与完整中文；主 validator 30/30、Clausewitz 470/470、地图兼容 0 error/0 warning，但没有游戏内场景 | — | 扩展 runtime matrix，验证阶层/Crownland/议程/五类危机、市场阶段、公司生命周期、十二路线、商议日本、DLC 开关、主+地图、保存重载及长期 AI 节奏 |
 
 ## Known Risks
 
@@ -404,6 +406,35 @@ $repo = '<repo>'
 ## Update Journal
 
 按时间倒序追加；旧记录不可静默重写。版本未变化时写 `no version bump`。
+
+### 2026-07-17 - SOCIOECONOMIC-RECONSTRUCTION-025 - Complete static Japanese socioeconomic reconstruction (`no version bump`)
+
+- Status: `STATIC_PASS; IN_PROGRESS; NOT_RUNTIME_PROVEN`。
+- Scope: 在玩法 payload `1ad79d161081d067c76e6eb46d8df9f0128f906d` 完成 JXP-037 的 A0–A14 静态工程：48 项日本阶层特权、40 项议程、四套评定互动与四场阶层危机；四阶段市场、50 个常规经济事件、五家国内公司及离散章程／董事／审计／困顿／破产生命周期；152 项精确 A 任务（35 共享资本任务、十二路线各八项、21 项商议任务）、十二条差异化国内终局、商议日本危机与四项国制；67 家 founder 分类、旧任务完成度事务迁移、殖民身份排除、完整退出清理、国体图志及全部可读中文 source→active UTF-8 BOM 镜像。Agent B 的海外、殖民、独立、大陆、朝鲜、中国 gameplay、slots 4–5 与本地化保持只读，A 只消费既有接口。
+- Authority/Evidence: 社会经济 master 及 estate/economy/missions/integration 分生成器、净土真宗、佛教终局、legacy BOM alias、任务运行时指纹和 debug cleanup registry 均通过 `--check`；非状态定向测试 194/194、状态／灾难定向测试 19/19、live contract subset 5/5。主静态 validator 30/30，470/470 个 gameplay 文件通过 Clausewitz 解析，任务面为 792 IDs／133 series／200 profiles，状态安全为 1,083 个国家旗、9 个省份旗、1,569 个 modifier、9 个 disaster、0 failures；地图组合兼容检查为 0 error／0 warning，`git diff --check` 通过。
+- Runtime/TODO: 未启动 EU4、Launcher、dowser、bootstrapper 或 observer，未部署 Documents，未修改 runtime acceptance、oracle、visualizer 或 installed skill。estate UI／图标与 Crownland、议程实际完成／失败、五类灾难节奏、任务五列／次日换树、DLC 开关、主 Mod 单独／主+地图、保存重载、fresh logs、30 局 1444–1650、10 局 1444–1821、商议形成率与玩家路线通关仍为 `PENDING_RUNTIME`；因此 `JXP-037` 保持 `IN_PROGRESS / CODEX_A / NOT_RUNTIME_PROVEN`。
+
+### 2026-07-17 - SOCIOECONOMIC-RECONSTRUCTION-024 - Start Japanese estates and domestic economy reconstruction (`no version bump`)
+
+- Status: `STARTED; BASELINE_AUDIT_IN_PROGRESS; JXP-037_REGISTERED; NOT_RUNTIME_PROVEN`。
+- Scope: 接收 `Agent_A_超详细_日本阶层资本主义与国内终局重构_Prompt.md` 的 A0–A14 工程，新建 `JXP-037 / CODEX_A` 承载四个日本阶层、四阶段商业化、共享资本任务、国内公司、十二统一状态国内模块与架空商议日本。Agent B 的殖民继承国、海外地区社会、殖民独立、大陆战区、朝鲜战争、中国终局及其列 4–5 missions/events/CB/reforms/localisation/tests 继续只读；A 仅提供已有或最小自由旗接口。
+- Baseline: 工作分支 `codex/content-agent-a`，开始时 HEAD `f9f0fecec9d185177691bb4b4e64f9a3e05b3912`；tracked worktree clean，只有两份用户提供的 Agent A Prompt 未跟踪。主 Mod 当前没有自定义 `common/estates`、`common/estate_privileges` 或 `common/estate_agendas` 目录，既有日本内容仍直接读取原版 nobles/church/burghers；因此先完成 estate 技术 spike、现有经济奖励盘点、任务列位合同和生成器所有权审计，再写 gameplay。
+- Runtime/TODO: 本条没有修改玩法、地图、runtime acceptance、oracle、installed skill、Documents 或 Launcher，也没有启动 EU4。Prompt 自身明确不构成启动许可；阶层 UI、Crownland、议程、危机、保存重载、DLC 开关及 30+10 局观察在取得新的明确授权并登记矩阵前均为 `PENDING_RUNTIME`，不得以静态检查替代。
+
+### 2026-07-17 - INTEGRATION-VALIDATOR-DEPLOY-023 - Close merged validation gates and deploy daily payload (`no version bump`)
+
+- Status: `STATIC_PASS; DAILY_DEPLOYED; COMPATIBILITY_CONVERGED; NOT_RUNTIME_PROVEN`。
+- Scope: 将已完成的 A/B 集成分支 `32be2f1` 合入 Agent A 的开局总览提交，形成合并提交 `d6a6443`；该集成补齐 B100/八纮一宇新合同、五个殖民 tag 姓名、统一两阶段任务刷新、佛教终局互斥与五列替换拓扑，并从 A94/A96 权威生成器移除或消费孤立状态。完整单测继而暴露两处陈旧 final-state mutation 锚点，以及 `build_shinshu_content.py` 权威源与手改生成物之间的第五阶段漂移；payload `f687ca1286c88fd5431d0580b9f1e41b819c5363` 更新 ROOT-scoped mutation 锚点，把净土真宗各阶段前置旗、灾难结束清理和第五阶段调用全部固定回权威生成器，再重建 `jxp_a_95_shinshu_events.txt`。
+- Evidence: `build_daimyo_depth_runtime.py --check` 17/17、`jxp_a_96_buddhist_builder.py --check` 10/10、gameplay names、start screen、debug cleanup、consolidated ideas 与 Shinshu 生成器均无漂移；final-state 39/39、Shinshu 5/5、state-safety mutation 18/18。最终无跳过联合门禁完整通过：地图、历史、内容、主兼容、资产与 oracle 均为 0 error/0 warning，137,382 个可选日期通过；主 validator 29/29、Clausewitz 434/434、全量单测 448/448，状态安全为 752 个国家旗、9 个省份旗、1,484 个 modifier、4 个灾难、0 hard failures。
+- Deployment: 从 clean detached worktree 的精确 payload OID 生成 runtime 白名单 staging，逐文件 SHA-256 校验后原子替换日常 Documents；主 Mod 为 630 个 runtime 文件 / 7,754,132 bytes / fingerprint `27781bedfa61fad033c4df772679c4cca845506202392366fa9444530d50b8b0`，另保留 3 个审阅工件，地图为 252 个 runtime 文件 / 82,963,384 bytes / fingerprint `1016c2ed9e3c0e64b281d47b21cb0929643bfd03c1ae7e7c2b96b485fccc2fe6`。旧主/地图目录完整备份在 `mod/_jxp_backups/20260717_171443_f687ca1`。中文兼容副本原子重建并另行备份，payload 为 5,768 files / 20,858,573 bytes / `8397ca4beefe523fcf081c79f3dc32a7b3dfbe94d30ba5f6636a64fdb596fcea`；`--check` 为 73 patches、39 history、39 country names、5 dynamic-token keys、9 start-screen keys、0 issues。实际 playset 审计为 4 layers / 858 runtime files / 74 collisions / 73 external providers converged / 0 divergent / 0 stale / 3 review artifacts。
+- Runtime/TODO: 未启动 EU4、Launcher、dowser、bootstrapper 或 observer，未修改 `dlc_load.json`、Launcher 数据库、日常 playset 或 `C:\JXP_Acceptance`。本条只把旧 `7/29` 静态失败闭合为当前 `STATIC_PASS` 并证明 Documents 字节收敛，不构成开局总览、任务 UI、理念、改革、殖民循环或保存重载的游戏内证据；所有相关 TODO/defect 继续 `IN_PROGRESS / NOT_RUNTIME_PROVEN`。现有 acceptance candidate `80637e0` 仍为旧隔离快照，正式运行前必须围绕 f687ca1 形成新的两阶段 matrix-bound candidate，并另获明确启动许可。
+
+### 2026-07-17 - JAPANESE-START-SCREEN-022 - Rewrite Japanese opening chronicles (`no version bump`)
+
+- Status: `STATIC_PASS; 67_DAIMYO_PLUS_TOY; FOUR_AGES; NOT_RUNTIME_PROVEN`。
+- Scope: 新增 A98 权威生成器，以既有 `daimyo_depth_plan.json` 生成独立 `customizable_localization` wrapper 与 source→EU4SpecialEscape 本地化。主 Mod 37 家按 tag、地图 30 家按既有 origin flag 取得各自唯一家史与策论，TOY 另消费统一后附录取得关白／太阁专文；发现、宗教改革、专制、革命四时代分别提供默认页引子、天下形势、信仰秩序及幕府／大名／统一政权国制。九个 UI 入口采用新 JXP defined-text，非日本国家经独立 fallback key 调回原版九函数，不覆盖原版 `00_start_screen.txt`；净土真宗另有业力教法说明。不可变主 payload 白名单加入 `customizable_localization`，避免部署时静默遗漏；中文补充兼容生成器新增末序九键 hotfix，使最终 provider 继续指向 JXP wrapper。
+- Evidence: `build_start_screen.py --check --game-root <EU4 1.37.5>` 通过，三项生成物无漂移并验证原版两个固定 SHA-256；`test_start_screen` 6/6、`test_chinese_compat` 1/1、`SharedLedgerTests` 14/14 通过，覆盖 67/37/30、TOY、四时代、三身份、非日本 fallback、地图 tag 隔离、source→active 字节、payload 白名单、兼容层九键防覆盖与总账一致性；主静态 validator 的本切片相关项通过 `341/341` Clausewitz 解析、67 家覆盖和 `77` 个 active localisation 编码检查。该 validator 总体仍因既有殖民任务刷新、B 天命文件尚未合入、佛教终局/任务连续性、殖民 tag 姓名空壳及既有孤立 flags 报 `7/29` cells failed，并在输出完整摘要时由命令包装器于 348.2 秒超时，故不记为完整主门禁通过。`git diff --check` 通过。
+- Runtime/TODO: 未启动 EU4、Launcher、dowser、bootstrapper 或 observer，未部署 Documents，也未重建当前中文兼容副本。开局 GUI 的实际载入顺序、滚动排版、四时代书签显示、ASK/普通大名/地图大名/TOY 及 FRA 等非日本回退仍待兼容副本重建后、获准后的游戏内证明；时代切换不会主动重弹开局窗，只在该界面再次求值时读取当前时代。`JXP-019` 保持 `IN_PROGRESS / CODEX_A / NOT_RUNTIME_PROVEN`。
 
 ### 2026-07-17 - AGENT-B-OVERSEAS-STATIC-021 - Complete B1–B16 static implementation (`no version bump`)
 
@@ -935,6 +966,10 @@ $repo = '<repo>'
 
 ### Main Mod Reports
 
+- `JXP_AGENT_A_SOCIOECONOMIC_BASELINE_AUDIT.md` - JXP-037 国内阶层、市场、公司与任务重构的实现前静态基线审计。
+- `JXP_AGENT_A_SOCIOECONOMIC_HANDOFF.md` - JXP-037 A/B 接口、生成器、迁移与静态/运行时边界 handoff。
+- `JXP_FINAL_MISSION_SLOT_CONTRACT.md` - 统一状态任务 A slots 1–3 / B slots 4–5、指纹、tombstone 与迁移权威合同。
+- `JXP_REWARD_OWNERSHIP_MATRIX.md` - 理念、任务、改革、阶层、公司与国内 capstone 的奖励主要所有者及首批去重合同。
 - `jxp_0_22_0_working_plan.md` - 0.22.0 集成工作计划。
 - `jxp_0_26_0_route_attribute_parity_audit.md` - 0.26.0 九路线与时代属性深度审计。
 - `jxp_agent_a_daimyo_design_matrix_0_29_0.md` - Agent A 67 大名独特化权威设计矩阵；仅为静态设计合同。

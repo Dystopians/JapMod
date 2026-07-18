@@ -8,6 +8,7 @@ import unittest
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
 MAIN_ROOT = REPO_ROOT / "japan_expanded_v2"
+MAP_ROOT = REPO_ROOT / "japan_expanded_v2_map"
 ESCAPER_PATH = (
     REPO_ROOT
     / "skills"
@@ -16,6 +17,34 @@ ESCAPER_PATH = (
     / "escape_eu4_special_localisation.py"
 )
 LOCALISATION_KEY = re.compile(r"^\s*([A-Za-z0-9_.-]+):\d+\s", re.MULTILINE)
+LOCALISATION_ENTRY = re.compile(
+    r'^\s*([A-Za-z0-9_.-]+):\d+\s+"(.*)"\s*$', re.MULTILINE
+)
+FLAG_REFERENCE = re.compile(
+    rb"\b(?:has|had)_(?:country|province)_flag\s*=\s*([A-Za-z0-9_.-]+)"
+)
+EVENT_STRUCTURE_TOKEN = re.compile(
+    rb"([A-Za-z0-9_.-]+)\s*=\s*\{|([{}])|"
+    rb"\b(?:has|had)_(?:country|province)_flag\s*=\s*([A-Za-z0-9_.-]+)"
+)
+REFORM_DEFINITION = re.compile(
+    r"^\s*(jxp_reform_[A-Za-z0-9_]+)\s*=\s*\{", re.MULTILINE
+)
+PLAYER_VISIBLE_FLAG_LOCATIONS = (
+    "missions",
+    "decisions",
+    "common/cb_types",
+    "common/disasters",
+    "common/government_mechanics",
+    "common/government_reforms",
+    "common/ideas",
+    "common/imperial_reforms",
+    "common/new_diplomatic_actions",
+    "common/peace_treaties",
+    "common/scripted_triggers",
+    "common/triggered_modifiers",
+    "common/wargoal_types",
+)
 
 VISIBLE_FLAG_KEYS = {
     "jxp_path_sakoku",
@@ -85,6 +114,63 @@ def _block(text: str, key: str) -> str:
     raise AssertionError(f"unterminated block: {key}")
 
 
+def _localisation_entries(root: Path, directory: str) -> dict[str, str]:
+    entries: dict[str, str] = {}
+    for path in (root / directory).rglob("*.yml"):
+        text = path.read_text(encoding="utf-8-sig")
+        entries.update(LOCALISATION_ENTRY.findall(text))
+    return entries
+
+
+def _player_visible_jxp_flags() -> set[str]:
+    flags: set[str] = set()
+    for root in (MAIN_ROOT, MAP_ROOT):
+        for relative in PLAYER_VISIBLE_FLAG_LOCATIONS:
+            directory = root / relative
+            if not directory.exists():
+                continue
+            for path in directory.rglob("*.txt"):
+                for line in path.read_bytes().splitlines():
+                    code = line.split(b"#", 1)[0]
+                    for match in FLAG_REFERENCE.findall(code):
+                        key = match.decode("ascii")
+                        if key.startswith("jxp_"):
+                            flags.add(key)
+        event_root = root / "events"
+        if event_root.exists():
+            for path in event_root.rglob("*.txt"):
+                code = b"\n".join(
+                    line.split(b"#", 1)[0]
+                    for line in path.read_bytes().splitlines()
+                )
+                stack: list[bytes] = []
+                for match in EVENT_STRUCTURE_TOKEN.finditer(code):
+                    if match.group(1):
+                        stack.append(match.group(1))
+                    elif match.group(2) == b"{":
+                        stack.append(b"{")
+                    elif match.group(2) == b"}":
+                        if stack:
+                            stack.pop()
+                    elif (
+                        match.group(3)
+                        and stack[-2:] == [b"option", b"trigger"]
+                        and match.group(3).startswith(b"jxp_")
+                    ):
+                        flags.add(match.group(3).decode("ascii"))
+    return flags
+
+
+def _defined_jxp_reforms() -> set[str]:
+    reforms: set[str] = set()
+    reform_root = MAIN_ROOT / "common" / "government_reforms"
+    for path in reform_root.glob("*.txt"):
+        reforms.update(
+            REFORM_DEFINITION.findall(path.read_text(encoding="utf-8-sig"))
+        )
+    return reforms
+
+
 class PlaytestContentClarityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -133,6 +219,54 @@ class PlaytestContentClarityTests(unittest.TestCase):
         self.assertTrue(VISIBLE_FLAG_KEYS <= set(LOCALISATION_KEY.findall(source)))
         self.assertTrue(VISIBLE_FLAG_KEYS <= set(LOCALISATION_KEY.findall(active)))
         self.assert_generated_pair(source_relative, active_relative)
+
+    def test_all_player_visible_jxp_flags_have_generated_chinese_labels(self) -> None:
+        flags = _player_visible_jxp_flags()
+        source_entries = {
+            **_localisation_entries(MAIN_ROOT, "localisation_source"),
+            **_localisation_entries(MAP_ROOT, "localisation_source"),
+        }
+        active_entries = {
+            **_localisation_entries(MAIN_ROOT, "localisation"),
+            **_localisation_entries(MAP_ROOT, "localisation"),
+        }
+
+        self.assertGreater(len(flags), 400)
+        self.assertEqual(set(), flags - source_entries.keys())
+        self.assertEqual(set(), flags - active_entries.keys())
+        for flag in flags:
+            self.assertRegex(source_entries[flag], r"[\u3400-\u9fff]", flag)
+
+        self.assert_generated_pair(
+            "localisation_source/jxp_85_ui_flag_labels_l_english_utf8_source.yml",
+            "localisation/jxp_85_ui_flag_labels_l_english.yml",
+        )
+
+    def test_japanese_reform_display_names_are_unique(self) -> None:
+        reforms = _defined_jxp_reforms()
+        source_entries = _localisation_entries(MAIN_ROOT, "localisation_source")
+        missing = reforms - source_entries.keys()
+        duplicate_names: dict[str, list[str]] = {}
+        for reform in reforms - missing:
+            duplicate_names.setdefault(source_entries[reform], []).append(reform)
+        duplicate_names = {
+            name: sorted(keys)
+            for name, keys in duplicate_names.items()
+            if len(keys) > 1
+        }
+
+        self.assertGreater(len(reforms), 400)
+        self.assertEqual(set(), missing)
+        self.assertEqual({}, duplicate_names)
+        for stem in (
+            "jxp_37_route_special_reforms",
+            "jxp_40_route_grand_reforms",
+            "jxp_44_route_program_reforms",
+        ):
+            self.assert_generated_pair(
+                f"localisation_source/{stem}_l_english_utf8_source.yml",
+                f"localisation/{stem}_l_english.yml",
+            )
 
     def test_pacific_missions_explain_stages_and_long_term_loop(self) -> None:
         missions = (

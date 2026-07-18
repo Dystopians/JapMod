@@ -1,0 +1,395 @@
+﻿l_english:
+ jxp_15_oda_tenka_fubu_edicts_taken:0 ",g¶RËeVrÿ)YN^fkäNòTÏu˜Lˆ"
+ jxp_25_court_agenda_seen:0 "¶R-N®‹zÿlQ¶RN¶R<h¹eeuòTÏu®‹šR"
+ jxp_25_frontier_agenda_seen:0 "¶R-N®‹zÿ¹†uÏu%„¹eeuòTÏu®‹šR"
+ jxp_25_maritime_agenda_seen:0 "¶R-N®‹zÿwmÐN=n¡R¹eeuòTÏu®‹šR"
+ jxp_25_temple_market_agenda_seen:0 "¶R-N®‹zÿúR>yNHu^¹eeuòTÏu®‹šR"
+ jxp_25_warrior_agenda_seen:0 "¶R-N®‹zÿ›QyVNfkY¹eeuòTÏu®‹šR"
+ jxp_34_house_diet_convened:0 "¶R-Nø‹¶RÄ‹®‹òTÏuìSV"
+ jxp_35_house_diet_law_integrated:0 "¶R-NÄ‹®‹ÕlòTÏu³ueQýV6R"
+
+ jxp_43_selected_akm_banshu_castles:0 ",g¶RWµNÿ­dÞTÎWï"
+ jxp_43_selected_akt_ezochi_brokers:0 ",g¶RWµNÿŒ†7Y0W’N^"
+ jxp_43_selected_ama_gassan_toda:0 ",g¶RWµNÿgqSÌR0uýVºNÕl"
+ jxp_43_selected_asa_ichijodani_council:0 ",g¶RWµNÿNXN7ŒÄ‹®‹"
+ jxp_43_selected_ask_hokoshu:0 ",g¶RWµNÿ²RHuIYlQO"
+ jxp_43_selected_cba_katori_muster:0 ",g¶RWµNÿ™™ÖSfkè•TM|"
+ jxp_43_selected_csk_ichiryo_gusoku:0 ",g¶RWµNÿWPON†˜wQ³"
+ jxp_43_selected_dte_kibamusha:0 ",g¶RWµNÿeYÞT‘šlšO"
+ jxp_43_selected_hjo_sogamae:0 ",g¶RWµNÿS0uŸSI`„g"
+ jxp_43_selected_hsk_sakai_council:0 ",g¶RWµNÿHXHu¡r†˜®‹Me"
+ jxp_43_selected_htk_wakae_oaths:0 ",g¶RWµNÿå‚ml«ˆ˜R“Š¦u"
+ jxp_43_selected_ike_himeji_accounts:0 ",g¶RWµNÿìYï‹vÎWIYLˆ"
+ jxp_43_selected_img_lawbooks:0 ",g¶RWµNÿNwmSGPTîvUV"
+ jxp_43_selected_isk_tango_ports:0 ",g¶RWµNÿ9NT=n%mIYLˆ"
+ jxp_43_selected_ito_hyuga_forts:0 ",g¶RWµNÿåeTÛVASkQÎW"
+ jxp_43_selected_kkc_aso_rites:0 ",g¶RWµNÿkpýVM–Ï‚<y®‹"
+ jxp_43_selected_kno_inland_pilots:0 ",g¶RWµNÿ³lÎ‘Ño7b…Q4lHQÕl"
+ jxp_43_selected_ktb_ise_petition:0 ",g¶RWµNÿO¿R‹sßu>yÕl"
+ jxp_43_selected_mae_kanazawa_patronage:0 ",g¶RWµNÿ RHŒvNów0(u"
+ jxp_43_selected_mri_suigun:0 ",g¶RWµNÿÑo7b…Q9‚IYLˆ"
+ jxp_43_selected_oda_tenka_fubu:0 ",g¶RWµNÿ)YN^fk"
+ jxp_43_selected_ogs_suwa_horse:0 ",g¶RWµNÿù‹¿‹VlšqSï"
+ jxp_43_selected_otm_foreign_quarter:0 ",g¶RWµNÿœ^…QWSî†Hu"
+ jxp_43_selected_ouc_kanhe_trade:0 ",g¶RWµNÿØRT8f"
+ jxp_43_selected_rfr_mutsu_gates:0 ",g¶RWµNÿF–eYkN7bsQè•"
+ jxp_43_selected_sba_buei_restoration:0 ",g¶RWµNÿfkkSçeLw"
+ jxp_43_selected_shn_dazaifu_brokers:0 ",g¶RWµNÿ'Y°Rœ^²NNb"
+ jxp_43_selected_smz_gunnery:0 ",g¶RWµNÿ(„idÁ”®pIYLˆ"
+ jxp_43_selected_soo_brokers:0 ",g¶RWµNÿùRlš-P†™FUøS"
+ jxp_43_selected_stk_kashima_muster:0 ",g¶RWµNÿ8^F–fkëX›QyVM|"
+ jxp_43_selected_tkd_hatagashira:0 ",g¶RWµNÿ2uÞT×e4Y›QyV"
+ jxp_43_selected_tkg_fudai_registers:0 ",g¶RWµNÿ	N³l1ŒãN¶RÕl"
+ jxp_43_selected_tki_mino_riverworks:0 ",g¶RWµNÿŽSmÝTv^IYLˆ"
+ jxp_43_selected_tti_yamato_temple:0 ",g¶RWµNÿ'YŒTúR>ylQ¦u"
+ jxp_43_selected_ues_kanrei_petition:0 ",g¶RWµNÿsQN¡r†˜Áˆ­e"
+ jxp_43_selected_utn_nikko_barrier:0 ",g¶RWµNÿåeIQsQ2–O"
+ jxp_43_selected_ymn_sixth_share:0 ",g¶RWµNÿmQRN¿kø‹ýVŒQ"
+
+ jxp_50_show_legacy_detail_decisions:0 ">fHy¶Rû|WµNæ‹Æu³Q®‹"
+ jxp_72_wak_cycle_active:0 "-PÇRTwßv„vwmNªV¯sck(WÐjO"
+ jxp_74_ijp_cycle_active:0 "NTÀQWýV„vOOªV¯sck(WÐjO"
+ jxp_74_ijp_route_guard_pending:0 "NTÀQWýV„vï¿u!hckck(WIr…VŒRb"
+ jxp_76_pacific_network_active:0 "*Ys^m*‚ïQÜuck(WÐjO"
+
+ jxp_a_buddhist_council_opened:0 "ø‹—RÄ‹®‹òTÏuìSV"
+ jxp_a_buddhist_final_clerical_temporal:0 "iOYeÈuNSýV6RÿçP×ORŒc"
+ jxp_a_buddhist_final_mountain_council:0 "iOYeÈuNSýV6Rÿø‹qSlQ®‹"
+ jxp_a_buddhist_final_mutual_law:0 "iOYeÈuNSýV6Rÿ‹sÕliOÕløvO"
+ jxp_a_buddhist_seat_jodo_shinshu_recognized:0 "—R>m-^MOÿckVb²‹ÀQWNw—R"
+ jxp_a_buddhist_seat_jodo_shinshu_restricted:0 "—R>m-^MOÿP–6RÀQWNw—R"
+ jxp_a_buddhist_seat_jodo_shinshu_tolerated:0 "—R>m-^MOÿËR¹RÀQWNw—R"
+ jxp_a_buddhist_seat_lotus_recognized:0 "—R>m-^MOÿckVb²‹ÕlNS—R"
+ jxp_a_buddhist_seat_lotus_restricted:0 "—R>m-^MOÿP–6RÕlNS—R"
+ jxp_a_buddhist_seat_lotus_tolerated:0 "—R>m-^MOÿËR¹RÕlNS—R"
+ jxp_a_buddhist_seat_nanto_old_recognized:0 "—R>m-^MOÿckVb²‹WSýçe—R"
+ jxp_a_buddhist_seat_nanto_old_restricted:0 "—R>m-^MOÿP–6RWSýçe—R"
+ jxp_a_buddhist_seat_nanto_old_tolerated:0 "—R>m-^MOÿËR¹RWSýçe—R"
+ jxp_a_buddhist_seat_tendai_shingon_recognized:0 "—R>m-^MOÿckVb²‹)YðSNwŠ"
+ jxp_a_buddhist_seat_tendai_shingon_restricted:0 "—R>m-^MOÿP–6R)YðSNwŠ"
+ jxp_a_buddhist_seat_tendai_shingon_tolerated:0 "—R>m-^MOÿËR¹R)YðSNwŠ"
+ jxp_a_buddhist_seat_zen_gozan_recognized:0 "—R>m-^MOÿckVb²‹…y—g”NqS"
+ jxp_a_buddhist_seat_zen_gozan_restricted:0 "—R>m-^MOÿP–6R…y—g”NqS"
+ jxp_a_buddhist_seat_zen_gozan_tolerated:0 "—R>m-^MOÿËR¹R…y—g”NqS"
+ jxp_a_buddhist_shinbutsu_prepared:0 "^yiO`NTýV6R„vÆQYòTÏuŒRb"
+
+ jxp_a_depth_slot_2_stage_1_completed:0 "¶Rû|ñmSÿ,rŒNR,rN6–µkòTÏuŒRb"
+ jxp_a_depth_slot_2_stage_2_completed:0 "¶Rû|ñmSÿ,rŒNR,rŒN6–µkòTÏuŒRb"
+ jxp_a_depth_slot_2_stage_3_completed:0 "¶Rû|ñmSÿ,rŒNR,r	N6–µkòTÏuŒRb"
+ jxp_a_depth_slot_2_stage_4_completed:0 "¶Rû|ñmSÿ,rŒNR,rÛV6–µkòTÏuŒRb"
+ jxp_a_depth_slot_4_stage_1_completed:0 "¶Rû|ñmSÿ,rÛVR,rN6–µkòTÏuŒRb"
+ jxp_a_depth_slot_4_stage_2_completed:0 "¶Rû|ñmSÿ,rÛVR,rŒN6–µkòTÏuŒRb"
+ jxp_a_depth_slot_4_stage_3_completed:0 "¶Rû|ñmSÿ,rÛVR,r	N6–µkòTÏuŒRb"
+
+ jxp_a_ijp_final_hoshu_state:0 "NTÈuNSýV6RÿÕlINýV¶R"
+ jxp_a_ijp_final_secular_commonwealth:0 "NTÈuNSýV6RÿN×OqQTSO"
+ jxp_a_ijp_final_somon_council:0 "NTÈuNSýV6Rÿã`è•lQ®‹"
+ jxp_a_nested_client:0 "j–ãòTÏueQ¶R-NBSµu"
+ jxp_a_shinshu_event_chain_active:0 "ÀQWw—R†SòSÛzck(WUSV"
+ jxp_a_shinshu_initialized:0 "ÀQWw—RSOû|òTÏuú^Ëz"
+
+ jxp_a_oda_government_ashikaga_protectorate:0 "Çu0uÈuNSýV6Rÿ³)RlQ¹eÝO²bMe"
+ jxp_a_oda_government_azuchi:0 "Çu0uÈuNSýV6Rÿ‰RWIYLˆMe"
+ jxp_a_oda_government_legion_domains:0 "Çu0uÈuNSýV6Rÿ›QâVRýVMe"
+ jxp_a_oda_government_terminal_unlocked:0 "Çu0uÈuNSýV6RòTÏuã‰•"
+ jxp_a_oda_succession_toyotomi:0 "Çu0uçubÿ0Nã¥c¡r"
+
+ jxp_b_101_korea_campaign_active:0 "!nwmyVÆQYck(WÛLˆ"
+ jxp_b_101_korea_stage_01_done:0 "!nwmyVÆQYÿùRlš‹NòTÏuteY"
+ jxp_b_101_korea_stage_02_done:0 "!nwmyVÆQYÿgœœO‚‚òTÏu>mc"
+ jxp_b_101_korea_stage_03_done:0 "!nwmyVÆQYÿGPSýVfNòTÏu¾"
+ jxp_b_101_korea_stage_04_done:0 "!nwmyVÆQYÿT²bKSuQÙzòTÏuQrb"
+ jxp_b_101_korea_stage_05_done:0 "!nwmyVÆQYÿÐ“9‚TM|òTÏušR"
+ jxp_b_101_korea_stage_06_done:0 "!nwmyVÆQYÿÜV›Q®|òTÏuïy."
+ jxp_b_101_korea_stage_07_done:0 "!nwmyVÆQYÿIeÎWhV°hòTÏuteY"
+ jxp_b_101_korea_stage_08_done:0 "!nwmyVÆQYÿø‹'YT›QyVòTÏu¹pÆ–"
+ jxp_b_101_korea_stage_09_done:0 "!nwmyVÆQYÿwmáS²b*‚òTÏub"
+ jxp_b_101_korea_stage_10_done:0 "!nwmyVÆQYÿ'YF–ÍS”^òTÏuÄ‹0O"
+ jxp_b_101_korea_war_started:0 "!nwmyVòTÏuVb"
+
+ jxp_b_94_constitution_chosen:0 "°e'YŒT„vú^ýVªR6RòTÏu	šR"
+ jxp_b_96_independence_declared:0 "wmYqQTSOòTÏuÑShˆìrËz±RŠ"
+ jxp_b_colonial_society_active:0 "wmY–kl>yOSOû|ck(WÐjO"
+ jxp_b_colonial_society_initialized:0 "wmY–kl>yOSOû|òTÏuú^Ëz"
+
+ jxp_b_charter_faith_community:0 "–klàzzÿáOðNqQTSO"
+ jxp_b_charter_free_port:0 "–klàzzÿê1u=n"
+ jxp_b_charter_military_settlement:0 "–klàzzÿ›QyVoS¦W0W"
+ jxp_b_charter_naval_station:0 "–klàzzÿwm›QuQÙz"
+ jxp_b_charter_red_seal_town:0 "–klàzzÿ1gpSHu"
+
+ jxp_confucian_bridge_forced_dispatch:0 "^ySlQfR„v¥cíu‹NöNòTÏu>mÑS"
+ jxp_confucian_native_centers_v1:0 ",g0W^yQYeS-NÃVòTÏuú^Ëz"
+ jxp_confucian_order_complete:0 "1gPR<y6RýV¶R„v6R¦^òTÏuŒRY"
+ jxp_confucian_shinto_syncretism:0 "^yQTAmòTÏunxËz"
+
+ jxp_debug_enabled:0 "ŒÕ‹!jVòTÏu=T(u"
+ jxp_debug_event_category_confucian:0 "ŒÕ‹‹NöN‰|+Rÿ1gPR<y6R"
+ jxp_debug_event_category_early:0 "ŒÕ‹‹NöN‰|+RÿbýVMRg"
+ jxp_debug_event_category_kirishitan:0 "ŒÕ‹‹NöN‰|+Rÿ	T)R=e9N"
+ jxp_debug_event_category_popular_maritime:0 "ŒÕ‹‹NöN‰|+RÿlONwmm"
+ jxp_debug_event_category_reformed_kaikyo:0 "ŒÕ‹‹NöN‰|+Rÿ9ei——RNwmáSï¿u"
+ jxp_debug_events_enabled:0 "ŒÕ‹‹NöNòTÏu=T(u"
+ jxp_debug_panel_cleanup:0 "ŒÕ‹b—gÿ¶r`nt"
+ jxp_debug_panel_routes:0 "ŒÕ‹b—gÿýVVrï¿u"
+ jxp_debug_panel_seeds:0 "ŒÕ‹b—gÿ‹NöNÍyPR"
+ jxp_debug_panel_values:0 "ŒÕ‹b—gÿýV¶Rpe<P"
+
+ jxp_iface_house_frontier_ready:0 "¶Rû|ýw›Rÿ¹†uÏu%„òTÏu1Sêu"
+ jxp_iface_house_logistics_ready:0 "¶Rû|ýw›RÿuQÙzÄuÇuòTÏu1Sêu"
+ jxp_iface_house_maritime_ready:0 "¶Rû|ýw›RÿwmmÏu%„òTÏu1Sêu"
+ jxp_iface_house_mass_mobilization_ready:0 "¶Rû|ýw›Rÿ'YÄ‰!j¨RXTòTÏu1Sêu"
+ jxp_iface_house_religious_ready:0 "¶Rû|ýw›Rÿ—RYeÄuÇuòTÏu1Sêu"
+ jxp_iface_metropole_new_world_rule_broken:0 "—RINýVùR°e'YF–„vßu»l¦umgòTÏuætã‰"
+ jxp_iface_overseas_charter_ready:0 "wmY–klàzzòTÏuïSåN˜Lˆ"
+ jxp_iface_transpacific_state_created:0 "è*Ys^mýV¶RòTÏuú^Ëz"
+
+ jxp_ikko_contact:0 "òTÏuNNTè•’VQÜu¥cæ‰"
+ jxp_ikko_rising_active:0 "NTNÆcqSHgck(WÛLˆ"
+ jxp_ikko_rising_resolved:0 "NTNÆcqSHgòTÏuã‰³Q"
+ jxp_ikko_terauchi_seen:0 "úR…QHuê»lî•˜˜òTÏuÛeQýVMe"
+
+ jxp_reformed_centers_established:0 "9ei——RYeS-NÃVòTÏuú^Ëz"
+ jxp_reformed_contact:0 "òTÏuN9ei——R.OYeQÜu¥cæ‰"
+ jxp_reformed_oranda_schools_seen:0 "ŒTpQfNb–òTÏuÛeQýVMe"
+ jxp_reformed_scriptures_done:0 "9ei——RÏufNÑ‹pSòTÏuŒRb"
+
+ jxp_invest_court_active:0 "•g•bDÿg÷^NlQêN"
+ jxp_invest_oceanic_active:0 "•g•bDÿwmmÏu%„"
+ jxp_invest_tenka_active:0 "•g•bDÿ)YNéy^"
+ jxp_investment_active:0 "ýV¶R•g•bDck(WÛLˆ"
+
+ jxp_shimabara_crisis_active:0 "›SŸSqSHgck(WÛLˆ"
+ jxp_shimabara_mitigated:0 "›SŸSqSHgòTÏu—V0RŒT"
+ jxp_shimabara_resolved:0 "›SŸSqSHgòTÏuã‰³Q"
+
+ jxp_kaikyo_centers_established:0 "wmáSåenYeS-NÃVòTÏuú^Ëz"
+ jxp_kaikyo_contact:0 "òTÏuNwmáSO¯epQFUÅe¥cæ‰"
+ jxp_keian_ronin_crisis_active:0 "†^‰RjmºNqSHgck(WÛLˆ"
+ jxp_keian_ronin_crisis_resolved:0 "†^‰RjmºNqSHgòTÏuã‰³Q"
+ jxp_kirishitan_centers_established:0 "	T)R=e9NYeS-NÃVòTÏuú^Ëz"
+ jxp_kirishitan_contact:0 "òTÏuN	T)R=e9N.OYeQÜu¥cæ‰"
+ jxp_tenmei_famine_active:0 ")Yfe™‘™ck(WÛLˆ"
+ jxp_tenmei_famine_resolved:0 ")Yfe™‘™òTÏuÓumg"
+ jxp_wokou_brokers_funded:0 "wmFUÖS!kOòTÏu·ƒ—VD©R"
+ jxp_wokou_contact:0 "òTÏuN-PÇRÊSwmFUQÜu¥cæ‰"
+
+ jxp_eastasia_tribute_registry_seen:0 "NšNØRTNg!TM|òTÏuú^Ëz"
+ jxp_hajj_fleet_done:0 "gÐ‰²b*‚9‚–òTÏub"
+ jxp_hidden_christians_seen:0 "joO	T)R=e9Nî•˜˜òTÏuúQ°s"
+ jxp_manila_nagasaki_route_seen:0 "lš<SÉb—•T*‚ïòTÏu="
+ jxp_national_idea_registry_repair_v0282:0 "ýV¶RtõV‰v°‹òTÏuŒRb!hck"
+ jxp_pacific_admiralty_done:0 "*Ys^mwm›QIYLˆòTÏuú^Ëz"
+ jxp_polity_initialized:0 "åenýVMeSOû|òTÏuú^Ëz"
+ jxp_tanegashima_seen:0 "ÍyPR›SÁ”®p.O­dòTÏuÑSu"
+ jxp_unlocked_hakko_ichiu_reform:0 "kQ®uN‡R9ei—òTÏuã‰•"
+
+ jxp_origin_akm:0 "¶Rû|úQ«ŽÿdŒg¶R"
+ jxp_origin_akt:0 "¶Rû|úQ«Žÿ‰RN¶R"
+ jxp_origin_ama:0 "¶Rû|úQ«Žÿ<SPR¶R"
+ jxp_origin_asa:0 "¶Rû|úQ«ŽÿgÓN¶R"
+ jxp_origin_ask:0 "¶Rû|úQ«Žÿ³)R¶R"
+ jxp_origin_cba:0 "¶Rû|úQ«ŽÿCSöS¶R"
+ jxp_origin_csk:0 "¶Rû|úQ«Žÿ•—Rbè¶R"
+ jxp_origin_dte:0 "¶Rû|úQ«ŽÿO¾¶R"
+ jxp_origin_hjo:0 "¶Rû|úQ«ŽÿSag¶R"
+ jxp_origin_hsk:0 "¶Rû|úQ«ŽÿÆuÝT¶R"
+ jxp_origin_htk:0 "¶Rû|úQ«Žÿ`uqS¶R"
+ jxp_origin_ike:0 "¶Rû|úQ«Žÿ`l0u¶R"
+ jxp_origin_img:0 "¶Rû|úQ«ŽÿÊNÝT¶R"
+ jxp_origin_isk:0 "¶Rû|úQ«ŽÿNr‚¶R"
+ jxp_origin_ito:0 "¶Rû|úQ«ŽÿON¶R"
+ jxp_origin_kkc:0 "¶Rû|úQ«ŽÿÊƒ`l¶R"
+ jxp_origin_kno:0 "¶Rû|úQ«Žÿ³lÎ‘¶R"
+ jxp_origin_ktb:0 "¶Rû|úQ«ŽÿS`u¶R"
+ jxp_origin_mae:0 "¶Rû|úQ«ŽÿMR0u¶R"
+ jxp_origin_mri:0 "¶Rû|úQ«ŽÿÛk)R¶R"
+ jxp_origin_oda:0 "¶Rû|úQ«ŽÿÇu0u¶R"
+ jxp_origin_ogs:0 "¶Rû|úQ«ŽÿS.rŸS¶R"
+ jxp_origin_otm:0 "¶Rû|úQ«Žÿ'YËS¶R"
+ jxp_origin_ouc:0 "¶Rû|úQ«Žÿ'Y…Q¶R"
+ jxp_origin_rfr:0 "¶Rû|úQ«ŽÿWSè¶R"
+ jxp_origin_sba:0 "¶Rû|úQ«Žÿ¯eâl¶R"
+ jxp_origin_shn:0 "¶Rû|úQ«ŽÿS0¶R"
+ jxp_origin_smz:0 "¶Rû|úQ«Žÿ›S%m¶R"
+ jxp_origin_soo:0 "¶Rû|úQ«Žÿ—R¶R"
+ jxp_origin_stk:0 "¶Rû|úQ«ŽÿPOùz¶R"
+ jxp_origin_tkd:0 "¶Rû|úQ«Žÿfk0u¶R"
+ jxp_origin_tkg:0 "¶Rû|úQ«Žÿ·VÝT¶R"
+ jxp_origin_tki:0 "¶Rû|úQ«ŽÿWS¶R"
+ jxp_origin_tti:0 "¶Rû|úQ«ŽÿRr•N¶R"
+ jxp_origin_ues:0 "¶Rû|úQ«ŽÿNIg¶R"
+ jxp_origin_utn:0 "¶Rû|úQ«Žÿ‡Rý«R¶R"
+ jxp_origin_ymn:0 "¶Rû|úQ«ŽÿqST¶R"
+
+ jxp_map_origin_ank:0 "¶Rû|úQ«ŽÿÊYSï¶R"
+ jxp_map_origin_ari:0 "¶Rû|úQ«Žÿ	glš¶R"
+ jxp_map_origin_asn:0 "¶Rû|úQ«Žÿ¦‚T¶R"
+ jxp_map_origin_azi:0 "¶Rû|úQ«ŽÿEm•N¶R"
+ jxp_map_origin_dho:0 "¶Rû|úQ«Žÿ'YRúR¶R"
+ jxp_map_origin_hcs:0 "¶Rû|úQ«Žÿ‡‰˜H¶R"
+ jxp_map_origin_hng:0 "¶Rû|úQ«Žÿ,gMaúR"
+ jxp_map_origin_hnm:0 "¶Rû|úQ«Žÿ,gô•¶R"
+ jxp_map_origin_kmp:0 "¶Rû|úQ«ŽÿwØN¶R"
+ jxp_map_origin_krd:0 "¶Rû|úQ«ŽÿÑž0u¶R"
+ jxp_map_origin_kyo:0 "¶Rû|úQ«Žÿ¬Ng¶R"
+ jxp_map_origin_mkm:0 "¶Rû|úQ«ŽÿQgN¶R"
+ jxp_map_origin_mog:0 "¶Rû|úQ«ŽÿgN¶R"
+ jxp_map_origin_mts:0 "¶Rû|úQ«ŽÿŒgMR¶R"
+ jxp_map_origin_mtu:0 "¶Rû|úQ«ŽÿŒgfm¶R"
+ jxp_map_origin_myo:0 "¶Rû|úQ«Žÿ	N‹Y¶R"
+ jxp_map_origin_nbs:0 "¶Rû|úQ«Žÿ•›S¶R"
+ jxp_map_origin_nht:0 "¶Rû|úQ«Žÿýw‰v`uqS¶R"
+ jxp_map_origin_osk:0 "¶Rû|úQ«Žÿ'YT¶R"
+ jxp_map_origin_rkk:0 "¶Rû|úQ«ŽÿmQÒ‰¶R"
+ jxp_map_origin_rzj:0 "¶Rû|úQ«Žÿ™Ÿ.úR¶R"
+ jxp_map_origin_sgr:0 "¶Rû|úQ«Žÿøvo‚¶R"
+ jxp_map_origin_sma:0 "¶Rû|úQ«Žÿøvlš¶R"
+ jxp_map_origin_stm:0 "¶Rû|úQ«ŽÿÌ‘Á‰¶R"
+ jxp_map_origin_sto:0 "¶Rû|úQ«Žÿ‹eä…¶R"
+ jxp_map_origin_tgr:0 "¶Rû|úQ«Žÿ%m‰¶R"
+ jxp_map_origin_tgs:0 "¶Rû|úQ«ŽÿÌR+j¶R"
+ jxp_map_origin_ukt:0 "¶Rû|úQ«Žÿ‡RœUY¶R"
+ jxp_map_origin_wkt:0 "¶Rû|úQ«Žÿå‚írfk0u¶R"
+ jxp_map_origin_ymc:0 "¶Rû|úQ«ŽÿqS…Q¶R"
+
+ jxp_confucian_native_center:0 ",g0W^yQYeS-NÃV"
+ jxp_map_compat_ikko_formable_heartland:0 "NTÀQWýV„vòSžRÑSey0W"
+ jxp_map_compat_ikko_heartland:0 "NTè•’V8hÃV0WHS"
+ jxp_map_compat_ryukyu_gateway:0 "	ttwmïè•7b"
+ jxp_map_compat_setouchi:0 "Ño7b…Qwm¿l¸S"
+ jxp_map_compat_shimabara_belt:0 "›SŸSN‰kNÞTYe¾–0WHS"
+ jxp_map_compat_tsushima_channel:0 "ùRlšwmáS‰0W"
+ jxp_map_compat_wokou_waters:0 "-PÇRIm¨RwmßW"
+
+ # Major-house legacy decisions shown in decision requirements.
+ jxp_15_ask_reform_hokoshu_taken:0 "¶Rû|WµNÿ²RHuIYlQO9ei—òTÏuÇ‘³u"
+ jxp_15_csk_tosa_ichiryo_gusoku_taken:0 "¶Rû|WµNÿWPON†˜wQ³äNòTÏu˜Lˆ"
+ jxp_15_dte_oshu_kibamusha_taken:0 "¶Rû|WµNÿeYÞT‘šlšO6RòTÏunxËz"
+ jxp_15_hjo_odawara_sogamae_taken:0 "¶Rû|WµNÿS0uŸSI`„gòTÏuú^b"
+ jxp_15_img_tokaido_lawbooks_taken:0 "¶Rû|WµNÿNwmSGPTîvUVòTÏušR"
+ jxp_15_mri_setouchi_suigun_taken:0 "¶Rû|WµNÿÑo7b…Q9‚IYLˆòTÏu¾‹Ëz"
+ jxp_15_otm_funai_foreign_quarter_taken:0 "¶Rû|WµNÿœ^…QWSî†HuòTÏuV¾‹"
+ jxp_15_ouc_yamaguchi_kanhe_trade_taken:0 "¶Rû|WµNÿqSãSØRT8fòTÏub`Y"
+ jxp_15_smz_satsuma_gunnery_taken:0 "¶Rû|WµNÿ(„idÁ”®pIYLˆòTÏu¾‹Ëz"
+ jxp_15_soo_tsushima_brokers_taken:0 "¶Rû|WµNÿùRlš-P†™FUøSòTÏu¾‹Ëz"
+ jxp_15_tkd_koshu_hatagashira_taken:0 "¶Rû|WµNÿ2uÞT×e4Y›QyVòTÏute"
+ jxp_15_tkg_mikawa_fudai_registers_taken:0 "¶Rû|WµNÿ	N³l1ŒãN¶RÕlòTÏušR"
+ jxp_15_ues_kanto_kanrei_petition_taken:0 "¶Rû|WµNÿsQN¡r†˜TRòTÏu÷‹šR"
+
+ # Regional legacy decisions shown in decision requirements.
+ jxp_17_harima_castle_roads_taken:0 "0WHSWµNÿ­dèxÎWïòTÏuîOQr"
+ jxp_17_hitachi_samurai_muster_taken:0 "0WHSWµNÿ8^F–fkëX›QyVM|òTÏub"
+ jxp_17_ise_yamato_petition_taken:0 "0WHSWµNÿO¿R'YŒTOY¶ròTÏuHT"
+ jxp_17_kanrei_compact_taken:0 "0WHSWµNÿ¡r†˜ø‹¶Rßv¦uòTÏuÓu"
+ jxp_17_kanto_shrine_network_taken:0 "0WHSWµNÿsQN>y¶RQÜuòTÏuteY"
+ jxp_17_kyushu_shrine_registers_taken:0 "0WHSWµNÿkNÞT>y†˜TÄR^òTÏušR"
+ jxp_17_mino_tango_workshops_taken:0 "0WHSWµNÿŽSm9NTåTMb²òTÏuvbi"
+ jxp_17_northern_trade_posts_taken:0 "0WHSWµNÿS¹e’N^NbòTÏuV¾‹"
+ jxp_17_sanin_kokujin_league_taken:0 "0WHSWµNÿqS4–ýVºNNÆcòTÏuÓußv"
+ jxp_17_shinano_pass_wardens_taken:0 "0WHSWµNÿáOSmsQ˜–ˆR²bòTÏuM‘n"
+ jxp_17_southern_sea_envoys_taken:0 "0WHSWµNÿWSwmø‹ýVO‚‚òTÏu>múQ"
+ jxp_17_storehouse_ledgers_taken:0 "0WHSWµNÿø‹¶RÓNê^&ŒQòTÏub"
+
+ # House-specific legacy decisions shown in decision requirements.
+ jxp_19_akm_banshu_castle_chain_taken:0 "dŒg¶RWµNÿ­dÞTÎW&xþ”òTÏuteY"
+ jxp_19_asa_ichijodani_council_taken:0 "gÓN¶RWµNÿNXN7ŒÄ‹®‹òTÏunxËz"
+ jxp_19_htk_wakae_retainer_oaths_taken:0 "`uqS¶RWµNÿå‚ml«ˆ˜Rw÷‹òTÏuÓub"
+ jxp_19_ike_himeji_accounts_taken:0 "`l0u¶RWµNÿìYï‹vÎW&ÕlòTÏuËeLˆ"
+ jxp_19_kkc_aso_fire_rites_taken:0 "Êƒ`l¶RWµNÿM–Ï‚kpmy<y6RòTÏu²bc"
+ jxp_19_mae_kanazawa_patronage_taken:0 "MR0u¶RWµNÿÑ‘ýl‡ez‚‡^²bòTÏunxËz"
+ jxp_19_sba_buei_restoration_taken:0 "¯eâl¶RWµNÿfkkSçeLwòTÏub`Y"
+ jxp_19_stk_kashima_muster_taken:0 "POùz¶RWµNÿž›S›QyV“Š¦uòTÏušR"
+ jxp_19_tki_mino_river_works_taken:0 "WS¶RWµNÿŽSmÝTv^nf÷‹òTÏuŒRb"
+ jxp_19_utn_nikko_barrier_guard_taken:0 "‡Rý«R¶RWµNÿåeIQsQ2–òTÏu¾‹n"
+ jxp_19_ymn_sixth_share_registers_taken:0 "qST¶RWµNÿmQRN¿kø‹ýVŒQòTÏub"
+ jxp_20_akt_ezochi_trade_brokers_taken:0 "‰RN¶RWµNÿŒ†7Y0W’N^YrLˆòTÏu¾‹Ëz"
+ jxp_20_ama_gassan_toda_registers_taken:0 "<SPR¶RWµNÿgqSÌR0uýVºN^òTÏub"
+ jxp_20_cba_katori_muster_taken:0 "CSöS¶RWµNÿ™™ÖSfkè•TM|òTÏub"
+ jxp_20_hsk_sakai_kanrei_council_taken:0 "ÆuÝT¶RWµNÿHXHu¡r†˜Ä‹®‹òTÏuìSV"
+ jxp_20_isk_tango_port_wardens_taken:0 "Nr‚¶RWµNÿ9NT=n%mIYLˆòTÏu¾‹n"
+ jxp_20_ito_hyuga_fort_network_taken:0 "ON¶RWµNÿåeTÛVASkQÎWòTÏuTw2–"
+ jxp_20_kno_inland_sea_pilots_taken:0 "³lÎ‘¶RWµNÿÑo7b…Q4lHQOòTÏub"
+ jxp_20_ktb_ise_court_petition_taken:0 "S`u¶RWµNÿO¿R‹sßuOY÷‹òTÏuŒRb"
+ jxp_20_ogs_suwa_horse_masters_taken:0 "S.rŸS¶RWµNÿù‹¿‹Vlš^ƒòTÏu‰v(u"
+ jxp_20_rfr_mutsu_nine_gates_taken:0 "WSè¶RWµNÿF–eYkN7bsQè•òTÏuteY"
+ jxp_20_shn_dazaifu_brokers_taken:0 "S0¶RWµNÿ'Y°Rœ^²NNbòTÏu¾‹Ëz"
+ jxp_20_tti_yamato_temple_compact_taken:0 "Rr•N¶RWµNÿ'YŒTúR>ylQ¦uòTÏuÓu"
+
+ # Persistent player-facing progression states.
+ jxp_22_house_ordinance_taken:0 "¶R-NÕl¦^òTÏu˜Lˆ"
+ jxp_26_founder_legacy_council_taken:0 "VýVWµNÄ‹®‹òTÏuìSV"
+ jxp_29_route_house_compromise_taken:0 "ýVVrï¿uN¶Rû|.OßuòTÏuŒŒT"
+ jxp_39_founder_idea_legacy_compiled:0 "VýVtõVWµNòTÏub"
+ jxp_43_preunification_memory_integrated:0 "ßuNMR„v¶Rû|°‹ÆVòTÏu³ueQýV6R"
+ jxp_a_house_reconstruction_used:0 "¶Rû|Í‘teòTÏuËeLˆ"
+ jxp_b_101_korea_campaign_completed:0 "gœœÏueuòTÏuJTNµkK„"
+ jxp_b_94_new_yamato_formed:0 "°e'YŒTòTÏuú^ýV"
+ jxp_b_96_independence_crisis_active:0 "wmY>yO„vìrËzqSHgck(Wcíu"
+ jxp_b_96_independence_crisis_resolved:0 "wmY>yO„vìrËzqSHgòTÏuã‰³Q"
+ jxp_b_colonial_society_retired:0 "çe	gwmY>yOSO6RòTÏuÈuÓu"
+ jxp_b_never_offer_colonial_switch:0 "NQâ‹î•=f&T9e1uwmY>yOçuíu8nb"
+ jxp_east_asian_rite_sphere_done:0 "NšN<y6RWòTÏuú^b"
+ jxp_imperial_edict_claims_received:0 "±RèeNbˆc„v†˜WTRòTÏu·ƒ—V"
+ jxp_major_daimyo_mission_replay_guard:0 "'YTûN¡R„v¶Rû|WµNòTÏuÓu—r"
+ jxp_map_major_daimyo_mission_replay_guard:0 "0WþV'YTûN¡R„v¶Rû|WµNòTÏuÓu—r"
+ jxp_polity_mechanic_registered:0 "åe,gMeSOHg6RòTÏu=T(u"
+
+ # Confucian bridge milestones.
+ jxp_confucian_bridge_authority_started:0 "^yQ‡Glÿ‹sSCgZ„vteTck(W¨cÛ"
+ jxp_confucian_bridge_authority_done:0 "^yQ‡Glÿ‹sSCgZòTÏuteT"
+ jxp_confucian_bridge_christian_started:0 "^yQ‡Glÿ	T)R=e9NfRî•„vùRÝ‹ck(W¨cÛ"
+ jxp_confucian_bridge_christian_done:0 "^yQ‡Glÿ	T)R=e9NfRî•òTÏu‡O"
+ jxp_confucian_bridge_firearms_started:0 "^yQ‡GlÿÁ”®p›QfR„vteTck(W¨cÛ"
+ jxp_confucian_bridge_firearms_done:0 "^yQ‡GlÿÁ”®p›QfRòTÏuteT"
+ jxp_confucian_bridge_ikko_started:0 "^yQ‡Glÿè•’V²‹-N„vùRÝ‹ck(W¨cÛ"
+ jxp_confucian_bridge_ikko_done:0 "^yQ‡Glÿè•’V²‹-NòTÏuŒŒT"
+ jxp_confucian_bridge_nanban_started:0 "^yQ‡GlÿWSî†²NAmck(W¨cÛ"
+ jxp_confucian_bridge_nanban_done:0 "^yQ‡GlÿWSî†²NAmòTÏu³ueQ<y6R"
+ jxp_confucian_bridge_neo_started:0 "^yQ‡Glÿ‹RftfR„vtetck(W¨cÛ"
+ jxp_confucian_bridge_neo_done:0 "^yQ‡Glÿ‹RftfRòTÏunxËz"
+ jxp_confucian_bridge_urban_started:0 "^yQ‡GlÿÎWNHuYeSck(W¨cÛ"
+ jxp_confucian_bridge_urban_done:0 "^yQ‡GlÿÎWNHuYeSòTÏuŒRb"
+ jxp_confucian_bridge_wokou_started:0 "^yQ‡GlÿwmFUø‹Õl„vteTck(W¨cÛ"
+ jxp_confucian_bridge_wokou_done:0 "^yQ‡GlÿwmFUø‹ÕlòTÏuteT"
+
+ # Religious and maritime route milestones.
+ jxp_hirado_consistory_done:0 "s^7b•wOòTÏubËz"
+ jxp_ikko_commonwealth_seen:0 "è•’VqQTSOýV6RòTÏu>f°s"
+ jxp_ikko_ishiyama_seen:0 "ówqS,gMaúRòTÏubHNè•’V¢gËu"
+ jxp_ikko_kinri_seen:0 "yÌ‘²bcKN®‹òTÏuÐcúQ"
+ jxp_ikko_monto_militia_seen:0 "è•’V›QyVOòTÏub"
+ jxp_ikko_terauchi_decision_done:0 "úR…QHuqQTSOòTÏuteY"
+ jxp_kaikyo_port_law_codified:0 "wmáS=nÕlòTÏušR"
+ jxp_kaikyo_south_sea_compact_seen:0 "WSwmFUßv¦uòTÏuÓu"
+ jxp_ming_sea_smugglers_seen:0 "'YfwmFUÁy8QÜuòTÏu¥cæ‰"
+ jxp_nagasaki_bishopric_seen:0 "•TYeHSòTÏu¾‹Ëz"
+ jxp_nagasaki_church_council_done:0 "•TYeOÄ‹®‹òTÏuìSV"
+ jxp_reformed_elder_ports_seen:0 "9ei——R=nHu•wOòTÏuTwÓu"
+ jxp_roman_kyoto_embassy_seen:0 "Wlšc¬NO‚‚òTÏuµb¾"
+ jxp_ryukyu_gate_seen:0 "	ttwmïè•7bòTÏuŒcác"
+ jxp_ryukyu_tribute_port_done:0 "	ttg!=nòTÏuteY"
+ jxp_setouchi_pilots_seen:0 "Ño7b…Q4lHQOòTÏu‰v(u"
+ jxp_tsushima_brokers_seen:0 "ùRlš²NYrLˆòTÏu‰v(u"
+ jxp_tsushima_channel_office_done:0 "ùRlšwmáSIYLˆNbòTÏu¾‹Ëz"
+ jxp_wokou_letters_seen:0 "wmN1gpS¶ròTÏu˜ÑS"
+
+ # Companion-map policy and debug decisions.
+ jxp_map_debug_panel:0 "0WþV|Q¹RŒÕ‹b—gòTÏu=T(u"
+ jxp_map_policy_court_taken:0 "0WþV¶Rû|¹eeuÿlQ¶RN¶R<hòTÏu	éb"
+ jxp_map_policy_frontier_taken:0 "0WþV¶Rû|¹eeuÿ¹†uÏu%„òTÏu	éb"
+ jxp_map_policy_sea_taken:0 "0WþV¶Rû|¹eeuÿwmÐN=n¡RòTÏu	éb"
+ jxp_map_policy_temple_taken:0 "0WþV¶Rû|¹eeuÿúR>yNHu^òTÏu	éb"
+ jxp_map_policy_warrior_taken:0 "0WþV¶Rû|¹eeuÿ›QyVNfkYòTÏu	éb"
+
+ # Event-option requirements shown to the player.
+ jxp_34_selected_court_domain_law:0 "¶R-N®‹zÿlQ¶R†˜0WÕlòTÏu	éb"
+ jxp_34_selected_court_rank_law:0 "¶R-N®‹zÿ˜RMOéy^ÕlòTÏu	éb"
+ jxp_34_selected_frontier_barrier_law:0 "¶R-N®‹zÿsQNbˆRYÕlòTÏu	éb"
+ jxp_34_selected_frontier_market_charter:0 "¶R-N®‹zÿ¹^yr¸‹¶ròTÏu	éb"
+ jxp_34_selected_maritime_admiral_rolls:0 "¶R-N®‹zÿ9‚STM|òTÏu	éb"
+ jxp_34_selected_maritime_port_law:0 "¶R-N®‹zÿ=n%mÕl¦^òTÏu	éb"
+ jxp_34_selected_temple_accounting_law:0 "¶R-N®‹zÿúR>yØRšRÕlòTÏu	éb"
+ jxp_34_selected_temple_privilege_law:0 "¶R-N®‹zÿúR>yyr¸‹ÕlòTÏu	éb"
+ jxp_34_selected_warrior_captain_privileges:0 "¶R-N®‹zÿ×e4Yyr¸‹òTÏu	éb"
+ jxp_34_selected_warrior_muster_law:0 "¶R-N®‹zÿ›QyV¹pÀhÕlòTÏu	éb"

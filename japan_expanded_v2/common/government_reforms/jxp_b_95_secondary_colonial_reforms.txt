@@ -105,7 +105,7 @@ jxp_b_95_njf_southern_military_diaspora_reform = {
 	potential = { tag = NJF }
 	modifiers = {
 		mercenary_cost = -0.10
-		mercenary_discipline = 0.025
+		army_tradition = 0.5
 		global_unrest = 1
 	}
 	ai = {

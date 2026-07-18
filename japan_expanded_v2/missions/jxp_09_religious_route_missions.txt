@@ -168,6 +168,50 @@ jxp_kirishitan_deep_missions = {
 			}
 		}
 	}
+
+
+	# B115 external-route additions.
+	jxp_b_115_kirishitan_mainland_01 = {
+		icon = mission_diplomatic_relation
+		position = 17
+		required_missions = { jxp_mission_kjp_estates_concordat }
+		trigger = {
+			dip_tech = 10
+		}
+		effect = {
+			add_prestige = 5
+			set_country_flag = jxp_b_115_kirishitan_interaction_unlocked
+			country_event = { id = jxp_b_115_routes.41 days = 1 }
+		}
+	}
+
+
+	jxp_b_115_kirishitan_mainland_02 = {
+		icon = mission_diplomatic_relation
+		position = 18
+		required_missions = { jxp_b_115_kirishitan_mainland_01 }
+		trigger = {
+			num_of_ports = 5
+		}
+		effect = {
+			add_dip_power = 25
+		}
+	}
+
+
+	jxp_b_115_kirishitan_mainland_03 = {
+		icon = mission_diplomatic_relation
+		position = 19
+		required_missions = { jxp_b_115_kirishitan_mainland_02 }
+		trigger = {
+			prestige = 25
+		}
+		effect = {
+			change_government_reform_progress = 15
+			country_event = { id = jxp_b_115_routes.42 days = 1 }
+		}
+	}
+
 }
 
 jxp_reformed_deep_missions = {
@@ -328,6 +372,37 @@ jxp_reformed_deep_missions = {
 			}
 		}
 	}
+
+
+	# B115 external-route additions.
+	jxp_b_115_reformed_mainland_01 = {
+		icon = mission_diplomatic_relation
+		position = 14
+		required_missions = { jxp_mission_covenant_commonwealth }
+		trigger = {
+			dip_tech = 10
+		}
+		effect = {
+			add_prestige = 5
+			set_country_flag = jxp_b_115_reformed_interaction_unlocked
+			country_event = { id = jxp_b_115_routes.71 days = 1 }
+		}
+	}
+
+
+	jxp_b_115_reformed_mainland_02 = {
+		icon = mission_diplomatic_relation
+		position = 15
+		required_missions = { jxp_b_115_reformed_mainland_01 }
+		trigger = {
+			num_of_ports = 5
+		}
+		effect = {
+			change_government_reform_progress = 15
+			country_event = { id = jxp_b_115_routes.72 days = 1 }
+		}
+	}
+
 }
 
 jxp_kaikyo_deep_missions = {
@@ -517,4 +592,5 @@ jxp_kaikyo_deep_missions = {
 			}
 		}
 	}
+
 }

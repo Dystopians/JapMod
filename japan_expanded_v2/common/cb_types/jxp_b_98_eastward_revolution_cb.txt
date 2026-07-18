@@ -1,7 +1,13 @@
 cb_jxp_b_eastward_revolution = {
 	valid_for_subject = no
 
-	prerequisites_self = { jxp_b_98_can_launch_eastward_revolution_trigger = yes }
+	prerequisites_self = {
+		jxp_b_98_can_launch_eastward_revolution_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_eastward_revolution_ready_trigger = yes
+		}
+	}
 
 	prerequisites = {
 		FROM = { jxp_b_98_vulnerable_japanese_metropole_trigger = yes }

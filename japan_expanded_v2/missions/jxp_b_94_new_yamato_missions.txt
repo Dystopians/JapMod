@@ -2,7 +2,7 @@ jxp_b_94_nya_west_coast_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential = { OR = { tag = NYA tag = TPF } }
+	potential = { tag = NYA }
 	has_country_shield = yes
 
 	jxp_b_94_mission_pacific_shore_foundation = {
@@ -105,13 +105,25 @@ jxp_b_94_nya_west_coast_missions = {
 			country_event = { id = jxp_new_yamato.3 }
 		}
 	}
+
+	jxp_b_94_mission_chartered_capital = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_94_mission_continental_horizon }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_new_yamato.11 days = 1 }
+		}
+	}
 }
 
 jxp_b_94_nya_civic_compact_missions = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential = { OR = { tag = NYA tag = TPF } }
+	potential = { tag = NYA }
 	has_country_shield = yes
 
 	jxp_b_94_mission_first_local_compact = {
@@ -206,13 +218,25 @@ jxp_b_94_nya_civic_compact_missions = {
 			jxp_b_91_subtract_control_5_effect = yes
 		}
 	}
+
+	jxp_b_94_mission_federal_nation = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_94_mission_union_fulfilled }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_new_yamato.12 days = 1 }
+		}
+	}
 }
 
 jxp_b_94_nya_transpacific_economy_missions = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential = { OR = { tag = NYA tag = TPF } }
+	potential = { tag = NYA }
 	has_country_shield = yes
 
 	jxp_b_94_mission_red_seal_inheritance = {
@@ -322,13 +346,25 @@ jxp_b_94_nya_transpacific_economy_missions = {
 			jxp_b_91_add_identity_5_effect = yes
 		}
 	}
+
+	jxp_b_94_mission_pacific_credit_union = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_94_mission_pacific_common_market }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_new_yamato.13 days = 1 }
+		}
+	}
 }
 
 jxp_b_94_nya_republican_state_missions = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential = { OR = { tag = NYA tag = TPF } }
+	potential = { tag = NYA }
 	has_country_shield = yes
 
 	jxp_b_94_mission_foundation_convention = {
@@ -420,13 +456,25 @@ jxp_b_94_nya_republican_state_missions = {
 			jxp_b_91_subtract_control_5_effect = yes
 		}
 	}
+
+	jxp_b_94_mission_new_yamato_constitution = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_94_mission_enduring_constitution }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_new_yamato.14 days = 1 }
+		}
+	}
 }
 
 jxp_b_94_nya_independence_return_missions = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential = { OR = { tag = NYA tag = TPF } }
+	potential = { tag = NYA }
 	has_country_shield = yes
 
 	jxp_b_94_mission_self_rule_proclaimed = {
@@ -529,6 +577,18 @@ jxp_b_94_nya_independence_return_missions = {
 		effect = {
 			country_event = { id = jxp_new_yamato.10 }
 			jxp_b_94_mark_agent_a_refresh_interfaces_effect = yes
+		}
+	}
+
+	jxp_b_94_mission_eastward_or_federation = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_94_mission_commonwealth_of_two_shores }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_new_yamato.15 days = 1 }
 		}
 	}
 }

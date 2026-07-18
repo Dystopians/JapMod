@@ -1,0 +1,53 @@
+jxp_b_110_has_expected_colonial_missions_trigger = {
+	OR = {
+		AND = {
+			tag = NYA
+			has_mission = jxp_b_94_mission_pacific_shore_foundation
+		}
+		AND = {
+			tag = HKK
+			has_mission = jxp_b_95_hkk_cold_harbors
+		}
+		AND = {
+			tag = NJF
+			has_mission = jxp_b_95_njf_japan_town_registers
+		}
+		AND = {
+			tag = OIA
+			has_mission = jxp_b_95_oia_star_paths
+		}
+		AND = {
+			tag = TPF
+			has_mission = jxp_b_114_tpf_japanese_seats
+		}
+		# A deliberately dissolved federation has no TPF mission tree; its
+		# postcondition is the dissolved identity itself plus cleared handshakes.
+		AND = {
+			tag = TPF
+			has_country_flag = jxp_b_tpf_federation_dissolved
+		}
+	}
+}
+
+jxp_b_110_colonial_depth_postcondition_trigger = {
+	jxp_b_102_is_colonial_successor_trigger = yes
+	jxp_b_110_has_expected_colonial_missions_trigger = yes
+	NOT = {
+		OR = {
+			has_country_flag = jxp_iface_b_nya_needs_mission_refresh
+			has_country_flag = jxp_iface_b_nya_needs_idea_refresh
+			has_country_flag = jxp_iface_b_nya_needs_government_registry
+			has_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+			has_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+			has_country_flag = jxp_iface_b_secondary_needs_government_registry
+			has_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+			has_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+			has_country_flag = jxp_iface_b_tpf_needs_government_registry
+		}
+	}
+}
+
+jxp_b_110_needs_colonial_depth_migration_trigger = {
+	jxp_b_102_is_colonial_successor_trigger = yes
+	NOT = { has_country_flag = jxp_b_110_colonial_depth_migrated }
+}

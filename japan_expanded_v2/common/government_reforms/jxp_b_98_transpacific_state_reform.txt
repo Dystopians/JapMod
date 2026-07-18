@@ -5,7 +5,7 @@ jxp_b_two_ocean_federation_reform = {
 	valid_for_nation_designer = no
 	republic = yes
 
-	potential = { tag = TPF }
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
 	trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
 
 	modifiers = {
@@ -14,4 +14,22 @@ jxp_b_two_ocean_federation_reform = {
 		naval_forcelimit_modifier = 0.10
 	}
 	custom_attributes = { cannot_become_dictatorship = yes }
+}
+
+jxp_b_114_old_world_directed_federation_reform = {
+	icon = "ballot_box" republic = yes allow_normal_conversion = no lock_level_when_selected = yes valid_for_nation_designer = no
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } } trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
+	modifiers = { global_tax_modifier = 0.10 governing_capacity_modifier = -0.05 global_unrest = 1 }
+}
+
+jxp_b_114_overseas_rights_confederation_reform = {
+	icon = "ballot_box" republic = yes allow_normal_conversion = no lock_level_when_selected = yes valid_for_nation_designer = no
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } } trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
+	modifiers = { diplomatic_reputation = 1 global_trade_power = 0.10 land_forcelimit_modifier = -0.10 }
+}
+
+jxp_b_114_two_ocean_directorate_reform = {
+	icon = "ballot_box" republic = yes allow_normal_conversion = no lock_level_when_selected = yes valid_for_nation_designer = no
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } } trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
+	modifiers = { land_forcelimit_modifier = 0.15 army_tradition = 0.5 reform_progress_growth = -0.10 global_unrest = 2 }
 }

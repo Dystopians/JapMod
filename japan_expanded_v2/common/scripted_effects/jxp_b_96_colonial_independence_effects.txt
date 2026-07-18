@@ -40,11 +40,14 @@ jxp_b_96_resolve_with_trade_independence_effect = {
 }
 
 jxp_b_96_mark_full_independence_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_colonial_independence } }
+		jxp_b_91_add_identity_10_effect = yes
+	}
 	jxp_b_96_clear_independence_crisis_effect = yes
 	set_country_flag = jxp_b_96_independence_crisis_resolved
 	set_country_flag = jxp_iface_colonial_self_rule
 	set_country_flag = jxp_iface_colonial_independence
-	jxp_b_91_add_identity_10_effect = yes
 }
 
 jxp_b_96_restore_metropole_control_effect = {

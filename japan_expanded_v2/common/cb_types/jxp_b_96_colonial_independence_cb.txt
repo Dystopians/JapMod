@@ -5,6 +5,10 @@ cb_jxp_b_colonial_independence = {
 
 	prerequisites_self = {
 		jxp_b_96_can_use_colonial_independence_cb_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_independence_war_ready_trigger = yes
+		}
 	}
 
 	prerequisites = {

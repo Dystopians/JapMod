@@ -1,0 +1,262 @@
+country_decisions = {
+
+	jxp_b_111_nya_action_01 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 120 }
+		effect = { add_treasury = -120 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.16 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_02 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 140 }
+		effect = { add_treasury = -140 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.17 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_03 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 160 }
+		effect = { add_treasury = -160 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.18 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_04 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 180 }
+		effect = { add_treasury = -180 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.19 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_05 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 200 }
+		effect = { add_treasury = -200 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.20 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_06 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 220 }
+		effect = { add_treasury = -220 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.21 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_07 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 240 }
+		effect = { add_treasury = -240 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.22 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_08 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 260 }
+		effect = { add_treasury = -260 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.23 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_09 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 280 }
+		effect = { add_treasury = -280 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_new_yamato.24 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_nya_action_10 = {
+		potential = { tag = NYA }
+		allow = { is_at_war = no stability = 0 treasury = 300 }
+		effect = { add_treasury = -300 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes set_country_flag = jxp_b_nya_crisis_resolved country_event = { id = jxp_colonial_state_crisis.2 days = 1 } country_event = { id = jxp_new_yamato.25 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_hkk_action_01 = {
+		potential = { tag = HKK }
+		allow = { is_at_war = no stability = 0 treasury = 120 }
+		effect = { add_treasury = -120 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.9 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_hkk_action_02 = {
+		potential = { tag = HKK }
+		allow = { is_at_war = no stability = 0 treasury = 140 }
+		effect = { add_treasury = -140 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.10 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_hkk_action_03 = {
+		potential = { tag = HKK }
+		allow = { is_at_war = no stability = 0 treasury = 160 }
+		effect = { add_treasury = -160 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.11 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_hkk_action_04 = {
+		potential = { tag = HKK }
+		allow = { is_at_war = no stability = 0 treasury = 180 }
+		effect = { add_treasury = -180 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.12 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_hkk_action_05 = {
+		potential = { tag = HKK }
+		allow = { is_at_war = no stability = 0 treasury = 200 }
+		effect = { add_treasury = -200 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes set_country_flag = jxp_b_hkk_crisis_resolved country_event = { id = jxp_colonial_state_crisis.12 days = 1 } country_event = { id = jxp_secondary_colonies.13 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_01 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 120 }
+		effect = { add_treasury = -120 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.109 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_02 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 140 }
+		effect = { add_treasury = -140 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.110 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_03 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 160 }
+		effect = { add_treasury = -160 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.111 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_04 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 180 }
+		effect = { add_treasury = -180 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.112 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_05 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 200 }
+		effect = { add_treasury = -200 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.113 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_06 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 220 }
+		effect = { add_treasury = -220 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.114 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_njf_action_07 = {
+		potential = { tag = NJF }
+		allow = { is_at_war = no stability = 0 treasury = 240 }
+		effect = { add_treasury = -240 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes set_country_flag = jxp_b_njf_crisis_resolved country_event = { id = jxp_colonial_state_crisis.22 days = 1 } country_event = { id = jxp_secondary_colonies.115 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_oia_action_01 = {
+		potential = { tag = OIA }
+		allow = { is_at_war = no stability = 0 treasury = 120 }
+		effect = { add_treasury = -120 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.209 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_oia_action_02 = {
+		potential = { tag = OIA }
+		allow = { is_at_war = no stability = 0 treasury = 140 }
+		effect = { add_treasury = -140 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.210 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_oia_action_03 = {
+		potential = { tag = OIA }
+		allow = { is_at_war = no stability = 0 treasury = 160 }
+		effect = { add_treasury = -160 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.211 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_oia_action_04 = {
+		potential = { tag = OIA }
+		allow = { is_at_war = no stability = 0 treasury = 180 }
+		effect = { add_treasury = -180 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_secondary_colonies.212 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_oia_action_05 = {
+		potential = { tag = OIA }
+		allow = { is_at_war = no stability = 0 treasury = 200 }
+		effect = { add_treasury = -200 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes set_country_flag = jxp_b_oia_crisis_resolved country_event = { id = jxp_colonial_state_crisis.32 days = 1 } country_event = { id = jxp_secondary_colonies.213 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_01 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 120 }
+		effect = { add_treasury = -120 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.11 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_02 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 140 }
+		effect = { add_treasury = -140 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.12 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_03 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 160 }
+		effect = { add_treasury = -160 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.13 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_04 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 180 }
+		effect = { add_treasury = -180 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.14 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_05 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 200 }
+		effect = { add_treasury = -200 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.15 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_06 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 220 }
+		effect = { add_treasury = -220 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.16 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_07 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 240 }
+		effect = { add_treasury = -240 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.17 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_08 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 260 }
+		effect = { add_treasury = -260 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.18 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_09 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 280 }
+		effect = { add_treasury = -280 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes country_event = { id = jxp_transpacific_state.19 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+	jxp_b_111_tpf_action_10 = {
+		potential = { tag = TPF }
+		allow = { is_at_war = no stability = 0 treasury = 300 }
+		effect = { add_treasury = -300 add_prestige = 3 jxp_b_91_add_identity_5_effect = yes set_country_flag = jxp_b_tpf_crisis_resolved country_event = { id = jxp_colonial_state_crisis.42 days = 1 } set_country_flag = jxp_b_tpf_federation_dissolved remove_country_modifier = jxp_b_98_two_ocean_federal_burdens remove_government_reform = jxp_b_two_ocean_federation_reform remove_government_reform = jxp_b_114_old_world_directed_federation_reform remove_government_reform = jxp_b_114_overseas_rights_confederation_reform remove_government_reform = jxp_b_114_two_ocean_directorate_reform every_subject_country = { add_liberty_desire = 100 } add_stability = -2 add_prestige = -25 if = { limit = { has_country_flag = jxp_b_114_tpf_origin_nya NOT = { exists = NYA } } change_tag = NYA } else_if = { limit = { has_country_flag = jxp_b_114_tpf_origin_hkk NOT = { exists = HKK } } change_tag = HKK } else_if = { limit = { has_country_flag = jxp_b_114_tpf_origin_njf NOT = { exists = NJF } } change_tag = NJF } else_if = { limit = { has_country_flag = jxp_b_114_tpf_origin_oia NOT = { exists = OIA } } change_tag = OIA } on_change_tag_effect = yes jxp_refresh_route_missions_effect = yes country_event = { id = jxp_transpacific_state.20 days = 1 } }
+		ai_will_do = { factor = 0.10 modifier = { factor = 0 num_of_loans = 4 } }
+	}
+
+}

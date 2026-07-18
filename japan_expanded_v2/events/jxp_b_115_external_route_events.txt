@@ -1,0 +1,786 @@
+namespace = jxp_b_115_routes
+
+country_event = {
+	id = jxp_b_115_routes.1
+	title = jxp_b_115_routes.1.t
+	desc = jxp_b_115_routes.1.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.1.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.2
+	title = jxp_b_115_routes.2.t
+	desc = jxp_b_115_routes.2.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.2.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.3
+	title = jxp_b_115_routes.3.t
+	desc = jxp_b_115_routes.3.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.3.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.4
+	title = jxp_b_115_routes.4.t
+	desc = jxp_b_115_routes.4.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.4.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.5
+	title = jxp_b_115_routes.5.t
+	desc = jxp_b_115_routes.5.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.5.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.11
+	title = jxp_b_115_routes.11.t
+	desc = jxp_b_115_routes.11.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.11.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.12
+	title = jxp_b_115_routes.12.t
+	desc = jxp_b_115_routes.12.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.12.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.13
+	title = jxp_b_115_routes.13.t
+	desc = jxp_b_115_routes.13.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.13.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.14
+	title = jxp_b_115_routes.14.t
+	desc = jxp_b_115_routes.14.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.14.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.15
+	title = jxp_b_115_routes.15.t
+	desc = jxp_b_115_routes.15.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.15.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.21
+	title = jxp_b_115_routes.21.t
+	desc = jxp_b_115_routes.21.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.21.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.22
+	title = jxp_b_115_routes.22.t
+	desc = jxp_b_115_routes.22.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.22.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.23
+	title = jxp_b_115_routes.23.t
+	desc = jxp_b_115_routes.23.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.23.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.24
+	title = jxp_b_115_routes.24.t
+	desc = jxp_b_115_routes.24.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.24.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.25
+	title = jxp_b_115_routes.25.t
+	desc = jxp_b_115_routes.25.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.25.trade
+		set_country_flag = jxp_b_115_open_main_trade
+		country_event = { id = jxp_b_115_routes.26 days = 1 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trade_efficiency = 0.25 }
+		}
+	}
+	option = {
+		name = jxp_b_115_routes.25.navy
+		set_country_flag = jxp_b_115_open_main_navy
+		country_event = { id = jxp_b_115_routes.26 days = 1 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 navy_size_percentage = 0.8 }
+		}
+	}
+	option = {
+		name = jxp_b_115_routes.25.settlement
+		set_country_flag = jxp_b_115_open_main_settlement
+		country_event = { id = jxp_b_115_routes.26 days = 1 }
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 4 num_of_colonists = 1 }
+			modifier = { factor = 3 has_idea_group = exploration_ideas }
+		}
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.26
+	title = jxp_b_115_routes.26.t
+	desc = jxp_b_115_routes.26.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.26.trade_navy
+		trigger = { has_country_flag = jxp_b_115_open_main_trade }
+		set_country_flag = jxp_b_115_open_secondary_navy
+	}
+	option = {
+		name = jxp_b_115_routes.26.trade_settlement
+		trigger = { has_country_flag = jxp_b_115_open_main_trade }
+		set_country_flag = jxp_b_115_open_secondary_settlement
+	}
+	option = {
+		name = jxp_b_115_routes.26.navy_trade
+		trigger = { has_country_flag = jxp_b_115_open_main_navy }
+		set_country_flag = jxp_b_115_open_secondary_trade
+	}
+	option = {
+		name = jxp_b_115_routes.26.navy_settlement
+		trigger = { has_country_flag = jxp_b_115_open_main_navy }
+		set_country_flag = jxp_b_115_open_secondary_settlement
+	}
+	option = {
+		name = jxp_b_115_routes.26.settlement_trade
+		trigger = { has_country_flag = jxp_b_115_open_main_settlement }
+		set_country_flag = jxp_b_115_open_secondary_trade
+	}
+	option = {
+		name = jxp_b_115_routes.26.settlement_navy
+		trigger = { has_country_flag = jxp_b_115_open_main_settlement }
+		set_country_flag = jxp_b_115_open_secondary_navy
+	}
+	option = {
+		name = jxp_b_115_routes.26.none
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.31
+	title = jxp_b_115_routes.31.t
+	desc = jxp_b_115_routes.31.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.31.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.32
+	title = jxp_b_115_routes.32.t
+	desc = jxp_b_115_routes.32.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.32.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.33
+	title = jxp_b_115_routes.33.t
+	desc = jxp_b_115_routes.33.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.33.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.34
+	title = jxp_b_115_routes.34.t
+	desc = jxp_b_115_routes.34.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.34.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.35
+	title = jxp_b_115_routes.35.t
+	desc = jxp_b_115_routes.35.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.35.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.41
+	title = jxp_b_115_routes.41.t
+	desc = jxp_b_115_routes.41.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.41.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.42
+	title = jxp_b_115_routes.42.t
+	desc = jxp_b_115_routes.42.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.42.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.43
+	title = jxp_b_115_routes.43.t
+	desc = jxp_b_115_routes.43.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.43.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.44
+	title = jxp_b_115_routes.44.t
+	desc = jxp_b_115_routes.44.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.44.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.45
+	title = jxp_b_115_routes.45.t
+	desc = jxp_b_115_routes.45.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.45.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.51
+	title = jxp_b_115_routes.51.t
+	desc = jxp_b_115_routes.51.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.51.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.52
+	title = jxp_b_115_routes.52.t
+	desc = jxp_b_115_routes.52.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.52.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.53
+	title = jxp_b_115_routes.53.t
+	desc = jxp_b_115_routes.53.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.53.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.54
+	title = jxp_b_115_routes.54.t
+	desc = jxp_b_115_routes.54.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.54.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.55
+	title = jxp_b_115_routes.55.t
+	desc = jxp_b_115_routes.55.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.55.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.61
+	title = jxp_b_115_routes.61.t
+	desc = jxp_b_115_routes.61.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.61.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.62
+	title = jxp_b_115_routes.62.t
+	desc = jxp_b_115_routes.62.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.62.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.63
+	title = jxp_b_115_routes.63.t
+	desc = jxp_b_115_routes.63.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.63.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.64
+	title = jxp_b_115_routes.64.t
+	desc = jxp_b_115_routes.64.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.64.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.65
+	title = jxp_b_115_routes.65.t
+	desc = jxp_b_115_routes.65.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.65.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.71
+	title = jxp_b_115_routes.71.t
+	desc = jxp_b_115_routes.71.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.71.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.72
+	title = jxp_b_115_routes.72.t
+	desc = jxp_b_115_routes.72.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.72.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.73
+	title = jxp_b_115_routes.73.t
+	desc = jxp_b_115_routes.73.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.73.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.74
+	title = jxp_b_115_routes.74.t
+	desc = jxp_b_115_routes.74.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.74.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.75
+	title = jxp_b_115_routes.75.t
+	desc = jxp_b_115_routes.75.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.75.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.81
+	title = jxp_b_115_routes.81.t
+	desc = jxp_b_115_routes.81.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.81.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.82
+	title = jxp_b_115_routes.82.t
+	desc = jxp_b_115_routes.82.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.82.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.83
+	title = jxp_b_115_routes.83.t
+	desc = jxp_b_115_routes.83.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.83.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.84
+	title = jxp_b_115_routes.84.t
+	desc = jxp_b_115_routes.84.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.84.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.85
+	title = jxp_b_115_routes.85.t
+	desc = jxp_b_115_routes.85.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.85.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.91
+	title = jxp_b_115_routes.91.t
+	desc = jxp_b_115_routes.91.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.91.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.92
+	title = jxp_b_115_routes.92.t
+	desc = jxp_b_115_routes.92.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.92.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.93
+	title = jxp_b_115_routes.93.t
+	desc = jxp_b_115_routes.93.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.93.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.94
+	title = jxp_b_115_routes.94.t
+	desc = jxp_b_115_routes.94.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.94.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.95
+	title = jxp_b_115_routes.95.t
+	desc = jxp_b_115_routes.95.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.95.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.101
+	title = jxp_b_115_routes.101.t
+	desc = jxp_b_115_routes.101.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.101.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.102
+	title = jxp_b_115_routes.102.t
+	desc = jxp_b_115_routes.102.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.102.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.103
+	title = jxp_b_115_routes.103.t
+	desc = jxp_b_115_routes.103.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.103.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.104
+	title = jxp_b_115_routes.104.t
+	desc = jxp_b_115_routes.104.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.104.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.105
+	title = jxp_b_115_routes.105.t
+	desc = jxp_b_115_routes.105.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.105.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.111
+	title = jxp_b_115_routes.111.t
+	desc = jxp_b_115_routes.111.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.111.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.112
+	title = jxp_b_115_routes.112.t
+	desc = jxp_b_115_routes.112.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.112.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.113
+	title = jxp_b_115_routes.113.t
+	desc = jxp_b_115_routes.113.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.113.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.114
+	title = jxp_b_115_routes.114.t
+	desc = jxp_b_115_routes.114.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.114.a
+		add_prestige = 2
+	}
+}
+
+country_event = {
+	id = jxp_b_115_routes.115
+	title = jxp_b_115_routes.115.t
+	desc = jxp_b_115_routes.115.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_115_routes.115.a
+		add_prestige = 2
+	}
+}

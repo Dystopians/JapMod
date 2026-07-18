@@ -30,6 +30,9 @@ jxp_establish_toyotomi_identity_effect = {
 		}
 		jxp_set_toyotomi_government_effect = yes
 		jxp_sync_route_national_ideas_effect = yes
+		# The tag transaction changes founder legacy, estate naming, domestic
+		# profile, company limits and the task fingerprint in one bounded pass.
+		jxp_a_reconcile_socioeconomic_system_effect = yes
 		jxp_refresh_route_missions_effect = yes
 		regenerate_government_mechanics = yes
 		set_country_flag = jxp_toyotomi_identity_migrated_v0270

@@ -8,6 +8,7 @@ country_decisions = {
 			is_year = 1470
 			NOT = { is_year = 1603 }
 			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { has_country_flag = jxp_path_commercial_council }
 			jxp_ikko_historical_heartland_trigger = yes
 			NOT = { has_country_flag = jxp_ikko_terauchi_decision_done }
 		}
@@ -25,7 +26,6 @@ country_decisions = {
 			add_adm_power = -100
 			add_treasury = -200
 			set_country_flag = jxp_ikko_terauchi_decision_done
-			set_country_flag = jxp_ikko_contact
 			if = {
 				limit = { NOT = { has_country_flag = jxp_ikko_terauchi_seen } }
 				country_event = { id = jxp_ikko.2 days = 1 }
@@ -44,6 +44,7 @@ country_decisions = {
 			is_year = 1500
 			NOT = { is_year = 1650 }
 			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { has_country_flag = jxp_path_commercial_council }
 			jxp_wokou_historical_waters_trigger = yes
 			NOT = { has_country_flag = jxp_wokou_brokers_funded }
 		}
@@ -59,7 +60,6 @@ country_decisions = {
 			add_dip_power = -100
 			add_treasury = -200
 			set_country_flag = jxp_wokou_brokers_funded
-			set_country_flag = jxp_wokou_contact
 			if = {
 				limit = { NOT = { has_country_flag = jxp_wokou_letters_seen } }
 				country_event = { id = jxp_wokou.2 days = 1 }
@@ -87,7 +87,6 @@ country_decisions = {
 			add_treasury = -250
 			jxp_clear_all_route_flags_effect = yes
 			set_country_flag = jxp_path_ikko
-			set_country_flag = jxp_ikko_contact
 			jxp_subtract_tenka_order_10_effect = yes
 			jxp_add_imperial_sanction_5_effect = yes
 			jxp_change_to_ijp_effect = yes
@@ -117,7 +116,6 @@ country_decisions = {
 			add_treasury = -300
 			jxp_clear_all_route_flags_effect = yes
 			set_country_flag = jxp_path_wokou
-			set_country_flag = jxp_wokou_contact
 			jxp_add_oceanic_opening_10_effect = yes
 			jxp_subtract_imperial_sanction_5_effect = yes
 			jxp_change_to_wak_effect = yes

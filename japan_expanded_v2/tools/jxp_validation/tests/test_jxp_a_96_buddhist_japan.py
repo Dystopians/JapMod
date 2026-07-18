@@ -85,7 +85,7 @@ class BuddhistJapanRouteTests(unittest.TestCase):
             and "localisation" not in path.parts
         )
 
-    def test_exact_thirty_two_missions_use_canonical_five_column_topology(self) -> None:
+    def test_exact_thirty_two_authored_missions_preserve_only_frozen_runtime_columns(self) -> None:
         builder.validate_design()
         self.assertEqual(EXPECTED_MISSION_TITLES, tuple(mission.title for mission in builder.MISSIONS))
         self.assertEqual(
@@ -102,10 +102,15 @@ class BuddhistJapanRouteTests(unittest.TestCase):
             self.assertTrue(all(row % 2 == (slot % 2) for row in rows))
 
         missions = builder.render_missions()
-        self.assertEqual(5, missions.count("tag = JAP"))
-        self.assertEqual(5, missions.count(f"has_country_flag = {builder.ROUTE_FLAG}"))
+        self.assertEqual((4, 5), builder.RUNTIME_MISSION_SLOTS)
+        self.assertEqual(2, missions.count("tag = JAP"))
+        self.assertEqual(2, missions.count(f"has_country_flag = {builder.ROUTE_FLAG}"))
+        for slot in (1, 2, 3):
+            self.assertNotIn(f"jxp_a_96_buddhist_slot_{slot}_missions", missions)
+        for slot in builder.RUNTIME_MISSION_SLOTS:
+            self.assertEqual(1, missions.count(f"jxp_a_96_buddhist_slot_{slot}_missions"))
         for flag in builder.OTHER_ROUTE_FLAGS:
-            self.assertEqual(5, missions.count(f"has_country_flag = {flag}"), flag)
+            self.assertEqual(2, missions.count(f"has_country_flag = {flag}"), flag)
 
     def test_generated_outputs_are_byte_current_and_clausewitz_parseable(self) -> None:
         self.assertEqual(10, len(self.outputs))
@@ -248,7 +253,17 @@ class BuddhistJapanRouteTests(unittest.TestCase):
             self.gameplay,
         )
         interface_tokens = set(re.findall(r"\bjxp_iface_[a-z0-9_]+\b", self.gameplay))
-        self.assertEqual({builder.INTERFACE_FLAG}, interface_tokens)
+        external_capstone = "jxp_iface_b_external_capstone_complete"
+        external_private = "jxp_b_115_buddhist_interaction_unlocked"
+        self.assertEqual({builder.INTERFACE_FLAG, external_capstone}, interface_tokens)
+        self.assertEqual(
+            1,
+            self.gameplay.count(f"set_country_flag = {external_capstone}"),
+        )
+        self.assertEqual(
+            2,
+            self.gameplay.count(f"set_country_flag = {external_private}"),
+        )
 
         flags = re.findall(
             r"(?:set|clr)_country_flag = (jxp_[a-z0-9_]+)",
@@ -258,7 +273,12 @@ class BuddhistJapanRouteTests(unittest.TestCase):
         for flag in flags:
             self.assertTrue(
                 flag.startswith("jxp_a_")
-                or flag in {builder.ROUTE_FLAG, builder.INTERFACE_FLAG},
+                or flag in {
+                    builder.ROUTE_FLAG,
+                    builder.INTERFACE_FLAG,
+                    external_capstone,
+                    external_private,
+                },
                 flag,
             )
         variables = set(
@@ -312,11 +332,13 @@ class BuddhistJapanRouteTests(unittest.TestCase):
             self.assertEqual(1, government_text.count(finale.reform_id), finale.reform_id)
 
         self.assertEqual(
-            2,
+            0,
             state_missions.count(
                 "NOT = { has_country_flag = jxp_path_buddhist }"
             ),
         )
+        self.assertNotIn("jxp_japan_state_missions = {", state_missions)
+        self.assertNotIn("jxp_japan_court_missions = {", state_missions)
         shinto_potential = shinto_missions.split(
             "jxp_shinto_branch_missions = {", 1
         )[1].split("has_country_shield", 1)[0]

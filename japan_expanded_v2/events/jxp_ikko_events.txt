@@ -14,6 +14,7 @@ country_event = {
 			has_country_flag = jxp_path_ikko
 			AND = {
 				NOT = { jxp_has_any_route_trigger = yes }
+				NOT = { has_country_flag = jxp_path_commercial_council }
 				jxp_has_ikko_opening_trigger = yes
 			}
 		}
@@ -44,7 +45,6 @@ country_event = {
 	option = {
 		name = "jxp_ikko.2.a"
 		set_country_flag = jxp_ikko_terauchi_seen
-		set_country_flag = jxp_ikko_contact
 		if = {
 			limit = { owns = 1021 }
 			1021 = {
@@ -77,7 +77,6 @@ country_event = {
 	option = {
 		name = "jxp_ikko.2.b"
 		set_country_flag = jxp_ikko_terauchi_seen
-		set_country_flag = jxp_ikko_contact
 		add_adm_power = -25
 		add_stability = 1
 		jxp_add_tenka_order_5_effect = yes
@@ -233,7 +232,6 @@ country_event = {
 
 	option = {
 		name = "jxp_ikko.6.a"
-		set_country_flag = jxp_ikko_contact
 		add_country_modifier = {
 			name = jxp_ikko_reconciled
 			duration = 7300
@@ -267,7 +265,6 @@ country_event = {
 	option = {
 		name = "jxp_ikko.9.a"
 		set_country_flag = jxp_ikko_rising_resolved
-		set_country_flag = jxp_ikko_contact
 		jxp_add_imperial_sanction_5_effect = yes
 		add_stability = 1
 		end_disaster = jxp_ikko_rising
@@ -301,7 +298,6 @@ country_event = {
 		end_disaster = jxp_ikko_rising
 		jxp_clear_all_route_flags_effect = yes
 		set_country_flag = jxp_path_ikko
-		set_country_flag = jxp_ikko_contact
 		jxp_subtract_tenka_order_10_effect = yes
 		jxp_change_to_ijp_effect = yes
 		jxp_grant_ikko_heartland_claims_effect = yes

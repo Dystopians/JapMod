@@ -1,0 +1,996 @@
+# New World names
+
+893 = "ÌeÂeKN∂R"		# "House of the Rising Sun"
+2021 = "—ëqS"			# "Gold Mountain"
+
+#Sakhalin and Pacific islands
+1032 = {"Chishima Retto" "Shana" }
+1033 = {"Minami Karafuto" "Toyohara" }
+1034 = "Kamusasuka"
+1235 = "Omiyajima"
+1994 = "Otorishima"
+1997 = "Minazukijima"
+4658 = "Kita Karafuto"
+1993 = {"Jaluit" "Jabor"}#Marshall Islands
+1995 = {"Truk" "Natsushima"}#Micronesia
+1996 = {"Palau" "Koror" }#Palau
+
+#Korea
+732 = {"Kanko" "Kanko"}
+733 = {"Kokai Koshu" "Koshu"}
+734 = {"Genshu" "Genshu"}
+735 = {"Keijo" "Keijo"}
+736 = {"Shoshu" "Shoshu"}
+737 = {"Zenshu" "Zenshu"}
+1013 = {"Chusei Seishu" "Seishu"}
+1845 = {"Heijo" "Heijo"}
+2694 = {"Koryo" "Koryo"}
+2741 = {"Saishu" "Saishu"}
+2742 = {"Funei" "Funei"}
+2743 = {"Kyojo" "Kyojo"}
+2744 = {"Neihen" "Neihen"}
+2745 = {"Keisho Keishu" "Keishu"}
+4227 = {"Shinshu" "Shinshu"}
+4228 = {"Rashu" "Rashu"}
+4229 = {"Chushu" "Chushu"}
+4230 = {"Suigen" "Suigen"}
+4231 = {"Kokai Kaishu" "Kaishu"}
+4232 = {"Kokai" "Kokai"}
+
+
+#Taiwan
+738 = {"Tainan" "Tainan"}
+2154 = {"Taihoku" "Taihoku"}
+2155 = {"Taichu" "Taichu"}
+
+
+#Northern China
+687 = {"Nanyo" "Nanyo"}
+688 = {"Kaiho" "Kaiho"}
+689 = {"Kanchu" "Kanchu"}
+690 = {"Santo Seishu" "Seishu"}
+691 = {"Sainan" "Sainan"}
+692 = {"Kaikei" "Kaikei"}
+693 = {"Taigen" "Taigen"}
+694 = {"Heiyo" "Heiyo"}
+695 = {"Kakan" "Kakan"}
+696 = {"Hotei" "Hotei"}
+697 = {"Daido" "Daido"}
+698 = {"Neika" "Neika"}
+699 = {"Ranshu" "Ranshu"}
+700 = {"Seian" "Seian"}
+703 = {"Shotoku" "Shotoku"}
+707 = {"Gyokumon" "Gyokumon"}
+708 = {"Choeki" "Choeki"}
+1816 = {"Hokuhei" "Hokuhei"}
+1836 = {"Rakuyo" "Rakuyo"}
+1838 = {"Gohi" "Gohi"}
+2136 = {"Senka" "Senka"}
+2137 = {"Daimei" "Daimei"}
+2138 = {"Butei" "Butei"}
+2139 = {"Raishu" "Raishu"}
+2140 = {"Enshu" "Enshu"}
+2141 = {"Joshu" "Joshu"}
+2142 = {"Waian" "Waian"}
+2143 = {"Hoyo" "Hoyo"}
+2144 = {"Fuyo" "Fuyo"}
+2175 = {"Jonei" "Jonei"}
+2176 = {"Shokyu" "Shokyu"}
+2177 = {"Neibu" "Neibu"}
+2178 = {"Roan" "Roan"}
+2179 = {"Enan" "Enan"}
+2180 = {"Tensui" "Tensui"}
+2181 = {"Heiryo" "Heiryo"}
+2182 = {"Ryoshu" "Ryoshu"}
+2183 = {"Toshu" "Toshu"}
+2184 = {"Seinei" "Seinei"}
+4194 = {"Eihei" "Eihei"}
+4195 = {"Shintei" "Shintei"}
+4196 = {"Koso Kaishu" "Kaishu"}
+4198 = {"Hosho" "Hosho"}
+
+
+#Southern China
+664 = {"Ryoun" "Ryoun"}
+665 = {"Chokei" "Chokei"}
+666 = {"Kainan Keishu" "Keishu"}
+667 = {"Koto Koshu" "Koshu"}
+668 = {"Omon" "Omon"}
+669 = {"Fukushu" "Fukushu"}
+670 = {"Kanshu" "Kanshu"}
+671 = {"Chosa" "Chosa"}
+672 = {"Buryo" "Buryo"}
+681 = {"Gisho" "Gisho"}
+682 = {"Busho" "Busho"}
+683 = {"Nansho" "Nansho"}
+684 = {"Sekko Koshu" "Koshu"}
+685 = {"Yoshu" "Yoshu"}
+686 = {"Ankei" "Ankei"}
+1821 = {"Nankei" "Nankei"}
+1822 = {"Soshu" "Soshu"}
+1824 = {"Onshu" "Onshu"}
+1829 = {"Senshu" "Senshu"}
+1833 = {"Kitsuan" "Kitsuan"}
+1840 = {"Keirin" "Keirin"}
+2145 = {"Sekko Chinko" "Chinko"}
+2146 = {"Neikoku" "Neikoku"}
+2147 = {"Kishu" "Kishu"}
+2148 = {"Shoko" "Shoko"}
+2149 = {"Neiha" "Neiha"}
+2150 = {"Kinka" "Kinka"}
+2151 = {"Hayo" "Hayo"}
+2152 = {"Kennei" "Kennei"}
+2153 = {"Teishu" "Teishu"}
+2156 = {"Choshu" "Choshu"}
+2157 = {"Koto Keishu" "Keishu"}
+2158 = {"Shokan" "Shokan"}
+2159 = {"Raishu" "Raishu"}
+2160 = {"Gaishu" "Gaishu"}
+2161 = {"Renshu" "Renshu"}
+2162 = {"Goshu" "Goshu"}
+2163 = {"Ryushu" "Ryushu"}
+2164 = {"Nannei" "Nannei"}
+2171 = {"Joyo" "Joyo"}
+2172 = {"Koko Keishu" "Keishu"}
+2173 = {"Ganryo" "Ganryo"}
+2174 = {"Koyo" "Koyo"}
+4197 = {"Koko Koshu" "Koshu"}
+
+
+
+#Southwestern China
+661 = {"Dairi" "Dairi"}
+662 = {"Unnan" "Unnan"}
+663 = {"Konan" "Konan"}
+673 = {"Chinen" "Chinen"}
+674 = {"Kiyo" "Kiyo"}
+675 = {"Umo" "Umo"}
+679 = {"Seito" "Seito"}
+680 = {"Jukei" "Jukei"}
+2165 = {"Fuji" "Fuji"}
+2166 = {"Tokuko" "Tokuko"}
+2167 = {"Reiko" "Reiko"}
+2168 = {"Hanshu" "Hanshu"}
+2169 = {"Rochu" "Rochu"}
+2170 = {"Sokyoku" "Sokyoku"}
+2748 = {"Kensho" "Kensho"}
+4199 = {"Dojin" "Dojin"}
+4211 = {"Tasshu" "Tasshu"}
+4212 = {"Kashu" "Kashu"}
+4213 = {"Roshu" "Roshu"}
+
+
+#Vietnam
+610 = {"Seika" "Seika"}
+1016 = {"Kasei" "Kasei"}
+2373 = {"Junka" "Junka"}
+4821 = {"Gaian" "Gaian"}
+606 = {"Hanro" "Hanro"}
+607 = {"Kijin" "Kijin"}
+1022 = {"Dano" "Dano"}
+2374 = {"Gaso" "Gaso"}
+4822 = {"Kogi" "Kogi"}
+605 = {"Katei" "Katei"}
+2376 = {"Kinsho" "Kinsho"}
+2377 = {"Kamo" "Kamo"}
+613 = {"Tokei" "Tokei"}
+616 = {"Kohei" "Kohei"}
+2372 = {"Kaibo" "Kaibo"}
+4819 = {"Konei" "Konei"}
+4820 = {"Koka" "Koka"}
+2375 = {"Seigen" "Seigen"}
+
+
+#Manchuria
+704 = {"Neien" "Neien"}
+726 = {"Hoten" "Hoten"}
+2108 = {"Konshun" "Konshun"}
+2112 = {"Anto" "Anto"}
+2113 = {"Dairen" "Dairen"}
+4201 = {"Kenshu" "Kenshu"}
+4652 = {"Kaijo" "Kaijo"}
+4653 = {"Morin" "Morin"}
+
+# JXP_B_AMERICAS_JAPANESE_NAMES_V2
+# Generated from pinned EU4 1.37.5 colonial-region IDs.
+# Han names preserve Sengoku-Edo foundations and later imperial shorthand.
+# Active bytes use BOM-free EU4SpecialEscape for the Chinese patch.
+# Edit the UTF-8 JSON plan and rebuild; do not hand-edit this registry.
+
+# JXP_REGION colonial_alaska total=43 inherited=0 added=43
+979 = "MñYu3u"	# JPN Areuto | Unangan
+978 = "˙WHY"	# JPN Kenai | Kenai
+977 = "^yZT"	# JPN Kamuimisaki | Yakutat
+976 = "yróg	Tyr"	# JPN Toringitto | Tlingit
+975 = "(gØg7å"	# JPN Kogarashitani | Tsimshian
+974 = "8Y8YaS"	# JPN Kuakuwaka | Kwakwaka'wakw
+972 = ")nÂTNSõS"	# JPN Bankuba | Nuu-chah-nulth
+2022 = "wmæè"	# JPN Kaida | Haida
+2609 = "9h≤RõS"	# JPN Nemuroshima | Nisga'a
+2610 = "åÜ7YüS"	# JPN Ezohara | Heiltsuk
+2611 = "9TÍñõS"	# JPN Fubukishima | Kodiak
+2612 = "åÜ7YÓh"	# JPN Ezomori | Eyak
+2613 = "!ïyraS"	# JPN Shitoka | Sitka
+2481 = "CSS›T"	# JPN Chishimakawa | Maqlaqs
+2482 = "Íñ„NÓh"	# JPN Yukishiromori | Kalapuya
+2483 = "óR7å›T"	# JPN Soyakawa | Umatalum
+872 = "CSST"	# JPN Chishimamisaki | Shayuusht'la
+2019 = "9TÍñ7å"	# JPN Fubukitani | Nimipu
+2020 = "9TÍñqS"	# JPN Fubukiyama | Banakwut
+2489 = "CSSõS"	# JPN Chishimashima | Boho'inee
+2490 = "S¡âT"	# JPN Kitamimisaki | Kusiutta
+2486 = "S¡âqS"	# JPN Kitamiyama | Mamatchatpam
+2487 = "Íñ„NõS"	# JPN Yukishiroshima | Sqeliz
+2488 = "SfõS"	# JPN Hokuseishima | Palus
+873 = "9TÍñÓh"	# JPN Fubukimori | Tsinuk
+2484 = "Sf›T"	# JPN Hokuseikawa | Aqokulo
+2485 = "óR7åqS"	# JPN Soyayama | Kwaiailk
+874 = "â≈ñ˛V"	# JPN Shiatoru | Duwamish
+2604 = "CSSüS"	# JPN Chishimahara | Dakelh
+2605 = "≠SSõS"	# JPN Reihokushima | Secwepemc
+2606 = "^yZüS"	# JPN Kamuihara | Tsilhoqot'in
+2607 = "Íñ„NüS"	# JPN Yukishirohara | Syilkx
+2003 = "^yZ7å"	# JPN Kamuitani | Ktunaxa
+973 = "óR7åÓh"	# JPN Soyamori | Skwxwu'mesh
+2004 = "Íñ„N7å"	# JPN Yukishirotani | Kainaa
+2602 = "^yZ›T"	# JPN Kamuikawa | Siksikawa
+2017 = "CSSÓh"	# JPN Chishimamori | Matiyininiwak
+2018 = "ãvÍñÓh"	# JPN Shirayukimori | Tsuu T'ina
+2599 = "^yZfm"	# JPN Kamuiura | Ayabaskawiiniwak
+2600 = "9h≤Rfm"	# JPN Nemuroura | Nihithawak
+2601 = "^yZÓh"	# JPN Kamuimori | Dane-zaa
+2603 = "åÜ7Y7å"	# JPN Ezotani | Tsek'ene
+2506 = "≠SSüS"	# JPN Reihokuhara | Kuccuntikka
+
+# JXP_REGION colonial_canada total=79 inherited=0 added=79
+1010 = "ÃRoÇŒë›T"	# JPN Furanokawa | Manitowapow
+1008 = "ÛwÈr7å"	# JPN Ishikaritani | Wiinibig
+1009 = "ÛwÈrüS"	# JPN Ishikarihara | Atikaki
+1011 = "ÃRoÇŒëVn"	# JPN Furanoko | Kinougeoulini
+1006 = "'Y4lÓh"	# JPN Daikomori | Ahiarmiut
+1005 = "ÃRoÇŒëºl"	# JPN Furanonuma | Mushkegowuk
+1004 = "ÍñŒëÓh"	# JPN Setsugenmori | Attawapiskat
+1007 = "ÛwÈrºl"	# JPN Ishikarinuma | Gojijiwininiwag
+1002 = "ãvfh7å"	# JPN Shirakabatani | Abitibi
+1003 = "èîÔçàQ"	# JPN Kushirooka | Mosoni
+1000 = "zzÂw7å"	# JPN Sorachitani | Iyiyiw
+999 = "Mñ“RVn"	# JPN Akanko | Cisasipi
+998 = "ÃRoÇŒë7å"	# JPN Furanotani | Qikirmiut
+1001 = "zzÂwÓh"	# JPN Sorachimori | Marameg
+992 = "ÍñŒëVn"	# JPN Setsugenko | Weskarini
+991 = "ÍñŒëàQ"	# JPN Setsugenoka | Odishkwaagamiig
+989 = "zzÂwüS"	# JPN Sorachihara | Attigneenongnahac
+988 = "Såg˝l"	# JPN Hokushosawa | Attignawantan
+987 = "ågŒòÓh"	# JPN Matsukazemori | Onguhiara
+993 = "ôÑyr)RS"	# JPN Monrearu | Osheaga
+990 = "SågVn"	# JPN Hokushoko | Maisouna
+994 = "AõSKQ"	# JPN Kebekku | Stadacona
+986 = "zzÂwºl"	# JPN Sorachinuma | Gespegeogag
+985 = "ågŒòºl"	# JPN Matsukazenuma | Petkootkweak
+984 = "idhTüS"	# JPN Mashuhara | Segepenegatic
+995 = "zzÂw˝l"	# JPN Sorachisawa | Toutouskak
+996 = "èîÔç7å"	# JPN Kushirotani | Oumamiwek
+997 = ")Y–v›T"	# JPN Teshiokawa | Chisedec
+981 = "Àu¨ÇpQ"	# JPN Nyufaundorando | Taqamkuk
+980 = "èîÔçüS"	# JPN Kushirohara | Beothuk
+983 = "èîÔç˝l"	# JPN Kushirosawa | Epagoitgnag
+982 = "idhT˝l"	# JPN Mashusawa | Onamagag
+1813 = "(ÑØeéUâV)n"	# JPN Sasukachiwan | Saskatchewan
+2012 = "ÍñŒëºl"	# JPN Setsugennuma | Ersegonteog
+2015 = "zzÂw›T"	# JPN Sorachikawa | Outchibou
+2568 = "èîÔç›T"	# JPN Kushirokawa | Gespogoitnag
+2569 = "zzÂwVn"	# JPN Sorachiko | Eskikeogag
+2570 = "ãvfhàQ"	# JPN Shirakabaoka | Wolastoqiyik
+2571 = "ÛwÈrÓh"	# JPN Ishikarimori | Madawaska
+2572 = "ÃRoÇŒëÓh"	# JPN Furanomori | Sigenigteogag
+2573 = "ågŒòàQ"	# JPN Matsukazeoka | Placentia
+2574 = "ÃRoÇŒëüS"	# JPN Furanohara | Sikumiut
+2575 = "ÃRoÇŒë˝l"	# JPN Furanosawa | Naskapi
+2576 = "idhTVn"	# JPN Mashuko | Ekuanitshu
+2577 = "ÛwÈrVn"	# JPN Ishikariko | Pessamu
+2578 = "zzÂwàQ"	# JPN Sorachioka | Notiskuan
+2579 = "ÛwÈr›T"	# JPN Ishikarikawa | Pekuakamiulnuatsh
+2580 = "ãvfh˝l"	# JPN Shirakabasawa | Atikamekw
+2581 = "ÇÑs|ØeaSf"	# JPN Temisukamingu | Timiskaming
+2582 = "ågŒòüS"	# JPN Matsukazehara | Animouski
+2583 = "'Y4lºl"	# JPN Daikonuma | Kikonteku
+2584 = "ÛwÈr˝l"	# JPN Ishikarisawa | Masoliantekw
+2585 = "ÛwÈràQ"	# JPN Ishikarioka | Arendaronon
+2586 = "ågŒò˝l"	# JPN Matsukazesawa | Tionontate
+2587 = "ågŒò7å"	# JPN Matsukazetani | Odawa
+2588 = "ågŒòVn"	# JPN Matsukazeko | Piscatang
+2589 = ")Y–vºl"	# JPN Teshionuma | Kesagami
+2590 = "ÃRoÇŒëàQ"	# JPN Furanooka | Shaggami
+2591 = "ãvfhVn"	# JPN Shirakabako | Outoulibi
+2592 = "ågŒò›T"	# JPN Matsukazekawa | Maskekowak
+2593 = ")Y–vÓh"	# JPN Teshiomori | Wappus
+2594 = ")Y–vVn"	# JPN Teshioko | Quennebigonhelini
+2595 = "Såg7å"	# JPN Hokushotani | Kes-ye-hot'inne
+2596 = "ãvfh›T"	# JPN Shirakabakawa | Mahmikiwiniyak
+2597 = "Mñ“RüS"	# JPN Akanhara | Sipiwininiwak
+2670 = "Y&OY"	# JPN Toronto | Tahontaenrat
+2671 = ")Y–vüS"	# JPN Teshiohara | Missisage
+4890 = "'Y4l›T"	# JPN Daikokawa | Kichessipirini
+4891 = "ÍñŒëüS"	# JPN Setsugenhara | Piktuk
+4892 = "èîÔçºl"	# JPN Kushironuma | Iroquet
+4893 = "èîÔçVn"	# JPN Kushiroko | Nebesek
+4894 = "idhTÓh"	# JPN Mashumori | Ottagotouemin
+4895 = ")Y–v˝l"	# JPN Teshiosawa | Batiscan
+4896 = "idhTºl"	# JPN Mashunuma | Meductic
+4897 = "idhTàQ"	# JPN Mashuoka | Keinouche
+4919 = ")Y–v7å"	# JPN Teshiotani | Sihabi
+4920 = "'Y4lüS"	# JPN Daikohara | Wadopabina
+2005 = "Mñ(ÑÙTØeaS"	# JPN Asabasuka | Assapasca
+2598 = "SågàQ"	# JPN Hokushooka | Ye Xa Yabine
+
+# JXP_REGION colonial_eastern_america total=121 inherited=0 added=121
+929 = "TNªlöN"	# JPN Joja | Guale
+931 = "BWNfm"	# JPN Bandoura | Coosa
+932 = "Âe˙Q=n"	# JPN Hinodeminato | Issati
+933 = "N˝V7å"	# JPN Azumatani | Iswa
+935 = "fkœÖT"	# JPN Musashimisaki | Chiaha
+936 = "N˝VàQ"	# JPN Azumaoka | Joara
+937 = "Âenè7å"	# JPN Nichirintani | Skarureh
+938 = "BWN=n"	# JPN Bandominato | Pomouik
+949 = "sQNüS"	# JPN Kantohara | Monacan
+950 = "R(ÑÆvKQ"	# JPN Chesapiku | Chesapeake
+951 = "NI`T"	# JPN Shimosamisaki | Kanawha
+952 = "V	T<SöN"	# JPN Bajinia | Powhatan
+953 = "NSú^"	# JPN Kafu | Piscataway
+954 = "ÂÇÌrÃë"	# JPN Wakasasato | Erielhonan
+955 = "RóˆSÓh"	# JPN Aobamori | Conestoga
+956 = "Ìefm"	# JPN Asahiura | Sakimauchheening
+957 = "NI`=n"	# JPN Shimosaminato | Wicontiss
+958 = "RóˆSàQ"	# JPN Aobaoka | Onodowaga
+962 = "NI`=n"	# JPN Kazusaminato | Unami
+963 = "NI`qS"	# JPN Kazusayama | Machkantowoon
+965 = "∞eml7b"	# JPN Shin-Edo | Manahahttan
+966 = "NI`fm"	# JPN Kazusaura | Nipmuc
+967 = "N˝VÓh"	# JPN Azumamori | Narraganset
+968 = "‚lÎXò"	# JPN Bosuton | Massachusett
+970 = "N˝VÃë"	# JPN Azumasato | Amoskeag
+971 = "2uú^qS"	# JPN Kofuyama | Penapawsket
+926 = "iOWÃëæè"	# JPN Furorida | Ais
+927 = "RóˆS›T"	# JPN Aobakawa | Timucua
+928 = "ÌeÓh"	# JPN Asahimori | Apalachee
+930 = "N˝V›T"	# JPN Azumakawa | Kasihta
+923 = "mV(Ñ—y…b"	# JPN Pensakora | Pensacola
+924 = "NI`Óh"	# JPN Kazusamori | Tawasa
+922 = "eYﬁTàQ"	# JPN Oshuoka | Tohome
+934 = "NI`Ãë"	# JPN Kazusasato | Tsoyaha
+939 = "2uú^üS"	# JPN Kofuhara | Kaskinampo
+941 = "fkœÖ7å"	# JPN Musashitani | Ouasioto
+940 = "ØwTX˙W"	# JPN Kentakki | Kentahke
+948 = "ƒO•NƒO"	# JPN Ohayo | Ohiyo
+947 = "ÂÇÌr›T"	# JPN Wakasakawa | Kentaientonga
+946 = "RóˆS7å"	# JPN Aobatani | Hotaawathipi
+959 = "RóˆSfm"	# JPN Aobaura | Gayogohono
+960 = "N˝Vfm"	# JPN Azumaura | Onondagaono
+961 = "Âe˙QüS"	# JPN Hinodehara | Onyo'taaka
+964 = "N˝VüS"	# JPN Azumahara | Kanien'kehaka
+969 = "2uú^T"	# JPN Kofumisaki | Mahican
+925 = "N˝V=n"	# JPN Azumaminato | Coweta
+2010 = "fkœÖüS"	# JPN Musashihara | Pequot
+2011 = "fkœÖ=n"	# JPN Musashiminato | Senedo
+2013 = "Mñ“R<h<S"	# JPN Aregeni | Allesikantekw
+2023 = "¯v!jT"	# JPN Sagamimisaki | Munsee
+2525 = "eYﬁTÓh"	# JPN Oshumori | Chalahgawtha
+2526 = "sQNàQ"	# JPN Kantooka | Shatteras
+2527 = "sQN=n"	# JPN Kantominato | Atali
+2531 = "N˝VqS"	# JPN Azumayama | Abihka
+2532 = "NI`üS"	# JPN Kazusahara | Mabila
+2533 = "2uú^›T"	# JPN Kofukawa | Chatot
+2534 = "eYﬁT=n"	# JPN Oshuminato | Yustaga
+2535 = "sQN›T"	# JPN Kantokawa | Calusa
+2536 = "¯v!jqS"	# JPN Sagamiyama | Mayaimi
+2537 = "2uú^Óh"	# JPN Kofumori | Ichisi
+2538 = "ÂenèÓh"	# JPN Nichirinmori | Ocute
+2539 = "eYﬁTT"	# JPN Oshumisaki | Mocama
+2540 = "NI`qS"	# JPN Shimosayama | Etowah
+2541 = "ÂenèàQ"	# JPN Nichirinoka | Saluda
+2542 = "sQNqS"	# JPN Kantoyama | Cusabo
+2543 = "Âenè›T"	# JPN Nichirinkawa | Waccamaw
+2544 = "¯v!j›T"	# JPN Sagamikawa | Yadkin
+2545 = "sQN7å"	# JPN Kantotani | Waxhaw
+2546 = "NI`›T"	# JPN Kazusakawa | Chicora
+2547 = "WMñ˙ãKQ"	# JPN Roanoku | Roanoke
+2548 = "BWN›T"	# JPN Bandokawa | Tutelo
+2549 = "¯v!j=n"	# JPN Sagamiminato | Moratok
+2550 = "¯v!j7å"	# JPN Sagamitani | Rappahannock
+2551 = "BWNqS"	# JPN Bandoyama | Calicula
+2552 = "NI`Óh"	# JPN Shimosamori | Manahoac
+2553 = "sQNfm"	# JPN Kantoura | Patawomac
+2554 = "¯v!jüS"	# JPN Sagamihara | Nentego
+2555 = "ÌeÃë"	# JPN Asahisato | Honniasont
+2556 = "ÂÇÌrÓh"	# JPN Wakasamori | Onojutta
+2557 = "2uú^Ãë"	# JPN Kofusato | Atrakwaye
+2558 = "eYﬁT›T"	# JPN Oshukawa | Espachomy
+2559 = "sQNT"	# JPN Kantomisaki | Tekontaroken
+2560 = "ÂÇÌràQ"	# JPN Wakasaoka | Quiripi
+2561 = "eYﬁTÃë"	# JPN Oshusato | Wampanoag
+2562 = "ÂÇÌr=n"	# JPN Wakasaminato | Penakuk
+2563 = "¯v!jfm"	# JPN Sagamiura | Missiasik
+2564 = "sQNÓh"	# JPN Kantomori | Sokoki
+2565 = "BWNüS"	# JPN Bandohara | Kinnipekw
+2566 = "2uú^7å"	# JPN Kofutani | Peskotomuhkati
+2567 = "RóˆSÃë"	# JPN Aobasato | Tobique
+2639 = "2uú^fm"	# JPN Kofuura | Raritan
+4626 = "¯v!jÓh"	# JPN Sagamimori | Potano
+4625 = "ÂÇÌrqS"	# JPN Wakasayama | Mayaca
+4871 = "ÂenèÃë"	# JPN Nichirinsato | Cowasuk
+4872 = "RóˆST"	# JPN Aobamisaki | Wenrohonon
+4873 = "NI`Ãë"	# JPN Shimosasato | Pegwaki
+4874 = "N˝VT"	# JPN Azumamisaki | Westenhuck
+4875 = "RóˆS=n"	# JPN Aobaminato | Welhikhane
+4876 = "sQNÃë"	# JPN Kantosato | Scahentowanen
+4877 = "¯v!jÃë"	# JPN Sagamisato | Nottoway
+4878 = "RóˆSqS"	# JPN Aobayama | Eno
+4879 = "ÂÇÌrüS"	# JPN Wakasahara | Kituwah
+4880 = "eYﬁTqS"	# JPN Oshuyama | Combahee
+4881 = "¯v!jàQ"	# JPN Sagamioka | Sawokli
+4882 = "RóˆSüS"	# JPN Aobahara | Etali
+4883 = "ÂÇÌr7å"	# JPN Wakasatani | Napochi
+4888 = "NI`›T"	# JPN Shimosakawa | Tatteroa
+4889 = "Âenèfm"	# JPN Nichirinura | Mohetan
+4907 = "NI`7å"	# JPN Kazusatani | Mosopelea
+4912 = "ÂenèT"	# JPN Nichirinmisaki | Kaniatarowanen
+4913 = "ÂÇÌrfm"	# JPN Wakasaura | Aniyutsi
+4921 = "NI`üS"	# JPN Shimosahara | Kuttawa
+4887 = "ÂÇÌrT"	# JPN Wakasamisaki | Cochati
+918 = "mRÚÉØe"	# JPN Menfisu | Chucalissa
+919 = "GYKQ0t"	# JPN Chikasha | Chickasha
+2528 = "BWN7å"	# JPN Bandotani | Yazoo
+920 = "∆Rââ‘k"	# JPN Mishishippi | Chahta
+4884 = "Âe˙Qfm"	# JPN Hinodeura | Houma
+2529 = "≥uGYyQ"	# JPN Nacchezu | Natchez
+921 = "eYﬁTüS"	# JPN Oshuhara | Ishenoca
+2530 = "BWNT"	# JPN Bandomisaki | Taneks-Haya
+
+# JXP_REGION colonial_louisiana total=84 inherited=1 added=83
+894 = "«ÇŒëÃë"	# JPN Ashiharasato | Kadohadacho
+895 = "≥lÖQ›T"	# JPN Kawachikawa | Anilco
+897 = "	TŒë˝l"	# JPN Yoshinosawa | Casqui
+899 = "DdﬁT˝l"	# JPN Settsusawa | Pahatsi
+900 = "4laN%m"	# JPN Mizusatotsu | Tamaroa
+915 = "≠dﬁTüS"	# JPN Banshuhara | Peewareewa
+916 = "	TŒëüS"	# JPN Yoshinohara | Kaskankaham
+942 = "	TŒë›T"	# JPN Yoshinokawa | Waayaahtanwa
+943 = "	TYüS"	# JPN Kibihara | Atchakangouen
+896 = "4laNÃë"	# JPN Mizusatosato | Yscani
+917 = "aSó˙WöN"	# JPN Kahokia | Cahokia
+909 = "DdﬁT›T"	# JPN Settsukawa | Nueta
+906 = "≥lÖQ7å"	# JPN Kawachitani | Ithanktunwanna
+898 = "	TYfm"	# JPN Kibiura | Kanza
+901 = "DdﬁT7å"	# JPN Settsutani | Tsawi
+903 = "eYlö»T"	# JPN Omaha | Omaha
+907 = "4laNfm"	# JPN Mizusatoura | Ithanktunwan
+908 = "≠dﬁTÃë"	# JPN Banshusato | Sisithunwan
+905 = "	TYÃë"	# JPN Kibisato | Baxoje
+904 = "^çêSüS"	# JPN Sanukihara | Wahpetunwan
+902 = "≥lÖQÓh"	# JPN Kawachimori | Niuachi
+944 = "≠dﬁTºl"	# JPN Banshunuma | Bodewadmik
+945 = "æñ‚l%m"	# JPN Naniwatsu | Michigami
+914 = "≠dﬁT%m"	# JPN Banshutsu | Ho-Chunk
+913 = "≥lÖQüS"	# JPN Kawachihara | Meskwaki
+912 = "æñ‚l›T"	# JPN Naniwakawa | Osaakiiwaki
+911 = "≥lÖQfm"	# JPN Kawachiura | Baawitigon
+910 = "«ÇŒëfm"	# JPN Ashiharaura | Makoua
+1809 = "4laN7å"	# JPN Mizusatotani | So'taeo'o
+2006 = "≠dËxºl"	# JPN Harimanuma | Ashalaho
+2007 = "4laNüS"	# JPN Mizusatohara | Sahnish
+2008 = "'Y¿müS"	# JPN Oyodohara | Sihasapa
+2009 = "	TY%m"	# JPN Kibitsu | Oglala
+2014 = "≥u˙WXb¿N"	# JPN Nakitoshu | Natchitoches
+2016 = "	TYºl"	# JPN Kibinuma | Amahami
+2501 = "4laNÓh"	# JPN Mizusatomori | Piikani
+2502 = "≠dﬁT˝l"	# JPN Banshusawa | Haaninin
+2503 = "¿m7å"	# JPN Yodotani | Ashshipite
+2504 = "'Y¿mÃë"	# JPN Oyodosato | Eeelalapito
+2505 = "4laNºl"	# JPN Mizusatonuma | Tsetsehesahese
+2507 = "≠dËxÃë"	# JPN Harimasato | Baachinena
+2508 = "^çêS›T"	# JPN Sanukikawa | Skiri
+2509 = "	TY›T"	# JPN Kibikawa | Utsetha
+2510 = "DdﬁTÓh"	# JPN Settsumori | Hiraaca
+2511 = "	TŒëÓh"	# JPN Yoshinomori | Itscheabine
+2512 = "«ÇŒë›T"	# JPN Ashiharakawa | Wahpekute
+2513 = "≥lÖQ˝l"	# JPN Kawachisawa | Moingwena
+2514 = "≠dËxfm"	# JPN Harimaura | Mishigamaw
+2515 = "'Y¿m˝l"	# JPN Oyodosawa | Satuskhdin
+2516 = "'Y¿mfm"	# JPN Oyodoura | Adai
+2517 = "≥lÖQÃë"	# JPN Kawachisato | Bdewekhantunwan
+2518 = "…bnfâRyr"	# JPN Ra-Powanto | La Pointe
+2519 = "¿mfm"	# JPN Yodoura | Kilatika
+2520 = "	TŒë7å"	# JPN Yoshinotani | Mengkonkia
+2521 = "	TYÓh"	# JPN Kibimori | Saginawe
+2522 = "≠dËx˝l"	# JPN Harimasawa | Mascouten
+2523 = "'Y¿m7å"	# JPN Oyodotani | Piankeshaw
+2524 = "'Y¿mºl"	# JPN Oyodonuma | Waapi-nipi
+2625 = "≠dﬁTfm"	# JPN Banshuura | Hinonoeino
+2672 = "^çêS˝l"	# JPN Sanukisawa | Kitkehaki
+4885 = "^çêS7å"	# JPN Sanukitani | Avoyel
+4886 = "≥lÖQ%m"	# JPN Kawachitsu | Nasoni
+4898 = "^çêSºl"	# JPN Sanukinuma | Noquet
+4899 = "≠dﬁTÓh"	# JPN Banshumori | Mamaceqtaw
+4900 = "≠dËx%m"	# JPN Harimatsu | Otoe
+4901 = "≠dËxÓh"	# JPN Harimamori | Saone
+4902 = "'Y¿m%m"	# JPN Oyodotsu | Makandwewin
+4903 = "DdﬁTüS"	# JPN Settsuhara | Chinko
+4904 = "^çêSfm"	# JPN Sanukiura | Espeminkia
+4905 = "'Y¿m›T"	# JPN Oyodokawa | Tapouaro
+4906 = "'Y¿mÓh"	# JPN Oyodomori | Coiracoentanon
+4908 = "≠dËx›T"	# JPN Harimakawa | Tawehash
+4914 = "<SeYñw"	# JPN Neosho | Neozho
+4915 = "^çêSÃë"	# JPN Sanukisato | Pitahawirata
+4916 = "≠dﬁT›T"	# JPN Banshukawa | Panka
+4917 = "	TŒëfm"	# JPN Yoshinoura | Selis
+4918 = "«ÇŒë%m"	# JPN Ashiharatsu | Hunkpapha
+4922 = "¿m›T"	# JPN Yodokawa | Pepikokia
+4923 = "	TŒëºl"	# JPN Yoshinonuma | Pacaha
+889 = "^çêS%m"	# JPN Sanukitsu | Nawunena
+890 = "	TŒëÃë"	# JPN Yoshinosato | Tokinahyup
+891 = "	TY˝l"	# JPN Kibisawa | Naisha
+892 = "DdﬁTºl"	# JPN Settsunuma | Kitkit'ish
+
+# JXP_REGION colonial_california total=35 inherited=1 added=34
+868 = "Wú^"	# JPN Rafu | Chumash
+867 = "™uﬁT7å"	# JPN Kishutani | Cahuilla
+876 = "*Y3ñ7å"	# JPN Taiyotani | Yavape
+875 = "ÂeIQfm"	# JPN Nikkoura | Tachii'nii
+870 = "*Y3ñ=n"	# JPN Taiyominato | Lakisamni
+869 = "—ë€vüS"	# JPN Kinseihara | T'epot'aha'l
+871 = "XnWS=n"	# JPN Shonanminato | Pomo
+2476 = "ÂeT›T"	# JPN Hinatakawa | Kuumeyay
+2477 = "XnWSqS"	# JPN Shonanyama | Ukom'nom
+2478 = "OFåüS"	# JPN Izuhara | Tachi
+2479 = "WPOT"	# JPN Tosamisaki | Maidu
+2480 = "OFå7å"	# JPN Izutani | Shasta
+2491 = "™uﬁTfm"	# JPN Kishuura | Hwalbay
+2493 = "ÂeWSüS"	# JPN Nichinanhara | Hopituh
+4638 = "—ë€v7å"	# JPN Kinseitani | Wint'uh
+4637 = "Qh=n"	# JPN Soko | Ohlone
+4636 = "ÂeIQ›T"	# JPN Nikkokawa | Choinumni
+4635 = "WPOàQ"	# JPN Tosaoka | Taaqtam
+4634 = "™uﬁTüS"	# JPN Kishuhara | Tsek'aadn
+865 = "N†R)Rèy<SöN"	# JPN Baha-Kariforunia | Cochimi
+866 = "ÂeWSfm"	# JPN Nichinanura | Guaycura
+2620 = "XnWSüS"	# JPN Shonanhara | Nakipa
+4639 = "™uﬁTàQ"	# JPN Kishuoka | Paipai
+4577 = "™uﬁT›T"	# JPN Kishukawa | Tohono
+2616 = "ÂeIQqS"	# JPN Nikkoyama | Seri
+4650 = "XnWS7å"	# JPN Shonantani | Opata
+862 = "≈ñ˙W"	# JPN Yakii | Yaqui
+4649 = "OFå›T"	# JPN Izukawa | Mayo
+877 = "ÚÉ<SKQØe"	# JPN Hoenikkusu | Akimel
+4633 = "ÂeIQT"	# JPN Nikkomisaki | Sobaipuri
+878 = "èö≥lqS"	# JPN Surugayama | Kinyaa'aanii
+2494 = "ÂeWS7å"	# JPN Nichinantani | Shiwinna
+879 = "öN)RQh±ê"	# JPN Arizuna | Ndee
+2492 = "ÂeTfm"	# JPN Hinataura | Bedonkohe
+
+# JXP_REGION colonial_mexico total=126 inherited=0 added=126
+863 = ")YIÉ=n"	# JPN Amakusaminato | Suma
+864 = "•wMRàQ"	# JPN Hizenoka | Concho
+859 = "!ï±êWöN"	# JPN Shinaroa | Sinaloa
+860 = "^tWzÓh"	# JPN Mizuhomori | Tepehuan
+861 = "WSmqS"	# JPN Nanyoyama | Coahuila
+855 = "ÿöCSWzàQ"	# JPN Takachihooka | Totorames
+856 = "(ÑaSyraSØe"	# JPN Sakatekasu | Zacatecas
+858 = "WSwm=n"	# JPN Nankaiminato | Tamaulipas
+857 = "	tt=n"	# JPN Ryukyuminato | Guachichil
+854 = ")YIÉÃë"	# JPN Amakusasato | Sayultecas
+851 = "Qr+t›T"	# JPN Tsukushikawa | Zacatula
+853 = "•wMRfm"	# JPN Hizenura | Tlapacoyan
+849 = ")YIÉfm"	# JPN Amakusaura | Tlapanec
+850 = "yr…bØeaS…b"	# JPN Torasukara | Tlaxcala
+848 = "WSmüS"	# JPN Nanyohara | Tohancapan
+847 = "^tWz=n"	# JPN Mizuhominato | Mixtec
+844 = "(Ñ‚lyrKQ"	# JPN Sapoteka | Zapotec
+852 = "®XâÂT"	# JPN Mekishiko | Mexico
+846 = "	tt7å"	# JPN Ryukyutani | Sotuta
+845 = "NWiOR"	# JPN Kanpeche | Campeche
+843 = "=O)RyQ"	# JPN Berizu | Belize
+842 = "'YÖñfm"	# JPN Osumiura | Peten
+841 = "qS0Wlö…b"	# JPN Guatemara | Guatemala
+840 = "*m˝ê…bØe"	# JPN Hondyurasu | Honduras
+839 = "'YÖñqS"	# JPN Osumiyama | Pipil
+882 = ")YIÉT"	# JPN Amakusamisaki | Mashgalende
+885 = "Qr+tqS"	# JPN Tsukushiyama | Gulgahen
+881 = "•wT7å"	# JPN Higotani | Tsiahahende
+880 = "(ÑWSàQ"	# JPN Satsunanoka | Ohkay Owingeh
+884 = "Qr+tüS"	# JPN Tsukushihara | Auia
+888 = "WSwmüS"	# JPN Nankaihara | Atakapa
+883 = "WSwmqS"	# JPN Nankaiyama | Tche Sha
+886 = "˛ñõSüS"	# JPN Kirishimahara | Waco
+887 = "Qr+t7å"	# JPN Tsukushitani | Tickanwa'tic
+2495 = "ÿöCSWzfm"	# JPN Takachihoura | Aa'ku
+2496 = "WSmÓh"	# JPN Nanyomori | Saldinde
+2497 = "'YÖñT"	# JPN Osumimisaki | Tses Sembai
+2498 = "äqŒëÓh"	# JPN Kumanomori | Tahuunde
+2499 = "ÿöCSWzT"	# JPN Takachihomisaki | Coahuilteco
+2500 = ")YIÉàQ"	# JPN Amakusaoka | Tel Kondaha
+2614 = "ÂeﬁT7å"	# JPN Hyugatani | Cotoname
+2615 = "ÿöCSWzÓh"	# JPN Takachihomori | Guamares
+2617 = "(ÑWSfm"	# JPN Satsunanura | Huichol
+2618 = "˛ñõST"	# JPN Kirishimamisaki | Toboso
+2619 = ")YIÉ7å"	# JPN Amakusatani | Laguneros
+2621 = "äqŒë›T"	# JPN Kumanokawa | Tizapan
+2622 = "˛ñõSqS"	# JPN Kirishimayama | Cuitzeo
+2623 = "WSm7å"	# JPN Nanyotani | Cutzamala
+2624 = "(ÑWS›T"	# JPN Satsunankawa | Patzcuaro
+2626 = "ÿöCSWz7å"	# JPN Takachihotani | Tullucan
+2627 = ")YIÉqS"	# JPN Amakusayama | Cihuatlan
+2628 = "äqŒëqS"	# JPN Kumanoyama | Tepeacac
+2629 = "WSmÃë"	# JPN Nanyosato | Coyolapan
+2630 = "	ttüS"	# JPN Ryukyuhara | Tochtepec
+2631 = "'YÖñüS"	# JPN Osumihara | Mixe
+2632 = "•wMR=n"	# JPN Hizenminato | Xicallanco
+2633 = "Qr+tàQ"	# JPN Tsukushioka | Ceh Pech
+2634 = "•wMRqS"	# JPN Hizenyama | Uaymil
+2635 = "ÿöCSWz›T"	# JPN Takachihokawa | Lacandon
+2636 = ")YIÉüS"	# JPN Amakusahara | Chacujal
+2637 = "•wTüS"	# JPN Higohara | Chortli
+2638 = "	tt›T"	# JPN Ryukyukawa | Xoconochco
+2640 = "ÂeﬁTfm"	# JPN Hyugaura | Lenca
+2641 = "ÂeﬁTT"	# JPN Hyugamisaki | Tziccoac
+2642 = "^tWzfm"	# JPN Mizuhoura | Metztitlan
+2643 = "Qr+tfm"	# JPN Tsukushiura | Apatzingan
+2644 = ")YIÉÓh"	# JPN Amakusamori | Cholula
+2645 = "Qr+tT"	# JPN Tsukushimisaki | Teloloapan
+2646 = "(ÑWST"	# JPN Satsunanmisaki | Coixtlahuacan
+2647 = "ÂeﬁT=n"	# JPN Hyugaminato | Cuetlaxtlan
+2648 = "	ttqS"	# JPN Ryukyuyama | Yopitzinco
+2649 = "ÿöCSWzqS"	# JPN Takachihoyama | Tehuantepec
+2650 = "WSwm7å"	# JPN Nankaitani | Champutun
+2651 = "˛ñõSÃë"	# JPN Kirishimasato | Ah Canul
+2652 = "äqŒëüS"	# JPN Kumanohara | Ecab
+2653 = "˛ñõSàQ"	# JPN Kirishimaoka | Iximche
+2657 = "^tWzÃë"	# JPN Mizuhosato | Colima
+2662 = "WSmfm"	# JPN Nanyoura | Olancho
+2665 = "äqŒë7å"	# JPN Kumanotani | Eyeish
+2666 = "(ÑWSüS"	# JPN Satsunanhara | Tuintsunde
+2667 = "•wMRT"	# JPN Hizenmisaki | Cacaxtes
+2668 = "ÂeﬁTÓh"	# JPN Hyugamori | Borrado
+2669 = "(ÑWS=n"	# JPN Satsunanminato | Hasinai
+4632 = "ÂeﬁTàQ"	# JPN Hyugaoka | Tsi'ya
+4631 = "(ÑWS7å"	# JPN Satsunantani | Naflat
+4630 = "˛ñõS7å"	# JPN Kirishimatani | Natahende
+4628 = "WSwm›T"	# JPN Nankaikawa | Nitahende
+4629 = "ÂeﬁTüS"	# JPN Hyugahara | Ndawe Qoha
+4627 = "ÿöCSWzüS"	# JPN Takachihohara | Tanu
+4606 = "•wMRÃë"	# JPN Hizensato | Chichitames
+4644 = "ÿöCSWzÃë"	# JPN Takachihosato | Jocome
+4646 = "Qr+tÓh"	# JPN Tsukushimori | Tarahumara
+4648 = "äqŒëfm"	# JPN Kumanoura | Acaxee
+4647 = "•wMRÓh"	# JPN Hizenmori | Xecora
+4645 = "ÿöCSWz=n"	# JPN Takachihominato | Xochipillan
+4643 = "(ÑWSqS"	# JPN Satsunanyama | Xiconaque
+4642 = "•wMR7å"	# JPN Hizentani | Pame
+4578 = "Qr+tÃë"	# JPN Tsukushisato | Tzapotzingo
+4640 = "	ttT"	# JPN Ryukyumisaki | Tecpatitlan
+4576 = "•wMRüS"	# JPN Hizenhara | Amaxocotlan
+4579 = "(ÑWSÓh"	# JPN Satsunanmori | Sayula
+4580 = "Qr+t=n"	# JPN Tsukushiminato | Tecoman
+4575 = "'YÖñ7å"	# JPN Osumitani | Puruaran
+4574 = "s|tSØw"	# JPN Michoakan | Ihuatzio
+4573 = "•wTfm"	# JPN Higoura | Acambaro
+4641 = "	ttàQ"	# JPN Ryukyuoka | Xilotepec
+4572 = "(ÑWSÃë"	# JPN Satsunansato | Malinalco
+4571 = "	ttfm"	# JPN Ryukyuura | Tlacopan
+4570 = "∞e®XâÂT"	# JPN Shin-Mekishiko | Texcoco
+4581 = "^tWz›T"	# JPN Mizuhokawa | Yohualtepec
+4583 = "	ttÓh"	# JPN Ryukyumori | Xocotla
+4598 = "	ttÃë"	# JPN Ryukyusato | Cuauhtochco
+4582 = "äqŒëàQ"	# JPN Kumanooka | Teotitlan
+4584 = ")YIÉ›T"	# JPN Amakusakawa | Mitla
+4585 = "äqŒëT"	# JPN Kumanomisaki | Tzotzil
+4586 = "äqŒëÃë"	# JPN Kumanosato | Jakaltek
+4587 = "•wT›T"	# JPN Higokawa | Qumarkaj
+4594 = "•wTqS"	# JPN Higoyama | Tzul
+4589 = "'YÖñÃë"	# JPN Osumisato | Moran
+4588 = "•wMR›T"	# JPN Hizenkawa | Kobox
+4590 = "•wTT"	# JPN Higomisaki | Xiu
+4591 = "WSm›T"	# JPN Nanyokawa | Chikinchel
+4593 = "•wTÓh"	# JPN Higomori | Xicaque
+4909 = "'YÖñÓh"	# JPN Osumimori | Kitsash
+4910 = "WSmT"	# JPN Nanyomisaki | Tawakoni
+4911 = "äqŒë=n"	# JPN Kumanominato | Nabaydacu
+
+# JXP_REGION colonial_the_carribean total=33 inherited=0 added=33
+482 = "ÙT»Tlö"	# JPN Bahama | Bahamas
+483 = "OFå'Y%m"	# JPN Izuoshimatsu | Turks Islands
+484 = "»TÊt±ê"	# JPN Habana | Havana
+485 = "OFå'YõS"	# JPN Izuoshimashima | Moron
+486 = "TvVáU=n"	# JPN Tokaraminato | Guantanamo
+487 = "YrpN†R"	# JPN Jamaika | Jamaica
+488 = "'YNT"	# JPN Daitozaki | Zui
+489 = "'YNS"	# JPN Daitojima | Tortuga
+490 = "kQN¨S"	# JPN Hachijomisaki | Bani
+491 = "MñÅúÙT"	# JPN Aruba | Aruba
+492 = "‚lYŒûT"	# JPN Puerutoriko | Boriken
+493 = "kQNËn"	# JPN Hachijohama | St. Thomas
+494 = "-NKNT"	# JPN Nakanoshimazaki | St. Kitts
+495 = "TvVáUS"	# JPN Tokarajima | Antigua
+496 = "‹t∑VWnf"	# JPN Gwadurupu | Guadelupe
+497 = "Ys|<SKQ"	# JPN Dominika | Dominica
+498 = "kQNT"	# JPN Hachijozaki | Martinique
+499 = "OFå'Y=n"	# JPN Izuoshimaminato | St. Lucia
+500 = "'YN=n"	# JPN Daitominato | St. Vincent
+501 = "ÙTÙTYØe"	# JPN Barubadosu | Barbados
+1881 = "1WlöN"	# JPN San-Marutan | St. Martin
+2654 = "TvVáUËn"	# JPN Tokarahama | Baracoa
+2655 = "OFå'Y¨S"	# JPN Izuoshimamisaki | Bayamo
+2656 = "RóT"	# JPN Aogashimazaki | Camaguey
+2658 = "S.rüS%m"	# JPN Ogasawaratsu | Maguana
+2659 = "TvVáUT"	# JPN Tokarazaki | Magua
+4624 = "-NKN%m"	# JPN Nakanoshimatsu | Guane
+4622 = "OFå'Yfm"	# JPN Izuoshimaura | Canimar
+4623 = "S.rüSfm"	# JPN Ogasawaraura | Escambrey
+4619 = "	NÖRT"	# JPN Miyakezaki | Marien
+4618 = "-NKNõS"	# JPN Nakanoshimashima | Yaquimo
+4620 = "	NÖR%m"	# JPN Miyaketsu | Ciguayo
+4621 = "kQNõS"	# JPN Hachijoshima | Higuey
+
+# JXP_REGION colonial_colombia total=77 inherited=0 added=77
+815 = "ÕyPRÃë"	# JPN Tanegashimasato | Iquitos
+816 = "âhàfm"	# JPN Iriomoteura | Tumbes
+817 = "SfqS"	# JPN Akatsukiyama | Canari
+818 = "ˇu›TüS"	# JPN Midorikawahara | Canelos
+819 = "‹töN˙WS"	# JPN Guayakiru | Guayaquil
+820 = "˙WY"	# JPN Kito | Quito
+821 = "±ê8ó›T"	# JPN Nahakawa | Quijos
+2820 = "±ê8óüS"	# JPN Nahahara | Esmeraldas
+822 = "WS˝VÓh"	# JPN Nankokumori | Caqueta
+823 = "ÕyPRüS"	# JPN Tanegashimahara | Cauca
+824 = "löÃë˙WTX"	# JPN Marikita | Mariquita
+825 = "‚lÂT'Y"	# JPN Bogota | Bogota
+826 = "kQÕëqSqS"	# JPN Yaeyamayama | Choco
+827 = "âRÇÑeY˙WöN"	# JPN Antiokia | Antioquia
+832 = "SfT"	# JPN Akatsukimisaki | Tunja
+2812 = "ÕyPR›T"	# JPN Tanegashimakawa | Pore
+2814 = "WS˝V7å"	# JPN Nankokutani | Meta
+2815 = "8^ÿvT"	# JPN Tokiwamisaki | Puerto Carreno
+2816 = "≤R7b›T"	# JPN Murotokawa | Guaviare
+2817 = "±ê8ófm"	# JPN Nahaura | Neiva
+2818 = "±ê8óÃë"	# JPN Nahasato | Popayan
+835 = "ÙTˇblö"	# JPN Panama | Panama
+836 = "ÕyPRÓh"	# JPN Tanegashimamori | Chorotega
+838 = "8^ÿvüS"	# JPN Tokiwahara | Mosquito
+2660 = "lö±ê‹t"	# JPN Managua | Managua
+2663 = "Sffm"	# JPN Akatsukiura | Nicoya
+2664 = "≤R7bqS"	# JPN Murotoyama | Veraguas
+2819 = "ñôÃëT"	# JPN Shurimisaki | Darien
+828 = "aSTXkç≥u"	# JPN Karutahena | Cartagena
+829 = "ˇu›T7å"	# JPN Midorikawatani | Magdalena
+2806 = "±ê8óT"	# JPN Nahamisaki | Guajira
+502 = "yrÀz<Sæè"	# JPN Torinidado | Trinidad
+741 = "SfÓh"	# JPN Akatsukimori | Cumana
+742 = "SfÃë"	# JPN Akatsukisato | Angostura
+830 = "8^ÿvfm"	# JPN Tokiwaura | Maracaibo
+831 = "†R…b†RØe"	# JPN Karakasu | Caracas
+834 = "ñôÃëÓh"	# JPN Shurimori | Barinas
+2803 = "kQÕëqST"	# JPN Yaeyamamisaki | Orinoco Delta
+2805 = "—ûnoÃë"	# JPN Kuroshiosato | Uyapari
+2807 = "ˇu›TqS"	# JPN Midorikawayama | Altagracia
+2808 = "≤R7büS"	# JPN Murotohara | Coro
+2809 = "SfüS"	# JPN Akatsukihara | Llanos
+2810 = "±ê8óÓh"	# JPN Nahamori | Apure
+2811 = "ÕyPRfm"	# JPN Tanegashimaura | Atabapo
+2813 = "—ûno›T"	# JPN Kuroshiokawa | Merida
+2939 = "≤R7bT"	# JPN Murotomisaki | Zaraza
+2931 = "Sf7å"	# JPN Akatsukitani | Pirara
+743 = "KSEN›T"	# JPN Yakushimakawa | Essequibo
+744 = "ÕyPRT"	# JPN Tanegashimamisaki | Demerara
+745 = "≤R7bÓh"	# JPN Murotomori | Paramaribo
+2937 = "ñôÃëqS"	# JPN Shuriyama | Suriname
+2804 = "âhàÃë"	# JPN Iriomotesato | Guasipati
+746 = "aS¥R"	# JPN Kaiennu | Cayenne
+4592 = "ÕyPR7å"	# JPN Tanegashimatani | Ulva
+4597 = "ñôÃë›T"	# JPN Shurikawa | Talamanca
+4595 = "±ê8ó7å"	# JPN Nahatani | Guaymi
+4596 = "ˇu›TÓh"	# JPN Midorikawamori | Kuna
+4599 = "8^ÿv7å"	# JPN Tokiwatani | Sinu
+4600 = "ñôÃëüS"	# JPN Shurihara | Magangue
+4601 = "8^ÿvÓh"	# JPN Tokiwamori | Chimila
+4602 = "—ûnoqS"	# JPN Kuroshioyama | Motilones
+4610 = "kQÕëqSÓh"	# JPN Yaeyamamori | Yukpa
+4603 = "ñôÃëÃë"	# JPN Shurisato | Moniquira
+4614 = "8^ÿvÃë"	# JPN Tokiwasato | Tuneo
+4611 = "kQÕëqSÃë"	# JPN Yaeyamasato | Wayuu
+4609 = "kQÕëqS›T"	# JPN Yaeyamakawa | Variquicimeto
+4612 = "ñôÃë7å"	# JPN Shuritani | Tacarigua
+4613 = "kQÕëqSüS"	# JPN Yaeyamahara | Guanaguanare
+4608 = "KSENqS"	# JPN Yakushimayama | Achaguas
+4607 = "kQÕëqS7å"	# JPN Yaeyamatani | Pijaos
+4617 = "KSENÓh"	# JPN Yakushimamori | Guaju
+4605 = "KSENüS"	# JPN Yakushimahara | Putumayos
+4604 = "≤R7bÃë"	# JPN Murotosato | Pastos
+4615 = "ÕyPRqS"	# JPN Tanegashimayama | Guanipa
+4616 = "ˇu›Tfm"	# JPN Midorikawaura | Anzoategui
+2661 = "KSEN7å"	# JPN Yakushimatani | Uluas
+837 = "<S†R…b‹t"	# JPN Nikaragua | Nicaragua
+
+# JXP_REGION colonial_peru total=41 inherited=0 added=41
+795 = "ˆîqS"	# JPN Ginyama | Potosi
+797 = ")YŒë≥S"	# JPN Amanoharadake | Oruro
+800 = "'YÍñ≥S"	# JPN Daisetsudake | Chiquitos
+801 = "ãv‰QüS"	# JPN Hakuhohara | Cochabamba
+802 = "…bÙTØe"	# JPN Ra-Pasu | Chuquiabo
+803 = "ãvˆîŒW"	# JPN Shiroganejo | Moxos
+2831 = "ÇÑöNÊt≥u—y"	# JPN Tiawanako | Tiahuanaco
+2832 = "ﬁòRö7å"	# JPN Hidatani | San Joaquin
+2833 = "ëN÷SüS"	# JPN Kumotorihara | Madre de Dios
+2834 = "ﬁòRöS"	# JPN Hidamine | Santa Cruz de la Sierra
+2835 = "ÌeÂeS"	# JPN Asahidakemine | Sucre
+2838 = "ãvˆîüS"	# JPN Shiroganehara | Tarija
+2940 = "ÌeÂe≥S"	# JPN Asahidakedake | Chichas
+2941 = ")YŒë˝l"	# JPN Amanoharasawa | Choquechaca
+2942 = "ﬁòRöŒW"	# JPN Hidajo | Charcas
+2946 = "ãv‰Q˝l"	# JPN Hakuhosawa | Quillacas
+2947 = "ÌeÂe˝l"	# JPN Asahidakesawa | Macaya
+804 = "ãv‰QŒW"	# JPN Hakuhojo | Puno
+805 = "Mñ˜ñ˙W^"	# JPN Arekipa | Arequipa
+809 = ")Rlö"	# JPN Rima | Lima
+810 = "ãv‰Q7å"	# JPN Hakuhotani | Huancavelica
+811 = "ãvˆîqS"	# JPN Shiroganeyama | Jauja
+812 = "ff"	# JPN Chan-Chan | Chanchan
+813 = "aS»TlöaS"	# JPN Kahamaruka | Cajamarca
+814 = "ëN÷SŒW"	# JPN Kumotorijo | Huanuco
+2821 = "ﬁòRöüS"	# JPN Hidahara | Piwra
+2822 = "ƒû—ëüS"	# JPN Koganeyamahara | Tucume
+2823 = ")YyzüS"	# JPN Tenkuhara | Moyobamba
+2824 = "ãvˆî7å"	# JPN Shiroganetani | Wankapampa
+2825 = "ÌeÂeqS"	# JPN Asahidakeyama | Pisqupampa
+2826 = "ÿö≠S˝l"	# JPN Takaminesawa | Chimbote
+2827 = "ƒû—ë7å"	# JPN Koganeyamatani | Huaraz
+2943 = "ÿö≠SŒW"	# JPN Takaminejo | Chachapoyas
+806 = "ƒû—ëS"	# JPN Koganeyamamine | Nazca
+807 = "'YÍñ˝l"	# JPN Daisetsusawa | Abancay
+808 = "ì^Øe—y"	# JPN Kusuko | Cuzco
+2828 = "ﬁòRö≥S"	# JPN Hidadake | Camana
+2829 = "ƒû—ëŒW"	# JPN Koganeyamajo | Ayaviri
+2830 = "ëN÷SqS"	# JPN Kumotoriyama | Quero
+2944 = ")Yyz˝l"	# JPN Tenkusawa | Ucayali
+2945 = ")Yyz≥S"	# JPN Tenkudake | Yurimaguas
+
+# JXP_REGION colonial_la_plata total=63 inherited=0 added=63
+780 = "(g˛füS"	# JPN Kisohara | Candelaria
+781 = "ˆîAmfm"	# JPN Ginkawaura | Puerto Deseado
+782 = "kpKNõS"	# JPN Hi-no-Shima | Tierra del Fuego
+786 = "ˆîAmüS"	# JPN Ginkawahara | Carmen
+2863 = "—û›T"	# JPN Kurogawa | Rio Negro
+2868 = ")Yôüfm"	# JPN Tenryuura | San Antonio
+2869 = "WSf˝l"	# JPN Nanseisawa | Florida Blanca
+2870 = ")R9h%m"	# JPN Tonetsu | Tehuelmapu
+2875 = "%mâè›T"	# JPN Tsugarukawa | Chubut
+2876 = ")R9h›T"	# JPN Tonekawa | Teush
+785 = "WSf%m"	# JPN Nanseitsu | Pehuenmapu
+2843 = "…bÃëeY»T"	# JPN Ra-Rioha | La Rioja
+2844 = "WSAm%m"	# JPN Minamikawatsu | Chepes
+2845 = "Ày%m%m"	# JPN Akitsutsu | San Juan
+2847 = "√îûüS"	# JPN Suzukahara | San Luis
+2867 = ")R9h˝l"	# JPN Tonesawa | Chanar
+2871 = "WSAmüS"	# JPN Minamikawahara | Poya
+2872 = "%mâè˝l"	# JPN Tsugarusawa | Chiquiyami
+2877 = "WSAmºl"	# JPN Minamikawanuma | Mendoza
+779 = ")Yôüºl"	# JPN Tenryunuma | Tandil
+2860 = "ˆîAm7å"	# JPN Ginkawatani | Querandi
+2861 = "√îû›T"	# JPN Suzukakawa | Sauce
+2865 = "WSAmÃë"	# JPN Minamikawasato | Puelches
+2866 = "WSfÃë"	# JPN Nanseisato | Olavarria
+777 = ")Yôü7å"	# JPN Tenryutani | Corrientes
+778 = "ˆîån"	# JPN Ginwan | Rio de la Plata
+2846 = ")R9hÃë"	# JPN Tonesato | Quisquisacate
+2848 = "€VNAS7å"	# JPN Shimantotani | Santa Fe
+2849 = "Ày%mºl"	# JPN Akitsunuma | Rosario
+2853 = ")R9hºl"	# JPN Tonenuma | Yapeyu
+2855 = "ˆîAm›T"	# JPN Ginkawakawa | Misiones
+2858 = "ˆîAm˝l"	# JPN Ginkawasawa | Santiago
+2859 = "€VNAS›T"	# JPN Shimantokawa | Itapua
+791 = "%mâè7å"	# JPN Tsugarutani | Catamarca
+794 = "Ày%mÃë"	# JPN Akitsusato | Jujuy
+2836 = "(g˛f˝l"	# JPN Kisosawa | Tucuman
+2837 = "WSAm7å"	# JPN Minamikawatani | Santa Catalina
+2839 = "WSfºl"	# JPN Nanseinuma | Puna de Atacama
+2842 = "€VNAS˝l"	# JPN Shimantosawa | Santiago del Estero
+790 = "Ày%mfm"	# JPN Akitsuura | Chaco Austral
+2854 = "√îû˝l"	# JPN Suzukasawa | Chaco Central
+2878 = "√îûÃë"	# JPN Suzukasato | Matara
+772 = "LN…b-W"	# JPN Uruguai | Uruguay
+773 = "€VNASüS"	# JPN Shimantohara | Banda Oriental
+2850 = "ôÑóVÙuÑvöN"	# JPN Montebideo | Montevideo
+2851 = "%mâèüS"	# JPN Tsugaruhara | Colonia
+2852 = "WSfüS"	# JPN Nanseihara | Salto
+783 = "ÙTTXÂT<SöN"	# JPN Patagonia | Kawesqar
+784 = "€VNASfm"	# JPN Shimantoura | Huillimapu
+787 = ")YôüÃë"	# JPN Tenryusato | Picunmapu
+792 = ")R9hüS"	# JPN Tonehara | Copiapo
+793 = ")R9h7å"	# JPN Tonetani | Iquique
+796 = "WSAmfm"	# JPN Minamikawaura | Arica
+2840 = ")Yôü%m"	# JPN Tenryutsu | Calama
+2841 = "WSffm"	# JPN Nanseiura | Antofagasta
+2862 = "€VNASÃë"	# JPN Shimantosato | Coquimbo
+2873 = "GYm√W"	# JPN Chiroe | Chiloe
+2874 = "€VNAS%m"	# JPN Shimantotsu | Aysen
+775 = "öNågÓh"	# JPN Asunshion | Asuncion
+776 = "€VNASºl"	# JPN Shimantonuma | Concepcion
+799 = "ˆîAmÃë"	# JPN Ginkawasato | Chaco Boreal
+2882 = ")R9hfm"	# JPN Toneura | Fuerte Borbon
+2883 = "√îû7å"	# JPN Suzukatani | Melodia
+
+# JXP_REGION colonial_brazil total=76 inherited=0 added=76
+2857 = "WSÃë¶u"	# JPN Minami-Rio | Rio Grande do Sul
+2879 = "%fŒòüS"	# JPN Harukazehara | Santa Tecla
+2884 = "RóöS7å"	# JPN Seirantani | Povos das Missoes
+2887 = "YqVÓh"	# JPN Natsukagemori | Santa Catarina
+759 = "ÍèöN¸fÇÑ≥u"	# JPN Daiyamantina | Diamantina
+765 = "s|≥uØe	T…bØe"	# JPN Minasu-Jeraisu | Minas Gerais
+2891 = "âWSfm"	# JPN Seinanura | Santo Antonio da Manga
+2892 = "wmWS›T"	# JPN Kainankawa | Araxas
+2894 = "wmWST"	# JPN Kainanmisaki | Sao Joao del Rei
+2898 = "uYÓh"	# JPN Amanatsumori | Serro
+2899 = "uYfm"	# JPN Amanatsuura | Vila Rica
+758 = "wmWSÓh"	# JPN Kainanmori | Goias
+2906 = "âWST"	# JPN Seinanmisaki | Ipora
+2907 = "RóöS›T"	# JPN Seirankawa | Vila Boa
+2908 = "Ró	ÅT"	# JPN Aosujimisaki | Arrial dos Couros
+2909 = "‡SüS"	# JPN Midorishimahara | Conceicao
+2910 = "Ró‚lÃë"	# JPN Aonamisato | Pontal
+2911 = "%fŒòfm"	# JPN Harukazeura | Natividad
+2919 = "∞eˇu›T"	# JPN Shinryokukawa | Luziana
+2881 = "%fŒòÓh"	# JPN Harukazemori | Corumba
+2888 = "‡Sfm"	# JPN Midorishimaura | Cuiaba
+2893 = "∞eˇu7å"	# JPN Shinryokutani | Ofaie
+2900 = "‹t‚l˜ñ"	# JPN Guapore | Guapore
+2901 = "%fŒòÃë"	# JPN Harukazesato | Cerejeiras
+2902 = "—ûéj7å"	# JPN Kokutantani | Vila Bela
+2903 = "YqV7å"	# JPN Natsukagetani | Caceres
+2904 = "RóöSfm"	# JPN Seiranura | Diamantino
+2905 = "âWS›T"	# JPN Seinankawa | Rio Das Mortes
+2920 = "wmWSÃë"	# JPN Kainansato | Coxim
+766 = "1WÙuÓhyr"	# JPN San-Bisente | Sao Vicente
+768 = "—ûéjÓh"	# JPN Kokutanmori | Guayra
+769 = "Ró	Å›T"	# JPN Aosujikawa | Curitiba
+2895 = "8^Y7å"	# JPN Tokonatsutani | Castro
+2896 = "Ró	ÅÓh"	# JPN Aosujimori | Campinas
+2897 = "RóöSÃë"	# JPN Seiransato | Araraquara
+762 = "YqV›T"	# JPN Natsukagekawa | Sao Tome
+763 = "∞eïT"	# JPN Shin-Nagasaki | Rio de Janeiro
+764 = "Ró	ÅüS"	# JPN Aosujihara | Santo Amaro
+756 = "ÙTOöN"	# JPN Baiya | Bahia
+757 = "∞eˇufm"	# JPN Shinryokuura | Ilheus
+760 = "‡SÓh"	# JPN Midorishimamori | Porto Seguro
+761 = "uY›T"	# JPN Amanatsukawa | Espirito Santo
+2914 = "‡ST"	# JPN Midorishimamisaki | Inhambupe
+2916 = "YqVqS"	# JPN Natsukageyama | Rio Contas
+750 = "Ró‚lqS"	# JPN Aonamiyama | Crato
+751 = "‡S7å"	# JPN Midorishimatani | Ceara
+753 = "Ró‚lüS"	# JPN Aonamihara | Rio Grande
+754 = "∞eˇuÓh"	# JPN Shinryokumori | Paraiba
+755 = "=OWS^ÂT"	# JPN Perunbuko | Pernambuco
+2885 = "RóöST"	# JPN Seiranmisaki | Barra
+2912 = "uYÃë"	# JPN Amanatsusato | Sergipe
+2913 = "uYqS"	# JPN Amanatsuyama | Jeremoabo
+2915 = "wmWSfm"	# JPN Kainanura | Pambu
+2917 = "‡SÃë"	# JPN Midorishimasato | Paratinga
+2918 = "Ró	ÅqS"	# JPN Aosujiyama | Campo Largo
+2921 = "wmWSqS"	# JPN Kainanyama | Alagoas
+2922 = "âWSÓh"	# JPN Seinanmori | Borborema
+749 = "YqVÃë"	# JPN Natsukagesato | Maranhao
+752 = "uYT"	# JPN Amanatsumisaki | Oeiras
+2886 = "8^YqS"	# JPN Tokonatsuyama | Parnaiba
+2923 = "wmWS7å"	# JPN Kainantani | Pastos Bons
+2924 = "uYüS"	# JPN Amanatsuhara | Timon
+2925 = "∞eˇuqS"	# JPN Shinryokuyama | Parnagua
+2926 = "%fŒòT"	# JPN Harukazemisaki | Grajau
+2927 = "%fŒò7å"	# JPN Harukazetani | Alcantara
+747 = "Mñlö^"	# JPN Amapa | Amapa
+748 = "ç&O"	# JPN Beren | Belem
+2890 = "RóöSüS"	# JPN Seiranhara | Marajo
+2928 = "∞eˇuüS"	# JPN Shinryokuhara | Tucurui
+2929 = "Ró	Å7å"	# JPN Aosujitani | Para
+2930 = "8^YÓh"	# JPN Tokonatsumori | Santarem
+2933 = "Ró	ÅÃë"	# JPN Aosujisato | Barcelos
+2934 = "löYtØe"	# JPN Manausu | Manaus
+2935 = "uY7å"	# JPN Amanatsutani | Muturu
+2889 = "∞eˇuT"	# JPN Shinryokumisaki | Rio Branco
+2938 = "8^Y›T"	# JPN Tokonatsukawa | Oiapoque

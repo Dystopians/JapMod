@@ -17,14 +17,49 @@ def _read(relative: str) -> str:
 class OverseasProgramIntegrationTests(unittest.TestCase):
     def test_b16_startup_migration_is_parseable_and_idempotent(self) -> None:
         trigger = _read("common/scripted_triggers/jxp_b_102_overseas_program_triggers.txt")
+        depth_trigger = _read("common/scripted_triggers/jxp_b_110_colonial_depth_triggers.txt")
         effect = _read("common/scripted_effects/jxp_b_102_overseas_program_effects.txt")
+        registry_event = _read("events/jxp_a_97_colonial_registry_events.txt")
+        migration_event = _read("events/jxp_b_110_colonial_migration_events.txt")
         parse_text(trigger)
+        parse_text(depth_trigger)
         parse_text(effect)
+        parse_text(registry_event)
+        parse_text(migration_event)
         self.assertIn("NOT = { has_country_flag = jxp_b_102_overseas_program_migrated }", trigger)
         self.assertEqual(1, effect.count("set_country_flag = jxp_b_102_overseas_program_migrated"))
+        self.assertIn("jxp_a_consume_colonial_registry_interfaces_effect = yes", registry_event)
+        self.assertIn("jxp_b_102_finalize_overseas_program_startup_migration_effect = yes", registry_event)
+        self.assertLess(
+            registry_event.index("jxp_a_consume_colonial_registry_interfaces_effect = yes"),
+            registry_event.index("jxp_b_102_finalize_overseas_program_startup_migration_effect = yes"),
+        )
+        self.assertIn("jxp_b_110_colonial_depth_postcondition_trigger = yes", migration_event)
+        self.assertIn("jxp_b_102_finalize_overseas_program_startup_migration_effect = yes", migration_event)
+        self.assertIn("jxp_b_110_colonial_depth_postcondition_trigger = yes", effect)
+        self.assertIn("has_country_flag = jxp_b_110_colonial_depth_migration_pending", effect)
+        self.assertIn("set_country_flag = jxp_b_110_colonial_depth_migrated", effect)
+        for anchor in (
+            "jxp_b_94_mission_pacific_shore_foundation",
+            "jxp_b_95_hkk_cold_harbors",
+            "jxp_b_95_njf_japan_town_registers",
+            "jxp_b_95_oia_star_paths",
+            "jxp_b_114_tpf_japanese_seats",
+        ):
+            self.assertIn(f"has_mission = {anchor}", depth_trigger)
+        self.assertIn("has_country_flag = jxp_b_tpf_federation_dissolved", depth_trigger)
         self.assertNotIn("every_country", effect)
         self.assertNotIn("every_province", effect)
         self.assertNotIn("mean_time_to_happen", effect)
+
+    def test_non_successor_startup_migration_has_a_commit_point(self) -> None:
+        effect = _read("common/scripted_effects/jxp_b_102_overseas_program_effects.txt")
+        registry_event = _read("events/jxp_a_97_colonial_registry_events.txt")
+        self.assertIn("NOT = { jxp_b_102_is_colonial_successor_trigger = yes }", effect)
+        self.assertIn(
+            "jxp_b_102_finalize_overseas_program_startup_migration_effect = yes",
+            registry_event,
+        )
 
     def test_all_five_colonial_successors_recover_identity_and_refresh_interfaces(self) -> None:
         trigger = _read("common/scripted_triggers/jxp_b_102_overseas_program_triggers.txt")

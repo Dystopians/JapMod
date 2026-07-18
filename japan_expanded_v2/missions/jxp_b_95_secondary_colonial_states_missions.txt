@@ -42,6 +42,40 @@ jxp_b_95_hkk_cold_frontier_missions = {
 			jxp_b_91_subtract_control_5_effect = yes
 		}
 	}
+
+	jxp_b_95_hkk_depth_01 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_hkk_northern_shipyards }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.9 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_02 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_hkk_depth_01 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.10 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_03 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_hkk_depth_02 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.11 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_hkk_peoples_missions = {
@@ -83,6 +117,40 @@ jxp_b_95_hkk_peoples_missions = {
 			change_government_reform_progress = 35
 			add_country_modifier = { name = jxp_b_95_hkk_northern_citizenship duration = -1 }
 			jxp_b_91_add_compact_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_depth_04 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_hkk_northern_citizenship }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.12 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_05 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_hkk_depth_04 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.13 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_06 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_hkk_depth_05 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.14 days = 1 }
 		}
 	}
 }
@@ -128,6 +196,40 @@ jxp_b_95_hkk_north_pacific_missions = {
 			jxp_b_91_subtract_control_5_effect = yes
 		}
 	}
+
+	jxp_b_95_hkk_depth_07 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_hkk_north_pacific_convoys }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.15 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_08 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_hkk_depth_07 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.16 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_09 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_hkk_depth_08 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.9 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_hkk_rivalry_missions = {
@@ -169,6 +271,40 @@ jxp_b_95_hkk_rivalry_missions = {
 			add_dip_power = 50
 			add_prestige = 10
 			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_hkk_depth_10 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_hkk_northern_balance }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.10 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_11 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_hkk_depth_10 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.11 days = 1 }
+		}
+	}
+	jxp_b_95_hkk_depth_12 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_hkk_depth_11 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.12 days = 1 }
 		}
 	}
 }
@@ -221,6 +357,18 @@ jxp_b_95_hkk_constitution_missions = {
 			country_event = { id = jxp_secondary_colonies.8 days = 1 }
 		}
 	}
+
+	jxp_b_95_hkk_depth_13 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_hkk_northern_self_rule }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.13 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_njf_port_network_missions = {
@@ -264,6 +412,40 @@ jxp_b_95_njf_port_network_missions = {
 			jxp_b_91_subtract_control_5_effect = yes
 		}
 	}
+
+	jxp_b_95_njf_depth_01 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_njf_interport_couriers }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.109 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_02 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_njf_depth_01 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.110 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_03 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_njf_depth_02 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.111 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_njf_society_missions = {
@@ -305,6 +487,40 @@ jxp_b_95_njf_society_missions = {
 			add_adm_power = 40
 			add_country_modifier = { name = jxp_b_95_njf_plural_wards duration = -1 }
 			country_event = { id = jxp_secondary_colonies.104 days = 1 }
+		}
+	}
+
+	jxp_b_95_njf_depth_04 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_njf_plural_wards }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.112 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_05 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_njf_depth_04 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.113 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_06 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_njf_depth_05 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.114 days = 1 }
 		}
 	}
 }
@@ -351,6 +567,40 @@ jxp_b_95_njf_commerce_missions = {
 			jxp_b_91_add_identity_5_effect = yes
 		}
 	}
+
+	jxp_b_95_njf_depth_07 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_njf_monsoon_exchange }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.115 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_08 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_njf_depth_07 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.116 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_09 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_njf_depth_08 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.117 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_njf_security_missions = {
@@ -392,6 +642,40 @@ jxp_b_95_njf_security_missions = {
 			add_mil_power = 45
 			add_army_tradition = 3
 			jxp_b_91_add_identity_5_effect = yes
+		}
+	}
+
+	jxp_b_95_njf_depth_10 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_njf_maritime_militia }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.118 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_11 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_njf_depth_10 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.109 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_12 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_njf_depth_11 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.110 days = 1 }
 		}
 	}
 }
@@ -444,6 +728,40 @@ jxp_b_95_njf_federation_missions = {
 			country_event = { id = jxp_secondary_colonies.108 days = 1 }
 		}
 	}
+
+	jxp_b_95_njf_depth_13 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_njf_terms_with_japan }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.111 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_14 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_njf_depth_13 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.112 days = 1 }
+		}
+	}
+	jxp_b_95_njf_depth_15 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_njf_depth_14 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.113 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_oia_navigation_missions = {
@@ -485,6 +803,40 @@ jxp_b_95_oia_navigation_missions = {
 			add_navy_tradition = 5
 			add_dip_power = 45
 			jxp_b_91_subtract_control_5_effect = yes
+		}
+	}
+
+	jxp_b_95_oia_depth_01 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_oia_blue_water_hulls }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.209 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_02 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_oia_depth_01 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.210 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_03 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_oia_depth_02 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.211 days = 1 }
 		}
 	}
 }
@@ -530,6 +882,40 @@ jxp_b_95_oia_society_missions = {
 			jxp_b_91_add_compact_5_effect = yes
 		}
 	}
+
+	jxp_b_95_oia_depth_04 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_oia_common_council }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.212 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_05 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_oia_depth_04 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.213 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_06 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_oia_depth_05 }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.214 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_oia_ocean_economy_missions = {
@@ -573,6 +959,40 @@ jxp_b_95_oia_ocean_economy_missions = {
 			jxp_b_91_add_identity_5_effect = yes
 		}
 	}
+
+	jxp_b_95_oia_depth_07 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_oia_ocean_entrepot }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.215 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_08 = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_95_oia_depth_07 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.216 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_09 = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_95_oia_depth_08 }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.209 days = 1 }
+		}
+	}
 }
 
 jxp_b_95_oia_defense_missions = {
@@ -614,6 +1034,40 @@ jxp_b_95_oia_defense_missions = {
 			add_country_modifier = { name = jxp_b_95_oia_ocean_defense duration = -1 }
 			add_sailors = 1500
 			country_event = { id = jxp_secondary_colonies.207 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_depth_10 = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_95_oia_oceanic_defense_pact }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.210 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_11 = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_95_oia_depth_10 }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.211 days = 1 }
+		}
+	}
+	jxp_b_95_oia_depth_12 = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_95_oia_depth_11 }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.212 days = 1 }
 		}
 	}
 }
@@ -664,6 +1118,18 @@ jxp_b_95_oia_polity_missions = {
 			add_prestige = 15
 			jxp_b_91_add_identity_5_effect = yes
 			country_event = { id = jxp_secondary_colonies.208 days = 1 }
+		}
+	}
+
+	jxp_b_95_oia_depth_13 = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_95_oia_equal_seas_compact }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_secondary_colonies.213 days = 1 }
 		}
 	}
 }

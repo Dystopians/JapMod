@@ -1,0 +1,245 @@
+jxp_b_112_company_actor_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	is_subject = no
+	is_at_war = no
+	has_any_disaster = no
+	is_year = 1500
+	stability = 0
+	num_of_ports = 5
+	dip_tech = 7
+	NOT = { is_bankrupt = yes }
+	NOT = { has_country_modifier = jxp_b_97_overseas_rights_revoked }
+}
+
+jxp_b_112_company_foundation_capacity_trigger = {
+	dip_tech = 9
+	num_of_ports = 8
+	treasury = 500
+}
+
+jxp_b_112_has_recorded_company_charter_trigger = {
+	OR = {
+		has_country_flag = jxp_b_112_south_seas_charter_negotiated
+		has_country_flag = jxp_b_112_south_seas_charter_state
+		has_country_flag = jxp_b_112_south_seas_charter_local
+		has_country_flag = jxp_b_112_north_sea_charter_negotiated
+		has_country_flag = jxp_b_112_north_sea_charter_state
+		has_country_flag = jxp_b_112_north_sea_charter_local
+		has_country_flag = jxp_b_112_taiwan_fujian_charter_negotiated
+		has_country_flag = jxp_b_112_taiwan_fujian_charter_state
+		has_country_flag = jxp_b_112_taiwan_fujian_charter_local
+		has_country_flag = jxp_b_112_oceanic_charter_negotiated
+		has_country_flag = jxp_b_112_oceanic_charter_state
+		has_country_flag = jxp_b_112_oceanic_charter_local
+		has_country_flag = jxp_b_112_new_world_charter_negotiated
+		has_country_flag = jxp_b_112_new_world_charter_state
+		has_country_flag = jxp_b_112_new_world_charter_local
+	}
+}
+
+jxp_b_112_has_company_local_response_trigger = {
+	OR = {
+		has_country_flag = jxp_b_112_company_local_compact
+		has_country_flag = jxp_b_112_company_local_conflict
+	}
+}
+
+jxp_b_112_has_any_company_trigger = {
+	OR = {
+		has_country_flag = jxp_b_112_south_seas_company_active
+		has_country_flag = jxp_b_112_north_sea_company_active
+		has_country_flag = jxp_b_112_taiwan_fujian_company_active
+		has_country_flag = jxp_b_112_oceanic_company_active
+		has_country_flag = jxp_b_112_new_world_company_active
+	}
+}
+
+jxp_b_112_south_seas_company_available_trigger = {
+	OR = {
+		any_owned_province = {
+			has_port = yes
+			OR = {
+				region = indo_china_region
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+		any_known_country = {
+			any_owned_province = {
+				has_port = yes
+				OR = {
+					region = indo_china_region
+					region = malaya_region
+					region = indonesia_region
+					region = moluccas_region
+				}
+			}
+		}
+		jxp_oceanic_opening_at_least_40 = yes
+	}
+}
+
+jxp_b_112_north_sea_company_available_trigger = {
+	OR = {
+		jxp_b_92_north_pacific_anchor_trigger = yes
+		any_known_country = {
+			any_owned_province = {
+				has_port = yes
+				OR = {
+					area = hokkaido_area
+					area = sakhalin_area
+					area = kamchatka_area
+					colonial_region = colonial_alaska
+				}
+			}
+		}
+	}
+}
+
+jxp_b_112_taiwan_fujian_company_available_trigger = {
+	OR = {
+		owns_or_non_sovereign_subject_of = 656
+		any_owned_province = { has_port = yes OR = { area = taiwan_area area = fujian_area } }
+		any_known_country = { any_owned_province = { has_port = yes OR = { area = taiwan_area area = fujian_area } } }
+	}
+}
+
+jxp_b_112_oceanic_company_available_trigger = {
+	OR = {
+		any_owned_province = { has_port = yes region = oceanea_region }
+		any_known_country = { any_owned_province = { has_port = yes region = oceanea_region } }
+		jxp_oceanic_opening_at_least_50 = yes
+	}
+}
+
+jxp_b_112_new_world_company_available_trigger = {
+	OR = {
+		jxp_b_92_normal_west_coast_anchor_trigger = yes
+		jxp_b_92_rnw_western_anchor_trigger = yes
+		AND = {
+			jxp_oceanic_opening_at_least_60 = yes
+			num_of_colonists = 1
+		}
+	}
+}
+
+# Stable Agent A request interface. The visible triggers prevent repeat
+# deposits for an existing company; the ready triggers mirror every ordinary
+# B112 foundation gate before A collects the first 200 ducats and 75 DIP.
+jxp_b_112_agent_a_red_seal_overseas_request_visible_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	jxp_b_112_south_seas_company_available_trigger = yes
+	NOT = { has_country_flag = jxp_b_112_south_seas_company_active }
+}
+
+jxp_b_112_agent_a_red_seal_overseas_request_ready_trigger = {
+	jxp_b_112_agent_a_red_seal_overseas_request_visible_trigger = yes
+	jxp_b_112_company_foundation_capacity_trigger = yes
+	dip_power = 100
+	treasury = 500
+	num_of_light_ship = 8
+}
+
+jxp_b_112_agent_a_pacific_charter_request_visible_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	jxp_b_112_new_world_company_available_trigger = yes
+	NOT = { has_country_flag = jxp_b_112_new_world_company_active }
+}
+
+jxp_b_112_agent_a_pacific_charter_request_ready_trigger = {
+	jxp_b_112_agent_a_pacific_charter_request_visible_trigger = yes
+	jxp_b_112_company_foundation_capacity_trigger = yes
+	adm_power = 100
+	dip_power = 150
+	treasury = 750
+	OR = { num_of_colonists = 1 tag = NYA tag = TPF jxp_b_92_rnw_western_anchor_trigger = yes }
+}
+
+jxp_b_112_agent_a_southern_seas_request_visible_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	jxp_b_112_oceanic_company_available_trigger = yes
+	NOT = { has_country_flag = jxp_b_112_oceanic_company_active }
+}
+
+jxp_b_112_agent_a_southern_seas_request_ready_trigger = {
+	jxp_b_112_agent_a_southern_seas_request_visible_trigger = yes
+	jxp_b_112_company_foundation_capacity_trigger = yes
+	dip_power = 125
+	treasury = 600
+	num_of_transport = 10
+}
+
+jxp_b_112_agent_a_northern_seas_request_visible_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	jxp_b_112_north_sea_company_available_trigger = yes
+	NOT = { has_country_flag = jxp_b_112_north_sea_company_active }
+}
+
+jxp_b_112_agent_a_northern_seas_request_ready_trigger = {
+	jxp_b_112_agent_a_northern_seas_request_visible_trigger = yes
+	jxp_b_112_company_foundation_capacity_trigger = yes
+	adm_power = 75
+	dip_power = 75
+	treasury = 450
+}
+
+jxp_b_112_agent_a_continental_request_visible_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	jxp_b_112_taiwan_fujian_company_available_trigger = yes
+	NOT = { has_country_flag = jxp_b_112_taiwan_fujian_company_active }
+}
+
+jxp_b_112_agent_a_continental_request_ready_trigger = {
+	jxp_b_112_agent_a_continental_request_visible_trigger = yes
+	jxp_b_112_company_foundation_capacity_trigger = yes
+	dip_power = 125
+	treasury = 550
+	num_of_ports = 10
+}
+
+# Evaluated in the prospective host-country scope. ROOT is the Japanese sponsor.
+jxp_b_112_company_host_candidate_trigger = {
+	exists = yes
+	is_subject = no
+	NOT = { tag = ROOT }
+	NOT = { is_at_war = yes }
+	any_owned_province = {
+		has_port = yes
+		OR = {
+			AND = {
+				ROOT = { has_country_flag = jxp_b_112_south_seas_company_active }
+				OR = { region = indo_china_region region = malaya_region region = indonesia_region region = moluccas_region }
+			}
+			AND = {
+				ROOT = { has_country_flag = jxp_b_112_north_sea_company_active }
+				OR = { area = hokkaido_area area = sakhalin_area area = kamchatka_area colonial_region = colonial_alaska }
+			}
+			AND = {
+				ROOT = { has_country_flag = jxp_b_112_taiwan_fujian_company_active }
+				OR = { area = taiwan_area area = fujian_area }
+			}
+			AND = {
+				ROOT = { has_country_flag = jxp_b_112_oceanic_company_active }
+				region = oceanea_region
+			}
+			AND = {
+				ROOT = { has_country_flag = jxp_b_112_new_world_company_active }
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = new_world
+				}
+			}
+		}
+	}
+}
+
+jxp_b_112_can_review_company_trigger = {
+	jxp_b_112_company_actor_trigger = yes
+	has_country_flag = jxp_iface_b_overseas_company_active
+	jxp_b_112_has_any_company_trigger = yes
+	jxp_b_112_has_recorded_company_charter_trigger = yes
+	jxp_b_112_has_company_local_response_trigger = yes
+	NOT = { has_country_modifier = jxp_b_112_company_business_review_recent }
+}

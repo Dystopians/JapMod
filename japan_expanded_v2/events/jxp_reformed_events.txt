@@ -12,6 +12,7 @@ country_event = {
 		has_country_flag = jxp_polity_initialized
 		jxp_not_sakoku_locked_trigger = yes
 		NOT = { jxp_has_any_route_trigger = yes }
+		NOT = { has_country_flag = jxp_path_commercial_council }
 		NOT = { has_country_flag = jxp_reformed_contact }
 		jxp_oceanic_opening_at_least_50 = yes
 		OR = {

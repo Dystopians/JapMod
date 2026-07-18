@@ -5,6 +5,10 @@ cb_jxp_b_101_korean_expedition = {
 
 	prerequisites_self = {
 		jxp_b_101_can_use_korean_expedition_cb_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_korea_expedition_ready_trigger = yes
+		}
 	}
 
 	prerequisites = {

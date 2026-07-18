@@ -660,9 +660,9 @@ class MissionProfileTests(unittest.TestCase):
 
     def test_profile_matrix_covers_every_tag_across_four_dlc_states(self) -> None:
         self.assertEqual(len(DLC_PROFILE_VARIANTS), 4)
-        # Ten legacy route/final states, independent TOY, and a Shinbutsu
-        # Buddhist-Japan profile that also proves the Shinto branch exclusion.
-        self.assertEqual(len(BASE_PROFILES), len(DAIMYO_TAGS) + 12)
+        # Ten legacy route/final states, independent TOY, a Shinbutsu
+        # Buddhist-Japan profile, and the commercial-council profile.
+        self.assertEqual(len(BASE_PROFILES), len(DAIMYO_TAGS) + 13)
         self.assertEqual(len(PROFILES), len(BASE_PROFILES) * len(DLC_PROFILE_VARIANTS))
 
     def test_legacy_bom_alias_is_byte_exact_and_inactive(self) -> None:
@@ -810,10 +810,15 @@ class MissionProfileTests(unittest.TestCase):
         rendered = render_fingerprint()
         parse_text(rendered)
         self.assertIn("has_mission = jap_balance_shinokosho", rendered)
+        self.assertIn(
+            "jxp_a_105_mission_profile_fingerprint_valid_trigger = yes", rendered
+        )
         self.assertIn("has_mission = jxp_mission_cjp_three_teachings_register", rendered)
-        self.assertIn("has_mission = jxp_mission_ejp_restore_daijokan", rendered)
+        self.assertIn("has_mission = jxp_mission_ejp_repair_kinri", rendered)
         self.assertIn("has_mission = jxp_mission_rfj_oranda_factors", rendered)
         self.assertIn("has_mission = jxp_mission_wak_letters_of_black_current", rendered)
+        self.assertIn("jxp_a_105_profile_commercial_council_trigger = yes", rendered)
+        self.assertIn("has_mission = jxp_a_buddhist_woodblocks_scriptures", rendered)
         self.assertIn("has_mission = jxp_mission_mri_aki_kokujin_league", rendered)
         self.assertIn("has_mission = building_alliances", rendered)
         self.assertIn("has_mission = high_income_mission", rendered)

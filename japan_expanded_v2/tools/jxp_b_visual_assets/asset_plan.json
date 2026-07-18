@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "generator": "OpenAI ImageGen built-in",
+  "style_reference": {
+    "game": "Europa Universalis IV 1.37.5",
+    "rule": "Warm monochrome sepia ink etching on aged parchment, dense cross-hatching, historically grounded sixteenth-to-eighteenth-century East Asian people and material culture, panoramic action composed for a centered 512x132 crop, no text, letters, flags, logos, modern objects, fantasy motifs, frame, or watermark.",
+    "vanilla_reference": "D:/Steam/steamapps/common/Europa Universalis IV/gfx/event_pictures",
+    "project_reference": "japan_expanded_v2_map/tools/jxp_asset_builder/previews/event_pictures_contact_sheet.png"
+  },
+  "reserved_non_event_sprites": [
+    {
+      "sprite": "GFX_jxp_gov_issue_sword_hunt",
+      "file": "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_gov_issue_sword_hunt.dds",
+      "class": "82x82 government-interaction icon",
+      "disposition": "保留，不接入事件画；刀狩令现由具有防重复门槛的国家决议承载，重新增设同名政府互动会绕过既有原版幕府排除契约。"
+    },
+    {
+      "sprite": "GFX_jxp_japanese_polity_badge",
+      "file": "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_japanese_polity_badge.dds",
+      "class": "82x82 government-mechanic badge",
+      "disposition": "保留给未来原生政府机制页眉或互动入口；其纵横比与透明图标构图不符合 512x132 事件画规格。"
+    },
+    {
+      "sprite": "GFX_jxp_route_seal",
+      "file": "gfx/interface/government_mechanics/jxp_japanese_polity/jxp_route_seal.dds",
+      "class": "82x82 route-interaction seal",
+      "disposition": "保留给未来路线确认互动；不为消耗素材而新增无玩法必要的按钮，也不将透明印章强行拉伸为事件背景。"
+    }
+  ],
+  "events": [
+    {
+      "asset": "jxp_b_new_yamato_assembly",
+      "theme": "新大和殖民议会与社会建构",
+      "prompt": "Japanese colonial elders, samurai captains, farmers, artisans, Buddhist clergy, and port merchants debate a common charter inside an overseas timber assembly hall, with survey maps, rice ledgers, a distant Japanese-style harbor town, and cultivated frontier beyond the veranda.",
+      "event_ids": ["jxp_new_yamato.1", "jxp_new_yamato.2", "jxp_new_yamato.3", "jxp_new_yamato.4", "jxp_new_yamato.5", "jxp_new_yamato.6", "jxp_new_yamato.7", "jxp_new_yamato.8", "jxp_new_yamato.9", "jxp_new_yamato.10", "jxp_new_yamato.11", "jxp_new_yamato.12", "jxp_new_yamato.13", "jxp_new_yamato.14", "jxp_new_yamato.15", "jxp_new_yamato.16", "jxp_new_yamato.17", "jxp_new_yamato.18", "jxp_new_yamato.19", "jxp_new_yamato.20"]
+    },
+    {
+      "asset": "jxp_b_chartered_company",
+      "theme": "敕许海外会社的经营、协商与危机",
+      "prompt": "A Japanese chartered overseas company council in a busy fortified port, company factors and local brokers compare cargo tallies, maps, sealed charters, account books, and abacus counters while warehouses, rice bales, armed guards, and ocean-going ships fill the background.",
+      "event_ids": ["jxp_colonial_charter.1", "jxp_colonial_charter.2", "jxp_b_company.1", "jxp_b_company.2", "jxp_b_company.3", "jxp_b_company.4", "jxp_b_company.5", "jxp_b_company.21", "jxp_b_company.22", "jxp_b_company.23", "jxp_b_company.24", "jxp_b_company.25", "jxp_b_company.41", "jxp_b_company.42", "jxp_b_company.43", "jxp_b_company.44", "jxp_b_company.45", "jxp_b_company.61", "jxp_b_company.62", "jxp_b_company.63", "jxp_b_company.64", "jxp_b_company.65", "jxp_b_company.81", "jxp_b_company.82", "jxp_b_company.83", "jxp_b_company.84", "jxp_b_company.85"]
+    },
+    {
+      "asset": "jxp_b_colonial_independence",
+      "theme": "殖民议会独立与终结宗主统治",
+      "prompt": "Japanese-descended colonial delegates, militia captains, farmers, dockworkers, and indigenous allies gather before a timber assembly house as a broken overlord seal lies beside a new compact, while armed ships and townspeople await the declaration across a broad frontier harbor.",
+      "event_ids": ["jxp_colonial_independence.1", "jxp_colonial_independence.2", "jxp_colonial_independence.3", "jxp_colonial_independence.4", "jxp_colonial_independence.5", "jxp_colonial_independence.6", "jxp_colonial_independence.7", "jxp_colonial_independence.8", "jxp_colonial_independence.9", "jxp_colonial_independence.10", "jxp_colonial_independence.20", "jxp_end_metropole_rule.1", "jxp_end_metropole_rule.2"]
+    },
+    {
+      "asset": "jxp_b_north_pacific_frontier",
+      "theme": "北太平洋边疆共同体",
+      "prompt": "A cold North Pacific frontier council where Japanese settlers, Ainu elders, fishers, hunters, and ship captains negotiate beside a cedar palisade and smoking harbor, with snow mountains, salmon racks, fur bundles, survey ropes, and sturdy coastal vessels.",
+      "event_ids": ["jxp_secondary_colonies.1", "jxp_secondary_colonies.2", "jxp_secondary_colonies.3", "jxp_secondary_colonies.4", "jxp_secondary_colonies.5", "jxp_secondary_colonies.6", "jxp_secondary_colonies.7", "jxp_secondary_colonies.8", "jxp_secondary_colonies.9", "jxp_secondary_colonies.10", "jxp_secondary_colonies.11", "jxp_secondary_colonies.12", "jxp_secondary_colonies.13", "jxp_secondary_colonies.14", "jxp_secondary_colonies.15", "jxp_secondary_colonies.16"]
+    },
+    {
+      "asset": "jxp_b_southern_port_league",
+      "theme": "南方港市联盟",
+      "prompt": "A Japanese-led southern port league meets beneath an open tropical guild hall, Japanese magistrates, Ryukyuan and Southeast Asian brokers, sailors, artisans, and local elders deliberate over harbor rules as junks, Japanese ships, spice bales, canals, and tiled warehouses stretch behind them.",
+      "event_ids": ["jxp_secondary_colonies.101", "jxp_secondary_colonies.102", "jxp_secondary_colonies.103", "jxp_secondary_colonies.104", "jxp_secondary_colonies.105", "jxp_secondary_colonies.106", "jxp_secondary_colonies.107", "jxp_secondary_colonies.108", "jxp_secondary_colonies.109", "jxp_secondary_colonies.110", "jxp_secondary_colonies.111", "jxp_secondary_colonies.112", "jxp_secondary_colonies.113", "jxp_secondary_colonies.114", "jxp_secondary_colonies.115", "jxp_secondary_colonies.116", "jxp_secondary_colonies.117", "jxp_secondary_colonies.118"]
+    },
+    {
+      "asset": "jxp_b_oceanic_league",
+      "theme": "大洋岛屿联盟",
+      "prompt": "Japanese settlers and Pacific Island navigators hold a maritime league council on a broad shore, exchanging shell charts, knotted route cords, timber tallies, and a sea map while double-hulled canoes, Japanese coastal ships, breadfruit groves, fishing villages, and distant volcanic islands fill the horizon.",
+      "event_ids": ["jxp_secondary_colonies.201", "jxp_secondary_colonies.202", "jxp_secondary_colonies.203", "jxp_secondary_colonies.204", "jxp_secondary_colonies.205", "jxp_secondary_colonies.206", "jxp_secondary_colonies.207", "jxp_secondary_colonies.208", "jxp_secondary_colonies.209", "jxp_secondary_colonies.210", "jxp_secondary_colonies.211", "jxp_secondary_colonies.212", "jxp_secondary_colonies.213", "jxp_secondary_colonies.214", "jxp_secondary_colonies.215", "jxp_secondary_colonies.216"]
+    },
+    {
+      "asset": "jxp_b_transpacific_federation",
+      "theme": "环太平洋联邦议政",
+      "prompt": "A trans-Pacific federal congress of Japanese, Ainu, Pacific Islander, American indigenous, and mixed colonial delegates convenes in a large timber hall overlooking a many-masted harbor, debating a map linking both shores of the ocean with sealed compacts, navigation instruments, and provincial tallies.",
+      "event_ids": ["jxp_transpacific_state.1", "jxp_transpacific_state.2", "jxp_transpacific_state.3", "jxp_transpacific_state.4", "jxp_transpacific_state.10", "jxp_transpacific_state.11", "jxp_transpacific_state.12", "jxp_transpacific_state.13", "jxp_transpacific_state.14", "jxp_transpacific_state.15", "jxp_transpacific_state.16", "jxp_transpacific_state.17", "jxp_transpacific_state.18", "jxp_transpacific_state.19", "jxp_transpacific_state.20", "jxp_transpacific_state.21", "jxp_transpacific_state.22", "jxp_transpacific_state.23", "jxp_transpacific_state.24", "jxp_transpacific_state.25", "jxp_transpacific_state.26", "jxp_transpacific_state.27"]
+    },
+    {
+      "asset": "jxp_b_korea_campaign",
+      "theme": "朝鲜战役、军需与占领危机",
+      "prompt": "A late Sengoku Japanese campaign column advances through a Korean river valley, samurai commanders study a field map with Korean terrain guides while ashigaru, packhorses, siege carpenters, supply boats, a walled town, mountain forts, and smoke from contested crossings extend across the scene.",
+      "event_ids": ["jxp_korea_campaign.100", "jxp_korea_campaign.101", "jxp_korea_campaign.102", "jxp_korea_campaign.103", "jxp_korea_campaign.104", "jxp_korea_campaign.105", "jxp_korea_campaign.106", "jxp_korea_campaign.107", "jxp_korea_campaign.108", "jxp_korea_campaign.109", "jxp_korea_campaign.110", "jxp_korea_campaign.111", "jxp_korea_campaign.112", "jxp_korea_campaign.113", "jxp_korea_campaign.114", "jxp_korea_campaign.115", "jxp_korea_campaign.116", "jxp_korea_campaign.117", "jxp_korea_campaign.118", "jxp_korea_campaign.119", "jxp_korea_campaign.180"]
+    },
+    {
+      "asset": "jxp_b_korea_reconciliation",
+      "theme": "战后二十年日韩和解",
+      "prompt": "Japanese and Korean envoys conduct a solemn postwar reconciliation in a restored frontier hall, exchanging sealed registers, hostages lists, trade permits, and memorial tablets while interpreters, monks, scholars, merchants, returned families, and rebuilding townspeople gather peacefully outside.",
+      "event_ids": ["jxp_korea_campaign.200", "jxp_korea_campaign.201", "jxp_korea_campaign.202", "jxp_korea_campaign.203", "jxp_korea_campaign.204", "jxp_korea_campaign.205"]
+    },
+    {
+      "asset": "jxp_b_mandate_court",
+      "theme": "奉天路线与天朝朝廷",
+      "prompt": "A Japanese conqueror and his East Asian ministers receive the imperial seal and tribute registers in a grand Ming-style audience court, with civil officials, military retainers, ritual vessels, maps of provinces, petitioners, palace roofs, and a disciplined ceremonial procession.",
+      "event_ids": ["jxp_b_china_endgames.10", "jxp_b_china_depth.601", "jxp_b_china_depth.602", "jxp_b_china_depth.603", "jxp_b_china_depth.604", "jxp_b_china_depth.605"]
+    },
+    {
+      "asset": "jxp_b_maritime_order",
+      "theme": "大陆海洋秩序与港口联盟",
+      "prompt": "Japanese admirals, Chinese maritime officials, Korean envoys, Ryukyuan brokers, Southeast Asian merchants, and ship captains plan a new maritime order around a large sea chart in a fortified treaty port, surrounded by cargo tallies, harbor towers, warehouses, junks, Japanese ships, and a crowded roadstead.",
+      "event_ids": ["jxp_b_china_endgames.11", "jxp_b_china_endgames.12", "jxp_b_china_depth.611", "jxp_b_china_depth.612", "jxp_b_china_depth.613", "jxp_b_china_depth.614", "jxp_b_china_depth.615", "jxp_b_china_depth.621", "jxp_b_china_depth.622", "jxp_b_china_depth.623", "jxp_b_china_depth.624", "jxp_b_china_depth.625"]
+    },
+    {
+      "asset": "jxp_b_postconquest_governance",
+      "theme": "战后地方治理与归常",
+      "prompt": "Japanese and local magistrates establish post-conquest civil government beneath a temporary open bureau, reviewing cadastral maps, tax registers, petitions, and reconstruction plans while soldiers stand down, laborers repair walls and bridges, granaries reopen, and townspeople return to the market.",
+      "event_ids": ["jxp_b_governance.100", "jxp_b_governance.101", "jxp_b_governance.102", "jxp_b_governance.103"]
+    }
+  ]
+}

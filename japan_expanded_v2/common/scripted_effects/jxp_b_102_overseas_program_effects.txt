@@ -43,7 +43,6 @@ jxp_b_102_restore_colonial_successor_identity_effect = {
 jxp_b_102_overseas_program_startup_migration_effect = {
 	if = {
 		limit = { jxp_b_102_needs_startup_migration_trigger = yes }
-		set_country_flag = jxp_b_102_overseas_program_migrated
 		jxp_b_102_restore_colonial_successor_identity_effect = yes
 		if = {
 			limit = {
@@ -58,6 +57,12 @@ jxp_b_102_overseas_program_startup_migration_effect = {
 		if = {
 			limit = { has_country_flag = jxp_iface_b99_china_campaign_requested }
 			jxp_b_100_accept_b99_china_campaign_effect = yes
+		}
+		if = {
+			limit = { jxp_b_110_needs_colonial_depth_migration_trigger = yes }
+			jxp_b_reconcile_metropole_legacy = yes
+			jxp_b_set_colonial_faction_balance_effect = yes
+			set_country_flag = jxp_b_110_colonial_depth_migration_pending
 		}
 	}
 	if = {
@@ -89,6 +94,61 @@ jxp_b_102_overseas_program_startup_migration_effect = {
 		}
 		set_country_flag = jxp_b_101_korea_monitor_scheduled
 		country_event = { id = jxp_korea_campaign.941 days = 30 }
+	}
+}
+
+jxp_b_102_finalize_overseas_program_startup_migration_effect = {
+	# Commit the base marker only after all A-owned refresh interfaces have
+	# reached their postconditions. Non-successors have no colonial registry.
+	# The A registry only knows the original TPF constitution. If an existing
+	# save already selected a B-owned alternative (or dissolved the federation),
+	# retire the compatibility default after A has consumed its handshake.
+	if = {
+		limit = {
+			tag = TPF
+			has_reform = jxp_b_two_ocean_federation_reform
+			OR = {
+				has_country_flag = jxp_b_tpf_federation_dissolved
+				has_reform = jxp_b_114_old_world_directed_federation_reform
+				has_reform = jxp_b_114_overseas_rights_confederation_reform
+				has_reform = jxp_b_114_two_ocean_directorate_reform
+			}
+		}
+		remove_government_reform = jxp_b_two_ocean_federation_reform
+		regenerate_government_mechanics = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_102_overseas_program_migrated }
+			OR = {
+				jxp_b_110_colonial_depth_postcondition_trigger = yes
+				AND = {
+					NOT = { jxp_b_102_is_colonial_successor_trigger = yes }
+					NOT = {
+						OR = {
+							has_country_flag = jxp_iface_b_nya_needs_mission_refresh
+							has_country_flag = jxp_iface_b_nya_needs_idea_refresh
+							has_country_flag = jxp_iface_b_nya_needs_government_registry
+							has_country_flag = jxp_iface_b_secondary_needs_mission_refresh
+							has_country_flag = jxp_iface_b_secondary_needs_idea_refresh
+							has_country_flag = jxp_iface_b_secondary_needs_government_registry
+							has_country_flag = jxp_iface_b_tpf_needs_mission_refresh
+							has_country_flag = jxp_iface_b_tpf_needs_idea_refresh
+							has_country_flag = jxp_iface_b_tpf_needs_government_registry
+						}
+					}
+				}
+			}
+		}
+		set_country_flag = jxp_b_102_overseas_program_migrated
+	}
+	if = {
+		limit = {
+			has_country_flag = jxp_b_110_colonial_depth_migration_pending
+			jxp_b_110_colonial_depth_postcondition_trigger = yes
+		}
+		clr_country_flag = jxp_b_110_colonial_depth_migration_pending
+		set_country_flag = jxp_b_110_colonial_depth_migrated
 	}
 }
 

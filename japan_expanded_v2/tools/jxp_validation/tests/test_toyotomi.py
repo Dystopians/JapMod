@@ -48,6 +48,20 @@ class ToyotomiContractTests(unittest.TestCase):
         self.assertNotIn("add_government_reform = daimyo", source)
         self.assertNotIn("government = republic", source)
 
+    def test_five_regents_founder_layer_does_not_duplicate_tier_one(self) -> None:
+        source = (
+            MAIN_ROOT
+            / "common/government_reforms/jxp_28_founder_house_reforms.txt"
+        ).read_text(encoding="utf-8")
+        block = source.split(
+            "jxp_reform_founder_toyotomi_five_regents = {", 1
+        )[1].split("\njxp_reform_founder_tkg_mikawa_fudai_code = {", 1)[0]
+        self.assertIn("nobles_loyalty_modifier = 0.10", block)
+        self.assertIn("advisor_pool = 1", block)
+        self.assertIn("jxp_toyotomi_regents_council = yes", block)
+        self.assertNotIn("governing_capacity_modifier = 0.10", block)
+        self.assertNotIn("global_tax_modifier = 0.05", block)
+
     def test_settsu_early_handoff_is_rejected(self) -> None:
         plan = json.loads(MAP_PLAN.read_text(encoding="utf-8"))
         mutated = deepcopy(plan)
@@ -120,12 +134,15 @@ class ToyotomiContractTests(unittest.TestCase):
     def test_toyotomi_profile_losing_shared_slot_is_rejected(self) -> None:
         if not (GAME_ROOT / "launcher-settings.json").is_file():
             self.skipTest("pinned EU4 1.37.5 game root is not available")
-        mission_file = MAIN_ROOT / "missions/jxp_japan_missions.txt"
+        mission_file = MAIN_ROOT / "missions/zzz_jxp_a_105_socioeconomic_missions.txt"
         original = mission_file.read_text(encoding="utf-8")
-        marker = "\t\t\ttag = TOY\n"
+        marker = "\tpotential = { jxp_a_105_profile_toyotomi_trigger = yes }\n"
         self.assertIn(marker, original)
         try:
-            mission_file.write_text(original.replace(marker, "", 1), encoding="utf-8")
+            mission_file.write_text(
+                original.replace(marker, "\tpotential = { always = no }\n", 1),
+                encoding="utf-8",
+            )
             result = check_toyotomi_history(ValidationContext(MAIN_ROOT), GAME_ROOT)
             self.assertIn("toyotomi.mission_profile", _codes(result))
         finally:

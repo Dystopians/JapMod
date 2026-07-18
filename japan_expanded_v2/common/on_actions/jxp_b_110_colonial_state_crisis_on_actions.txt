@@ -1,0 +1,3 @@
+on_yearly_pulse = {
+	events = { jxp_colonial_state_crisis.50 }
+}

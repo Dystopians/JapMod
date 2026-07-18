@@ -3,6 +3,10 @@ cb_jxp_b_100_claim_mandate = {
 
 	prerequisites_self = {
 		jxp_b_100_can_use_mandate_acquisition_cb_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_mandate_war_ready_trigger = yes
+		}
 	}
 
 	prerequisites = {
@@ -21,6 +25,10 @@ cb_jxp_b_100_rites_sphere = {
 
 	prerequisites_self = {
 		jxp_b_100_can_use_rites_cb_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_rites_war_ready_trigger = yes
+		}
 	}
 
 	prerequisites = {
@@ -45,6 +53,10 @@ cb_jxp_b_100_break_mandate = {
 
 	prerequisites_self = {
 		jxp_b_100_can_use_break_cb_trigger = yes
+		OR = {
+			ai = no
+			jxp_b_118_ai_mandate_war_ready_trigger = yes
+		}
 	}
 
 	prerequisites = {

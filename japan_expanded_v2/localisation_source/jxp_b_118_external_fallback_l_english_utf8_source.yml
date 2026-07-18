@@ -1,0 +1,6 @@
+l_english:
+ jxp_b_118_review_external_sailing_orders_title:0 "查阅外海行略"
+ jxp_b_118_review_external_sailing_orders_desc:0 "翻阅水师、商馆与朝仪诸司合编的外海章程，了解不同海图与制度条件下的替代办法。"
+ jxp_b_external_fallbacks.1.t:0 "外海行略"
+ jxp_b_external_fallbacks.1.d:0 "若远洋海图展现的是未曾记载的新大陆，殖民继承国与公司诸司将以港口、航程与彼岸腹地判断事业可行与否，不会拘泥于加利福尼亚或阿拉斯加等旧称。若未行天朝成制，日本只能凭使节、贡贸与诸国承认建立朝仪圈，并不因此自称天朝皇帝。即使没有更细密的日本地图或额外的殖民、阶层制度，这些殖民政务仍会沿用原有港口、国力与地方盟约门槛；无法采用的专门制度则以有期限的政务安排代替。"
+ jxp_b_external_fallbacks.1.a:0 "因海图与时制而定，不作虚名。"

@@ -1,0 +1,35 @@
+jxp_b_115_clear_external_route_state_effect = {
+	clr_country_flag = jxp_iface_b_external_capstone_complete
+	clr_country_flag = jxp_b_115_open_strategy_chosen
+	clr_country_flag = jxp_b_115_open_main_trade
+	clr_country_flag = jxp_b_115_open_main_navy
+	clr_country_flag = jxp_b_115_open_main_settlement
+	clr_country_flag = jxp_b_115_open_secondary_trade
+	clr_country_flag = jxp_b_115_open_secondary_navy
+	clr_country_flag = jxp_b_115_open_secondary_settlement
+
+	clr_country_flag = jxp_b_115_uncommitted_interaction_unlocked
+	clr_country_flag = jxp_b_115_sakoku_interaction_unlocked
+	clr_country_flag = jxp_b_115_buddhist_interaction_unlocked
+	clr_country_flag = jxp_b_115_kirishitan_interaction_unlocked
+	clr_country_flag = jxp_b_115_confucian_interaction_unlocked
+	clr_country_flag = jxp_b_115_imperial_interaction_unlocked
+	clr_country_flag = jxp_b_115_reformed_interaction_unlocked
+	clr_country_flag = jxp_b_115_kaikyo_interaction_unlocked
+	clr_country_flag = jxp_b_115_ikko_interaction_unlocked
+	clr_country_flag = jxp_b_115_wokou_interaction_unlocked
+	remove_country_modifier = jxp_b_115_external_interaction_cooldown
+	remove_country_modifier = jxp_b_115_open_naval_patrol
+	remove_country_modifier = jxp_b_115_uncommitted_external_capstone
+	remove_country_modifier = jxp_b_115_sakoku_external_capstone
+	remove_country_modifier = jxp_b_115_open_external_capstone
+	remove_country_modifier = jxp_b_115_buddhist_external_capstone
+	remove_country_modifier = jxp_b_115_kirishitan_external_capstone
+	remove_country_modifier = jxp_b_115_confucian_external_capstone
+	remove_country_modifier = jxp_b_115_imperial_external_capstone
+	remove_country_modifier = jxp_b_115_reformed_external_capstone
+	remove_country_modifier = jxp_b_115_kaikyo_external_capstone
+	remove_country_modifier = jxp_b_115_ikko_external_capstone
+	remove_country_modifier = jxp_b_115_wokou_external_capstone
+	remove_country_modifier = jxp_b_115_toyotomi_external_capstone
+}

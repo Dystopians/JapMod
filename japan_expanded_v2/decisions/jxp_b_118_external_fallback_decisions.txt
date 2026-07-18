@@ -1,0 +1,20 @@
+country_decisions = {
+	jxp_b_118_review_external_sailing_orders = {
+		major = no
+		potential = {
+			ai = no
+			NOT = { has_country_flag = jxp_iface_b_external_capstone_complete }
+			OR = {
+				jxp_is_japanese_polity_trigger = yes
+				tag = NYA
+				tag = HKK
+				tag = NJF
+				tag = OIA
+				tag = TPF
+			}
+		}
+		allow = { always = yes }
+		effect = { country_event = { id = jxp_b_external_fallbacks.1 } }
+		ai_will_do = { factor = 0 }
+	}
+}

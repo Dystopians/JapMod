@@ -1,0 +1,201 @@
+namespace = jxp_colonial_state_crisis
+
+country_event = {
+	id = jxp_colonial_state_crisis.50
+	title = none
+	desc = none
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		normal_or_historical_nations = yes
+		is_year = 1500
+		has_any_disaster = no
+		OR = { NOT = { stability = 0 } num_of_loans = 4 war_exhaustion = 6 }
+		OR = {
+			AND = { tag = NYA NOT = { has_country_flag = jxp_b_nya_crisis_active } NOT = { has_country_flag = jxp_b_nya_crisis_resolved } }
+			AND = { tag = HKK NOT = { has_country_flag = jxp_b_hkk_crisis_active } NOT = { has_country_flag = jxp_b_hkk_crisis_resolved } }
+			AND = { tag = NJF NOT = { has_country_flag = jxp_b_njf_crisis_active } NOT = { has_country_flag = jxp_b_njf_crisis_resolved } }
+			AND = { tag = OIA NOT = { has_country_flag = jxp_b_oia_crisis_active } NOT = { has_country_flag = jxp_b_oia_crisis_resolved } }
+			AND = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_crisis_active } NOT = { has_country_flag = jxp_b_tpf_crisis_resolved } }
+		}
+	}
+	immediate = {
+		if = { limit = { tag = NYA } country_event = { id = jxp_colonial_state_crisis.1 days = 1 } }
+		else_if = { limit = { tag = HKK } country_event = { id = jxp_colonial_state_crisis.11 days = 1 } }
+		else_if = { limit = { tag = NJF } country_event = { id = jxp_colonial_state_crisis.21 days = 1 } }
+		else_if = { limit = { tag = OIA } country_event = { id = jxp_colonial_state_crisis.31 days = 1 } }
+		else_if = { limit = { tag = TPF } country_event = { id = jxp_colonial_state_crisis.41 days = 1 } }
+	}
+	option = { name = "OK" }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.1
+	title = "jxp_colonial_state_crisis.1.t"
+	desc = "jxp_colonial_state_crisis.1.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.1.a" set_country_flag = jxp_b_nya_crisis_active set_country_flag = jxp_b_nya_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.3 days = 365 } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.2
+	title = "jxp_colonial_state_crisis.2.t"
+	desc = "jxp_colonial_state_crisis.2.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.2.a" clr_country_flag = jxp_b_nya_crisis_active clr_country_flag = jxp_b_nya_crisis_pulse_scheduled }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.3
+	title = "jxp_colonial_state_crisis.3.t"
+	desc = "jxp_colonial_state_crisis.3.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { tag = NYA has_country_flag = jxp_b_nya_crisis_active }
+	immediate = { clr_country_flag = jxp_b_nya_crisis_pulse_scheduled }
+	option = { name = "jxp_colonial_state_crisis.3.a" add_treasury = -75 add_prestige = 2 jxp_b_91_add_compact_5_effect = yes }
+	option = { name = "jxp_colonial_state_crisis.3.b" add_stability = -1 add_treasury = 75 jxp_b_91_subtract_compact_5_effect = yes }
+	after = { if = { limit = { has_country_flag = jxp_b_nya_crisis_active NOT = { has_country_flag = jxp_b_nya_crisis_pulse_scheduled } } set_country_flag = jxp_b_nya_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.3 days = 365 } } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.11
+	title = "jxp_colonial_state_crisis.11.t"
+	desc = "jxp_colonial_state_crisis.11.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.11.a" set_country_flag = jxp_b_hkk_crisis_active set_country_flag = jxp_b_hkk_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.13 days = 365 } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.12
+	title = "jxp_colonial_state_crisis.12.t"
+	desc = "jxp_colonial_state_crisis.12.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.12.a" clr_country_flag = jxp_b_hkk_crisis_active clr_country_flag = jxp_b_hkk_crisis_pulse_scheduled }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.13
+	title = "jxp_colonial_state_crisis.13.t"
+	desc = "jxp_colonial_state_crisis.13.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { tag = HKK has_country_flag = jxp_b_hkk_crisis_active }
+	immediate = { clr_country_flag = jxp_b_hkk_crisis_pulse_scheduled }
+	option = { name = "jxp_colonial_state_crisis.13.a" add_treasury = -75 add_prestige = 2 jxp_b_91_add_compact_5_effect = yes }
+	option = { name = "jxp_colonial_state_crisis.13.b" add_stability = -1 add_treasury = 75 jxp_b_91_subtract_compact_5_effect = yes }
+	after = { if = { limit = { has_country_flag = jxp_b_hkk_crisis_active NOT = { has_country_flag = jxp_b_hkk_crisis_pulse_scheduled } } set_country_flag = jxp_b_hkk_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.13 days = 365 } } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.21
+	title = "jxp_colonial_state_crisis.21.t"
+	desc = "jxp_colonial_state_crisis.21.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.21.a" set_country_flag = jxp_b_njf_crisis_active set_country_flag = jxp_b_njf_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.23 days = 365 } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.22
+	title = "jxp_colonial_state_crisis.22.t"
+	desc = "jxp_colonial_state_crisis.22.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.22.a" clr_country_flag = jxp_b_njf_crisis_active clr_country_flag = jxp_b_njf_crisis_pulse_scheduled }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.23
+	title = "jxp_colonial_state_crisis.23.t"
+	desc = "jxp_colonial_state_crisis.23.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { tag = NJF has_country_flag = jxp_b_njf_crisis_active }
+	immediate = { clr_country_flag = jxp_b_njf_crisis_pulse_scheduled }
+	option = { name = "jxp_colonial_state_crisis.23.a" add_treasury = -75 add_prestige = 2 jxp_b_91_add_compact_5_effect = yes }
+	option = { name = "jxp_colonial_state_crisis.23.b" add_stability = -1 add_treasury = 75 jxp_b_91_subtract_compact_5_effect = yes }
+	after = { if = { limit = { has_country_flag = jxp_b_njf_crisis_active NOT = { has_country_flag = jxp_b_njf_crisis_pulse_scheduled } } set_country_flag = jxp_b_njf_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.23 days = 365 } } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.31
+	title = "jxp_colonial_state_crisis.31.t"
+	desc = "jxp_colonial_state_crisis.31.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.31.a" set_country_flag = jxp_b_oia_crisis_active set_country_flag = jxp_b_oia_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.33 days = 365 } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.32
+	title = "jxp_colonial_state_crisis.32.t"
+	desc = "jxp_colonial_state_crisis.32.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.32.a" clr_country_flag = jxp_b_oia_crisis_active clr_country_flag = jxp_b_oia_crisis_pulse_scheduled }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.33
+	title = "jxp_colonial_state_crisis.33.t"
+	desc = "jxp_colonial_state_crisis.33.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { tag = OIA has_country_flag = jxp_b_oia_crisis_active }
+	immediate = { clr_country_flag = jxp_b_oia_crisis_pulse_scheduled }
+	option = { name = "jxp_colonial_state_crisis.33.a" add_treasury = -75 add_prestige = 2 jxp_b_91_add_compact_5_effect = yes }
+	option = { name = "jxp_colonial_state_crisis.33.b" add_stability = -1 add_treasury = 75 jxp_b_91_subtract_compact_5_effect = yes }
+	after = { if = { limit = { has_country_flag = jxp_b_oia_crisis_active NOT = { has_country_flag = jxp_b_oia_crisis_pulse_scheduled } } set_country_flag = jxp_b_oia_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.33 days = 365 } } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.41
+	title = "jxp_colonial_state_crisis.41.t"
+	desc = "jxp_colonial_state_crisis.41.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.41.a" set_country_flag = jxp_b_tpf_crisis_active set_country_flag = jxp_b_tpf_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.43 days = 365 } }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.42
+	title = "jxp_colonial_state_crisis.42.t"
+	desc = "jxp_colonial_state_crisis.42.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = { name = "jxp_colonial_state_crisis.42.a" clr_country_flag = jxp_b_tpf_crisis_active clr_country_flag = jxp_b_tpf_crisis_pulse_scheduled }
+}
+
+country_event = {
+	id = jxp_colonial_state_crisis.43
+	title = "jxp_colonial_state_crisis.43.t"
+	desc = "jxp_colonial_state_crisis.43.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { tag = TPF has_country_flag = jxp_b_tpf_crisis_active }
+	immediate = { clr_country_flag = jxp_b_tpf_crisis_pulse_scheduled }
+	option = { name = "jxp_colonial_state_crisis.43.a" add_treasury = -75 add_prestige = 2 jxp_b_91_add_compact_5_effect = yes }
+	option = { name = "jxp_colonial_state_crisis.43.b" add_stability = -1 add_treasury = 75 jxp_b_91_subtract_compact_5_effect = yes }
+	after = { if = { limit = { has_country_flag = jxp_b_tpf_crisis_active NOT = { has_country_flag = jxp_b_tpf_crisis_pulse_scheduled } } set_country_flag = jxp_b_tpf_crisis_pulse_scheduled country_event = { id = jxp_colonial_state_crisis.43 days = 365 } } }
+}

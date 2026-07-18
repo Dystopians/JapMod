@@ -1,0 +1,44 @@
+jxp_b_113_governance_active_trigger = {
+	has_country_flag = jxp_iface_b_postconquest_governance_active
+	OR = {
+		has_country_flag = jxp_b_113_governance_military_commission
+		has_country_flag = jxp_b_113_governance_local_dynasty
+		has_country_flag = jxp_b_113_governance_tribute_trade
+		has_country_flag = jxp_b_113_governance_direct_governor
+	}
+}
+
+jxp_b_113_regional_diplomacy_actor_trigger = {
+	jxp_is_japanese_polity_trigger = yes
+	is_subject = no
+	is_at_war = no
+	has_any_disaster = no
+	stability = 0
+	num_of_ports = 4
+	dip_tech = 7
+	NOT = { is_bankrupt = yes }
+}
+
+jxp_b_113_northern_partner_trigger = {
+	exists = yes
+	NOT = { tag = ROOT }
+	OR = {
+		primary_culture = ainu
+		any_owned_province = {
+			OR = { area = hokkaido_area area = sakhalin_area area = kamchatka_area }
+		}
+	}
+}
+
+jxp_b_113_taiwan_partner_trigger = {
+	exists = yes
+	NOT = { tag = ROOT }
+	any_owned_province = {
+		OR = { area = taiwan_area area = fujian_area }
+	}
+}
+
+jxp_b_113_china_long_program_complete_trigger = {
+	has_country_flag = jxp_iface_b_china_long_program_complete
+	NOT = { has_country_flag = jxp_iface_b_china_long_program_active }
+}

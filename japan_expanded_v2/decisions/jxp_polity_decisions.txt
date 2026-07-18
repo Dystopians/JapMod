@@ -376,6 +376,7 @@ country_decisions = {
 			has_country_flag = jxp_polity_initialized
 			jxp_is_japanese_polity_trigger = yes
 			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { has_country_flag = jxp_path_commercial_council }
 			NOT = { has_country_flag = jxp_reformed_contact }
 		}
 		allow = {
@@ -415,6 +416,7 @@ country_decisions = {
 			has_country_flag = jxp_polity_initialized
 			jxp_is_japanese_polity_trigger = yes
 			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { has_country_flag = jxp_path_commercial_council }
 			NOT = { has_country_flag = jxp_kaikyo_contact }
 		}
 		allow = {
@@ -452,6 +454,7 @@ country_decisions = {
 			has_country_flag = jxp_polity_initialized
 			jxp_is_japanese_polity_trigger = yes
 			NOT = { jxp_has_any_route_trigger = yes }
+			NOT = { has_country_flag = jxp_path_commercial_council }
 		}
 		allow = {
 			is_at_war = no

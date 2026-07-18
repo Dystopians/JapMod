@@ -285,8 +285,12 @@ class FinalStateContractTests(unittest.TestCase):
         _mutate(
             root,
             TRIGGER_FILE,
-            "jxp_final_state_open_trigger = {\n\ttag = JAP\n",
-            "jxp_final_state_open_trigger = {\n\ttag = KJP\n",
+            "jxp_final_state_open_trigger = {\n"
+            "\tROOT = {\n"
+            "\t\ttag = JAP\n",
+            "jxp_final_state_open_trigger = {\n"
+            "\tROOT = {\n"
+            "\t\ttag = KJP\n",
         )
         codes = _codes(root)
         self.assertIn("final_state.trigger_exclusivity", codes)
@@ -298,16 +302,18 @@ class FinalStateContractTests(unittest.TestCase):
             root,
             TRIGGER_FILE,
             "jxp_final_state_sakoku_trigger = {\n"
-            "\ttag = JAP\n"
-            "\thas_country_flag = jxp_path_sakoku\n"
-            "\tNOT = {\n"
-            "\t\tOR = {\n"
-            "\t\t\thas_country_flag = jxp_path_open_trade\n",
+            "\tROOT = {\n"
+            "\t\ttag = JAP\n"
+            "\t\thas_country_flag = jxp_path_sakoku\n"
+            "\t\tNOT = {\n"
+            "\t\t\tOR = {\n"
+            "\t\t\t\thas_country_flag = jxp_path_open_trade\n",
             "jxp_final_state_sakoku_trigger = {\n"
-            "\ttag = JAP\n"
-            "\thas_country_flag = jxp_path_sakoku\n"
-            "\tNOT = {\n"
-            "\t\tOR = {\n",
+            "\tROOT = {\n"
+            "\t\ttag = JAP\n"
+            "\t\thas_country_flag = jxp_path_sakoku\n"
+            "\t\tNOT = {\n"
+            "\t\t\tOR = {\n",
         )
         self.assertIn("final_state.jap_route_vector_exclusivity", _codes(root))
 
@@ -495,7 +501,7 @@ class FinalStateContractTests(unittest.TestCase):
         root = self._temporary_contract()
         _mutate(
             root,
-            Path("missions/jxp_40_final_state_completion_missions.txt"),
+            Path("missions/zzz_jxp_a_105_socioeconomic_missions.txt"),
             "\t\t\tjxp_final_state_uncommitted_power_active_trigger = yes\n",
             "",
         )
@@ -515,7 +521,7 @@ class FinalStateContractTests(unittest.TestCase):
         root = self._temporary_contract()
         _mutate(
             root,
-            Path("missions/jxp_japan_missions.txt"),
+            Path("missions/zzz_jxp_a_105_socioeconomic_missions.txt"),
             "\t\trequired_missions = { jxp_mission_equal_treaties }\n",
             "\t\trequired_missions = { jxp_mission_manila_route }\n",
         )

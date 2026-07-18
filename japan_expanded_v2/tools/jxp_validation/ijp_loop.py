@@ -793,7 +793,7 @@ def _check_effects(document: Document | None, result: CheckResult) -> int:
             clear_index is not None,
             set_index is not None,
             clear_index < set_index if clear_index is not None and set_index is not None else False,
-            _positive(enforce, "set_country_flag", "jxp_ikko_contact"),
+            not _positive(enforce, "set_country_flag", "jxp_ikko_contact"),
             _positive(enforce, "jxp_grant_route_reforms_effect", "yes"),
             _positive(enforce, "jxp_refresh_route_missions_effect", "yes"),
             _positive(enforce, "jxp_ensure_polity_mechanic_effect", "yes"),
@@ -801,7 +801,7 @@ def _check_effects(document: Document | None, result: CheckResult) -> int:
     ):
         result.add(
             "ijp_loop.route_entry_clear",
-            "canonical IJP entry must clear route state before rebuilding Ikko identity",
+            "canonical IJP entry must clear route state before rebuilding Ikko identity without reviving the obsolete contact sentinel",
             EFFECT_FILE.as_posix(),
         )
 

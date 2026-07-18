@@ -1,0 +1,96 @@
+jxp_b_112_south_seas_company = {
+	trade_efficiency = 0.10
+	global_trade_power = 0.05
+	global_ship_cost = 0.05
+}
+
+jxp_b_112_north_sea_company = {
+	global_trade_goods_size_modifier = 0.05
+	global_colonial_growth = 5
+	land_attrition = 0.05
+}
+
+jxp_b_112_taiwan_fujian_company = {
+	global_trade_power = 0.10
+	embargo_efficiency = 0.10
+	state_maintenance_modifier = 0.05
+}
+
+jxp_b_112_oceanic_company = {
+	naval_forcelimit_modifier = 0.10
+	global_ship_cost = -0.05
+	sailors_recovery_speed = 0.10
+}
+
+jxp_b_112_new_world_company = {
+	global_colonial_growth = 10
+	settler_chance = 0.02
+	state_maintenance_modifier = 0.10
+}
+
+jxp_b_112_negotiated_charter = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.10
+	trade_efficiency = 0.05
+}
+
+jxp_b_112_state_charter = {
+	global_trade_power = 0.10
+	global_unrest = 1
+	state_maintenance_modifier = 0.05
+}
+
+jxp_b_112_local_board_charter = {
+	global_unrest = -1
+	global_tax_modifier = -0.05
+	improve_relation_modifier = 0.10
+}
+
+jxp_b_112_company_local_compact = {
+	diplomatic_reputation = 1
+	global_trade_power = 0.05
+}
+
+jxp_b_112_company_local_conflict = {
+	global_unrest = 1
+	improve_relation_modifier = -0.15
+	trade_efficiency = -0.05
+}
+
+jxp_b_112_company_business_review_recent = {
+	global_trade_power = -0.02
+}
+
+jxp_b_112_company_business_investment = {
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.10
+	global_ship_cost = 0.05
+}
+
+jxp_b_112_company_representative_board = {
+	diplomatic_reputation = 1
+	global_unrest = -1
+	global_tax_modifier = -0.05
+}
+
+jxp_b_112_company_restructuring = {
+	interest = 1
+	global_trade_power = -0.10
+	global_unrest = 1
+}
+
+jxp_b_112_company_orderly_withdrawal = {
+	improve_relation_modifier = 0.10
+	global_trade_power = -0.05
+}
+
+jxp_b_112_company_host_concession = {
+	global_trade_power = 0.05
+	global_tax_modifier = 0.05
+	global_unrest = -1
+}
+
+jxp_b_112_company_host_resistance = {
+	global_trade_power = -0.05
+	global_unrest = 1
+}

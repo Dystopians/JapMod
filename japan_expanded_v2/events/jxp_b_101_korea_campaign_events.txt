@@ -64,7 +64,7 @@ country_event = {
 	id = jxp_korea_campaign.100
 	title = "jxp_korea_campaign.100.t"
 	desc = "jxp_korea_campaign.100.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_100_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_100_seen }
@@ -95,7 +95,7 @@ country_event = {
 	id = jxp_korea_campaign.101
 	title = "jxp_korea_campaign.101.t"
 	desc = "jxp_korea_campaign.101.d"
-	picture = NAVAL_MILITARY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_101_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_101_seen }
@@ -129,7 +129,7 @@ country_event = {
 	id = jxp_korea_campaign.102
 	title = "jxp_korea_campaign.102.t"
 	desc = "jxp_korea_campaign.102.d"
-	picture = MERCHANTS_TALKING_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_102_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_102_seen }
@@ -162,7 +162,7 @@ country_event = {
 	id = jxp_korea_campaign.103
 	title = "jxp_korea_campaign.103.t"
 	desc = "jxp_korea_campaign.103.d"
-	picture = ANGRY_MOB_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_103_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_103_seen }
@@ -201,7 +201,7 @@ country_event = {
 	id = jxp_korea_campaign.104
 	title = "jxp_korea_campaign.104.t"
 	desc = "jxp_korea_campaign.104.d"
-	picture = NAVAL_MILITARY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_104_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_104_seen }
@@ -236,7 +236,7 @@ country_event = {
 	id = jxp_korea_campaign.105
 	title = "jxp_korea_campaign.105.t"
 	desc = "jxp_korea_campaign.105.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_105_seen } }
 	immediate = {
@@ -279,7 +279,7 @@ country_event = {
 	id = jxp_korea_campaign.106
 	title = "jxp_korea_campaign.106.t"
 	desc = "jxp_korea_campaign.106.d"
-	picture = BATTLE_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_106_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_106_seen }
@@ -309,7 +309,7 @@ country_event = {
 	id = jxp_korea_campaign.107
 	title = "jxp_korea_campaign.107.t"
 	desc = "jxp_korea_campaign.107.d"
-	picture = PLAGUE_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_107_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_107_seen }
@@ -341,7 +341,7 @@ country_event = {
 	id = jxp_korea_campaign.108
 	title = "jxp_korea_campaign.108.t"
 	desc = "jxp_korea_campaign.108.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_108_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_108_seen }
@@ -375,7 +375,7 @@ country_event = {
 	id = jxp_korea_campaign.109
 	title = "jxp_korea_campaign.109.t"
 	desc = "jxp_korea_campaign.109.d"
-	picture = ANGRY_MOB_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_109_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_109_seen }
@@ -410,7 +410,7 @@ country_event = {
 	id = jxp_korea_campaign.110
 	title = "jxp_korea_campaign.110.t"
 	desc = "jxp_korea_campaign.110.d"
-	picture = CULTURE_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_110_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_110_seen }
@@ -443,7 +443,7 @@ country_event = {
 	id = jxp_korea_campaign.111
 	title = "jxp_korea_campaign.111.t"
 	desc = "jxp_korea_campaign.111.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_111_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_111_seen }
@@ -473,7 +473,7 @@ country_event = {
 	id = jxp_korea_campaign.112
 	title = "jxp_korea_campaign.112.t"
 	desc = "jxp_korea_campaign.112.d"
-	picture = BATTLE_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_112_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_112_seen }
@@ -507,7 +507,7 @@ country_event = {
 	id = jxp_korea_campaign.113
 	title = "jxp_korea_campaign.113.t"
 	desc = "jxp_korea_campaign.113.d"
-	picture = BANKRUPTCY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_113_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_113_seen }
@@ -533,7 +533,7 @@ country_event = {
 	id = jxp_korea_campaign.114
 	title = "jxp_korea_campaign.114.t"
 	desc = "jxp_korea_campaign.114.d"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_114_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_114_seen }
@@ -569,7 +569,7 @@ country_event = {
 	id = jxp_korea_campaign.115
 	title = "jxp_korea_campaign.115.t"
 	desc = "jxp_korea_campaign.115.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_115_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_115_seen }
@@ -604,7 +604,7 @@ country_event = {
 	id = jxp_korea_campaign.116
 	title = "jxp_korea_campaign.116.t"
 	desc = "jxp_korea_campaign.116.d"
-	picture = SIEGE_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_116_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_116_seen }
@@ -643,7 +643,7 @@ country_event = {
 	id = jxp_korea_campaign.117
 	title = "jxp_korea_campaign.117.t"
 	desc = "jxp_korea_campaign.117.d"
-	picture = NAVAL_MILITARY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_117_seen } }
 	immediate = { set_country_flag = jxp_b_101_korea_event_117_seen }
@@ -669,6 +669,70 @@ country_event = {
 			jxp_b_101_clamp_korea_preparation_variables_effect = yes
 		}
 	}
+	after = { country_event = { id = jxp_korea_campaign.118 days = 150 } }
+}
+
+# 118: Tsushima brokers try to reopen an armistice channel.
+country_event = {
+	id = jxp_korea_campaign.118
+	title = "jxp_korea_campaign.118.t"
+	desc = "jxp_korea_campaign.118.d"
+	picture = jxp_b_korea_campaign_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_118_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_118_seen }
+	option = {
+		name = "jxp_korea_campaign.118.a"
+		ai_chance = { factor = 70 modifier = { factor = 1.5 war_exhaustion = 5 } }
+		add_dip_power = -50
+		add_country_modifier = { name = jxp_b_101_peace_feelers duration = 1095 }
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_expedition_support value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.118.b"
+		ai_chance = { factor = 30 modifier = { factor = 0.25 war_exhaustion = 5 } }
+		add_prestige = 5
+		add_war_exhaustion = 1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	after = { country_event = { id = jxp_korea_campaign.119 days = 150 } }
+}
+
+# 119: anti-war petitions reach the home government.
+country_event = {
+	id = jxp_korea_campaign.119
+	title = "jxp_korea_campaign.119.t"
+	desc = "jxp_korea_campaign.119.d"
+	picture = jxp_b_korea_campaign_eventPicture
+	is_triggered_only = yes
+	trigger = { jxp_b_101_korea_war_active_trigger = yes NOT = { has_country_flag = jxp_b_101_korea_event_119_seen } }
+	immediate = { set_country_flag = jxp_b_101_korea_event_119_seen }
+	option = {
+		name = "jxp_korea_campaign.119.a"
+		ai_chance = { factor = 65 modifier = { factor = 1.5 war_exhaustion = 5 } }
+		add_adm_power = -50
+		add_war_exhaustion = -1
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = -5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
+	option = {
+		name = "jxp_korea_campaign.119.b"
+		ai_chance = { factor = 35 modifier = { factor = 0.5 war_exhaustion = 5 } }
+		add_stability = -1
+		add_prestige = 5
+		hidden_effect = {
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+			jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		}
+	}
 }
 
 # Six postwar settlements. None transfers provinces, creates cores, or grants claims.
@@ -676,7 +740,7 @@ country_event = {
 	id = jxp_korea_campaign.180
 	title = "jxp_korea_campaign.180.t"
 	desc = "jxp_korea_campaign.180.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_korea_campaign_eventPicture
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = jxp_b_101_korea_war_started
@@ -745,5 +809,146 @@ country_event = {
 		}
 		custom_tooltip = jxp_b_101_korea_disaster_outcome_tt
 		hidden_effect = { jxp_b_101_korea_outcome_disaster_effect = yes }
+	}
+}
+
+# Twenty years after the settlement, six bounded steps can restore regular
+# relations. A renewed war postpones the current step rather than skipping it.
+country_event = {
+	id = jxp_korea_campaign.200
+	title = "jxp_korea_campaign.200.t"
+	desc = "jxp_korea_campaign.200.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_pending exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_01_done } }
+	option = {
+		name = "jxp_korea_campaign.200.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_treasury = -50
+		add_prestige = 3
+		KOR = { add_prestige = 3 }
+		set_country_flag = jxp_b_101_korea_reconciliation_step_01_done
+		country_event = { id = jxp_korea_campaign.201 days = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.200 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.201
+	title = "jxp_korea_campaign.201.t"
+	desc = "jxp_korea_campaign.201.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_step_01_done exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_02_done } }
+	option = {
+		name = "jxp_korea_campaign.201.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_dip_power = -25
+		add_prestige = 3
+		set_country_flag = jxp_b_101_korea_reconciliation_step_02_done
+		country_event = { id = jxp_korea_campaign.202 days = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.201 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.202
+	title = "jxp_korea_campaign.202.t"
+	desc = "jxp_korea_campaign.202.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_step_02_done exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_03_done } }
+	option = {
+		name = "jxp_korea_campaign.202.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_treasury = -75
+		add_dip_power = 25
+		KOR = { add_dip_power = 25 }
+		set_country_flag = jxp_b_101_korea_reconciliation_step_03_done
+		country_event = { id = jxp_korea_campaign.203 days = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.202 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.203
+	title = "jxp_korea_campaign.203.t"
+	desc = "jxp_korea_campaign.203.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_step_03_done exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_04_done } }
+	option = {
+		name = "jxp_korea_campaign.203.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_dip_power = -50
+		add_prestige = 5
+		KOR = { add_prestige = 5 }
+		set_country_flag = jxp_b_101_korea_reconciliation_step_04_done
+		country_event = { id = jxp_korea_campaign.204 days = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.203 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.204
+	title = "jxp_korea_campaign.204.t"
+	desc = "jxp_korea_campaign.204.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_step_04_done exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_05_done } }
+	option = {
+		name = "jxp_korea_campaign.204.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_adm_power = -25
+		add_dip_power = -25
+		add_prestige = 5
+		KOR = { add_prestige = 5 }
+		set_country_flag = jxp_b_101_korea_reconciliation_step_05_done
+		country_event = { id = jxp_korea_campaign.205 days = 365 }
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.204 days = 365 }
+	}
+}
+
+country_event = {
+	id = jxp_korea_campaign.205
+	title = "jxp_korea_campaign.205.t"
+	desc = "jxp_korea_campaign.205.d"
+	picture = jxp_b_korea_reconciliation_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_b_101_korea_reconciliation_step_05_done exists = KOR NOT = { has_country_flag = jxp_b_101_korea_reconciliation_step_06_done } NOT = { has_country_flag = jxp_iface_b_korea_reconciliation_complete } }
+	option = {
+		name = "jxp_korea_campaign.205.a"
+		trigger = { NOT = { war_with = KOR } }
+		add_prestige = 10
+		add_war_exhaustion = -1
+		KOR = { add_prestige = 10 add_war_exhaustion = -1 }
+		set_country_flag = jxp_b_101_korea_reconciliation_step_06_done
+		set_country_flag = jxp_iface_b_korea_reconciliation_complete
+		clr_country_flag = jxp_b_101_korea_reconciliation_pending
+	}
+	option = {
+		name = "jxp_korea_campaign.reconciliation.defer"
+		trigger = { war_with = KOR }
+		country_event = { id = jxp_korea_campaign.205 days = 365 }
 	}
 }

@@ -1,6 +1,12 @@
 jxp_b_97_is_overseas_colonial_subject_trigger = {
 	jxp_b_96_colonial_origin_trigger = yes
+	NOT = { tag = KOR }
+	NOT = { tag = RYU }
+	NOT = { has_reform = daimyo }
+	NOT = { has_reform = indep_daimyo }
 	capital_scope = {
+		NOT = { region = korea_region }
+		NOT = { region = japan_region }
 		OR = {
 			continent = new_world
 			region = oceanea_region

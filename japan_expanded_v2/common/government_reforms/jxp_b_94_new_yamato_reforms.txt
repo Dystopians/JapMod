@@ -27,7 +27,8 @@ jxp_b_94_frontier_military_republic_reform = {
 	potential = { tag = NYA }
 	modifiers = {
 		global_manpower_modifier = 0.10
-		discipline = 0.025
+		land_forcelimit_modifier = 0.10
+		army_tradition = 0.5
 		stability_cost_modifier = 0.10
 	}
 	custom_attributes = {

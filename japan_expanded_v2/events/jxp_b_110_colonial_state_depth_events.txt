@@ -1,0 +1,221 @@
+namespace = jxp_new_yamato
+
+country_event = {
+	id = jxp_new_yamato.11
+	title = "jxp_new_yamato.11.t"
+	desc = "jxp_new_yamato.11.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.11.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.11.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.12
+	title = "jxp_new_yamato.12.t"
+	desc = "jxp_new_yamato.12.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.12.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.12.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.13
+	title = "jxp_new_yamato.13.t"
+	desc = "jxp_new_yamato.13.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.13.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.13.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.14
+	title = "jxp_new_yamato.14.t"
+	desc = "jxp_new_yamato.14.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.14.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.14.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.15
+	title = "jxp_new_yamato.15.t"
+	desc = "jxp_new_yamato.15.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.15.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.15.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.16
+	title = "jxp_new_yamato.16.t"
+	desc = "jxp_new_yamato.16.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.16.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.16.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.17
+	title = "jxp_new_yamato.17.t"
+	desc = "jxp_new_yamato.17.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.17.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.17.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.18
+	title = "jxp_new_yamato.18.t"
+	desc = "jxp_new_yamato.18.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.18.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.18.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.19
+	title = "jxp_new_yamato.19.t"
+	desc = "jxp_new_yamato.19.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.19.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.19.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_new_yamato.20
+	title = "jxp_new_yamato.20.t"
+	desc = "jxp_new_yamato.20.d"
+	picture = jxp_b_new_yamato_assembly_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_new_yamato.20.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_new_yamato.20.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}

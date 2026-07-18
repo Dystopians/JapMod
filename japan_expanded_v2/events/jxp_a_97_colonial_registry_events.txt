@@ -32,6 +32,9 @@ country_event = {
 		# consume those handshakes only after the migration transaction.
 		jxp_b_102_overseas_program_startup_migration_effect = yes
 		jxp_a_consume_colonial_registry_interfaces_effect = yes
+		# The finalizer commits non-successor migrations immediately and only
+		# commits successor migrations after their registry postconditions hold.
+		jxp_b_102_finalize_overseas_program_startup_migration_effect = yes
 	}
 
 	option = { name = "OK" }

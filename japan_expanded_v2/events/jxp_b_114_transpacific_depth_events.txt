@@ -1,0 +1,375 @@
+namespace = jxp_transpacific_state
+
+country_event = {
+	id = jxp_transpacific_state.11
+	title = "jxp_transpacific_state.11.t"
+	desc = "jxp_transpacific_state.11.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.11.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.11.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.12
+	title = "jxp_transpacific_state.12.t"
+	desc = "jxp_transpacific_state.12.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.12.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.12.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.13
+	title = "jxp_transpacific_state.13.t"
+	desc = "jxp_transpacific_state.13.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.13.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.13.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.14
+	title = "jxp_transpacific_state.14.t"
+	desc = "jxp_transpacific_state.14.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.14.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.14.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.15
+	title = "jxp_transpacific_state.15.t"
+	desc = "jxp_transpacific_state.15.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.15.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.15.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.16
+	title = "jxp_transpacific_state.16.t"
+	desc = "jxp_transpacific_state.16.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.16.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.16.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.17
+	title = "jxp_transpacific_state.17.t"
+	desc = "jxp_transpacific_state.17.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.17.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.17.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.18
+	title = "jxp_transpacific_state.18.t"
+	desc = "jxp_transpacific_state.18.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.18.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.18.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.19
+	title = "jxp_transpacific_state.19.t"
+	desc = "jxp_transpacific_state.19.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.19.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.19.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.20
+	title = "jxp_transpacific_state.20.t"
+	desc = "jxp_transpacific_state.20.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.20.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.20.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.21
+	title = "jxp_transpacific_state.21.t"
+	desc = "jxp_transpacific_state.21.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.21.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.21.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.22
+	title = "jxp_transpacific_state.22.t"
+	desc = "jxp_transpacific_state.22.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.22.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.22.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.23
+	title = "jxp_transpacific_state.23.t"
+	desc = "jxp_transpacific_state.23.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.23.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.23.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.24
+	title = "jxp_transpacific_state.24.t"
+	desc = "jxp_transpacific_state.24.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.24.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.24.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.25
+	title = "jxp_transpacific_state.25.t"
+	desc = "jxp_transpacific_state.25.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.25.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.25.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.26
+	title = "jxp_transpacific_state.26.t"
+	desc = "jxp_transpacific_state.26.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.26.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.26.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_transpacific_state.27
+	title = "jxp_transpacific_state.27.t"
+	desc = "jxp_transpacific_state.27.d"
+	picture = jxp_b_transpacific_federation_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_transpacific_state.27.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_transpacific_state.27.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}

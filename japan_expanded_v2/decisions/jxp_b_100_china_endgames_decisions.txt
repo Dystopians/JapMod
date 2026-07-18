@@ -26,6 +26,10 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 0
+				NOT = { jxp_b_118_ai_china_policy_ready_trigger = yes }
+			}
+			modifier = {
 				factor = 3
 				OR = {
 					has_country_flag = jxp_path_open_trade

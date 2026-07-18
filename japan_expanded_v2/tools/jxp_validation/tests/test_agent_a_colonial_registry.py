@@ -207,8 +207,13 @@ class ColonialCentralRegistryTests(unittest.TestCase):
             "jxp_b_102_overseas_program_startup_migration_effect = yes"
         )
         registry_call = "jxp_a_consume_colonial_registry_interfaces_effect = yes"
+        finalize_call = (
+            "jxp_b_102_finalize_overseas_program_startup_migration_effect = yes"
+        )
         self.assertEqual(1, event.count(migration_call))
+        self.assertEqual(1, event.count(finalize_call))
         self.assertLess(event.index(migration_call), event.index(registry_call))
+        self.assertLess(event.index(registry_call), event.index(finalize_call))
         for forbidden in ("on_monthly_pulse", "every_country", "every_province"):
             self.assertNotIn(forbidden, on_actions + event)
 

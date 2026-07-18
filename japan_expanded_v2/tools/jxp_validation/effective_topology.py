@@ -33,26 +33,29 @@ GENERIC_MISSION_FILES = (
 )
 ROUTE_TAGS = {"KJP", "CJP", "EJP", "RFJ", "SJP", "IJP", "WAK", "TOY"}
 FOUNDATION_MISSIONS = {
-    "jxp_mission_route_inherited_realm",
-    "jxp_mission_route_province_registers",
-    "jxp_mission_route_archipelago_circuit",
-    "jxp_mission_route_two_capitals",
-    "jxp_mission_route_rice_and_silver",
-    "jxp_mission_route_post_station_ledger",
-    "jxp_mission_route_settle_new_constitution",
-    "jxp_mission_route_laws_of_the_new_realm",
-    "jxp_mission_route_renewed_japan",
-    "jxp_mission_route_muster_rolls",
-    "jxp_mission_route_firearm_offices",
-    "jxp_mission_route_rites_of_the_isles",
-    "jxp_mission_route_guard_the_sea_lanes",
+    "jxp_mission_iwami_silver",
+    "jxp_mission_secure_home_domain",
+    "jxp_mission_capital_cities",
+    "jxp_mission_settle_the_realm",
+    "jxp_mission_kyoto_and_edo",
+    "jxp_mission_road_to_kyoto",
+    "jxp_mission_osaka_granary",
+    "jxp_mission_unite_the_isles",
+    "jxp_mission_land_survey_state",
+    "jxp_mission_tanegashima_firearms",
+    "jxp_mission_modern_state",
+    "jxp_mission_massed_volley",
 }
 UNIFIED_CONTINUITY_SERIES = {
-    "jxp_japan_state_missions",
-    "jxp_japan_court_missions",
+    "jxp_a_105_shared_capital_slot_1_missions",
+    "jxp_a_105_shared_capital_slot_2_missions",
 }
-BUDDHIST_REPLACEMENT_SERIES = {
-    f"jxp_a_96_buddhist_slot_{slot}_missions" for slot in range(1, 6)
+COMMERCIAL_COUNCIL_SERIES = {
+    "jxp_a_105_commercial_council_slot_1_missions",
+    "jxp_a_105_commercial_council_slot_2_missions",
+    "jxp_a_105_commercial_council_slot_3_missions",
+    "jxp_shinto_branch_missions",
+    "jxp_japan_uncommitted_horizon_missions",
 }
 
 
@@ -703,14 +706,11 @@ def check_effective_topology(
                 f"{len(occurrences)} definitions; expected exactly one",
             )
             continue
-        if occurrences[0].series_name not in {
-            "jxp_japan_state_missions",
-            "jxp_japan_court_missions",
-        }:
+        if occurrences[0].series_name not in UNIFIED_CONTINUITY_SERIES:
             result.add(
                 "effective.foundation_series",
                 f"foundation mission {mission_id} remains in separate series "
-                f"{occurrences[0].series_name}; expected consolidated state/court series",
+                f"{occurrences[0].series_name}; expected generated shared-capital series",
                 f"mod:{mod_context.relative(occurrences[0].source)}",
                 occurrences[0].line,
             )
@@ -741,10 +741,10 @@ def check_effective_topology(
     total_cross_source_edges = 0
     route_profiles = tuple(profile for profile in PROFILES if profile.tag in ROUTE_TAGS)
     jap_profiles = tuple(profile for profile in PROFILES if profile.tag == "JAP")
-    buddhist_profiles = tuple(
+    commercial_profiles = tuple(
         profile
         for profile in jap_profiles
-        if "jxp_path_buddhist" in profile.flags
+        if "jxp_path_commercial_council" in profile.flags
     )
 
     for profile in PROFILES:
@@ -788,22 +788,20 @@ def check_effective_topology(
             )
 
         active_mod_names = {series.name for series in active_mod}
-        if profile in buddhist_profiles:
-            missing_buddhist = sorted(BUDDHIST_REPLACEMENT_SERIES - active_mod_names)
-            forbidden_continuity = sorted(
-                UNIFIED_CONTINUITY_SERIES & active_mod_names
-            )
-            if missing_buddhist:
+        if profile in commercial_profiles:
+            missing_commercial = sorted(COMMERCIAL_COUNCIL_SERIES - active_mod_names)
+            forbidden_continuity = sorted(UNIFIED_CONTINUITY_SERIES & active_mod_names)
+            if missing_commercial:
                 result.add(
-                    "effective.buddhist_replacement_incomplete",
-                    f"profile {profile.name} lacks Buddhist replacement columns: "
-                    + ", ".join(missing_buddhist),
+                    "effective.commercial_council_incomplete",
+                    f"profile {profile.name} lacks its exact five-series signature: "
+                    + ", ".join(missing_commercial),
                 )
             if forbidden_continuity:
                 result.add(
-                    "effective.buddhist_shared_continuity_active",
-                    f"profile {profile.name} activates shared columns alongside its "
-                    "five-column Buddhist replacement: "
+                    "effective.commercial_shared_continuity_active",
+                    f"profile {profile.name} activates ordinary shared columns alongside "
+                    "its commercial replacement: "
                     + ", ".join(forbidden_continuity),
                 )
         elif not profile.daimyo_stage:
@@ -869,7 +867,7 @@ def check_effective_topology(
                     f"route tag {profile.tag} activates consolidated foundation missions "
                     f"{sorted(active_foundation)}; expected {sorted(FOUNDATION_MISSIONS)}",
                 )
-        elif profile in jap_profiles and profile not in buddhist_profiles:
+        elif profile in jap_profiles and profile not in commercial_profiles:
             if active_foundation != FOUNDATION_MISSIONS:
                 result.add(
                     "effective.jap_foundation_incomplete",
@@ -907,7 +905,7 @@ def check_effective_topology(
             "consolidated_foundation_missions": len(FOUNDATION_MISSIONS),
             "cross_source_edges": total_cross_source_edges,
             "continuity_series": len(UNIFIED_CONTINUITY_SERIES),
-            "buddhist_replacement_series": len(BUDDHIST_REPLACEMENT_SERIES),
+            "commercial_council_series": len(COMMERCIAL_COUNCIL_SERIES),
         }
     )
     result.summary = (

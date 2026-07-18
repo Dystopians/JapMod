@@ -73,6 +73,7 @@ jxp_b_94_form_new_yamato_effect = {
 	set_country_flag = jxp_iface_colonial_self_rule
 	set_country_flag = jxp_b_colonial_society_active
 	clr_country_flag = jxp_b_colonial_society_retired
+	jxp_b_record_metropole_legacy = yes
 	jxp_b_94_clear_japanese_home_paths_effect = yes
 	change_tag = NYA
 	jxp_refresh_route_missions_effect = yes

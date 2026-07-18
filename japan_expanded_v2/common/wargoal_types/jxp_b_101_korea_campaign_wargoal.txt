@@ -5,6 +5,11 @@ jxp_b_101_korean_expedition_wargoal = {
 		badboy_factor = 1.50
 		prestige_factor = 1
 		peace_cost_factor = 1.25
+		deny_annex = yes
+		allowed_provinces = {
+			region = korea_region
+		}
+		prov_desc = JXP_B_101_KOREAN_PROVINCES
 		peace_options = {
 			po_concede_defeat
 			po_demand_provinces
@@ -21,6 +26,11 @@ jxp_b_101_korean_expedition_wargoal = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
+		deny_annex = yes
+		allowed_provinces = {
+			region = korea_region
+		}
+		prov_desc = JXP_B_101_KOREAN_PROVINCES
 		peace_options = {
 			po_concede_defeat
 			po_demand_provinces

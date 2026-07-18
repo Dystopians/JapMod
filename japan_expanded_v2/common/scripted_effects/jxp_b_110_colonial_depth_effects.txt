@@ -1,0 +1,74 @@
+jxp_b_clear_all_metropole_legacies_effect = {
+	clr_country_flag = jxp_b_legacy_undecided
+	clr_country_flag = jxp_b_legacy_closed_country
+	clr_country_flag = jxp_b_legacy_open_country
+	clr_country_flag = jxp_b_legacy_commercial_council
+	clr_country_flag = jxp_b_legacy_buddhist
+	clr_country_flag = jxp_b_legacy_kirishitan
+	clr_country_flag = jxp_b_legacy_confucian
+	clr_country_flag = jxp_b_legacy_imperial
+	clr_country_flag = jxp_b_legacy_reformed
+	clr_country_flag = jxp_b_legacy_sultanate
+	clr_country_flag = jxp_b_legacy_ikko
+	clr_country_flag = jxp_b_legacy_wakou
+	clr_country_flag = jxp_b_legacy_toyotomi
+}
+
+jxp_b_record_metropole_legacy = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_b_metropole_legacy_recorded } }
+		jxp_b_clear_all_metropole_legacies_effect = yes
+		if = { limit = { tag = TOY } set_country_flag = jxp_b_legacy_toyotomi }
+		else_if = { limit = { OR = { has_country_flag = jxp_iface_a_company_state_route has_country_flag = jxp_path_commercial_council } } set_country_flag = jxp_b_legacy_commercial_council }
+		else_if = { limit = { has_country_flag = jxp_path_sakoku } set_country_flag = jxp_b_legacy_closed_country }
+		else_if = { limit = { has_country_flag = jxp_path_open_trade } set_country_flag = jxp_b_legacy_open_country }
+		else_if = { limit = { has_country_flag = jxp_path_buddhist } set_country_flag = jxp_b_legacy_buddhist }
+		else_if = { limit = { OR = { tag = KJP has_country_flag = jxp_path_kirishitan } } set_country_flag = jxp_b_legacy_kirishitan }
+		else_if = { limit = { OR = { tag = CJP has_country_flag = jxp_path_confucian } } set_country_flag = jxp_b_legacy_confucian }
+		else_if = { limit = { OR = { tag = EJP has_country_flag = jxp_path_imperial } } set_country_flag = jxp_b_legacy_imperial }
+		else_if = { limit = { OR = { tag = RFJ has_country_flag = jxp_path_reformed } } set_country_flag = jxp_b_legacy_reformed }
+		else_if = { limit = { OR = { tag = SJP has_country_flag = jxp_path_kaikyo } } set_country_flag = jxp_b_legacy_sultanate }
+		else_if = { limit = { OR = { tag = IJP has_country_flag = jxp_path_ikko } } set_country_flag = jxp_b_legacy_ikko }
+		else_if = { limit = { OR = { tag = WAK has_country_flag = jxp_path_wokou } } set_country_flag = jxp_b_legacy_wakou }
+		else = { set_country_flag = jxp_b_legacy_undecided }
+		set_country_flag = jxp_iface_b_metropole_legacy_recorded
+	}
+}
+
+jxp_b_clear_duplicate_metropole_legacies = {
+	if = { limit = { has_country_flag = jxp_b_legacy_toyotomi } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_toyotomi }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_wakou } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_wakou }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_ikko } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_ikko }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_sultanate } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_sultanate }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_reformed } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_reformed }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_imperial } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_imperial }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_confucian } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_confucian }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_kirishitan } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_kirishitan }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_buddhist } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_buddhist }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_commercial_council } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_commercial_council }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_open_country } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_open_country }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_closed_country } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_closed_country }
+	else_if = { limit = { has_country_flag = jxp_b_legacy_undecided } jxp_b_clear_all_metropole_legacies_effect = yes set_country_flag = jxp_b_legacy_undecided }
+}
+
+jxp_b_reconcile_metropole_legacy = {
+	if = { limit = { has_country_flag = jxp_iface_b_metropole_legacy_recorded } jxp_b_clear_duplicate_metropole_legacies = yes }
+	else = { jxp_b_record_metropole_legacy = yes }
+}
+
+jxp_b_clear_colonial_factions_effect = {
+	clr_country_flag = jxp_b_faction_dominant_assembly
+	clr_country_flag = jxp_b_faction_dominant_company
+	clr_country_flag = jxp_b_faction_dominant_military
+	clr_country_flag = jxp_b_faction_dominant_local
+	clr_country_flag = jxp_b_faction_dominant_royalist
+}
+
+jxp_b_set_colonial_faction_balance_effect = {
+	jxp_b_clear_colonial_factions_effect = yes
+	if = { limit = { jxp_b_91_local_compact_at_least_60_trigger = yes } set_country_flag = jxp_b_faction_dominant_local }
+	else_if = { limit = { jxp_b_91_metropole_control_at_least_60_trigger = yes } set_country_flag = jxp_b_faction_dominant_royalist }
+	else_if = { limit = { has_reform = jxp_b_94_merchant_commonwealth_reform } set_country_flag = jxp_b_faction_dominant_company }
+	else_if = { limit = { OR = { has_reform = jxp_b_94_frontier_military_republic_reform has_reform = jxp_b_95_hkk_frontier_bakufu_reform } } set_country_flag = jxp_b_faction_dominant_military }
+	else = { set_country_flag = jxp_b_faction_dominant_assembly }
+}

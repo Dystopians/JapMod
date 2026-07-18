@@ -16,11 +16,12 @@ LIVE_MOD_ROOT = Path(__file__).resolve().parents[3]
 
 
 class MapScaleProgressionTests(unittest.TestCase):
-    def test_live_mod_closes_all_nineteen_legacy_gates(self) -> None:
+    def test_live_mod_tracks_all_ten_active_semantic_calls(self) -> None:
         result = check_map_scale_progression(ValidationContext(LIVE_MOD_ROOT))
         self.assertEqual([], result.issues)
-        self.assertEqual(len(EXPECTED_CALLS), 19)
-        self.assertEqual(result.metrics["matched_calls"], 19)
+        self.assertEqual(len(EXPECTED_CALLS), 9)
+        self.assertEqual(sum(len(sites) for sites in EXPECTED_CALLS.values()), 10)
+        self.assertEqual(result.metrics["matched_calls"], 10)
         self.assertEqual(
             result.metrics["semantic_contracts"], len(EXPECTED_TRIGGER_BODIES)
         )
@@ -66,13 +67,13 @@ class MapScaleProgressionTests(unittest.TestCase):
                 ).read_text(encoding="utf-8"),
                 encoding="utf-8",
             )
-            mission_destination = root / "missions" / "jxp_japan_missions.txt"
+            mission_destination = root / "missions" / "jxp_11_branching_missions.txt"
             mission_destination.parent.mkdir(parents=True)
             mission_destination.write_text(
-                "jxp_japan_state_missions = {\n"
-                "\tjxp_mission_unite_the_isles = {\n"
+                "jxp_shrine_route_missions = {\n"
+                "\tjxp_mission_kami_castle_towns = {\n"
                 "\t\teffect = {\n"
-                "\t\t\tjxp_has_unite_the_isles_scope_trigger = yes\n"
+                "\t\t\tjxp_has_shrine_castle_town_network_trigger = yes\n"
                 "\t\t}\n"
                 "\t}\n"
                 "}\n",
@@ -100,14 +101,14 @@ class MapScaleProgressionTests(unittest.TestCase):
                 ).read_text(encoding="utf-8"),
                 encoding="utf-8",
             )
-            mission_destination = root / "missions" / "jxp_japan_missions.txt"
+            mission_destination = root / "missions" / "jxp_11_branching_missions.txt"
             mission_destination.parent.mkdir(parents=True)
             mission_destination.write_text(
-                "jxp_japan_state_missions = {\n"
-                "\tjxp_mission_unite_the_isles = {\n"
+                "jxp_shrine_route_missions = {\n"
+                "\tjxp_mission_kami_castle_towns = {\n"
                 "\t\ttrigger = {\n"
                 "\t\t\tNOT = {\n"
-                "\t\t\t\tjxp_has_unite_the_isles_scope_trigger = yes\n"
+                "\t\t\t\tjxp_has_shrine_castle_town_network_trigger = yes\n"
                 "\t\t\t}\n"
                 "\t\t}\n"
                 "\t}\n"

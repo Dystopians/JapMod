@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "captured_from_head": "24ecbdf0f2cbd71db4ba0fc4fbab824390cf7800",
+  "purpose": "Freeze Agent B or retained slot-4/5 mission bytes while allowing Agent A to replace only top-level slot-1/2/3 series in mixed files.",
+  "whole_file_sha256": {
+    "missions/DOM_Japanese_Missions.txt": "3833ba6f9b0daefbedfd7d82e54e93ab7bf3728cc4fad251fcb78b535912a8e6",
+    "missions/Japanese_Missions.txt": "d906320d4e606dd64dd92a927fec703a419fa5b9cafe9e119f9c8bd29222f1b9",
+    "missions/jxp_00_legacy_bom_japan_eastasia_missions.txt": "045286ebbf9c8b3c19b04ffbf93f23788763099e9506b0abfa15e0fddbd72f03",
+    "missions/jxp_00_legacy_bom_kirishitan_deep_missions.txt": "9f767566ce3e4983d052564a1448a63a67259840dd9c94e092bc7d837bb860c8",
+    "missions/jxp_00_legacy_bom_shinto_branch_missions.txt": "229a87f5669c68ed6225fb9d5ae0962dcf484d8db295c7d6a8c777906fd5b8df",
+    "missions/jxp_03_overseas_missions.txt": "991596e93287c8bec0d17fb1aaf7fda41da28e087249f1a5dfc02e66ef71b9c4",
+    "missions/jxp_04_daimyo_missions.txt": "cda0a988191f26f30f80deea52ab35c7872e505124476a949c76e7a56eaf2cea",
+    "missions/jxp_09_religious_route_missions.txt": "9bc6eeb08e908455cba37afe370348ee2ce27c1acc45d52ecce58c2512ca92a1",
+    "missions/jxp_a_91_oda_img_depth_missions.txt": "f9068d91ba4dfc16c9ca4c44d4d17519d63a047caeae251ade47f063d7c2398c",
+    "missions/jxp_a_94_daimyo_depth_missions.txt": "da3268c9bc324606f6e63e6718681e3793d0a49396ca3afed30d6b821c41e882",
+    "missions/jxp_b_94_new_yamato_missions.txt": "1184692afda03e118570231cc2dfdcfce6cf4d74fe386893211796a8be591d87",
+    "missions/jxp_b_95_secondary_colonial_states_missions.txt": "317e5f3ddfbded4c67a8b3392ae1e9679c64356e56fc8fab2503059361d763b9",
+    "missions/jxp_b_114_transpacific_federation_missions.txt": "68cdf7e83ae4b4a5198f638be337cab9b0380e445701ab66286538928f505ddc"
+  },
+  "slot_series_sha256": {
+    "missions/jxp_japan_missions.txt": {
+      "jxp_japan_confucian_imperial_missions": "0406860f0f870f3a2036ca791ea666452ef1583f628664a33c0d30ad4836bfd0"
+    },
+    "missions/jxp_a_96_buddhist_missions.txt": {
+      "jxp_a_96_buddhist_slot_4_missions": "8ce0b1e9d4e1db5c1f8bb8251cb898b95b1b5a353c52daedb6adab15bff5e4b8",
+      "jxp_a_96_buddhist_slot_5_missions": "94417e976f0078a1da9da8585e3b8ca41becf226d10df9c008128692720e5f03"
+    },
+    "missions/jxp_11_branching_missions.txt": {
+      "jxp_shinto_branch_missions": "72880f7c274f4852aceae7cdb4e8ef3a0d029e481979678b83941e8e3c1158d2",
+      "jxp_christian_branch_missions": "ef76fd89c571439f8df8a91be73215b6229ce137931a40b541a74eae52d5a4e8",
+      "jxp_muslim_branch_missions": "54923a152a44e147eb22c4b729fc355e30e82cc4a966b752907efa298b5b5845",
+      "jxp_popular_branch_missions": "76579897e32393ef9a09aec7f5bf0aa7310f1bf8af7a77c7afe86af6110311af",
+      "jxp_frontier_diplomacy_missions": "3de95b54404f2ecf796c634d8421d19fb45d775de6131a5d5afb943f882c168e"
+    },
+    "missions/jxp_40_final_state_completion_missions.txt": {
+      "jxp_japan_uncommitted_horizon_missions": "443afe87fd3f6c7a03874804dd1cc28e517007794e78ecfb0125c9bc4fab73fe",
+      "jxp_japan_sakoku_horizon_missions": "2a4ec8bf2498cb7b1735b0e293e1543d5f1c4cd3f8acaaea23ad2e452f2c185f",
+      "jxp_ikko_common_economy_missions": "a7ec2edbf22616285c40d5c9b33389c159d9f3ed338f69c2453fc259abcdd186"
+    },
+    "missions/jxp_56_final_tag_identity_missions.txt": {
+      "jxp_cjp_syncretic_missions": "f4750e17a102d4dafcf356d3f360f5a98b7777fd3e751c8a4fc28ac93f3b04bc",
+      "jxp_ejp_court_rite_missions": "f55ea632bd8ab2eb99e6e0ec7c79e3d0810cd2e39275ca86a6ffb1b56a90df4b",
+      "jxp_ejp_imperial_seas_missions": "33680094daeeec68823635e4a49dd9352f2af3668379c533fe974cf1a2c21ce6",
+      "jxp_rfj_covenant_horizon_missions": "939ecb5f4fd14d15b64083aa0e4631281f3562673c480b08aec2b749f7c80e4e",
+      "jxp_wak_black_current_missions": "327b4089076d4ebba2c60fa6ee874897cdc94c81efe0feb43e7dc79ed5f4a008"
+    },
+    "missions/jxp_70_oda_toyotomi_missions.txt": {
+      "jxp_toyotomi_court_missions": "1782f78d744979f5c62e7a34f4c9a84b54077e472c4bdaab63f1c2512866b3c5",
+      "jxp_toyotomi_horizon_missions": "052b3bf643ad2a35836c65e7d6978640f7892f18625abd4e25c91cae40f583c4"
+    }
+  }
+}

@@ -4,6 +4,10 @@ cb_jxp_b_99_continental_campaign = {
 	prerequisites_self = {
 		has_country_modifier = jxp_b_99_campaign_preparations
 		OR = {
+			ai = no
+			jxp_b_118_ai_continental_campaign_ready_trigger = yes
+		}
+		OR = {
 			has_country_flag = jxp_b_99_campaign_ryukyu
 			has_country_flag = jxp_b_99_campaign_north
 			has_country_flag = jxp_b_99_campaign_taiwan_fujian

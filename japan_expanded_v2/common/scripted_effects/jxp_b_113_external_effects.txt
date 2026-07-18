@@ -1,0 +1,163 @@
+jxp_b_113_clear_governance_flags_effect = {
+	clr_country_flag = jxp_iface_b_postconquest_governance_active
+	clr_country_flag = jxp_b_113_governance_military_commission
+	clr_country_flag = jxp_b_113_governance_local_dynasty
+	clr_country_flag = jxp_b_113_governance_tribute_trade
+	clr_country_flag = jxp_b_113_governance_direct_governor
+	clr_country_flag = jxp_b_113_governance_review_1_done
+	clr_country_flag = jxp_b_113_governance_review_2_done
+	clr_country_flag = jxp_b_113_governance_review_3_done
+	clr_country_flag = jxp_b_113_governance_review_scheduled
+	remove_country_modifier = jxp_b_113_governance_twenty_year_term
+}
+
+jxp_b_113_mark_governed_provinces_effect = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_province_modifier = jxp_b_99_military_commission_province
+				has_province_modifier = jxp_b_99_local_dynasty_province
+				has_province_modifier = jxp_b_99_tribute_trade_province
+				has_province_modifier = jxp_b_99_direct_governor_province
+			}
+		}
+		add_province_modifier = { name = jxp_b_113_governed_province duration = 7300 }
+	}
+}
+
+jxp_b_113_schedule_first_governance_review_effect = {
+	if = {
+		limit = { jxp_b_113_governance_active_trigger = yes NOT = { has_country_flag = jxp_b_113_governance_review_scheduled } }
+		set_country_flag = jxp_b_113_governance_review_scheduled
+		country_event = { id = jxp_b_governance.100 days = 1825 }
+	}
+}
+
+jxp_b_113_begin_military_commission_governance_effect = {
+	jxp_b_113_clear_governance_flags_effect = yes
+	set_country_flag = jxp_iface_b_postconquest_governance_active
+	set_country_flag = jxp_b_113_governance_military_commission
+	jxp_b_113_mark_governed_provinces_effect = yes
+	add_country_modifier = { name = jxp_b_113_governance_twenty_year_term duration = 7300 }
+	add_country_modifier = { name = jxp_b_113_governance_transition_lock duration = 7300 }
+	jxp_b_113_schedule_first_governance_review_effect = yes
+}
+
+jxp_b_113_begin_local_dynasty_governance_effect = {
+	jxp_b_113_clear_governance_flags_effect = yes
+	set_country_flag = jxp_iface_b_postconquest_governance_active
+	set_country_flag = jxp_b_113_governance_local_dynasty
+	jxp_b_113_mark_governed_provinces_effect = yes
+	add_country_modifier = { name = jxp_b_113_governance_twenty_year_term duration = 7300 }
+	add_country_modifier = { name = jxp_b_113_governance_transition_lock duration = 7300 }
+	jxp_b_113_schedule_first_governance_review_effect = yes
+}
+
+jxp_b_113_begin_tribute_trade_governance_effect = {
+	jxp_b_113_clear_governance_flags_effect = yes
+	set_country_flag = jxp_iface_b_postconquest_governance_active
+	set_country_flag = jxp_b_113_governance_tribute_trade
+	jxp_b_113_mark_governed_provinces_effect = yes
+	add_country_modifier = { name = jxp_b_113_governance_twenty_year_term duration = 7300 }
+	add_country_modifier = { name = jxp_b_113_governance_transition_lock duration = 7300 }
+	jxp_b_113_schedule_first_governance_review_effect = yes
+}
+
+jxp_b_113_begin_direct_governor_governance_effect = {
+	jxp_b_113_clear_governance_flags_effect = yes
+	set_country_flag = jxp_iface_b_postconquest_governance_active
+	set_country_flag = jxp_b_113_governance_direct_governor
+	jxp_b_113_mark_governed_provinces_effect = yes
+	add_country_modifier = { name = jxp_b_113_governance_twenty_year_term duration = 7300 }
+	add_country_modifier = { name = jxp_b_113_governance_transition_lock duration = 7300 }
+	jxp_b_113_schedule_first_governance_review_effect = yes
+}
+
+jxp_b_113_remove_current_governance_modifiers_effect = {
+	remove_country_modifier = jxp_b_99_military_commission_government
+	remove_country_modifier = jxp_b_99_local_dynasty_government
+	remove_country_modifier = jxp_b_99_tribute_trade_government
+	remove_country_modifier = jxp_b_99_direct_governor_government
+	every_owned_province = {
+		limit = { has_province_modifier = jxp_b_113_governed_province }
+		remove_province_modifier = jxp_b_99_military_commission_province
+		remove_province_modifier = jxp_b_99_local_dynasty_province
+		remove_province_modifier = jxp_b_99_tribute_trade_province
+		remove_province_modifier = jxp_b_99_direct_governor_province
+	}
+}
+
+jxp_b_113_transition_to_military_commission_effect = {
+	jxp_b_113_remove_current_governance_modifiers_effect = yes
+	every_owned_province = { limit = { has_province_modifier = jxp_b_113_governed_province } add_province_modifier = { name = jxp_b_99_military_commission_province duration = 7300 } }
+	add_country_modifier = { name = jxp_b_99_military_commission_government duration = 7300 }
+	jxp_b_113_begin_military_commission_governance_effect = yes
+}
+
+jxp_b_113_transition_to_local_dynasty_effect = {
+	jxp_b_113_remove_current_governance_modifiers_effect = yes
+	every_owned_province = { limit = { has_province_modifier = jxp_b_113_governed_province } add_province_modifier = { name = jxp_b_99_local_dynasty_province duration = 7300 } }
+	add_country_modifier = { name = jxp_b_99_local_dynasty_government duration = 7300 }
+	jxp_b_113_begin_local_dynasty_governance_effect = yes
+}
+
+jxp_b_113_transition_to_tribute_trade_effect = {
+	jxp_b_113_remove_current_governance_modifiers_effect = yes
+	every_owned_province = { limit = { has_province_modifier = jxp_b_113_governed_province } add_province_modifier = { name = jxp_b_99_tribute_trade_province duration = 7300 } }
+	add_country_modifier = { name = jxp_b_99_tribute_trade_government duration = 7300 }
+	jxp_b_113_begin_tribute_trade_governance_effect = yes
+}
+
+jxp_b_113_transition_to_direct_governor_effect = {
+	jxp_b_113_remove_current_governance_modifiers_effect = yes
+	every_owned_province = { limit = { has_province_modifier = jxp_b_113_governed_province } add_province_modifier = { name = jxp_b_99_direct_governor_province duration = 7300 } }
+	add_country_modifier = { name = jxp_b_99_direct_governor_government duration = 7300 }
+	jxp_b_113_begin_direct_governor_governance_effect = yes
+}
+
+jxp_b_113_end_governance_effect = {
+	jxp_b_113_remove_current_governance_modifiers_effect = yes
+	every_owned_province = {
+		limit = { has_province_modifier = jxp_b_113_governed_province }
+		remove_province_modifier = jxp_b_113_governed_province
+	}
+	jxp_b_113_clear_governance_flags_effect = yes
+	remove_country_modifier = jxp_b_113_governance_transition_lock
+}
+
+jxp_b_113_start_china_long_program_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = jxp_iface_b_china_long_program_active } NOT = { has_country_flag = jxp_iface_b_china_long_program_complete } }
+		set_country_flag = jxp_iface_b_china_long_program_active
+		clr_country_flag = jxp_b_113_china_stage_1_done
+		clr_country_flag = jxp_b_113_china_stage_2_done
+		clr_country_flag = jxp_b_113_china_stage_3_done
+		clr_country_flag = jxp_b_113_china_stage_4_done
+		add_country_modifier = { name = jxp_b_113_china_long_program duration = -1 }
+		if = { limit = { has_country_flag = jxp_b_100_china_path_mandate } country_event = { id = jxp_b_china_depth.601 days = 30 } }
+		else_if = { limit = { has_country_flag = jxp_b_100_china_path_rites } country_event = { id = jxp_b_china_depth.611 days = 30 } }
+		else_if = { limit = { has_country_flag = jxp_b_100_china_path_break } country_event = { id = jxp_b_china_depth.621 days = 30 } }
+	}
+}
+
+jxp_b_113_complete_china_long_program_effect = {
+	set_country_flag = jxp_iface_b_china_long_program_complete
+	clr_country_flag = jxp_iface_b_china_long_program_active
+	remove_country_modifier = jxp_b_113_china_long_program
+}
+
+jxp_b_113_external_cleanup_effect = {
+	jxp_b_113_end_governance_effect = yes
+	clr_country_flag = jxp_iface_b_ryukyu_compact_active
+	clr_country_flag = jxp_iface_b_tsushima_mediation_active
+	clr_country_flag = jxp_iface_b_northern_compact_active
+	clr_country_flag = jxp_iface_b_taiwan_compact_active
+	clr_country_flag = jxp_iface_b_china_long_program_active
+	remove_country_modifier = jxp_b_113_ryukyu_compact
+	remove_country_modifier = jxp_b_113_tsushima_mediation
+	remove_country_modifier = jxp_b_113_northern_compact
+	remove_country_modifier = jxp_b_113_northern_coercion_burden
+	remove_country_modifier = jxp_b_113_taiwan_compact
+	remove_country_modifier = jxp_b_113_taiwan_military_settlement
+	remove_country_modifier = jxp_b_113_china_long_program
+}

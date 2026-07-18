@@ -550,6 +550,13 @@ class JapaneseGovernmentTrackTests(unittest.TestCase):
                 "yes",
             )
         )
+        self.assertTrue(
+            _contains_assignment(
+                final_profile_trigger,
+                "jxp_a_105_profile_commercial_council_trigger",
+                "yes",
+            )
+        )
         fallback_ids = {
             "jxp_reform_japanese_unitary_investiture",
             "jxp_reform_japanese_domain_federation",

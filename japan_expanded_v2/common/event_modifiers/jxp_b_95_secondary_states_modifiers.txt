@@ -125,7 +125,7 @@ jxp_b_95_njf_red_seal_credit = {
 
 jxp_b_95_njf_ronin_contracts = {
 	mercenary_cost = -0.10
-	mercenary_discipline = 0.025
+	manpower_recovery_speed = 0.05
 }
 
 jxp_b_95_njf_monsoon_relief = {

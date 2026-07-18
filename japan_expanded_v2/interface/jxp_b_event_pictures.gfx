@@ -1,0 +1,75 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "jxp_b_new_yamato_assembly_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_new_yamato_assembly.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_chartered_company_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_chartered_company.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_colonial_independence_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_colonial_independence.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_north_pacific_frontier_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_north_pacific_frontier.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_southern_port_league_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_southern_port_league.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_oceanic_league_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_oceanic_league.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_transpacific_federation_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_transpacific_federation.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_korea_campaign_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_korea_campaign.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_korea_reconciliation_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_korea_reconciliation.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_mandate_court_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_mandate_court.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_maritime_order_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_maritime_order.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "jxp_b_postconquest_governance_eventPicture"
+		texturefile = "gfx/event_pictures/jxp_b/jxp_b_postconquest_governance.dds"
+		alwaystransparent = yes
+	}
+
+}

@@ -21,13 +21,18 @@ jxp_b_102_has_legacy_overseas_milestone_trigger = {
 }
 
 jxp_b_102_needs_startup_migration_trigger = {
-	NOT = { has_country_flag = jxp_b_102_overseas_program_migrated }
 	OR = {
-		jxp_b_102_is_colonial_successor_trigger = yes
-		jxp_b_102_has_legacy_overseas_milestone_trigger = yes
-		has_country_flag = jxp_b_colonial_society_initialized
-		has_country_flag = jxp_iface_metropole_new_world_rule_broken
-		has_country_flag = jxp_iface_b99_china_campaign_requested
-		has_country_flag = jxp_b_101_korea_campaign_active
+		AND = {
+			NOT = { has_country_flag = jxp_b_102_overseas_program_migrated }
+			OR = {
+				jxp_b_102_is_colonial_successor_trigger = yes
+				jxp_b_102_has_legacy_overseas_milestone_trigger = yes
+				has_country_flag = jxp_b_colonial_society_initialized
+				has_country_flag = jxp_iface_metropole_new_world_rule_broken
+				has_country_flag = jxp_iface_b99_china_campaign_requested
+				has_country_flag = jxp_b_101_korea_campaign_active
+			}
+		}
+		jxp_b_110_needs_colonial_depth_migration_trigger = yes
 	}
 }

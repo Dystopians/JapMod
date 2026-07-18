@@ -1,0 +1,7 @@
+jxp_b_113_opinion_ryukyu_compact = { opinion = 50 years = 25 }
+jxp_b_113_opinion_tsushima_mediation = { opinion = 35 years = 20 }
+jxp_b_113_opinion_northern_compact = { opinion = 40 years = 20 }
+jxp_b_113_opinion_northern_coercion = { opinion = -60 years = 25 }
+jxp_b_113_opinion_taiwan_compact = { opinion = 40 years = 20 }
+jxp_b_113_opinion_china_rites = { opinion = 25 years = 15 }
+jxp_b_113_opinion_china_maritime_threat = { opinion = -40 years = 20 }

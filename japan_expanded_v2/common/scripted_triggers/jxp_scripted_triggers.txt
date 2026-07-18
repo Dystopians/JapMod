@@ -199,6 +199,7 @@ jxp_can_form_ikko_commonwealth_trigger = {
 	is_year = 1470
 	NOT = { is_year = 1603 }
 	NOT = { jxp_has_any_route_trigger = yes }
+	NOT = { has_country_flag = jxp_path_commercial_council }
 	OR = {
 		religion = shinto
 		religion = mahayana
@@ -241,6 +242,7 @@ jxp_can_form_wokou_confederacy_trigger = {
 	is_year = 1500
 	NOT = { is_year = 1650 }
 	NOT = { jxp_has_any_route_trigger = yes }
+	NOT = { has_country_flag = jxp_path_commercial_council }
 	jxp_wokou_historical_waters_trigger = yes
 	num_of_ports = 5
 	dip_tech = 7

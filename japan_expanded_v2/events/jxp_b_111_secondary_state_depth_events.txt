@@ -1,0 +1,573 @@
+namespace = jxp_secondary_colonies
+
+country_event = {
+	id = jxp_secondary_colonies.9
+	title = "jxp_secondary_colonies.9.t"
+	desc = "jxp_secondary_colonies.9.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.9.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.9.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.10
+	title = "jxp_secondary_colonies.10.t"
+	desc = "jxp_secondary_colonies.10.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.10.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.10.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.11
+	title = "jxp_secondary_colonies.11.t"
+	desc = "jxp_secondary_colonies.11.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.11.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.11.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.12
+	title = "jxp_secondary_colonies.12.t"
+	desc = "jxp_secondary_colonies.12.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.12.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.12.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.13
+	title = "jxp_secondary_colonies.13.t"
+	desc = "jxp_secondary_colonies.13.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.13.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.13.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.14
+	title = "jxp_secondary_colonies.14.t"
+	desc = "jxp_secondary_colonies.14.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.14.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.14.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.15
+	title = "jxp_secondary_colonies.15.t"
+	desc = "jxp_secondary_colonies.15.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.15.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.15.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.16
+	title = "jxp_secondary_colonies.16.t"
+	desc = "jxp_secondary_colonies.16.d"
+	picture = jxp_b_north_pacific_frontier_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.16.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.16.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.109
+	title = "jxp_secondary_colonies.109.t"
+	desc = "jxp_secondary_colonies.109.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.109.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.109.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.110
+	title = "jxp_secondary_colonies.110.t"
+	desc = "jxp_secondary_colonies.110.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.110.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.110.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.111
+	title = "jxp_secondary_colonies.111.t"
+	desc = "jxp_secondary_colonies.111.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.111.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.111.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.112
+	title = "jxp_secondary_colonies.112.t"
+	desc = "jxp_secondary_colonies.112.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.112.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.112.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.113
+	title = "jxp_secondary_colonies.113.t"
+	desc = "jxp_secondary_colonies.113.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.113.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.113.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.114
+	title = "jxp_secondary_colonies.114.t"
+	desc = "jxp_secondary_colonies.114.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.114.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.114.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.115
+	title = "jxp_secondary_colonies.115.t"
+	desc = "jxp_secondary_colonies.115.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.115.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.115.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.116
+	title = "jxp_secondary_colonies.116.t"
+	desc = "jxp_secondary_colonies.116.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.116.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.116.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.117
+	title = "jxp_secondary_colonies.117.t"
+	desc = "jxp_secondary_colonies.117.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.117.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.117.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.118
+	title = "jxp_secondary_colonies.118.t"
+	desc = "jxp_secondary_colonies.118.d"
+	picture = jxp_b_southern_port_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.118.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.118.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.209
+	title = "jxp_secondary_colonies.209.t"
+	desc = "jxp_secondary_colonies.209.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.209.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.209.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.210
+	title = "jxp_secondary_colonies.210.t"
+	desc = "jxp_secondary_colonies.210.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.210.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.210.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.211
+	title = "jxp_secondary_colonies.211.t"
+	desc = "jxp_secondary_colonies.211.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.211.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.211.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.212
+	title = "jxp_secondary_colonies.212.t"
+	desc = "jxp_secondary_colonies.212.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.212.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.212.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.213
+	title = "jxp_secondary_colonies.213.t"
+	desc = "jxp_secondary_colonies.213.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.213.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.213.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.214
+	title = "jxp_secondary_colonies.214.t"
+	desc = "jxp_secondary_colonies.214.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.214.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.214.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.215
+	title = "jxp_secondary_colonies.215.t"
+	desc = "jxp_secondary_colonies.215.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.215.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.215.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}
+
+country_event = {
+	id = jxp_secondary_colonies.216
+	title = "jxp_secondary_colonies.216.t"
+	desc = "jxp_secondary_colonies.216.d"
+	picture = jxp_b_oceanic_league_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jxp_secondary_colonies.216.a"
+		add_prestige = 2
+		add_dip_power = -20
+		jxp_b_91_add_compact_5_effect = yes
+		ai_chance = { factor = 3 }
+	}
+	option = {
+		name = "jxp_secondary_colonies.216.b"
+		add_treasury = -40
+		add_adm_power = 15
+		jxp_b_91_add_identity_5_effect = yes
+		ai_chance = { factor = 2 modifier = { factor = 0.25 num_of_loans = 4 } }
+	}
+}

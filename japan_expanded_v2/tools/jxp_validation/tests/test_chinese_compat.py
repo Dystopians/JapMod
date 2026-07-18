@@ -12,6 +12,9 @@ from jxp_validation.chinese_compat import (
     DYNAMIC_TOKEN_HOTFIX_VALUES,
     JAPANESE_HISTORY_TAGS,
     PINNED_LAUNCHER_SUPPORTED_VERSION,
+    START_SCREEN_HOTFIX_PATH,
+    START_SCREEN_MAIN_LOCALISATION_PATH,
+    START_SCREEN_UI_FIELDS,
     audit_compat_clone,
     build_compat_clone,
 )
@@ -73,6 +76,18 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
             main_cultures.parent.mkdir(parents=True, exist_ok=True)
             source_cultures.write_bytes(b"source_names = yes\n")
             main_cultures.write_bytes(b"jxp_names = yes\n")
+            main_start_screen = main / START_SCREEN_MAIN_LOCALISATION_PATH
+            main_start_screen.parent.mkdir(parents=True, exist_ok=True)
+            main_start_screen.write_text(
+                "l_english:\n"
+                + "\n".join(
+                    f' {key}:0 "[{function_name}]"'
+                    for key, function_name in START_SCREEN_UI_FIELDS
+                )
+                + "\n",
+                encoding="utf-8-sig",
+                newline="",
+            )
             for number in range(48):
                 name = f"{1000 + number} - Fixture.txt"
                 source_path = source / "history" / "provinces" / name
@@ -144,6 +159,16 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
                 hotfix.count(b"[Country.GetVaishyasName]"),
             )
             self.assertNotIn("Get\u5420\u820dName".encode("utf-8"), hotfix)
+            start_screen_hotfix = (target / START_SCREEN_HOTFIX_PATH).read_bytes()
+            self.assertTrue(start_screen_hotfix.startswith(b"\xef\xbb\xbf"))
+            for key, function_name in START_SCREEN_UI_FIELDS:
+                self.assertIn(
+                    f' {key}:0 "[{function_name}]"'.encode("ascii"),
+                    start_screen_hotfix,
+                )
+            self.assertEqual(
+                len(START_SCREEN_UI_FIELDS), built["start_screen_hotfix_keys"]
+            )
             audit = audit_compat_clone(
                 source, target, outer, main, map_mod, game, ENCODER
             )
@@ -156,6 +181,18 @@ class ChineseCompatibilityCloneTests(unittest.TestCase):
             )
             self.assertIn(
                 "chinese_compat.dynamic_token_hotfix",
+                {issue.code for issue in mutated.issues},
+            )
+            (target / START_SCREEN_HOTFIX_PATH).write_bytes(
+                start_screen_hotfix.replace(
+                    b"JxpStartScreenTitle", b"BrokenStartScreenTitle", 1
+                )
+            )
+            mutated = audit_compat_clone(
+                source, target, outer, main, map_mod, game, ENCODER
+            )
+            self.assertIn(
+                "chinese_compat.start_screen_hotfix",
                 {issue.code for issue in mutated.issues},
             )
 

@@ -4,7 +4,7 @@ country_event = {
 	id = jxp_colonial_independence.1
 	title = "jxp_colonial_independence.1.t"
 	desc = "jxp_colonial_independence.1.d"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { jxp_b_96_colonial_crisis_ready_trigger = yes }
 	option = {
@@ -26,7 +26,7 @@ country_event = {
 	id = jxp_colonial_independence.2
 	title = "jxp_colonial_independence.2.t"
 	desc = "jxp_colonial_independence.2.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -49,7 +49,7 @@ country_event = {
 	id = jxp_colonial_independence.3
 	title = "jxp_colonial_independence.3.t"
 	desc = "jxp_colonial_independence.3.d"
-	picture = MERCHANTS_TALKING_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -74,7 +74,7 @@ country_event = {
 	id = jxp_colonial_independence.4
 	title = "jxp_colonial_independence.4.t"
 	desc = "jxp_colonial_independence.4.d"
-	picture = TRADEGOODS_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -98,7 +98,7 @@ country_event = {
 	id = jxp_colonial_independence.5
 	title = "jxp_colonial_independence.5.t"
 	desc = "jxp_colonial_independence.5.d"
-	picture = MILITARY_CAMP_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -122,7 +122,7 @@ country_event = {
 	id = jxp_colonial_independence.6
 	title = "jxp_colonial_independence.6.t"
 	desc = "jxp_colonial_independence.6.d"
-	picture = ANGRY_MOB_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -143,7 +143,7 @@ country_event = {
 	id = jxp_colonial_independence.7
 	title = "jxp_colonial_independence.7.t"
 	desc = "jxp_colonial_independence.7.d"
-	picture = ANGRY_MOB_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_metropole_hardline is_subject = yes }
 	option = {
@@ -165,7 +165,7 @@ country_event = {
 	id = jxp_colonial_independence.8
 	title = "jxp_colonial_independence.8.t"
 	desc = "jxp_colonial_independence.8.d"
-	picture = BATTLE_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -188,7 +188,7 @@ country_event = {
 	id = jxp_colonial_independence.9
 	title = "jxp_colonial_independence.9.t"
 	desc = "jxp_colonial_independence.9.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_crisis_active is_subject = yes }
 	option = {
@@ -210,7 +210,7 @@ country_event = {
 	id = jxp_colonial_independence.10
 	title = "jxp_colonial_independence.10.t"
 	desc = "jxp_colonial_independence.10.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { has_country_flag = jxp_b_96_independence_declared is_subject = yes }
 	option = {
@@ -242,7 +242,7 @@ country_event = {
 	id = jxp_colonial_independence.20
 	title = "jxp_colonial_independence.20.t"
 	desc = "jxp_colonial_independence.20.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_colonial_independence_eventPicture
 	is_triggered_only = yes
 	trigger = { FROM = { is_subject_of = ROOT has_country_flag = jxp_b_96_independence_crisis_active } }
 	option = {

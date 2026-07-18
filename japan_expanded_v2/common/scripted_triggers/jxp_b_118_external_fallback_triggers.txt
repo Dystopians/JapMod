@@ -1,0 +1,156 @@
+# B15: low-cost AI and compatibility guardrails for the external programme.
+# These triggers are evaluated only from AI-only branches at the call sites;
+# human players retain the authored political and military choices.
+
+jxp_b_118_ai_stable_budget_trigger = {
+	is_at_war = no
+	NOT = { is_bankrupt = yes }
+	NOT = { num_of_loans = 3 }
+	stability = 0
+	NOT = { war_exhaustion = 5 }
+	manpower_percentage = 0.40
+	treasury = 400
+}
+
+jxp_b_118_ai_colonial_state_formation_ready_trigger = {
+	jxp_b_118_ai_stable_budget_trigger = yes
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	num_of_cities = 8
+	num_of_ports = 3
+	OR = {
+		is_subject = no
+		jxp_b_91_local_compact_at_least_60_trigger = yes
+	}
+}
+
+jxp_b_118_ai_company_ready_trigger = {
+	jxp_b_118_ai_stable_budget_trigger = yes
+	has_any_disaster = no
+	stability = 1
+	NOT = { num_of_loans = 2 }
+	treasury = 1000
+	num_of_ports = 8
+	navy_size = 15
+	OR = {
+		num_of_light_ship = 5
+		num_of_transport = 8
+	}
+}
+
+jxp_b_118_ai_independence_war_ready_trigger = {
+	jxp_b_91_colonial_identity_at_least_75_trigger = yes
+	jxp_b_91_metropole_control_below_40_trigger = yes
+	NOT = { check_variable = { which = jxp_b_local_compact value = 70 } }
+	NOT = { is_bankrupt = yes }
+	NOT = { num_of_loans = 3 }
+	stability = 0
+	NOT = { war_exhaustion = 5 }
+	manpower_percentage = 0.50
+	treasury = 300
+	army_size = 15
+	army_strength = { who = FROM value = 0.65 }
+	OR = {
+		naval_strength = { who = FROM value = 0.75 }
+		num_of_transport = 8
+	}
+}
+
+jxp_b_118_ai_end_metropole_rule_ready_trigger = {
+	NOT = { is_bankrupt = yes }
+	NOT = { num_of_loans = 3 }
+	stability = 1
+	NOT = { war_exhaustion = 4 }
+	manpower_percentage = 0.60
+	treasury = 750
+	num_of_ports = 8
+	num_of_transport = 15
+	navy_size = 30
+	army_strength = { who = FROM value = 0.75 }
+	naval_strength = { who = FROM value = 0.90 }
+}
+
+jxp_b_118_ai_eastward_revolution_ready_trigger = {
+	OR = { tag = NYA tag = HKK tag = NJF tag = OIA }
+	check_variable = { which = jxp_b_colonial_identity value = 90 }
+	jxp_b_98_has_two_pacific_relays_trigger = yes
+	has_any_disaster = no
+	NOT = { is_bankrupt = yes }
+	NOT = { num_of_loans = 1 }
+	stability = 2
+	prestige = 50
+	NOT = { war_exhaustion = 2 }
+	manpower_percentage = 0.75
+	treasury = 2000
+	army_size = 60
+	navy_size = 60
+	num_of_transport = 30
+	army_strength = { who = FROM value = 1.10 }
+	naval_strength = { who = FROM value = 1.20 }
+}
+
+jxp_b_118_ai_strategy_council_ready_trigger = {
+	OR = {
+		jxp_b_99_shogunate_stage_trigger = yes
+		jxp_b_99_unified_stage_trigger = yes
+	}
+	has_any_disaster = no
+	NOT = { is_bankrupt = yes }
+	NOT = { num_of_loans = 3 }
+	stability = 1
+	NOT = { war_exhaustion = 4 }
+	manpower_percentage = 0.50
+	treasury = 500
+	navy_size = 20
+	num_of_transport = 10
+}
+
+jxp_b_118_ai_continental_campaign_ready_trigger = {
+	jxp_b_118_ai_strategy_council_ready_trigger = yes
+	treasury = 750
+	army_size = 30
+	navy_size = 25
+	num_of_transport = 12
+	army_strength = { who = FROM value = 0.75 }
+	naval_strength = { who = FROM value = 0.80 }
+}
+
+jxp_b_118_ai_korea_expedition_ready_trigger = {
+	jxp_b_118_ai_strategy_council_ready_trigger = yes
+	has_country_modifier = jxp_b_101_korea_expedition_ready
+	NOT = { num_of_loans = 2 }
+	NOT = { war_exhaustion = 3 }
+	manpower_percentage = 0.70
+	treasury = 1200
+	army_size = 50
+	navy_size = 35
+	num_of_transport = 20
+	army_strength = { who = FROM value = 0.90 }
+	naval_strength = { who = FROM value = 1.00 }
+}
+
+jxp_b_118_ai_china_policy_ready_trigger = {
+	jxp_b_118_ai_strategy_council_ready_trigger = yes
+	treasury = 1000
+	army_size = 40
+	navy_size = 35
+	num_of_transport = 16
+}
+
+jxp_b_118_ai_rites_war_ready_trigger = {
+	jxp_b_118_ai_china_policy_ready_trigger = yes
+	army_strength = { who = FROM value = 0.70 }
+	naval_strength = { who = FROM value = 0.90 }
+}
+
+jxp_b_118_ai_mandate_war_ready_trigger = {
+	jxp_b_118_ai_china_policy_ready_trigger = yes
+	NOT = { num_of_loans = 2 }
+	NOT = { war_exhaustion = 3 }
+	manpower_percentage = 0.70
+	treasury = 1500
+	army_size = 60
+	navy_size = 45
+	num_of_transport = 20
+	army_strength = { who = FROM value = 0.85 }
+	naval_strength = { who = FROM value = 0.95 }
+}

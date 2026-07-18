@@ -1,0 +1,426 @@
+# TPF owns an independent five-column mission tree; it never reuses NYA series.
+
+jxp_b_114_tpf_old_world_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
+	has_country_shield = yes
+
+	jxp_b_114_tpf_japanese_seats = {
+		icon = mission_empire
+		position = 1
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.11 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_former_daimyo = {
+		icon = mission_empire
+		position = 3
+		required_missions = { jxp_b_114_tpf_japanese_seats }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.12 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_kyoto_status = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_114_tpf_former_daimyo }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.13 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_edo_finance = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_114_tpf_kyoto_status }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.14 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_home_autonomy = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_114_tpf_edo_finance }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.15 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_court_and_federation = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_114_tpf_home_autonomy }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.16 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_old_world_member = {
+		icon = mission_empire
+		position = 13
+		required_missions = { jxp_b_114_tpf_court_and_federation }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.17 days = 1 }
+		}
+	}
+}
+
+jxp_b_114_tpf_overseas_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
+	has_country_shield = yes
+
+	jxp_b_114_tpf_nya_delegation = {
+		icon = mission_empire
+		position = 2
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.14 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_hkk_delegation = {
+		icon = mission_empire
+		position = 4
+		required_missions = { jxp_b_114_tpf_nya_delegation }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.15 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_njf_delegation = {
+		icon = mission_empire
+		position = 6
+		required_missions = { jxp_b_114_tpf_hkk_delegation }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.16 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_oia_delegation = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_114_tpf_njf_delegation }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.17 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_overseas_states = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_114_tpf_oia_delegation }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.18 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_local_citizens = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_114_tpf_overseas_states }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.19 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_overseas_members = {
+		icon = mission_empire
+		position = 14
+		required_missions = { jxp_b_114_tpf_local_citizens }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.20 days = 1 }
+		}
+	}
+}
+
+jxp_b_114_tpf_treasury_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
+	has_country_shield = yes
+
+	jxp_b_114_tpf_federal_tariffs = {
+		icon = mission_empire
+		position = 1
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.17 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_fleet_budget = {
+		icon = mission_empire
+		position = 3
+		required_missions = { jxp_b_114_tpf_federal_tariffs }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.18 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_ocean_subsidies = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_114_tpf_fleet_budget }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.19 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_company_oversight = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_114_tpf_ocean_subsidies }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.20 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_federal_bonds = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_114_tpf_company_oversight }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.21 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_two_ocean_clearing = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_114_tpf_federal_bonds }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.22 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_common_treasury = {
+		icon = mission_empire
+		position = 13
+		required_missions = { jxp_b_114_tpf_two_ocean_clearing }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.23 days = 1 }
+		}
+	}
+}
+
+jxp_b_114_tpf_constitution_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
+	has_country_shield = yes
+
+	jxp_b_114_tpf_kyoto_and_nya = {
+		icon = mission_empire
+		position = 2
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.20 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_fixed_capital = {
+		icon = mission_empire
+		position = 4
+		required_missions = { jxp_b_114_tpf_kyoto_and_nya }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.21 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_dual_capitals = {
+		icon = mission_empire
+		position = 6
+		required_missions = { jxp_b_114_tpf_fixed_capital }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.22 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_rotating_capital = {
+		icon = mission_empire
+		position = 8
+		required_missions = { jxp_b_114_tpf_dual_capitals }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.23 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_two_chambers = {
+		icon = mission_empire
+		position = 10
+		required_missions = { jxp_b_114_tpf_rotating_capital }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.24 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_administrative_devolution = {
+		icon = mission_empire
+		position = 12
+		required_missions = { jxp_b_114_tpf_two_chambers }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.25 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_two_ocean_constitution = {
+		icon = mission_empire
+		position = 14
+		required_missions = { jxp_b_114_tpf_administrative_devolution }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.26 days = 1 }
+		}
+	}
+}
+
+jxp_b_114_tpf_survival_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }
+	has_country_shield = yes
+
+	jxp_b_114_tpf_royalists = {
+		icon = mission_empire
+		position = 1
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.23 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_home_separatists = {
+		icon = mission_empire
+		position = 3
+		required_missions = { jxp_b_114_tpf_royalists }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.24 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_overseas_rights = {
+		icon = mission_empire
+		position = 5
+		required_missions = { jxp_b_114_tpf_home_separatists }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.25 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_company_bloc = {
+		icon = mission_empire
+		position = 7
+		required_missions = { jxp_b_114_tpf_overseas_rights }
+		trigger = { stability = 1 total_development = 100 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.26 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_federal_army = {
+		icon = mission_empire
+		position = 9
+		required_missions = { jxp_b_114_tpf_company_bloc }
+		trigger = { num_of_ports = 5 navy_size_percentage = 0.60 }
+		effect = {
+			add_adm_power = 25
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.27 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_constitutional_crisis = {
+		icon = mission_empire
+		position = 11
+		required_missions = { jxp_b_114_tpf_federal_army }
+		trigger = { monthly_income = 12 prestige = 10 }
+		effect = {
+			add_dip_power = 30
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.28 days = 1 }
+		}
+	}
+	jxp_b_114_tpf_common_country = {
+		icon = mission_empire
+		position = 13
+		required_missions = { jxp_b_114_tpf_constitutional_crisis }
+		trigger = { manpower_percentage = 0.40 army_size_percentage = 0.60 }
+		effect = {
+			add_mil_power = 35
+			add_prestige = 3
+			country_event = { id = jxp_transpacific_state.29 days = 1 }
+		}
+	}
+}

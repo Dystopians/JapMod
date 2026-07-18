@@ -1,0 +1,285 @@
+﻿l_english:
+ jxp_estate_village_communes:0 "ŒvÓYã`Qg"
+ jxp_estate_village_communes_desc:0 "wjOw0„^KS0ã`ãNNQgK„qQTSO0ÖNìNbÅbt^!04l)R0aNyVN®|ß˜uµNÿmNO(WÅb1YaˆöeåN·VMe÷‹BlŒTã`¨RëOýV¶RÞV”^0"
+ jxp_estate_village_communes_ownership:0 "ŒvÓYã`QgNbŒcW0W"
+ jxp_a_estate_val_large_rural_realm:0 "^WOQg"
+ jxp_a_estate_val_recent_council:0 "Ñg·ƒÆQÂSNÄ‹šR"
+ jxp_a_estate_val_privilege_transition:0 "çeCg9e6R„v”Nt^àVÚ‹Ç!n"
+ jxp_a_nobles_estate_interaction_recent:0 "ÑgòTìSV¶R-NÄ‹šR"
+ jxp_a_nobles_estate_interaction_recent_desc:0 "fk¶RIYlQO„vMR®‹ÍN(WËeLˆÿ”Nt^gánåNMRN—VÍ‘YìSV¶R-NÄ‹šR0"
+ jxp_a_church_estate_interaction_recent:0 "ÑgòTìSV—Rè•lQ®‹"
+ jxp_a_church_estate_interaction_recent_desc:0 "úR>y—Rè•„vMR®‹ÍN(WËeLˆÿ”Nt^gánåNMRN—VÍ‘YìSV—Rè•lQ®‹0"
+ jxp_a_burghers_estate_interaction_recent:0 "ÑgòTìSVHuOÄ‹®‹"
+ jxp_a_burghers_estate_interaction_recent_desc:0 "HuOjŒFU„vMR®‹ÍN(WËeLˆÿ”Nt^gánåNMRN—VÍ‘YìSVHuOÄ‹®‹0"
+ jxp_a_villages_estate_interaction_recent:0 "ÑgòTìSVã`QgÄ‹šR"
+ jxp_a_villages_estate_interaction_recent_desc:0 "ŒvÓYã`Qg„vMR®‹ÍN(WËeLˆÿ”Nt^gánåNMRN—VÍ‘YìSVã`QgÄ‹šR0"
+ jxp_a_estate_name_nobles_commercial:0 "ýV¶RfkYbSO"
+ jxp_a_estate_name_church_commercial:0 "lQ²‹—Rè•"
+ jxp_a_estate_name_burghers_commercial:0 "*hINOTO"
+ jxp_a_estate_name_villages_commercial:0 "ê»laN>y"
+ jxp_a_estate_name_nobles_toyotomi:0 "”N'Yw¶Rè•"
+ jxp_a_estate_name_church_toyotomi:0 "úR>y·lQ¶R"
+ jxp_a_estate_name_burghers_toyotomi:0 "'YBWjŒFU"
+ jxp_a_estate_name_villages_toyotomi:0 "Ï…eQ0WŒvÓY"
+ jxp_a_estate_name_nobles_sakoku:0 "1ŒãN·Y7hø‹¶R"
+ jxp_a_estate_name_church_sakoku:0 "—Rè•9eyVO"
+ jxp_a_estate_name_burghers_sakoku:0 "¡V(uFUºN"
+ jxp_a_estate_name_villages_sakoku:0 "Qg÷‹ŒvÓY"
+ jxp_a_estate_name_nobles_open:0 "wm›QIYLˆ·ø‹¶R"
+ jxp_a_estate_name_church_open:0 "Ñ‹†™—Rè•"
+ jxp_a_estate_name_burghers_open:0 "1gpSjŒFU"
+ jxp_a_estate_name_villages_open:0 "=naNŒvÓY"
+ jxp_a_estate_name_nobles_buddhist:0 "²bÕlfk¶R"
+ jxp_a_estate_name_church_buddhist:0 "ø‹qS—Rè•"
+ jxp_a_estate_name_burghers_buddhist:0 "úRHujŒFU"
+ jxp_a_estate_name_villages_buddhist:0 "ËeINã`Qg"
+ jxp_a_estate_name_nobles_kirishitan:0 "×Smfk¶R"
+ jxp_a_estate_name_church_kirishitan:0 "åe,gYeO"
+ jxp_a_estate_name_burghers_kirishitan:0 "YeO=n^HuO"
+ jxp_a_estate_name_villages_kirishitan:0 "YeHSaNl"
+ jxp_a_estate_name_nobles_confucian:0 "fk¶R˜RÚP"
+ jxp_a_estate_name_church_confucian:0 "fR«Rø‹u"
+ jxp_a_estate_name_burghers_confucian:0 "<y6RFU7b"
+ jxp_a_estate_name_villages_confucian:0 "7bPŸl"
+ jxp_a_estate_name_nobles_imperial:0 "gãfk¶R"
+ jxp_a_estate_name_church_imperial:0 "lQS˜RºN"
+ jxp_a_estate_name_burghers_imperial:0 "yÌ‘¡V(uFU"
+ jxp_a_estate_name_villages_imperial:0 "ýVøS7b"
+ jxp_a_estate_name_nobles_reformed:0 "ßv¦ufkYO"
+ jxp_a_estate_name_church_reformed:0 "¡VŠI`O"
+ jxp_a_estate_name_burghers_reformed:0 "=n^OO"
+ jxp_a_estate_name_villages_reformed:0 "êwHuQg"
+ jxp_a_estate_name_nobles_kaikyo:0 "OkS·9‚S"
+ jxp_a_estate_name_church_kaikyo:0 "LNÌ‘›s·aSê"
+ jxp_a_estate_name_burghers_kaikyo:0 "YrºNFUâV"
+ jxp_a_estate_name_villages_kaikyo:0 "0u„^qQTSO"
+ jxp_a_estate_name_nobles_ikko:0 "JW˜R·è•’VfkY"
+ jxp_a_estate_name_church_ikko:0 "ÕlIN·²‹-N"
+ jxp_a_estate_name_burghers_ikko:0 "úR…QHuO"
+ jxp_a_estate_name_villages_ikko:0 "ã`è•ŒvÓY"
+ jxp_a_estate_name_nobles_wokou:0 "9‚S·›SIN"
+ jxp_a_estate_name_church_wokou:0 "=nfm>yúR"
+ jxp_a_estate_name_burghers_wokou:0 "YrºN·9‚IN"
+ jxp_a_estate_name_villages_wokou:0 "›Sln7b"
+ jxp_a_estate_name_nobles_uncommitted:0 "ø‹ÞTfk¶R®‹O"
+ jxp_a_estate_name_church_uncommitted:0 "lQ¶R·—Rè•®‹-^"
+ jxp_a_estate_name_burghers_uncommitted:0 "ø‹^OTO"
+ jxp_a_estate_name_villages_uncommitted:0 "ýV-Nã`ãN"
+ jxp_a_estate_name_nobles_daimyo:0 "ýVºN·«ˆ˜RO"
+ jxp_a_estate_name_church_daimyo:0 "úR>yO"
+ jxp_a_estate_name_burghers_daimyo:0 "HuO·µ^O"
+ jxp_a_estate_name_villages_daimyo:0 "ã`QgŒvÓY"
+ jxp_a_estate_name_nobles_ordinary:0 "fk¶RIYlQO"
+ jxp_a_estate_name_church_ordinary:0 "úR>y—Rè•"
+ jxp_a_estate_name_burghers_ordinary:0 "HuOjŒFU"
+ jxp_a_estate_name_villages_ordinary:0 "ýV-NŒvÓY"
+ jxp_a_nobles_kokujin_oaths:0 "ýVºNOw÷‹"
+ jxp_a_nobles_kokujin_oaths_desc:0 "åNÞrw÷‹nx²‹ýVºNN«ˆ˜R„vçeåwLˆÊSˆRÎW›QyV0“Š¸uýwO°eD–ø‹O‚f‰RÿtSmNb²‹0W¹efk¶R„v®‹÷NKNCg0"
+ jxp_a_nobles_chigyo_confirmation:0 "åwLˆ‰R5X"
+ jxp_a_nobles_chigyo_confirmation_desc:0 "ùRçeã0M–SN(W0WfkëXNÑSÙu‰R5X¶rÿOVgT„vW0WsQû|	gHhïSªV0ýV¶R1udkSNR·u‰NÿmNSNRûNalS„vYO0W0"
+ jxp_a_nobles_yorioya_yoriko:0 "ÄR²N—ÄRPR²‹ïS"
+ jxp_a_nobles_yorioya_yoriko_desc:0 "b²‹ÄR²Nßu‡sÄRPR„v›QyVþ”agÿv^äNIYLˆšRg8hŒšTM|0dk6R¿OŽN¨RXTÿtSOj–ãMe»lôfHNØv9h•‚‚0"
+ jxp_a_nobles_castle_town_residences:0 "ÎWNKSwe"
+ jxp_a_nobles_castle_town_residences_desc:0 "‹TIN‰¶Rã(WÎWN%„.KSweÿOºN(0ˆm9NMe¡RýZwŽNINÎW0ÎWNàVKNtQÛvÿ%„.Åb¦N–KN RÍ‘0"
+ jxp_a_nobles_war_levy_assessment:0 "›QyVµk±”"
+ jxp_a_nobles_war_levy_assessment_desc:0 "	c0uµk„˜šRböe›QyVNµk±”ÿMQ»S4N5–¶R¬PV0¨RXTôfHNÅwcÿFOaNÌ‘NýV“^ý‰˜›O‰QÙWY8^YTM|0"
+ jxp_a_nobles_fudai_magistrates:0 "1ŒãNIYLˆ6R"
+ jxp_a_nobles_fudai_magistrates_desc:0 "åN1ŒãN¶RãEQûN8^¾‹IYLˆÿNtÉ‹¼‹0›Q®|NlS&ŒQ0MeäNƒýw=‰VÿY7hN°eD–ø‹¶RtS¾–MQ‘uç`0"
+ jxp_a_nobles_tozama_transfer_guarantees:0 "Y7hlSÝOœ–"
+ jxp_a_nobles_tozama_transfer_guarantees_desc:0 "¦ušRàe'YjNHYY7hçe†˜ÿåNbcÖSÖNìNb²‹)YNÁˆšR00W¹eàVdk‰RY—ÿ-N.Y6eÞVW0W„vKbµktS×Sb‡e¦umg0"
+ jxp_a_nobles_overseas_service_rolls:0 "wmY›QyVTM|"
+ jxp_a_nobles_overseas_service_rolls_desc:0 "Šb9‚Kb0Á”®pONø‹¶RÜVýN˜eQNŒQÿHNŠwm›QyV„˜n!k,r0wm›Q¨RXT—VÊvÿýV…QuQyVÅb¦NôfHN‰lÍ‘0"
+ jxp_a_nobles_hatamoto_direct_service:0 "×e,gôvãS"
+ jxp_a_nobles_hatamoto_direct_service_desc:0 "ÎNø‹¶RgÏeNçeýVºN-N	ÖS×e,gÿäNvQŠÇ0W¹e¶Rè•ôv¥cIYlQ0ôv^S›Q¿R1udk¾|HVÿøO„yN¶R-NidædmNNv^žX R0"
+ jxp_a_nobles_monetised_stipends:0 "fk¶RøO„y'^S"
+ jxp_a_nobles_monetised_stipends_desc:0 "åNÑ‘ö”ŒTšRgQQØNÿfãNèRžRs|øO„yÿOfk¶RNQŒRhQ×SNöes|÷Nur6R0°e6RPVýV¶RáO(uÿmNOŠb)Ro`Î˜i–&^eQ¶R-N0"
+ jxp_a_nobles_branch_castle_cadasters:0 "=eÎWN›QyVÀhŒQ"
+ jxp_a_nobles_branch_castle_cadasters_desc:0 "S=eÎW0uQ®|“^NˆRYåwLˆNv^‰v°‹ÿäN0W¹e2–¿uNQêSíQçe¶R.Oô‹0‰^XôfZWÿôucø‹ÎW„v9(umNôfØš0"
+ jxp_a_nobles_house_council_seats:0 "¶R-NÄ‹šR8^-^"
+ jxp_a_nobles_house_council_seats_desc:0 "ÆQ¸‹Í‘ã	c-^!kÂSN¶R-NÄ‹šRÿåNqQTÌwfNçub0lSŒT'Yb0³QVrƒHN3z¥YÿtSNýwQ1uINTìr­eLˆ0"
+ jxp_a_church_temple_land_confirmation:0 "úR>y†˜‰R5X"
+ jxp_a_church_temple_land_confirmation_desc:0 "nx²‹çeúR>y†˜0my0uNè•MRyVMQÿOHywyŒT0W¹eQeNmNàVbkp-N­e0MQz0Wib'YÿmNOJR1VlQêNôv¥c0n0"
+ jxp_a_church_kanjin_exemptions:0 "çRÛMQz"
+ jxp_a_church_kanjin_exemptions_desc:0 "ÆQ¸‹úR>yHNehh0XTXNHNmßRÆ–çRÛÿv^MQd–èRsQ%mþ‹yV0lQqQ%„.—VåNtQžRÿV6eSOû|tSYuN‹OY0"
+ jxp_a_church_doctrinal_arbitration:0 "—Rº‹Áˆ¸‹"
+ jxp_a_church_doctrinal_arbitration_desc:0 "1ulQêNìSÆ–—Rº‹v^ÁˆšR.OYeLuP–ÿOYeIN‰NïzNóHQÉ‹ø‹uQkp0Áˆ2RïS‰RºNÃVÿmNO©‹—Rè•ôfñmËNeQMe¡R0"
+ jxp_a_church_jinaimachi_autonomy:0 "úR…QHuê»l"
+ jxp_a_church_jinaimachi_autonomy_desc:0 "b²‹úR…QHu(W^Õl0Yf‹NÓNê^N„vçe‹OÿåNbcÖS	cg“³uŒTNVuQè•0è•MRFUNAucƒÿ0W¹eê»lmNôf¾–6eÞV0"
+ jxp_a_church_academies_and_terakoya:0 "fRîRNúRPRYe²w"
+ jxp_a_church_academies_and_terakoya_desc:0 "äNúRb–fRîRŒTaNÌ‘úRPRbÅbfN—rYe`NÿHNIYLˆNHuyVùW‰Qýwû‹&ŒQKNºN0Ye²wn^ÿýV¶R‰˜¹R³u—Rè•„vã‰Ê‘KNCg0"
+ jxp_a_church_charity_hospitals:0 "Ëeoƒb–NINÓN"
+ jxp_a_church_charity_hospitals_desc:0 "åNúR>yQÜuÏu%„Ëeoƒ0INÓNNŒpt^¥|HWÿOe™ÅuNóËzIRSHNAml0ôucdk>N—‰3zšR„vMQyVŒTËeeQ0"
+ jxp_a_church_warrior_monks:0 "çPuQÝO	g"
+ jxp_a_church_warrior_monks_desc:0 "ÆQ¸‹ø‹qSÝOYu	gP–çPuQÿÅbqSè•0SïN1W0WˆRY0vQuQïS©RýV2–ÿmNïSýw(W—Rè•NánöeÍSlVlQêN0"
+ jxp_a_church_overseas_dharma:0 "wmYÕlop¸‹ïS"
+ jxp_a_church_overseas_dharma_desc:0 "ÆQ¸‹×SŒQçP±OŒTYeëX–FU6‚ŽVegÿv^1uIYLˆ8hŒšfNáON0'0Ü¹eåwÆ‹1udkAmeQÿVïz‰Nº‹mNôf‘˜Au0"
+ jxp_a_church_temple_credit_offices:0 "úRb–áO(uONb"
+ jxp_a_church_temple_credit_offices_desc:0 "AQ¸‹ÌRúRåNÄRÛs|0`yXÑ‘ŒTHu-NXRö”hTlíwgáO(u0ýV(u—VNKbÿMQzDµNtSOXNHgžX•0"
+ jxp_a_church_state_appointed_abbots:0 "ýV¶RûN‹TOOc"
+ jxp_a_church_state_appointed_abbots_desc:0 "1ulQêNnx²‹'YúROOcN^yLw–™µ^ÿI–bkqSè•Áy—eŒTN­ˆ0ûN‹TCg RHVµc6RÿmNO2OÊS—Rè•ê»l0"
+ jxp_a_church_sect_council_seats:0 "ø‹—RlQ®‹-^"
+ jxp_a_church_sect_council_seats_desc:0 "	c—R>m0úR<hŒT0W¹e!.sRM‘lQ®‹-^ÿOYeè•‰NïzHQ(W-^NÁˆšR0ø‹—R	gŠïÿýV¶RmNÅV‰˜b²‹ÖNìN„vÆ–SO0WMO0"
+ jxp_a_church_confessional_schools:0 "—Rè•OOfR!h"
+ jxp_a_church_confessional_schools_desc:0 "ÆQ¸‹×SýV¶Rb²‹„vYeè•¾‹ËzOOfR!hÿYeˆcÏuIN0fN—rŒTYí‹0ºNMbegnib'Yÿ—R>mLu¿umN–KNÝQúV0"
+ jxp_a_burghers_free_markets:0 "PN^PNµ^"
+ jxp_a_burghers_free_markets_desc:0 "Ÿ^d–çeµ^ùRå‚r^^åeN'ir„vN­eÿ©‹egŽVFU)íQlQêNÕl¦^²Nf0^zôf^ÿçeFUCg„vàVÚ‹tSO×Smc0"
+ jxp_a_burghers_town_council_autonomy:0 "OTOê»l"
+ jxp_a_burghers_town_council_autonomy_desc:0 "b²‹IN‰ý^OTOYtWˆHS04lkpNYf‹ÿåNšR˜zbcÖSê»l0ÎWHuIm›RNGSÿ-N.Y‹TäNR‰˜HQÏuÇFU®‹0"
+ jxp_a_burghers_guild_charters:0 "*hòNô•yr¸‹"
+ jxp_a_burghers_guild_charters_desc:0 "HNTN*hòNô•ÑSÙugP–àzzÿ1äNvQÝO(0“zv^YRƒ0Ïu%„ôf	géy^ÿ„W­e÷N<hmNïSýw–KNúQ°s0"
+ jxp_a_burghers_mint_management:0 "Ñ‘µ^Nö”µ^Ïu%„"
+ jxp_a_burghers_mint_management_desc:0 "ÔYûN×S¡R¡‹„vÑ‘ö”µ^6e-ÿw™e0ø”.'^v^lQ^br‚0^6Rôf3zÿµ^FUtSO‰BlOHQÏu%„Cg0"
+ jxp_a_burghers_warehouse_rice_notes:0 "Ï…KSweNs|RKb"
+ jxp_a_burghers_warehouse_rice_notes_desc:0 "²‹ïSÏ…KSweíQeQÓNt^!s|ŒrÑSïSl©‹„vs|RKbÿOø‹é…NÅVKS…VžRs|.UúQ0hTl RëVÿmN>e'Y†Ns|÷NNáO(u„vurÞ0"
+ jxp_a_burghers_red_seal_trade:0 "1gpS8f"
+ jxp_a_burghers_red_seal_trade_desc:0 "åN1gpS¶r‰v°‹9‚IN09‚XTN*‚ïÿOwmY²Nf×SlQêNÝO²bŒT¦umg0Üm6eÊvžX Rÿ²b*‚NY²NV=emN–KNweg0"
+ jxp_a_burghers_company_incorporation:0 "O>yÑSwCg"
+ jxp_a_burghers_company_incorporation_desc:0 "AQ¸‹jŒFUOàzzT,gÏu%„ÿfnxúQD0R¢uN¡R¡‹gP–0'YN—VåNZwDÿHuOmNO‰Bl(WýVMe-N	gôfÍ‘„vðXó—0"
+ jxp_a_burghers_port_militias:0 "=nãSluQ"
+ jxp_a_burghers_port_militias_desc:0 "ˆcCg=nHuÄuÇuYf‹0kpˆmN	gP–luQÿˆR²bÓN“^ŒTÊl0W0wm¸S2–YžXHVÿFUºNÁyuQmNôf¾–ŒRhQÁˆ²d0"
+ jxp_a_burghers_courier_houses:0 "Þ˜î•KS"
+ jxp_a_burghers_courier_houses_desc:0 "©‹Þ˜î•KSbýclQ‡e0GlQQŒTLˆÅ`.Oÿv^	cšz¥c×SÀhåg0÷N<hˆmo`AmôfëVÿôuchQýV¿uï¦N^—àe90"
+ jxp_a_burghers_marine_insurance:0 "wmÐÝOi–"
+ jxp_a_burghers_marine_insurance_desc:0 "¸‹ïSû^9‚î•KSqQTRÅbwm¾–0«R cN'mcÿåN&M|ŒTÁ‰Á‹nxšRTØN0*‚ÐôfbeÜLˆÿHkÈ‹N2NŒmN‰˜%Någ0"
+ jxp_a_burghers_public_bond_subscription:0 "ýV¶RlQHP²‹-"
+ jxp_a_burghers_public_bond_subscription_desc:0 "AQ¸‹HuOåNšRglQHPb¥c›Q9N%„.ÿbcÖSfnxQQØN!k,r0ýV“^·ƒ—V²QÿHPCgºNmNO‰Bl3zšR„vMeVr0"
+ jxp_a_burghers_commercial_courts:0 "FU‹NÕl­^"
+ jxp_a_burghers_commercial_courts_desc:0 "1uIYLˆ0Hut^ÄRNSf&ÕlwT®‹FUHP0wmmcŒTT,g u·u0QY¦uôfïSáOÿFUºNê»lRÛNek6R¦^S0"
+ jxp_a_villages_village_tax_compacts:0 "ã`Qg÷‹"
+ jxp_a_villages_village_tax_compacts_desc:0 "åNQgHNUSMObú‹t^!0»l‰RN1Y*Ž7býeˆÿ1uã`ãN(W…QèJd>m0V6e‹3zÿýV¶RtSNfôv¥cæ‰ÊSÏkN7b0"
+ jxp_a_villages_fixed_land_tax:0 "t^!šRMQ"
+ jxp_a_villages_fixed_land_tax_desc:0 "	cpet^s^GW6ebúVšRt^!‡sÿMQ»SãN˜R4NöežX>m0œQ7bôfbeïyÄ„ÿ0Nt^öelQêNNb—VmNNO–µNÏ‘KSžX0"
+ jxp_a_villages_irrigation_works:0 "Lp‰nnf÷‹"
+ jxp_a_villages_irrigation_works_desc:0 "1upeQgqQTîO2X0V.nv^RÅb4l)RyVÿIYLˆêS8håTzN&îv00u0W6ebÐcØšÿ%„.9mN‰1uýV¶Reˆ©R0"
+ jxp_a_villages_relief_granaries:0 "8^s^INÓN"
+ jxp_a_villages_relief_granaries_desc:0 "ÆQ¸‹aNQg(W0Nt^ïy7Œ0Œpt^s^œ|ÿ1uúR>yNã`ãNqQTSŒšÓNè•0e™Rƒ²QûQÏQ‰ÿs^åeïSVKN®|¦N	gNbÏQS0"
+ jxp_a_villages_separate_soldiers_farmers:0 "uQœQR»y"
+ jxp_a_villages_separate_soldiers_farmers_desc:0 "ekã‰d–œQ7b8^Y›QyVÿåNNLw³‰ŒTøO„yfkëXbÅbVb0wjOôf R3zšRÿVuQegnRN‚YçeöeËR^0"
+ jxp_a_villages_village_militias:0 "aNuQ¨RXT"
+ jxp_a_villages_village_militias_desc:0 "ÝOYu1uã`QgÄu„vaNuQÿÅN(uŽNˆR2X0²bÓNŒT,gýV2–¡V00W¹eˆRYžXHVÿœQöeN»l‰RtSïSýw×SfkÅˆSÖb=t0"
+ jxp_a_villages_debt_relief_petitions:0 "·VMe÷‹Bl"
+ jxp_a_villages_debt_relief_petitions_desc:0 "b²‹Œpt^1uã`ãNHT÷‹ö^g0ÏQo`bÍ‘¢‹çeHPÿFO‰˜ÏuIYLˆHh8hŒš0aNÌ‘ïSMQ)TceÿHPCgáO(umNO×Smc0"
+ jxp_a_villages_new_field_reclamation:0 "°e0uVÓb"
+ jxp_a_villages_new_field_reclamation_desc:0 "ŠbRƒ0W04l¹NqS“ž°e0u²N1upeQgT›RV¦Wÿv^ÙuˆNP–gÏQMQ0W0W)R(uÐcØšÿýV¶RíwgzeQ	gNb©‹!n0"
+ jxp_a_villages_rural_industry:0 "œQQgKbåTN"
+ jxp_a_villages_rural_industry_desc:0 "AQ¸‹œQò•ºuÇu06R¸uNSÄ‰!j RåT1uQgK„qQTbýcÿOaNÌ‘R«NÎW^^HW0'iržX RÿmNO²QûQçeµ^Nt^!éy^0"
+ jxp_a_villages_village_charters:0 "QgK„ê»l‡efN"
+ jxp_a_villages_village_charters_desc:0 "ŠbeQO0W04l)R0qS—gNã`ãN	ûN™QblQ²‹‡efNÿOãN˜RÁˆ­e	g‹OïSªV0aNÌ‘‰N¼‹ÏQSÿê»lCgmNôf RbrúV0"
+ jxp_a_villages_common_workshops:0 "qQTåTHW"
+ jxp_a_villages_common_workshops_desc:0 "1upeQgTD¾‹nÇuHW0‘zHWbjO‹NSKSÿ	cúQåTNŸS™eRM‘6eÊv0ŸSåTNôfbÄ‰!jÿýV¶R‰˜2–bk°ejŒHV„W­e0"
+ jxp_a_villages_overseas_service_exemption:0 "MQd–wmY›QyV"
+ jxp_a_villages_overseas_service_exemption_desc:0 "¦ušRã`QgNbÅbŠwmÜV„vºNNVÑSÿêS›O”^	gšR˜„v®|ãyN9‚wQ0aNÌ‘—VåNÝOhQ³R›RÿÜV›Q„vºN›RegnàVw6e„z0"
+ jxp_a_nobles_agenda_compile_land_rolls:0 "6RåwLˆ&"
+ jxp_a_nobles_agenda_compile_land_rolls_desc:0 "fk¶R‰BlŠbceÁ‰ŽN‰R5X¶rNçeRr„våwLˆÍ‘°eGlHNNŒQ0"
+ jxp_a_nobles_agenda_settle_old_retainers:0 "‰R5Xçeã"
+ jxp_a_nobles_agenda_settle_old_retainers_desc:0 "fk¶R^gåN3zšRýV¿RÁ‹f°eD–NçeãGWòTT‰RvQNb0"
+ jxp_a_nobles_agenda_order_service_rolls:0 "te˜›QyV"
+ jxp_a_nobles_agenda_order_service_rolls_desc:0 "¶R-NÄ‹šR‰Bl(WN!k¨RXTMRY³ïS(uuQXT0"
+ jxp_a_nobles_agenda_appoint_magistrates:0 "ú^Ëz1ŒãNIYLˆ"
+ jxp_a_nobles_agenda_appoint_magistrates_desc:0 "Í‘ã÷‹BlHN8^¾‹IYLˆ„˜Yu³Y›QMeDn0"
+ jxp_a_nobles_agenda_repair_branch_castles:0 "îOQrbeu=eÎW"
+ jxp_a_nobles_agenda_repair_branch_castles_desc:0 "fk¶R‰BlýV“^YuúQNr³åNîOÎWY®|„v>ky˜0"
+ jxp_a_nobles_agenda_order_castle_residences:0 "tetÎWNKSwe"
+ jxp_a_nobles_agenda_order_castle_residences_desc:0 "ø‹¶RMaûyESÎWNÿFO‰BlINTHQb`YZg0"
+ jxp_a_nobles_agenda_strengthen_frontier_roads:0 "HVS¹†uSï"
+ jxp_a_nobles_agenda_strengthen_frontier_roads_desc:0 "¶Rã^g†˜ýVÄ‰!j³åN=e‘dNWY8^¾‹Sï›QyV0"
+ jxp_a_nobles_agenda_protect_yoriko:0 "ÝO²bÄRPR"
+ jxp_a_nobles_agenda_protect_yoriko_desc:0 "ÄR²Nø‹¶R‰BljPbkàeObkVbÿOÄRPR6R—VåNte˜0"
+ jxp_a_nobles_agenda_settle_dispossessed_lords:0 "‰Rn1YýVfk¶R"
+ jxp_a_nobles_agenda_settle_dispossessed_lords_desc:0 "fk¶R‰BlåNEQ³›Q¡R„˜—r‰RnAmÓRø‹ëX0"
+ jxp_a_nobles_agenda_resolve_succession_petitions:0 "Áˆ­e¶Rcw‰N®‹"
+ jxp_a_nobles_agenda_resolve_succession_petitions_desc:0 "Ä‹šRO‰BlINT(WýV¿R3zšRöeŒRb¶RcwÁˆ­e0"
+ jxp_a_church_agenda_convene_debate:0 "ìSV—Rº‹"
+ jxp_a_church_agenda_convene_debate_desc:0 "úR>y÷‹Bl(WýV-N‰RšRöeìSVlQV—Rº‹0"
+ jxp_a_church_agenda_register_temple_lands:0 "‰v°‹úR>y†˜"
+ jxp_a_church_agenda_register_temple_lands_desc:0 "—Rè•MaÐc²NúR†˜‡efNÿFO‰Bl-N.YHQY¥YLˆMeºNKb0"
+ jxp_a_church_agenda_found_academy:0 "ú^ËzfRîR"
+ jxp_a_church_agenda_found_academy_desc:0 "úR>y^gýV¶RÝOYu³Y0›RtQžRfRîR0"
+ jxp_a_church_agenda_open_charity_hospital:0 "¾‹ËzËeoƒb–"
+ jxp_a_church_agenda_open_charity_hospital_desc:0 "—Rè•÷‹Bl(WýV“^EQÕˆöe¾‹ËzËeoƒNHNmHg„g0"
+ jxp_a_church_agenda_restore_holy_places:0 "îOY1W0W"
+ jxp_a_church_agenda_restore_holy_places_desc:0 "úR>y‰BlåNýV¶RZgINcNYÍ‘‰îOY0"
+ jxp_a_church_agenda_secure_pilgrim_roads:0 "te˜áT<ySï"
+ jxp_a_church_agenda_secure_pilgrim_roads_desc:0 "—Rè•^g†˜ýVHQb`YŒTs^ÿQuáT<ySï0"
+ jxp_a_church_agenda_develop_temple_towns:0 "ÑSUSúR…QHu"
+ jxp_a_church_agenda_develop_temple_towns_desc:0 "úR>y^gýV¶Råb	g³YÎW^egb‹è•MRHuQÜu0"
+ jxp_a_church_agenda_protect_the_faithful:0 "ÝO²bT—R"
+ jxp_a_church_agenda_protect_the_faithful_desc:0 "—Rè•‰Blb`Y³åNÝO²báOO„v—RYeNô0"
+ jxp_a_church_agenda_recover_scriptures:0 "ÖS—VÏuwS"
+ jxp_a_church_agenda_recover_scriptures_desc:0 "fRçP÷‹BlHNdBl0RIRN!hØR„˜YuLˆMeDn0"
+ jxp_a_church_agenda_relieve_famine:0 "HNme™l"
+ jxp_a_church_agenda_relieve_famine_desc:0 "úR>y^g(WNOÀw„výV(u-NyrªcHNm0"
+ jxp_a_burghers_agenda_charter_guilds:0 "ú^Ëz*hòNô•"
+ jxp_a_burghers_agenda_charter_guilds_desc:0 "HuO‰Bl(WIN‰ÎW^-N¨cLˆ	ggP–„vTNàzz0"
+ jxp_a_burghers_agenda_unify_tolls:0 "ßuNsQ%mz"
+ jxp_a_burghers_agenda_unify_tolls_desc:0 "jŒFU^gýV¶Rb`Y‰RšRÿåN¿OÁˆ²dBSBSsQ%m0"
+ jxp_a_burghers_agenda_open_exchange:0 "¾‹ËzQQbcNb"
+ jxp_a_burghers_agenda_open_exchange_desc:0 "HuO÷‹BlÆQY³YY²NNFU‹NºNKbVžRQQbcNb0"
+ jxp_a_burghers_agenda_issue_trade_notes:0 "ÑSLˆFUhy"
+ jxp_a_burghers_agenda_issue_trade_notes_desc:0 "FUºN^gýV“^ÝO	g³åNQQ°s,rNybFUhy„v°sÑ‘0"
+ jxp_a_burghers_agenda_expand_ports:0 "ibú^=nãS"
+ jxp_a_burghers_agenda_expand_ports_desc:0 "wmFU‰BlýV¶RóSåb	g2NY=nãSåNbVbû^9‚¿uï0"
+ jxp_a_burghers_agenda_build_workshops:0 "tQžRåTHW"
+ jxp_a_burghers_agenda_build_workshops_desc:0 "HuO^gib'YÎW^QÜuÿb¥cT0WŸS™e0"
+ jxp_a_burghers_agenda_obtain_trade_rights:0 "ÖS—V8fyrCg"
+ jxp_a_burghers_agenda_obtain_trade_rights_desc:0 "FUºN‰BlåNýV¶RZgHNQY¦uÌwfN0"
+ jxp_a_burghers_agenda_settle_domain_debt:0 "nté…HP"
+ jxp_a_burghers_agenda_settle_domain_debt_desc:0 "jŒFU‰BlŠb7>k‹S0RïSµcƒôV0"
+ jxp_a_burghers_agenda_steady_currency:0 "s^‘bs|÷NN±”÷N"
+ jxp_a_burghers_agenda_steady_currency_desc:0 "HuO‰BlŠbÀwµc6R(WNô4xOWåe8^²Nf„vz¦^0"
+ jxp_a_burghers_agenda_audit_company_books:0 "ntO>y&îv"
+ jxp_a_burghers_agenda_audit_company_books_desc:0 "OTO‰Bl(WŒTs^öegÆ–-N¡R¡‹FU‹N&ŒQ0"
+ jxp_a_villages_agenda_fix_land_tax:0 "úVšRt^!"
+ jxp_a_villages_agenda_fix_land_tax_desc:0 "ã`ãN÷‹Bl(WýV¶R‰RšRöe®‹šRpet^NØS„vt^!‡s0"
+ jxp_a_villages_agenda_compile_village_registers:0 "ú^ËzQg&"
+ jxp_a_villages_agenda_compile_village_registers_desc:0 "ã`QgMatet7bãS00u©NŒTeQO0WÿFO—‰LˆMeºNKb0"
+ jxp_a_villages_agenda_build_common_granaries:0 "ú^¾‹qQTÓN"
+ jxp_a_villages_agenda_build_common_granaries_desc:0 "aNÌ‘÷‹BlýV“^Y>k¾‹ËzqQTÓN0"
+ jxp_a_villages_agenda_repair_dikes:0 "îO2XNLp‰n"
+ jxp_a_villages_agenda_repair_dikes_desc:0 "ŒvÓY^g(WŒTs^öegÆ–-NŒRb4l)Rnf÷‹0"
+ jxp_a_villages_agenda_reclaim_new_fields:0 "V¦W°e0u"
+ jxp_a_villages_agenda_reclaim_new_fields_desc:0 "ã`Qg‰Bl†˜ýV¾0R³åNÄuÇuèQgnf÷‹„vÄ‰!j0"
+ jxp_a_villages_agenda_expand_rural_workshops:0 "ÑSUSœQQgåTHW"
+ jxp_a_villages_agenda_expand_rural_workshops_desc:0 "aNÌ‘^gýV¶RÛeQƒ'Y„vÎW^^HWQÜu0"
+ jxp_a_villages_agenda_reduce_service_burdens:0 "ÏQMQ›QyV"
+ jxp_a_villages_agenda_reduce_service_burdens_desc:0 "ŒvÓY‰Bl›QyVNQwKSœQöeNîXN0"
+ jxp_a_villages_agenda_settle_refugees:0 "‰RnAml"
+ jxp_a_villages_agenda_settle_refugees_desc:0 "ã`ãN‰BlHQ‘b6RÀwÿQ‰RnceºNãS0"
+ jxp_a_villages_agenda_end_requisitions:0 "jPbk cHYVÑS"
+ jxp_a_villages_agenda_end_requisitions_desc:0 "aNÌ‘÷‹BlŠbŒSbM–0RïSb×S„vƒôV0"
+ jxp_a_villages_agenda_grant_relief:0 "ËeLˆ·VMeHNm"
+ jxp_a_villages_agenda_grant_relief_desc:0 "ŒvÓY‰BlntÇ¦^7>kÿHNŒpt^YuNYO0W0"
+ jxp_a_convene_nobles_estate_council_title:0 "ìSV¶R-NÄ‹šR"
+ jxp_a_convene_nobles_estate_council_desc:0 "ìSÆ–1ŒãN0Y7hNIYLˆT-^ÿÁˆšR›QyVŒTåwLˆ0dky˜Ä‹šRÏu1u³Q®‹V=TÿÏk”Nt^¹eïSQ!k>NLˆÿv^^—ŸSu6–BSb—gN„vàeãN÷N	c®”0"
+ jxp_estates.1.t:0 "ìSV¶R-NÄ‹šR"
+ jxp_estates.1.d:0 "ìSÆ–1ŒãN0Y7hNIYLˆT-^ÿÁˆšR›QyVŒTåwLˆ0-^Nø‹OT	gNbBlÿàeº‹AQÆQêTN®‹ÿý‰˜ØNúQýV(u0Zgb6–BSGWaˆ„vãN÷N0"
+ jxp_a_convene_church_estate_council_title:0 "ìSV—Rè•lQ®‹"
+ jxp_a_convene_church_estate_council_desc:0 "‹Tø‹úR>yN—Rè•ãNhˆeQ-^ÿ(WuQkpåNMRH–ð‰Nïz0dky˜Ä‹šRÏu1u³Q®‹V=TÿÏk”Nt^¹eïSQ!k>NLˆÿv^^—ŸSu6–BSb—gN„vàeãN÷N	c®”0"
+ jxp_estates.2.t:0 "ìSV—Rè•lQ®‹"
+ jxp_estates.2.d:0 "‹Tø‹úR>yN—Rè•ãNhˆeQ-^ÿ(WuQkpåNMRH–ð‰Nïz0-^Nø‹OT	gNbBlÿàeº‹AQÆQêTN®‹ÿý‰˜ØNúQýV(u0Zgb6–BSGWaˆ„vãN÷N0"
+ jxp_a_convene_burghers_estate_council_title:0 "ìSVHuOÄ‹®‹"
+ jxp_a_convene_burghers_estate_council_desc:0 "ìSÆ–OTO0î•KSNjŒFUÿ®‹šRýV(uŒT*‚ï0dky˜Ä‹šRÏu1u³Q®‹V=TÿÏk”Nt^¹eïSQ!k>NLˆÿv^^—ŸSu6–BSb—gN„vàeãN÷N	c®”0"
+ jxp_estates.3.t:0 "ìSVHuOÄ‹®‹"
+ jxp_estates.3.d:0 "ìSÆ–OTO0î•KSNjŒFUÿ®‹šRýV(uŒT*‚ï0-^Nø‹OT	gNbBlÿàeº‹AQÆQêTN®‹ÿý‰˜ØNúQýV(u0Zgb6–BSGWaˆ„vãN÷N0"
+ jxp_a_convene_villages_estate_council_title:0 "ìSVã`QgÄ‹šR"
+ jxp_a_convene_villages_estate_council_desc:0 "äNã`ãN0„^KSNŒvÓYãNhˆH–ðt^!04l)RŒTHNm0dky˜Ä‹šRÏu1u³Q®‹V=TÿÏk”Nt^¹eïSQ!k>NLˆÿv^^—ŸSu6–BSb—gN„vàeãN÷N	c®”0"
+ jxp_estates.4.t:0 "ìSVã`QgÄ‹šR"
+ jxp_estates.4.d:0 "äNã`ãN0„^KSNŒvÓYãNhˆH–ðt^!04l)RŒTHNm0-^Nø‹OT	gNbBlÿàeº‹AQÆQêTN®‹ÿý‰˜ØNúQýV(u0Zgb6–BSGWaˆ„vãN÷N0"
+ jxp_estates.1.a:0 "åN›QeubcÖSÍ‘ãÌwfN"
+ jxp_estates.1.b:0 "ý R›QyVÿHQ”^<wMRKN%`"
+ jxp_estates.1.c:0 "Í‘3uåwLˆÿåNW0WbcÖSgÎN"
+ jxp_estates.1.z:0 "‚fNôf¨Rçe‹O"
+ jxp_estates.2.a:0 "ÆQvQlQV—Rº‹"
+ jxp_estates.2.b:0 "‹TúR>yVÓNËeoƒ"
+ jxp_estates.2.c:0 "‰v°‹úR†˜ÿ6eÞVèRMQyV"
+ jxp_estates.2.z:0 "‚fNôf¨Rçe‹O"
+ jxp_estates.3.a:0 "ÑSLˆíwglQHP"
+ jxp_estates.3.b:0 "®‹šRFUÕlN^6‚àzz"
+ jxp_estates.3.c:0 "ÄuÇuû^9‚²bÐ"
+ jxp_estates.3.z:0 "‚fNôf¨Rçe‹O"
+ jxp_estates.4.a:0 "ÑS¨RqQTnf÷‹"
+ jxp_estates.4.b:0 "VÓNs^œ|"
+ jxp_estates.4.c:0 "ÏQMQt^!N›QyV"
+ jxp_estates.4.z:0 "‚fNôf¨Rçe‹O"
+ estate_privileges_and_agendas_events.3.q:0 ",TÖS[Root.GetJxpVillageCommunesName]„v®‹z"
+ estate_privileges_and_agendas_events.7.q:0 "ÅNÎN[Root.GetJxpVillageCommunesName]6eÞVW0W"

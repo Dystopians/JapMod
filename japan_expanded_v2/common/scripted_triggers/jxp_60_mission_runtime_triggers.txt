@@ -612,47 +612,35 @@ jxp_mission_tree_fingerprint_valid_trigger = {
 			}
 			NOT = {
 				OR = {
-					has_mission = jxp_mission_secure_home_domain
-					has_mission = jxp_mission_capital_cities
-					has_mission = jxp_mission_toyotomi_yamazaki_settlement
-					has_mission = jxp_mission_toyotomi_osaka_castle_town
-					has_mission = jxp_mission_toyotomi_kyushu_settlement
-					has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 					has_mission = jxp_mission_shrine_land_registers
 					has_mission = jxp_mission_uncommitted_watch_the_four_seas
-					has_mission = jxp_mission_temple_registration
 					has_mission = jxp_mission_sakoku_coastal_magistrates
-					has_mission = jxp_mission_open_nagasaki
 					has_mission = jxp_mission_eastasia_ryukyu_gateway
 					has_mission = jxp_mission_pacific_charter
-					has_mission = jxp_mission_domain_school_exams
-					has_mission = jxp_mission_cjp_three_teachings_register
-					has_mission = jxp_mission_zhu_xi_lectures
-					has_mission = jxp_mission_ejp_restore_daijokan
-					has_mission = jxp_mission_ejp_repair_kinri
-					has_mission = jxp_mission_ejp_guard_four_seas
-					has_mission = jxp_mission_welcome_missionaries
+					has_mission = jxp_a_buddhist_woodblocks_scriptures
+					has_mission = jxp_a_buddhist_korean_scriptures
 					has_mission = jxp_mission_kirishitan_settlement
 					has_mission = jxp_mission_port_congregation_registers
-					has_mission = jxp_mission_hirado_synod
+					has_mission = jxp_mission_cjp_three_teachings_register
+					has_mission = jxp_mission_zhu_xi_lectures
+					has_mission = jxp_mission_ejp_repair_kinri
+					has_mission = jxp_mission_ejp_guard_four_seas
 					has_mission = jxp_mission_reformed_settlement
 					has_mission = jxp_mission_rfj_oranda_factors
-					has_mission = jxp_mission_malay_factory
 					has_mission = jxp_mission_harbor_mosque_registers
 					has_mission = jxp_mission_kaikyo_settlement
-					has_mission = jxp_mission_terauchi_league
 					has_mission = jxp_mission_monto_rolls
 					has_mission = jxp_mission_ikko_temple_granaries
-					has_mission = jxp_mission_fund_wokou
 					has_mission = jxp_mission_wak_letters_of_black_current
 					has_mission = jxp_mission_northern_sea_office
+					has_mission = jxp_mission_toyotomi_osaka_castle_town
+					has_mission = jxp_mission_toyotomi_kyushu_settlement
 				}
 			}
 		}
 		AND = {
 			jxp_is_unified_japan_state_trigger = yes
-			has_mission = jxp_mission_secure_home_domain
-			has_mission = jxp_mission_capital_cities
+			jxp_a_105_mission_profile_fingerprint_valid_trigger = yes
 			NOT = {
 				OR = {
 					has_mission = jxp_mission_daimyo_domain_accounts
@@ -680,466 +668,406 @@ jxp_mission_tree_fingerprint_valid_trigger = {
 				}
 			}
 			OR = {
-				# toyotomi
-				AND = {
-					tag = TOY
-					NOT = { jxp_has_any_route_trigger = yes }
-					has_mission = jxp_mission_toyotomi_yamazaki_settlement
-					has_mission = jxp_mission_toyotomi_osaka_castle_town
-					has_mission = jxp_mission_toyotomi_kyushu_settlement
-					NOT = {
-						OR = {
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
-							has_mission = jxp_mission_shrine_land_registers
-							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
-							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
-							has_mission = jxp_mission_eastasia_ryukyu_gateway
-							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
-							has_mission = jxp_mission_kirishitan_settlement
-							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
-							has_mission = jxp_mission_reformed_settlement
-							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
-							has_mission = jxp_mission_harbor_mosque_registers
-							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
-							has_mission = jxp_mission_monto_rolls
-							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
-							has_mission = jxp_mission_wak_letters_of_black_current
-							has_mission = jxp_mission_northern_sea_office
-						}
-					}
-				}
 				# uncommitted
 				AND = {
-					tag = JAP
-					NOT = { jxp_has_any_route_trigger = yes }
-					has_mission = jxp_mission_uncommitted_reckon_warrior_houses
+					jxp_a_105_profile_uncommitted_trigger = yes
 					has_mission = jxp_mission_shrine_land_registers
 					has_mission = jxp_mission_uncommitted_watch_the_four_seas
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# sakoku
 				AND = {
-					has_country_flag = jxp_path_sakoku
-					has_mission = jxp_mission_temple_registration
+					jxp_a_105_profile_sakoku_trigger = yes
 					has_mission = jxp_mission_shrine_land_registers
 					has_mission = jxp_mission_sakoku_coastal_magistrates
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# open_trade
 				AND = {
-					has_country_flag = jxp_path_open_trade
-					has_mission = jxp_mission_open_nagasaki
+					jxp_a_105_profile_open_trigger = yes
 					has_mission = jxp_mission_eastasia_ryukyu_gateway
 					has_mission = jxp_mission_pacific_charter
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
-				# confucian
+				# buddhist
 				AND = {
-					OR = {
-						tag = CJP
-						has_country_flag = jxp_path_confucian
-					}
-					has_mission = jxp_mission_domain_school_exams
-					has_mission = jxp_mission_cjp_three_teachings_register
-					has_mission = jxp_mission_zhu_xi_lectures
+					jxp_a_105_profile_buddhist_trigger = yes
+					has_mission = jxp_a_buddhist_woodblocks_scriptures
+					has_mission = jxp_a_buddhist_korean_scriptures
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
-							has_mission = jxp_mission_reformed_settlement
-							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
-							has_mission = jxp_mission_harbor_mosque_registers
-							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
-							has_mission = jxp_mission_monto_rolls
-							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
-							has_mission = jxp_mission_wak_letters_of_black_current
-							has_mission = jxp_mission_northern_sea_office
-						}
-					}
-				}
-				# imperial
-				AND = {
-					OR = {
-						tag = EJP
-						has_country_flag = jxp_path_imperial
-					}
-					has_mission = jxp_mission_ejp_restore_daijokan
-					has_mission = jxp_mission_ejp_repair_kinri
-					has_mission = jxp_mission_ejp_guard_four_seas
-					NOT = {
-						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
-							has_mission = jxp_mission_shrine_land_registers
-							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
-							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
-							has_mission = jxp_mission_eastasia_ryukyu_gateway
-							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
 							has_mission = jxp_mission_cjp_three_teachings_register
 							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_welcome_missionaries
-							has_mission = jxp_mission_kirishitan_settlement
-							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# kirishitan
 				AND = {
-					OR = {
-						tag = KJP
-						has_country_flag = jxp_path_kirishitan
-					}
-					has_mission = jxp_mission_welcome_missionaries
+					jxp_a_105_profile_kirishitan_trigger = yes
 					has_mission = jxp_mission_kirishitan_settlement
 					has_mission = jxp_mission_port_congregation_registers
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_cjp_three_teachings_register
 							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
 							has_mission = jxp_mission_ejp_repair_kinri
 							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_hirado_synod
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
+						}
+					}
+				}
+				# confucian
+				AND = {
+					jxp_a_105_profile_confucian_trigger = yes
+					has_mission = jxp_mission_cjp_three_teachings_register
+					has_mission = jxp_mission_zhu_xi_lectures
+					NOT = {
+						OR = {
+							has_mission = jxp_mission_shrine_land_registers
+							has_mission = jxp_mission_uncommitted_watch_the_four_seas
+							has_mission = jxp_mission_sakoku_coastal_magistrates
+							has_mission = jxp_mission_eastasia_ryukyu_gateway
+							has_mission = jxp_mission_pacific_charter
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
+							has_mission = jxp_mission_kirishitan_settlement
+							has_mission = jxp_mission_port_congregation_registers
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
+							has_mission = jxp_mission_reformed_settlement
+							has_mission = jxp_mission_rfj_oranda_factors
+							has_mission = jxp_mission_harbor_mosque_registers
+							has_mission = jxp_mission_kaikyo_settlement
+							has_mission = jxp_mission_monto_rolls
+							has_mission = jxp_mission_ikko_temple_granaries
+							has_mission = jxp_mission_wak_letters_of_black_current
+							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
+						}
+					}
+				}
+				# imperial
+				AND = {
+					jxp_a_105_profile_imperial_trigger = yes
+					has_mission = jxp_mission_ejp_repair_kinri
+					has_mission = jxp_mission_ejp_guard_four_seas
+					NOT = {
+						OR = {
+							has_mission = jxp_mission_shrine_land_registers
+							has_mission = jxp_mission_uncommitted_watch_the_four_seas
+							has_mission = jxp_mission_sakoku_coastal_magistrates
+							has_mission = jxp_mission_eastasia_ryukyu_gateway
+							has_mission = jxp_mission_pacific_charter
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
+							has_mission = jxp_mission_kirishitan_settlement
+							has_mission = jxp_mission_port_congregation_registers
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_reformed_settlement
+							has_mission = jxp_mission_rfj_oranda_factors
+							has_mission = jxp_mission_harbor_mosque_registers
+							has_mission = jxp_mission_kaikyo_settlement
+							has_mission = jxp_mission_monto_rolls
+							has_mission = jxp_mission_ikko_temple_granaries
+							has_mission = jxp_mission_wak_letters_of_black_current
+							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# reformed
 				AND = {
-					OR = {
-						tag = RFJ
-						has_country_flag = jxp_path_reformed
-					}
-					has_mission = jxp_mission_hirado_synod
+					jxp_a_105_profile_reformed_trigger = yes
 					has_mission = jxp_mission_reformed_settlement
 					has_mission = jxp_mission_rfj_oranda_factors
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_malay_factory
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# kaikyo
 				AND = {
-					OR = {
-						tag = SJP
-						has_country_flag = jxp_path_kaikyo
-					}
-					has_mission = jxp_mission_malay_factory
+					jxp_a_105_profile_kaikyo_trigger = yes
 					has_mission = jxp_mission_harbor_mosque_registers
 					has_mission = jxp_mission_kaikyo_settlement
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# ikko
 				AND = {
-					OR = {
-						tag = IJP
-						has_country_flag = jxp_path_ikko
-					}
-					has_mission = jxp_mission_terauchi_league
+					jxp_a_105_profile_ikko_trigger = yes
 					has_mission = jxp_mission_monto_rolls
 					has_mission = jxp_mission_ikko_temple_granaries
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_fund_wokou
 							has_mission = jxp_mission_wak_letters_of_black_current
 							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}
 				# wokou
 				AND = {
-					OR = {
-						tag = WAK
-						has_country_flag = jxp_path_wokou
-					}
-					has_mission = jxp_mission_fund_wokou
+					jxp_a_105_profile_wokou_trigger = yes
 					has_mission = jxp_mission_wak_letters_of_black_current
 					has_mission = jxp_mission_northern_sea_office
 					NOT = {
 						OR = {
-							has_mission = jxp_mission_toyotomi_yamazaki_settlement
-							has_mission = jxp_mission_toyotomi_osaka_castle_town
-							has_mission = jxp_mission_toyotomi_kyushu_settlement
-							has_mission = jxp_mission_uncommitted_reckon_warrior_houses
 							has_mission = jxp_mission_shrine_land_registers
 							has_mission = jxp_mission_uncommitted_watch_the_four_seas
-							has_mission = jxp_mission_temple_registration
 							has_mission = jxp_mission_sakoku_coastal_magistrates
-							has_mission = jxp_mission_open_nagasaki
 							has_mission = jxp_mission_eastasia_ryukyu_gateway
 							has_mission = jxp_mission_pacific_charter
-							has_mission = jxp_mission_domain_school_exams
-							has_mission = jxp_mission_cjp_three_teachings_register
-							has_mission = jxp_mission_zhu_xi_lectures
-							has_mission = jxp_mission_ejp_restore_daijokan
-							has_mission = jxp_mission_ejp_repair_kinri
-							has_mission = jxp_mission_ejp_guard_four_seas
-							has_mission = jxp_mission_welcome_missionaries
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
 							has_mission = jxp_mission_kirishitan_settlement
 							has_mission = jxp_mission_port_congregation_registers
-							has_mission = jxp_mission_hirado_synod
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
 							has_mission = jxp_mission_reformed_settlement
 							has_mission = jxp_mission_rfj_oranda_factors
-							has_mission = jxp_mission_malay_factory
 							has_mission = jxp_mission_harbor_mosque_registers
 							has_mission = jxp_mission_kaikyo_settlement
-							has_mission = jxp_mission_terauchi_league
 							has_mission = jxp_mission_monto_rolls
 							has_mission = jxp_mission_ikko_temple_granaries
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
+						}
+					}
+				}
+				# toyotomi
+				AND = {
+					jxp_a_105_profile_toyotomi_trigger = yes
+					has_mission = jxp_mission_toyotomi_osaka_castle_town
+					has_mission = jxp_mission_toyotomi_kyushu_settlement
+					NOT = {
+						OR = {
+							has_mission = jxp_mission_shrine_land_registers
+							has_mission = jxp_mission_uncommitted_watch_the_four_seas
+							has_mission = jxp_mission_sakoku_coastal_magistrates
+							has_mission = jxp_mission_eastasia_ryukyu_gateway
+							has_mission = jxp_mission_pacific_charter
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
+							has_mission = jxp_mission_kirishitan_settlement
+							has_mission = jxp_mission_port_congregation_registers
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
+							has_mission = jxp_mission_reformed_settlement
+							has_mission = jxp_mission_rfj_oranda_factors
+							has_mission = jxp_mission_harbor_mosque_registers
+							has_mission = jxp_mission_kaikyo_settlement
+							has_mission = jxp_mission_monto_rolls
+							has_mission = jxp_mission_ikko_temple_granaries
+							has_mission = jxp_mission_wak_letters_of_black_current
+							has_mission = jxp_mission_northern_sea_office
+						}
+					}
+				}
+				# commercial_council
+				AND = {
+					jxp_a_105_profile_commercial_council_trigger = yes
+					has_mission = jxp_mission_shrine_land_registers
+					has_mission = jxp_mission_uncommitted_watch_the_four_seas
+					NOT = {
+						OR = {
+							has_mission = jxp_mission_sakoku_coastal_magistrates
+							has_mission = jxp_mission_eastasia_ryukyu_gateway
+							has_mission = jxp_mission_pacific_charter
+							has_mission = jxp_a_buddhist_woodblocks_scriptures
+							has_mission = jxp_a_buddhist_korean_scriptures
+							has_mission = jxp_mission_kirishitan_settlement
+							has_mission = jxp_mission_port_congregation_registers
+							has_mission = jxp_mission_cjp_three_teachings_register
+							has_mission = jxp_mission_zhu_xi_lectures
+							has_mission = jxp_mission_ejp_repair_kinri
+							has_mission = jxp_mission_ejp_guard_four_seas
+							has_mission = jxp_mission_reformed_settlement
+							has_mission = jxp_mission_rfj_oranda_factors
+							has_mission = jxp_mission_harbor_mosque_registers
+							has_mission = jxp_mission_kaikyo_settlement
+							has_mission = jxp_mission_monto_rolls
+							has_mission = jxp_mission_ikko_temple_granaries
+							has_mission = jxp_mission_wak_letters_of_black_current
+							has_mission = jxp_mission_northern_sea_office
+							has_mission = jxp_mission_toyotomi_osaka_castle_town
+							has_mission = jxp_mission_toyotomi_kyushu_settlement
 						}
 					}
 				}

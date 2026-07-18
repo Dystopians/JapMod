@@ -1,0 +1,17 @@
+namespace = jxp_b_external_reconcile
+
+country_event = {
+	id = jxp_b_external_reconcile.1
+	title = "jxp_b_external_reconcile.1.t"
+	desc = "jxp_b_external_reconcile.1.d"
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { jxp_b_117_needs_korea_macro_migration_trigger = yes }
+
+	option = {
+		name = "jxp_b_external_reconcile.1.a"
+		jxp_b_117_migrate_korea_macro_phases_effect = yes
+	}
+}

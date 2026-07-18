@@ -214,6 +214,108 @@ DISASTER_CONTRACTS = {
             Requirement("manpower_percentage", "0.60", True),
         ),
     ),
+    "jxp_a_household_particularism": DisasterContract(
+        resolved_flag="jxp_a_household_particularism_resolved",
+        active_flag="jxp_a_household_particularism_active",
+        debug_token="household",
+        settlement_decision="jxp_a_decision_settle_household_particularism",
+        potential=COMMON_DISASTER_POTENTIAL
+        + (
+            Requirement("jxp_a_is_domestic_economy_country_trigger", "yes"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("has_estate", "estate_nobles"),
+            Requirement("has_country_flag", "jxp_a_household_particularism_resolved", True),
+        ),
+        can_start=(
+            Requirement("has_any_disaster", "no"),
+            Requirement("is_year", "1467"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("war_exhaustion", "5"),
+            Requirement("num_of_loans", "4"),
+        ),
+    ),
+    "jxp_a_religious_diet_collapse": DisasterContract(
+        resolved_flag="jxp_a_religious_diet_collapse_resolved",
+        active_flag="jxp_a_religious_diet_collapse_active",
+        debug_token="religious_diet",
+        settlement_decision="jxp_a_decision_settle_religious_diet_collapse",
+        potential=COMMON_DISASTER_POTENTIAL
+        + (
+            Requirement("jxp_a_is_domestic_economy_country_trigger", "yes"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("has_estate", "estate_church"),
+            Requirement("has_country_flag", "jxp_a_religious_diet_collapse_resolved", True),
+        ),
+        can_start=(
+            Requirement("has_any_disaster", "no"),
+            Requirement("is_year", "1460"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("religious_unity", "0.80", True),
+            Requirement("stability", "1", True),
+        ),
+    ),
+    "jxp_a_merchant_oligarchy": DisasterContract(
+        resolved_flag="jxp_a_merchant_oligarchy_resolved",
+        active_flag="jxp_a_merchant_oligarchy_active",
+        debug_token="merchant_oligarchy",
+        settlement_decision="jxp_a_decision_settle_merchant_oligarchy",
+        potential=COMMON_DISASTER_POTENTIAL
+        + (
+            Requirement("jxp_a_is_domestic_economy_country_trigger", "yes"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("has_estate", "estate_burghers"),
+            Requirement("has_country_flag", "jxp_a_merchant_oligarchy_resolved", True),
+        ),
+        can_start=(
+            Requirement("has_any_disaster", "no"),
+            Requirement("is_year", "1600"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("has_country_flag", "jxp_iface_a_public_credit_ready"),
+            Requirement("num_of_loans", "4"),
+            Requirement("corruption", "2"),
+        ),
+    ),
+    "jxp_a_tokusei_communal_rising": DisasterContract(
+        resolved_flag="jxp_a_tokusei_communal_rising_resolved",
+        active_flag="jxp_a_tokusei_communal_rising_active",
+        debug_token="tokusei",
+        settlement_decision="jxp_a_decision_settle_tokusei_communal_rising",
+        potential=COMMON_DISASTER_POTENTIAL
+        + (
+            Requirement("jxp_a_is_domestic_economy_country_trigger", "yes"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("has_estate", "jxp_estate_village_communes"),
+            Requirement("has_country_flag", "jxp_a_tokusei_communal_rising_resolved", True),
+        ),
+        can_start=(
+            Requirement("has_any_disaster", "no"),
+            Requirement("is_year", "1450"),
+            Requirement("has_country_flag", "jxp_iface_a_estates_ready"),
+            Requirement("war_exhaustion", "5"),
+            Requirement("num_of_loans", "4"),
+        ),
+    ),
+    "jxp_a_105_commercial_capital_crisis": DisasterContract(
+        resolved_flag="jxp_a_105_commercial_crisis_resolved",
+        active_flag="jxp_a_105_commercial_crisis_active",
+        debug_token="commercial_capital",
+        settlement_decision="jxp_a_105_settle_commercial_capital_crisis",
+        potential=COMMON_DISASTER_POTENTIAL
+        + (
+            Requirement("jxp_a_105_profile_commercial_council_trigger", "yes"),
+            Requirement("has_country_flag", "jxp_a_105_commercial_crisis_unlocked"),
+            Requirement("has_country_flag", "jxp_a_105_commercial_crisis_resolved", True),
+        ),
+        can_start=(
+            Requirement("has_any_disaster", "no"),
+            Requirement("is_year", "1600"),
+            Requirement("has_country_flag", "jxp_a_105_commercial_crisis_pressure"),
+            Requirement("num_of_loans", "3"),
+            Requirement("corruption", "2"),
+            Requirement("war_exhaustion", "3"),
+            Requirement("stability", "2", True),
+        ),
+    ),
 }
 
 PRESSURE_KEYS = {
@@ -356,8 +458,15 @@ def _record(
     target[kind][name].append(occurrence)
 
 
+def _engine_estate_flag_matches(name: str, template_suffix: str) -> bool:
+    """Model ``pick_random_estate_if_present``'s estate-key flag synthesis."""
+
+    return name.startswith("jxp_") and name.endswith(f"_{template_suffix}")
+
+
 def _scan_inventory(surfaces: Iterable[Surface]) -> Inventory:
     inventory = Inventory()
+    estate_flag_templates: DefaultDict[str, list[Occurrence]] = defaultdict(list)
     for surface in surfaces:
         for source in surface.context.script_files():
             document = surface.context.document(source)
@@ -366,6 +475,13 @@ def _scan_inventory(surfaces: Iterable[Surface]) -> Inventory:
             is_debug = _is_debug_source(surface.context, source)
             for _path, entry in walk_entries(document.root):
                 occurrence = _occurrence(surface, source, entry.line)
+                if (
+                    entry.key == "pick_random_estate_if_present"
+                    and isinstance(entry.value, Object)
+                ):
+                    template_suffix = first_scalar(entry.value, "flag")
+                    if template_suffix is not None:
+                        estate_flag_templates[template_suffix].append(occurrence)
                 scalar = _scalar_jxp(entry)
                 if scalar is not None and entry.key in FLAG_WRITE_KEYS:
                     kind = FLAG_WRITE_KEYS[entry.key]
@@ -426,6 +542,26 @@ def _scan_inventory(surfaces: Iterable[Surface]) -> Inventory:
                         inventory.modifier_definitions[entry.key].append(
                             _occurrence(surface, source, entry.line)
                         )
+    # The engine expands ``flag = present_agenda`` to
+    # ``<selected_estate>_present_agenda``.  Treat every matching JXP read or
+    # clear as a real generated write rather than fabricating a literal flag
+    # assignment in gameplay files.
+    country_candidates = set(inventory.reads["country_flag"]) | set(
+        inventory.clears["country_flag"]
+    )
+    for suffix, occurrences in estate_flag_templates.items():
+        for name in sorted(country_candidates):
+            if not _engine_estate_flag_matches(name, suffix):
+                continue
+            for occurrence in occurrences:
+                _record(inventory.writes, "country_flag", name, occurrence)
+                _record(inventory.content_writes, "country_flag", name, occurrence)
+                _record(
+                    inventory.persistent_content_writes,
+                    "country_flag",
+                    name,
+                    occurrence,
+                )
     return inventory
 
 
@@ -1493,8 +1629,8 @@ def check_state_safety(
     main_context: ValidationContext,
     companion_context: ValidationContext | None = None,
     *,
-    minimum_disasters: int = 4,
-    maximum_disasters: int = 5,
+    minimum_disasters: int = 9,
+    maximum_disasters: int = 9,
 ) -> CheckResult:
     """Return the combined state/disaster audit for the maintained release surface."""
 
@@ -1548,8 +1684,8 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mod-root", type=Path, default=default_main)
     parser.add_argument("--companion-root", type=Path)
-    parser.add_argument("--minimum-disasters", type=int, default=4)
-    parser.add_argument("--maximum-disasters", type=int, default=5)
+    parser.add_argument("--minimum-disasters", type=int, default=9)
+    parser.add_argument("--maximum-disasters", type=int, default=9)
     parser.add_argument("--json", action="store_true", dest="as_json")
     return parser.parse_args()
 

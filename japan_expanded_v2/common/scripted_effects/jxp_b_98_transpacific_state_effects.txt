@@ -16,6 +16,11 @@ jxp_b_98_establish_old_world_member_effect = {
 }
 
 jxp_b_98_form_two_ocean_federation_effect = {
+	jxp_b_reconcile_metropole_legacy = yes
+	if = { limit = { tag = NYA } set_country_flag = jxp_b_114_tpf_origin_nya }
+	else_if = { limit = { tag = HKK } set_country_flag = jxp_b_114_tpf_origin_hkk }
+	else_if = { limit = { tag = NJF } set_country_flag = jxp_b_114_tpf_origin_njf }
+	else_if = { limit = { tag = OIA } set_country_flag = jxp_b_114_tpf_origin_oia }
 	change_tag = TPF
 	set_country_flag = jxp_iface_transpacific_state_created
 	set_country_flag = jxp_iface_colonial_independence

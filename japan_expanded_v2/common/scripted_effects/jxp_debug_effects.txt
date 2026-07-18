@@ -1090,8 +1090,6 @@ jxp_debug_set_route_ready_effect = {
 		set_country_flag = jxp_kirishitan_contact
 		set_country_flag = jxp_reformed_contact
 		set_country_flag = jxp_kaikyo_contact
-		set_country_flag = jxp_ikko_contact
-		set_country_flag = jxp_wokou_contact
 		jxp_sync_polity_mechanic_from_variables_effect = yes
 	}
 }
@@ -1275,7 +1273,6 @@ jxp_debug_force_ikko_route_effect = {
 		jxp_debug_prepare_polity_effect = yes
 		jxp_debug_clear_route_state_effect = yes
 		set_country_flag = jxp_path_ikko
-		set_country_flag = jxp_ikko_contact
 		add_country_modifier = { name = jxp_route_ikko duration = -1 }
 		jxp_debug_set_polity_balanced_effect = yes
 		jxp_change_to_ijp_effect = yes
@@ -1288,7 +1285,6 @@ jxp_debug_force_wokou_route_effect = {
 		jxp_debug_prepare_polity_effect = yes
 		jxp_debug_clear_route_state_effect = yes
 		set_country_flag = jxp_path_wokou
-		set_country_flag = jxp_wokou_contact
 		add_country_modifier = { name = jxp_route_wokou duration = -1 }
 		jxp_debug_set_polity_open_effect = yes
 		jxp_change_to_wak_effect = yes
@@ -1467,4 +1463,9 @@ jxp_debug_clear_disaster_state_effect = {
 	jxp_debug_cleanup_ikko_effect = yes
 	jxp_debug_cleanup_keian_effect = yes
 	jxp_debug_cleanup_tenmei_effect = yes
+	jxp_debug_cleanup_household_effect = yes
+	jxp_debug_cleanup_religious_diet_effect = yes
+	jxp_debug_cleanup_merchant_oligarchy_effect = yes
+	jxp_debug_cleanup_tokusei_effect = yes
+	jxp_debug_cleanup_commercial_capital_effect = yes
 }

@@ -4,7 +4,7 @@ country_event = {
 	id = jxp_colonial_charter.1
 	title = "jxp_colonial_charter.1.t"
 	desc = "jxp_colonial_charter.1.d"
-	picture = TRADEGOODS_eventPicture
+	picture = jxp_b_chartered_company_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -75,7 +75,7 @@ country_event = {
 	id = jxp_colonial_charter.2
 	title = "jxp_colonial_charter.2.t"
 	desc = "jxp_colonial_charter.2.d"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	picture = jxp_b_chartered_company_eventPicture
 	is_triggered_only = yes
 
 	trigger = {

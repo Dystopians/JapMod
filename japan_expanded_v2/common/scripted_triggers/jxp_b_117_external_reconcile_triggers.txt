@@ -1,0 +1,29 @@
+jxp_b_117_needs_external_independence_reconcile_trigger = {
+	jxp_b_96_colonial_origin_trigger = yes
+	has_country_flag = jxp_b_96_independence_declared
+	is_subject = no
+	NOT = { has_country_flag = jxp_iface_colonial_independence }
+}
+
+jxp_b_117_needs_korea_macro_migration_trigger = {
+	NOT = { has_country_flag = jxp_b_117_korea_macro_migration_done }
+	NOT = { has_country_flag = jxp_b_101_korea_campaign_completed }
+	OR = {
+		has_country_flag = jxp_b_101_korea_campaign_active
+		has_country_flag = jxp_b_101_korea_stage_01_done
+		has_country_flag = jxp_b_101_korea_stage_02_done
+		has_country_flag = jxp_b_101_korea_stage_03_done
+		has_country_flag = jxp_b_101_korea_stage_04_done
+		has_country_flag = jxp_b_101_korea_stage_05_done
+		has_country_flag = jxp_b_101_korea_stage_06_done
+		has_country_flag = jxp_b_101_korea_stage_07_done
+		has_country_flag = jxp_b_101_korea_stage_08_done
+		has_country_flag = jxp_b_101_korea_stage_09_done
+		has_country_flag = jxp_b_101_korea_stage_10_done
+		mission_completed = jxp_mission_tsushima_interpreters
+		mission_completed = jxp_mission_korean_envoys
+		mission_completed = jxp_mission_eastasia_korea_embassy
+		mission_completed = jxp_mission_eastasia_tsushima_office
+		mission_completed = jxp_mission_toyotomi_tsushima_channel
+	}
+}

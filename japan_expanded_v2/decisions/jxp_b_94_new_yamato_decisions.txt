@@ -25,6 +25,10 @@ country_decisions = {
 			factor = 0.05
 			modifier = {
 				factor = 0
+				NOT = { jxp_b_118_ai_colonial_state_formation_ready_trigger = yes }
+			}
+			modifier = {
+				factor = 0
 				NOT = { check_variable = { which = jxp_b_colonial_identity value = 75 } }
 			}
 			modifier = {

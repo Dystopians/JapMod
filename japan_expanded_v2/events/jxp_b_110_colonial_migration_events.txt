@@ -1,0 +1,25 @@
+namespace = jxp_b_colonial_migration
+
+# Agent A owns the central refresh transaction. This B-owned follow-up waits
+# until every A handshake has reached its postcondition, then commits B's
+# one-time migration markers and reconciles TPF's extended constitution set.
+country_event = {
+	id = jxp_b_colonial_migration.1
+	title = none
+	desc = none
+	picture = COURT_eventPicture
+	hidden = yes
+
+	trigger = {
+		has_country_flag = jxp_b_110_colonial_depth_migration_pending
+		jxp_b_110_colonial_depth_postcondition_trigger = yes
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		jxp_b_102_finalize_overseas_program_startup_migration_effect = yes
+	}
+
+	option = { name = "OK" }
+}

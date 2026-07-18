@@ -1,0 +1,99 @@
+jxp_b_117_reconcile_external_colonial_independence_effect = {
+	if = {
+		limit = { jxp_b_117_needs_external_independence_reconcile_trigger = yes }
+		jxp_b_96_mark_full_independence_effect = yes
+	}
+}
+
+jxp_b_117_migrate_korea_macro_phases_effect = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_101_korea_phase_diplomatic_cause_done }
+			OR = {
+				has_country_flag = jxp_b_101_korea_stage_03_done
+				has_country_flag = jxp_b_101_korea_stage_04_done
+				has_country_flag = jxp_b_101_korea_stage_05_done
+				has_country_flag = jxp_b_101_korea_stage_06_done
+				has_country_flag = jxp_b_101_korea_stage_07_done
+				has_country_flag = jxp_b_101_korea_stage_08_done
+				has_country_flag = jxp_b_101_korea_stage_09_done
+				has_country_flag = jxp_b_101_korea_stage_10_done
+				mission_completed = jxp_mission_tsushima_interpreters
+				mission_completed = jxp_mission_korean_envoys
+				mission_completed = jxp_mission_eastasia_korea_embassy
+				mission_completed = jxp_mission_eastasia_tsushima_office
+				mission_completed = jxp_mission_toyotomi_tsushima_channel
+			}
+		}
+		set_country_flag = jxp_b_101_korea_phase_diplomatic_cause_done
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_101_korea_phase_nagoya_logistics_done }
+			OR = {
+				has_country_flag = jxp_b_101_korea_stage_06_done
+				has_country_flag = jxp_b_101_korea_stage_07_done
+				has_country_flag = jxp_b_101_korea_stage_08_done
+				has_country_flag = jxp_b_101_korea_stage_09_done
+				has_country_flag = jxp_b_101_korea_stage_10_done
+			}
+		}
+		set_country_flag = jxp_b_101_korea_phase_nagoya_logistics_done
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_101_korea_phase_daimyo_levies_done }
+			OR = {
+				has_country_flag = jxp_b_101_korea_stage_08_done
+				has_country_flag = jxp_b_101_korea_stage_09_done
+				has_country_flag = jxp_b_101_korea_stage_10_done
+			}
+		}
+		set_country_flag = jxp_b_101_korea_phase_daimyo_levies_done
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_101_korea_phase_strait_siege_done }
+			OR = {
+				has_country_flag = jxp_b_101_korea_stage_09_done
+				has_country_flag = jxp_b_101_korea_stage_10_done
+			}
+		}
+		set_country_flag = jxp_b_101_korea_phase_strait_siege_done
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = jxp_b_101_korea_phase_continental_assessment_done }
+			has_country_flag = jxp_b_101_korea_stage_10_done
+		}
+		set_country_flag = jxp_b_101_korea_phase_continental_assessment_done
+	}
+	if = {
+		limit = {
+			has_country_flag = jxp_b_101_korea_phase_diplomatic_cause_done
+			NOT = { has_country_flag = jxp_b_101_korea_campaign_active }
+		}
+		set_country_flag = jxp_b_101_korea_campaign_active
+		if = {
+			limit = { NOT = { has_country_flag = jxp_b_101_korea_stage_01_done } }
+			set_country_flag = jxp_b_101_korea_stage_01_done
+			change_variable = { which = jxp_b_korea_transport_capacity value = 5 }
+			change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = jxp_b_101_korea_stage_02_done } }
+			set_country_flag = jxp_b_101_korea_stage_02_done
+			change_variable = { which = jxp_b_korea_expedition_support value = 15 }
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = jxp_b_101_korea_stage_03_done } }
+			set_country_flag = jxp_b_101_korea_stage_03_done
+			change_variable = { which = jxp_b_korea_expedition_support value = 10 }
+			change_variable = { which = jxp_b_korea_daimyo_compliance value = 5 }
+		}
+		jxp_b_101_clamp_korea_preparation_variables_effect = yes
+		add_country_modifier = { name = jxp_b_101_korea_preparation_burden duration = -1 }
+	}
+	set_country_flag = jxp_b_117_korea_macro_migration_done
+}

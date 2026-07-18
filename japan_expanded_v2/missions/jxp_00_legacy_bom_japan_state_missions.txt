@@ -1,7 +1,0 @@
-﻿jxp_japan_state_missions = {
-	slot = 1
-	generic = no
-	ai = no
-	potential_on_load = { always = no }
-	potential = { always = no }
-}

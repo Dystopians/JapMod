@@ -35,6 +35,7 @@ jxp_b_95_prepare_secondary_state_effect = {
 	set_country_flag = jxp_iface_colonial_self_rule
 	set_country_flag = jxp_b_colonial_society_active
 	clr_country_flag = jxp_b_colonial_society_retired
+	jxp_b_record_metropole_legacy = yes
 	jxp_b_95_clear_japanese_home_paths_effect = yes
 	jxp_b_91_add_identity_5_effect = yes
 	jxp_b_91_add_compact_10_effect = yes

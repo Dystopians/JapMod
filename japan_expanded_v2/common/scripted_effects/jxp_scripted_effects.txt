@@ -709,11 +709,14 @@ jxp_grant_route_reforms_effect = {
 	# the option list immediately after a tag or route change instead of waiting
 	# for the government window to refresh on its own.
 	regenerate_government_mechanics = yes
+	jxp_a_reconcile_socioeconomic_system_effect = yes
 }
 
 jxp_clear_all_route_flags_effect = {
+	jxp_b_115_clear_external_route_state_effect = yes
 	jxp_a_ijp_clear_terminal_settlement_effect = yes
 	jxp_a_96_clear_buddhist_route_effect = yes
+	jxp_a_105_exit_commercial_council_route_effect = yes
 	jxp_clear_route_reforms_effect = yes
 	jxp_clear_route_modifiers_effect = yes
 	clr_country_flag = jxp_path_sakoku
@@ -725,6 +728,7 @@ jxp_clear_all_route_flags_effect = {
 	clr_country_flag = jxp_path_kaikyo
 	clr_country_flag = jxp_path_ikko
 	clr_country_flag = jxp_path_wokou
+	clr_country_flag = jxp_path_commercial_council
 }
 
 jxp_sync_route_national_ideas_effect = {
@@ -1028,7 +1032,6 @@ jxp_sanitize_route_state_effect = {
 			}
 			jxp_clear_all_route_flags_effect = yes
 			set_country_flag = jxp_path_ikko
-			set_country_flag = jxp_ikko_contact
 			if = {
 				limit = { NOT = { tag = IJP } }
 				jxp_record_daimyo_origin_effect = yes
@@ -1060,7 +1063,6 @@ jxp_sanitize_route_state_effect = {
 			}
 			jxp_clear_all_route_flags_effect = yes
 			set_country_flag = jxp_path_wokou
-			set_country_flag = jxp_wokou_contact
 			if = {
 				limit = { NOT = { tag = WAK } }
 				jxp_record_daimyo_origin_effect = yes

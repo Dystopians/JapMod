@@ -186,14 +186,14 @@ def render_events() -> str:
         "",
     ])
     stages = (
-        (101, "jxp_a_shinshu_set_stage_2_effect", "add_country_modifier = { name = jxp_a_shinshu_petition_compromise duration = 1825 }", "jxp_a_shinshu_subtract_militancy_10_effect = yes", "add_adm_power = 25", "jxp_a_shinshu_add_militancy_10_effect = yes"),
-        (102, "jxp_a_shinshu_set_stage_3_effect", "add_country_modifier = { name = jxp_a_shinshu_temple_town_charter duration = 1825 }", "jxp_a_shinshu_add_militancy_5_effect = yes", "add_adm_power = -50", "jxp_a_shinshu_subtract_militancy_10_effect = yes"),
-        (103, "jxp_a_shinshu_set_stage_4_effect", "add_dip_power = -50", "jxp_a_shinshu_subtract_militancy_15_effect = yes", "add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }", "jxp_a_shinshu_add_militancy_15_effect = yes"),
+        (101, "jxp_a_shinshu_stage_1_congregations", "jxp_a_shinshu_set_stage_2_effect", "add_country_modifier = { name = jxp_a_shinshu_petition_compromise duration = 1825 }", "jxp_a_shinshu_subtract_militancy_10_effect = yes", "add_adm_power = 25", "jxp_a_shinshu_add_militancy_10_effect = yes"),
+        (102, "jxp_a_shinshu_stage_2_petitions", "jxp_a_shinshu_set_stage_3_effect", "add_country_modifier = { name = jxp_a_shinshu_temple_town_charter duration = 1825 }", "jxp_a_shinshu_add_militancy_5_effect = yes", "add_adm_power = -50", "jxp_a_shinshu_subtract_militancy_10_effect = yes"),
+        (103, "jxp_a_shinshu_stage_3_temple_town", "jxp_a_shinshu_set_stage_4_effect", "add_dip_power = -50", "jxp_a_shinshu_subtract_militancy_15_effect = yes", "add_country_modifier = { name = jxp_a_shinshu_armed_oath duration = 1825 }", "jxp_a_shinshu_add_militancy_15_effect = yes"),
     )
-    for event_id, stage_effect, a1, a2, b1, b2 in stages:
+    for event_id, required_stage_flag, stage_effect, a1, a2, b1, b2 in stages:
         next_id = event_id + 1
         lines.extend([
-            "country_event = {", f"\tid = jxp_shinshu.{event_id}", f'\ttitle = "jxp_shinshu.{event_id}.t"', f'\tdesc = "jxp_shinshu.{event_id}.d"', "\tpicture = RELIGIOUS_CONVERSION_eventPicture", "\tis_triggered_only = yes", "\ttrigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active }", f"\timmediate = {{ {stage_effect} = yes }}", "\toption = {", f'\t\tname = "jxp_shinshu.{event_id}.a"', f"\t\t{a1}", f"\t\t{a2}", f"\t\tcountry_event = {{ id = jxp_shinshu.{next_id} days = 365 }}", "\t}", "\toption = {", f'\t\tname = "jxp_shinshu.{event_id}.b"', f"\t\t{b1}", f"\t\t{b2}", f"\t\tcountry_event = {{ id = jxp_shinshu.{next_id} days = 365 }}", "\t}", "}", "",
+            "country_event = {", f"\tid = jxp_shinshu.{event_id}", f'\ttitle = "jxp_shinshu.{event_id}.t"', f'\tdesc = "jxp_shinshu.{event_id}.d"', "\tpicture = RELIGIOUS_CONVERSION_eventPicture", "\tis_triggered_only = yes", f"\ttrigger = {{ has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = {required_stage_flag} }}", f"\timmediate = {{ {stage_effect} = yes }}", "\toption = {", f'\t\tname = "jxp_shinshu.{event_id}.a"', f"\t\t{a1}", f"\t\t{a2}", f"\t\tcountry_event = {{ id = jxp_shinshu.{next_id} days = 365 }}", "\t}", "\toption = {", f'\t\tname = "jxp_shinshu.{event_id}.b"', f"\t\t{b1}", f"\t\t{b2}", f"\t\tcountry_event = {{ id = jxp_shinshu.{next_id} days = 365 }}", "\t}", "}", "",
         ])
     lines.extend([
         "country_event = {",
@@ -202,12 +202,11 @@ def render_events() -> str:
         '\tdesc = "jxp_shinshu.104.d"',
         "\tpicture = RELIGIOUS_CONVERSION_eventPicture",
         "\tis_triggered_only = yes",
-        "\ttrigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active }",
+        "\ttrigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_4_armed_oath }",
         "\timmediate = { jxp_a_shinshu_set_stage_5_effect = yes }",
         "\toption = {",
         '\t\tname = "jxp_shinshu.104.a"',
         "\t\tset_country_flag = jxp_ikko_rising_resolved",
-        "\t\tset_country_flag = jxp_ikko_contact",
         "\t\tadd_country_modifier = { name = jxp_a_shinshu_reconciled_order duration = 7300 }",
         "\t\tjxp_a_shinshu_subtract_militancy_20_effect = yes",
         "\t\tend_disaster = jxp_ikko_rising",
@@ -232,7 +231,6 @@ def render_events() -> str:
         "\t\tend_disaster = jxp_ikko_rising",
         "\t\tjxp_clear_all_route_flags_effect = yes",
         "\t\tset_country_flag = jxp_path_ikko",
-        "\t\tset_country_flag = jxp_ikko_contact",
         "\t\tjxp_change_to_ijp_effect = yes",
         "\t\tjxp_grant_ikko_heartland_claims_effect = yes",
         "\t}",
@@ -245,7 +243,11 @@ def render_events() -> str:
         "\tpicture = RELIGIOUS_CONVERSION_eventPicture",
         "\thidden = yes",
         "\tis_triggered_only = yes",
-        "\timmediate = { jxp_a_shinshu_cleanup_crisis_effect = yes }",
+        "\timmediate = {",
+        "\t\tset_country_flag = jxp_ikko_rising_resolved",
+        "\t\tclr_country_flag = jxp_ikko_rising_active",
+        "\t\tjxp_a_shinshu_cleanup_crisis_effect = yes",
+        "\t}",
         "\toption = { name = \"OK\" }",
         "}",
         "",

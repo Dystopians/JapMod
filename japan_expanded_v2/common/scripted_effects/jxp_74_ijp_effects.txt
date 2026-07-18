@@ -72,7 +72,6 @@ jxp_74_ijp_route_exit_effect = {
 jxp_74_ijp_enforce_route_exclusivity_effect = {
 	jxp_clear_all_route_flags_effect = yes
 	set_country_flag = jxp_path_ikko
-	set_country_flag = jxp_ikko_contact
 	add_country_modifier = {
 		name = jxp_route_ikko
 		duration = -1

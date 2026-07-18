@@ -8,6 +8,7 @@ jxp_b_100_choose_mandate_path_effect = {
 			name = jxp_b_100_mandate_proclamation
 			duration = 7300
 		}
+		jxp_b_113_start_china_long_program_effect = yes
 	}
 }
 
@@ -21,6 +22,7 @@ jxp_b_100_choose_rites_path_effect = {
 			name = jxp_b_100_rites_commitment
 			duration = 7300
 		}
+		jxp_b_113_start_china_long_program_effect = yes
 	}
 }
 
@@ -34,6 +36,7 @@ jxp_b_100_choose_break_path_effect = {
 			name = jxp_b_100_break_commitment
 			duration = 7300
 		}
+		jxp_b_113_start_china_long_program_effect = yes
 	}
 }
 

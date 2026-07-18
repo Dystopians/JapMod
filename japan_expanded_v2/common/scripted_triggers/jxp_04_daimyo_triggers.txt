@@ -34,6 +34,7 @@ jxp_has_final_state_political_profile_trigger = {
 		jxp_final_state_ikko_trigger = yes
 		jxp_final_state_wokou_trigger = yes
 		jxp_a_96_buddhist_exact_route_trigger = yes
+		jxp_a_105_profile_commercial_council_trigger = yes
 	}
 }
 

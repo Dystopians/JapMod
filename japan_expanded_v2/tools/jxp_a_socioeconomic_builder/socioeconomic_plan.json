@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "target_game_version": "1.37.5.0",
+  "ledger_todo": "JXP-037",
+  "evidence_level": "STATIC_IMPLEMENTATION_CANDIDATE_NOT_RUNTIME_PROVEN",
+  "migration_flag": "jxp_a_socioeconomic_migration_v110",
+  "estates": {
+    "functional_ids": {
+      "warrior_households": "estate_nobles",
+      "religious_establishments": "estate_church",
+      "urban_merchants": "estate_burghers",
+      "village_communes": "jxp_estate_village_communes"
+    },
+    "minimum_privileges": 48,
+    "minimum_agendas_per_estate": 10,
+    "interactions_per_estate": 3,
+    "pinned_vanilla_inputs": {
+      "common/estates/01_church.txt": "CCA37F3F5B30595CC2A2DB9FB833A53F1F4551C188EB6341CD0C2FB54C6BF42B",
+      "common/estates/02_nobility.txt": "78BEB182B60985A46E99F8BFF84A46CCCE274CC3944031C7366FE9A71428D9BE",
+      "common/estates/03_burghers.txt": "2DD634CEF4522EE8E43E6E34005779B90A806735A6C88B11831BCC30F7034DCD",
+      "events/EstatePrivilegesAndAgendasEvents.txt": "D4E2CA0225356737A7D8660E6AAD6C93BBD6AEB53538A24D26A5E4CEBD9DC994",
+      "common/scripted_effects/01_scripted_effects_for_estates.txt": "FA3F71509F86EA6B137E104336280F7B8EB49A712EECED918D670829DC04A8F1"
+    }
+  },
+  "market": {
+    "stage_flags": [
+      "jxp_a_market_stage_1",
+      "jxp_a_market_stage_2",
+      "jxp_a_market_stage_3",
+      "jxp_a_market_stage_4"
+    ],
+    "setter_effects": [
+      "jxp_a_set_market_stage_1",
+      "jxp_a_set_market_stage_2",
+      "jxp_a_set_market_stage_3",
+      "jxp_a_set_market_stage_4"
+    ],
+    "reconcile_effect": "jxp_a_reconcile_market_stage",
+    "illegal_state_cleanup_effect": "jxp_a_clear_illegal_market_stages",
+    "monotonic_except_explicit_collapse": true,
+    "uses_zero_to_one_hundred_meter": false
+  },
+  "companies": {
+    "domestic": [
+      "mining_assay_house",
+      "national_coasting_house",
+      "rice_credit_house",
+      "textile_company",
+      "armaments_shipbuilding_company"
+    ],
+    "overseas_requests": [
+      "jxp_iface_a_request_red_seal_overseas_company",
+      "jxp_iface_a_request_pacific_charter_company",
+      "jxp_iface_a_request_southern_seas_company",
+      "jxp_iface_a_request_northern_seas_company",
+      "jxp_iface_a_request_continental_company"
+    ],
+    "discrete_states": [
+      "chartered",
+      "expanding",
+      "stable",
+      "distressed",
+      "audited",
+      "reformed",
+      "nationalized",
+      "bankrupt_cleanup"
+    ],
+    "directors": [
+      "state_magistrates",
+      "great_merchants",
+      "warrior_households",
+      "religious_establishments",
+      "mixed_council"
+    ],
+    "stage_caps": [1, 2, 3, 4]
+  },
+  "estate_crises": [
+    "household_particularism",
+    "religious_diet_collapse",
+    "merchant_oligarchy",
+    "tokusei_communal_rising"
+  ],
+  "capitalism_logical_tracks": {
+    "metal_money_credit": 7,
+    "cities_roads_market": 7,
+    "rice_debt_finance": 7,
+    "manufacture_proto_industry": 7,
+    "companies_capital_state": 7
+  },
+  "profiles": [
+    {"key": "uncommitted", "identity": "JAP without route", "a_task_count": 8},
+    {"key": "sakoku", "identity": "JAP+jxp_path_sakoku", "a_task_count": 8},
+    {"key": "open", "identity": "JAP+jxp_path_open_trade", "a_task_count": 8},
+    {"key": "buddhist", "identity": "JAP+jxp_path_buddhist", "a_task_count": 8},
+    {"key": "kirishitan", "identity": "KJP+jxp_path_kirishitan", "a_task_count": 8},
+    {"key": "confucian", "identity": "CJP+jxp_path_confucian", "a_task_count": 8},
+    {"key": "imperial", "identity": "EJP+jxp_path_imperial", "a_task_count": 8},
+    {"key": "reformed", "identity": "RFJ+jxp_path_reformed", "a_task_count": 8},
+    {"key": "kaikyo", "identity": "SJP+jxp_path_kaikyo", "a_task_count": 8},
+    {"key": "ikko", "identity": "IJP+jxp_path_ikko", "a_task_count": 8},
+    {"key": "wokou", "identity": "WAK+jxp_path_wokou", "a_task_count": 8},
+    {"key": "toyotomi", "identity": "TOY", "a_task_count": 8},
+    {"key": "commercial_council", "identity": "JAP+jxp_path_commercial_council", "a_task_count": 21}
+  ],
+  "mission_contract": {
+    "agent_a_slots": [1, 2, 3],
+    "agent_b_frozen_slots": [4, 5],
+    "shared_capital_slot_counts": [18, 17],
+    "shared_capital_missions": 35,
+    "regular_profile_slot_counts": [0, 0, 8],
+    "commercial_profile_slot_counts": [7, 7, 7],
+    "regular_profile_count": 12,
+    "total_profile_count": 13,
+    "total_agent_a_missions": 152,
+    "globally_unique_mission_ids": true,
+    "no_same_slot_competing_series": true
+  },
+  "founder_legacy_interfaces": [
+    "jxp_iface_a_founder_commercial_legacy",
+    "jxp_iface_a_founder_maritime_legacy",
+    "jxp_iface_a_founder_bureaucratic_legacy",
+    "jxp_iface_a_founder_communal_legacy",
+    "jxp_iface_a_founder_frontier_legacy"
+  ],
+  "unification_methods": [
+    "jxp_24_unification_by_blade",
+    "jxp_24_unification_by_edict",
+    "jxp_24_unification_by_league"
+  ],
+  "era_attributes": [
+    "jxp_tenka_order",
+    "jxp_imperial_sanction",
+    "jxp_oceanic_opening"
+  ],
+  "a_to_b_interfaces": [
+    "jxp_iface_a_estates_ready",
+    "jxp_iface_a_market_stage_1",
+    "jxp_iface_a_market_stage_2",
+    "jxp_iface_a_market_stage_3",
+    "jxp_iface_a_market_stage_4",
+    "jxp_iface_a_company_core_ready",
+    "jxp_iface_a_company_charter_active",
+    "jxp_iface_a_domestic_capstone_complete",
+    "jxp_iface_a_founder_commercial_legacy",
+    "jxp_iface_a_founder_maritime_legacy",
+    "jxp_iface_a_founder_bureaucratic_legacy",
+    "jxp_iface_a_founder_communal_legacy",
+    "jxp_iface_a_founder_frontier_legacy",
+    "jxp_iface_a_public_credit_ready",
+    "jxp_iface_a_company_state_route"
+  ],
+  "colonial_successor_tags": ["NYA", "HKK", "NJF", "OIA", "TPF"],
+  "performance_contract": {
+    "monthly_world_scan": false,
+    "market_reconcile_pulses": ["startup", "mission", "decision", "yearly_if_relevant"],
+    "company_pulse": "yearly_and_only_when_company_or_pending_state_exists",
+    "migration_runs_once_after_postconditions": true
+  },
+  "historical_source_contract": {
+    "dojima_official_recognition_year": 1730,
+    "yamada_hagaki_not_before_year": 1600,
+    "red_seal_trade_not_before_year": 1601,
+    "commercial_council_is_counterfactual": true
+  }
+}

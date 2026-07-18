@@ -1,0 +1,136 @@
+{
+  "schema": "jxp_b_external_fallback_scenarios/v1",
+  "evidence_class": "PENDING_RUNTIME",
+  "game_version": "1.37.5.0",
+  "purpose": "B15 静态合同与后续人工运行场景索引；本文件不记录或暗示任何运行时通过结果。",
+  "limitations": [
+    "B118 只证明 B92、B94、B95 与 B112 的殖民继承国、地区锚点及公司入口降级。",
+    "十二路线对外任务系列在 RNW 是否完整可见不由本矩阵证明；其既有 potential 隐藏行为仍须独立运行时审查。"
+  ],
+  "rules": {
+    "eu4_launch_forbidden_in_this_slice": true,
+    "runtime_results_must_not_be_inferred_from_static_checks": true,
+    "no_monthly_world_scan": true,
+    "main_mod_must_not_require_companion_map": true,
+    "optional_agent_a_integration_uses_flags_not_calls": true
+  },
+  "scenarios": [
+    {
+      "id": "B15-AI-COLONIAL-FORMATION",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["NYA", "HKK", "NJF", "OIA"],
+      "assertions": [
+        "AI 只有在财政有余量、低贷款、稳定且殖民身份成熟时才成立继承国。",
+        "玩家仍可按各国原有条件成立，不受 AI 专用刹车影响。"
+      ]
+    },
+    {
+      "id": "B15-AI-INDEPENDENCE",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["NYA-subject", "HKK-subject", "NJF-subject", "OIA-subject"],
+      "assertions": [
+        "高本土控制或高地方盟约殖民地不会由 AI 轻率发动独立战争。",
+        "高殖民身份、低控制且相对陆海军可战时，独立战争仍可发生。"
+      ]
+    },
+    {
+      "id": "B15-AI-COMPANIES",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["south-seas", "north-sea", "taiwan-fujian", "oceanic", "new-world"],
+      "assertions": [
+        "五家公司成立前均保留足够国库、低贷款、港口与船队门槛。",
+        "锁国路线不会成立新大陆公司。"
+      ]
+    },
+    {
+      "id": "B15-AI-CONTINENTAL",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["Ryukyu", "North", "Taiwan-Fujian", "Southeast-Asia"],
+      "assertions": [
+        "未统一大名不会由 AI 召开大陆远征会议。",
+        "远征前具备稳定、国库、人力、运输船与相对陆海军实力。"
+      ]
+    },
+    {
+      "id": "B15-AI-KOREA",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["JAP", "TOY", "unified-route-tags"],
+      "assertions": [
+        "AI 已完成五阶段准备且拥有足够运输、舰队、兵力与国库。",
+        "AI 对朝鲜的相对陆海军实力不足时不会取得远征借口。"
+      ]
+    },
+    {
+      "id": "B15-AI-CHINA-AND-HAKKO",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["mandate", "rites", "break-mandate", "hakko-ichiu"],
+      "assertions": [
+        "AI 在问鼎、破命或八纮一宇战争前保有战争财政和跨海运输能力。",
+        "海上礼仪圈仍可针对较小沿海目标，但必须有最低相对实力。"
+      ]
+    },
+    {
+      "id": "B15-AI-EASTWARD-TPF",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["NYA", "HKK", "NJF", "OIA"],
+      "assertions": [
+        "东归革命保持极少见：身份、两洋接力、无贷款、强财政、兵力、运输与相对实力缺一不可。",
+        "TPF 只能在合法东归胜利后形成，不能由普通成立决议刷出。"
+      ]
+    },
+    {
+      "id": "B15-RNW",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["RNW-on", "RNW-off"],
+      "assertions": [
+        "RNW 使用 new_world 洲、城市与港口门槛，NYA/HKK 形成不依赖固定美洲地名。",
+        "新大陆公司可在 RNW 寻找当地港口，不因 north_america 或 south_america 不存在而锁死。"
+      ]
+    },
+    {
+      "id": "B15-DLC-MANDATE",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["Mandate-of-Heaven-on", "Mandate-of-Heaven-off"],
+      "assertions": [
+        "有 DLC 时问鼎路线要求实际成为天朝皇帝。",
+        "无 DLC 时只建立日轮朝仪与外交承认，不授予天命或天朝皇帝身份。"
+      ]
+    },
+    {
+      "id": "B15-DLC-COLONIAL-GOVERNMENT",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["colonial-features-off", "special-colonial-government-off", "estate-features-off"],
+      "assertions": [
+        "殖民继承国可由自理、独立与地区事实标志进入，不强制依赖原版殖民国状态。",
+        "已成 NYA、TPF 或 RNW 海外国家没有殖民者时仍可采用新大陆公司的高成本替代门槛。"
+      ]
+    },
+    {
+      "id": "B15-MAIN-ONLY",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["main-only", "main-plus-map"],
+      "assertions": [
+        "主 Mod 的 B91-B118 运行时脚本不引用地图 Mod 专属 tag、省份、area 或 callable。",
+        "有地图 Mod 时仍通过语义标志与原版地理锚点工作。"
+      ]
+    },
+    {
+      "id": "B15-A-OPTIONAL-INTERFACE",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["A-interface-flags-present", "A-interface-flags-absent"],
+      "assertions": [
+        "B 模块不直接调用 jxp_a_ 前缀的可选 scripted trigger 或 effect。",
+        "A 接口标志不存在时，公司与殖民项目改用本地科技、港口、财政与身份门槛。"
+      ]
+    },
+    {
+      "id": "B15-PERFORMANCE-AND-RELOAD",
+      "status": "PENDING_RUNTIME",
+      "profiles": ["ten-year-observer", "save-reload"],
+      "assertions": [
+        "B15 不新增月度世界扫描，AI 刹车只在决议或战争借口评估时读取本国和目标国。",
+        "保存重载后没有重复形成、重复公司评议或重复路线刷新。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+﻿l_english:
+ jxp_b_113_open_ryukyu_compact_title:0 "®‹šR	tt2N^SKN¦u"
+ jxp_b_113_open_ryukyu_compact_desc:0 "cO–™Ì‘ÿN	tt‹sœ^0UFUŒT±8—HuOy˜®‹šRŒQS0!6‚0=nzNwm2–0dk¦u‰˜ÏuSV0W‹sœ^b²‹ÿNOíQzzTv^	tt0"
+ jxp_b_113_open_tsushima_mediation_title:0 "Í‘teùRlš²N"
+ jxp_b_113_open_tsushima_mediation_desc:0 "÷‹—Rl0gœœÑ‹˜RNb¹eIYLˆqQšRSc9‚0-P†™0^6‚ŒToAmlYnÿOùRlšçuíuÅbSV2NýVKNô•„vè•„V0"
+ jxp_b_113_open_northern_compact_title:0 "ìSÆ–Swm’N^Oßv"
+ jxp_b_113_open_northern_compact_desc:0 "Ž÷‹Œ†7Y0fh*YNSwmø‹–™†˜FU®‹nHW0qS9N8f0Š¬Q=nŒT³RyV¹Lu0HV0t!K‹†	g<wMRKN)RÿtSOYuN•EN(`h`0"
+ jxp_b_113_open_taiwan_maritime_compact_title:0 "®‹šRðSŒnwmNlQ¦u"
+ jxp_b_113_open_taiwan_maritime_compact_desc:0 "©‹ðSŒn>yO0ý•wmFU.^09‚INNb¹e‹NqQT®‹šR=n^0¦W–k0	×vŒTzQY0SV0W>yOSåNêñT„v	ébÞV”^bìN„vÐcHh0"
+
+ jxp_b_governance.100.t:0 "”Nt^áTßRÿ°e†˜RšR"
+ jxp_b_governance.100.d:0 "bT”Nt^ÿ›Q®|0KyVN0W¹e˜RT„v&ŒQòTÏu³Y>f2—°e6R„v—V1Y0å‚êSÖSNöeKN0ÿŒNASt^KN¦uÅV¾–„UÈu0"
+ jxp_b_governance.100.military:0 "tel™›Qœ^N%„O"
+ jxp_b_governance.100.dynasty:0 "©‹çeÏe>NPƒýwT"
+ jxp_b_governance.100.trade:0 "lQV!6‚NsQz&ŒQ"
+ jxp_b_governance.100.direct:0 ">mØRšRIYLˆ8hågÞT¿S"
+ jxp_b_governance.101.t:0 "ASt^áTßRÿ˜RlKNô•"
+ jxp_b_governance.101.d:0 ",rŒN!káTßRNQêSwÓNê^ÈvN0aNÅu0FUºN0›Q7bNnfŒvÓYý(Wýî•ÿ°eéy^vzßz1uŒjOINÿÈSTŒ3uÉ‹ÿ"
+ jxp_b_governance.101.military:0 "åN›Q9bcÖSaNÇROSˆR"
+ jxp_b_governance.101.dynasty:0 "ìSV0W¹eTgKNO"
+ jxp_b_governance.101.trade:0 "©‹=n^ãNhˆÂSN®‹÷N"
+ jxp_b_governance.101.direct:0 "ibEQ2RNáT	cYˆr"
+ jxp_b_governance.102.t:0 "AS”Nt^áTßRÿïyVnm°s"
+ jxp_b_governance.102.d:0 "çeåe„v4Nöe‰R’còTÏu•b)RÊvN`Nï`0,r	N!káTßRÅV‰˜bÅbwck„vãN÷Nÿ&TRÈugeg4NöeSêSiRHVuQNzz‡e0"
+ jxp_b_governance.102.military:0 "QËz›QªuÿNÜ`²uke"
+ jxp_b_governance.102.dynasty:0 "åNT®‹¦umgN¶R"
+ jxp_b_governance.102.trade:0 "‰VågSzN!6‚"
+ jxp_b_governance.102.direct:0 "nNÍ‘ÿé`žR*¨X"
+ jxp_b_governance.103.t:0 "ŒNASt^KN®‹"
+ jxp_b_governance.103.d:0 "ŒNASt^òTÏuÇ»S0böeú^Ëz„vCgœRSO6RNýw8lEN¬`nÿbSvQ³ueQ8^6Rÿbb²‹0W¹eêtÿbØNúQèTDæSwNn»lt0"
+ jxp_b_governance.103.normalize:0 "RVeQ8^6Rÿb»S4NöeYˆè•"
+ jxp_b_governance.103.autonomy:0 "åNê»lŒT¦u‰RšR0W¹e"
+ jxp_b_governance.103.to_military:0 "Í‘ú^›Qœ^ÿQLˆŒNASt^"
+ jxp_b_governance.103.to_dynasty:0 "vbËz0W¹e¶Rè•ÿQLˆŒNASt^"
+ jxp_b_governance.103.to_trade:0 "9eHN!^qQ»lÿQLˆŒNASt^"
+ jxp_b_governance.103.to_direct:0 "9e¾‹ôv–IYLˆÿQLˆŒNASt^"
+
+ jxp_b_regional_depth.201.t:0 "–™Ì‘g®‹ÿŒQSN2N^S"
+ jxp_b_regional_depth.201.d:0 "	tt‹sœ^HQ‰˜³QšRÿ°e„vwm¦u”^‚YUO‰R>e-NýVŒQSNåe,gÝO²bKNô•„vçe	gs^aˆ0"
+ jxp_b_regional_depth.201.a:0 "åN-NýVŒQSHN<y6RKN–™"
+ jxp_b_regional_depth.201.b:0 "(W2N¹eKNô•(ŒNacaˆ"
+ jxp_b_regional_depth.202.t:0 "–™Ì‘g®‹ÿwm2–KN÷‹"
+ jxp_b_regional_depth.202.d:0 "wmÇRNHV»<Ñø‹›Sÿ‹sœ^ÅV‰˜aˆÏ‘¥c×SYôcO&TÍSO	tt1Y»SÞVËeYO0W0"
+ jxp_b_regional_depth.202.a:0 "÷‹åe,gbÅb²b*‚KN1"
+ jxp_b_regional_depth.202.b:0 "ÍNåN,gýV‚^ˆRwm"
+ jxp_b_regional_depth.203.t:0 "±8—U%„N!6‚"
+ jxp_b_regional_depth.203.d:0 "UFU0‹NN!6‚yVºN‰BlŠbâe	gCg)R™QeQ°e¦uÿMQ×S4NöeVÑS0"
+ jxp_b_regional_depth.203.a:0 "ÝOhQU%„N!6‚çe‹O"
+ jxp_b_regional_depth.203.b:0 "©‹‹sœ^ÝOYu4NHgÁˆÏ‘"
+ jxp_b_regional_depth.204.t:0 "ENs|Qg‹NKN-^"
+ jxp_b_regional_depth.204.d:0 "¡l	gŸq‰`2NýV<yÕlN*‚ï„v‹NÿûNUOag¦uýêS=fN¸uzz‡e0"
+ jxp_b_regional_depth.204.a:0 "úQDibEQ‹NfR†™"
+ jxp_b_regional_depth.204.b:0 "S-^MOSÙu	g›RFU¶R"
+ jxp_b_regional_depth.205.t:0 "ø‹›S=nzKN‰N"
+ jxp_b_regional_depth.205.d:0 "«RäS0kQÍ‘qSN²Qóu,g›SùR=nzRM‘T	gÉ‹BlÿßuNzQYÅV‰˜jOúQ©‹ek0"
+ jxp_b_regional_depth.205.a:0 "›S®‹šRz˜"
+ jxp_b_regional_depth.205.b:0 "HQEQ‹sœ^KN“^"
+ jxp_b_regional_depth.206.t:0 "‹sßuN	cøS"
+ jxp_b_regional_depth.206.d:0 "0W¹e	cøSÅbÃV°ewm¦uO–™Ì‘Cg¿RÇÍ‘ÿ‹sœ^mNNMa©‹çeÏeI–.cÏkNy˜=n¡R0"
+ jxp_b_regional_depth.206.a:0 "Í‘3u‹sœ^Áˆ­e"
+ jxp_b_regional_depth.206.b:0 "Ùu	cøSYuN®‹‹NKN-^"
+ jxp_b_regional_depth.207.t:0 "2N^S‡efN"
+ jxp_b_regional_depth.207.d:0 "gT„v‡efNÅV‰˜ô‹f	tt‚YUOTöeôucg!<yêNNåe,gwm2–sQû|0"
+ jxp_b_regional_depth.207.a:0 "åN+T÷mwupIm„vªcžb¦u"
+ jxp_b_regional_depth.207.b:0 "êSb²‹–™Ì‘‹sœ^„vINCg"
+ jxp_b_regional_depth.208.t:0 "	ttKN¦u"
+ jxp_b_regional_depth.208.d:0 "kQ!kg®‹òTÕk0	ttïSåN¥c×S’NÝOFU0ÛNekÓu‹sßuTwTKN¦uÿbÝOYuìrLˆKNï0"
+ jxp_b_regional_depth.208.a:0 "Œrr’NÝOFUKN¦u"
+ jxp_b_regional_depth.208.b:0 "Óuôf'tÆR„v‹sßuTwT"
+ jxp_b_regional_depth.208.c:0 "IZÒbdk¦uÿôucçe6R"
+
+ jxp_b_regional_depth.301.t:0 "—RlKNè•"
+ jxp_b_regional_depth.301.d:0 "ùRlš—RlåNpeãNïy=t„vfNQY0Ñ‹˜RŒTºN	ôuû|gœœ²NÿÕuÇÖNìNêSO©‹wmáS1Y»SïSáO„v-NËN0"
+ jxp_b_regional_depth.301.a:0 "b²‹—Rl„v-NËNKNLw"
+ jxp_b_regional_depth.301.b:0 "åNšSObcÖSôv¥c,T‹T"
+ jxp_b_regional_depth.302.t:0 "fNQYNpSáO"
+ jxp_b_regional_depth.302.d:0 "*OON*OfNQYþfmc³RwmáSáO(u0°e¦u‰˜³QšR‚YUO8hŒšpSáONOâV0"
+ jxp_b_regional_depth.302.a:0 "1uÌS¹eÑ‹˜RqQTØRŒš"
+ jxp_b_regional_depth.302.b:0 "©‹—RlêLˆågßR"
+ jxp_b_regional_depth.303.t:0 "oAmlKNRVØ"
+ jxp_b_regional_depth.303.d:0 "wm¾–N”^ê¨RbHNb‰NPãS0oAml„v¯‹î•0›OÙuNcÔ—‰3zšRÄ‰z0"
+ jxp_b_regional_depth.303.a:0 "1ulQ“^ÅbcÔ"
+ jxp_b_regional_depth.303.b:0 "©‹FU9‚êLˆyrD"
+ jxp_b_regional_depth.304.t:0 "-P†™^6‚"
+ jxp_b_regional_depth.304.d:0 "Ü‘qS-P†™âe=f8fHWNbÿmN=fg¹RfVÑS‰Nïz„v¹Lu0"
+ jxp_b_regional_depth.304.a:0 "OšR˜V>eSc9‚"
+ jxp_b_regional_depth.304.b:0 "S9‚˜.UˆNjŒFU"
+ jxp_b_regional_depth.305.t:0 "wmáS u·u„vÁˆ­e"
+ jxp_b_regional_depth.305.d:0 "FUHP0—e´kNcb9‚å‚ýNGSHNýV‰NÿûNUO²NýNýwcEN0"
+ jxp_b_regional_depth.305.a:0 "¾‹	N¹eO¡RKN-^"
+ jxp_b_regional_depth.305.b:0 "åNT>kÅ†NÓu"
+ jxp_b_regional_depth.306.t:0 "ùRlšŒjP¦ub"
+ jxp_b_regional_depth.306.d:0 "—RlïSåNçuíuEQSVåe,gNgœœKNô•„vÌST-NËNÿmNïSåNÞVN›SêˆR0"
+ jxp_b_regional_depth.306.a:0 "ôucwmáSÌSTŒjP"
+ jxp_b_regional_depth.306.b:0 "NQbÅb2NýVKN‰N"
+
+ jxp_b_regional_depth.401.t:0 "Swmø‹–™†˜KNO"
+ jxp_b_regional_depth.401.d:0 "Œ†7YNSwmø‹–™†˜‰BlHQb²‹Tê„vnHW0s0WŒT²NfCgÿMb¯wŒº‹ôf'Y„v’N^éy^0"
+ jxp_b_regional_depth.401.a:0 "©‹ø‹–™†˜eQ-^®‹‹N"
+ jxp_b_regional_depth.401.b:0 "êSNg	g›Rw²N‰m"
+ jxp_b_regional_depth.402.t:0 "nHWNŠ¬Q=n"
+ jxp_b_regional_depth.402.d:0 "‘œHW0wm‹QNŠ¬Q=n=fSwmu¡‹9h,g0zQYå‚NŒ˜cR‚‚NçeLuÿ²QzÅVS…ö^0"
+ jxp_b_regional_depth.402.a:0 "åNRbb²‹çe	gnHW"
+ jxp_b_regional_depth.402.b:0 "HQÖSlQêN”^—VKN)R"
+ jxp_b_regional_depth.403.t:0 "³RyV„vLuP–"
+ jxp_b_regional_depth.403.d:0 "FUºN‰BlåNHPyVÝOÁ‹›O'ÿø‹–™†˜RðyÙOŠb’N^ØSjOØbyV0"
+ jxp_b_regional_depth.403.a:0 "ybkHV6RHPyV"
+ jxp_b_regional_depth.403.b:0 "ÆQ¸‹FU¶RVÑS³R›R"
+ jxp_b_regional_depth.404.t:0 "qS9Negï"
+ jxp_b_regional_depth.404.d:0 "fh*YåNS„vqS9N8fÞ¥cÛk®v0NøuNÑ‘^ShVÿNýwêS`—Nµ^WS¹eONb=eM‘0"
+ jxp_b_regional_depth.404.a:0 "ÝO²bS¹e-NËNFUï"
+ jxp_b_regional_depth.404.b:0 ">mfkÅˆ9‚–µc6RlÐ"
+ jxp_b_regional_depth.405.t:0 "ÄOºNNSwm¹Lu"
+ jxp_b_regional_depth.405.d:0 "ôfS¹e„v¿R›Rck(W<Ñ0qQT.Oˆmo`NQe©R9‚¾–ÿb¸‹ÔkÓNÃORLuôfHNžRE–0"
+ jxp_b_regional_depth.405.a:0 "ú^ËzqQT­wgN¥b"
+ jxp_b_regional_depth.405.b:0 "åNfkZ±RHywm†u"
+ jxp_b_regional_depth.406.t:0 "Swm’N^KN¦u"
+ jxp_b_regional_depth.406.d:0 "ag>kòTPŸ0bìNïSåN¥c×S’N^N–™†˜T®‹ÿmNïSåN(uHV6R³R¨RbcÖSôfY'irNôfñm(`h`0"
+ jxp_b_regional_depth.406.a:0 "ŒrrSwm’N^ßv¦u"
+ jxp_b_regional_depth.406.b:0 "åN!yV6R¦^ßu–Swm"
+
+ jxp_b_regional_depth.501.t:0 "ðSŒn>yOKN-^"
+ jxp_b_regional_depth.501.d:0 "=n^N¦W0WNýwêS1uÜeg„v9‚IN³QšR0SV0W>yO‰Bl(WQY¦u0sHWŒT4ln‹N¡R-NÝOYuÑSŠKNCg0"
+ jxp_b_regional_depth.501.a:0 "ìSÆ–>yON4Yîv®‹‹N"
+ jxp_b_regional_depth.501.b:0 "HQNŸq‰`LˆÅ`„vSzºN®‹šR"
+ jxp_b_regional_depth.502.t:0 "ý•wmFU.^"
+ jxp_b_regional_depth.502.d:0 "Él3oFUºNŒcácwmï0ö”±”NûylQÜuÿÖNìNâeýwO=n^tQÛvÿmNýw¶gzzlQ¦u0"
+ jxp_b_regional_depth.502.a:0 "åNlQVLrgq¦umgFU.^"
+ jxp_b_regional_depth.502.b:0 "©‹'YFUbS=nz"
+ jxp_b_regional_depth.503.t:0 "¦W–kN4lW"
+ jxp_b_regional_depth.503.d:0 "°e¦W7b—‰W0Wÿ>yOOVsHWN4ln0å‚NRn¹LuÿÏkNag4l3WýObHNuQ‰N0"
+ jxp_b_regional_depth.503.a:0 ">yØRLuv^eˆP"
+ jxp_b_regional_depth.503.b:0 "åN¦WgqOHQÛb•Vûyl"
+ jxp_b_regional_depth.504.t:0 "wm×vN²b*‚"
+ jxp_b_regional_depth.504.d:0 "wm×v0ÁyFUN×SÇ–4lKbŽVŽVúQêTN²ºN0lQ¦u‰˜³QšRåN4l^nRÿØ=fåNNpNRS0"
+ jxp_b_regional_depth.504.a:0 "Ãu²b*‚4l^"
+ jxp_b_regional_depth.504.b:0 "ÛbšbïS(u„v9‚IN"
+ jxp_b_regional_depth.505.t:0 "wƒpQN‰ísYrWµN"
+ jxp_b_regional_depth.505.d:0 "çe!X0YeONmFUQY¦uÍNqVÍT›SNø‹=n0hQØv¹b»SêSO6R.°e„v0WNQÜu0"
+ jxp_b_regional_depth.505.a:0 "¡RšRçe¦uÿéb„U¿l(u"
+ jxp_b_regional_depth.505.b:0 "åN›QäNÍ‘ø‹=n"
+ jxp_b_regional_depth.506.t:0 "ðSŒnwmNlQ¦u"
+ jxp_b_regional_depth.506.d:0 ">yO0ý•FUNYeg9‚INòTÏuhˆ`0ðSŒnïSåNbHN×S¦umg„vwmNO4OÿmNïSåNbHNŒNASt^›QG•0"
+ jxp_b_regional_depth.506.a:0 "Œrr>y=nqQ®‹KN¦u"
+ jxp_b_regional_depth.506.b:0 "¾‹ËzŒNASt^wm2–›QG•"
+
+ jxp_b_china_depth.601.t:0 "IY)Y,rN®‹ÿg!N<y6R"
+ jxp_b_china_depth.601.d:0 "âe2kb×S)YNKNTÿ¿O‰˜ÞVTrÛV¹eO‚‚‚YUOeQ!0UOwðyã0UOwêSLˆ’N^0<yêNNýwêS(W†^xQSVåeXR(W0"
+ jxp_b_china_depth.601.a:0 "åNšSPŒTf‡eÍ‘ú^g!"
+ jxp_b_china_depth.601.b:0 "HQåNfkZšRvQTR"
+ jxp_b_china_depth.602.t:0 "IY)Y,rŒN®‹ÿšïN!S"
+ jxp_b_china_depth.602.d:0 "ê=nãSó¬N^„všï0†™šNÓNHW³QšR!Oýw&Tµb¾ÿmN³QšR0W¹e=f&TPHgµOpbŒvÓY0"
+ jxp_b_china_depth.602.a:0 "teîO!SN†™š"
+ jxp_b_china_depth.602.b:0 "¿l(u0W¹ebžRçe‹O"
+ jxp_b_china_depth.603.t:0 "IY)Y,r	N®‹ÿ	˜RNÑvßR"
+ jxp_b_china_depth.603.d:0 "Ë–†uWNýwêS`—Vgw²NáO»lt0çeã0°eÛN0W¹eëXºNKNô•ÅV‰˜ú^ËzïSåNý1„v˜RÚPéy^0"
+ jxp_b_china_depth.603.a:0 "lQVw8hv^cáTßRO"
+ jxp_b_china_depth.603.b:0 "åNPc³ukXeˆ˜RH"
+ jxp_b_china_depth.604.t:0 "IY)Y,rÛV®‹ÿ‡eYeKN‰N"
+ jxp_b_china_depth.604.d:0 "åe,gfk¶R.OßuN-NýVëX'Y+Y<yfRâeïSøvbÿmNïSýw|Vdkc¥eHN7Y×O0g÷^ÅV‰˜ÙuúQ¹R³uNÁˆ­eKNÕl0"
+ jxp_b_china_depth.604.a:0 "|QÇ‘2N¦fRßu"
+ jxp_b_china_depth.604.b:0 "åNÜwwKNÕl‹SgV®‹"
+ jxp_b_china_depth.605.t:0 "IY)Y,r”N®‹ÿ¹†uKN»l"
+ jxp_b_china_depth.605.d:0 "!S0˜RÚPN‡eYeâešRÿgT‰˜HN¹†u›Qœ^0W˜RŒT’N^RšR8^6R0ódkÿ)Y‹TNQêS=fbHWN„v±Rðy0"
+ jxp_b_china_depth.605.a:0 "¾‹¹¡Rb–ÿÈubIY)YKN6R"
+
+ jxp_b_china_depth.611.t:0 "<yêN,rN®‹ÿÛVwmø‹O"
+ jxp_b_china_depth.611.d:0 "	tt0gœœ0ùRlšNðSŒnT	gêñT„v‹sßu0²NŒT=n^0<yêNqQTSOå‚‰bËzÿÅV‰˜HQb²‹Ù›NîTV0"
+ jxp_b_china_depth.611.a:0 "R+RcOÿb²‹T¦çe‹O"
+ jxp_b_china_depth.611.b:0 "êSŽ	g›RwtO"
+ jxp_b_china_depth.612.t:0 "<yêN,rŒN®‹ÿ=nãSN²b*‚"
+ jxp_b_china_depth.612.d:0 "O‚‚NFU6‚qQpNagwmï0¡l	g¦ušR„vjPÊl=n0áOLrŒT²b*‚ÿ<yêNˆVëVO«ˆwm×vN	ÁyNbT¡l0"
+ jxp_b_china_depth.612.a:0 "qQTúQD²b*‚N†™š"
+ jxp_b_china_depth.612.b:0 "SLˆLrgq.UˆNFU.^"
+ jxp_b_china_depth.613.t:0 "<yêN,r	N®‹ÿ‹NNfNQY"
+ jxp_b_china_depth.613.d:0 "NT‡eWR0†SÕlNðyŒO©‹„UaØSb®O±0TýV‹N‰Bl8^¾‹-^MOÿw^—4Nöe,T‹TŽNfk˜R0"
+ jxp_b_china_depth.613.a:0 "¾‹ÛVwm‹N†™"
+ jxp_b_china_depth.613.b:0 "1uÁyFUêLˆûÑ‹"
+ jxp_b_china_depth.614.t:0 "<yêN,rÛV®‹ÿwmN'YO"
+ jxp_b_china_depth.614.d:0 "ø‹OPŸÆ–ÿtSùRµ^!k0!˜ŒToAml‰NgbNO0O®‹ýw&Tö^íuÿÖS³QŽNbìN=f&TMaa¥c×SqQTÁˆ­e0"
+ jxp_b_china_depth.614.a:0 "åNn-^KNÕlôuc'YO"
+ jxp_b_china_depth.614.b:0 "—f-N6epNÍSùRw"
+ jxp_b_china_depth.615.t:0 "<yêN,r”N®‹ÿwmNòNÁˆ"
+ jxp_b_china_depth.615.d:0 "T¦TaŠbFUHP0cb9‚NoAml²NÙu8^¾‹O®‹Áˆ­e0N*NNOVUSN‹sgŒQS„vwmN<yêNW1udkbbV0"
+ jxp_b_china_depth.615.a:0 "ËzwmNlQ®‹ÿÈub<yêNKNßv"
+
+ jxp_b_china_depth.621.t:0 "4xNS,rN®‹ÿÜm4l^"
+ jxp_b_china_depth.621.d:0 "å‚‰Sb4x'YF–çeéy^ÿbìN–™HQ—‰ýwŠcRÎ˜0ˆRFUïw^—êS(WÑ¸S³Qb„v4l^0"
+ jxp_b_china_depth.621.a:0 "Í‘Ñ‘ú^.Üm9‚–"
+ jxp_b_china_depth.621.b:0 "åNçe9‚CgEQ°e›Q"
+ jxp_b_china_depth.622.t:0 "4xNS,rŒN®‹ÿê1u=n"
+ jxp_b_china_depth.622.d:0 "wmyN„vÁyFUâe=fpÁywÿmN=fgŸq‰`*‚ï„vºN0V>e×SÑv¡r„vê1u=nS²QûQçe	gNVS0"
+ jxp_b_china_depth.622.a:0 "V>epeY×S¦umg„vê1u=n"
+ jxp_b_china_depth.622.b:0 "êSÙu²NáOFU¶Ryr¸‹"
+ jxp_b_china_depth.623.t:0 "4xNS,r	N®‹ÿÝO²bSýV"
+ jxp_b_china_depth.623.d:0 "å‚bìNêSŠb¿lwmSýVÆ‰HNógÿNbŒ°eéy^NÇ=fæSNÍyg!0ÝO²bvQ*‚CgMbýwbcegwckßvËS0"
+ jxp_b_china_depth.623.a:0 "ÅbÝOSýVN›S¦*‚Cg"
+ jxp_b_china_depth.623.b:0 "ëvQÐc›O›Q=nN4lKb"
+ jxp_b_china_depth.624.t:0 "4xNS,rÛV®‹ÿŸ^Vwmy"
+ jxp_b_china_depth.624.d:0 "ÖSˆmçewmyO¨RGd˜RFU0sQTN0W¹ejŒÏe„v)RÊvÿmNO©‹¿lwm>yO,rN!k(Wfb—N|T8T0"
+ jxp_b_china_depth.624.a:0 "lQ^°ewmÕlÿ¹R¸‹l9‚Ü*‚"
+ jxp_b_china_depth.624.b:0 "©‹çeyäNbHN0tMåTwQ"
+ jxp_b_china_depth.625.t:0 "4xNS,r”N®‹ÿwm¸STßv"
+ jxp_b_china_depth.625.d:0 "9‚–0ê1u=nNSýVÅbÝOÈuŽNÞbNSO0lQøS00W¹e=n^NýV¶R4l^SqQTôucÙWYqSi–wV>e„vwmméy^0"
+ jxp_b_china_depth.625.a:0 "Ëzwm¸STßvÿÈuÓuçeåewmy"
+
+ jxp_b_113_governed_province:0 "bT»ltHS"
+ jxp_b_113_governed_province_desc:0 "dk0WÍNYŽNŒNASt^bT»ltgÿgP–JSánbýV¶RÐcMRÓumgSO6Röeÿ4Nöeh°‹S–KN²d•0"
+ jxp_b_113_governance_twenty_year_term:0 "ŒNASt^bT»ltg"
+ jxp_b_113_governance_twenty_year_term_desc:0 "›QMe0!^bôv–YˆrÍN^SbTCgœRKN6RÿÅV‰˜ÏuÇ	N!káTßRv^(WŒNASt^TÍ‘°e®‹šR0"
+ jxp_b_113_governance_transition_lock:0 "»ltSO6RS*gJSg"
+ jxp_b_113_governance_transition_lock_desc:0 "ÓNÃO9e6ROO°e†˜àeNbÎNÿ8^Ä‰lh‰˜Yu…VÈug'Y®‹0"
+ jxp_b_113_governance_local_officers:0 "0W¹eTXTeQr"
+ jxp_b_113_governance_local_officers_desc:0 "Ÿq‰`çe‹O„v0W¹eTXTÛeQ°eYˆrÿåN6eeQ©‹ekbcÖSƒNO„vlô•idæd0"
+ jxp_b_113_governance_hard_discipline:0 "›Qœ^Í‘3uªu‹V"
+ jxp_b_113_governance_hard_discipline_desc:0 "›Qœ^åNôf%N­‹Ãuôucéy^ÿtSmNOVÑSN‰š›Q‹S›RNGS0"
+ jxp_b_113_governance_open_accounts:0 "lQV!K&ŒQ"
+ jxp_b_113_governance_open_accounts_desc:0 "=nz0!KŒTSz&ŒQTáTßRwlQVÿ*¨Xn×SO6R0"
+ jxp_b_113_governance_local_assembly:0 "0W¹eTgT®‹"
+ jxp_b_113_governance_local_assembly_desc:0 "0W¹eçeÏe0FUºNŒTaNÅu·ƒÆQ1SKyVNÉ‹¼‹qQTH–®‹0"
+ jxp_b_113_governance_normalized:0 "bTSO6RRVeQ8^6R"
+ jxp_b_113_governance_normalized_desc:0 "4Nöe›QMeòTÏu²d•ÿ°e†˜	cgqhQýVLˆ„vIYLˆNÞT¿S6R¦^»lt0"
+ jxp_b_113_governance_autonomous_settlement:0 "0W¹eê»lŒT¦u"
+ jxp_b_113_governance_autonomous_settlement_desc:0 "ýV¶Rb²‹0W¹e®‹‹NNçe‹OÿåNƒSôv¥c6eeQbcÖS•EN‰RšR0"
+ jxp_b_113_regional_council_recent:0 "Ñg>NLˆwmY®‹¦u"
+ jxp_b_113_regional_council_recent_desc:0 "O‚‚0‹NN0MeÍN«ˆNNn®‹¦u`S(uÿ‚fNœRæSV'YO0"
+ jxp_b_113_ryukyu_compact:0 "	tt’NÝOFU¦u"
+ jxp_b_113_ryukyu_compact_desc:0 "–™Ì‘‹sœ^(WÝO	gê«ŽÕlßu„vMRÐcNÿNåe,gú^Ëz²b*‚0FUŒT‰NïzÁˆ­eKN¦u0"
+ jxp_b_113_tsushima_mediation:0 "ùRlšwmáSŒjP"
+ jxp_b_113_tsushima_mediation_desc:0 "—Rl0gœœÑ‹˜RNåe,gIYLˆqQTôucfNQY0-P†™ŒToAmlÄ‰z0"
+ jxp_b_113_northern_compact:0 "Swm’N^ßv¦u"
+ jxp_b_113_northern_compact_desc:0 "Swmø‹–™†˜„vnHW0FUïŒT®‹-^—V0Rb²‹ÿ’N^àVwƒHN3zšR0"
+ jxp_b_113_northern_coercion_burden:0 "Swm!yVKN(`"
+ jxp_b_113_northern_coercion_burden_desc:0 "HV6RHPyV&^egôfY'irÿmN©‹Swm>yOùRýV¶RNFU¶R•g`h`0"
+ jxp_b_113_taiwan_compact:0 "ðSŒn>y=nlQ¦u"
+ jxp_b_113_taiwan_compact_desc:0 ">yO0ý•FUN=n^ãNhˆqQT®‹šR¦W–k0zQY0²b*‚ŒTÉ‹¼‹0"
+ jxp_b_113_taiwan_military_settlement:0 "ðSŒnwm2–›QG•"
+ jxp_b_113_taiwan_military_settlement_desc:0 "ðSŒnø‹=n1u›QG•ßuyrŒNASt^ÿwm2–žXHVw0W¹eÅb–KN RÍ‘0"
+ jxp_b_113_china_long_program:0 "Í‘„g-NýVNwmNéy^"
+ jxp_b_113_china_long_program_desc:0 "°eéy^S(WASt^ýVVr-Ny˜ú^ËzÿÈuNSb1SÅV‰˜Ir…V”N®‹ŒRb0"
+ jxp_b_113_china_tribute_offices:0 "ÛV7Y!SN¹¡Rb–"
+ jxp_b_113_china_tribute_offices_desc:0 "!S0†™š0ÑvßRN¹†u’N^«ˆ³ueQNWYïScíu„vIY)Y6R¦^0"
+ jxp_b_113_china_rites_network:0 "wmN<yêNlQ®‹"
+ jxp_b_113_china_rites_network_desc:0 "ø‹¦åN‹N†™0²b*‚ŒT8^¾‹òNÁˆôuû|NOVUSNŒQSw„v<yêNQÜu0"
+ jxp_b_113_china_maritime_order:0 "wm¸Sê1u=nTßv"
+ jxp_b_113_china_maritime_order_desc:0 "Üm4l^0×SÑv¡rê1u=nNSýV*‚CgÅbÝOqQTSb4xçewmyéy^0"
+
+ jxp_b_113_opinion_ryukyu_compact:0 "	tt’NÝOFU¦u"
+ jxp_b_113_opinion_tsushima_mediation:0 "ùRlšŒjPKNŒ"
+ jxp_b_113_opinion_northern_compact:0 "Swm’N^ßv¦u"
+ jxp_b_113_opinion_northern_coercion:0 "SwmHV6R!yV"
+ jxp_b_113_opinion_taiwan_compact:0 "ðSŒnwmNlQ¦u"
+ jxp_b_113_opinion_china_rites:0 "wmN<yêNKN²N"
+ jxp_b_113_opinion_china_maritime_threat:0 "wm¸Séy^KNZÁw"
+
+ jxp_iface_b_postconquest_governance_active:0 "bT»ltck(WËeLˆ"
+ jxp_b_113_governance_military_commission:0 "›Qœ^¡r–"
+ jxp_b_113_governance_local_dynasty:0 "0W¹e¶Rè•qQ»l"
+ jxp_b_113_governance_tribute_trade:0 "!^qQ»l"
+ jxp_b_113_governance_direct_governor:0 "ôv–IYLˆ"
+ jxp_b_113_governance_review_1_done:0 "–™!kbTáTßRòTÕk"
+ jxp_b_113_governance_review_2_done:0 ",rŒN!kbTáTßRòTÕk"
+ jxp_b_113_governance_review_3_done:0 ",r	N!kbTáTßRòTÕk"
+ jxp_b_113_governance_review_scheduled:0 "N!kbTáTßRòTÏu’cšR"
+ jxp_iface_b_ryukyu_compact_active:0 "	ttKN¦uòTÏuuHe"
+ jxp_iface_b_tsushima_mediation_active:0 "ùRlšŒjPòTÏuuHe"
+ jxp_iface_b_northern_compact_active:0 "SwmKN¦uòTÏuuHe"
+ jxp_iface_b_taiwan_compact_active:0 "ðSŒnwmNlQ¦uòTÏuuHe"
+ jxp_b_113_ryukyu_chinese_investiture:0 "	ttS-NýVŒQSHNHQ"
+ jxp_b_113_ryukyu_balanced_investiture:0 "	ttôuc2N^Ss^aˆ"
+ jxp_b_113_ryukyu_requests_protection:0 "	tt÷‹Blåe,g²b*‚"
+ jxp_b_113_ryukyu_dual_allegiance:0 "	ttÇ‘(u2N^S‡efN"
+ jxp_b_113_ryukyu_union_compact:0 "	tt‹sßuTwTKN¦u"
+ jxp_b_113_tsushima_dual_mediator:0 "—RlÅbûNÌSTŒjPw"
+ jxp_b_113_northern_chiefs_council:0 "Swmø‹–™†˜®‹-^"
+ jxp_b_113_northern_forced_labor:0 "SwmHV6RHPyV"
+ jxp_b_113_taiwan_local_assembly:0 "ðSŒn>yO®‹-^"
+ jxp_iface_b_china_long_program_active:0 "-NýVNwmNéy^Í‘„g-N"
+ jxp_iface_b_china_long_program_complete:0 "-NýVNwmNéy^Í‘„gŒRb"
+ jxp_b_113_china_stage_1_done:0 "•gýVVr,rN®‹òTÕk"
+ jxp_b_113_china_stage_2_done:0 "•gýVVr,rŒN®‹òTÕk"
+ jxp_b_113_china_stage_3_done:0 "•gýVVr,r	N®‹òTÕk"
+ jxp_b_113_china_stage_4_done:0 "•gýVVr,rÛV®‹òTÕk"
+ jxp_b_113_china_mandate_program_complete:0 "IY)YbÐKN6RòTb"
+ jxp_b_113_china_rites_program_complete:0 "wmN<yêNlQ®‹òTb"
+ jxp_b_113_china_break_program_complete:0 "wm¸Sê1u=nTßvòTb"

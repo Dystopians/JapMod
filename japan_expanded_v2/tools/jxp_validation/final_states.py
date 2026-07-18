@@ -48,6 +48,7 @@ MISSION_FILES = (
     Path("missions/jxp_40_final_state_completion_missions.txt"),
     Path("missions/jxp_56_final_tag_identity_missions.txt"),
     Path("missions/jxp_japan_missions.txt"),
+    Path("missions/zzz_jxp_a_105_socioeconomic_missions.txt"),
 )
 MIGRATION_FLAG = "jxp_final_state_power_migration_v0280"
 POLITICAL_MIGRATION_FLAG = "jxp_final_state_political_reform_migration_v0283"
@@ -122,10 +123,10 @@ FINAL_STATES = (
         "jxp_final_state_uncommitted_trigger",
         "jxp_uncommitted_realm_council_reform",
         "jxp_reform_final_uncommitted_consensus",
-        "jxp_mission_uncommitted_codify_realm_council",
-        "jxp_japan_uncommitted_council_missions",
-        "jxp_mission_uncommitted_draft_realm_program",
-        12,
+        "jxp_a_105_uncommitted_domestic_8",
+        "jxp_a_105_uncommitted_domestic_missions",
+        "jxp_a_105_uncommitted_domestic_7",
+        10,
         "jxp_79_uncommitted_realm_program",
         True,
         "JAP",
@@ -151,8 +152,8 @@ FINAL_STATES = (
         "jxp_final_state_open_trigger",
         "jxp_open_maritime_cabinet_reform",
         "jxp_reform_final_open_cabinet",
-        "jxp_mission_open_maritime_cabinet",
-        "jxp_japan_open_missions",
+        "jxp_a_105_open_domestic_8",
+        "jxp_a_105_open_domestic_missions",
         "jxp_mission_equal_treaties",
         16,
         "jxp_79_open_maritime_cabinet",
@@ -196,10 +197,10 @@ FINAL_STATES = (
         "jxp_final_state_imperial_trigger",
         "jxp_imperial_daijokan_reform",
         "jxp_reform_final_imperial_daijokan",
-        "jxp_mission_ejp_daijokan_charter",
-        "jxp_ejp_restoration_state_missions",
-        "jxp_mission_ejp_imperial_constitution",
-        12,
+        "jxp_a_105_imperial_domestic_8",
+        "jxp_a_105_imperial_domestic_missions",
+        "jxp_a_105_imperial_domestic_7",
+        16,
         "jxp_79_imperial_daijokan_charter",
         True,
         "EJP",
@@ -2101,8 +2102,12 @@ def check_final_states(context: ValidationContext) -> CheckResult:
                 context.relative(mission.source),
                 mission.line,
             )
-        progress = first_scalar(effect, "change_government_reform_progress")
-        if progress is None or not re.fullmatch(r"[1-9]\d*", progress):
+        progress_values = _assignment_values(
+            effect, "change_government_reform_progress"
+        )
+        if len(progress_values) != 1 or not re.fullmatch(
+            r"[1-9]\d*", progress_values[0]
+        ):
             result.add(
                 "final_state.capstone_reform_progress",
                 f"{state.mission_id} must grant positive government reform progress",

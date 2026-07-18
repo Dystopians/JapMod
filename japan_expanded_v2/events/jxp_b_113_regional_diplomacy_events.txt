@@ -1,0 +1,306 @@
+namespace = jxp_b_regional_depth
+
+# Ryukyu: eight decisions are made in the Ryukyuan country's own scope.
+country_event = {
+	id = jxp_b_regional_depth.201
+	title = jxp_b_regional_depth.201.t
+	desc = jxp_b_regional_depth.201.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.201.a add_prestige = 5 set_country_flag = jxp_b_113_ryukyu_chinese_investiture country_event = { id = jxp_b_regional_depth.202 days = 365 } ai_chance = { factor = 50 } }
+	option = { name = jxp_b_regional_depth.201.b add_dip_power = 25 set_country_flag = jxp_b_113_ryukyu_balanced_investiture country_event = { id = jxp_b_regional_depth.202 days = 365 } ai_chance = { factor = 50 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.202
+	title = jxp_b_regional_depth.202.t
+	desc = jxp_b_regional_depth.202.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.202.a set_country_flag = jxp_b_113_ryukyu_requests_protection add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_ryukyu_compact } country_event = { id = jxp_b_regional_depth.203 days = 365 } ai_chance = { factor = 45 modifier = { factor = 1.5 has_country_flag = jxp_b_113_ryukyu_balanced_investiture } modifier = { factor = 0.5 has_country_flag = jxp_b_113_ryukyu_chinese_investiture } } }
+	option = { name = jxp_b_regional_depth.202.b add_prestige = 5 country_event = { id = jxp_b_regional_depth.203 days = 365 } ai_chance = { factor = 55 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.203
+	title = jxp_b_regional_depth.203.t
+	desc = jxp_b_regional_depth.203.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.203.a add_treasury = -50 add_mercantilism = 1 country_event = { id = jxp_b_regional_depth.204 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.203.b add_prestige = -5 add_dip_power = 25 country_event = { id = jxp_b_regional_depth.204 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.204
+	title = jxp_b_regional_depth.204.t
+	desc = jxp_b_regional_depth.204.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.204.a add_treasury = -50 add_mercantilism = 1 country_event = { id = jxp_b_regional_depth.205 days = 365 } ai_chance = { factor = 55 } }
+	option = { name = jxp_b_regional_depth.204.b add_treasury = 50 add_corruption = 1 country_event = { id = jxp_b_regional_depth.205 days = 365 } ai_chance = { factor = 45 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.205
+	title = jxp_b_regional_depth.205.t
+	desc = jxp_b_regional_depth.205.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.205.a add_dip_power = -25 add_prestige = 5 country_event = { id = jxp_b_regional_depth.206 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.205.b add_stability = -1 add_treasury = 75 country_event = { id = jxp_b_regional_depth.206 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.206
+	title = jxp_b_regional_depth.206.t
+	desc = jxp_b_regional_depth.206.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.206.a add_legitimacy = 10 add_dip_power = -25 country_event = { id = jxp_b_regional_depth.207 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.206.b add_dip_power = 25 add_prestige = -5 country_event = { id = jxp_b_regional_depth.207 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.207
+	title = jxp_b_regional_depth.207.t
+	desc = jxp_b_regional_depth.207.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.207.a set_country_flag = jxp_b_113_ryukyu_dual_allegiance add_dip_power = 25 country_event = { id = jxp_b_regional_depth.208 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.207.b add_prestige = 10 country_event = { id = jxp_b_regional_depth.208 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.208
+	title = jxp_b_regional_depth.208.t
+	desc = jxp_b_regional_depth.208.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_regional_depth.208.a
+		add_country_modifier = { name = jxp_b_113_ryukyu_compact duration = -1 }
+		add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_ryukyu_compact }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_ryukyu_compact_active add_country_modifier = { name = jxp_b_113_ryukyu_compact duration = -1 } }
+		ai_chance = { factor = 50 modifier = { factor = 2 has_country_flag = jxp_b_113_ryukyu_requests_protection } modifier = { factor = 1.5 has_country_flag = jxp_b_113_ryukyu_dual_allegiance } }
+	}
+	option = {
+		name = jxp_b_regional_depth.208.b
+		add_country_modifier = { name = jxp_b_113_ryukyu_compact duration = -1 }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_ryukyu_compact_active add_country_modifier = { name = jxp_b_113_ryukyu_compact duration = -1 } }
+		ai_chance = { factor = 25 modifier = { factor = 2 has_opinion = { who = event_target:jxp_b_113_japanese_patron value = 100 } } }
+	}
+	option = { name = jxp_b_regional_depth.208.c add_prestige = 10 ai_chance = { factor = 25 } }
+}
+
+# Tsushima: mediation survives only while the So court chooses to maintain it.
+country_event = {
+	id = jxp_b_regional_depth.301
+	title = jxp_b_regional_depth.301.t
+	desc = jxp_b_regional_depth.301.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.301.a add_dip_power = 25 country_event = { id = jxp_b_regional_depth.302 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.301.b add_treasury = 50 add_prestige = -5 country_event = { id = jxp_b_regional_depth.302 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.302
+	title = jxp_b_regional_depth.302.t
+	desc = jxp_b_regional_depth.302.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.302.a add_dip_power = -25 add_prestige = 5 country_event = { id = jxp_b_regional_depth.303 days = 365 } ai_chance = { factor = 55 } }
+	option = { name = jxp_b_regional_depth.302.b add_dip_power = 25 country_event = { id = jxp_b_regional_depth.303 days = 365 } ai_chance = { factor = 45 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.303
+	title = jxp_b_regional_depth.303.t
+	desc = jxp_b_regional_depth.303.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.303.a add_treasury = -25 add_prestige = 5 country_event = { id = jxp_b_regional_depth.304 days = 365 } ai_chance = { factor = 70 } }
+	option = { name = jxp_b_regional_depth.303.b add_treasury = 25 add_prestige = -5 country_event = { id = jxp_b_regional_depth.304 days = 365 } ai_chance = { factor = 30 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.304
+	title = jxp_b_regional_depth.304.t
+	desc = jxp_b_regional_depth.304.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.304.a add_mercantilism = 1 add_dip_power = -25 country_event = { id = jxp_b_regional_depth.305 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.304.b add_treasury = 50 country_event = { id = jxp_b_regional_depth.305 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.305
+	title = jxp_b_regional_depth.305.t
+	desc = jxp_b_regional_depth.305.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.305.a add_dip_power = -50 add_prestige = 5 country_event = { id = jxp_b_regional_depth.306 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.305.b add_prestige = -10 add_treasury = 75 country_event = { id = jxp_b_regional_depth.306 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.306
+	title = jxp_b_regional_depth.306.t
+	desc = jxp_b_regional_depth.306.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_regional_depth.306.a
+		add_country_modifier = { name = jxp_b_113_tsushima_mediation duration = -1 }
+		add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_tsushima_mediation }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_tsushima_mediation_active add_country_modifier = { name = jxp_b_113_tsushima_mediation duration = -1 } }
+		ai_chance = { factor = 70 }
+	}
+	option = { name = jxp_b_regional_depth.306.b add_prestige = 10 ai_chance = { factor = 30 } }
+}
+
+# Northern chain: the local polity chooses between compact and coercion.
+country_event = {
+	id = jxp_b_regional_depth.401
+	title = jxp_b_regional_depth.401.t
+	desc = jxp_b_regional_depth.401.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.401.a set_country_flag = jxp_b_113_northern_chiefs_council add_dip_power = 25 country_event = { id = jxp_b_regional_depth.402 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.401.b add_prestige = 5 country_event = { id = jxp_b_regional_depth.402 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.402
+	title = jxp_b_regional_depth.402.t
+	desc = jxp_b_regional_depth.402.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.402.a add_treasury = 50 add_dip_power = 25 country_event = { id = jxp_b_regional_depth.403 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.402.b add_treasury = 100 add_stability = -1 country_event = { id = jxp_b_regional_depth.403 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.403
+	title = jxp_b_regional_depth.403.t
+	desc = jxp_b_regional_depth.403.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.403.a add_dip_power = -25 add_prestige = 5 country_event = { id = jxp_b_regional_depth.404 days = 365 } ai_chance = { factor = 70 } }
+	option = { name = jxp_b_regional_depth.403.b set_country_flag = jxp_b_113_northern_forced_labor add_treasury = 100 add_stability = -1 country_event = { id = jxp_b_regional_depth.404 days = 365 } ai_chance = { factor = 30 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.404
+	title = jxp_b_regional_depth.404.t
+	desc = jxp_b_regional_depth.404.d
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.404.a add_dip_power = 25 country_event = { id = jxp_b_regional_depth.405 days = 365 } ai_chance = { factor = 55 } }
+	option = { name = jxp_b_regional_depth.404.b add_mil_power = 25 add_prestige = -5 country_event = { id = jxp_b_regional_depth.405 days = 365 } ai_chance = { factor = 45 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.405
+	title = jxp_b_regional_depth.405.t
+	desc = jxp_b_regional_depth.405.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.405.a add_dip_power = -50 add_prestige = 5 country_event = { id = jxp_b_regional_depth.406 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.405.b add_mil_power = 25 add_prestige = -10 country_event = { id = jxp_b_regional_depth.406 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.406
+	title = jxp_b_regional_depth.406.t
+	desc = jxp_b_regional_depth.406.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_regional_depth.406.a
+		add_country_modifier = { name = jxp_b_113_northern_compact duration = -1 }
+		add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_northern_compact }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_northern_compact_active add_country_modifier = { name = jxp_b_113_northern_compact duration = -1 } }
+		ai_chance = { factor = 65 modifier = { factor = 2 has_country_flag = jxp_b_113_northern_chiefs_council } modifier = { factor = 2 NOT = { has_country_flag = jxp_b_113_northern_forced_labor } } }
+	}
+	option = {
+		name = jxp_b_regional_depth.406.b
+		add_country_modifier = { name = jxp_b_113_northern_coercion_burden duration = 7300 }
+		add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_northern_coercion }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_northern_compact_active add_country_modifier = { name = jxp_b_113_northern_coercion_burden duration = 7300 } }
+		ai_chance = { factor = 35 modifier = { factor = 2 has_country_flag = jxp_b_113_northern_forced_labor } }
+	}
+}
+
+# Taiwan and the Fujian coast: local society and merchants are explicit actors.
+country_event = {
+	id = jxp_b_regional_depth.501
+	title = jxp_b_regional_depth.501.t
+	desc = jxp_b_regional_depth.501.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.501.a set_country_flag = jxp_b_113_taiwan_local_assembly add_dip_power = 25 country_event = { id = jxp_b_regional_depth.502 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.501.b add_treasury = 50 add_corruption = 1 country_event = { id = jxp_b_regional_depth.502 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.502
+	title = jxp_b_regional_depth.502.t
+	desc = jxp_b_regional_depth.502.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.502.a add_mercantilism = 1 add_dip_power = -25 country_event = { id = jxp_b_regional_depth.503 days = 365 } ai_chance = { factor = 55 } }
+	option = { name = jxp_b_regional_depth.502.b add_treasury = 75 add_prestige = -5 country_event = { id = jxp_b_regional_depth.503 days = 365 } ai_chance = { factor = 45 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.503
+	title = jxp_b_regional_depth.503.t
+	desc = jxp_b_regional_depth.503.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.503.a add_dip_power = -50 add_prestige = 5 country_event = { id = jxp_b_regional_depth.504 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.503.b add_treasury = 100 add_stability = -1 country_event = { id = jxp_b_regional_depth.504 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.504
+	title = jxp_b_regional_depth.504.t
+	desc = jxp_b_regional_depth.504.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.504.a add_mil_power = -50 add_prestige = 5 country_event = { id = jxp_b_regional_depth.505 days = 365 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_regional_depth.504.b add_treasury = 75 add_prestige = -10 country_event = { id = jxp_b_regional_depth.505 days = 365 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.505
+	title = jxp_b_regional_depth.505.t
+	desc = jxp_b_regional_depth.505.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = { name = jxp_b_regional_depth.505.a add_dip_power = -50 add_prestige = 5 country_event = { id = jxp_b_regional_depth.506 days = 365 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_regional_depth.505.b add_mil_power = 25 add_prestige = -5 country_event = { id = jxp_b_regional_depth.506 days = 365 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_regional_depth.506
+	title = jxp_b_regional_depth.506.t
+	desc = jxp_b_regional_depth.506.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = jxp_b_regional_depth.506.a
+		add_country_modifier = { name = jxp_b_113_taiwan_compact duration = -1 }
+		add_opinion = { who = event_target:jxp_b_113_japanese_patron modifier = jxp_b_113_opinion_taiwan_compact }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_taiwan_compact_active add_country_modifier = { name = jxp_b_113_taiwan_compact duration = -1 } }
+		ai_chance = { factor = 65 modifier = { factor = 2 has_country_flag = jxp_b_113_taiwan_local_assembly } }
+	}
+	option = {
+		name = jxp_b_regional_depth.506.b
+		add_country_modifier = { name = jxp_b_113_taiwan_military_settlement duration = 7300 }
+		event_target:jxp_b_113_japanese_patron = { set_country_flag = jxp_iface_b_taiwan_compact_active add_country_modifier = { name = jxp_b_113_taiwan_military_settlement duration = 7300 } }
+		ai_chance = { factor = 35 }
+	}
+}

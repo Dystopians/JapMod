@@ -96,5 +96,9 @@ jxp_a_consume_colonial_registry_interfaces_effect = {
 			}
 			clr_country_flag = jxp_iface_b_tpf_needs_government_registry
 		}
+
+		# Colonial successors must never retain home-island estates, companies,
+		# market stages or commercial-council identity after the tag transaction.
+		jxp_a_reconcile_socioeconomic_system_effect = yes
 	}
 }

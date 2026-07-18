@@ -4,7 +4,7 @@ country_event = {
 	id = jxp_transpacific_state.1
 	title = "jxp_transpacific_state.1.t"
 	desc = "jxp_transpacific_state.1.d"
-	picture = DIPLOMACY_eventPicture
+	picture = jxp_b_transpacific_federation_eventPicture
 	is_triggered_only = yes
 	option = { name = "jxp_transpacific_state.1.a" add_prestige = 20 }
 }
@@ -13,7 +13,7 @@ country_event = {
 	id = jxp_transpacific_state.2
 	title = "jxp_transpacific_state.2.t"
 	desc = "jxp_transpacific_state.2.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_transpacific_federation_eventPicture
 	is_triggered_only = yes
 	option = { name = "jxp_transpacific_state.2.a" add_prestige = 15 add_dip_power = -50 }
 }
@@ -22,7 +22,7 @@ country_event = {
 	id = jxp_transpacific_state.3
 	title = "jxp_transpacific_state.3.t"
 	desc = "jxp_transpacific_state.3.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_transpacific_federation_eventPicture
 	is_triggered_only = yes
 	option = { name = "jxp_transpacific_state.3.a" add_stability = -1 add_prestige = 25 jxp_b_98_schedule_federal_council_effect = yes }
 }
@@ -31,7 +31,7 @@ country_event = {
 	id = jxp_transpacific_state.4
 	title = "jxp_transpacific_state.4.t"
 	desc = "jxp_transpacific_state.4.d"
-	picture = CITY_VIEW_eventPicture
+	picture = jxp_b_transpacific_federation_eventPicture
 	is_triggered_only = yes
 	option = { name = "jxp_transpacific_state.4.a" add_stability = -1 add_prestige = -20 }
 }
@@ -40,7 +40,7 @@ country_event = {
 	id = jxp_transpacific_state.10
 	title = "jxp_transpacific_state.10.t"
 	desc = "jxp_transpacific_state.10.d"
-	picture = COURT_eventPicture
+	picture = jxp_b_transpacific_federation_eventPicture
 	is_triggered_only = yes
 	trigger = { tag = TPF has_country_flag = jxp_iface_transpacific_state_created }
 	immediate = { clr_country_flag = jxp_b_98_federal_council_scheduled }

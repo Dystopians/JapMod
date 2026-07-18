@@ -1,0 +1,449 @@
+country_decisions = {
+	jxp_b_115_uncommitted_external_interaction = {
+		major = yes
+		potential = {
+		tag = JAP
+		NOT = { jxp_has_any_route_trigger = yes }
+		}
+		allow = {
+			OR = {
+				has_country_flag = jxp_b_115_uncommitted_interaction_unlocked
+				mission_completed = jxp_b_115_uncommitted_mainland_01
+			}
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.5 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_sakoku_external_interaction = {
+		major = yes
+		potential = {
+		tag = JAP
+		has_country_flag = jxp_path_sakoku
+		}
+		allow = {
+			OR = {
+				has_country_flag = jxp_b_115_sakoku_interaction_unlocked
+				mission_completed = jxp_b_115_uncommitted_mainland_01
+			}
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.15 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_open_external_interaction = {
+		major = yes
+		potential = {
+		tag = JAP
+		has_country_flag = jxp_path_open_trade
+		}
+		allow = {
+			NOT = { has_country_flag = jxp_b_115_open_strategy_chosen }
+		}
+		effect = {
+			set_country_flag = jxp_b_115_open_strategy_chosen
+			country_event = { id = jxp_b_115_routes.25 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_buddhist_external_interaction = {
+		major = yes
+		potential = {
+		tag = JAP
+		has_country_flag = jxp_path_buddhist
+		}
+		allow = {
+			has_country_flag = jxp_b_115_buddhist_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.35 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_kirishitan_external_interaction = {
+		major = yes
+		potential = {
+		tag = KJP
+		has_country_flag = jxp_path_kirishitan
+		}
+		allow = {
+			has_country_flag = jxp_b_115_kirishitan_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.45 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_confucian_external_interaction = {
+		major = yes
+		potential = {
+		tag = CJP
+		has_country_flag = jxp_path_confucian
+		}
+		allow = {
+			has_country_flag = jxp_b_115_confucian_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.55 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_imperial_external_interaction = {
+		major = yes
+		potential = {
+		tag = EJP
+		has_country_flag = jxp_path_imperial
+		}
+		allow = {
+			has_country_flag = jxp_b_115_imperial_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.65 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_reformed_external_interaction = {
+		major = yes
+		potential = {
+		tag = RFJ
+		has_country_flag = jxp_path_reformed
+		}
+		allow = {
+			has_country_flag = jxp_b_115_reformed_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.75 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_kaikyo_external_interaction = {
+		major = yes
+		potential = {
+		tag = SJP
+		has_country_flag = jxp_path_kaikyo
+		}
+		allow = {
+			has_country_flag = jxp_b_115_kaikyo_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.85 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_ikko_external_interaction = {
+		major = yes
+		potential = {
+		tag = IJP
+		has_country_flag = jxp_path_ikko
+		}
+		allow = {
+			has_country_flag = jxp_b_115_ikko_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.95 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_wokou_external_interaction = {
+		major = yes
+		potential = {
+		tag = WAK
+		has_country_flag = jxp_path_wokou
+		}
+		allow = {
+			has_country_flag = jxp_b_115_wokou_interaction_unlocked
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.105 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_toyotomi_external_interaction = {
+		major = yes
+		potential = {
+		tag = TOY
+		}
+		allow = {
+			mission_completed = jxp_mission_toyotomi_taiko_testament
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			dip_power = 25
+		}
+		effect = {
+			add_dip_power = -25
+			add_country_modifier = {
+				name = jxp_b_115_external_interaction_cooldown
+				duration = 3650
+			}
+			country_event = { id = jxp_b_115_routes.115 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_open_naval_charter = {
+		major = yes
+		potential = {
+			tag = JAP
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_b_115_open_main_navy
+			NOT = { has_country_flag = jxp_iface_b_external_capstone_complete }
+		}
+		allow = {
+			mission_completed = jxp_mission_eastasia_hegemon_of_the_seas
+			navy_size_percentage = 0.8
+			navy_tradition = 25
+			dip_power = 100
+			treasury = 300
+		}
+		effect = {
+			add_dip_power = -100
+			add_treasury = -300
+			set_country_flag = jxp_iface_b_external_capstone_complete
+			add_country_modifier = {
+				name = jxp_b_115_open_external_capstone
+				duration = 7300
+			}
+			country_event = { id = jxp_b_115_routes.24 days = 1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_open_naval_patrol = {
+		major = no
+		potential = {
+			tag = JAP
+			has_country_flag = jxp_path_open_trade
+			has_country_flag = jxp_b_115_open_secondary_navy
+		}
+		allow = {
+			mission_completed = jxp_mission_eastasia_taiwan_lanes
+			NOT = { has_country_modifier = jxp_b_115_external_interaction_cooldown }
+			navy_size_percentage = 0.6
+			dip_power = 50
+			treasury = 150
+		}
+		effect = {
+			add_dip_power = -50
+			add_treasury = -150
+			add_navy_tradition = 2
+			add_country_modifier = { name = jxp_b_115_open_naval_patrol duration = 3650 }
+			add_country_modifier = { name = jxp_b_115_external_interaction_cooldown duration = 3650 }
+			country_event = { id = jxp_b_115_routes.22 days = 1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+	jxp_b_115_toyotomi_external_charter = {
+		major = yes
+		potential = {
+			tag = TOY
+			NOT = { has_country_flag = jxp_iface_b_external_capstone_complete }
+		}
+		allow = {
+			mission_completed = jxp_mission_toyotomi_taiko_testament
+			mission_completed = jxp_mission_toyotomi_peace_beneath_heaven
+			is_at_war = no
+			stability = 1
+			adm_power = 100
+			dip_power = 100
+			treasury = 400
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_treasury = -400
+			set_country_flag = jxp_iface_b_external_capstone_complete
+			add_country_modifier = { name = jxp_b_115_toyotomi_external_capstone duration = 7300 }
+			country_event = { id = jxp_b_115_routes.114 days = 1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_bankrupt = yes }
+			modifier = { factor = 0 is_at_war = yes }
+			modifier = { factor = 0 num_of_loans = 3 }
+			modifier = { factor = 0 NOT = { stability = 0 } }
+			modifier = { factor = 0.25 war_exhaustion = 2 }
+		}
+	}
+
+}

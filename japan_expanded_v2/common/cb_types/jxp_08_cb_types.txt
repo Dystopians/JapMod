@@ -13,6 +13,7 @@ cb_jxp_hakko_ichiu = {
 				war = no
 				stability = 1
 				NOT = { is_bankrupt = yes }
+				jxp_b_118_ai_mandate_war_ready_trigger = yes
 			}
 		}
 	}

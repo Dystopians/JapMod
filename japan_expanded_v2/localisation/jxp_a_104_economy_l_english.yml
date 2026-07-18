@@ -1,0 +1,746 @@
+﻿l_english:
+ jxp_a_market_stage_1:0 "FU^bQ"
+ jxp_a_market_stage_1_desc:0 "ÎWNHu0^­^0sQ%m0=nãSNû^9‚òTÞbïScíu„výV…Q²NbcQÜu0"
+ jxp_iface_a_market_stage_1:0 "FU^bQ"
+ jxp_iface_a_market_stage_1_desc:0 "ÎWNHu0^­^0sQ%m0=nãSNû^9‚òTÞbïScíu„výV…Q²NbcQÜu0"
+ jxp_a_market_stage_1_rewarded:0 "FU^bQN!k'`te˜òTŒRb"
+ jxp_a_market_stage_1_transition:0 "FU^bQKNte˜"
+ jxp_a_market_stage_1_transition_desc:0 "°e6R¦^RLˆ„vASt^…QÿIYLˆNT6–BSckŠb“FU^bQ”K„žRHNåe8^b‹O0"
+ jxp_a_market_stage_2:0 "áO(ub6R"
+ jxp_a_market_stage_2_desc:0 "QQbc0-g8R0ÓNUSNlQHPVËY1ub‡eÄ‰RôucÿNQêS`—N0WÁy¦u0"
+ jxp_iface_a_market_stage_2:0 "áO(ub6R"
+ jxp_iface_a_market_stage_2_desc:0 "QQbc0-g8R0ÓNUSNlQHPVËY1ub‡eÄ‰RôucÿNQêS`—N0WÁy¦u0"
+ jxp_a_market_stage_2_rewarded:0 "áO(ub6RN!k'`te˜òTŒRb"
+ jxp_a_market_stage_2_transition:0 "áO(ub6RKNte˜"
+ jxp_a_market_stage_2_transition_desc:0 "°e6R¦^RLˆ„vASt^…QÿIYLˆNT6–BSckŠb“áO(ub6R”K„žRHNåe8^b‹O0"
+ jxp_a_market_stage_3:0 "åTHWbN"
+ jxp_a_market_stage_3_desc:0 "ÎWaNåTHW0î•KSSpN0›Q—ŒT.9‚bVb	gRåT„vŸSåTNQÜu0"
+ jxp_iface_a_market_stage_3:0 "åTHWbN"
+ jxp_iface_a_market_stage_3_desc:0 "ÎWaNåTHW0î•KSSpN0›Q—ŒT.9‚bVb	gRåT„vŸSåTNQÜu0"
+ jxp_a_market_stage_3_rewarded:0 "åTHWbNN!k'`te˜òTŒRb"
+ jxp_a_market_stage_3_transition:0 "åTHWbNKNte˜"
+ jxp_a_market_stage_3_transition_desc:0 "°e6R¦^RLˆ„vASt^…QÿIYLˆNT6–BSckŠb“åTHWbN”K„žRHNåe8^b‹O0"
+ jxp_a_market_stage_4:0 "O>ybýV"
+ jxp_a_market_stage_4_desc:0 "àzz0c„‹N0¡R¡‹NýV¶Rc¡wŠbT,gFU÷S³ueQýVSOÿFOlQøS¦NO‰NHYMeCg0"
+ jxp_iface_a_market_stage_4:0 "O>ybýV"
+ jxp_iface_a_market_stage_4_desc:0 "àzz0c„‹N0¡R¡‹NýV¶Rc¡wŠbT,gFU÷S³ueQýVSOÿFOlQøS¦NO‰NHYMeCg0"
+ jxp_a_market_stage_4_rewarded:0 "O>ybýVN!k'`te˜òTŒRb"
+ jxp_a_market_stage_4_transition:0 "O>ybýVKNte˜"
+ jxp_a_market_stage_4_transition_desc:0 "°e6R¦^RLˆ„vASt^…QÿIYLˆNT6–BSckŠb“O>ybýV”K„žRHNåe8^b‹O0"
+ jxp_a_market_high_tenka_order:0 ")YNNßuKNFUÕl"
+ jxp_a_market_high_tenka_order_desc:0 "ßuNÕläNO¡R¡‹0sQ%mN&M|ôff¨cLˆÿtSmN©‹V=gN°eåwƒ¾–z4xb‹O0"
+ jxp_a_market_low_tenka_order:0 "²Ä–Þz^"
+ jxp_a_market_low_tenka_order_desc:0 "ø‹¯OÞzäNFUïôfImÃÿFO|VdkNøvÝOáOÿP7)Ro`–KNGSØš0"
+ jxp_a_market_high_imperial_sanction:0 "Ue¸‹áO(u"
+ jxp_a_market_high_imperial_sanction_desc:0 "g÷^ÁˆïSHNlQHPNàzzžXáOÿôuclQS0O‚‚ŒTxQ<ytSžX RŒ˜î•V=e0"
+ jxp_a_market_low_imperial_sanction:0 "àeUeKN%„."
+ jxp_a_market_low_imperial_sanction_desc:0 "0W¹eåTHWS×SgêNØbmgwôfbežXµNÿýV¶RTRNùRY²N‰mtS>f—VUS„…0"
+ jxp_a_market_high_oceanic_opening:0 "wmè•NFU"
+ jxp_a_market_high_oceanic_opening_desc:0 "wmYåwÆ‹NFUïÐcØš²NfHe‡sÿVßWOVŒT—RYeidædmNÛeQ,gýV>yO0"
+ jxp_a_market_low_oceanic_opening:0 "…QwmêÙu"
+ jxp_a_market_low_oceanic_opening_desc:0 "×SÝO²b„výV…QåTHWôuc3zµNÿtSàVí•^Xwôf¾–8T6ewmY6R¦^N°eåw0"
+ jxp_a_public_credit_instituted:0 "hQýVáO(ulQêN"
+ jxp_a_market_factory_network_complete:0 "hQýVåTHWQòTb"
+ jxp_a_advance_market_stage_1_title:0 "te˜^­^NsQ%m"
+ jxp_a_advance_market_stage_1_desc:0 "n¹pÎWN^­^0sQ%mzRNû^9‚*‚ïÿOT0W'irïSOTNWYíQncLˆ0"
+ jxp_a_advance_market_stage_2_title:0 "ú^ËzQQbcNáO(ub‹O"
+ jxp_a_advance_market_stage_2_desc:0 "(W-g8R0ÓNUSNP7KNô•ú^ËzQQØN!k,rÿdk>N‰Bl3zšRMeNSŒTwžR0›Rÿ4xµNýV¶RNïSHVLˆ¨cÛ0"
+ jxp_a_advance_market_stage_3_title:0 "bhQýVåTHWQÜu"
+ jxp_a_advance_market_stage_3_desc:0 "ŠbåT.Sø‹µ^0œQQgYS0›Q—ŒT.9‚³ueQRåTQÜu0åTHWO&^egµNýwÿmNO&^egåTD0ŸS™eN4l)R‰Nïz0"
+ jxp_a_advance_market_stage_4_title:0 "˜LˆT,gO>yàzz"
+ jxp_a_advance_market_stage_4_desc:0 "ßuNåe,g„výV¶RïSŠbàzz0c„‹N0¡R¡‹NlQqQáO(u™QeQýVÕl0dk>NN=fàePžXÊvÿO>yŠYÿjŒFUNMeŒTýV¶RÅbÝOqSHgŠÑ0"
+ jxp_a_institute_public_credit_title:0 "ìSVhQýVáO(ulQêN"
+ jxp_a_institute_public_credit_desc:0 "ìSÆ–IYLˆ0úR>y0fk¶RNjŒFU®‹šRlQHPÅbÝOŒTHP¡RÍ‘Äu0ýV“^‰˜HQúQDÁ‹fêñTv^^—êSBlP°eØçe0"
+ jxp_a_market_sound_coinage:0 "br‚NQQØNb‹O"
+ jxp_a_market_sound_coinage_desc:0 "ø”µ^NQQbcFUOßuNbr‚žR‹NÿáO(u3zúVwAmz>fØb(Œ0"
+ jxp_a_market_abundant_liquidity:0 "ËRÙu^(u"
+ jxp_a_market_abundant_liquidity_desc:0 "žXÑSŒTËRQQ‚fã‰±”RƒÿmNŠbÀwÎ˜i–YuÙuåeT„vIYLˆ0"
+ jxp_a_market_price_relief:0 "ÓNê^s^œ|"
+ jxp_a_market_price_relief_desc:0 "ýV“^bÅbNmcÿåNVÓNŒTÐ®|ŒTs|÷NNl(`0"
+ jxp_a_market_free_bargaining:0 "î•KSê1u®‹÷N"
+ jxp_a_market_free_bargaining_desc:0 "FUºNôucAmv^êLˆbÅbÎ˜i–ÿ„W­eN&Yˆ™`¦N–KNËn•0"
+ jxp_a_market_public_workshop_contract:0 "lQêNåTHWQY¦u"
+ jxp_a_market_public_workshop_contract_desc:0 "ýV¶RåNfnx¢‹USNåT÷Nßuyr›Q—ŒTlNÿãN÷N=f`S(uºN›R0"
+ jxp_a_market_communal_workshop_compact:0 "HuQgTjOåTHW"
+ jxp_a_market_communal_workshop_compact_desc:0 "HuOúQD0ã`QgúQåTÿqQTRÅbhV°h04l)RN•ï0"
+ jxp_a_company_registry_audit:0 "O>ynŒQ¡R¡‹"
+ jxp_a_company_registry_audit_desc:0 "IYLˆy˜8hùRD,g0bS0R¢uŒT²bÐV=e0"
+ jxp_a_company_charter_autonomy:0 "c„‹Nê»làzz"
+ jxp_a_company_charter_autonomy_desc:0 "ýV¶RbcÖS!Ñ‘v^¹R¸‹c„‹NêLˆÏu%„ÿjŒFUCg¿RàVwNGS0"
+ jxp_a_company_public_settlement:0 "lQqQ0(uŒTã‰"
+ jxp_a_company_public_settlement_desc:0 "ýV“^bÅb<wMRãN÷NÿåNHNm0USgŒTlQV&îvÝOhQáO(u0"
+ jxp_a_company_private_bargain:0 "c„‹NÁy®‹QY¦u"
+ jxp_a_company_private_bargain_desc:0 "1uúQDºNŒTLˆN…Qèã‰³Q‰NïzÿHe‡sƒØšwlQ®‹ƒ1V0"
+ jxp_a_company_audit_regime:0 "O>yyr+R¡R¡‹"
+ jxp_a_company_audit_regime_desc:0 "yr+R¡R¡‹‹SNO‚VÿtSmNžX RfNyVŒTIYLˆb,g0"
+ jxp_a_company_distress_relief:0 "O>y¾uðV"
+ jxp_a_company_distress_relief_desc:0 "ýV¶RåN”Nt^¾uðVbcÖSÍ‘ÄuÿQe©Rå‚bHN8^‹OÿNN!k•bHgêSOôf'YÆw0"
+ jxp_a_market_event_cooldown:0 "ÏuN®‹˜˜Gkg"
+ jxp_a_market_event_cooldown_desc:0 "TNyb^HW‰NïzòTÏuÁˆ­eÿIYLˆ‚fNÍ‘YNOY0"
+ jxp_a_company_event_cooldown:0 "O>yÄ‹®‹Gkg"
+ jxp_a_company_event_cooldown_desc:0 "c„‹NNIYLˆck(WgbLˆgÑN!kÄ‹®‹ÿNOËzIRÍ‘Y‰N¼‹0"
+ jxp_a_company_director_state_structure:0 "O>yc„‹NÿýV¶RIYLˆINüR"
+ jxp_a_company_director_state_structure_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_a_company_director_merchant_structure:0 "O>yc„‹NÿjŒFUINüR"
+ jxp_a_company_director_merchant_structure_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_a_company_director_warrior_structure:0 "O>yc„‹Nÿfk¶RINüR"
+ jxp_a_company_director_warrior_structure_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_a_company_director_religious_structure:0 "O>yc„‹Nÿ—RYeÄuÇuINüR"
+ jxp_a_company_director_religious_structure_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_a_company_director_mixed_structure:0 "O>yc„‹Nÿ÷mTÄ‹®‹"
+ jxp_a_company_director_mixed_structure_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_a_company_mining_chartered:0 "Ñ‘ö”qSONbòTyr¸‹"
+ jxp_a_company_mining_chartered_desc:0 "N¡RÿßuyrÿwqS0¶Q¼p0ø”^N¿lïÐ“0Î˜i–ÿQWS‹NEe0ÿwåT‰N¼‹0bS‚VN‹vö”YAm0àzz0RgTÅV‰˜íu¦u09ei—0ýV	gSbn—r0"
+ jxp_a_charter_company_mining_title:0 "yr¸‹Ñ‘ö”qSONb"
+ jxp_a_charter_company_mining_desc:0 "ÆQ¸‹Ñ‘ö”qSONbßuyrÿwqS0¶Q¼p0ø”^N¿lïÐ“0‰˜ŒcácÑ‘0ö”0Ü”bÁ”ÿwqSÿv^wQY³åN8h—rQW¶Q„vLˆMeŽb=gÿTöe‰˜1uàVÚ‹HuOúQDÿýV“^àeÍ‘HPNýV…Q‰RšR0ýVSwóYN>yÿ-NIrýV¶R2N>yÿßuNåe,g	N>yÿêS	gO>yýV¶RïS¹RÛV>y0"
+ jxp_a_company_mining_nationalized:0 "Ñ‘ö”qSONbòTýV	gS"
+ jxp_a_company_mining_bankrupt_cleanup:0 "Ñ‘ö”qSONb4xµNnt-N"
+ jxp_a_company_mining_charter:0 "Ñ‘ö”qSONbàzz"
+ jxp_a_company_mining_charter_desc:0 "ASt^àzz¹R¸‹vQßuyrÿwqS0¶Q¼p0ø”^N¿lïÐ“ÿJSgÅV‰˜Í‘°e®‹šRÿgô•ËYÈu4O–QWS‹NEe0ÿwåT‰N¼‹0bS‚VN‹vö”YAm„vÎ˜i–0"
+ jxp_a_company_mining_nationalized_modifier:0 "ýV%„Ñ‘ö”qSONb"
+ jxp_a_company_mining_nationalized_modifier_desc:0 "ýV¶RpN­elô•c¡wTÝOYuèRN¡R6eÊvÿµc6RôfHVwÏu%„He‡sNÊSŸSàzz0"
+ jxp_a_company_mining_bankruptcy_modifier:0 "Ñ‘ö”qSONb4xµNYOâl"
+ jxp_a_company_mining_bankruptcy_modifier_desc:0 ".kHP01YNŒT*geSLˆQY¦uÍN(Wntÿ”Nt^T¹eïSÍ‘°e¨‹º‹T‰|àzz0"
+ jxp_a_company_mining_state_expanding:0 "Ñ‘ö”qSONbÿßRÆ–D,g"
+ jxp_a_company_mining_state_stable:0 "Ñ‘ö”qSONbÿ3zšRÏu%„"
+ jxp_a_company_mining_state_distressed:0 "Ñ‘ö”qSONbÿ0MeðV¾–"
+ jxp_a_company_mining_state_audited:0 "Ñ‘ö”qSONbÿ¥c×S¡R¡‹"
+ jxp_a_company_mining_state_reformed:0 "Ñ‘ö”qSONbÿ9ei—Tàzz"
+ jxp_a_company_mining_director_state:0 "Ñ‘ö”qSONbÿýV¶RIYLˆINüR"
+ jxp_a_company_mining_director_state_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_companies.101.state:0 "ýV¶RIYLˆINüR"
+ jxp_a_company_mining_director_merchant:0 "Ñ‘ö”qSONbÿjŒFUINüR"
+ jxp_a_company_mining_director_merchant_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_companies.101.merchant:0 "jŒFUINüR"
+ jxp_a_company_mining_director_warrior:0 "Ñ‘ö”qSONbÿfk¶RINüR"
+ jxp_a_company_mining_director_warrior_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_companies.101.warrior:0 "fk¶RINüR"
+ jxp_a_company_mining_director_religious:0 "Ñ‘ö”qSONbÿ—RYeÄuÇuINüR"
+ jxp_a_company_mining_director_religious_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_companies.101.religious:0 "—RYeÄuÇuINüR"
+ jxp_a_company_mining_director_mixed:0 "Ñ‘ö”qSONbÿ÷mTÄ‹®‹"
+ jxp_a_company_mining_director_mixed_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_companies.101.mixed:0 "÷mTÄ‹®‹"
+ jxp_companies.101.t:0 "Ñ‘ö”qSONbßRÆ–,g±”"
+ jxp_companies.101.d:0 "àzzIƒHhòTRfßuyrÿwqS0¶Q¼p0ø”^N¿lïÐ“ÿmNb²‹QWS‹NEe0ÿwåT‰N¼‹0bS‚VN‹vö”YAm0gTNy˜*g³QKN‹Nÿ=f1uŒINcc„‹NÄ‹®‹v^TýV¶RHT¥b&îv0"
+ jxp_companies.201.t:0 "Ñ‘ö”qSONbàzzJSg"
+ jxp_companies.201.d:0 "ASt^yr¸‹òTÏuJSán0çe&>fHyßuyrÿwqS0¶Q¼p0ø”^N¿lïÐ“nx	gNb—VÿFOQWS‹NEe0ÿwåT‰N¼‹0bS‚VN‹vö”YAmmN*gˆm1Y0ýV¶RÅV‰˜íu¦u0ÆbRÍ‘Äu0pN­eb¹RvQ4xµN0ÆbRÍ‘ÄuS=eØN100jgaSyrN75LˆMe¹pÿ²dbchQSOçec„‹Nÿv^äN°eàzz¥c×S”Nt^yr+R¡R¡‹0"
+ jxp_companies.201.renew:0 "gqçeíu¦uASt^"
+ jxp_companies.201.split_reorganize:0 "=eØN100¤N75LˆMe¹pÿÆbRN%„v^²dbchQSOc„‹N"
+ jxp_companies.201.nationalize:0 "1uýV¶RpN­ev^¥c¡rN¡R"
+ jxp_companies.201.bankrupt:0 "ÒbÝuÅbÝOÿ	c4xµNnt"
+ jxp_companies.301.t:0 "Ñ‘ö”qSONbÏu%„Rb"
+ jxp_companies.301.d:0 "ßRÆ–gòTÇÿ–™yb&îvúQ°sÈvYO0¡wN‰BlR¢uÿÏu%„wR^gçuíuibEQÓN“^0hV°hŒT*‚ï0"
+ jxp_companies.301.dividend:0 "	c¡wR¢uÿHQ‰RúQDºNKNÃV"
+ jxp_companies.301.reinvest:0 "ŠbÈvYOYujOTíuÏu%„"
+ jxp_companies.401.t:0 "Ñ‘ö”qSONbÒo4N2cQQ"
+ jxp_companies.401.d:0 "ýVHPŒTíwghyncTöe0RgÿQWS‹NEe0ÿwåT‰N¼‹0bS‚VN‹vö”YAmÈSO°sÑ‘Am²šÏQ0å‚ýV¶RNúQKbÿàzzêSýwÛeQ4xµNnt0"
+ jxp_companies.401.rescue:0 "åNýV“^¾uðVv^HV6RÍ‘Äu"
+ jxp_companies.401.audit:0 "»QÓuR¢uÿ>mIYLˆåg&"
+ jxp_companies.401.bankrupt:0 "NåN)YNzKÿfc„‹NPHP"
+ jxp_a_company_shipping_chartered:0 "hQýVû^9‚ONbòTyr¸‹"
+ jxp_a_company_shipping_chartered_desc:0 "N¡RÿŒ¦^®|9‚0¿l¸S=n%m0÷N<hfNáONQe¾–9‚0Î˜i–ÿwm¾–09‚IN„W­e0=nãSÒbzN0W¹e*‚ï‰NHY0àzz0RgTÅV‰˜íu¦u09ei—0ýV	gSbn—r0"
+ jxp_a_charter_company_shipping_title:0 "yr¸‹hQýVû^9‚ONb"
+ jxp_a_charter_company_shipping_desc:0 "ÆQ¸‹hQýVû^9‚ONbŒ¦^®|9‚0¿l¸S=n%m0÷N<hfNáONQe¾–9‚0‰˜åb	g”Nµ^=nãSŒTN=ebÄ‰!j„vwm›QÿåNû^9‚N=n%mHNN¡R9húWÿTöe‰˜1uàVÚ‹HuOúQDÿýV“^àeÍ‘HPNýV…Q‰RšR0ýVSwóYN>yÿ-NIrýV¶R2N>yÿßuNåe,g	N>yÿêS	gO>yýV¶RïS¹RÛV>y0"
+ jxp_a_company_shipping_nationalized:0 "hQýVû^9‚ONbòTýV	gS"
+ jxp_a_company_shipping_bankrupt_cleanup:0 "hQýVû^9‚ONb4xµNnt-N"
+ jxp_a_company_shipping_charter:0 "hQýVû^9‚ONbàzz"
+ jxp_a_company_shipping_charter_desc:0 "ASt^àzz¹R¸‹vQŒ¦^®|9‚0¿l¸S=n%m0÷N<hfNáONQe¾–9‚ÿJSgÅV‰˜Í‘°e®‹šRÿgô•ËYÈu4O–wm¾–09‚IN„W­e0=nãSÒbzN0W¹e*‚ï‰NHY„vÎ˜i–0"
+ jxp_a_company_shipping_nationalized_modifier:0 "ýV%„hQýVû^9‚ONb"
+ jxp_a_company_shipping_nationalized_modifier_desc:0 "ýV¶RpN­elô•c¡wTÝOYuèRN¡R6eÊvÿµc6RôfHVwÏu%„He‡sNÊSŸSàzz0"
+ jxp_a_company_shipping_bankruptcy_modifier:0 "hQýVû^9‚ONb4xµNYOâl"
+ jxp_a_company_shipping_bankruptcy_modifier_desc:0 ".kHP01YNŒT*geSLˆQY¦uÍN(Wntÿ”Nt^T¹eïSÍ‘°e¨‹º‹T‰|àzz0"
+ jxp_a_company_shipping_state_expanding:0 "hQýVû^9‚ONbÿßRÆ–D,g"
+ jxp_a_company_shipping_state_stable:0 "hQýVû^9‚ONbÿ3zšRÏu%„"
+ jxp_a_company_shipping_state_distressed:0 "hQýVû^9‚ONbÿ0MeðV¾–"
+ jxp_a_company_shipping_state_audited:0 "hQýVû^9‚ONbÿ¥c×S¡R¡‹"
+ jxp_a_company_shipping_state_reformed:0 "hQýVû^9‚ONbÿ9ei—Tàzz"
+ jxp_a_company_shipping_director_state:0 "hQýVû^9‚ONbÿýV¶RIYLˆINüR"
+ jxp_a_company_shipping_director_state_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_companies.102.state:0 "ýV¶RIYLˆINüR"
+ jxp_a_company_shipping_director_merchant:0 "hQýVû^9‚ONbÿjŒFUINüR"
+ jxp_a_company_shipping_director_merchant_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_companies.102.merchant:0 "jŒFUINüR"
+ jxp_a_company_shipping_director_warrior:0 "hQýVû^9‚ONbÿfk¶RINüR"
+ jxp_a_company_shipping_director_warrior_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_companies.102.warrior:0 "fk¶RINüR"
+ jxp_a_company_shipping_director_religious:0 "hQýVû^9‚ONbÿ—RYeÄuÇuINüR"
+ jxp_a_company_shipping_director_religious_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_companies.102.religious:0 "—RYeÄuÇuINüR"
+ jxp_a_company_shipping_director_mixed:0 "hQýVû^9‚ONbÿ÷mTÄ‹®‹"
+ jxp_a_company_shipping_director_mixed_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_companies.102.mixed:0 "÷mTÄ‹®‹"
+ jxp_companies.102.t:0 "hQýVû^9‚ONbßRÆ–,g±”"
+ jxp_companies.102.d:0 "àzzIƒHhòTRfŒ¦^®|9‚0¿l¸S=n%m0÷N<hfNáONQe¾–9‚ÿmNb²‹wm¾–09‚IN„W­e0=nãSÒbzN0W¹e*‚ï‰NHY0gTNy˜*g³QKN‹Nÿ=f1uŒINcc„‹NÄ‹®‹v^TýV¶RHT¥b&îv0"
+ jxp_companies.202.t:0 "hQýVû^9‚ONbàzzJSg"
+ jxp_companies.202.d:0 "ASt^yr¸‹òTÏuJSán0çe&>fHyŒ¦^®|9‚0¿l¸S=n%m0÷N<hfNáONQe¾–9‚nx	gNb—VÿFOwm¾–09‚IN„W­e0=nãSÒbzN0W¹e*‚ï‰NHYmN*gˆm1Y0ýV¶RÅV‰˜íu¦u0ÆbRÍ‘Äu0pN­eb¹RvQ4xµN0ÆbRÍ‘ÄuS=eØN100jgaSyrN75LˆMe¹pÿ²dbchQSOçec„‹Nÿv^äN°eàzz¥c×S”Nt^yr+R¡R¡‹0"
+ jxp_companies.202.renew:0 "gqçeíu¦uASt^"
+ jxp_companies.202.split_reorganize:0 "=eØN100¤N75LˆMe¹pÿÆbRN%„v^²dbchQSOc„‹N"
+ jxp_companies.202.nationalize:0 "1uýV¶RpN­ev^¥c¡rN¡R"
+ jxp_companies.202.bankrupt:0 "ÒbÝuÅbÝOÿ	c4xµNnt"
+ jxp_companies.302.t:0 "hQýVû^9‚ONbÏu%„Rb"
+ jxp_companies.302.d:0 "ßRÆ–gòTÇÿ–™yb&îvúQ°sÈvYO0¡wN‰BlR¢uÿÏu%„wR^gçuíuibEQÓN“^0hV°hŒT*‚ï0"
+ jxp_companies.302.dividend:0 "	c¡wR¢uÿHQ‰RúQDºNKNÃV"
+ jxp_companies.302.reinvest:0 "ŠbÈvYOYujOTíuÏu%„"
+ jxp_companies.402.t:0 "hQýVû^9‚ONbÒo4N2cQQ"
+ jxp_companies.402.d:0 "ýVHPŒTíwghyncTöe0Rgÿwm¾–09‚IN„W­e0=nãSÒbzN0W¹e*‚ï‰NHYÈSO°sÑ‘Am²šÏQ0å‚ýV¶RNúQKbÿàzzêSýwÛeQ4xµNnt0"
+ jxp_companies.402.rescue:0 "åNýV“^¾uðVv^HV6RÍ‘Äu"
+ jxp_companies.402.audit:0 "»QÓuR¢uÿ>mIYLˆåg&"
+ jxp_companies.402.bankrupt:0 "NåN)YNzKÿfc„‹NPHP"
+ jxp_a_company_rice_credit_chartered:0 "s|^áO(uONbòTyr¸‹"
+ jxp_a_company_rice_credit_chartered_desc:0 "N¡RÿÏu%„s|RKb0lQHP²‹-0ÓNUSn—rNHP¡RUSg0Î˜i–ÿ•bHg02cQQ0s|÷NgRØSNýV¶RÅbÝO1YáO0àzz0RgTÅV‰˜íu¦u09ei—0ýV	gSbn—r0"
+ jxp_a_charter_company_rice_credit_title:0 "yr¸‹s|^áO(uONb"
+ jxp_a_charter_company_rice_credit_desc:0 "ÆQ¸‹s|^áO(uONbÏu%„s|RKb0lQHP²‹-0ÓNUSn—rNHP¡RUSg0‰˜µc6RDd%m0ŒRb'YBWs|&QÜuv^HQú^ËzhQýVlQqQáO(uÿTöe‰˜1uàVÚ‹HuOúQDÿýV“^àeÍ‘HPNýV…Q‰RšR0ýVSwóYN>yÿ-NIrýV¶R2N>yÿßuNåe,g	N>yÿêS	gO>yýV¶RïS¹RÛV>y0"
+ jxp_a_company_rice_credit_nationalized:0 "s|^áO(uONbòTýV	gS"
+ jxp_a_company_rice_credit_bankrupt_cleanup:0 "s|^áO(uONb4xµNnt-N"
+ jxp_a_company_rice_credit_charter:0 "s|^áO(uONbàzz"
+ jxp_a_company_rice_credit_charter_desc:0 "ASt^àzz¹R¸‹vQÏu%„s|RKb0lQHP²‹-0ÓNUSn—rNHP¡RUSgÿJSgÅV‰˜Í‘°e®‹šRÿgô•ËYÈu4O–•bHg02cQQ0s|÷NgRØSNýV¶RÅbÝO1YáO„vÎ˜i–0"
+ jxp_a_company_rice_credit_nationalized_modifier:0 "ýV%„s|^áO(uONb"
+ jxp_a_company_rice_credit_nationalized_modifier_desc:0 "ýV¶RpN­elô•c¡wTÝOYuèRN¡R6eÊvÿµc6RôfHVwÏu%„He‡sNÊSŸSàzz0"
+ jxp_a_company_rice_credit_bankruptcy_modifier:0 "s|^áO(uONb4xµNYOâl"
+ jxp_a_company_rice_credit_bankruptcy_modifier_desc:0 ".kHP01YNŒT*geSLˆQY¦uÍN(Wntÿ”Nt^T¹eïSÍ‘°e¨‹º‹T‰|àzz0"
+ jxp_a_company_rice_credit_state_expanding:0 "s|^áO(uONbÿßRÆ–D,g"
+ jxp_a_company_rice_credit_state_stable:0 "s|^áO(uONbÿ3zšRÏu%„"
+ jxp_a_company_rice_credit_state_distressed:0 "s|^áO(uONbÿ0MeðV¾–"
+ jxp_a_company_rice_credit_state_audited:0 "s|^áO(uONbÿ¥c×S¡R¡‹"
+ jxp_a_company_rice_credit_state_reformed:0 "s|^áO(uONbÿ9ei—Tàzz"
+ jxp_a_company_rice_credit_director_state:0 "s|^áO(uONbÿýV¶RIYLˆINüR"
+ jxp_a_company_rice_credit_director_state_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_companies.103.state:0 "ýV¶RIYLˆINüR"
+ jxp_a_company_rice_credit_director_merchant:0 "s|^áO(uONbÿjŒFUINüR"
+ jxp_a_company_rice_credit_director_merchant_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_companies.103.merchant:0 "jŒFUINüR"
+ jxp_a_company_rice_credit_director_warrior:0 "s|^áO(uONbÿfk¶RINüR"
+ jxp_a_company_rice_credit_director_warrior_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_companies.103.warrior:0 "fk¶RINüR"
+ jxp_a_company_rice_credit_director_religious:0 "s|^áO(uONbÿ—RYeÄuÇuINüR"
+ jxp_a_company_rice_credit_director_religious_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_companies.103.religious:0 "—RYeÄuÇuINüR"
+ jxp_a_company_rice_credit_director_mixed:0 "s|^áO(uONbÿ÷mTÄ‹®‹"
+ jxp_a_company_rice_credit_director_mixed_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_companies.103.mixed:0 "÷mTÄ‹®‹"
+ jxp_companies.103.t:0 "s|^áO(uONbßRÆ–,g±”"
+ jxp_companies.103.d:0 "àzzIƒHhòTRfÏu%„s|RKb0lQHP²‹-0ÓNUSn—rNHP¡RUSgÿmNb²‹•bHg02cQQ0s|÷NgRØSNýV¶RÅbÝO1YáO0gTNy˜*g³QKN‹Nÿ=f1uŒINcc„‹NÄ‹®‹v^TýV¶RHT¥b&îv0"
+ jxp_companies.203.t:0 "s|^áO(uONbàzzJSg"
+ jxp_companies.203.d:0 "ASt^yr¸‹òTÏuJSán0çe&>fHyÏu%„s|RKb0lQHP²‹-0ÓNUSn—rNHP¡RUSgnx	gNb—VÿFO•bHg02cQQ0s|÷NgRØSNýV¶RÅbÝO1YáOmN*gˆm1Y0ýV¶RÅV‰˜íu¦u0ÆbRÍ‘Äu0pN­eb¹RvQ4xµN0ÆbRÍ‘ÄuS=eØN100jgaSyrN75LˆMe¹pÿ²dbchQSOçec„‹Nÿv^äN°eàzz¥c×S”Nt^yr+R¡R¡‹0"
+ jxp_companies.203.renew:0 "gqçeíu¦uASt^"
+ jxp_companies.203.split_reorganize:0 "=eØN100¤N75LˆMe¹pÿÆbRN%„v^²dbchQSOc„‹N"
+ jxp_companies.203.nationalize:0 "1uýV¶RpN­ev^¥c¡rN¡R"
+ jxp_companies.203.bankrupt:0 "ÒbÝuÅbÝOÿ	c4xµNnt"
+ jxp_companies.303.t:0 "s|^áO(uONbÏu%„Rb"
+ jxp_companies.303.d:0 "ßRÆ–gòTÇÿ–™yb&îvúQ°sÈvYO0¡wN‰BlR¢uÿÏu%„wR^gçuíuibEQÓN“^0hV°hŒT*‚ï0"
+ jxp_companies.303.dividend:0 "	c¡wR¢uÿHQ‰RúQDºNKNÃV"
+ jxp_companies.303.reinvest:0 "ŠbÈvYOYujOTíuÏu%„"
+ jxp_companies.403.t:0 "s|^áO(uONbÒo4N2cQQ"
+ jxp_companies.403.d:0 "ýVHPŒTíwghyncTöe0Rgÿ•bHg02cQQ0s|÷NgRØSNýV¶RÅbÝO1YáOÈSO°sÑ‘Am²šÏQ0å‚ýV¶RNúQKbÿàzzêSýwÛeQ4xµNnt0"
+ jxp_companies.403.rescue:0 "åNýV“^¾uðVv^HV6RÍ‘Äu"
+ jxp_companies.403.audit:0 "»QÓuR¢uÿ>mIYLˆåg&"
+ jxp_companies.403.bankrupt:0 "NåN)YNzKÿfc„‹NPHP"
+ jxp_a_company_textile_chartered:0 "Çu.O>yòTyr¸‹"
+ jxp_a_company_textile_chartered_desc:0 "N¡RÿÞ¥cÎW-Nî•KS0œQQgÇu7b0ÓgJWNúQãSFUï0Î˜i–ÿ‹SNOåT÷N0çeµ^µb6R0ŸS™eíwHNã`QgÍS9V0àzz0RgTÅV‰˜íu¦u09ei—0ýV	gSbn—r0"
+ jxp_a_charter_company_textile_title:0 "yr¸‹Çu.O>y"
+ jxp_a_charter_company_textile_desc:0 "ÆQ¸‹Çu.O>yÞ¥cÎW-Nî•KS0œQQgÇu7b0ÓgJWNúQãSFUï0‰˜åb	gÉh0^0NbÓg™eµN0WÊSóSNµ^åTHWÿTöe‰˜1uàVÚ‹HuOúQDÿýV“^àeÍ‘HPNýV…Q‰RšR0ýVSwóYN>yÿ-NIrýV¶R2N>yÿßuNåe,g	N>yÿêS	gO>yýV¶RïS¹RÛV>y0"
+ jxp_a_company_textile_nationalized:0 "Çu.O>yòTýV	gS"
+ jxp_a_company_textile_bankrupt_cleanup:0 "Çu.O>y4xµNnt-N"
+ jxp_a_company_textile_charter:0 "Çu.O>yàzz"
+ jxp_a_company_textile_charter_desc:0 "ASt^àzz¹R¸‹vQÞ¥cÎW-Nî•KS0œQQgÇu7b0ÓgJWNúQãSFUïÿJSgÅV‰˜Í‘°e®‹šRÿgô•ËYÈu4O–‹SNOåT÷N0çeµ^µb6R0ŸS™eíwHNã`QgÍS9V„vÎ˜i–0"
+ jxp_a_company_textile_nationalized_modifier:0 "ýV%„Çu.O>y"
+ jxp_a_company_textile_nationalized_modifier_desc:0 "ýV¶RpN­elô•c¡wTÝOYuèRN¡R6eÊvÿµc6RôfHVwÏu%„He‡sNÊSŸSàzz0"
+ jxp_a_company_textile_bankruptcy_modifier:0 "Çu.O>y4xµNYOâl"
+ jxp_a_company_textile_bankruptcy_modifier_desc:0 ".kHP01YNŒT*geSLˆQY¦uÍN(Wntÿ”Nt^T¹eïSÍ‘°e¨‹º‹T‰|àzz0"
+ jxp_a_company_textile_state_expanding:0 "Çu.O>yÿßRÆ–D,g"
+ jxp_a_company_textile_state_stable:0 "Çu.O>yÿ3zšRÏu%„"
+ jxp_a_company_textile_state_distressed:0 "Çu.O>yÿ0MeðV¾–"
+ jxp_a_company_textile_state_audited:0 "Çu.O>yÿ¥c×S¡R¡‹"
+ jxp_a_company_textile_state_reformed:0 "Çu.O>yÿ9ei—Tàzz"
+ jxp_a_company_textile_director_state:0 "Çu.O>yÿýV¶RIYLˆINüR"
+ jxp_a_company_textile_director_state_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_companies.104.state:0 "ýV¶RIYLˆINüR"
+ jxp_a_company_textile_director_merchant:0 "Çu.O>yÿjŒFUINüR"
+ jxp_a_company_textile_director_merchant_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_companies.104.merchant:0 "jŒFUINüR"
+ jxp_a_company_textile_director_warrior:0 "Çu.O>yÿfk¶RINüR"
+ jxp_a_company_textile_director_warrior_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_companies.104.warrior:0 "fk¶RINüR"
+ jxp_a_company_textile_director_religious:0 "Çu.O>yÿ—RYeÄuÇuINüR"
+ jxp_a_company_textile_director_religious_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_companies.104.religious:0 "—RYeÄuÇuINüR"
+ jxp_a_company_textile_director_mixed:0 "Çu.O>yÿ÷mTÄ‹®‹"
+ jxp_a_company_textile_director_mixed_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_companies.104.mixed:0 "÷mTÄ‹®‹"
+ jxp_companies.104.t:0 "Çu.O>yßRÆ–,g±”"
+ jxp_companies.104.d:0 "àzzIƒHhòTRfÞ¥cÎW-Nî•KS0œQQgÇu7b0ÓgJWNúQãSFUïÿmNb²‹‹SNOåT÷N0çeµ^µb6R0ŸS™eíwHNã`QgÍS9V0gTNy˜*g³QKN‹Nÿ=f1uŒINcc„‹NÄ‹®‹v^TýV¶RHT¥b&îv0"
+ jxp_companies.204.t:0 "Çu.O>yàzzJSg"
+ jxp_companies.204.d:0 "ASt^yr¸‹òTÏuJSán0çe&>fHyÞ¥cÎW-Nî•KS0œQQgÇu7b0ÓgJWNúQãSFUïnx	gNb—VÿFO‹SNOåT÷N0çeµ^µb6R0ŸS™eíwHNã`QgÍS9VmN*gˆm1Y0ýV¶RÅV‰˜íu¦u0ÆbRÍ‘Äu0pN­eb¹RvQ4xµN0ÆbRÍ‘ÄuS=eØN100jgaSyrN75LˆMe¹pÿ²dbchQSOçec„‹Nÿv^äN°eàzz¥c×S”Nt^yr+R¡R¡‹0"
+ jxp_companies.204.renew:0 "gqçeíu¦uASt^"
+ jxp_companies.204.split_reorganize:0 "=eØN100¤N75LˆMe¹pÿÆbRN%„v^²dbchQSOc„‹N"
+ jxp_companies.204.nationalize:0 "1uýV¶RpN­ev^¥c¡rN¡R"
+ jxp_companies.204.bankrupt:0 "ÒbÝuÅbÝOÿ	c4xµNnt"
+ jxp_companies.304.t:0 "Çu.O>yÏu%„Rb"
+ jxp_companies.304.d:0 "ßRÆ–gòTÇÿ–™yb&îvúQ°sÈvYO0¡wN‰BlR¢uÿÏu%„wR^gçuíuibEQÓN“^0hV°hŒT*‚ï0"
+ jxp_companies.304.dividend:0 "	c¡wR¢uÿHQ‰RúQDºNKNÃV"
+ jxp_companies.304.reinvest:0 "ŠbÈvYOYujOTíuÏu%„"
+ jxp_companies.404.t:0 "Çu.O>yÒo4N2cQQ"
+ jxp_companies.404.d:0 "ýVHPŒTíwghyncTöe0Rgÿ‹SNOåT÷N0çeµ^µb6R0ŸS™eíwHNã`QgÍS9VÈSO°sÑ‘Am²šÏQ0å‚ýV¶RNúQKbÿàzzêSýwÛeQ4xµNnt0"
+ jxp_companies.404.rescue:0 "åNýV“^¾uðVv^HV6RÍ‘Äu"
+ jxp_companies.404.audit:0 "»QÓuR¢uÿ>mIYLˆåg&"
+ jxp_companies.404.bankrupt:0 "NåN)YNzKÿfc„‹NPHP"
+ jxp_a_company_armaments_chartered:0 "›Q—.9‚O>yòTyr¸‹"
+ jxp_a_company_armaments_chartered_desc:0 "N¡RÿbžR.9‚0®pø”0kpoƒ0›Q®|N²b*‚îO.0Î˜i–ÿ›Q¹eŠbc00MeTlV0ÁyuQib.VNlNËQke0àzz0RgTÅV‰˜íu¦u09ei—0ýV	gSbn—r0"
+ jxp_a_charter_company_armaments_title:0 "yr¸‹›Q—.9‚O>y"
+ jxp_a_charter_company_armaments_desc:0 "ÆQ¸‹›Q—.9‚O>ybžR.9‚0®pø”0kpoƒ0›Q®|N²b*‚îO.0‰˜wQYbŸq›Q‹NŽb=g0³˜8^Y›QŒTóS	Nµ^›Q=nÿTöe‰˜1uàVÚ‹HuOúQDÿýV“^àeÍ‘HPNýV…Q‰RšR0ýVSwóYN>yÿ-NIrýV¶R2N>yÿßuNåe,g	N>yÿêS	gO>yýV¶RïS¹RÛV>y0"
+ jxp_a_company_armaments_nationalized:0 "›Q—.9‚O>yòTýV	gS"
+ jxp_a_company_armaments_bankrupt_cleanup:0 "›Q—.9‚O>y4xµNnt-N"
+ jxp_a_company_armaments_charter:0 "›Q—.9‚O>yàzz"
+ jxp_a_company_armaments_charter_desc:0 "ASt^àzz¹R¸‹vQbžR.9‚0®pø”0kpoƒ0›Q®|N²b*‚îO.ÿJSgÅV‰˜Í‘°e®‹šRÿgô•ËYÈu4O–›Q¹eŠbc00MeTlV0ÁyuQib.VNlNËQke„vÎ˜i–0"
+ jxp_a_company_armaments_nationalized_modifier:0 "ýV%„›Q—.9‚O>y"
+ jxp_a_company_armaments_nationalized_modifier_desc:0 "ýV¶RpN­elô•c¡wTÝOYuèRN¡R6eÊvÿµc6RôfHVwÏu%„He‡sNÊSŸSàzz0"
+ jxp_a_company_armaments_bankruptcy_modifier:0 "›Q—.9‚O>y4xµNYOâl"
+ jxp_a_company_armaments_bankruptcy_modifier_desc:0 ".kHP01YNŒT*geSLˆQY¦uÍN(Wntÿ”Nt^T¹eïSÍ‘°e¨‹º‹T‰|àzz0"
+ jxp_a_company_armaments_state_expanding:0 "›Q—.9‚O>yÿßRÆ–D,g"
+ jxp_a_company_armaments_state_stable:0 "›Q—.9‚O>yÿ3zšRÏu%„"
+ jxp_a_company_armaments_state_distressed:0 "›Q—.9‚O>yÿ0MeðV¾–"
+ jxp_a_company_armaments_state_audited:0 "›Q—.9‚O>yÿ¥c×S¡R¡‹"
+ jxp_a_company_armaments_state_reformed:0 "›Q—.9‚O>yÿ9ei—Tàzz"
+ jxp_a_company_armaments_director_state:0 "›Q—.9‚O>yÿýV¶RIYLˆINüR"
+ jxp_a_company_armaments_director_state_desc:0 "IYLˆr	ccR8h&ÿ6eÊv3zePwKbíuAuÆR0"
+ jxp_companies.105.state:0 "ýV¶RIYLˆINüR"
+ jxp_a_company_armaments_director_merchant:0 "›Q—.9‚O>yÿjŒFUINüR"
+ jxp_a_company_armaments_director_merchant_desc:0 "'YBW0HXNZSY„vúQDºNŒcácåe8^Ïu%„ÿ)R¦m0NšSw¿R›RnÍ‘0"
+ jxp_companies.105.merchant:0 "jŒFUINüR"
+ jxp_a_company_armaments_director_warrior:0 "›Q—.9‚O>yÿfk¶RINüR"
+ jxp_a_company_armaments_director_warrior_desc:0 "	g›R¶RãINc²bÐNVÑSÿ›Q(u¿O)RwÁyuQKN±`–KNweg0"
+ jxp_companies.105.warrior:0 "fk¶RINüR"
+ jxp_a_company_armaments_director_religious:0 "›Q—.9‚O>yÿ—RYeÄuÇuINüR"
+ jxp_a_company_armaments_director_religious_desc:0 "úR>yN—Rè•åNáO(u0Ha„UŒTfRîReQ¡wÿ¦N‰Bl0µNê»l0"
+ jxp_companies.105.religious:0 "—RYeÄuÇuINüR"
+ jxp_a_company_armaments_director_mixed:0 "›Q—.9‚O>yÿ÷mTÄ‹®‹"
+ jxp_a_company_armaments_director_mixed_desc:0 "IYLˆ0jŒFU0fk¶RN—Rè•qQTr¼bÿ3z¥YFO¹RføvcN³Q0"
+ jxp_companies.105.mixed:0 "÷mTÄ‹®‹"
+ jxp_companies.105.t:0 "›Q—.9‚O>yßRÆ–,g±”"
+ jxp_companies.105.d:0 "àzzIƒHhòTRfbžR.9‚0®pø”0kpoƒ0›Q®|N²b*‚îO.ÿmNb²‹›Q¹eŠbc00MeTlV0ÁyuQib.VNlNËQke0gTNy˜*g³QKN‹Nÿ=f1uŒINcc„‹NÄ‹®‹v^TýV¶RHT¥b&îv0"
+ jxp_companies.205.t:0 "›Q—.9‚O>yàzzJSg"
+ jxp_companies.205.d:0 "ASt^yr¸‹òTÏuJSán0çe&>fHybžR.9‚0®pø”0kpoƒ0›Q®|N²b*‚îO.nx	gNb—VÿFO›Q¹eŠbc00MeTlV0ÁyuQib.VNlNËQkemN*gˆm1Y0ýV¶RÅV‰˜íu¦u0ÆbRÍ‘Äu0pN­eb¹RvQ4xµN0ÆbRÍ‘ÄuS=eØN100jgaSyrN75LˆMe¹pÿ²dbchQSOçec„‹Nÿv^äN°eàzz¥c×S”Nt^yr+R¡R¡‹0"
+ jxp_companies.205.renew:0 "gqçeíu¦uASt^"
+ jxp_companies.205.split_reorganize:0 "=eØN100¤N75LˆMe¹pÿÆbRN%„v^²dbchQSOc„‹N"
+ jxp_companies.205.nationalize:0 "1uýV¶RpN­ev^¥c¡rN¡R"
+ jxp_companies.205.bankrupt:0 "ÒbÝuÅbÝOÿ	c4xµNnt"
+ jxp_companies.305.t:0 "›Q—.9‚O>yÏu%„Rb"
+ jxp_companies.305.d:0 "ßRÆ–gòTÇÿ–™yb&îvúQ°sÈvYO0¡wN‰BlR¢uÿÏu%„wR^gçuíuibEQÓN“^0hV°hŒT*‚ï0"
+ jxp_companies.305.dividend:0 "	c¡wR¢uÿHQ‰RúQDºNKNÃV"
+ jxp_companies.305.reinvest:0 "ŠbÈvYOYujOTíuÏu%„"
+ jxp_companies.405.t:0 "›Q—.9‚O>yÒo4N2cQQ"
+ jxp_companies.405.d:0 "ýVHPŒTíwghyncTöe0Rgÿ›Q¹eŠbc00MeTlV0ÁyuQib.VNlNËQkeÈSO°sÑ‘Am²šÏQ0å‚ýV¶RNúQKbÿàzzêSýwÛeQ4xµNnt0"
+ jxp_companies.405.rescue:0 "åNýV“^¾uðVv^HV6RÍ‘Äu"
+ jxp_companies.405.audit:0 "»QÓuR¢uÿ>mIYLˆåg&"
+ jxp_companies.405.bankrupt:0 "NåN)YNzKÿfc„‹NPHP"
+ jxp_a_audit_company_registry_title:0 "¡R¡‹O>yI`nŒQ"
+ jxp_a_audit_company_registry_desc:0 "ùRNb	gÍN(Wàzzg…Q„vO>yžRËeN!kyr+R¡R¡‹0dk>Nw9IYLˆŒTýV“^ÿmNOOjŒFUàVÚ‹NM–0"
+ jxp_iface_a_request_red_seal_overseas_company:0 "®‹šRWSm1gpSO>y÷‹Bl"
+ jxp_iface_a_request_red_seal_overseas_company_desc:0 "÷‹wmYÏueu¹e8h®‹åe,gHu01gpS9‚NFU†™N¡Rÿ,gWµOêS‰v°‹àzzÿNˆcwmYW0W0"
+ jxp_a_request_red_seal_overseas_company_title:0 "®‹šRWSm1gpSO>y÷‹Bl"
+ jxp_a_request_red_seal_overseas_company_desc:0 "÷‹wmYÏueu¹e8h®‹åe,gHu01gpS9‚NFU†™N¡Rÿ,gWµOêS‰v°‹àzzÿNˆcwmYW0W0 wmYÏueuŒQSËzsS8hŒš*‚ï0ý RD,gNSV0WagöNÿ·ƒÆQb²dÞVTÿ,g÷‹BlýOÎN¥cãSM|Óun0"
+ jxp_iface_a_request_pacific_charter_company:0 "®‹šR'YmVÓbO>y÷‹Bl"
+ jxp_iface_a_request_pacific_charter_company_desc:0 "÷‹wmYÏueu¹e8h®‹*Ys^mKmØu0eˆÙuNÝOi–N¡Rÿ,gWµOêSY9‚™eŒTáO(u0"
+ jxp_a_request_pacific_charter_company_title:0 "®‹šR'YmVÓbO>y÷‹Bl"
+ jxp_a_request_pacific_charter_company_desc:0 "÷‹wmYÏueu¹e8h®‹*Ys^mKmØu0eˆÙuNÝOi–N¡Rÿ,gWµOêSY9‚™eŒTáO(u0 wmYÏueuŒQSËzsS8hŒš*‚ï0ý RD,gNSV0WagöNÿ·ƒÆQb²dÞVTÿ,g÷‹BlýOÎN¥cãSM|Óun0"
+ jxp_iface_a_request_southern_seas_company:0 "®‹šRWSmFU†™O>y÷‹Bl"
+ jxp_iface_a_request_southern_seas_company_desc:0 "÷‹wmYÏueu¹e8h®‹cRÎ˜*‚ïNWSmFU†™ÿ,gWµOêStet=n¡RQY¦u0"
+ jxp_a_request_southern_seas_company_title:0 "®‹šRWSmFU†™O>y÷‹Bl"
+ jxp_a_request_southern_seas_company_desc:0 "÷‹wmYÏueu¹e8h®‹cRÎ˜*‚ïNWSmFU†™ÿ,gWµOêStet=n¡RQY¦u0 wmYÏueuŒQSËzsS8hŒš*‚ï0ý RD,gNSV0WagöNÿ·ƒÆQb²dÞVTÿ,g÷‹BlýOÎN¥cãSM|Óun0"
+ jxp_iface_a_request_northern_seas_company:0 "®‹šRSwm’N^O>y÷‹Bl"
+ jxp_iface_a_request_northern_seas_company_desc:0 "÷‹wmYÏueu¹e8h®‹Swm’N^N¹†uÇ‘-ÿ,gWµONŠƒXÖS—Vnc¹p0"
+ jxp_a_request_northern_seas_company_title:0 "®‹šRSwm’N^O>y÷‹Bl"
+ jxp_a_request_northern_seas_company_desc:0 "÷‹wmYÏueu¹e8h®‹Swm’N^N¹†uÇ‘-ÿ,gWµONŠƒXÖS—Vnc¹p0 wmYÏueuŒQSËzsS8hŒš*‚ï0ý RD,gNSV0WagöNÿ·ƒÆQb²dÞVTÿ,g÷‹BlýOÎN¥cãSM|Óun0"
+ jxp_iface_a_request_continental_company:0 "®‹šR'YF–TäRO>y÷‹Bl"
+ jxp_iface_a_request_continental_company_desc:0 "÷‹'YF–Ïueu¹e8h®‹›Q—0Ð“NbTFUïÿ,gWµONãNÿfbHS»lt0"
+ jxp_a_request_continental_company_title:0 "®‹šR'YF–TäRO>y÷‹Bl"
+ jxp_a_request_continental_company_desc:0 "÷‹'YF–Ïueu¹e8h®‹›Q—0Ð“NbTFUïÿ,gWµONãNÿfbHS»lt0 wmYÏueuŒQSËzsS8hŒš*‚ï0ý RD,gNSV0WagöNÿ·ƒÆQb²dÞVTÿ,g÷‹BlýOÎN¥cãSM|Óun0"
+ jxp_a_household_particularism:0 "¶R-NrRnc"
+ jxp_a_household_particularism_desc:0 "åwLˆ0›QyVNlSEN1uø‹¶RTêã‰Ê‘ÿY7hN1ŒãNBåNçe¦uùR—bIYLˆÁˆ­e0"
+ jxp_a_household_particularism_active:0 "¶R-NrRncck(WÛLˆ"
+ jxp_a_household_particularism_resolved:0 "¶R-NrRncòTÁˆšR"
+ jxp_a_decision_settle_household_particularism_title:0 "ìSV¶R-NrRncŒT®‹"
+ jxp_a_decision_settle_household_particularism_desc:0 "qSHgcíuóSNt^TÿåNýV“^NMe¡RDnìSÆ–SV‹N6–BSÿ(W-N.YÁˆšR0b‡eŒT®‹bbÅb1YµcãN÷NKNô•jOúQgÈu	éb0"
+ jxp_debug_seed_household_pressure_title:0 "ŒÕ‹ÿ¬PÑS¶R-NrRnc"
+ jxp_debug_seed_household_pressure_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÇŒRte–Ï…‹NöNèleQŒp¾–Û¦^0"
+ jxp_debug_resolve_household_title:0 "ŒÕ‹ÿÁˆšR¶R-NrRnc"
+ jxp_debug_resolve_household_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÓumgck(WÛLˆ„vqSHgv^‰v°‹òTÁˆšR0"
+ jxp_debug_cleanup_household_title:0 "ŒÕ‹ÿnt¶R-NrRnc"
+ jxp_debug_cleanup_household_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿnd–qSHgIm¨R0ÓuNSNcíuîOck0"
+ jxp_estates.101.t:0 "¶R-NrRncÿY7hÓußv"
+ jxp_estates.101.d:0 "åwLˆ0›QyVNlSEN1uø‹¶RTêã‰Ê‘ÿY7hN1ŒãNBåNçe¦uùR—bIYLˆÁˆ­e0 ,rNybÞròT0R¡VMRÿÖbö^êSO©‹T¹eêLˆÓußv0"
+ jxp_estates.101.a:0 "HQËz-N.YnŒQÿÒbÝu+T÷mçe‹O"
+ jxp_estates.101.b:0 "HQ,T6–BSã`ãNH–Å`ÿ‚fHV­e"
+ jxp_estates.111.t:0 "¶R-NrRncÿ›QyVÖb.k"
+ jxp_estates.111.d:0 "qSHgòTÛeQ“›QyVÖb.k”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.111.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.111.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.112.t:0 "¶R-NrRncÿIYLˆ1Yµc"
+ jxp_estates.112.d:0 "qSHgòTÛeQ“IYLˆ1Yµc”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.112.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.112.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.113.t:0 "¶R-NrRncÿÒbÝuÁˆšR"
+ jxp_estates.113.d:0 "qSHgòTÛeQ“ÒbÝuÁˆšR”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.113.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.113.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.114.t:0 "¶R-NrRncÿMeCgÍ‘Äu"
+ jxp_estates.114.d:0 "‰NgbòTÏuNýwQåN4Nöe‹TäN‹SN0ÊNåeNbšRwSbHNASt^b‹OÿmN³QšRýV¶Rvzßz1uIYLˆôvÁˆ06–BSlQ®‹ÿØ=f©‹²QzêLˆ³QúQÜw0"
+ jxp_estates.114.a:0 "-N.YÍ‘åwLˆN›QyVÿRïS‚fmcºNgÿmNN¸‹¶R-NæSËzÕl¦^0"
+ jxp_estates.114.b:0 "b²‹Y7hÝOœ–ŒTfk¶RO®‹ÿåNb‡e“Š¦ubcÖSçuíuIYlQ0"
+ jxp_estates.114.c:0 "ŒjPKS1Yÿø‹¶RåNuQî•TrÿýV-NÎN&ŒQKN‰NÑnTlQV…Qb0"
+ jxp_a_household_particularism_outcome_central:0 "¶R-NrRncÿ-N.YÁˆšR"
+ jxp_a_household_particularism_outcome_estate:0 "¶R-NrRncÿ6–BSŒT®‹"
+ jxp_a_household_particularism_outcome_failure:0 "¶R-NrRncÿ²Qz1Yµc"
+ jxp_a_household_particularism_central_settlement:0 "¶R-NrRnc„v-N.Yb‹O"
+ jxp_a_household_particularism_central_settlement_desc:0 "-N.YÍ‘åwLˆN›QyVÿRïS‚fmcºNgÿmNN¸‹¶R-NæSËzÕl¦^0"
+ jxp_a_household_particularism_estate_settlement:0 "¶R-NrRnc„v6–BSŒT®‹"
+ jxp_a_household_particularism_estate_settlement_desc:0 "b²‹Y7hÝOœ–ŒTfk¶RO®‹ÿåNb‡e“Š¦ubcÖSçuíuIYlQ0"
+ jxp_a_household_particularism_failed_settlement:0 "¶R-NrRnc„vYOqN"
+ jxp_a_household_particularism_failed_settlement_desc:0 "ŒjPKS1Yÿø‹¶RåNuQî•TrÿýV-NÎN&ŒQKN‰NÑnTlQV…Qb0"
+ jxp_a_household_particularism_phase_1:0 "¶R-NrRncÿY7hÓußv"
+ jxp_a_household_particularism_phase_2:0 "¶R-NrRncÿ›QyVÖb.k"
+ jxp_a_household_particularism_phase_3:0 "¶R-NrRncÿIYLˆ1Yµc"
+ jxp_a_household_particularism_phase_4:0 "¶R-NrRncÿÒbÝuÁˆšR"
+ jxp_a_household_particularism_phase_5:0 "¶R-NrRncÿMeCgÍ‘Äu"
+ jxp_a_religious_diet_collapse:0 "—Rè•lQ®‹)Tƒn"
+ jxp_a_religious_diet_collapse_desc:0 "úR>y0YeO0²‹-NbfR«RNQb²‹TNÁˆ¸‹!k,rÿ—Rº‹N0µNCgKN‰NµOeQýVMe0"
+ jxp_a_religious_diet_collapse_active:0 "—Rè•lQ®‹)Tƒnck(WÛLˆ"
+ jxp_a_religious_diet_collapse_resolved:0 "—Rè•lQ®‹)TƒnòTÁˆšR"
+ jxp_a_decision_settle_religious_diet_collapse_title:0 "ìSV—Rè•lQ®‹)TƒnŒT®‹"
+ jxp_a_decision_settle_religious_diet_collapse_desc:0 "qSHgcíuóSNt^TÿåNýV“^NMe¡RDnìSÆ–SV‹N6–BSÿ(W-N.YÁˆšR0b‡eŒT®‹bbÅb1YµcãN÷NKNô•jOúQgÈu	éb0"
+ jxp_debug_seed_religious_diet_pressure_title:0 "ŒÕ‹ÿ¬PÑS—Rè•lQ®‹)Tƒn"
+ jxp_debug_seed_religious_diet_pressure_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÇŒRte–Ï…‹NöNèleQŒp¾–Û¦^0"
+ jxp_debug_resolve_religious_diet_title:0 "ŒÕ‹ÿÁˆšR—Rè•lQ®‹)Tƒn"
+ jxp_debug_resolve_religious_diet_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÓumgck(WÛLˆ„vqSHgv^‰v°‹òTÁˆšR0"
+ jxp_debug_cleanup_religious_diet_title:0 "ŒÕ‹ÿnt—Rè•lQ®‹)Tƒn"
+ jxp_debug_cleanup_religious_diet_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿnd–qSHgIm¨R0ÓuNSNcíuîOck0"
+ jxp_estates.201.t:0 "—Rè•lQ®‹)Tƒnÿ‰NHY®‹-^"
+ jxp_estates.201.d:0 "úR>y0YeO0²‹-NbfR«RNQb²‹TNÁˆ¸‹!k,rÿ—Rº‹N0µNCgKN‰NµOeQýVMe0 ,rNybÞròT0R¡VMRÿÖbö^êSO©‹T¹eêLˆÓußv0"
+ jxp_estates.201.a:0 "HQËz-N.YnŒQÿÒbÝu+T÷mçe‹O"
+ jxp_estates.201.b:0 "HQ,T6–BSã`ãNH–Å`ÿ‚fHV­e"
+ jxp_estates.211.t:0 "—Rè•lQ®‹)TƒnÿYeµNÒbØR"
+ jxp_estates.211.d:0 "qSHgòTÛeQ“YeµNÒbØR”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.211.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.211.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.212.t:0 "—Rè•lQ®‹)Tƒnÿ0W¹eÓu>y"
+ jxp_estates.212.d:0 "qSHgòTÛeQ“0W¹eÓu>y”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.212.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.212.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.213.t:0 "—Rè•lQ®‹)TƒnÿûN‹TCg³QÂˆ"
+ jxp_estates.213.d:0 "qSHgòTÛeQ“ûN‹TCg³QÂˆ”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.213.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.213.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.214.t:0 "—Rè•lQ®‹)TƒnÿÍ‘¢‹YeÕl"
+ jxp_estates.214.d:0 "‰NgbòTÏuNýwQåN4Nöe‹TäN‹SN0ÊNåeNbšRwSbHNASt^b‹OÿmN³QšRýV¶Rvzßz1uIYLˆôvÁˆ06–BSlQ®‹ÿØ=f©‹²QzêLˆ³QúQÜw0"
+ jxp_estates.214.a:0 "ýV¶RÝOYuûN‹TN0µN‰v°‹CgÿTöeHNT—RYuN×SÕlÝO²b„vlQ®‹-^MO0"
+ jxp_estates.214.b:0 "—Rè•ÖS—V^Ûlê»lÿåNHNm0Ye²wŒTlQV&ŒQbcÖSjPbk¨RXT0"
+ jxp_estates.214.c:0 "ýVÕlNYeè•ñO1YZáOÿ‰Nº‹SjOqÁk0í•^N0W¹efkÅˆ²Qz0"
+ jxp_a_religious_diet_collapse_outcome_central:0 "—Rè•lQ®‹)Tƒnÿ-N.YÁˆšR"
+ jxp_a_religious_diet_collapse_outcome_estate:0 "—Rè•lQ®‹)Tƒnÿ6–BSŒT®‹"
+ jxp_a_religious_diet_collapse_outcome_failure:0 "—Rè•lQ®‹)Tƒnÿ²Qz1Yµc"
+ jxp_a_religious_diet_collapse_central_settlement:0 "—Rè•lQ®‹)Tƒn„v-N.Yb‹O"
+ jxp_a_religious_diet_collapse_central_settlement_desc:0 "ýV¶RÝOYuûN‹TN0µN‰v°‹CgÿTöeHNT—RYuN×SÕlÝO²b„vlQ®‹-^MO0"
+ jxp_a_religious_diet_collapse_estate_settlement:0 "—Rè•lQ®‹)Tƒn„v6–BSŒT®‹"
+ jxp_a_religious_diet_collapse_estate_settlement_desc:0 "—Rè•ÖS—V^Ûlê»lÿåNHNm0Ye²wŒTlQV&ŒQbcÖSjPbk¨RXT0"
+ jxp_a_religious_diet_collapse_failed_settlement:0 "—Rè•lQ®‹)Tƒn„vYOqN"
+ jxp_a_religious_diet_collapse_failed_settlement_desc:0 "ýVÕlNYeè•ñO1YZáOÿ‰Nº‹SjOqÁk0í•^N0W¹efkÅˆ²Qz0"
+ jxp_a_religious_diet_collapse_phase_1:0 "—Rè•lQ®‹)Tƒnÿ‰NHY®‹-^"
+ jxp_a_religious_diet_collapse_phase_2:0 "—Rè•lQ®‹)TƒnÿYeµNÒbØR"
+ jxp_a_religious_diet_collapse_phase_3:0 "—Rè•lQ®‹)Tƒnÿ0W¹eÓu>y"
+ jxp_a_religious_diet_collapse_phase_4:0 "—Rè•lQ®‹)TƒnÿûN‹TCg³QÂˆ"
+ jxp_a_religious_diet_collapse_phase_5:0 "—Rè•lQ®‹)TƒnÿÍ‘¢‹YeÕl"
+ jxp_a_merchant_oligarchy:0 "jŒFUNMe"
+ jxp_a_merchant_oligarchy_desc:0 "lQHP0s|^NO>yàzzŠbýV“^û|(WSpejŒFU&MbKNNÿíu¦uŒT¡R¡‹BbHNMeCgKN‰N0"
+ jxp_a_merchant_oligarchy_active:0 "jŒFUNMeck(WÛLˆ"
+ jxp_a_merchant_oligarchy_resolved:0 "jŒFUNMeòTÁˆšR"
+ jxp_a_decision_settle_merchant_oligarchy_title:0 "ìSVjŒFUNMeŒT®‹"
+ jxp_a_decision_settle_merchant_oligarchy_desc:0 "qSHgcíuóSNt^TÿåNýV“^NMe¡RDnìSÆ–SV‹N6–BSÿ(W-N.YÁˆšR0b‡eŒT®‹bbÅb1YµcãN÷NKNô•jOúQgÈu	éb0"
+ jxp_debug_seed_merchant_oligarchy_pressure_title:0 "ŒÕ‹ÿ¬PÑSjŒFUNMe"
+ jxp_debug_seed_merchant_oligarchy_pressure_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÇŒRte–Ï…‹NöNèleQŒp¾–Û¦^0"
+ jxp_debug_resolve_merchant_oligarchy_title:0 "ŒÕ‹ÿÁˆšRjŒFUNMe"
+ jxp_debug_resolve_merchant_oligarchy_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÓumgck(WÛLˆ„vqSHgv^‰v°‹òTÁˆšR0"
+ jxp_debug_cleanup_merchant_oligarchy_title:0 "ŒÕ‹ÿntjŒFUNMe"
+ jxp_debug_cleanup_merchant_oligarchy_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿnd–qSHgIm¨R0ÓuNSNcíuîOck0"
+ jxp_estates.301.t:0 "jŒFUNMeÿ‰Blíu¦u"
+ jxp_estates.301.d:0 "lQHP0s|^NO>yàzzŠbýV“^û|(WSpejŒFU&MbKNNÿíu¦uŒT¡R¡‹BbHNMeCgKN‰N0 ,rNybÞròT0R¡VMRÿÖbö^êSO©‹T¹eêLˆÓußv0"
+ jxp_estates.301.a:0 "HQËz-N.YnŒQÿÒbÝu+T÷mçe‹O"
+ jxp_estates.301.b:0 "HQ,T6–BSã`ãNH–Å`ÿ‚fHV­e"
+ jxp_estates.311.t:0 "jŒFUNMeÿs|HPËe‹S"
+ jxp_estates.311.d:0 "qSHgòTÛeQ“s|HPËe‹S”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.311.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.311.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.312.t:0 "jŒFUNMeÿÒbÝu¡R¡‹"
+ jxp_estates.312.d:0 "qSHgòTÛeQ“ÒbÝu¡R¡‹”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.312.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.312.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.313.t:0 "jŒFUNMeÿfk¶RÍS9V"
+ jxp_estates.313.d:0 "qSHgòTÛeQ“fk¶RÍS9V”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.313.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.313.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.314.t:0 "jŒFUNMeÿÍ‘ÄuýVMe"
+ jxp_estates.314.d:0 "‰NgbòTÏuNýwQåN4Nöe‹TäN‹SN0ÊNåeNbšRwSbHNASt^b‹OÿmN³QšRýV¶Rvzßz1uIYLˆôvÁˆ06–BSlQ®‹ÿØ=f©‹²QzêLˆ³QúQÜw0"
+ jxp_estates.314.a:0 "ýV	gv^ÆbRsQ.•„W­eÿåNIYLˆ¡R¡‹Í‘°eRšRýV¶RNFU÷S„vLu¿u0"
+ jxp_estates.314.b:0 "©‹jŒFUÖS—V	gP–®‹-^ŒTFU‹NÁˆ2RCgÿåNlQV&îv¦umgvQr^Me0"
+ jxp_estates.314.c:0 "lQøSNfk¶RTåbÁy›RÿýV“^1Y»SáO(uÿ^HWjPFdv^VÑSáR4YMeØS0"
+ jxp_a_merchant_oligarchy_outcome_central:0 "jŒFUNMeÿ-N.YÁˆšR"
+ jxp_a_merchant_oligarchy_outcome_estate:0 "jŒFUNMeÿ6–BSŒT®‹"
+ jxp_a_merchant_oligarchy_outcome_failure:0 "jŒFUNMeÿ²Qz1Yµc"
+ jxp_a_merchant_oligarchy_central_settlement:0 "jŒFUNMe„v-N.Yb‹O"
+ jxp_a_merchant_oligarchy_central_settlement_desc:0 "ýV	gv^ÆbRsQ.•„W­eÿåNIYLˆ¡R¡‹Í‘°eRšRýV¶RNFU÷S„vLu¿u0"
+ jxp_a_merchant_oligarchy_estate_settlement:0 "jŒFUNMe„v6–BSŒT®‹"
+ jxp_a_merchant_oligarchy_estate_settlement_desc:0 "©‹jŒFUÖS—V	gP–®‹-^ŒTFU‹NÁˆ2RCgÿåNlQV&îv¦umgvQr^Me0"
+ jxp_a_merchant_oligarchy_failed_settlement:0 "jŒFUNMe„vYOqN"
+ jxp_a_merchant_oligarchy_failed_settlement_desc:0 "lQøSNfk¶RTåbÁy›RÿýV“^1Y»SáO(uÿ^HWjPFdv^VÑSáR4YMeØS0"
+ jxp_a_merchant_oligarchy_phase_1:0 "jŒFUNMeÿ‰Blíu¦u"
+ jxp_a_merchant_oligarchy_phase_2:0 "jŒFUNMeÿs|HPËe‹S"
+ jxp_a_merchant_oligarchy_phase_3:0 "jŒFUNMeÿÒbÝu¡R¡‹"
+ jxp_a_merchant_oligarchy_phase_4:0 "jŒFUNMeÿfk¶RÍS9V"
+ jxp_a_merchant_oligarchy_phase_5:0 "jŒFUNMeÿÍ‘ÄuýVMe"
+ jxp_a_tokusei_communal_rising:0 "·VMeNŒvÓYã`¨R"
+ jxp_a_tokusei_communal_rising_desc:0 "Ik6e0›QyV0é…HPNåTHW‹S÷Nøv’NàS Rÿã`QgåN·VMe0ÏQMQŒTãNhˆCgHNqQTÉ‹Bl0"
+ jxp_a_tokusei_communal_rising_active:0 "·VMeNŒvÓYã`¨Rck(WÛLˆ"
+ jxp_a_tokusei_communal_rising_resolved:0 "·VMeNŒvÓYã`¨RòTÁˆšR"
+ jxp_a_decision_settle_tokusei_communal_rising_title:0 "ìSV·VMeNŒvÓYã`¨RŒT®‹"
+ jxp_a_decision_settle_tokusei_communal_rising_desc:0 "qSHgcíuóSNt^TÿåNýV“^NMe¡RDnìSÆ–SV‹N6–BSÿ(W-N.YÁˆšR0b‡eŒT®‹bbÅb1YµcãN÷NKNô•jOúQgÈu	éb0"
+ jxp_debug_seed_tokusei_pressure_title:0 "ŒÕ‹ÿ¬PÑS·VMeNŒvÓYã`¨R"
+ jxp_debug_seed_tokusei_pressure_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÇŒRte–Ï…‹NöNèleQŒp¾–Û¦^0"
+ jxp_debug_resolve_tokusei_title:0 "ŒÕ‹ÿÁˆšR·VMeNŒvÓYã`¨R"
+ jxp_debug_resolve_tokusei_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿÓumgck(WÛLˆ„vqSHgv^‰v°‹òTÁˆšR0"
+ jxp_debug_cleanup_tokusei_title:0 "ŒÕ‹ÿnt·VMeNŒvÓYã`¨R"
+ jxp_debug_cleanup_tokusei_desc:0 "ÅN›O×SµcŒšÁ‹O(uÿnd–qSHgIm¨R0ÓuNSNcíuîOck0"
+ jxp_estates.401.t:0 "·VMeNŒvÓYã`¨RÿÒb³ut^!"
+ jxp_estates.401.d:0 "Ik6e0›QyV0é…HPNåTHW‹S÷Nøv’NàS Rÿã`QgåN·VMe0ÏQMQŒTãNhˆCgHNqQTÉ‹Bl0 ,rNybÞròT0R¡VMRÿÖbö^êSO©‹T¹eêLˆÓußv0"
+ jxp_estates.401.a:0 "HQËz-N.YnŒQÿÒbÝu+T÷mçe‹O"
+ jxp_estates.401.b:0 "HQ,T6–BSã`ãNH–Å`ÿ‚fHV­e"
+ jxp_estates.411.t:0 "·VMeNŒvÓYã`¨Rÿ‰Bl·VMe"
+ jxp_estates.411.d:0 "qSHgòTÛeQ“‰Bl·VMe”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.411.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.411.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.412.t:0 "·VMeNŒvÓYã`¨Rÿã`QgÞr"
+ jxp_estates.412.d:0 "qSHgòTÛeQ“ã`QgÞr”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.412.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.412.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.413.t:0 "·VMeNŒvÓYã`¨RÿaNuQÆ–Óu"
+ jxp_estates.413.d:0 "qSHgòTÛeQ“aNuQÆ–Óu”0dkMR„v4Nöe©‹ek*gýwˆmd–9h,g)R³RÿIYLˆÅV‰˜(WýV“^=eúQN6–BS¥YOSKNô•QjOÖS‚0"
+ jxp_estates.413.a:0 "åNýV“^NÕläNôuc-N.YÁˆšR"
+ jxp_estates.413.b:0 "¹R¸‹ãNhˆêLˆ®‹šRNýN‚f¦u"
+ jxp_estates.414.t:0 "·VMeNŒvÓYã`¨RÿÍ‘šR0uK"
+ jxp_estates.414.d:0 "‰NgbòTÏuNýwQåN4Nöe‹TäN‹SN0ÊNåeNbšRwSbHNASt^b‹OÿmN³QšRýV¶Rvzßz1uIYLˆôvÁˆ06–BSlQ®‹ÿØ=f©‹²QzêLˆ³QúQÜw0"
+ jxp_estates.414.a:0 "åN8^s^ÓN0šRMQŒTHP¡RUSgÍ‘te0uKÿ©‹Qg&Í‘°eÛeQýV¶RÕl¦^0"
+ jxp_estates.414.b:0 "b²‹ã`QgãNhˆ0TjOåTHWNqQTnf÷‹ÿåNê»l1ûNbcÖSYw0"
+ jxp_estates.414.c:0 "G•‹SOaNÌ‘‚föe‰lØžÿtSYuNAml0Rƒ0uN°e„v—RYeblQ®‹¨RXT0"
+ jxp_a_tokusei_communal_rising_outcome_central:0 "·VMeNŒvÓYã`¨Rÿ-N.YÁˆšR"
+ jxp_a_tokusei_communal_rising_outcome_estate:0 "·VMeNŒvÓYã`¨Rÿ6–BSŒT®‹"
+ jxp_a_tokusei_communal_rising_outcome_failure:0 "·VMeNŒvÓYã`¨Rÿ²Qz1Yµc"
+ jxp_a_tokusei_communal_rising_central_settlement:0 "·VMeNŒvÓYã`¨R„v-N.Yb‹O"
+ jxp_a_tokusei_communal_rising_central_settlement_desc:0 "åN8^s^ÓN0šRMQŒTHP¡RUSgÍ‘te0uKÿ©‹Qg&Í‘°eÛeQýV¶RÕl¦^0"
+ jxp_a_tokusei_communal_rising_estate_settlement:0 "·VMeNŒvÓYã`¨R„v6–BSŒT®‹"
+ jxp_a_tokusei_communal_rising_estate_settlement_desc:0 "b²‹ã`QgãNhˆ0TjOåTHWNqQTnf÷‹ÿåNê»l1ûNbcÖSYw0"
+ jxp_a_tokusei_communal_rising_failed_settlement:0 "·VMeNŒvÓYã`¨R„vYOqN"
+ jxp_a_tokusei_communal_rising_failed_settlement_desc:0 "G•‹SOaNÌ‘‚föe‰lØžÿtSYuNAml0Rƒ0uN°e„v—RYeblQ®‹¨RXT0"
+ jxp_a_tokusei_communal_rising_phase_1:0 "·VMeNŒvÓYã`¨RÿÒb³ut^!"
+ jxp_a_tokusei_communal_rising_phase_2:0 "·VMeNŒvÓYã`¨Rÿ‰Bl·VMe"
+ jxp_a_tokusei_communal_rising_phase_3:0 "·VMeNŒvÓYã`¨Rÿã`QgÞr"
+ jxp_a_tokusei_communal_rising_phase_4:0 "·VMeNŒvÓYã`¨RÿaNuQÆ–Óu"
+ jxp_a_tokusei_communal_rising_phase_5:0 "·VMeNŒvÓYã`¨RÿÍ‘šR0uK"
+ jxp_market.1.t:0 "Ñ‘ö”br‚KN®‹"
+ jxp_market.1.d:0 "°eø”Nçe±”v^LˆÿIYLˆ0µ^FUŒTŒvÓYý(W‰Nº‹UOÍybr‚MbïSLˆ)YN0"
+ jxp_market.1.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.1.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.2.t:0 "v`±”ŠƒX"
+ jxp_market.2.d:0 "»ýV±R±”¿l=n%mAmeQÿ^ºNÒb6ewsQTÈS¾–šg¨Œš0"
+ jxp_market.2.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.2.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.3.t:0 "9eø”KN)R"
+ jxp_market.3.d:0 "ø”µ^HT¥b9eø”ïSEQžRNöeýV(uÿtSO9eØSlô•Kb-N'^„v÷N<P0"
+ jxp_market.3.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.3.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.4.t:0 "9eø”KN¨m÷N"
+ jxp_market.4.d:0 "°e±”ÑSLˆ*Y%`ÿs|0ÐvNåT™e„v÷N±”òTHQŽNIYLˆJTHyN¨m0"
+ jxp_market.4.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.4.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.5.t:0 "QQbcFUb^"
+ jxp_market.5.d:0 "QQbcFUàV˜RšRÔk÷NNmcw‰Ngbwí•è•ÿèÎWÓu—r˜öe×SI–0"
+ jxp_market.5.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.5.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.6.t:0 "0W¹eÁy-g"
+ jxp_market.6.d:0 "ÎWNFU÷S÷‹BlÑSLˆêS(W,g0WQQØN„v-g8RÿåNã‰ö”±”N³0"
+ jxp_market.6.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.6.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.7.t:0 "é…-gŠƒX"
+ jxp_market.7.d:0 ",gHNN0Ww¾‹„v-g8RAmeQ»ƒXÿwGPNQQØN1ûNòT¾–Rf0"
+ jxp_market.7.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.7.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.8.t:0 "hync*O."
+ jxp_market.8.d:0 "*O.¼bpS„vFUhy(Wšïô•Am.Oÿ×Smcw‰BlýVÕlÅbÝO0"
+ jxp_market.8.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.8.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.9.t:0 "é…HPÝ¦u"
+ jxp_market.9.d:0 "0W¹e0(uàe›R	cgPØÿHPIN÷‹Bl-N.Y¥c¡rvQ&ŒQ0"
+ jxp_market.9.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.9.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.10.t:0 "ýV¶RÅbÝOKNqS"
+ jxp_market.10.d:0 "jŒFUMaQPNr'Y>kÿtS‰BlåNhQýVzKw^—NÎWÓNs|jOÝO0"
+ jxp_market.10.a:0 "1uIYLˆ%NšRbr‚0QQØNNýP"
+ jxp_market.10.b:0 "ËRÙu^(uÿ©‹HuOêLˆ8T6eÎ˜i–"
+ jxp_market.11.t:0 "s|÷N´f¨m"
+ jxp_market.11.d:0 "Ik6eNäVïyOÎWNs|÷N²šGSÿ³‰øOs|ŒTHuºNŠpßpTöe×S‹S0"
+ jxp_market.11.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.11.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.12.t:0 "s|÷N´fÌ"
+ jxp_market.12.d:0 "0N6eŒTÆ–-NÍbVS‹SNOs|÷NÿœQ7bN†˜IN„vTIN6eeQNT)4l0"
+ jxp_market.12.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.12.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.13.t:0 "*g0Rs|"
+ jxp_market.13.d:0 "ÓNUSNb°‹KNs|S(WwmNÿchyºNtSòT2c0RÏ…KSweè•MR‰BlQQ°s0"
+ jxp_market.13.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.13.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.14.t:0 "Ï…KSwe1Ykp"
+ jxp_market.14.d:0 "kp¿RT¡lÓNê^N&ŒQÿŒ”^bÅbòTÑSLˆs|RKb„vmc1YbHN%`¡R0"
+ jxp_market.14.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.14.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.15.t:0 "Þ˜.O÷N"
+ jxp_market.15.d:0 "šïfNáO©‹T0Ws|÷NàQNNTöe.O0R'YBWÿçeåe„váOo`îTck(Wˆm1Y0"
+ jxp_market.15.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.15.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.16.t:0 "s|FUäVïy"
+ jxp_market.16.d:0 "pe¶Rî•KSTwKb6es|N.UÿÕ‹þVëOýV-N¥c×SôfØš÷N<h0"
+ jxp_market.16.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.16.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.17.t:0 "ŒvÓYÒbÝu1÷NV®|"
+ jxp_market.17.d:0 "aNQgã`ãNcðy˜RšR6e-÷NN³åNPÍyPRN4l)RÿÒbÝuQ²NYO®|0"
+ jxp_market.17.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.17.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.18.t:0 "fk¶RøO„y)4l"
+ jxp_market.18.d:0 "'÷NN¨mwøOs|NØSÿ-NNµu¶Rã÷‹Bl9eåN±”-geˆ³u¡‹0"
+ jxp_market.18.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.18.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.19.t:0 "X›S^TqSHg"
+ jxp_market.19.d:0 "Ügs|&øv’Nµb•KNE–ÿN¶R'YFU÷Sz6qàe›R²NrRÿn—rþ”Òo4N­eÂˆ0"
+ jxp_market.19.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.19.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.20.t:0 "·VMeØ=fQe^"
+ jxp_market.20.d:0 "HPw‰BlN¸u·VMeÿHPCgºNRf‹JTáO(uOàVdkYt^NY0"
+ jxp_market.20.a:0 "¨R(uÓNê^NýV“^ÝO²bu¡‹"
+ jxp_market.20.b:0 "ôuc²Nfê1uÿ1uî•KSbÅbÈvN"
+ jxp_market.21.t:0 "œQQgÇuåT"
+ jxp_market.21.d:0 "œQò•öe‚‚„vºuÇuòTbHN¸‹YQgK„„voRNÿî•KS÷‹Bl•gSpN0"
+ jxp_market.21.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.21.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.22.t:0 "åT.S¡N"
+ jxp_market.22.d:0 "›Q—NåTHWVyVÇÍ‘ÿŸqÃuåT.SHd¶R7w•bTY…VGôfšS„v»ÎW0"
+ jxp_market.22.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.22.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.23.t:0 "›Q—2c‹SlN"
+ jxp_market.23.d:0 "®pø”ŒT.9‚¢‹USTKS(gPg0Á”™eN‰påTÿl(uhViråeÊvf50"
+ jxp_market.23.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.23.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.24.t:0 "Žb=gûyl"
+ jxp_market.24.d:0 "egêVaN„v.SºNMa.Oˆc°eÕlÿFO‰Bl‰Rn0MQyVNTNÝO²b0"
+ jxp_market.24.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.24.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.25.t:0 "FUºN‹SNOåT÷N"
+ jxp_market.25.d:0 "bSî•KS)R(u.kHP‹SNOÇu7båT÷Nÿã`Qg÷‹BlIYLˆÁˆ­e0"
+ jxp_market.25.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.25.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.26.t:0 "ã`QgTjOåTHW"
+ jxp_market.26.d:0 "peQgMaTDîO4lf0nÇuHgÿv^1uqQT&ŒQRÅbÈvN0"
+ jxp_market.26.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.26.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.27.t:0 "ÎWN'Ykp"
+ jxp_market.27.d:0 "ÆRÆ–KS‚ŒTåTÚh©R•kp¿RÿÓN'0åT.SN+lESNbGW×Smc0"
+ jxp_market.27.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.27.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.28.t:0 "ŸS™eíwH"
+ jxp_market.28.d:0 "Éh0(g0Á”bÓg™e›O”^N³ÿåTHWIN‰BlOHQV-0"
+ jxp_market.28.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.28.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.29.t:0 "çeµ^µb6R°eÕl"
+ jxp_market.29.d:0 "çeµ^åN.Oßuyr¸‹HNncÿI–bk°eåT.SŒT°ehV°hÛeQ^­^0"
+ jxp_market.29.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.29.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_market.30.t:0 "åTHW4l)R‰Nïz"
+ jxp_market.30.d:0 "N8nåTHWV4lÇYÿN8n0u0WNQgèx†vJT¯gíz0"
+ jxp_market.30.a:0 "åNýV¶RQY¦ute˜åT™eN4l)R"
+ jxp_market.30.b:0 "²N1uHuOŒTã`Qg¢‹ËzTjOàzz"
+ jxp_companies.31.t:0 "O>y3u÷‹íu¦u"
+ jxp_companies.31.d:0 "c„‹NåNASt^&ŒQÁ‹fN¡R	gbÿ÷‹Blçuíuìr`SÏu%„0"
+ jxp_companies.31.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.31.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.32.t:0 "*hIN‰BlR¢u"
+ jxp_companies.32.d:0 "úQDºNNMaQŠbÈvYOYu(WÜgN¡Rÿ‰BlsSIRR>m0"
+ jxp_companies.32.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.32.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.33.t:0 "O>yHP¡R"
+ jxp_companies.33.d:0 "ib.VÇëVO&b—Èv)RN0RgHP¡RTöežX•0"
+ jxp_companies.33.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.33.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.34.t:0 "O>yÁyuQ"
+ jxp_companies.34.d:0 "²bÓNN²b9‚„vÇ–uQòT³åNr^„˜0W¹e‰N¼‹0"
+ jxp_companies.34.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.34.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.35.t:0 "wmY´f›RKN¥b"
+ jxp_companies.35.d:0 "Ü¹eFU†™.Oeg²Qzˆmo`ÿc„‹N‰BlýV¶RHQHNvQ©²b0"
+ jxp_companies.35.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.35.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.36.t:0 "I`¡r‚V"
+ jxp_companies.36.d:0 "¡R¡‹ÑS°sI`¡råN²NÏeFU÷SbSÐ“v^Z†¥bmcw0"
+ jxp_companies.36.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.36.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.37.t:0 "ýV¶Rý R!Ñ‘"
+ jxp_companies.37.d:0 "ýV“^T'tÿIYLˆ‰BlO>y(WàzzKNYæS.sNr0"
+ jxp_companies.37.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.37.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.38.t:0 "Ü¹eFUl‰BlúQ"
+ jxp_companies.38.d:0 "wmYO4O—b®‹O>y„W­eÿ,gWêSýwÍ‘®‹àzzv^Šb÷‹Bl²NÙuÏueu¹e0"
+ jxp_companies.38.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.38.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.39.t:0 "jŒFUeQýV®‹"
+ jxp_companies.39.d:0 "'Y¡wNåNlQqQáO(uŒTQeRƒúQDHN1uÿ÷‹Bl8^¾‹®‹-^0"
+ jxp_companies.39.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.39.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.40.t:0 "O>yýV	gKN®‹"
+ jxp_companies.40.d:0 "Ny˜sQ.•N¡RòTsQNNýV,gÿIYLˆÐc®‹pN­ehQèlô•¡wýN0"
+ jxp_companies.40.a:0 "	cýVÕl¡R¡‹v^P–6Rc„‹N"
+ jxp_companies.40.b:0 "6eÖS!Ñ‘ÿ¹R¸‹c„‹Nçuíuê»l"
+ jxp_companies.41.t:0 "fk¶RÍSùRøO„y'^S"
+ jxp_companies.41.d:0 "¶RãÅbÃV±”-g–^÷Nnm¨RÿRˆRïSÁ‰„vøOs|0"
+ jxp_companies.41.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.41.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.42.t:0 "úRb–²‹-lQHP"
+ jxp_companies.42.d:0 "úR>yMaåNïyÑ‘²‹-ýVHPÿtS‰BlYeµNNHa„U=eúQMQŽNV6e0"
+ jxp_companies.42.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.42.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.43.t:0 "HuO‰BlFU‹NÕl­^"
+ jxp_companies.43.d:0 "èé…QY¦uåeYÿFUºN‰Bl1uÂa&ŒQwNè•¡Rt0"
+ jxp_companies.43.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.43.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.44.t:0 "ŒvÓY‰Bls|÷NNP–"
+ jxp_companies.44.d:0 "ÎW^P–÷NbïSbke™ÿtSïSýwO®|FUNQÐs|eQÎW0"
+ jxp_companies.44.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.44.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.45.t:0 "c„‹NOõPNS"
+ jxp_companies.45.d:0 "IYLˆ0jŒFUNfk¶Rc„‹N|Vdk&T³QÿO>yòTpegNýw³QVr0"
+ jxp_companies.45.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.45.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.46.t:0 "ÝOi–ÒbT"
+ jxp_companies.46.d:0 "bÝOºNðyÎ˜´fN(WQYfNƒôVÿ9‚INRåNjP*‚øv<0"
+ jxp_companies.46.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.46.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.47.t:0 "=nãSS•NáO(u"
+ jxp_companies.47.d:0 "NY‰=n×SI–ÿS*g0Rg„vhyncòT(W^b—˜b÷N0"
+ jxp_companies.47.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.47.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.48.t:0 "ýV¶R4xµNZÁwO>y"
+ jxp_companies.48.d:0 "ýVHP1Y»SQQØNýw›Rÿc	g'YÏ‘lQHP„vO>ymN«ˆÖbT2cQQ0"
+ jxp_companies.48.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.48.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.49.t:0 "O>yQe©RýV¶R"
+ jxp_companies.49.d:0 "c„‹NMab¥cíwgýVHPŒT›Q®|Ç‘-ÿFO0t‰ôf•àzz0"
+ jxp_companies.49.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.49.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"
+ jxp_companies.50.t:0 "ÆbR„W­e"
+ jxp_companies.50.d:0 "TNO>yµc6RuµN0Ð“NáO7ÿIYLˆIN.VSvQRHNpe¶R0"
+ jxp_companies.50.a:0 "1uýV¶RbÅblQqQãN÷Nv^lQV&îv"
+ jxp_companies.50.b:0 "¥c×SLˆNÁy®‹ÿ©‹úQDºNêÈvN"

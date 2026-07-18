@@ -18,6 +18,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.45
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 1.5 num_of_ports = 5 }
 			modifier = { factor = 1.5 OR = { tag = SMZ tag = WAK has_country_flag = jxp_path_open_trade } }
 			modifier = { factor = 0.25 has_country_flag = jxp_path_sakoku }
@@ -44,6 +45,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.35
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 2 OR = { tag = SOO tag = CJP has_country_flag = jxp_path_confucian } }
 			modifier = { factor = 1.5 OR = { jxp_b_99_shogunate_stage_trigger = yes jxp_b_99_unified_stage_trigger = yes } }
 			modifier = { factor = 0.2 jxp_b_99_daimyo_stage_trigger = yes }
@@ -70,6 +72,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.30
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 2 OR = { tag = DTE tag = AKT tag = RFJ } }
 			modifier = { factor = 1.5 any_owned_province = { area = hokkaido_area } }
 			modifier = { factor = 0 is_bankrupt = yes }
@@ -95,6 +98,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.40
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 2 OR = { tag = WAK tag = RFJ has_country_flag = jxp_path_open_trade } }
 			modifier = { factor = 1.5 num_of_ports = 8 }
 			modifier = { factor = 0.2 has_country_flag = jxp_path_sakoku }
@@ -121,6 +125,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.20
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 2.5 OR = { tag = CJP tag = EJP has_country_flag = jxp_path_confucian } }
 			modifier = { factor = 2 OR = { tag = TOY tag = WAK } }
 			modifier = { factor = 0.1 jxp_b_99_daimyo_stage_trigger = yes }
@@ -147,6 +152,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.40
+			modifier = { factor = 0 NOT = { jxp_b_118_ai_strategy_council_ready_trigger = yes } }
 			modifier = { factor = 2.5 OR = { tag = SJP tag = RFJ tag = KJP } }
 			modifier = { factor = 2 has_country_flag = jxp_path_open_trade }
 			modifier = { factor = 0.1 has_country_flag = jxp_path_sakoku }

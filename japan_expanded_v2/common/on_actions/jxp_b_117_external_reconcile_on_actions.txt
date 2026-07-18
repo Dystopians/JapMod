@@ -1,0 +1,18 @@
+# Built-in po_independence does not call a mod peace effect. Reconcile only the
+# countries handed to the peace callbacks; the guard is false for white peace.
+on_peace_actor = {
+	jxp_b_117_reconcile_external_colonial_independence_effect = yes
+}
+
+on_peace_recipient = {
+	jxp_b_117_reconcile_external_colonial_independence_effect = yes
+}
+
+on_war_ended = {
+	jxp_b_117_reconcile_external_colonial_independence_effect = yes
+	FROM = { jxp_b_117_reconcile_external_colonial_independence_effect = yes }
+}
+
+on_startup = {
+	events = { jxp_b_external_reconcile.1 }
+}

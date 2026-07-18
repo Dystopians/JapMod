@@ -107,6 +107,25 @@ class ColonialExpansionContractTests(unittest.TestCase):
             self.assertIn(option, wargoal)
         self.assertEqual(3, len(re.findall(r"^po_jxp_b_\w+\s*=", treaties, re.MULTILINE)))
 
+    def test_b10_builtin_independence_is_reconciled_on_bounded_peace_callbacks(self) -> None:
+        on_actions = _read("common/on_actions/jxp_b_117_external_reconcile_on_actions.txt")
+        triggers = _read("common/scripted_triggers/jxp_b_117_external_reconcile_triggers.txt")
+        effects = _read("common/scripted_effects/jxp_b_117_external_reconcile_effects.txt")
+        independence_effects = _read("common/scripted_effects/jxp_b_96_colonial_independence_effects.txt")
+        for callback in ("on_peace_actor", "on_peace_recipient", "on_war_ended"):
+            self.assertIn(f"{callback} =", on_actions)
+        self.assertIn("has_country_flag = jxp_b_96_independence_declared", triggers)
+        self.assertIn("is_subject = no", triggers)
+        self.assertIn("NOT = { has_country_flag = jxp_iface_colonial_independence }", triggers)
+        self.assertIn("jxp_b_96_mark_full_independence_effect = yes", effects)
+        marker = independence_effects.split("jxp_b_96_mark_full_independence_effect = {", 1)[1].split(
+            "jxp_b_96_restore_metropole_control_effect", 1
+        )[0]
+        self.assertIn("NOT = { has_country_flag = jxp_iface_colonial_independence }", marker)
+        self.assertEqual(1, marker.count("jxp_b_91_add_identity_10_effect = yes"))
+        self.assertNotIn("every_country", on_actions + triggers + effects)
+        self.assertNotIn("every_subject_country", on_actions + triggers + effects)
+
     def test_b6_shared_library_has_thirty_six_visible_weighted_events(self) -> None:
         events = _read("events/jxp_b_93_colonial_society_events.txt")
         pulse = _read("events/jxp_b_91_colonial_society_events.txt")
@@ -160,6 +179,10 @@ class ColonialExpansionContractTests(unittest.TestCase):
         self.assertNotIn("create_subject", effects)
         self.assertNotIn("remove_core", effects)
         self.assertIn("remove_claim = ROOT", effects)
+        self.assertNotIn("every_province", effects)
+        self.assertIn("every_owned_province", effects)
+        for exclusion in ("tag = KOR", "tag = RYU", "has_reform = daimyo", "has_reform = indep_daimyo"):
+            self.assertIn(exclusion, triggers)
 
     def test_b11_peace_blocks_recharter_for_forty_years_without_land_demands(self) -> None:
         effects = _read("common/scripted_effects/jxp_b_97_end_metropole_rule_effects.txt")
@@ -206,13 +229,14 @@ class ColonialExpansionContractTests(unittest.TestCase):
 
     def test_b7_new_yamato_has_full_five_column_mission_identity(self) -> None:
         missions = _read("missions/jxp_b_94_new_yamato_missions.txt")
-        events = _read("events/jxp_b_94_new_yamato_events.txt")
+        events = _read("events/jxp_b_94_new_yamato_events.txt") + _read("events/jxp_b_110_colonial_state_depth_events.txt")
         reforms = _read("common/government_reforms/jxp_b_94_new_yamato_reforms.txt")
         self.assertEqual(5, len(re.findall(r"^jxp_b_94_nya_\w+_missions\s*=", missions, re.MULTILINE)))
-        self.assertEqual(30, len(re.findall(r"^\s*jxp_b_94_mission_\w+\s*=", missions, re.MULTILINE)))
-        self.assertEqual(10, len(re.findall(r"^\s*id\s*=\s*jxp_new_yamato\.\d+\s*$", events, re.MULTILINE)))
+        self.assertEqual(35, len(re.findall(r"^\s*jxp_b_94_mission_\w+\s*=", missions, re.MULTILINE)))
+        self.assertEqual(20, len(re.findall(r"^\s*id\s*=\s*jxp_new_yamato\.\d+\s*$", events, re.MULTILINE)))
         self.assertEqual(4, len(re.findall(r"^jxp_b_94_\w+_reform\s*=", reforms, re.MULTILINE)))
-        self.assertEqual(5, missions.count("potential = { OR = { tag = NYA tag = TPF } }"))
+        self.assertEqual(5, missions.count("potential = { tag = NYA }"))
+        self.assertNotIn("tag = TPF", missions)
 
     def test_b7_new_yamato_formation_is_bounded_and_refreshes_transactionally(self) -> None:
         triggers = _read("common/scripted_triggers/jxp_b_94_new_yamato_triggers.txt")
@@ -237,12 +261,12 @@ class ColonialExpansionContractTests(unittest.TestCase):
         self.assertIn("global_colonial_growth = 10", modifiers)
         self.assertNotIn("global_settler_increase", modifiers)
 
-    def test_b8_secondary_states_each_have_fifteen_missions_and_eight_events(self) -> None:
+    def test_b8_secondary_states_retain_their_foundation_events_and_gain_full_depth(self) -> None:
         missions = _read("missions/jxp_b_95_secondary_colonial_states_missions.txt")
         events = _read("events/jxp_b_95_secondary_colonial_states_events.txt")
-        for tag, event_start in (("hkk", 1), ("njf", 101), ("oia", 201)):
+        for tag, event_start, expected_count in (("hkk", 1, 28), ("njf", 101, 30), ("oia", 201, 28)):
             self.assertEqual(
-                15,
+                expected_count,
                 len(re.findall(rf"^\tjxp_b_95_{tag}_\w+\s*=", missions, re.MULTILINE)),
             )
             expected = {str(value) for value in range(event_start, event_start + 8)}
@@ -285,10 +309,13 @@ class ColonialExpansionContractTests(unittest.TestCase):
             self.assertEqual(128, int.from_bytes(data[14:16], "little"))
             self.assertEqual(24, data[16])
 
-    def test_b12_transpacific_state_inherits_missions_and_has_seven_ideas(self) -> None:
-        missions = _read("missions/jxp_b_94_new_yamato_missions.txt")
+    def test_b12_transpacific_state_has_independent_missions_and_seven_ideas(self) -> None:
+        nya_missions = _read("missions/jxp_b_94_new_yamato_missions.txt")
+        missions = _read("missions/jxp_b_114_transpacific_federation_missions.txt")
         ideas = _read("tools/jxp_validation/idea_sources/jxp_b_colonial_state_ideas.txt")
-        self.assertEqual(5, missions.count("potential = { OR = { tag = NYA tag = TPF } }"))
+        self.assertNotIn("tag = TPF", nya_missions)
+        self.assertEqual(5, missions.count("potential = { tag = TPF NOT = { has_country_flag = jxp_b_tpf_federation_dissolved } }"))
+        self.assertEqual(35, len(re.findall(r"^\s*jxp_b_114_tpf_\w+\s*=", missions, re.MULTILINE)) - 5)
         tpf_block = ideas.split("TPF_ideas =", 1)[1]
         self.assertEqual(7, len(re.findall(r"^\t(tpf_\w+)\s*=", tpf_block, re.MULTILINE)))
 

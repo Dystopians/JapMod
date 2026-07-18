@@ -41,6 +41,9 @@ monarchy = {
 				jxp_kaikyo_japan_reform
 				jxp_ikko_commonwealth_reform
 				jxp_wokou_admiralty_reform
+				jxp_a_105_commercial_council_state_reform
+				jxp_a_105_commercial_shogunate_reform
+				jxp_a_105_commercial_company_empire_reform
 				# Agent B colonial successor constitutions registered centrally.
 				jxp_b_94_oceanic_monarchy_reform
 				jxp_b_95_hkk_frontier_bakufu_reform
@@ -787,6 +790,10 @@ republic = {
 				jxp_b_95_oia_harbor_assembly_reform
 				jxp_b_95_oia_oceanic_naval_league_reform
 				jxp_b_two_ocean_federation_reform
+				jxp_a_105_commercial_merchant_council_reform
+				jxp_b_114_old_world_directed_federation_reform
+				jxp_b_114_overseas_rights_confederation_reform
+				jxp_b_114_two_ocean_directorate_reform
 				dutch_republic
 				peasants_republic
 				ikko_ikki_republic_reform

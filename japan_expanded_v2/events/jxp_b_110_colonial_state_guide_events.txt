@@ -1,0 +1,16 @@
+namespace = jxp_colonial_depth
+
+country_event = {
+	id = jxp_colonial_depth.1
+	title = "jxp_colonial_depth.1.t"
+	desc = { trigger = { has_country_flag = jxp_b_faction_dominant_assembly } desc = "jxp_colonial_depth.1.assembly.d" }
+	desc = { trigger = { has_country_flag = jxp_b_faction_dominant_company } desc = "jxp_colonial_depth.1.company.d" }
+	desc = { trigger = { has_country_flag = jxp_b_faction_dominant_military } desc = "jxp_colonial_depth.1.military.d" }
+	desc = { trigger = { has_country_flag = jxp_b_faction_dominant_local } desc = "jxp_colonial_depth.1.local.d" }
+	desc = { trigger = { has_country_flag = jxp_b_faction_dominant_royalist } desc = "jxp_colonial_depth.1.royalist.d" }
+	desc = { trigger = { NOT = { OR = { has_country_flag = jxp_b_faction_dominant_assembly has_country_flag = jxp_b_faction_dominant_company has_country_flag = jxp_b_faction_dominant_military has_country_flag = jxp_b_faction_dominant_local has_country_flag = jxp_b_faction_dominant_royalist } } } desc = "jxp_colonial_depth.1.d" }
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = { jxp_b_reconcile_metropole_legacy = yes jxp_b_set_colonial_faction_balance_effect = yes }
+	option = { name = "jxp_colonial_depth.1.a" }
+}

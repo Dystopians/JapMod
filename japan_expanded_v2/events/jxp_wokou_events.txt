@@ -14,6 +14,7 @@ country_event = {
 			has_country_flag = jxp_path_wokou
 			AND = {
 				NOT = { jxp_has_any_route_trigger = yes }
+				NOT = { has_country_flag = jxp_path_commercial_council }
 				jxp_has_wokou_opening_trigger = yes
 			}
 		}
@@ -22,7 +23,6 @@ country_event = {
 	option = {
 		name = "jxp_wokou.1.a"
 		jxp_clear_all_route_flags_effect = yes
-		set_country_flag = jxp_wokou_contact
 		set_country_flag = jxp_path_wokou
 		add_country_modifier = {
 			name = jxp_route_wokou

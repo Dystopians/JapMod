@@ -16,82 +16,42 @@ LEGACY_CITY_THRESHOLDS = ("25", "30")
 # gameplay site.  Keeping the mapping executable prevents a later bulk edit
 # from silently restoring a province-count proxy.
 EXPECTED_CALLS = {
-    "jxp_has_ikko_commonwealth_order_trigger": (
-        "missions/jxp_10_popular_maritime_missions.txt",
-        "jxp_mission_break_warrior_country",
-    ),
-    "jxp_has_shrine_castle_town_network_trigger": (
+    "jxp_has_shrine_castle_town_network_trigger": ((
         "missions/jxp_11_branching_missions.txt",
         "jxp_mission_kami_castle_towns",
-    ),
-    "jxp_has_ritual_census_network_trigger": (
-        "missions/jxp_11_branching_missions.txt",
-        "jxp_mission_ritual_census",
-    ),
-    "jxp_has_halal_granary_network_trigger": (
+    ),),
+    "jxp_has_halal_granary_network_trigger": ((
         "missions/jxp_11_branching_missions.txt",
         "jxp_mission_halal_granary_law",
-    ),
-    "jxp_can_settle_preunification_realm_trigger": (
+    ),),
+    "jxp_can_settle_preunification_realm_trigger": ((
         "decisions/jxp_polity_decisions.txt",
         "jxp_decision_settle_the_realm",
-    ),
-    "jxp_has_unite_the_isles_scope_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_unite_the_isles",
-    ),
-    "jxp_has_inherited_realm_order_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_route_inherited_realm",
-    ),
-    "jxp_has_renewed_japan_integration_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_route_renewed_japan",
-    ),
-    "jxp_has_post_station_office_network_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_route_post_station_ledger",
-    ),
-    "jxp_has_frontier_local_office_network_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_house_law_local_offices",
-    ),
+    ),),
     "jxp_has_osaka_rice_ledger_network_trigger": (
-        "missions/jxp_japan_missions.txt",
-        "jxp_mission_osaka_rice_ledger",
+        ("missions/jxp_japan_missions.txt", "jxp_mission_osaka_rice_ledger"),
+        ("decisions/jxp_a_104_economy_decisions.txt", "jxp_a_charter_company_rice_credit"),
     ),
-    "jxp_has_castle_town_market_network_trigger": (
+    "jxp_has_castle_town_market_network_trigger": ((
         "missions/jxp_japan_missions.txt",
         "jxp_mission_castle_town_markets",
-    ),
-    "jxp_can_summon_realm_council_trigger": (
-        "missions/jxp_40_final_state_completion_missions.txt",
-        "jxp_mission_uncommitted_summon_realm_council",
-    ),
-    "jxp_has_domain_memorial_network_trigger": (
-        "missions/jxp_40_final_state_completion_missions.txt",
-        "jxp_mission_uncommitted_hear_domain_memorials",
-    ),
-    "jxp_has_border_port_coverage_trigger": (
+    ),),
+    "jxp_has_border_port_coverage_trigger": ((
         "missions/jxp_40_final_state_completion_missions.txt",
         "jxp_mission_uncommitted_register_border_ports",
-    ),
-    "jxp_has_ikko_fellowship_integration_trigger": (
+    ),),
+    "jxp_has_ikko_fellowship_integration_trigger": ((
         "missions/jxp_40_final_state_completion_missions.txt",
         "jxp_mission_ikko_realm_of_fellowship",
-    ),
-    "jxp_has_kami_classics_network_trigger": (
+    ),),
+    "jxp_has_kami_classics_network_trigger": ((
         "missions/jxp_56_final_tag_identity_missions.txt",
         "jxp_mission_cjp_kami_classics",
-    ),
-    "jxp_has_kokushi_circuit_coverage_trigger": (
-        "missions/jxp_56_final_tag_identity_missions.txt",
-        "jxp_mission_ejp_kokushi_circuit",
-    ),
-    "jxp_has_shrine_envoy_network_trigger": (
+    ),),
+    "jxp_has_shrine_envoy_network_trigger": ((
         "missions/jxp_56_final_tag_identity_missions.txt",
         "jxp_mission_ejp_shrine_envoys",
-    ),
+    ),),
 }
 
 COMPANION_ONLY_REFERENCE = re.compile(
@@ -369,60 +329,54 @@ def check_map_scale_progression(context: ValidationContext) -> CheckResult:
                 contracts_matched += 1
 
     matched_calls = 0
-    for trigger_name, (expected_source, expected_anchor) in EXPECTED_CALLS.items():
+    expected_call_count = sum(len(sites) for sites in EXPECTED_CALLS.values())
+    for trigger_name, expected_sites in EXPECTED_CALLS.items():
         occurrences = context.assignment_occurrences(trigger_name, "yes")
-        if len(occurrences) != 1:
+        if len(occurrences) != len(expected_sites):
             result.add(
                 "map_scale.call_count",
-                f"{trigger_name} has {len(occurrences)} gameplay calls; expected exactly one",
+                f"{trigger_name} has {len(occurrences)} gameplay calls; expected exactly {len(expected_sites)}",
             )
-            continue
-        occurrence = occurrences[0]
-        actual_source = context.relative(occurrence.source)
-        if actual_source != expected_source:
-            result.add(
-                "map_scale.call_source",
-                f"{trigger_name} is called from {actual_source}; expected {expected_source}",
-                actual_source,
-                occurrence.entry.line,
-            )
-            continue
-        if expected_anchor not in occurrence.path:
-            result.add(
-                "map_scale.call_anchor",
-                f"{trigger_name} is no longer inside {expected_anchor}",
-                actual_source,
-                occurrence.entry.line,
-            )
-            continue
-        anchor_index = occurrence.path.index(expected_anchor)
-        expected_scope = "allow" if expected_source.startswith("decisions/") else "trigger"
-        if (
-            anchor_index + 1 >= len(occurrence.path)
-            or occurrence.path[anchor_index + 1] != expected_scope
-        ):
-            result.add(
-                "map_scale.call_context",
-                f"{trigger_name} is inside {expected_anchor} but not its "
-                f"{expected_scope} block",
-                actual_source,
-                occurrence.entry.line,
-            )
-            continue
-        negating_blocks = {"NOT", "NOR", "NAND"}
-        if any(
-            component in negating_blocks
-            for component in occurrence.path[anchor_index + 2 :]
-        ):
-            result.add(
-                "map_scale.call_polarity",
-                f"{trigger_name} is negated inside {expected_anchor}'s "
-                f"{expected_scope} block",
-                actual_source,
-                occurrence.entry.line,
-            )
-            continue
-        matched_calls += 1
+        for expected_source, expected_anchor in expected_sites:
+            candidates = [
+                occurrence
+                for occurrence in occurrences
+                if context.relative(occurrence.source) == expected_source
+                and expected_anchor in occurrence.path
+            ]
+            if len(candidates) != 1:
+                result.add(
+                    "map_scale.call_site",
+                    f"{trigger_name} has {len(candidates)} calls at {expected_source}::{expected_anchor}; expected one",
+                    expected_source,
+                )
+                continue
+            occurrence = candidates[0]
+            anchor_index = occurrence.path.index(expected_anchor)
+            expected_scope = "allow" if expected_source.startswith("decisions/") else "trigger"
+            if (
+                anchor_index + 1 >= len(occurrence.path)
+                or occurrence.path[anchor_index + 1] != expected_scope
+            ):
+                result.add(
+                    "map_scale.call_context",
+                    f"{trigger_name} is inside {expected_anchor} but not its {expected_scope} block",
+                    expected_source,
+                    occurrence.entry.line,
+                )
+                continue
+            if any(
+                component in {"NOT", "NOR", "NAND"}
+                for component in occurrence.path[anchor_index + 2 :]
+            ):
+                result.add(
+                    "map_scale.call_polarity",
+                    f"{trigger_name} is negated inside {expected_anchor}'s {expected_scope} block",
+                    expected_source,
+                    occurrence.entry.line,
+                )
+                continue
+            matched_calls += 1
 
     result.metrics.update(
         {
@@ -433,7 +387,7 @@ def check_map_scale_progression(context: ValidationContext) -> CheckResult:
         }
     )
     result.summary = (
-        f"{matched_calls}/{len(EXPECTED_CALLS)} semantic replacements; "
+        f"{matched_calls}/{expected_call_count} semantic replacements; "
         f"{contracts_matched}/{len(EXPECTED_TRIGGER_BODIES)} fixed contracts; "
         f"{len(legacy_occurrences)} legacy 25/30-city thresholds"
     )

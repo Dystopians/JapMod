@@ -40,20 +40,21 @@ EXPECTED_MISSIONS = (
     "jxp_mission_toyotomi_realm_settlement",
 )
 EXPECTED_TOYOTOMI_SERIES = {
-    1: "jxp_japan_state_missions",
-    2: "jxp_japan_court_missions",
-    3: "jxp_toyotomi_realm_missions",
+    1: "jxp_a_105_shared_capital_slot_1_missions",
+    2: "jxp_a_105_shared_capital_slot_2_missions",
+    3: "jxp_a_105_toyotomi_domestic_missions",
     4: "jxp_toyotomi_court_missions",
     5: "jxp_toyotomi_horizon_missions",
 }
 EXPECTED_TOYOTOMI_MISSIONS = {
-    "jxp_toyotomi_realm_missions": (
+    "jxp_a_105_toyotomi_domestic_missions": (
         "jxp_mission_toyotomi_yamazaki_settlement",
         "jxp_mission_toyotomi_kampaku_appointment",
         "jxp_mission_toyotomi_cadaster_realm",
         "jxp_mission_toyotomi_sword_hunt_realm",
         "jxp_mission_toyotomi_sobuji_order",
         "jxp_mission_toyotomi_five_commissions",
+        "jxp_a_105_toyotomi_domestic_7",
         "jxp_mission_toyotomi_settle_succession",
     ),
     "jxp_toyotomi_court_missions": (
@@ -511,8 +512,8 @@ def _check_missions_and_decision(context: ValidationContext, result: CheckResult
     ):
         result.add(
             "toyotomi.mission_profile",
-            f"TOY must own exactly the bespoke five-series signature; found {by_slot}",
-            "missions/jxp_70_oda_toyotomi_missions.txt",
+            f"TOY must own exactly the shared/domestic/frozen five-series signature; found {by_slot}",
+            "missions/zzz_jxp_a_105_socioeconomic_missions.txt",
         )
     catalog_by_name = {item.name: item for item in catalog}
     for series_name, expected_missions in EXPECTED_TOYOTOMI_MISSIONS.items():
@@ -523,8 +524,8 @@ def _check_missions_and_decision(context: ValidationContext, result: CheckResult
         if actual_missions != expected_missions:
             result.add(
                 "toyotomi.mission_branch",
-                f"{series_name} lost its ordered seven-mission branch: {actual_missions}",
-                "missions/jxp_70_oda_toyotomi_missions.txt",
+                f"{series_name} lost its ordered mission branch: {actual_missions}",
+                "missions/zzz_jxp_a_105_socioeconomic_missions.txt",
             )
     result.metrics["toyotomi_mission_series"] = len(actual_signature)
     result.metrics["toyotomi_unique_missions"] = sum(
@@ -744,6 +745,8 @@ def _check_reform(context: ValidationContext, result: CheckResult) -> None:
         return
     toy = first_object(reforms.root, "jxp_reform_founder_toyotomi_five_regents")
     toy_potential = first_object(toy, "potential")
+    toy_modifiers = first_object(toy, "modifiers")
+    toy_attributes = first_object(toy, "custom_attributes")
     oda = first_object(reforms.root, "jxp_reform_founder_oda_azuchi_statutes")
     oda_potential = first_object(oda, "potential")
     if not (
@@ -760,6 +763,18 @@ def _check_reform(context: ValidationContext, result: CheckResult) -> None:
         result.add(
             "toyotomi.reform_collision",
             "Oda Azuchi reform must exclude the established Toyotomi identity",
+            "common/government_reforms/jxp_28_founder_house_reforms.txt",
+        )
+    if not (
+        _has(toy_modifiers, "nobles_loyalty_modifier", "0.10")
+        and _has(toy_modifiers, "advisor_pool", "1")
+        and _has(toy_attributes, "jxp_toyotomi_regents_council", "yes")
+        and not _has(toy_modifiers, "governing_capacity_modifier", "0.10")
+        and not _has(toy_modifiers, "global_tax_modifier", "0.05")
+    ):
+        result.add(
+            "toyotomi.founder_reward_ownership",
+            "Five Regents founder reform must unlock the regents council layer without duplicating TOY tier-one tax/capacity",
             "common/government_reforms/jxp_28_founder_house_reforms.txt",
         )
 

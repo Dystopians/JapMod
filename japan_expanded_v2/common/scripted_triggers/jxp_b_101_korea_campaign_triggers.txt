@@ -38,7 +38,7 @@ jxp_b_101_can_begin_korea_preparations_trigger = {
 jxp_b_101_korea_preparations_active_trigger = {
 	jxp_b_101_korea_campaign_actor_trigger = yes
 	has_country_flag = jxp_b_101_korea_campaign_active
-	NOT = { has_country_flag = jxp_b_101_korea_stage_10_done }
+	NOT = { has_country_flag = jxp_b_101_korea_phase_continental_assessment_done }
 	jxp_b_101_korea_exists_trigger = yes
 	is_at_war = no
 	NOT = { is_bankrupt = yes }
@@ -46,7 +46,7 @@ jxp_b_101_korea_preparations_active_trigger = {
 
 jxp_b_101_korea_expedition_ready_trigger = {
 	jxp_b_101_korea_campaign_actor_trigger = yes
-	has_country_flag = jxp_b_101_korea_stage_10_done
+	has_country_flag = jxp_b_101_korea_phase_continental_assessment_done
 	has_country_modifier = jxp_b_101_korea_expedition_ready
 	jxp_b_101_korea_exists_trigger = yes
 }

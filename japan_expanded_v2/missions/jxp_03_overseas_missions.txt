@@ -347,6 +347,53 @@ jxp_japan_eastasia_missions = {
 			jxp_b_100_consolidate_china_endgame_effect = yes
 		}
 	}
+
+
+	# B115 external-route additions.
+	jxp_b_115_open_trade_01 = {
+		icon = mission_diplomatic_relation
+		position = 16
+		required_missions = { jxp_mission_eastasia_rite_sphere }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = jxp_b_115_open_trade_preparation_tt
+				OR = {
+					has_country_flag = jxp_b_115_open_main_trade
+					has_country_flag = jxp_b_115_open_secondary_trade
+				}
+			}
+			dip_tech = 10
+		}
+		effect = {
+			add_prestige = 5
+			country_event = { id = jxp_b_115_routes.21 days = 1 }
+		}
+	}
+
+
+	jxp_b_115_open_trade_02 = {
+		icon = mission_diplomatic_relation
+		position = 17
+		required_missions = { jxp_b_115_open_trade_01 }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = jxp_b_115_open_trade_mainline_tt
+				has_country_flag = jxp_b_115_open_main_trade
+			}
+			num_of_ports = 5
+		}
+		effect = {
+			change_government_reform_progress = 15
+			country_event = { id = jxp_b_115_routes.22 days = 1 }
+			set_country_flag = jxp_iface_b_external_capstone_complete
+			add_country_modifier = {
+				name = jxp_b_115_open_external_capstone
+				duration = 7300
+			}
+			country_event = { id = jxp_b_115_routes.24 days = 1 }
+		}
+	}
+
 }
 
 jxp_japan_pacific_missions = {
@@ -681,4 +728,50 @@ jxp_japan_pacific_missions = {
 			add_prestige = 10
 		}
 	}
+
+
+	# B115 external-route additions.
+	jxp_b_115_open_settlement_01 = {
+		icon = mission_diplomatic_relation
+		position = 15
+		required_missions = { jxp_mission_eastasia_break_mandate }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = jxp_b_115_open_settlement_preparation_tt
+				OR = {
+					has_country_flag = jxp_b_115_open_main_settlement
+					has_country_flag = jxp_b_115_open_secondary_settlement
+				}
+			}
+			dip_tech = 10
+		}
+		effect = {
+			add_prestige = 5
+			country_event = { id = jxp_b_115_routes.23 days = 1 }
+		}
+	}
+
+
+	jxp_b_115_open_settlement_02 = {
+		icon = mission_diplomatic_relation
+		position = 16
+		required_missions = { jxp_b_115_open_settlement_01 }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = jxp_b_115_open_settlement_mainline_tt
+				has_country_flag = jxp_b_115_open_main_settlement
+			}
+			num_of_ports = 5
+		}
+		effect = {
+			add_dip_power = 25
+			set_country_flag = jxp_iface_b_external_capstone_complete
+			add_country_modifier = {
+				name = jxp_b_115_open_external_capstone
+				duration = 7300
+			}
+			country_event = { id = jxp_b_115_routes.24 days = 1 }
+		}
+	}
+
 }

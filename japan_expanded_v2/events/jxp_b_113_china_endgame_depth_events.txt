@@ -1,0 +1,166 @@
+namespace = jxp_b_china_depth
+
+# 奉天承运：朝贡礼制、驿路、官僚、文教冲突与边疆治理。
+country_event = {
+	id = jxp_b_china_depth.601
+	title = jxp_b_china_depth.601.t
+	desc = jxp_b_china_depth.601.d
+	picture = jxp_b_mandate_court_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_mandate NOT = { has_country_flag = jxp_b_113_china_stage_1_done } }
+	option = { name = jxp_b_china_depth.601.a add_dip_power = -75 add_treasury = -150 add_prestige = 5 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.602 days = 730 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_china_depth.601.b add_mil_power = -50 add_prestige = 10 add_corruption = 1 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.602 days = 730 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.602
+	title = jxp_b_china_depth.602.t
+	desc = jxp_b_china_depth.602.d
+	picture = jxp_b_mandate_court_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_mandate has_country_flag = jxp_b_113_china_stage_1_done NOT = { has_country_flag = jxp_b_113_china_stage_2_done } }
+	option = { name = jxp_b_china_depth.602.a add_adm_power = -75 add_treasury = -250 add_country_modifier = { name = jxp_b_113_china_tribute_offices duration = 1825 } set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.603 days = 730 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_china_depth.602.b add_treasury = -100 add_corruption = 1 set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.603 days = 730 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.603
+	title = jxp_b_china_depth.603.t
+	desc = jxp_b_china_depth.603.d
+	picture = jxp_b_mandate_court_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_mandate has_country_flag = jxp_b_113_china_stage_2_done NOT = { has_country_flag = jxp_b_113_china_stage_3_done } }
+	option = { name = jxp_b_china_depth.603.a add_adm_power = -100 add_corruption = -1 add_prestige = 5 set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.604 days = 730 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_china_depth.603.b add_treasury = 200 add_corruption = 2 set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.604 days = 730 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.604
+	title = jxp_b_china_depth.604.t
+	desc = jxp_b_china_depth.604.d
+	picture = jxp_b_mandate_court_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_mandate has_country_flag = jxp_b_113_china_stage_3_done NOT = { has_country_flag = jxp_b_113_china_stage_4_done } }
+	option = { name = jxp_b_china_depth.604.a add_dip_power = -75 add_stability = 1 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.605 days = 730 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_china_depth.604.b add_mil_power = 50 add_stability = -1 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.605 days = 730 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.605
+	title = jxp_b_china_depth.605.t
+	desc = jxp_b_china_depth.605.d
+	picture = jxp_b_mandate_court_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_mandate has_country_flag = jxp_b_113_china_stage_4_done }
+	option = { name = jxp_b_china_depth.605.a add_adm_power = -100 add_treasury = -300 add_prestige = 15 add_country_modifier = { name = jxp_b_113_china_tribute_offices duration = -1 } set_country_flag = jxp_b_113_china_mandate_program_complete jxp_b_113_complete_china_long_program_effect = yes ai_chance = { factor = 1 } }
+}
+
+# 礼仪共主：琉球、朝鲜、对马、台湾港口与海上仲裁。
+country_event = {
+	id = jxp_b_china_depth.611
+	title = jxp_b_china_depth.611.t
+	desc = jxp_b_china_depth.611.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_rites NOT = { has_country_flag = jxp_b_113_china_stage_1_done } }
+	option = { name = jxp_b_china_depth.611.a add_dip_power = -100 add_treasury = -100 add_prestige = 5 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.612 days = 730 } ai_chance = { factor = 70 } }
+	option = { name = jxp_b_china_depth.611.b add_treasury = 150 add_prestige = -10 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.612 days = 730 } ai_chance = { factor = 30 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.612
+	title = jxp_b_china_depth.612.t
+	desc = jxp_b_china_depth.612.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_rites has_country_flag = jxp_b_113_china_stage_1_done NOT = { has_country_flag = jxp_b_113_china_stage_2_done } }
+	option = { name = jxp_b_china_depth.612.a add_dip_power = -75 add_treasury = -250 add_navy_tradition = 5 set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.613 days = 730 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_china_depth.612.b add_mercantilism = 1 add_prestige = -5 set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.613 days = 730 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.613
+	title = jxp_b_china_depth.613.t
+	desc = jxp_b_china_depth.613.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_rites has_country_flag = jxp_b_113_china_stage_2_done NOT = { has_country_flag = jxp_b_113_china_stage_3_done } }
+	option = { name = jxp_b_china_depth.613.a add_dip_power = -100 add_country_modifier = { name = jxp_b_113_china_rites_network duration = 1825 } set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.614 days = 730 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_china_depth.613.b add_treasury = 150 add_corruption = 1 set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.614 days = 730 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.614
+	title = jxp_b_china_depth.614.t
+	desc = jxp_b_china_depth.614.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_rites has_country_flag = jxp_b_113_china_stage_3_done NOT = { has_country_flag = jxp_b_113_china_stage_4_done } }
+	option = { name = jxp_b_china_depth.614.a add_dip_power = -75 add_prestige = 10 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.615 days = 730 } ai_chance = { factor = 70 } }
+	option = { name = jxp_b_china_depth.614.b add_treasury = -100 add_corruption = 1 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.615 days = 730 } ai_chance = { factor = 30 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.615
+	title = jxp_b_china_depth.615.t
+	desc = jxp_b_china_depth.615.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_rites has_country_flag = jxp_b_113_china_stage_4_done }
+	option = { name = jxp_b_china_depth.615.a add_dip_power = -100 add_treasury = -250 add_prestige = 15 add_country_modifier = { name = jxp_b_113_china_rites_network duration = -1 } set_country_flag = jxp_b_113_china_rites_program_complete jxp_b_113_complete_china_long_program_effect = yes ai_chance = { factor = 1 } }
+}
+
+# 破除旧秩序：海军、自由港、小国保护、海禁与海岸同盟。
+country_event = {
+	id = jxp_b_china_depth.621
+	title = jxp_b_china_depth.621.t
+	desc = jxp_b_china_depth.621.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_break NOT = { has_country_flag = jxp_b_113_china_stage_1_done } }
+	option = { name = jxp_b_china_depth.621.a add_mil_power = -100 add_treasury = -300 add_navy_tradition = 10 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.622 days = 730 } ai_chance = { factor = 70 } }
+	option = { name = jxp_b_china_depth.621.b add_treasury = -100 add_navy_tradition = 3 add_corruption = 1 set_country_flag = jxp_b_113_china_stage_1_done country_event = { id = jxp_b_china_depth.622 days = 730 } ai_chance = { factor = 30 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.622
+	title = jxp_b_china_depth.622.t
+	desc = jxp_b_china_depth.622.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_break has_country_flag = jxp_b_113_china_stage_1_done NOT = { has_country_flag = jxp_b_113_china_stage_2_done } }
+	option = { name = jxp_b_china_depth.622.a add_dip_power = -75 add_treasury = -200 add_mercantilism = -1 set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.623 days = 730 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_china_depth.622.b add_mercantilism = 2 add_prestige = -10 set_country_flag = jxp_b_113_china_stage_2_done country_event = { id = jxp_b_china_depth.623 days = 730 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.623
+	title = jxp_b_china_depth.623.t
+	desc = jxp_b_china_depth.623.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_break has_country_flag = jxp_b_113_china_stage_2_done NOT = { has_country_flag = jxp_b_113_china_stage_3_done } }
+	option = { name = jxp_b_china_depth.623.a add_dip_power = -100 add_treasury = -150 add_prestige = 10 set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.624 days = 730 } ai_chance = { factor = 65 } }
+	option = { name = jxp_b_china_depth.623.b add_mil_power = 50 add_prestige = -10 set_country_flag = jxp_b_113_china_stage_3_done country_event = { id = jxp_b_china_depth.624 days = 730 } ai_chance = { factor = 35 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.624
+	title = jxp_b_china_depth.624.t
+	desc = jxp_b_china_depth.624.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_break has_country_flag = jxp_b_113_china_stage_3_done NOT = { has_country_flag = jxp_b_113_china_stage_4_done } }
+	option = { name = jxp_b_china_depth.624.a add_adm_power = -75 add_stability = -1 add_mercantilism = -1 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.625 days = 730 } ai_chance = { factor = 60 } }
+	option = { name = jxp_b_china_depth.624.b add_treasury = 200 add_corruption = 2 set_country_flag = jxp_b_113_china_stage_4_done country_event = { id = jxp_b_china_depth.625 days = 730 } ai_chance = { factor = 40 } }
+}
+
+country_event = {
+	id = jxp_b_china_depth.625
+	title = jxp_b_china_depth.625.t
+	desc = jxp_b_china_depth.625.d
+	picture = jxp_b_maritime_order_eventPicture
+	is_triggered_only = yes
+	trigger = { has_country_flag = jxp_iface_b_china_long_program_active has_country_flag = jxp_b_100_china_path_break has_country_flag = jxp_b_113_china_stage_4_done }
+	option = { name = jxp_b_china_depth.625.a add_dip_power = -100 add_treasury = -300 add_navy_tradition = 10 add_country_modifier = { name = jxp_b_113_china_maritime_order duration = -1 } set_country_flag = jxp_b_113_china_break_program_complete jxp_b_113_complete_china_long_program_effect = yes ai_chance = { factor = 1 } }
+}

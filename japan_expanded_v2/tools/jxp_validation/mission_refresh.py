@@ -12,6 +12,7 @@ from .create_mission_runtime_fingerprint_v0242 import (
     COMPANION_MAP_TRIGGER,
     DAIMYO_HOUSES,
     OUTPUT as FINGERPRINT_OUTPUT,
+    UNIFIED_PROFILE_TRIGGERS,
     render as render_fingerprint,
 )
 from .clausewitz import Object
@@ -199,6 +200,8 @@ def check_mission_refresh(context: ValidationContext) -> CheckResult:
     required_fingerprint_triggers = {
         COMPANION_MAP_TRIGGER,
         *(trigger for trigger, _anchor in DAIMYO_HOUSES),
+        "jxp_a_105_mission_profile_fingerprint_valid_trigger",
+        *UNIFIED_PROFILE_TRIGGERS,
     }
     missing_fingerprint_triggers = sorted(
         required_fingerprint_triggers - trigger_definitions

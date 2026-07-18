@@ -42,6 +42,23 @@ DYNAMIC_TOKEN_HOTFIX_VALUES = (
     ("vaisyas_non_muslim_loyalty_modifier", 1, "[Country.GetVaishyasName]\u5fe0\u8bda\u5747\u8861\u70b9"),
     ("vaisyas_privilege_slots", 0, "[Country.GetVaishyasName]\u6700\u5927\u7279\u6743\u6570"),
 )
+START_SCREEN_HOTFIX_PATH = Path(
+    "localisation/zzz_jxp_start_screen_hotfix_l_english.yml"
+)
+START_SCREEN_MAIN_LOCALISATION_PATH = Path(
+    "localisation/jxp_a_98_start_screen_l_english.yml"
+)
+START_SCREEN_UI_FIELDS = (
+    ("START_SCREEN_TITLE", "JxpStartScreenTitle"),
+    ("START_SCREEN_UP_LEFT_TITLE", "JxpStartScreenUpLeftTitle"),
+    ("START_SCREEN_UP_RIGHT_TITLE", "JxpStartScreenUpRightTitle"),
+    ("START_SCREEN_DOWN_LEFT_TITLE", "JxpStartScreenDownLeftTitle"),
+    ("START_SCREEN_DOWN_RIGHT_TITLE", "JxpStartScreenDownRightTitle"),
+    ("START_SCREEN_UP_LEFT_DESC", "JxpStartScreenUpLeftDesc"),
+    ("START_SCREEN_UP_RIGHT_DESC", "JxpStartScreenUpRightDesc"),
+    ("START_SCREEN_DOWN_LEFT_DESC", "JxpStartScreenDownLeftDesc"),
+    ("START_SCREEN_DOWN_RIGHT_DESC", "JxpStartScreenDownRightDesc"),
+)
 DEFAULT_LOCALISATION_ENCODER = (
     Path(__file__).resolve().parents[3]
     / "skills/eu4-modding/scripts/escape_eu4_special_localisation.py"
@@ -111,6 +128,21 @@ def _dynamic_token_hotfix_source() -> str:
 
 def _dynamic_token_hotfix_payload(encoder: ModuleType) -> bytes:
     return encoder.escape_text(_dynamic_token_hotfix_source()).encode("utf-8-sig")
+
+
+def _start_screen_hotfix_payload(main_mod: Path) -> bytes:
+    source_path = main_mod / START_SCREEN_MAIN_LOCALISATION_PATH
+    source = source_path.read_text(encoding="utf-8-sig")
+    lines = ["l_english:"]
+    for key, function_name in START_SCREEN_UI_FIELDS:
+        expected = f' {key}:0 "[{function_name}]"'
+        if source.count(expected) != 1:
+            raise ValueError(
+                "main start-screen localisation does not expose the exact UI wrapper: "
+                f"{expected}"
+            )
+        lines.append(expected)
+    return ("\n".join(lines) + "\n").encode("utf-8-sig")
 
 
 def _country_paths(game_root: Path) -> dict[str, Path]:
@@ -299,6 +331,10 @@ def build_compat_clone(
         hotfix_path.parent.mkdir(parents=True, exist_ok=True)
         hotfix_payload = _dynamic_token_hotfix_payload(localisation_encoder)
         hotfix_path.write_bytes(hotfix_payload)
+        start_screen_hotfix_path = staging / START_SCREEN_HOTFIX_PATH
+        start_screen_hotfix_path.parent.mkdir(parents=True, exist_ok=True)
+        start_screen_hotfix_payload = _start_screen_hotfix_payload(main_mod)
+        start_screen_hotfix_path.write_bytes(start_screen_hotfix_payload)
         source_descriptor = source / "descriptor.mod"
         source_text = source_descriptor.read_text(encoding="utf-8-sig")
         version_match = re.search(r'(?m)^\s*version\s*=\s*"([^"]+)"', source_text)
@@ -327,6 +363,11 @@ def build_compat_clone(
                 "path": DYNAMIC_TOKEN_HOTFIX_PATH.as_posix(),
                 "keys": [key for key, _version, _value in DYNAMIC_TOKEN_HOTFIX_VALUES],
                 "sha256": sha256(hotfix_payload).hexdigest(),
+            },
+            "start_screen_hotfix": {
+                "path": START_SCREEN_HOTFIX_PATH.as_posix(),
+                "keys": [key for key, _function in START_SCREEN_UI_FIELDS],
+                "sha256": sha256(start_screen_hotfix_payload).hexdigest(),
             },
         }
         (staging / ".jxp_compat_manifest.json").write_text(
@@ -384,6 +425,7 @@ def build_compat_clone(
         "history_files_rewritten": changed_histories,
         "country_files_rewritten": changed_countries,
         "dynamic_token_hotfix_keys": len(DYNAMIC_TOKEN_HOTFIX_VALUES),
+        "start_screen_hotfix_keys": len(START_SCREEN_UI_FIELDS),
         "audit": result.to_dict(),
     }
 
@@ -410,6 +452,7 @@ def audit_compat_clone(
             (localisation_encoder_script or DEFAULT_LOCALISATION_ENCODER).resolve()
         )
         expected_hotfix = _dynamic_token_hotfix_payload(localisation_encoder)
+        expected_start_screen_hotfix = _start_screen_hotfix_payload(main_mod.resolve())
         manifest = json.loads(
             (target / ".jxp_compat_manifest.json").read_text(encoding="utf-8")
         )
@@ -465,6 +508,28 @@ def audit_compat_clone(
             str(target / ".jxp_compat_manifest.json"),
         )
 
+    start_screen_hotfix_path = target / START_SCREEN_HOTFIX_PATH
+    if (
+        not start_screen_hotfix_path.is_file()
+        or start_screen_hotfix_path.read_bytes() != expected_start_screen_hotfix
+    ):
+        result.add(
+            "chinese_compat.start_screen_hotfix",
+            "the compatibility layer does not preserve all nine JXP start-screen UI wrappers",
+            START_SCREEN_HOTFIX_PATH.as_posix(),
+        )
+    expected_start_screen_manifest = {
+        "path": START_SCREEN_HOTFIX_PATH.as_posix(),
+        "keys": [key for key, _function in START_SCREEN_UI_FIELDS],
+        "sha256": sha256(expected_start_screen_hotfix).hexdigest(),
+    }
+    if manifest.get("start_screen_hotfix") != expected_start_screen_manifest:
+        result.add(
+            "chinese_compat.start_screen_manifest",
+            "start-screen hotfix metadata differs from the sealed payload contract",
+            str(target / ".jxp_compat_manifest.json"),
+        )
+
     descriptor_text = (target / "descriptor.mod").read_text(encoding="utf-8-sig")
     outer_text = outer_descriptor.read_text(encoding="utf-8-sig")
     if "remote_file_id" in descriptor_text or "remote_file_id" in outer_text:
@@ -504,12 +569,14 @@ def audit_compat_clone(
             "payload_identity": payload_identity,
             "source_identity": source_identity,
             "dynamic_token_hotfix_keys": len(DYNAMIC_TOKEN_HOTFIX_VALUES),
+            "start_screen_hotfix_keys": len(START_SCREEN_UI_FIELDS),
         }
     )
     result.summary = (
         f"{len(patches)} order-independent conflict patches; "
         f"{len(histories)} history and {len(countries)} country-name files canonical; "
         f"{len(DYNAMIC_TOKEN_HOTFIX_VALUES)} dynamic-token keys repaired; "
+        f"{len(START_SCREEN_UI_FIELDS)} start-screen keys preserved; "
         f"{len(result.issues)} issue(s)"
     )
     return result

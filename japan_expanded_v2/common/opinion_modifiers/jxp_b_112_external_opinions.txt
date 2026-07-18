@@ -1,0 +1,14 @@
+jxp_b_112_opinion_company_compact = {
+	opinion = 40
+	years = 20
+}
+
+jxp_b_112_opinion_company_intrusion = {
+	opinion = -50
+	years = 20
+}
+
+jxp_b_112_opinion_orderly_company_exit = {
+	opinion = 15
+	years = 10
+}

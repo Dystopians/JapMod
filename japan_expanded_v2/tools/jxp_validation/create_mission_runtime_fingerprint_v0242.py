@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -75,146 +76,116 @@ DAIMYO_MAJOR_HOUSES = tuple(
 
 COMPANION_MAP_TRIGGER = "jxp_has_companion_map_origin_trigger"
 
-UNIFIED_COMMON = (
-    "jxp_mission_secure_home_domain",
-    "jxp_mission_capital_cities",
-)
-
-ROUTE_PROFILES = (
-    (
-        "toyotomi",
-        ("tag = TOY", "NOT = { jxp_has_any_route_trigger = yes }"),
-        (
-            "jxp_mission_toyotomi_yamazaki_settlement",
-            "jxp_mission_toyotomi_osaka_castle_town",
-            "jxp_mission_toyotomi_kyushu_settlement",
-        ),
-    ),
+UNIFIED_PROFILE_ANCHORS = (
     (
         "uncommitted",
-        ("tag = JAP", "NOT = { jxp_has_any_route_trigger = yes }"),
+        ("jxp_a_105_profile_uncommitted_trigger = yes",),
         (
-            "jxp_mission_uncommitted_reckon_warrior_houses",
             "jxp_mission_shrine_land_registers",
             "jxp_mission_uncommitted_watch_the_four_seas",
         ),
     ),
     (
         "sakoku",
-        ("has_country_flag = jxp_path_sakoku",),
+        ("jxp_a_105_profile_sakoku_trigger = yes",),
         (
-            "jxp_mission_temple_registration",
             "jxp_mission_shrine_land_registers",
             "jxp_mission_sakoku_coastal_magistrates",
         ),
     ),
     (
         "open_trade",
-        ("has_country_flag = jxp_path_open_trade",),
+        ("jxp_a_105_profile_open_trigger = yes",),
         (
-            "jxp_mission_open_nagasaki",
             "jxp_mission_eastasia_ryukyu_gateway",
             "jxp_mission_pacific_charter",
         ),
     ),
     (
-        "confucian",
+        "buddhist",
+        ("jxp_a_105_profile_buddhist_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = CJP",
-            "\thas_country_flag = jxp_path_confucian",
-            "}",
+            "jxp_a_buddhist_woodblocks_scriptures",
+            "jxp_a_buddhist_korean_scriptures",
         ),
+    ),
+    (
+        "kirishitan",
+        ("jxp_a_105_profile_kirishitan_trigger = yes",),
         (
-            "jxp_mission_domain_school_exams",
+            "jxp_mission_kirishitan_settlement",
+            "jxp_mission_port_congregation_registers",
+        ),
+    ),
+    (
+        "confucian",
+        ("jxp_a_105_profile_confucian_trigger = yes",),
+        (
             "jxp_mission_cjp_three_teachings_register",
             "jxp_mission_zhu_xi_lectures",
         ),
     ),
     (
         "imperial",
+        ("jxp_a_105_profile_imperial_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = EJP",
-            "\thas_country_flag = jxp_path_imperial",
-            "}",
-        ),
-        (
-            "jxp_mission_ejp_restore_daijokan",
             "jxp_mission_ejp_repair_kinri",
             "jxp_mission_ejp_guard_four_seas",
         ),
     ),
     (
-        "kirishitan",
-        (
-            "OR = {",
-            "\ttag = KJP",
-            "\thas_country_flag = jxp_path_kirishitan",
-            "}",
-        ),
-        (
-            "jxp_mission_welcome_missionaries",
-            "jxp_mission_kirishitan_settlement",
-            "jxp_mission_port_congregation_registers",
-        ),
-    ),
-    (
         "reformed",
+        ("jxp_a_105_profile_reformed_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = RFJ",
-            "\thas_country_flag = jxp_path_reformed",
-            "}",
-        ),
-        (
-            "jxp_mission_hirado_synod",
             "jxp_mission_reformed_settlement",
             "jxp_mission_rfj_oranda_factors",
         ),
     ),
     (
         "kaikyo",
+        ("jxp_a_105_profile_kaikyo_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = SJP",
-            "\thas_country_flag = jxp_path_kaikyo",
-            "}",
-        ),
-        (
-            "jxp_mission_malay_factory",
             "jxp_mission_harbor_mosque_registers",
             "jxp_mission_kaikyo_settlement",
         ),
     ),
     (
         "ikko",
+        ("jxp_a_105_profile_ikko_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = IJP",
-            "\thas_country_flag = jxp_path_ikko",
-            "}",
-        ),
-        (
-            "jxp_mission_terauchi_league",
             "jxp_mission_monto_rolls",
             "jxp_mission_ikko_temple_granaries",
         ),
     ),
     (
         "wokou",
+        ("jxp_a_105_profile_wokou_trigger = yes",),
         (
-            "OR = {",
-            "\ttag = WAK",
-            "\thas_country_flag = jxp_path_wokou",
-            "}",
-        ),
-        (
-            "jxp_mission_fund_wokou",
             "jxp_mission_wak_letters_of_black_current",
             "jxp_mission_northern_sea_office",
         ),
     ),
+    (
+        "toyotomi",
+        ("jxp_a_105_profile_toyotomi_trigger = yes",),
+        (
+            "jxp_mission_toyotomi_osaka_castle_town",
+            "jxp_mission_toyotomi_kyushu_settlement",
+        ),
+    ),
+    (
+        "commercial_council",
+        ("jxp_a_105_profile_commercial_council_trigger = yes",),
+        (
+            "jxp_mission_shrine_land_registers",
+            "jxp_mission_uncommitted_watch_the_four_seas",
+        ),
+    ),
+)
+
+UNIFIED_PROFILE_TRIGGERS = tuple(
+    condition[0].split(" = ", 1)[0]
+    for _name, condition, _anchors in UNIFIED_PROFILE_ANCHORS
 )
 
 
@@ -237,8 +208,12 @@ def _forbid_lines(values: tuple[str, ...], indent: int) -> list[str]:
 
 
 def render() -> str:
-    route_anchors = tuple(
-        dict.fromkeys(anchor for _name, _condition, anchors in ROUTE_PROFILES for anchor in anchors)
+    unified_anchors = tuple(
+        dict.fromkeys(
+            anchor
+            for _name, _condition, anchors in UNIFIED_PROFILE_ANCHORS
+            for anchor in anchors
+        )
     )
     family_anchors = tuple(anchor for _trigger, anchor in DAIMYO_HOUSES)
     major_anchors = tuple(anchor for _tag, anchor in DAIMYO_MAJOR_HOUSES)
@@ -306,18 +281,18 @@ def render() -> str:
     lines.extend(
         (
             "\t\t\t}",
-            *_forbid_lines(UNIFIED_COMMON + route_anchors, 3),
+            *_forbid_lines(unified_anchors, 3),
             "\t\t}",
             "\t\tAND = {",
             "\t\t\tjxp_is_unified_japan_state_trigger = yes",
-            *_assignment_lines(UNIFIED_COMMON, 3),
+            "\t\t\tjxp_a_105_mission_profile_fingerprint_valid_trigger = yes",
             *_forbid_lines(DAIMYO_COMMON + house_anchors, 3),
             "\t\t\tOR = {",
         )
     )
 
-    for name, condition, allowed in ROUTE_PROFILES:
-        forbidden = tuple(anchor for anchor in route_anchors if anchor not in allowed)
+    for name, condition, allowed in UNIFIED_PROFILE_ANCHORS:
+        forbidden = tuple(anchor for anchor in unified_anchors if anchor not in allowed)
         lines.extend(
             (
                 f"\t\t\t\t# {name}",
@@ -346,14 +321,28 @@ def render() -> str:
     return "\n".join(lines)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="fail instead of writing when the generated fingerprint has drifted",
+    )
+    args = parser.parse_args(argv)
     mod_root = Path(__file__).resolve().parents[2]
     output = mod_root / OUTPUT
-    output.write_text(render(), encoding="utf-8", newline="")
+    payload = render().encode("utf-8")
+    if args.check:
+        if not output.is_file() or output.read_bytes() != payload:
+            print(f"DRIFT: {output}")
+            return 1
+        print(f"OK: {output}")
+        return 0
+    output.write_bytes(payload)
     print(
         f"Created {output}: {len(VANILLA_ANCHORS)} vanilla + "
         f"{len(GENERIC_ANCHORS)} generic anchors, {len(DAIMYO_MAJOR_HOUSES)} "
-        f"major daimyo profiles, {len(ROUTE_PROFILES)} route profiles."
+        f"major daimyo profiles, {len(UNIFIED_PROFILE_ANCHORS)} unified profiles."
     )
     return 0
 

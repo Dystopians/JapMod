@@ -15,6 +15,7 @@ jxp_final_state_uncommitted_trigger = {
 				has_country_flag = jxp_path_ikko
 				has_country_flag = jxp_path_wokou
 				has_country_flag = jxp_path_buddhist
+				has_country_flag = jxp_path_commercial_council
 			}
 		}
 	}

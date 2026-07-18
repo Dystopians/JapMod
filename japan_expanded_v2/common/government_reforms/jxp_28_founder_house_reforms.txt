@@ -38,10 +38,16 @@ jxp_reform_founder_toyotomi_five_regents = {
 		}
 	}
 	modifiers = {
-		governing_capacity_modifier = 0.10
-		global_tax_modifier = 0.05
+		# The Kampaku/Taiko tier-one reform owns Toyotomi taxation and
+		# governing capacity.  This founder layer instead represents the
+		# regents' access to office and their willingness to serve.
+		nobles_loyalty_modifier = 0.10
+		advisor_pool = 1
 	}
-	custom_attributes = { cannot_become_dictatorship = yes }
+	custom_attributes = {
+		cannot_become_dictatorship = yes
+		jxp_toyotomi_regents_council = yes
+	}
 }
 
 jxp_reform_founder_tkg_mikawa_fudai_code = {

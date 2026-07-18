@@ -100,6 +100,39 @@ class StateLifecycleTests(unittest.TestCase):
             self.assertIn("state.flag_orphan_write", _codes(result))
             self.assertIn("state.flag_dangling_read", _codes(result))
 
+    def test_estate_agenda_template_counts_as_engine_generated_flag_write(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            _write(
+                root,
+                "common/scripted_effects/estate_template.txt",
+                "jxp_test_generate_agenda = {\n"
+                " pick_random_estate_if_present = {\n"
+                "  flag = present_agenda\n"
+                "  estate_action = generate_estate_agenda\n"
+                " }\n"
+                "}\n"
+                "jxp_test_consume_agenda = {\n"
+                " if = {\n"
+                "  limit = { has_country_flag = jxp_estate_village_communes_present_agenda }\n"
+                "  clr_country_flag = jxp_estate_village_communes_present_agenda\n"
+                " }\n"
+                "}\n",
+            )
+            _write_main_debug_roots(
+                root,
+                " clr_country_flag = jxp_estate_village_communes_present_agenda\n",
+            )
+            result = check_state_safety(
+                ValidationContext(root), minimum_disasters=0
+            )
+            flag_codes = {
+                issue.code
+                for issue in result.issues
+                if "jxp_estate_village_communes_present_agenda" in issue.message
+            }
+            self.assertEqual(flag_codes, set())
+
     def test_dynamic_modifier_requires_lifecycle_and_debug_cleanup(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -580,10 +613,10 @@ class DisasterSafetyTests(unittest.TestCase):
             if issue.code.startswith("disaster.")
         ]
         self.assertEqual(disaster_issues, [])
-        self.assertEqual(result.metrics["disasters"], 4)
-        self.assertEqual(result.metrics["disaster_contracts"], 4)
+        self.assertEqual(result.metrics["disasters"], 9)
+        self.assertEqual(result.metrics["disaster_contracts"], 9)
         self.assertEqual(result.metrics["disaster_debug_progress_scripted"], 0)
-        self.assertEqual(result.metrics["disaster_debug_progress_events"], 4)
+        self.assertEqual(result.metrics["disaster_debug_progress_events"], 9)
 
     def test_tenmei_scale_gate_requires_semantic_capacity(self) -> None:
         live_text = (

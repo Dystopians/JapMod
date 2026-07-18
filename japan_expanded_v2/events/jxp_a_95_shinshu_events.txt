@@ -678,10 +678,10 @@ country_event = {
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	is_triggered_only = yes
 	trigger = { has_disaster = jxp_ikko_rising has_country_flag = jxp_ikko_rising_active has_country_flag = jxp_a_shinshu_stage_4_armed_oath }
+	immediate = { jxp_a_shinshu_set_stage_5_effect = yes }
 	option = {
 		name = "jxp_shinshu.104.a"
 		set_country_flag = jxp_ikko_rising_resolved
-		set_country_flag = jxp_ikko_contact
 		add_country_modifier = { name = jxp_a_shinshu_reconciled_order duration = 7300 }
 		jxp_a_shinshu_subtract_militancy_20_effect = yes
 		end_disaster = jxp_ikko_rising
@@ -706,7 +706,6 @@ country_event = {
 		end_disaster = jxp_ikko_rising
 		jxp_clear_all_route_flags_effect = yes
 		set_country_flag = jxp_path_ikko
-		set_country_flag = jxp_ikko_contact
 		jxp_change_to_ijp_effect = yes
 		jxp_grant_ikko_heartland_claims_effect = yes
 	}

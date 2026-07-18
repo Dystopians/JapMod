@@ -1,0 +1,13 @@
+namespace = jxp_b_external_fallbacks
+
+country_event = {
+	id = jxp_b_external_fallbacks.1
+	title = "jxp_b_external_fallbacks.1.t"
+	desc = "jxp_b_external_fallbacks.1.d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "jxp_b_external_fallbacks.1.a"
+	}
+}

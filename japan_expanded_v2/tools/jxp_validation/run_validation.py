@@ -43,6 +43,7 @@ from jxp_validation.route_parity import check_route_parity_content
 from jxp_validation.route_parity_four import check_route_parity_four_content
 from jxp_validation.shared_ledger import check_shared_development_ledger
 from jxp_validation.state_safety import check_state_safety
+from jxp_validation.socioeconomic import check_socioeconomic_system
 from jxp_validation.toyotomi import check_toyotomi_history
 from jxp_validation.wak_loop import check_wak_loop
 from jxp_validation.writing_events import check_writing_events
@@ -105,6 +106,7 @@ def run_checks(
         check_internal_systems(context, game_root),
         check_wak_loop(context),
         check_effective_topology(context, game_root),
+        check_socioeconomic_system(context),
         check_shared_development_ledger(context),
     )
 
